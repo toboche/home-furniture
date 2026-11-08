@@ -141,3 +141,5 @@ Szablon meble.pl pozwala wybrać odległość środka puszki od krawędzi frontu
 - F8: 23,5 mm (OL 17, potrzebne 16,5)
 - F5 (wpuszczany, listwa LF5): 22,5 mm, do potwierdzenia
 Wymiary frontów bez zmian. Model v49: pozycje puszek odpowiednio przesunięte (F1, F2 X 10; F7, F9 X 1694; F3, F4 X 1178,5; F8 X 1620,5). Zamówienie w meble.pl nie zmienione.
+
+Uchwyt F5: po LEWEJ stronie frontu (wolna krawędź, zawiasy po prawej), X uchwytu 1242, tak jak F7 i F9.
