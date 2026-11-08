@@ -50,7 +50,8 @@ F=[('F1','Front L: góra',608.5,453),('F2','Front L: dół',608.5,453),
    ('F7','Front P pas: dół',513.5,453),
    ('F8','Front P dół: rząd 1 (przy gzymsie)',439,493.5),('F9','Front P dół: jeden wysoki (dawne F9+F10+F11)',513.5,1240.5)]
 for k,n,w,h in F:
-    naw=('ZAWIASY 3 SZT, PUSZKA Ø35' if k=='F9' else 'ZAWIASY 2 SZT, PUSZKA Ø35') if k!='F6' else 'BRAK; otwór Ø150 własnoręcznie otwornicą'
+    dist={'F1':24.5,'F2':24.5,'F7':24.5,'F9':24.5,'F3':23.5,'F4':23.5,'F8':23.5}.get(k,22.5)
+    naw=(('ZAWIASY 3 SZT' if k=='F9' else 'ZAWIASY 2 SZT')+', PUSZKA Ø35, ŚRODEK %g MM OD KRAWĘDZI'%dist) if k!='F6' else 'BRAK; otwór Ø150 własnoręcznie otwornicą'
     add(k,n,w,h,1,'2DL+2SZ',naw,'' if k=='F6' else (('zawiasy po PRAWEJ, płytki na LF5; ' if k=='F5' else '')+'uchwyt GUBBARP 116 mm: otwory samodzielnie, bez nawiertów' + ('; zawiasy po PRAWEJ' if k in ('F3','F4') else '')))
 w=csv.writer(open('formatki.csv','w',newline='',encoding='utf-8-sig'),delimiter=';')
 w.writerow(['KOD','NAZWA','DL','SZ','SZT','OKLEINA','NAWIERTY','UWAGI'])

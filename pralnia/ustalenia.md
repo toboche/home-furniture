@@ -133,3 +133,11 @@ Uwagi (do sprawdzenia przed zamówieniem):
 1. Nakładanie (sprawdzone w dokumentacji Blum CLIP top 110°, zawias nakładany prosty 71B3550/71B3590, płytka 0 mm): nakładanie OL = X + B - H, gdzie X = 11 mm (stała zawiasu), B = odległość wiercenia (krawędź puszki do krawędzi frontu, zakres 3 do 7 mm), H = wysokość płytki (0). Czyli B = 3, 4, 5, 6, 7 daje OL = 14, 15, 16, 17, 18 mm. Regulacja boczna +/- 2 mm. Nasze puszki: środek 22,5 od krawędzi, B = 5, więc OL = 16 mm. Model zakłada front równo z zewnętrznym licem ściany 18 mm (F1, F2, F7, F9: potrzeba 18 mm; F3, F4: 17,5; F8: 16,5). Dla B = 5 front po stronie zawiasów będzie 2 mm krótszy od modelu (F8 0,5 mm). Opcje: (a) środek puszki 24,5 mm od krawędzi (B = 7, OL = 18) tam, gdzie front ma być równo ze ścianą; (b) zostać przy B = 5 i skrócić fronty po stronie zawiasów o 2 mm. Zależy od tego, jaką odległość wiercenia ma szablon kalkulatora meble.pl (do sprawdzenia). Liczba zawiasów na F9: tabela Blum nie została odczytana, do sprawdzenia ręcznie.
 2. Wybrany z Allegro 71B3790 to wersja INSERTA (wciskana puszka, dodatkowe 2 otwory Ø8, rozstaw 45, 9,5 od środka puszki). Szablon zawiasów w kalkulatorze meble.pl może ich nie wiercić. Bezpieczniej: wersje wkręcane: 71B3550 (nakładany) i 71B3750 (wpuszczany, dla F5). Do potwierdzenia, jakie dokładnie otwory wierci szablon kalkulatora (odległość K, otwory pod wkręty).
 3. F9 (1240,5 mm wysokości) z 3 zawiasami: do potwierdzenia w tabeli ilości zawiasów Blum (wysokość i ciężar frontu).
+
+## Zawiasy: odległość puszek (decyzja robocza 2026-11-08)
+Szablon meble.pl pozwala wybrać odległość środka puszki od krawędzi frontu: 20,5 / 21,5 / 22,5 / 23,5 / 24,5 mm (czyli B = 3 do 7 mm, nakładanie OL = 11 + B). Przyjęte (regulacja boczna +/- 2 mm zgubi różnice poniżej 1 mm):
+- F1, F2, F7, F9: 24,5 mm (OL 18, front równo z zewnętrznym licem ściany 18 mm)
+- F3, F4: 23,5 mm (OL 17, potrzebne 17,5)
+- F8: 23,5 mm (OL 17, potrzebne 16,5)
+- F5 (wpuszczany, listwa LF5): 22,5 mm, do potwierdzenia
+Wymiary frontów bez zmian. Model v49: pozycje puszek odpowiednio przesunięte (F1, F2 X 10; F7, F9 X 1694; F3, F4 X 1178,5; F8 X 1620,5). Zamówienie w meble.pl nie zmienione.
