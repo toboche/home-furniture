@@ -152,3 +152,5 @@ Zasada: krawędź frontu cofnięta o 1,5 mm względem zewnętrznego lica ściany
 - Zawiasy: wszystkie puszki 22,5 mm od krawędzi (B = 5), nakładanie 16 mm przy płytce 0 (potrzebne 16,5, korekta śrubą +/- 2 mm). Poprzednia różnicowana odległość 24,5/23,5 nieaktualna.
 - Uchwyty GUBBARP: F1, F2 przy prawej krawędzi (X 573), F3, F4 przy lewej (X 636), F5, F7, F8, F9 przy lewej (X 1242).
 - Nawierty bez zmian (przesunięcia całych modułów): 316 otworów, 50 połączeń, 0 kolizji. Zmieniły się tylko wymiary F1-F4, F6, F7, F9 w formatki.csv.
+
+Decyzja 2026-11-08: ściany sąsiednich modułów zostają stykające się (0 mm), luz tylko na zewnętrznych krawędziach zabudowy: lewa ściana 5 mm, prawa 3 mm, tył 3-5 mm, sufit 9 mm, pralka/suszarka do L1B1 3 mm. Moduły L, wnęka i kolumna przed dokręceniem składać na sucho.
