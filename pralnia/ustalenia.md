@@ -37,7 +37,7 @@ Wspólny podział poziomy: 1743. Wspólna płaszczyzna frontów: z=658 (fronty o
 Pasywna. Otwór w ścianie: środek x 1616, y 2409. Kanał okrągły Ø125 (z 362-640), kratka okrągła Ø150 w stałej części frontu. Front dzielony: część otwierana 274,5×453 i stała z kratką 236×453. Otwór wycina użytkownik otwornicą. Listwy mocujące front stały: prawa i dolna (18×18).
 
 ## Wyposażenie lewej szafki (L1)
-- IKEA UTRUSTA wnętrze szafy gospodarczej 140 cm (nr 105.808.24, 400 zł): 330 × 1335 × 530, wysuwane na prowadnicach (kupić osobno), 2 zawiasy UTRUSTA 110° osobno, udźwig 25 kg. Ustawione przy lewej ścianie. Do sprawdzenia: instrukcja montażu (hak, prowadnice, otwory w bokach 18 mm).
+- IKEA UTRUSTA wnętrze szafy gospodarczej 140 cm (nr 105.808.24, 400 zł): 330 × 1335 × 530, wysuwane na prowadnicach (kupić osobno), zawiasów UTRUSTA NIE kupujemy (wszystkie zawiasy z Bluma), udźwig 25 kg. Ustawione przy lewej ścianie. Do sprawdzenia: instrukcja montażu (hak, prowadnice, otwory w bokach 18 mm).
 - Kosz na pranie i odkurzacz klasyczny: na haku zestawu. Odkurzacz bezprzewodowy (250×700×300): także na haku (do potwierdzenia).
 - Deska do prasowania 60×1400×400 i suszarka na pranie 50×1400×600 w wolnej części 244 mm.
 - Kuweta 600×400×400 na z=1094, odległość od frontu lewej szafki 436 mm.
@@ -181,3 +181,8 @@ Z katalogu Blum 2022/2023 (str. 94-95, "Zawias do drzwi równoległych, wpuszcza
 - Nowe półki KP2-1 (y922–940) i KP2-2 (y1355–1373) kolidowały ze starymi KT1A/B/C (390/390/408).
 - Nowe wymiary (szer. 132, gr. 18): KT1A y509–919 (h410), KT1B y942–1352 (h410), KT1C y1375–1741 (h366). Kątowniki przesunięte odpowiednio.
 - Dostęp do tyłu kolumny wyłącznie przez F9. W kalkulatorze zmieniają się wymiary KT1A/B/C (do przeliczenia w koszyku po weryfikacji).
+
+## 2026-11-08 – zawiasy i prowadniki (v55, weryfikacja katalogu Blum 2022/23)
+- Wszystkie 17 zawiasów to CLIP top BLUMOTION (samodomykanie zintegrowane): 15 × 71B3590 + 2 × 79B9590 (95°, z opcją dezaktywacji). Zawiasy UTRUSTA odpadają.
+- F5↔F6: prowadnik 173H7130 (dystans 3, wysokość 11,5; stal, mimośród ±2, wkręty Ø3,5/4). Katalog: ustawienie fabryczne 79B9590 = prowadnik o dystansie 3 mm; „podwyższony o 3 mm" = ten sam dystans 3. Linia wkrętów 21,5 od krawędzi, szczelina F = 8 − TB = 3 przy TB 5.
+- Otwory pod wkręty prowadników: opcjonalne pilotowe Ø4×12 (wkręty samogwintujące Ø3,5; nawiercenie nie jest wymagane). Prowadnik nie wchodzi w otwór, jest przykręcany do powierzchni ścianki.
