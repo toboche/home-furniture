@@ -78,7 +78,7 @@ if len(sys.argv)>1:
             inner=w_['lo']['x'] if right else w_['hi']['x']
             xs,xe=(inner,inner+12) if right else (inner-12,inner)
         for dy in (-16,16):
-            cyl('Otwór pod wkręt płytki zawiasu %s w %s (nawiert opcjonalny)'%(code,wall),'Otwory','x',dict(x=(xs+xe)/2,y=cy+dy,z=603),2,12,DARK);npl+=1
+            cyl('Otwór pod wkręt płytki zawiasu %s w %s (nawiert opcjonalny)'%(code,wall),'Otwory','x',dict(x=(xs+xe)/2,y=cy+dy,z=(621 if code=='F5' else 603)),2,12,DARK);npl+=1
     print('puszki',nh,'otwory płytek',npl)
 
 block="/* FASTENERS BEGIN (generowane: etap6/gen_fasteners.py, nie edytować ręcznie) */\n"+"\n".join(items)+"\n  /* FASTENERS END */"

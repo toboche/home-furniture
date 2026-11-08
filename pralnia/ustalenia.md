@@ -161,3 +161,9 @@ Decyzja 2026-11-08: ściany sąsiednich modułów zostają stykające się (0 mm
 - Nawierty pilotowe środka (Ø5, głębokość 5 mm, od strony wnętrza) pod otwory wycinane samodzielnie: PT3 (Ø130, środek 245 od lewej, 243 od górnej) i L1B2 (wycięcie GN1, środek 918 od dołu, 242 od tyłu), wpisane do kalkulator_nawierty.csv i arkusza. F6 (Ø150): środek 116 mm od lewej krawędzi, 210 mm od dolnej (243 od górnej); kalkulator nie nawierci F6 (okleina bezspoinowa), środek zaznaczyć ręcznie.
 - Luzy maszyn: lewa strona 3 mm (L1B1 do X 618), prawa 5 mm (KB1/KB2 od X 1221, maszyny do 1216), góra 30 mm (suszarka do Y 1713, półka NWP-1 od 1743), tył 10 mm do ściany pokoju.
 Lista do weryfikacji: weryfikacja.md
+
+## F5: sprawdzenie (2026-11-08, v53)
+- Kolizja kątownika dolnego F6 (X 1540-1565, Y 2206,5-2231,5) z LF5 (X 1500-1518) i otworem Ø150 (Y od 2334): brak, odstępy 22 mm i 102,5 mm.
+- Zawias wpuszczany Blum 71B3790/71B3750: wymiar stały X = -7 (karta Blum), nakładanie = X + B - H = -7 + B (płytka 0). F5 jest cofnięty 3 mm od lica listwy LF5 (szczelina 3 mm do F6), czyli potrzebne -3, więc B = 4: środek puszki 21,5 mm od krawędzi (opcja dostępna w meble.pl). Model: X puszki F5 = 1458. Regulacja boczna +/- 2 mm.
+- Otwory płytek w LF5: Z = 621 (37 mm od płaszczyzny przedniej frontu 658, jak dla wpuszczanego zawiasu); pozostałe płytki 37 mm od przedniej krawędzi ściany (Z = 603). Przyjęte z geometrii, nie z tabeli Blum, do sprawdzenia przy montażu.
+- Uchwyty: bez otworów we frontach, wykonuje użytkownik (potwierdzone). F9: 3 zawiasy wystarczą (potwierdzone). PP1/KP1 zostają na konfirmatach, prześwit 415 mm = światło między półkami (potwierdzone).
