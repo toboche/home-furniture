@@ -123,3 +123,6 @@ Warstwy: "Konfirmaty" (trzon 7 x 50 plus łeb, 132 szt.), "Otwory" (Ø5 licowe, 
 
 ## Procedura odświeżania po każdej zmianie wymiarów (do użycia też dla garderoby i szafki z okapem)
 1. Zmiana w pralnia_3d.html (ITEMS). 2. `node d3.js` (struct.json) 3. `python3 joints.py; holes.py; gen.py; calc_table.py; pdf_sheets.py` 4. `python3 gen_fasteners.py pralnia_3d.html` 5. publikacja, ustalenia.md i dokument projektu. Nowe pomieszczenie = ten sam model i skrypty z nową listą ITEMS; funkcja module_of w joints.py trzeba dopasować do podziału na moduły.
+
+## F5: zawiasy po prawej (2026-11-08)
+F5 (otwierany, 274,5 x 453) ma zawiasy po PRAWEJ, przy F6 (stały front z kratką). Zawias: Blum CLIP top BLUMOTION 110° wpuszczany, 71B3790 (INSERTA), dostępny na Allegro (link od użytkownika). Puszki Ø35 w F5 (X puszki 1457, Y 2281,5 i 2534,5). Płytki montażowe na listwie LF5 (płyta 18 mm, 427,5 x 60, X 1500-1518, Y 2206,5-2634, Z 580-640), dokręconej do tyłu F6 dwoma kątownikami 25x25. Płytka ok. 37 mm od płaszczyzny frontu (ok. 19 mm za tylnym licem F5). DO SPRAWDZENIA w karcie Blum (HIO71B3790-spec.pdf): odległości otworów płytki i wpuszczenie; kolizja lewego kątownika dolnego F6 (X 1540) z listwą/otworem Ø150 (od X 1541). LF5 bez okleiny i bez nawiertów, dochodzi do zamówienia (szer. 60 mm < 100: ostrzeżenie kalkulatora).

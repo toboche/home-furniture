@@ -165,13 +165,15 @@ var ITEMS=[
   {n:'F2: Front lewa, dół (608,5 × 453)',layer:'Fronty',x:3,y:1743,z:640,w:608.5,h:453,d:18,c:0x2f9e8f,o:0.55},
   {n:'F3: Front nad maszynami, góra (605 × 453)',layer:'Fronty',x:614.5,y:2199,z:640,w:605,h:453,d:18,c:0x2f9e8f,o:0.55},
   {n:'F4: Front nad maszynami, dół (605 × 453)',layer:'Fronty',x:614.5,y:1743,z:640,w:605,h:453,d:18,c:0x2f9e8f,o:0.55},
-  /* Front górny po prawej podzielony pionowo: część otwierana (zawiasy po prawej, przy linii podziału) i część stała z kratką, przykręcana od wewnątrz. */
+  /* Front górny po prawej podzielony pionowo: część otwierana (zawiasy po prawej, przy linii podziału, płytki na listwie LF5 za lewą krawędzią F6) i część stała z kratką, przykręcana od wewnątrz. */
   {n:'F5: Front prawa, góra, otwierany (274,5 × 453)',layer:'Fronty',x:1222.5,y:2199,z:640,w:274.5,h:453,d:18,c:0x2f9e8f,o:0.55},
   {n:'F6: Front prawa, góra, stały z kratką (236 × 453)',layer:'Fronty',x:1500,y:2199,z:640,w:236,h:453,d:18,c:0x2f9e8f,o:0.55},
   {n:'F7: Front prawa, dół (513,5 × 453)',layer:'Fronty',x:1222.5,y:1743,z:640,w:513.5,h:453,d:18,c:0x2f9e8f,o:0.55},
   {t:'cyl',n:'Kratka wywiewu Ø 150 w froncie stałym',layer:'Fronty',cx:1616,cy:2409,z:640,r:75,len:19,c:0xe0a526},
   /* Kanał wentylacyjny: rura okrągła Ø 125 od otworu w ścianie (z = 362) do tylnej strony frontu stałego (z = 640), zamocowana do szafki, uszczelniona pianką przy ścianie i przy froncie. */
   {t:'cyl',n:'Kanał wentylacyjny (rura Ø 125, z 362 do 640)',layer:'Kanał wentylacyjny',cx:1616,cy:2409,z:362,r:62.5,len:278,c:0x9aa5ad},
+  /* Listwa LF5 (płyta 18 mm, 427,5 × 60): za lewą krawędzią F6, na niej płytki montażowe zawiasów Blum 71B3790 (wpuszczane) frontu F5. Mocowana do F6 dwoma kątownikami 25×25. */
+  {n:'LF5: Listwa pod zawiasy F5 (427,5 × 60)',layer:'Listwa F5',x:1500,y:2206.5,z:580,w:18,h:427.5,d:60,c:0xe6d7b8},
   /* Listwy pod wkręty frontu stałego (18 × 18), po wewnętrznej stronie przodu komory. */
   {n:'Kątownik 25×25 pod F6, bok prawy: ramię przy froncie',layer:'Kątowniki pod F6',x:1693,y:2260,z:638,w:25,h:25,d:2,c:0x9aa5ad},
   {n:'Kątownik 25×25 pod F6, bok prawy: ramię przy boku',layer:'Kątowniki pod F6',x:1716,y:2260,z:615,w:2,h:25,d:25,c:0x9aa5ad},
@@ -194,8 +196,8 @@ var ITEMS=[
   {n:'Zawias: nad maszynami, góra (prawa)',layer:'Zawiasy',x:1179.5,y:2534.5,z:641,w:35,h:35,d:11,c:0x2b3034},
   {n:'Zawias: nad maszynami, dół (prawa)',layer:'Zawiasy',x:1179.5,y:1825.5,z:641,w:35,h:35,d:11,c:0x2b3034},
   {n:'Zawias: nad maszynami, dół (prawa)',layer:'Zawiasy',x:1179.5,y:2078.5,z:641,w:35,h:35,d:11,c:0x2b3034},
-  {n:'Zawias: prawa, góra (otwierany) (lewa)',layer:'Zawiasy',x:1227.5,y:2281.5,z:641,w:35,h:35,d:11,c:0x2b3034},
-  {n:'Zawias: prawa, góra (otwierany) (lewa)',layer:'Zawiasy',x:1227.5,y:2534.5,z:641,w:35,h:35,d:11,c:0x2b3034},
+  {n:'Zawias: prawa, góra (otwierany) (prawa)',layer:'Zawiasy',x:1457,y:2281.5,z:641,w:35,h:35,d:11,c:0x2b3034},
+  {n:'Zawias: prawa, góra (otwierany) (prawa)',layer:'Zawiasy',x:1457,y:2534.5,z:641,w:35,h:35,d:11,c:0x2b3034},
   {n:'Zawias: prawa, dół (prawa)',layer:'Zawiasy',x:1696.0,y:1825.5,z:641,w:35,h:35,d:11,c:0x2b3034},
   {n:'Zawias: prawa, dół (prawa)',layer:'Zawiasy',x:1696.0,y:2078.5,z:641,w:35,h:35,d:11,c:0x2b3034},
   {n:'Zawias: prawa dolna, rząd 1 (prawa)',layer:'Zawiasy',x:1621.5,y:85.5,z:641,w:35,h:35,d:11,c:0x2b3034},
@@ -1160,7 +1162,7 @@ resize();setWalls('ghost');setView('iso');
     }else if(it.layer==='Konfirmaty'||it.layer==='Otwory'||it.layer==='Kołki'){
       var mm=/(?:w |: |Kołek Ø8 x 40: )([A-Z0-9]+(?:-[0-9]+)?)/.exec(it.n);
       par=mm?piece2(mm[1]):null;
-    }else if(/^Kątownik 25×25 pod F6/.test(it.n)||/^Kratka/.test(it.n)){par=F6||null;}
+    }else if(/^Kątownik 25×25 pod F6/.test(it.n)||/^Kratka/.test(it.n)||/^LF5:/.test(it.n)){par=F6||null;}
     else{var k=/^Kątownik (KT1[ABC])/.exec(it.n);if(k)par=piece(new RegExp('^'+k[1]+':'))||null;}
     m.userData.parent=par;
   });

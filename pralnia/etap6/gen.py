@@ -42,6 +42,7 @@ add('PP3','Półka prawa, pas: 1743, 2188,5, 2634',347,255,3,'1DL',K)
 # wieńce górne (usztywnienie dolnych szafek)
 add('L1W','L1: wieniec górny, przód',574,100,1,'1DL',K)
 add('RDW','Prawa dolna: wieniec górny, przód',479,100,1,'1DL',K)
+add('LF5','Listwa pod zawiasy F5 (płytki Blum 71B3790), za lewą krawędzią F6; do F6 dwoma kątownikami 25x25',427.5,60,1,'','BRAK','poza kalkulatorem szerokość 60 < 100: ostrzeżenie modalne')
 # fronty
 F=[('F1','Front L: góra',608.5,453),('F2','Front L: dół',608.5,453),
    ('F3','Front wnęka: góra',605,453),('F4','Front wnęka: dół',605,453),
@@ -50,7 +51,7 @@ F=[('F1','Front L: góra',608.5,453),('F2','Front L: dół',608.5,453),
    ('F8','Front P dół: rząd 1 (przy gzymsie)',439,493.5),('F9','Front P dół: jeden wysoki (dawne F9+F10+F11)',513.5,1240.5)]
 for k,n,w,h in F:
     naw=('ZAWIASY 3 SZT, PUSZKA Ø35' if k=='F9' else 'ZAWIASY 2 SZT, PUSZKA Ø35') if k!='F6' else 'BRAK; otwór Ø150 własnoręcznie otwornicą'
-    add(k,n,w,h,1,'2DL+2SZ',naw,'' if k=='F6' else ('uchwyt GUBBARP 116 mm: otwory samodzielnie, bez nawiertów' + ('; zawiasy po PRAWEJ' if k in ('F3','F4') else '')))
+    add(k,n,w,h,1,'2DL+2SZ',naw,'' if k=='F6' else (('zawiasy po PRAWEJ, płytki na LF5; ' if k=='F5' else '')+'uchwyt GUBBARP 116 mm: otwory samodzielnie, bez nawiertów' + ('; zawiasy po PRAWEJ' if k in ('F3','F4') else '')))
 w=csv.writer(open('formatki.csv','w',newline='',encoding='utf-8-sig'),delimiter=';')
 w.writerow(['KOD','NAZWA','DL','SZ','SZT','OKLEINA','NAWIERTY','UWAGI'])
 for r in P: w.writerow(r)
