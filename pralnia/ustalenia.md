@@ -143,3 +143,12 @@ Szablon meble.pl pozwala wybrać odległość środka puszki od krawędzi frontu
 Wymiary frontów bez zmian. Model v49: pozycje puszek odpowiednio przesunięte (F1, F2 X 10; F7, F9 X 1694; F3, F4 X 1178,5; F8 X 1620,5). Zamówienie w meble.pl nie zmienione.
 
 Uchwyt F5: po LEWEJ stronie frontu (wolna krawędź, zawiasy po prawej), X uchwytu 1242, tak jak F7 i F9.
+
+## Równe odstępy frontów (2026-11-08, v51; zastępuje wcześniejsze położenia frontów i modułów)
+Zasada: krawędź frontu cofnięta o 1,5 mm względem zewnętrznego lica ściany szafki WSZĘDZIE, odstępy między frontami 3 mm (poziomo i pionowo). Żeby przy cofnięciu 2 x 1,5 mm odstęp na granicy modułów wyniósł 3 mm, ściany sąsiednich modułów muszą się stykać (wcześniej 1 mm szczeliny). Dlatego:
+- moduł lewy (L1, L2, jego wyposażenie) przesunięty o +2 mm w prawo, moduł nad maszynami (NW) o +1 mm; kolumna i prawa strona bez zmian (rura, kratka, gzyms, ZB stoją na swoich miejscach). Ściany: L2B-1 i L1B2 X 5-23, L1B1 i L2B-2 X 597-615, NWB-1 615-633, NWB-2 1203-1221, KB 1221-1239, PB2/PB3 1718-1736, PB1 1645-1663.
+- Skutki: odstęp bocznej ściany L od ściany pokoju 5 mm (było 3); bok L1B1 do pralki/suszarki (od X 618) 3 mm (było 5); styk modułów L/NW i NW/kolumna bez luzu (0 mm, wcześniej 1 mm), czyli zero tolerancji na montażu.
+- Nowe wymiary frontów (SZER x WYS): F1, F2 607 x 453 (X 6,5-613,5); F3, F4 603 x 453 (X 616,5-1219,5); F5 274,5 x 453 (1222,5-1497); F6 234,5 x 453 (1500-1734,5); F7 512 x 453 (1222,5-1734,5); F8 439 x 493,5 (1222,5-1661,5); F9 512 x 1240,5. Wysokości i odstępy pionowe bez zmian.
+- Zawiasy: wszystkie puszki 22,5 mm od krawędzi (B = 5), nakładanie 16 mm przy płytce 0 (potrzebne 16,5, korekta śrubą +/- 2 mm). Poprzednia różnicowana odległość 24,5/23,5 nieaktualna.
+- Uchwyty GUBBARP: F1, F2 przy prawej krawędzi (X 573), F3, F4 przy lewej (X 636), F5, F7, F8, F9 przy lewej (X 1242).
+- Nawierty bez zmian (przesunięcia całych modułów): 316 otworów, 50 połączeń, 0 kolizji. Zmieniły się tylko wymiary F1-F4, F6, F7, F9 w formatki.csv.

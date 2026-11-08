@@ -30,12 +30,12 @@ PP3;Półka prawa, pas: 1743, 2188,5, 2634;347;255;3;1DL;KONFIRMATY;
 L1W;L1: wieniec górny, przód;574;100;1;1DL;KONFIRMATY;
 RDW;Prawa dolna: wieniec górny, przód;479;100;1;1DL;KONFIRMATY;
 LF5;"Listwa pod zawiasy F5 (płytki Blum 71B3790), za lewą krawędzią F6; do F6 dwoma kątownikami 25x25";427.5;60;1;;BRAK;poza kalkulatorem szerokość 60 < 100: ostrzeżenie modalne
-F1;Front L: góra;608.5;453;1;2DL+2SZ;ZAWIASY 2 SZT, PUSZKA Ø35, ŚRODEK 24.5 MM OD KRAWĘDZI;uchwyt GUBBARP 116 mm: otwory samodzielnie, bez nawiertów
-F2;Front L: dół;608.5;453;1;2DL+2SZ;ZAWIASY 2 SZT, PUSZKA Ø35, ŚRODEK 24.5 MM OD KRAWĘDZI;uchwyt GUBBARP 116 mm: otwory samodzielnie, bez nawiertów
-F3;Front wnęka: góra;605;453;1;2DL+2SZ;ZAWIASY 2 SZT, PUSZKA Ø35, ŚRODEK 23.5 MM OD KRAWĘDZI;"uchwyt GUBBARP 116 mm: otwory samodzielnie, bez nawiertów; zawiasy po PRAWEJ"
-F4;Front wnęka: dół;605;453;1;2DL+2SZ;ZAWIASY 2 SZT, PUSZKA Ø35, ŚRODEK 23.5 MM OD KRAWĘDZI;"uchwyt GUBBARP 116 mm: otwory samodzielnie, bez nawiertów; zawiasy po PRAWEJ"
+F1;Front L: góra;607;453;1;2DL+2SZ;ZAWIASY 2 SZT, PUSZKA Ø35, ŚRODEK 22.5 MM OD KRAWĘDZI;uchwyt GUBBARP 116 mm: otwory samodzielnie, bez nawiertów
+F2;Front L: dół;607;453;1;2DL+2SZ;ZAWIASY 2 SZT, PUSZKA Ø35, ŚRODEK 22.5 MM OD KRAWĘDZI;uchwyt GUBBARP 116 mm: otwory samodzielnie, bez nawiertów
+F3;Front wnęka: góra;603;453;1;2DL+2SZ;ZAWIASY 2 SZT, PUSZKA Ø35, ŚRODEK 22.5 MM OD KRAWĘDZI;"uchwyt GUBBARP 116 mm: otwory samodzielnie, bez nawiertów; zawiasy po PRAWEJ"
+F4;Front wnęka: dół;603;453;1;2DL+2SZ;ZAWIASY 2 SZT, PUSZKA Ø35, ŚRODEK 22.5 MM OD KRAWĘDZI;"uchwyt GUBBARP 116 mm: otwory samodzielnie, bez nawiertów; zawiasy po PRAWEJ"
 F5;Front P pas: góra, otwierany;453;274.5;1;2DL+2SZ;ZAWIASY 2 SZT, PUSZKA Ø35, ŚRODEK 22.5 MM OD KRAWĘDZI;"zawiasy po PRAWEJ, płytki na LF5; uchwyt GUBBARP 116 mm: otwory samodzielnie, bez nawiertów"
-F6;Front P pas: góra, stały z kratką Ø150;453;236;1;2DL+2SZ;"BRAK; otwór Ø150 własnoręcznie otwornicą";
-F7;Front P pas: dół;513.5;453;1;2DL+2SZ;ZAWIASY 2 SZT, PUSZKA Ø35, ŚRODEK 24.5 MM OD KRAWĘDZI;uchwyt GUBBARP 116 mm: otwory samodzielnie, bez nawiertów
-F8;Front P dół: rząd 1 (przy gzymsie);493.5;439;1;2DL+2SZ;ZAWIASY 2 SZT, PUSZKA Ø35, ŚRODEK 23.5 MM OD KRAWĘDZI;uchwyt GUBBARP 116 mm: otwory samodzielnie, bez nawiertów
-F9;Front P dół: jeden wysoki (dawne F9+F10+F11);1240.5;513.5;1;2DL+2SZ;ZAWIASY 3 SZT, PUSZKA Ø35, ŚRODEK 24.5 MM OD KRAWĘDZI;uchwyt GUBBARP 116 mm: otwory samodzielnie, bez nawiertów
+F6;Front P pas: góra, stały z kratką Ø150;453;234.5;1;2DL+2SZ;"BRAK; otwór Ø150 własnoręcznie otwornicą";
+F7;Front P pas: dół;512;453;1;2DL+2SZ;ZAWIASY 2 SZT, PUSZKA Ø35, ŚRODEK 22.5 MM OD KRAWĘDZI;uchwyt GUBBARP 116 mm: otwory samodzielnie, bez nawiertów
+F8;Front P dół: rząd 1 (przy gzymsie);493.5;439;1;2DL+2SZ;ZAWIASY 2 SZT, PUSZKA Ø35, ŚRODEK 22.5 MM OD KRAWĘDZI;uchwyt GUBBARP 116 mm: otwory samodzielnie, bez nawiertów
+F9;Front P dół: jeden wysoki (dawne F9+F10+F11);1240.5;512;1;2DL+2SZ;ZAWIASY 3 SZT, PUSZKA Ø35, ŚRODEK 22.5 MM OD KRAWĘDZI;uchwyt GUBBARP 116 mm: otwory samodzielnie, bez nawiertów

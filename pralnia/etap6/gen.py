@@ -44,13 +44,13 @@ add('L1W','L1: wieniec górny, przód',574,100,1,'1DL',K)
 add('RDW','Prawa dolna: wieniec górny, przód',479,100,1,'1DL',K)
 add('LF5','Listwa pod zawiasy F5 (płytki Blum 71B3790), za lewą krawędzią F6; do F6 dwoma kątownikami 25x25',427.5,60,1,'','BRAK','poza kalkulatorem szerokość 60 < 100: ostrzeżenie modalne')
 # fronty
-F=[('F1','Front L: góra',608.5,453),('F2','Front L: dół',608.5,453),
-   ('F3','Front wnęka: góra',605,453),('F4','Front wnęka: dół',605,453),
-   ('F5','Front P pas: góra, otwierany',274.5,453),('F6','Front P pas: góra, stały z kratką Ø150',236,453),
-   ('F7','Front P pas: dół',513.5,453),
-   ('F8','Front P dół: rząd 1 (przy gzymsie)',439,493.5),('F9','Front P dół: jeden wysoki (dawne F9+F10+F11)',513.5,1240.5)]
+F=[('F1','Front L: góra',607,453),('F2','Front L: dół',607,453),
+   ('F3','Front wnęka: góra',603,453),('F4','Front wnęka: dół',603,453),
+   ('F5','Front P pas: góra, otwierany',274.5,453),('F6','Front P pas: góra, stały z kratką Ø150',234.5,453),
+   ('F7','Front P pas: dół',512,453),
+   ('F8','Front P dół: rząd 1 (przy gzymsie)',439,493.5),('F9','Front P dół: jeden wysoki (dawne F9+F10+F11)',512,1240.5)]
 for k,n,w,h in F:
-    dist={'F1':24.5,'F2':24.5,'F7':24.5,'F9':24.5,'F3':23.5,'F4':23.5,'F8':23.5}.get(k,22.5)
+    dist=22.5
     naw=(('ZAWIASY 3 SZT' if k=='F9' else 'ZAWIASY 2 SZT')+', PUSZKA Ø35, ŚRODEK %g MM OD KRAWĘDZI'%dist) if k!='F6' else 'BRAK; otwór Ø150 własnoręcznie otwornicą'
     add(k,n,w,h,1,'2DL+2SZ',naw,'' if k=='F6' else (('zawiasy po PRAWEJ, płytki na LF5; ' if k=='F5' else '')+'uchwyt GUBBARP 116 mm: otwory samodzielnie, bez nawiertów' + ('; zawiasy po PRAWEJ' if k in ('F3','F4') else '')))
 w=csv.writer(open('formatki.csv','w',newline='',encoding='utf-8-sig'),delimiter=';')
