@@ -167,3 +167,12 @@ Lista do weryfikacji: weryfikacja.md
 - Zawias wpuszczany Blum 71B3790/71B3750: wymiar stały X = -7 (karta Blum), nakładanie = X + B - H = -7 + B (płytka 0). F5 jest cofnięty 3 mm od lica listwy LF5 (szczelina 3 mm do F6), czyli potrzebne -3, więc B = 4: środek puszki 21,5 mm od krawędzi (opcja dostępna w meble.pl). Model: X puszki F5 = 1458. Regulacja boczna +/- 2 mm.
 - Otwory płytek w LF5: Z = 621 (37 mm od płaszczyzny przedniej frontu 658, jak dla wpuszczanego zawiasu); pozostałe płytki 37 mm od przedniej krawędzi ściany (Z = 603). Przyjęte z geometrii, nie z tabeli Blum, do sprawdzenia przy montażu.
 - Uchwyty: bez otworów we frontach, wykonuje użytkownik (potwierdzone). F9: 3 zawiasy wystarczą (potwierdzone). PP1/KP1 zostają na konfirmatach, prześwit 415 mm = światło między półkami (potwierdzone).
+
+## F5: Blum 79B9590 do drzwi równoległych, bez listwy LF5 (2026-11-08, v54; ZASTĘPUJE sekcje o LF5, zawiasie wpuszczanym 71B3790/3750 i puszce F5 21,5 mm)
+Z katalogu Blum 2022/2023 (str. 94-95, "Zawias do drzwi równoległych, wpuszczanych", CLIP top BLUMOTION INSERTA 79B9590, kąt otwarcia 95°): zawias montuje się do ramy równoległej do frontu, czyli prowadnik idzie na tylną ściankę sąsiedniego frontu F6; poprzeczna listwa nie jest potrzebna.
+- Szczelina między frontami F = 8 mm - TB (TB = odległość puszki od krawędzi frontu, 3-7 mm). U nas F = 3 mm, czyli TB = 5 mm: środek puszki 22,5 mm od krawędzi F5 (jak pozostałe zawiasy). Minimalna szczelina dla frontu 18 mm: 0,3 mm.
+- Puszka INSERTA: Ø35 x min. 13, plus 2 otwory Ø8 (rozstaw 45 mm, 9,5 mm od środka puszki), wciskane bez narzędzi. W meble.pl wybrać INSERTA (potwierdzone przez użytkownika).
+- Prowadnik na tyle F6: linia wkrętów 21,5 mm od lewej krawędzi F6 (X 1521,5), 2 wkręty co 32 mm wokół środka każdego zawiasu (Y 2299 i 2552), wkręty do płyty wiórowej Ø3,5 (15 lub 17 mm wg katalogu; w F6 18 mm uważać na przebicie licówki, maks. 12 mm w płytę). Bez nawiertów w planie. Prowadnik podwyższony o 3 mm daje wewnętrzne lica F5 i F6 w jednej płaszczyźnie (do potwierdzenia w katalogu prowadników, str. 144).
+- Regulacja: wysokość +/- 3, szerokość +/- 2,5, głębokość +/- 1 mm.
+- LF5 usunięta z modelu i z formatek (39 pozycji, 51 sztuk, 15,2 m2). Dodane 2 kątowniki 25x25 pod półką górną F6 (X 1540 i 1680, Y 2609-2634), żeby F6 utrzymała obciążenie od drzwi F5; razem 4+2 kątowniki.
+- DO SPRAWDZENIA: nośność mocowania F6 (cztery kątowniki dołem i na prawym boku plus dwa górne), dobór prowadnika (str. 144 katalogu).

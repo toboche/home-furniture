@@ -69,7 +69,9 @@ if len(sys.argv)>1:
         cyl('Otwór zawiasu Ø35 x 13 w %s'%code,'Otwory','z',dict(x=cx,y=cy,z=640+6.5-0.3),17.5,13.6,DARK);nh+=1
         edge=fr[1]+fr[3] if right else fr[1]
         if code=='F5':
-            wall='LF5';xs,xe=1500,1512
+            for dy in (-16,16):
+                cyl('Otwór pod wkręt prowadnika zawiasu F5 w F6 (nawiert opcjonalny, tył F6)','Otwory','z',dict(x=1521.5,y=cy+dy,z=646),2,12,DARK);npl+=1
+            continue
         else:
             tgt=edge+1.5 if right else edge-1.5
             cand=[p for p in parts if p['t']=='x' and p['lo']['y']<=cy<=p['hi']['y'] and p['hi']['z']>=620 and abs((p['hi']['x'] if right else p['lo']['x'])-tgt)<0.6]

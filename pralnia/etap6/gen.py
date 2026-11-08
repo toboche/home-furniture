@@ -42,7 +42,6 @@ add('PP3','Półka prawa, pas: 1743, 2188,5, 2634',347,255,3,'1DL',K)
 # wieńce górne (usztywnienie dolnych szafek)
 add('L1W','L1: wieniec górny, przód',574,100,1,'1DL',K)
 add('RDW','Prawa dolna: wieniec górny, przód',479,100,1,'1DL',K)
-add('LF5','Listwa pod zawiasy F5 (płytki Blum 71B3790), za lewą krawędzią F6; do F6 dwoma kątownikami 25x25',427.5,60,1,'','BRAK','poza kalkulatorem szerokość 60 < 100: ostrzeżenie modalne')
 # fronty
 F=[('F1','Front L: góra',607,453),('F2','Front L: dół',607,453),
    ('F3','Front wnęka: góra',603,453),('F4','Front wnęka: dół',603,453),
@@ -50,9 +49,9 @@ F=[('F1','Front L: góra',607,453),('F2','Front L: dół',607,453),
    ('F7','Front P pas: dół',512,453),
    ('F8','Front P dół: rząd 1 (przy gzymsie)',439,493.5),('F9','Front P dół: jeden wysoki (dawne F9+F10+F11)',512,1240.5)]
 for k,n,w,h in F:
-    dist=21.5 if k=='F5' else 22.5
+    dist=22.5
     naw=(('ZAWIASY 3 SZT' if k=='F9' else 'ZAWIASY 2 SZT')+', PUSZKA Ø35, ŚRODEK %g MM OD KRAWĘDZI'%dist) if k!='F6' else 'BRAK; otwór Ø150 własnoręcznie otwornicą'
-    add(k,n,w,h,1,'2DL+2SZ',naw,'otwór Ø150: ŚRODEK 116 MM OD LEWEJ KRAWĘDZI, 210 MM OD DOLNEJ (243 OD GÓRNEJ); nawiertu środka kalkulator nie zrobi (okleina bezspoinowa), zaznaczyć ręcznie' if k=='F6' else (('zawiasy po PRAWEJ, płytki na LF5; ' if k=='F5' else '')+'uchwyt GUBBARP 116 mm: otwory samodzielnie, bez nawiertów' + ('; zawiasy po PRAWEJ' if k in ('F3','F4') else '')))
+    add(k,n,w,h,1,'2DL+2SZ',naw,'otwór Ø150: ŚRODEK 116 MM OD LEWEJ KRAWĘDZI, 210 MM OD DOLNEJ (243 OD GÓRNEJ); nawiertu środka kalkulator nie zrobi (okleina bezspoinowa), zaznaczyć ręcznie' if k=='F6' else (('zawiasy po PRAWEJ: Blum 79B9590 INSERTA (do drzwi równoległych); prowadnik na tylnej ściance F6, linia wkrętów 21,5 od jej lewej krawędzi, bez nawiertów; ' if k=='F5' else '')+'uchwyt GUBBARP 116 mm: otwory samodzielnie, bez nawiertów' + ('; zawiasy po PRAWEJ' if k in ('F3','F4') else '')))
 w=csv.writer(open('formatki.csv','w',newline='',encoding='utf-8-sig'),delimiter=';')
 w.writerow(['KOD','NAZWA','DL','SZ','SZT','OKLEINA','NAWIERTY','UWAGI'])
 for r in P: w.writerow(r)

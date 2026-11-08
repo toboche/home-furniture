@@ -5,10 +5,10 @@ Kontrola automatyczna (model): 55 elementów (ściany, tyły, półki, fronty, l
 
 ## Do potwierdzenia (decyzje otwarte)
 Rozstrzygnięte 2026-11-08: PP1+KP1 zostają na konfirmatach; prześwit 415 mm = światło między półkami; uchwyty bez otworów we frontach (wykonuje użytkownik); F9 z 3 zawiasami wystarczy; kolizja F6/LF5/Ø150 sprawdzona, brak.
-Do sprawdzenia przy zakupie i montażu: zawias wpuszczany F5 (puszka 21,5 mm, wybrać INSERTA w meble.pl zgodnie z modelem zawiasu), pozycja otworów płytki w LF5 (Z = 621), pozostałe puszki 22,5 mm.
+Do sprawdzenia przy zakupie i montażu: F5 na zawiasie Blum 79B9590 INSERTA (do drzwi równoległych, prowadnik na tyle F6, bez listwy LF5; puszka 22,5 mm), dobór prowadnika (katalog Blum str. 144), nośność mocowania F6 (6 kątowników), pozostałe puszki 22,5 mm, INSERTA wybrana w meble.pl.
 
 ## Zamówienie w meble.pl (koszyk 21386928, 2 970,11 zł) jest NIEAKTUALNE
-Różnice względem planu: F9, F10, F11 osobno (teraz jeden F9 512 x 1240,5); wymiary F1-F4, F6, F7 zmienione (F1, F2 607; F3, F4 603; F6 234,5; F7 512); nowa listwa LF5 (427,5 x 60); półki PP2/KP2 na innych wysokościach i bez konfirmatów (otwory Ø5 x 10 pod podpórki, kołki Ø8 w czołach par); nawierty pilotowe w PT3 i L1B2; zawiasy 22,5 mm.
+Różnice względem planu: F9, F10, F11 osobno (teraz jeden F9 512 x 1240,5); wymiary F1-F4, F6, F7 zmienione (F1, F2 607; F3, F4 603; F6 234,5; F7 512); półki PP2/KP2 na innych wysokościach i bez konfirmatów (otwory Ø5 x 10 pod podpórki, kołki Ø8 w czołach par); nawierty pilotowe w PT3 i L1B2; zawiasy 22,5 mm.
 
 ## Uwagi konstrukcyjne
 - Moduły lewy, wnęka i kolumna stykają się (0 mm): składać na sucho przed dokręceniem.
