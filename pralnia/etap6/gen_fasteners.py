@@ -20,12 +20,12 @@ for p in parts:
     for h in p['holes']:
         if h['kind']=='FACE':
             pos={p['u']:inv(p,p['u'],h['u']),p['v']:inv(p,p['v'],h['v'])}
-            if h.get('pin'):
+            if h.get('pin') or h.get('pilot'):
                 # nieprzelotowy, od lica po stronie półki (A = +t)
                 top=p['hi'][t] if h['side']=='A' else p['lo'][t]
                 sgn=-1 if h['side']=='A' else 1
                 c=dict(pos);c[t]=top+sgn*h['depth']/2
-                cyl('Otwór Ø5 x 10 pod podpórkę w %s'%p['code'],'Otwory','xyz'[0] if t=='x' else t,c,h['d']/2,h['depth']+0.6,DARK);npin+=1
+                cyl(('Nawiert środka Ø5 x 5 pod otwór wycinany samodzielnie w %s'%p['code']) if h.get('pilot') else ('Otwór Ø5 x 10 pod podpórkę w %s'%p['code']),'Otwory',t,c,h['d']/2,h['depth']+0.6,DARK);npin+=1
                 continue
             c=dict(pos);c[t]=tm
             cyl('Otwór Ø5 przelotowy w %s (pod konfirmat do %s)'%(p['code'],h['partner']),'Otwory',t,c,h['d']/2,tn+0.6,DARK);nhole+=1
@@ -50,6 +50,37 @@ for p in parts:
             else:
                 cyl('Otwór Ø4 x 35 w %s (czoło, konfirmat z %s)'%(p['code'],h['partner']),'Otwory',a_e,c,h['d']/2,abs(e1-e0),DARK);nedge+=1
 print('konfirmatów',nconf,'otw. licowych',nhole,'otw. czołowych',nedge,'otw. pod kołki',ndow,'otw. pod podpórki',npin,'kołków',len(seen_dowel))
+
+# --- zawiasy: puszki Ø35 x 13 w tylnej stronie frontów i otwory pod wkręty płytek (2 szt., rozstaw 32, 37 mm od przedniej krawędzi ściany) ---
+if len(sys.argv)>1:
+    src=open(sys.argv[1],encoding='utf-8').read()
+    def rows(layer):
+        out=[]
+        for m in re.finditer(r"\{n:'([^']*)',layer:'%s',x:([\d.]+),y:([\d.]+),z:([\d.]+),w:([\d.]+),h:([\d.]+)"%layer,src):
+            out.append((m.group(1),float(m.group(2)),float(m.group(3)),float(m.group(5)),float(m.group(6))))
+        return out
+    fronts=[(n,x,y,w,h) for (n,x,y,w,h) in rows('Fronty') if re.match(r'F\d+:',n)]
+    nh=npl=0
+    for (n,x,y,w,h) in rows('Zawiasy'):
+        cx,cy=x+17.5,y+17.5
+        fr=[f for f in fronts if f[1]<=cx<=f[1]+f[3] and f[2]<=cy<=f[2]+f[4]][0]
+        code=fr[0].split(':')[0]
+        right = cx>fr[1]+fr[3]/2
+        cyl('Otwór zawiasu Ø35 x 13 w %s'%code,'Otwory','z',dict(x=cx,y=cy,z=640+6.5-0.3),17.5,13.6,DARK);nh+=1
+        edge=fr[1]+fr[3] if right else fr[1]
+        if code=='F5':
+            wall='LF5';xs,xe=1500,1512
+        else:
+            tgt=edge+1.5 if right else edge-1.5
+            cand=[p for p in parts if p['t']=='x' and p['lo']['y']<=cy<=p['hi']['y'] and p['hi']['z']>=620 and abs((p['hi']['x'] if right else p['lo']['x'])-tgt)<0.6]
+            assert cand,(code,cy)
+            w_=cand[0];wall=w_['code']
+            inner=w_['lo']['x'] if right else w_['hi']['x']
+            xs,xe=(inner,inner+12) if right else (inner-12,inner)
+        for dy in (-16,16):
+            cyl('Otwór pod wkręt płytki zawiasu %s w %s (nawiert opcjonalny)'%(code,wall),'Otwory','x',dict(x=(xs+xe)/2,y=cy+dy,z=603),2,12,DARK);npl+=1
+    print('puszki',nh,'otwory płytek',npl)
+
 block="/* FASTENERS BEGIN (generowane: etap6/gen_fasteners.py, nie edytować ręcznie) */\n"+"\n".join(items)+"\n  /* FASTENERS END */"
 if len(sys.argv)>1:
     s=open(sys.argv[1],encoding='utf-8').read()

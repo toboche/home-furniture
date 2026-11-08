@@ -154,3 +154,9 @@ Zasada: krawędź frontu cofnięta o 1,5 mm względem zewnętrznego lica ściany
 - Nawierty bez zmian (przesunięcia całych modułów): 316 otworów, 50 połączeń, 0 kolizji. Zmieniły się tylko wymiary F1-F4, F6, F7, F9 w formatki.csv.
 
 Decyzja 2026-11-08: ściany sąsiednich modułów zostają stykające się (0 mm), luz tylko na zewnętrznych krawędziach zabudowy: lewa ściana 5 mm, prawa 3 mm, tył 3-5 mm, sufit 9 mm, pralka/suszarka do L1B1 3 mm. Moduły L, wnęka i kolumna przed dokręceniem składać na sucho.
+
+## Dokumentacja zawiasów i nawiertów pilotowych w modelu (2026-11-08, v52)
+- Warstwa "Otwory" ma teraz: puszki zawiasów Ø35 x 13 w tylnej stronie frontów (17 szt.) oraz po 2 otwory pod wkręty płytek zawiasów w ścianach lub listwie LF5 (rozstaw 32, 37 mm od przedniej krawędzi ściany; nawiert opcjonalny, w planie niewiercony, płytki na wkręty do płyt).
+- Front F6 nie ma zawiasów (stały, na kątownikach), więc nie ma w nim otworów pod zawias.
+- Nawierty pilotowe środka (Ø5, głębokość 5 mm, od strony wnętrza) pod otwory wycinane samodzielnie: PT3 (Ø130, środek 245 od lewej, 243 od górnej) i L1B2 (wycięcie GN1, środek 918 od dołu, 242 od tyłu), wpisane do kalkulator_nawierty.csv i arkusza. F6 (Ø150): środek 116 mm od lewej krawędzi, 210 mm od dolnej (243 od górnej); kalkulator nie nawierci F6 (okleina bezspoinowa), środek zaznaczyć ręcznie.
+- Luzy maszyn: lewa strona 3 mm (L1B1 do X 618), prawa 5 mm (KB1/KB2 od X 1221, maszyny do 1216), góra 30 mm (suszarka do Y 1713, półka NWP-1 od 1743), tył 10 mm do ściany pokoju.

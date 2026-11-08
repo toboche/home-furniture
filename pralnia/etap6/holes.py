@@ -95,6 +95,14 @@ for kp,pp in (('KP1','PP1'),('KP2-1','PP2-1'),('KP2-2','PP2-2')):
         oa='z'
         for z in (435,590):
             p['holes'].append(dict(kind='EDGE',n_axis_is_u=eu,edge_coord=ec,along=loc(p,oa,z),depth=DOWEL_DEPTH,d=DOWEL_D,partner=(pp if code==kp else kp),into=into))
+
+# --- nawierty pilotowe (środek) pod otwory wycinane samodzielnie: Ø5 nieprzelotowe, głębokość 5 mm, od strony wycinania ---
+PILOT_D=5; PILOT_DEPTH=5
+def pilot(code,side,y,other_axis,val):
+    p=P[code]; pos={'y':y,other_axis:val}
+    p['holes'].append(dict(kind='FACE',side=side,u=loc(p,p['u'],pos[p['u']]),v=loc(p,p['v'],pos[p['v']]),d=PILOT_D,depth=PILOT_DEPTH,partner='środek otworu wycinanego samodzielnie',axis_n='-',pin=False,pilot=True))
+pilot('PT3','A',2409,'x',1616)   # Ø130 pod kanał, od strony wnętrza (+z)
+pilot('L1B2','A',918,'z',245)    # wycięcie 100 x 100 pod gniazdko GN1 (y 868-968, z 192-292 od tyłu), od wnętrza (+x)
 # kontrola kolizji
 issues=[]
 for p in parts:

@@ -7,7 +7,7 @@ def add(k,n,a,b,q,okl,naw,u=''):
 K='KONFIRMATY'
 # L1
 add('L1B1','L1: bok prawy (przy maszynach)',1743,655,1,'1DL',K)
-add('L1B2','L1: bok lewy (całość; wycięcie pod GN1 100x100 robi użytkownik: od dołu 868-968, od tyłu 192-292)',1743,655,1,'1DL',K,'pod gniazdko GN1 wycina użytkownik')
+add('L1B2','L1: bok lewy (całość; wycięcie pod GN1 100x100 robi użytkownik: od dołu 868-968, od tyłu 192-292)',1743,655,1,'1DL',K+' + NAWIERT ŚRODKA Ø5 x 5','pod gniazdko GN1 wycina użytkownik')
 add('L1T','L1: tył',1743,574,1,'',K)
 # L2
 add('L2B','L2: boki pasa',909,637,2,'1DL',K)
@@ -31,7 +31,7 @@ add('KT1B','Kolumna: tył środkowy (gniazdka GP1/GP2), zdejmowany',390,132,1,''
 add('KT1C','Kolumna: tył górny, zdejmowany',408,132,1,'',K,'kątowniki 25x25 z wkrętami')
 add('KT2','Kolumna: tył, pas',909,132,1,'',K)
 add('PT2','Prawa: tył, dół i środek',1236,347,1,'',K)
-add('PT3','Prawa: tył, pas (otwór Ø130 pod kanał wierci użytkownik: środek 245 od lewej krawędzi, 243 od górnej)',909,347,1,'',K)
+add('PT3','Prawa: tył, pas (otwór Ø130 pod kanał wierci użytkownik: środek 245 od lewej krawędzi, 243 od górnej)',909,347,1,'',K+' + NAWIERT ŚRODKA Ø5 x 5')
 # półki kolumny (KP) i prawe (PP): osobne prostokąty zamiast półek L
 add('KP1','Półka kolumny, poziom 489',457,132,1,'1SZ',K)
 add('KP2','Półka kolumny, poziomy 922 i 1355 (na wciskanych podpórkach; łączona kołkami Ø8 z PP2 w jedną półkę L)',457,132,2,'1SZ','KOŁKI Ø8 W CZOLE (do PP2); BEZ KONFIRMATÓW')
@@ -52,7 +52,7 @@ F=[('F1','Front L: góra',607,453),('F2','Front L: dół',607,453),
 for k,n,w,h in F:
     dist=22.5
     naw=(('ZAWIASY 3 SZT' if k=='F9' else 'ZAWIASY 2 SZT')+', PUSZKA Ø35, ŚRODEK %g MM OD KRAWĘDZI'%dist) if k!='F6' else 'BRAK; otwór Ø150 własnoręcznie otwornicą'
-    add(k,n,w,h,1,'2DL+2SZ',naw,'' if k=='F6' else (('zawiasy po PRAWEJ, płytki na LF5; ' if k=='F5' else '')+'uchwyt GUBBARP 116 mm: otwory samodzielnie, bez nawiertów' + ('; zawiasy po PRAWEJ' if k in ('F3','F4') else '')))
+    add(k,n,w,h,1,'2DL+2SZ',naw,'otwór Ø150: ŚRODEK 116 MM OD LEWEJ KRAWĘDZI, 210 MM OD DOLNEJ (243 OD GÓRNEJ); nawiertu środka kalkulator nie zrobi (okleina bezspoinowa), zaznaczyć ręcznie' if k=='F6' else (('zawiasy po PRAWEJ, płytki na LF5; ' if k=='F5' else '')+'uchwyt GUBBARP 116 mm: otwory samodzielnie, bez nawiertów' + ('; zawiasy po PRAWEJ' if k in ('F3','F4') else '')))
 w=csv.writer(open('formatki.csv','w',newline='',encoding='utf-8-sig'),delimiter=';')
 w.writerow(['KOD','NAZWA','DL','SZ','SZT','OKLEINA','NAWIERTY','UWAGI'])
 for r in P: w.writerow(r)

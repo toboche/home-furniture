@@ -1,6 +1,6 @@
 ﻿KOD;NAZWA;DL;SZ;SZT;OKLEINA;NAWIERTY;UWAGI
 L1B1;L1: bok prawy (przy maszynach);1743;655;1;1DL;KONFIRMATY;
-L1B2;"L1: bok lewy (całość; wycięcie pod GN1 100x100 robi użytkownik: od dołu 868-968, od tyłu 192-292)";1743;655;1;1DL;KONFIRMATY;pod gniazdko GN1 wycina użytkownik
+L1B2;"L1: bok lewy (całość; wycięcie pod GN1 100x100 robi użytkownik: od dołu 868-968, od tyłu 192-292)";1743;655;1;1DL;KONFIRMATY + NAWIERT ŚRODKA Ø5 x 5;pod gniazdko GN1 wycina użytkownik
 L1T;L1: tył;1743;574;1;;KONFIRMATY;
 L2B;L2: boki pasa;909;637;2;1DL;KONFIRMATY;
 L2T;L2: tył pasa;909;574;1;;KONFIRMATY;
@@ -20,7 +20,7 @@ KT1B;Kolumna: tył środkowy (gniazdka GP1/GP2), zdejmowany;390;132;1;;KONFIRMAT
 KT1C;Kolumna: tył górny, zdejmowany;408;132;1;;KONFIRMATY;kątowniki 25x25 z wkrętami
 KT2;Kolumna: tył, pas;909;132;1;;KONFIRMATY;
 PT2;Prawa: tył, dół i środek;1236;347;1;;KONFIRMATY;
-PT3;Prawa: tył, pas (otwór Ø130 pod kanał wierci użytkownik: środek 245 od lewej krawędzi, 243 od górnej);909;347;1;;KONFIRMATY;
+PT3;Prawa: tył, pas (otwór Ø130 pod kanał wierci użytkownik: środek 245 od lewej krawędzi, 243 od górnej);909;347;1;;KONFIRMATY + NAWIERT ŚRODKA Ø5 x 5;
 KP1;Półka kolumny, poziom 489;457;132;1;1SZ;KONFIRMATY;
 KP2;"Półka kolumny, poziomy 922 i 1355 (na wciskanych podpórkach; łączona kołkami Ø8 z PP2 w jedną półkę L)";457;132;2;1SZ;"KOŁKI Ø8 W CZOLE (do PP2); BEZ KONFIRMATÓW";
 KP3;Półka kolumny, pas: 1743, 2188,5, 2634;457;132;3;1SZ;KONFIRMATY;
@@ -35,7 +35,7 @@ F2;Front L: dół;607;453;1;2DL+2SZ;ZAWIASY 2 SZT, PUSZKA Ø35, ŚRODEK 22.5 MM 
 F3;Front wnęka: góra;603;453;1;2DL+2SZ;ZAWIASY 2 SZT, PUSZKA Ø35, ŚRODEK 22.5 MM OD KRAWĘDZI;"uchwyt GUBBARP 116 mm: otwory samodzielnie, bez nawiertów; zawiasy po PRAWEJ"
 F4;Front wnęka: dół;603;453;1;2DL+2SZ;ZAWIASY 2 SZT, PUSZKA Ø35, ŚRODEK 22.5 MM OD KRAWĘDZI;"uchwyt GUBBARP 116 mm: otwory samodzielnie, bez nawiertów; zawiasy po PRAWEJ"
 F5;Front P pas: góra, otwierany;453;274.5;1;2DL+2SZ;ZAWIASY 2 SZT, PUSZKA Ø35, ŚRODEK 22.5 MM OD KRAWĘDZI;"zawiasy po PRAWEJ, płytki na LF5; uchwyt GUBBARP 116 mm: otwory samodzielnie, bez nawiertów"
-F6;Front P pas: góra, stały z kratką Ø150;453;234.5;1;2DL+2SZ;"BRAK; otwór Ø150 własnoręcznie otwornicą";
+F6;Front P pas: góra, stały z kratką Ø150;453;234.5;1;2DL+2SZ;"BRAK; otwór Ø150 własnoręcznie otwornicą";"otwór Ø150: ŚRODEK 116 MM OD LEWEJ KRAWĘDZI, 210 MM OD DOLNEJ (243 OD GÓRNEJ); nawiertu środka kalkulator nie zrobi (okleina bezspoinowa), zaznaczyć ręcznie"
 F7;Front P pas: dół;512;453;1;2DL+2SZ;ZAWIASY 2 SZT, PUSZKA Ø35, ŚRODEK 22.5 MM OD KRAWĘDZI;uchwyt GUBBARP 116 mm: otwory samodzielnie, bez nawiertów
 F8;Front P dół: rząd 1 (przy gzymsie);493.5;439;1;2DL+2SZ;ZAWIASY 2 SZT, PUSZKA Ø35, ŚRODEK 22.5 MM OD KRAWĘDZI;uchwyt GUBBARP 116 mm: otwory samodzielnie, bez nawiertów
 F9;Front P dół: jeden wysoki (dawne F9+F10+F11);1240.5;512;1;2DL+2SZ;ZAWIASY 3 SZT, PUSZKA Ø35, ŚRODEK 22.5 MM OD KRAWĘDZI;uchwyt GUBBARP 116 mm: otwory samodzielnie, bez nawiertów
