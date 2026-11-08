@@ -1,0 +1,40 @@
+﻿KOD;NAZWA;DL;SZ;SZT;OKLEINA;NAWIERTY;UWAGI
+L1B1;L1: bok prawy (przy maszynach);1743;655;1;1DL;KONFIRMATY;
+L1B2;"L1: bok lewy (całość; wycięcie pod GN1 100x100 robi użytkownik: od dołu 868-968, od tyłu 192-292)";1743;655;1;1DL;KONFIRMATY;pod gniazdko GN1 wycina użytkownik
+L1T;L1: tył;1743;574;1;;KONFIRMATY;
+L2B;L2: boki pasa;909;637;2;1DL;KONFIRMATY;
+L2T;L2: tył pasa;909;574;1;;KONFIRMATY;
+L2P;L2: półki stałe (spód, środek, góra);619;574;3;1SZ;KONFIRMATY;
+NWB;Wnęka nad maszynami: boki;909;635;2;1DL;KONFIRMATY;
+NWT;Wnęka: tył;909;570;1;;KONFIRMATY;
+NWP;Wnęka: półki stałe (spód, środek, góra);617;570;3;1SZ;KONFIRMATY;
+KB1;Kolumna: bok lewy, dół;489;200;1;1DL;KONFIRMATY;
+KB2;Kolumna: bok lewy, środek i góra (+ szeregi otworów Ø5 x 10 pod podpórki półek KP2);1254;475;1;1DL;KONFIRMATY;
+KB3;Kolumna: bok lewy, pas;909;475;1;1DL;KONFIRMATY;
+PB1;Prawa: bok prawy, dół (przy gzymsie);489;200;1;1DL;KONFIRMATY;
+PB2;Prawa: bok prawy, góra (+ szeregi otworów Ø5 x 10 pod podpórki półek PP2);1236;273;1;1DL;KONFIRMATY;
+PB3;Prawa: bok prawy, pas;909;273;1;1DL;KONFIRMATY;
+PT1;Prawa dół: tył;489;406;1;;KONFIRMATY;
+KT1A;Kolumna: tył dolny (zawór ZW1/ZW2), zdejmowany bez narzędzi;390;132;1;;KONFIRMATY;kątowniki 25x25 z pokrętłami
+KT1B;Kolumna: tył środkowy (gniazdka GP1/GP2), zdejmowany;390;132;1;;KONFIRMATY;kątowniki 25x25 z wkrętami
+KT1C;Kolumna: tył górny, zdejmowany;408;132;1;;KONFIRMATY;kątowniki 25x25 z wkrętami
+KT2;Kolumna: tył, pas;909;132;1;;KONFIRMATY;
+PT2;Prawa: tył, dół i środek;1236;347;1;;KONFIRMATY;
+PT3;Prawa: tył, pas (otwór Ø130 pod kanał wierci użytkownik: środek 245 od lewej krawędzi, 243 od górnej);909;347;1;;KONFIRMATY;
+KP1;Półka kolumny, poziom 489;457;132;1;1SZ;KONFIRMATY;
+KP2;"Półka kolumny, poziomy 922 i 1355 (na wciskanych podpórkach; łączona kołkami Ø8 z PP2 w jedną półkę L)";457;132;2;1SZ;"KOŁKI Ø8 W CZOLE (do PP2); BEZ KONFIRMATÓW";
+KP3;Półka kolumny, pas: 1743, 2188,5, 2634;457;132;3;1SZ;KONFIRMATY;
+PP1;Półka prawa, poziom 489 (do 1736);365;255;1;1DL;KONFIRMATY;
+PP2;"Półka prawa, poziomy 922 i 1355 (na wciskanych podpórkach; łączona kołkami Ø8 z KP2)";347;255;2;1DL;"KOŁKI Ø8 W CZOLE (do KP2); BEZ KONFIRMATÓW";
+PP3;Półka prawa, pas: 1743, 2188,5, 2634;347;255;3;1DL;KONFIRMATY;
+L1W;L1: wieniec górny, przód;574;100;1;1DL;KONFIRMATY;
+RDW;Prawa dolna: wieniec górny, przód;479;100;1;1DL;KONFIRMATY;
+F1;Front L: góra;608.5;453;1;2DL+2SZ;ZAWIASY 2 SZT, PUSZKA Ø35;uchwyt GUBBARP 116 mm: otwory samodzielnie, bez nawiertów
+F2;Front L: dół;608.5;453;1;2DL+2SZ;ZAWIASY 2 SZT, PUSZKA Ø35;uchwyt GUBBARP 116 mm: otwory samodzielnie, bez nawiertów
+F3;Front wnęka: góra;605;453;1;2DL+2SZ;ZAWIASY 2 SZT, PUSZKA Ø35;"uchwyt GUBBARP 116 mm: otwory samodzielnie, bez nawiertów; zawiasy po PRAWEJ"
+F4;Front wnęka: dół;605;453;1;2DL+2SZ;ZAWIASY 2 SZT, PUSZKA Ø35;"uchwyt GUBBARP 116 mm: otwory samodzielnie, bez nawiertów; zawiasy po PRAWEJ"
+F5;Front P pas: góra, otwierany;453;274.5;1;2DL+2SZ;ZAWIASY 2 SZT, PUSZKA Ø35;uchwyt GUBBARP 116 mm: otwory samodzielnie, bez nawiertów
+F6;Front P pas: góra, stały z kratką Ø150;453;236;1;2DL+2SZ;"BRAK; otwór Ø150 własnoręcznie otwornicą";
+F7;Front P pas: dół;513.5;453;1;2DL+2SZ;ZAWIASY 2 SZT, PUSZKA Ø35;uchwyt GUBBARP 116 mm: otwory samodzielnie, bez nawiertów
+F8;Front P dół: rząd 1 (przy gzymsie);493.5;439;1;2DL+2SZ;ZAWIASY 2 SZT, PUSZKA Ø35;uchwyt GUBBARP 116 mm: otwory samodzielnie, bez nawiertów
+F9;Front P dół: jeden wysoki (dawne F9+F10+F11);1240.5;513.5;1;2DL+2SZ;ZAWIASY 3 SZT, PUSZKA Ø35;uchwyt GUBBARP 116 mm: otwory samodzielnie, bez nawiertów
