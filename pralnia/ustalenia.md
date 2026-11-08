@@ -187,3 +187,9 @@ Z katalogu Blum 2022/2023 (str. 94-95, "Zawias do drzwi równoległych, wpuszcza
 - F5↔F6: prowadnik 173H7130 (dystans 3, wysokość 11,5; stal, mimośród ±2, wkręty Ø3,5/4). Katalog: ustawienie fabryczne 79B9590 = prowadnik o dystansie 3 mm; „podwyższony o 3 mm" = ten sam dystans 3. Linia wkrętów 21,5 od krawędzi, szczelina F = 8 − TB = 3 przy TB 5.
 - Otwory pod wkręty prowadników: DECYZJA – robimy nawierty pilotowe Ø3×12 (nieprzelotowe) w wewnętrznym licu ścianek, 30 szt. (15 zawiasów × 2, rozstaw 32, 37 od przedniej krawędzi ścianki, z=603). Są w planach i w kalkulatorze (348 otworów łącznie). Do sprawdzenia przy zamówieniu: czy kalkulator meble.pl przyjmuje Ø3 / głębokość 12 (jeśli nie – Ø4). F5/F6: 2 otwory w tyle F6 wiercisz sam.
 - Prowadnik jest przykręcany do powierzchni ścianki, nie wchodzi w otwór.
+
+## 2026-11-08 – UTRUSTA, KB1, półka L1 (v57)
+- Wnętrze UTRUSTA 105.808.24 (L1) WRACA do zamówienia (nieporozumienie: usunięte miały być tylko zawiasy UTRUSTA). Zawiasów UTRUSTA nadal nie kupujemy.
+- KB1 (bok kolumny, dół 489×200): 3 konfirmaty do PT1 (było 2) + 2 kołki Ø8×40 w styku z KB2 (y489, z 480 i 600). Razem konfirmatów 133, kołków 8, otworów 354.
+- Dodatkowa płyta w zamówieniu: L1P 619×574 (okleina 1SZ, BEZ nawiertów w półce i w szafce) – półka luzem na całą szerokość L1; nie ma jej w modelu, pozycję/wysokość wybierasz sam (uwaga: UTRUSTA zajmuje y110–1445 po lewej).
+- Formatki: 40 pozycji / 52 sztuki / 15,55 m².

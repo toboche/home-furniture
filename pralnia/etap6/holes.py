@@ -24,7 +24,7 @@ def loc(p,a,val):
     x=val-p['lo'][a]
     if a==p['u'] and not p['rh']: x=p['DL']-x
     return x
-def spread(lo,hi):
+def spread(lo,hi,SPACING=SPACING):
     L=hi-lo
     if L<150: return [ (lo+hi)/2 ]
     n=math.ceil((L-2*MARGIN)/SPACING)+1
@@ -49,7 +49,7 @@ for k,j in grp.items():
     along=max(oth,key=lambda a:ext[a][1]-ext[a][0])
     across=[a for a in oth if a!=along][0]
     mid=(ext[across][0]+ext[across][1])/2
-    pts=spread(*ext[along])
+    pts=spread(*ext[along],SPACING=(200 if 'KB1' in (face['code'],edge['code']) else SPACING))   # KB1: gęstszy rozstaw (3 konfirmaty zamiast 2)
     # strona części licowej: otwór od strony przeciwnej do styku
     edge_above = abs(face['hi'][n]-j['pos'])<0.01   # część krawędziowa leży po stronie +n
     side='B' if edge_above else 'A'      # A = lico po stronie +t (t==n)
@@ -95,6 +95,16 @@ for kp,pp in (('KP1','PP1'),('KP2-1','PP2-1'),('KP2-2','PP2-2')):
         oa='z'
         for z in (435,590):
             p['holes'].append(dict(kind='EDGE',n_axis_is_u=eu,edge_coord=ec,along=loc(p,oa,z),depth=DOWEL_DEPTH,d=DOWEL_D,partner=(pp if code==kp else kp),into=into))
+
+# kołki Ø8 x 20 w styku KB1/KB2 (współpłaszczyznowe boki kolumny, czoła na y=489), 2 szt. – dodatkowe połączenie KB1
+for code in ('KB1','KB2'):
+    p=P[code]
+    eu=(p['u']=='y'); assert 'y' in (p['u'],p['v'])
+    ec=loc(p,'y',489)
+    L=p['DL'] if eu else p['SZ']
+    into=-1 if ec>=L-0.01 else 1
+    for z in (480,600):
+        p['holes'].append(dict(kind='EDGE',n_axis_is_u=eu,edge_coord=ec,along=loc(p,'z',z),depth=DOWEL_DEPTH,d=DOWEL_D,partner=('KB2' if code=='KB1' else 'KB1'),into=into))
 
 # --- nawierty pilotowe (środek) pod otwory wycinane samodzielnie: Ø5 nieprzelotowe, głębokość 5 mm, od strony wycinania ---
 PILOT_D=5; PILOT_DEPTH=5

@@ -41,6 +41,7 @@ add('PP2','Półka prawa, poziomy 922 i 1355 (na wciskanych podpórkach; łączo
 add('PP3','Półka prawa, pas: 1743, 2188,5, 2634',347,255,3,'1DL',K)
 # wieńce górne (usztywnienie dolnych szafek)
 add('L1W','L1: wieniec górny, przód',574,100,1,'1DL',K)
+add('L1P','L1: półka luzem na całą szerokość L1 (BEZ nawiertów, nie montowana w szafce; ewentualne nawierty robi użytkownik)',619,574,1,'1SZ','BEZ NAWIERTÓW','dodatkowa płyta w zamówieniu; półka ma być na całej szerokości L1 (wewnętrzna szer. 574), głębokość jak L2P')
 add('RDW','Prawa dolna: wieniec górny, przód',479,100,1,'1DL',K)
 # fronty
 F=[('F1','Front L: góra',607,453),('F2','Front L: dół',607,453),

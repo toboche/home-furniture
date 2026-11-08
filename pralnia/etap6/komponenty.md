@@ -20,8 +20,8 @@ Wszystkie 17 zawiasów: CLIP top BLUMOTION (samodomykanie).
 Weryfikacja nawiertów: wszystkie 15 prowadników mieści się w ściankach (y zawiasu ±28), brak konfliktu z innymi otworami; pod wkręty prowadników nawierty pilotowe Ø3×12 (nieprzelotowe, w wewnętrznym licu ścianki, 2 na zawias, rozstaw 32, 37 od przedniej krawędzi ścianki): 30 szt. w planach/kalkulatorze (arkusz_nawiertow.pdf, kalkulator_nawierty.csv). Prowadnik F5 w F6 (2 otwory, X 1521,5; Y 2299 i 2552 ±16): front, więc bez nawiertu w kalkulatorze – wiercisz sam wg znaczników w modelu.
 
 ## Złącza
-- Konfirmaty 7×50: 132 szt. + zaślepki 132.
-- Kołki Ø8×40: 6 szt. + klej (pary KP/PP2-x); otwory Ø8×20 w krawędzi.
+- Konfirmaty 7×50: 133 szt. + zaślepki 133 (KB1–PT1 teraz 3 zamiast 2).
+- Kołki Ø8×40: 8 szt. + klej (6 w parach KP/PP, 2 w styku KB1/KB2); otwory Ø8×20 w krawędzi.
 - Podpórki półek Ø5×10 wciskane: 8 (otwory 42 szt.), siatka 32 mm.
 - Kątowniki 25×25: 6 pod F6 + zestawy pod KT1A/B/C.
 - Nawierty środków Ø5×5 (PT3, L1B2): pod otwory do wykonania samodzielnie.
@@ -29,5 +29,9 @@ Weryfikacja nawiertów: wszystkie 15 prowadników mieści się w ściankach (y z
 ## Uchwyty
 - GUBBARP 116 biały: 8 szt. (sprawdzić opakowanie); otwory wierci użytkownik.
 
+## Wyposażenie L1 (w zamówieniu)
+- IKEA UTRUSTA wnętrze szafy gospodarczej 140 cm, nr 105.808.24 (≈400 zł): 330 × 1335 × 530, wysuwane na prowadnicach, udźwig 25 kg; ustawione przy lewej ścianie L1. Zawiasów UTRUSTA nie kupujemy (zawiasy z Bluma). Do sprawdzenia w instrukcji IKEA przed zamówieniem: prowadnice (czy w zestawie, czy osobno), hak, otwory w bokach 18 mm.
+- Półka luzem L1P: 619 × 574 mm, 18 mm, okleina ABS 0,8 na jednej krawędzi 574, BEZ nawiertów (ani w szafce, ani w półce); ewentualne nawierty robi użytkownik.
+
 ## Do doprecyzowania
-- Wkręty/kołki do ściany (6×80 + kołki Ø8), kanał Ø125, kratka Ø150, wnętrze UTRUSTA 105.808.24 (zawiasów UTRUSTA nie kupujemy).
+- Wkręty/kołki do ściany (6×80 + kołki Ø8), kanał Ø125, kratka Ø150.

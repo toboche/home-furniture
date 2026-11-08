@@ -24,3 +24,8 @@ Różnice względem planu: F9, F10, F11 osobno (teraz jeden F9 512 x 1240,5); wy
 - Nawierty pilotowe prowadników Ø3×12 w ściankach (30 szt.): sprawdzić w kalkulatorze meble.pl, czy dopuszcza Ø3 i głębokość 12; w razie braku użyć Ø4. Łącznie 348 otworów, 0 kolizji.
 - Zawiasy UTRUSTA nie kupujemy; wnętrze UTRUSTA w modelu to tylko wizualizacja wyposażenia L1.
 - Wszystkie 17 zawiasów BLUMOTION; F5↔F6: 2 × 79B9590 + 2 × 173H7130 (dystans 3).
+
+## Dodane 2026-11-08 (v57)
+- UTRUSTA 105.808.24 w zamówieniu – sprawdzić w instrukcji IKEA prowadnice/hak/otwory w bokach.
+- L1P (półka luzem 619×574, bez nawiertów) do dopisania w koszyku; KB1: 3 konfirmaty + 2 kołki.
+- KT1A: prześwit między półkami 415 vs wysokość 410 (po 2 mm luzu) – sprawdzić przy montażu.
