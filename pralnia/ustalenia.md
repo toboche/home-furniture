@@ -160,3 +160,4 @@ Decyzja 2026-11-08: ściany sąsiednich modułów zostają stykające się (0 mm
 - Front F6 nie ma zawiasów (stały, na kątownikach), więc nie ma w nim otworów pod zawias.
 - Nawierty pilotowe środka (Ø5, głębokość 5 mm, od strony wnętrza) pod otwory wycinane samodzielnie: PT3 (Ø130, środek 245 od lewej, 243 od górnej) i L1B2 (wycięcie GN1, środek 918 od dołu, 242 od tyłu), wpisane do kalkulator_nawierty.csv i arkusza. F6 (Ø150): środek 116 mm od lewej krawędzi, 210 mm od dolnej (243 od górnej); kalkulator nie nawierci F6 (okleina bezspoinowa), środek zaznaczyć ręcznie.
 - Luzy maszyn: lewa strona 3 mm (L1B1 do X 618), prawa 5 mm (KB1/KB2 od X 1221, maszyny do 1216), góra 30 mm (suszarka do Y 1713, półka NWP-1 od 1743), tył 10 mm do ściany pokoju.
+Lista do weryfikacji: weryfikacja.md
