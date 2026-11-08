@@ -17,7 +17,7 @@ Wersja robocza do niezależnej weryfikacji. Wymiary w mm. Kody wymiarów wielkim
 
 Wszystkie 17 zawiasów: CLIP top BLUMOTION (samodomykanie).
 
-Weryfikacja nawiertów: wszystkie 15 prowadników mieści się w ściankach (y zawiasu ±28), brak konfliktu z innymi otworami; pod wkręty prowadników opcjonalny nawiert pilotowy Ø4×12, 2 na zawias (±16).
+Weryfikacja nawiertów: wszystkie 15 prowadników mieści się w ściankach (y zawiasu ±28), brak konfliktu z innymi otworami; pod wkręty prowadników nawierty pilotowe Ø3×12 (nieprzelotowe, w wewnętrznym licu ścianki, 2 na zawias, rozstaw 32, 37 od przedniej krawędzi ścianki): 30 szt. w planach/kalkulatorze (arkusz_nawiertow.pdf, kalkulator_nawierty.csv). Prowadnik F5 w F6 (2 otwory, X 1521,5; Y 2299 i 2552 ±16): front, więc bez nawiertu w kalkulatorze – wiercisz sam wg znaczników w modelu.
 
 ## Złącza
 - Konfirmaty 7×50: 132 szt. + zaślepki 132.

@@ -103,6 +103,31 @@ def pilot(code,side,y,other_axis,val):
     p['holes'].append(dict(kind='FACE',side=side,u=loc(p,p['u'],pos[p['u']]),v=loc(p,p['v'],pos[p['v']]),d=PILOT_D,depth=PILOT_DEPTH,partner='środek otworu wycinanego samodzielnie',axis_n='-',pin=False,pilot=True))
 pilot('PT3','A',2409,'x',1616)   # Ø130 pod kanał, od strony wnętrza (+z)
 pilot('L1B2','A',918,'z',245)    # wycięcie 100 x 100 pod gniazdko GN1 (y 868-968, z 192-292 od tyłu), od wnętrza (+x)
+
+# --- nawierty pilotowe pod wkręty prowadników zawiasów (Ø3 x 12, 2 na zawias, rozstaw 32, 37->wg prowadnika) w wewnętrznym licu ścianki ---
+PLATE_D=3; PLATE_DEPTH=12
+_src=open(os.environ.get('MODEL_HTML','/mnt/user-data/outputs/pralnia_3d.html'),encoding='utf-8').read()
+def _rows(layer):
+    return [(m.group(1),float(m.group(2)),float(m.group(3)),float(m.group(5)),float(m.group(6))) for m in re.finditer(r"\{n:'([^']*)',layer:'%s',x:([\d.]+),y:([\d.]+),z:([\d.]+),w:([\d.]+),h:([\d.]+)"%layer,_src)]
+_fr=[f for f in _rows('Fronty') if re.match(r'F\d+:',f[0])]
+PLATE_LOG=[]
+for (n,x,y,w,hh) in _rows('Zawiasy'):
+    cx,cy=x+17.5,y+17.5
+    fr=[f for f in _fr if f[1]<=cx<=f[1]+f[3] and f[2]<=cy<=f[2]+f[4]][0]
+    code=fr[0].split(':')[0]
+    if code=='F5': continue          # F5: prowadnik na tyle F6 (front – bez nawiertów w kalkulatorze, patrz ustalenia)
+    right=cx>fr[1]+fr[3]/2
+    edge=fr[1]+fr[3] if right else fr[1]
+    tgt=edge+1.5 if right else edge-1.5
+    cand=[p for p in parts if p['t']=='x' and p['lo']['y']<=cy<=p['hi']['y'] and p['hi']['z']>=620 and abs((p['hi']['x'] if right else p['lo']['x'])-tgt)<0.6]
+    assert cand,(code,cy)
+    w_=cand[0]
+    side='B' if right else 'A'       # lico po stronie wnętrza szafki (prawa ścianka: lico -x = B; lewa: +x = A)
+    for dy in (-16,16):
+        pos={'y':cy+dy,'z':603}
+        w_['holes'].append(dict(kind='FACE',side=side,u=loc(w_,w_['u'],pos[w_['u']]),v=loc(w_,w_['v'],pos[w_['v']]),d=PLATE_D,depth=PLATE_DEPTH,partner='wkręt prowadnika zawiasu '+code,axis_n='-',pin=False,pilot=True,plate=True))
+    PLATE_LOG.append((code,w_['code'],cy))
+print('nawierty prowadników:',len(PLATE_LOG)*2,'w',len(PLATE_LOG),'zawiasach')
 # kontrola kolizji
 issues=[]
 for p in parts:

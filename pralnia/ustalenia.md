@@ -185,4 +185,5 @@ Z katalogu Blum 2022/2023 (str. 94-95, "Zawias do drzwi równoległych, wpuszcza
 ## 2026-11-08 – zawiasy i prowadniki (v55, weryfikacja katalogu Blum 2022/23)
 - Wszystkie 17 zawiasów to CLIP top BLUMOTION (samodomykanie zintegrowane): 15 × 71B3590 + 2 × 79B9590 (95°, z opcją dezaktywacji). Zawiasy UTRUSTA odpadają.
 - F5↔F6: prowadnik 173H7130 (dystans 3, wysokość 11,5; stal, mimośród ±2, wkręty Ø3,5/4). Katalog: ustawienie fabryczne 79B9590 = prowadnik o dystansie 3 mm; „podwyższony o 3 mm" = ten sam dystans 3. Linia wkrętów 21,5 od krawędzi, szczelina F = 8 − TB = 3 przy TB 5.
-- Otwory pod wkręty prowadników: opcjonalne pilotowe Ø4×12 (wkręty samogwintujące Ø3,5; nawiercenie nie jest wymagane). Prowadnik nie wchodzi w otwór, jest przykręcany do powierzchni ścianki.
+- Otwory pod wkręty prowadników: DECYZJA – robimy nawierty pilotowe Ø3×12 (nieprzelotowe) w wewnętrznym licu ścianek, 30 szt. (15 zawiasów × 2, rozstaw 32, 37 od przedniej krawędzi ścianki, z=603). Są w planach i w kalkulatorze (348 otworów łącznie). Do sprawdzenia przy zamówieniu: czy kalkulator meble.pl przyjmuje Ø3 / głębokość 12 (jeśli nie – Ø4). F5/F6: 2 otwory w tyle F6 wiercisz sam.
+- Prowadnik jest przykręcany do powierzchni ścianki, nie wchodzi w otwór.
