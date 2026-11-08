@@ -26,9 +26,9 @@ add('PB2','Prawa: bok prawy, góra (+ szeregi otworów Ø5 x 10 pod podpórki p�
 add('PB3','Prawa: bok prawy, pas',909,273,1,'1DL',K)
 # plecy prawe
 add('PT1','Prawa dół: tył',489,406,1,'',K)
-add('KT1A','Kolumna: tył dolny (zawór ZW1/ZW2), zdejmowany bez narzędzi',390,132,1,'',K,'kątowniki 25x25 z pokrętłami')
-add('KT1B','Kolumna: tył środkowy (gniazdka GP1/GP2), zdejmowany',390,132,1,'',K,'kątowniki 25x25 z wkrętami')
-add('KT1C','Kolumna: tył górny, zdejmowany',408,132,1,'',K,'kątowniki 25x25 z wkrętami')
+add('KT1A','Kolumna: tył dolny (zawór ZW1/ZW2), zdejmowany bez narzędzi, y 509-919',410,132,1,'',K,'kątowniki 25x25 z pokrętłami')
+add('KT1B','Kolumna: tył środkowy (gniazdka GP1/GP2), zdejmowany, y 942-1352',410,132,1,'',K,'kątowniki 25x25 z wkrętami')
+add('KT1C','Kolumna: tył górny, zdejmowany, y 1375-1741',366,132,1,'',K,'kątowniki 25x25 z wkrętami')
 add('KT2','Kolumna: tył, pas',909,132,1,'',K)
 add('PT2','Prawa: tył, dół i środek',1236,347,1,'',K)
 add('PT3','Prawa: tył, pas (otwór Ø130 pod kanał wierci użytkownik: środek 245 od lewej krawędzi, 243 od górnej)',909,347,1,'',K+' + NAWIERT ŚRODKA Ø5 x 5')

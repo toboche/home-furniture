@@ -15,3 +15,7 @@ Różnice względem planu: F9, F10, F11 osobno (teraz jeden F9 512 x 1240,5); wy
 - Luzy: lewa ściana pokoju 5 mm, prawa 3 mm, tył 3-5, sufit 9. Maszyny: 3 mm z lewej, 5 z prawej, można je przesuwać (ok. 4 mm po bokach).
 - L1 bez półki (boki trzyma tył do czasu osadzenia L2); KB1 ma jedno połączenie.
 - Model 3D nie był oglądany wizualnie przez Claude (brak biblioteki w środowisku): sprawdzić warstwy "Konfirmaty", "Otwory", "Kołki", "Uchwyty", "Listwa F5".
+
+## Dodane 2026-11-08 (v55)
+- KT1A/B/C: nowe wysokości 410/410/366 (patrz ustalenia). Koszyk meble.pl dodatkowo nieaktualny o te trzy pozycje.
+- Ramiona kątowników w modelu nachodzą na siebie 2 mm w rogu – to geometria jednego kątownika, nie kolizja.

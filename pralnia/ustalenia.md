@@ -176,3 +176,8 @@ Z katalogu Blum 2022/2023 (str. 94-95, "Zawias do drzwi równoległych, wpuszcza
 - Regulacja: wysokość +/- 3, szerokość +/- 2,5, głębokość +/- 1 mm.
 - LF5 usunięta z modelu i z formatek (39 pozycji, 51 sztuk, 15,2 m2). Dodane 2 kątowniki 25x25 pod półką górną F6 (X 1540 i 1680, Y 2609-2634), żeby F6 utrzymała obciążenie od drzwi F5; razem 4+2 kątowniki.
 - DO SPRAWDZENIA: nośność mocowania F6 (cztery kątowniki dołem i na prawym boku plus dwa górne), dobór prowadnika (str. 144 katalogu).
+
+## 2026-11-08 – poprawka KT1 (zdejmowane tyły kolumny) po zmianie półek (v55)
+- Nowe półki KP2-1 (y922–940) i KP2-2 (y1355–1373) kolidowały ze starymi KT1A/B/C (390/390/408).
+- Nowe wymiary (szer. 132, gr. 18): KT1A y509–919 (h410), KT1B y942–1352 (h410), KT1C y1375–1741 (h366). Kątowniki przesunięte odpowiednio.
+- Dostęp do tyłu kolumny wyłącznie przez F9. W kalkulatorze zmieniają się wymiary KT1A/B/C (do przeliczenia w koszyku po weryfikacji).
