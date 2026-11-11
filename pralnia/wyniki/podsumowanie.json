@@ -1,0 +1,54 @@
+{
+ "formatki": {
+  "pozycje": 40,
+  "sztuki": 52,
+  "m2": 15.55
+ },
+ "kalkulator": {
+  "typy_formatek": 29,
+  "wiersze": 346
+ },
+ "laczniki": {
+  "konfirmaty": 146,
+  "kolki": 14,
+  "otwory_pod_kolki": 28,
+  "otwory_nieprzelotowe": 92,
+  "puszki_zawiasow": 17
+ },
+ "zaslepki": {
+  "widoczne": 19,
+  "ukryte": 127,
+  "widoczne_wg_czesci": {
+   "KB2": 2,
+   "KT2": 3,
+   "L1B1": 2,
+   "NWB-2": 7,
+   "PP1": 5
+  },
+  "widoczne_miejsca": [
+   "KB2 → RDW (x 1215, y 1734, z 565)",
+   "KB2 → RDW (x 1215, y 1734, z 615)",
+   "KT2 → KP3-1 (x 1305, y 1752, z 159)",
+   "KT2 → KP3-2 (x 1305, y 2198, z 159)",
+   "KT2 → KP3-3 (x 1305, y 2643, z 159)",
+   "L1B1 → L1W (x 621, y 1734, z 565)",
+   "L1B1 → L1W (x 621, y 1734, z 615)",
+   "NWB-2 → NWP-1 (x 1227, y 1752, z 73)",
+   "NWB-2 → NWP-2 (x 1227, y 2198, z 73)",
+   "NWB-2 → NWP-3 (x 1227, y 2643, z 73)",
+   "NWB-2 → NWT (x 1227, y 1793, z 14)",
+   "NWB-2 → NWT (x 1227, y 2063, z 14)",
+   "NWB-2 → NWT (x 1227, y 2332, z 14)",
+   "NWB-2 → NWT (x 1227, y 2602, z 14)",
+   "PP1 → PB1 (x 1654, y 513, z 490)",
+   "PP1 → PB1 (x 1654, y 513, z 590)",
+   "PP1 → PB2 (x 1727, y 483, z 590)",
+   "PP1 → PT1 (x 1289, y 513, z 449)",
+   "PP1 → PT1 (x 1595, y 513, z 449)"
+  ]
+ },
+ "polaczenia": 54,
+ "otwory_lacznie": 412,
+ "kolizje_otworow": 0,
+ "strony_arkusza": 29
+}

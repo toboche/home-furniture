@@ -1,0 +1,43 @@
+{
+ "formatki": {
+  "pozycje": 6,
+  "sztuki": 7,
+  "m2": 5.14
+ },
+ "kalkulator": {
+  "typy_formatek": 4,
+  "wiersze": 56
+ },
+ "laczniki": {
+  "konfirmaty": 33,
+  "kolki": 0,
+  "otwory_pod_kolki": 0,
+  "otwory_nieprzelotowe": 4,
+  "puszki_zawiasow": 2
+ },
+ "zaslepki": {
+  "widoczne": 12,
+  "ukryte": 21,
+  "widoczne_wg_czesci": {
+   "S1B-2": 12
+  },
+  "widoczne_miejsca": [
+   "S1B-2 → S1D (x 606, y 9, z 68)",
+   "S1B-2 → S1D (x 606, y 9, z 450)",
+   "S1B-2 → S1P (x 606, y 1009, z 68)",
+   "S1B-2 → S1P (x 606, y 1009, z 450)",
+   "S1B-2 → S1T (x 606, y 50, z 9)",
+   "S1B-2 → S1T (x 606, y 430, z 9)",
+   "S1B-2 → S1T (x 606, y 810, z 9)",
+   "S1B-2 → S1T (x 606, y 1190, z 9)",
+   "S1B-2 → S1T (x 606, y 1570, z 9)",
+   "S1B-2 → S1T (x 606, y 1950, z 9)",
+   "S1B-2 → S1W (x 606, y 1991, z 68)",
+   "S1B-2 → S1W (x 606, y 1991, z 450)"
+  ]
+ },
+ "polaczenia": 11,
+ "otwory_lacznie": 70,
+ "kolizje_otworow": 0,
+ "strony_arkusza": 4
+}

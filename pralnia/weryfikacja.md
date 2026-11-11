@@ -1,6 +1,6 @@
 # Pralnia: lista do weryfikacji przed zamówieniem (stan 2026-11-08, model v52)
 
-Źródła do sprawdzenia: model 3D (model3d/index.html), etap6/formatki.csv (40 pozycji, 52 sztuki, 15,2 m2), etap6/kalkulator_nawierty.csv, etap6/arkusz_nawiertow.pdf, ustalenia.md.
+Źródła do sprawdzenia: model 3D (index.html albo wyniki/pralnia_3d.html), wyniki/formatki.csv (40 pozycji, 52 sztuki, 15,55 m2), wyniki/kalkulator_nawierty.csv, wyniki/arkusz_nawiertow.pdf, wyniki/podsumowanie.json, pomiary.md, ustalenia.md.
 Kontrola automatyczna (model): 55 elementów (ściany, tyły, półki, fronty, listwa LF5, maszyny), 0 kolizji brył; nawierty: 318 otworów, 50 połączeń, 0 kolizji.
 
 ## Do potwierdzenia (decyzje otwarte)
