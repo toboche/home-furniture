@@ -1,0 +1,26 @@
+# Test regresji: wyniki (formatki, nawierty, łączniki, otwory) muszą wynikać z aktualnych modeli,
+# a widok 3D każdego pomieszczenia musi się budować bez błędów i zgadzać ze wzorcem sceny.
+name: test
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: pip install matplotlib playwright && python -m playwright install --with-deps chromium
+      - name: Wyniki zgodne z modelami
+        run: python3 wspolne/pipeline/run.py --wszystkie --sprawdz
+      - name: Widok 3D zgodny ze wzorcem
+        env:
+          CHROME: none
+        run: |
+          for m in */model.js; do
+            d=$(dirname "$m")
+            python3 wspolne/testy/scena.py "$d/index.html" "/tmp/$d.json" "wspolne/testy/wzorce/${d}_scena.json"
+          done

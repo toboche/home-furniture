@@ -1,0 +1,38 @@
+*{box-sizing:border-box}
+:root{
+  --bg:#e8ecef; --fg:#192024; --panel:rgba(250,252,253,.9); --line:rgba(25,32,36,.2);
+  --edge:#2c363c; --accent:#16707a; --muted:#56646c;
+  color-scheme:light dark;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#12171a; --fg:#e6ecef; --panel:rgba(26,32,36,.9); --line:rgba(230,236,239,.22);
+    --edge:#c3ccd1; --accent:#4cc3cf; --muted:#9aa8b0;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#12171a; --fg:#e6ecef; --panel:rgba(26,32,36,.9); --line:rgba(230,236,239,.22);
+  --edge:#c3ccd1; --accent:#4cc3cf; --muted:#9aa8b0;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+html,body{height:100%;margin:0;overflow:hidden;background:var(--bg);color:var(--fg);
+  font:14px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",sans-serif}
+canvas{position:fixed;inset:0;display:block;touch-action:none;z-index:0}
+#panel{position:fixed;z-index:10;top:calc(env(safe-area-inset-top,0px) + 8px);left:8px;width:min(300px,calc(100vw - 16px));
+  padding:10px 12px;background:var(--panel);border:1px solid var(--line);border-radius:8px;
+  -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);max-height:calc(100vh - 80px);overflow:auto}
+#panel h1{font-size:15px;margin:0;font-weight:650}
+.head{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.group{margin-top:10px}
+.group>span{display:block;color:var(--muted);margin-bottom:4px}
+.btns{display:flex;flex-wrap:wrap;gap:6px}
+button,select{font:inherit;color:var(--fg);background:transparent;border:1px solid var(--line);border-radius:6px;padding:4px 9px;cursor:pointer}
+button:hover,select:hover{border-color:var(--accent)}
+button:focus-visible,select:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+label.chk{display:flex;align-items:center;gap:8px;padding:2px 0;cursor:pointer}
+input[type=checkbox]{accent-color:var(--accent);width:16px;height:16px;margin:0}
+.hint{margin:10px 0 0;color:var(--muted);font-size:12.5px}
+#tip{position:fixed;z-index:10;left:8px;bottom:calc(env(safe-area-inset-bottom,0px) + 8px);max-width:calc(100vw - 16px);
+  padding:6px 10px;background:var(--panel);border:1px solid var(--line);border-radius:8px;display:none;pointer-events:none}
+#err{position:fixed;z-index:20;inset:0;display:none;align-items:center;justify-content:center;padding:24px;text-align:center}

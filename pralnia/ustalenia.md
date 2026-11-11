@@ -12,6 +12,7 @@ Oznaczenia wymiarów na rysunkach i w tabelach: TYLKO DUŻE LITERY.
 7. Ręczna weryfikacja wymiarów i składania przez użytkownika po skompletowaniu zestawu: DO ZROBIENIA
 
 ## Wymiary zamrożone (mm)
+Opisy kodów i historia odczytów: `pomiary.md`.
 A=1739, G=1497, J=2661 (projekt 2658), B=618, C=598, E=658, H=1713, R=42, cokół P=371, V=362, U=1372,
 gzyms Q=118, X=489, GZ1=GZ2=73, GZ3=466, GZ4=680, wentylacja M=121, N=53, GN1 (gniazdko) z=202, y=878.
 Wspólny podział poziomy: 1743. Wspólna płaszczyzna frontów: z=658 (fronty od z=640).
@@ -121,8 +122,11 @@ Koszyk 21386928 (2 970,11 zł) odpowiada jeszcze starej wersji (F9, F10, F11 oso
 ## Łączniki w wizualizacji (v47, 2026-11-08)
 Warstwy: "Konfirmaty" (trzon 7 x 50 plus łeb, 132 szt.), "Otwory" (Ø5 licowe, Ø4 x 35 w czołach, Ø8 x 20 pod kołki, Ø5 x 10 pod podpórki), "Kołki" (Ø8 x 40, 6 szt.). Generowane z tych samych danych co arkusz nawiertów (etap6/gen_fasteners.py, wstawia blok między znacznikami FASTENERS BEGIN/END w pliku modelu), więc model, CSV i PDF zawsze się zgadzają. Przy rozsunięciu łączniki jadą z częścią, w której leżą. Jeszcze niewymodelowane: wkręty zawiasów i kątowników KT1/F6.
 
-## Procedura odświeżania po każdej zmianie wymiarów (do użycia też dla garderoby i szafki z okapem)
-1. Zmiana w pralnia_3d.html (ITEMS). 2. `node d3.js` (struct.json) 3. `python3 joints.py; holes.py; gen.py; calc_table.py; pdf_sheets.py` 4. `python3 gen_fasteners.py pralnia_3d.html` 5. publikacja, ustalenia.md i dokument projektu. Nowe pomieszczenie = ten sam model i skrypty z nową listą ITEMS; funkcja module_of w joints.py trzeba dopasować do podziału na moduły.
+## Procedura odświeżania po każdej zmianie wymiarów (aktualna od 2026-11-11)
+1. Zmiana w `model.js` (ITEMS) albo w `reguly.py` (wyjątki, podpórki, kołki, opisy formatek). Zmierzone wymiary najpierw w `pomiary.md`.
+2. `python3 wspolne/pipeline/run.py pralnia` (z katalogu głównego): przelicza `laczniki.gen.js` i `wyniki/` (formatki, kalkulator, PDF, otwory.json, podsumowanie.json, pralnia_3d.html).
+3. `python3 wspolne/pipeline/run.py --wszystkie --sprawdz`, commit, push, publikacja `wyniki/pralnia_3d.html`, aktualizacja tego pliku.
+Nowe pomieszczenie: kopia katalogu `szablon/` (README w katalogu głównym). Dawne skrypty `etap6/` i `model3d/index.html` są zastąpione przez `wspolne/` i pliki w tym katalogu.
 
 ## F5: zawiasy po prawej (2026-11-08)
 F5 (otwierany, 274,5 x 453) ma zawiasy po PRAWEJ, przy F6 (stały front z kratką). Zawias: Blum CLIP top BLUMOTION 110° wpuszczany, 71B3790 (INSERTA), dostępny na Allegro (link od użytkownika). Puszki Ø35 w F5 (X puszki 1457, Y 2281,5 i 2534,5). Płytki montażowe na listwie LF5 (płyta 18 mm, 427,5 x 60, X 1500-1518, Y 2206,5-2634, Z 580-640), dokręconej do tyłu F6 dwoma kątownikami 25x25. Płytka ok. 37 mm od płaszczyzny frontu (ok. 19 mm za tylnym licem F5). DO SPRAWDZENIA w karcie Blum (HIO71B3790-spec.pdf): odległości otworów płytki i wpuszczenie; kolizja lewego kątownika dolnego F6 (X 1540) z listwą/otworem Ø150 (od X 1541). LF5 bez okleiny i bez nawiertów, dochodzi do zamówienia (szer. 60 mm < 100: ostrzeżenie kalkulatora).
@@ -194,7 +198,7 @@ Z katalogu Blum 2022/2023 (str. 94-95, "Zawias do drzwi równoległych, wpuszcza
 - Dodatkowa płyta w zamówieniu: L1P 619×574 (okleina 1SZ, BEZ nawiertów w półce i w szafce) – półka luzem na całą szerokość L1; nie ma jej w modelu, pozycję/wysokość wybierasz sam (uwaga: UTRUSTA zajmuje y110–1445 po lewej).
 - Formatki: 40 pozycji / 52 sztuki / 15,55 m².
 
-## 2026-11-11 – zmiany po zewnętrznym audycie (v58, lokalnie, niewypchnięte do GitHub)
+## 2026-11-11 – zmiany po zewnętrznym audycie (v58)
 Zastosowane:
 - Półki L podzielone wzdłuż Z (brak widocznego łączenia na przodzie półki): PP z przodu na całą szerokość, KP z tyłu kolumny. Poziom 489: PP1 497×273 (x 1239–1736, z 367–640, stoją na niej PT2/PB2 w całej grubości) + KP1 184×132 (z 183–367). Poziomy 922 i 1355 (na podpórkach, luz 1,5): PP2 477,5×255 (x 1239,75–1717,25, z 385–640) + KP2 202×130,5 (z 183–385). Pas (1743, 2188,5, 2634, na konfirmatach): PP3 479×255 + KP3 202×132. Pary łączone 2 kołkami Ø8×40 (x 1270 i 1340) w z=367 (poziom 489) lub z=385. KP bez okleiny, PP okleina 1DL na przodzie.
 - Podparcie z tyłu: poziomy 922/1355 – lewa strona KB2 w 4 punktach (z 213 i 355 pod KP, z 417 i 590 pod PP), prawa PB2 w 2 punktach (z 417, 590); pozostałe poziomy na konfirmatach do ścianek i pleców (PT2/PT3/KT2). Pierwszy rząd podpórek jest 32 mm od styku PP/KP. 12 podpórek zamiast 8.
@@ -206,3 +210,10 @@ Zastosowane:
 - Łby konfirmatów w wizualizacji zlicowane z licem; zaślepki tylko na 19 widocznych łbach.
 - Montaż: L1/L2 jako ostatnie (5 mm luzu od lewej ściany). Gniazdo GN3/GN4 jest natynkowe (wysunięcie 15 mm, x 0–15, y 179–259, z 665–745) i koliduje z L1B2 (x 5–23) przy wsuwaniu od przodu: zdjąć gniazdo na czas montażu albo złożyć L1 na miejscu zaczynając od lewej ściany.
 Nie zastosowane (czekają na pomiary lub decyzję): patrz audyt_niezaaplikowane.md.
+
+## 2026-11-11 – przebudowa repozytorium pod kolejne pomieszczenia (v59, BEZ zmian wymiarów)
+- Silnik widoku 3D wydzielony do `wspolne/viewer/`, dane pralni w `model.js` (reguły widoku pralni: wariant F8, kątowniki F6 i KT1 przy rozsuwaniu), łączniki w `laczniki.gen.js` (generowane).
+- Skrypty z `etap6/` zastąpione wspólnym pipeline'em `wspolne/pipeline/` i regułami pralni w `reguly.py`. Wymiary i ilości formatek liczone teraz z modelu (wcześniej wpisane ręcznie w gen.py); opisy, okleina i nawierty w `reguly.py`.
+- Wyniki w `wyniki/` (zamiast `etap6/`). Sprawdzone: formatki.csv, kalkulator_nawierty.csv i lista otworów identyczne bajt w bajt z v58, arkusz PDF identyczny graficznie (30 stron), scena 3D identyczna (1103 obiekty, także wariant F8, rozsunięcie, kolory, warstwy).
+- Nowe: `pomiary.md` (pomiary z historią odczytów), `wyniki/podsumowanie.json` (40 pozycji / 52 sztuki / 15,55 m², 146 konfirmatów, 14 kołków, 19 widocznych łbów), test regresji w GitHub Actions.
+- Usunięta stara kopia `etap6/komponenty.md` (stan v55); aktualne zestawienie: `komponenty.md`.

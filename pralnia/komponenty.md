@@ -1,8 +1,8 @@
-# Zestawienie okuć i elementów (pralnia) – stan v58 (do przeglądu, niewypchnięty), 2026-11-11
+# Zestawienie okuć i elementów (pralnia) – stan v58, 2026-11-11 (v59: bez zmian, tylko nowe ścieżki plików)
 Wersja robocza do niezależnej weryfikacji. Wymiary w mm. Kody wymiarów wielkimi literami.
 
 ## Płyta
-- Egger W1200 ST9 „Biały porcelanowy" 18 mm, centrum.meble.pl; 40 pozycji / 52 sztuki / 15,55 m² (formatki.csv, razem z L1P).
+- Egger W1200 ST9 „Biały porcelanowy" 18 mm, centrum.meble.pl; 40 pozycji / 52 sztuki / 15,55 m² (wyniki/formatki.csv, razem z L1P).
 - Okleina: fronty 1,0 mm bezszwowa (szablony zawiasów), reszta ABS 0,8 mm z nawiertami.
 
 ## Zawiasy i prowadniki (Blum)
@@ -17,10 +17,10 @@ Wersja robocza do niezależnej weryfikacji. Wymiary w mm. Kody wymiarów wielkim
 
 Wszystkie 17 zawiasów: CLIP top BLUMOTION (samodomykanie).
 
-Weryfikacja nawiertów: wszystkie 15 prowadników mieści się w ściankach (y zawiasu ±28), brak konfliktu z innymi otworami; pod wkręty prowadników nawierty pilotowe Ø3×12 (nieprzelotowe, w wewnętrznym licu ścianki, 2 na zawias, rozstaw 32, 37 od przedniej krawędzi ścianki): 30 szt. w planach/kalkulatorze (arkusz_nawiertow.pdf, kalkulator_nawierty.csv). Prowadnik F5 w F6 (2 otwory, X 1521,5; Y 2299 i 2552 ±16): front, więc bez nawiertu w kalkulatorze – wiercisz sam wg znaczników w modelu.
+Weryfikacja nawiertów: wszystkie 15 prowadników mieści się w ściankach (y zawiasu ±28), brak konfliktu z innymi otworami; pod wkręty prowadników nawierty pilotowe Ø3×12 (nieprzelotowe, w wewnętrznym licu ścianki, 2 na zawias, rozstaw 32, 37 od przedniej krawędzi ścianki): 30 szt. w planach/kalkulatorze (wyniki/arkusz_nawiertow.pdf, wyniki/kalkulator_nawierty.csv). Prowadnik F5 w F6 (2 otwory, X 1521,5; Y 2299 i 2552 ±16): front, więc bez nawiertu w kalkulatorze – wiercisz sam wg znaczników w modelu.
 
 ## Złącza
-- Konfirmaty 7×50: 146 szt. (łby wpuszczone fazownikiem na równo z licem). Zaślepki tylko na widocznych łbach: 19 miejsc (kupić 20); pozostałe 127 łbów jest ukrytych przy ścianie pokoju, sąsiednim module, maszynie lub pionie (skrypt etap6/zaslepki.py).
+- Konfirmaty 7×50: 146 szt. (łby wpuszczone fazownikiem na równo z licem). Zaślepki tylko na widocznych łbach: 19 miejsc (kupić 20); pozostałe 127 łbów jest ukrytych przy ścianie pokoju, sąsiednim module, maszynie lub pionie (wspolne/pipeline/zaslepki.py; lista miejsc: wyniki/podsumowanie.json).
 - Kołki Ø8×40: 14 szt. + klej (12 w parach KP/PP: po 2 na poziom × 6 poziomów, 2 w styku KB1/KB2); otwory Ø8×20 w krawędzi.
 - Podpórki półek Ø5×10 wciskane: 12 (poziomy 922 i 1355: po 4 w KB2 – z 213, 355, 417, 590 – i po 2 w PB2 – z 417, 590); otwory 60 szt., siatka 32 mm. Poziom 489 bez podpórek (konfirmaty).
 - Kątowniki 25×25: 6 pod F6 (przesunięte: prawy górny y 2550, lewe x 1510) + 6 za płytami KT1A/B/C (po 2 na płytę, na boku KB2, ramię za płytą).
