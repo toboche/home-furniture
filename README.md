@@ -3,6 +3,9 @@
 Projekty mebli na wymiar do mieszkania: model 3D, lista formatek, nawierty i ustalenia.
 Każde pomieszczenie ma swój katalog; silnik wizualizacji i skrypty są wspólne.
 
+Dokumentacja: `wspolne/STRUKTURA.md` (struktura, decyzje, reguły modelu, nowe pomieszczenie krok po kroku),
+`wspolne/zasady.md` (założenia meblarskie), `CLAUDE.md` (zasady dla kolejnych rozmów z Claude).
+
 ## Pomieszczenia
 - `pralnia/`: szafki do pralni (płyta Egger W1200 ST9 18 mm, centrum.meble.pl), przed zamówieniem
 - `garderoba/`: szafy do garderoby, start (pomiary)
@@ -40,9 +43,11 @@ Zamierzona zmiana widoku: odśwież wzorzec poleceniem
 Wymagania: Python 3 z matplotlib, Node.js; do testu widoku Playwright z Chromium.
 
 ## Nowe pomieszczenie
+Skrót (pełna wersja: `wspolne/STRUKTURA.md`, punkt 7):
 1. Skopiuj `szablon/` pod nową nazwą, usuń `wyniki/` i `laczniki.gen.js`.
 2. Uzupełnij `pomiary.md` i `ustalenia.md`, potem `model.js` (wymiary jako stałe z pomiarów) i `reguly.py`.
-3. `python3 wspolne/pipeline/run.py NAZWA`, wzorzec sceny: `python3 wspolne/testy/scena.py NAZWA/index.html wspolne/testy/wzorce/NAZWA_scena.json`.
+3. `python3 wspolne/pipeline/run.py NAZWA`, wzorzec sceny: `python3 wspolne/testy/scena.py NAZWA/index.html wspolne/testy/wzorce/NAZWA_scena.json`
+   (bez wzorca test w GitHub Actions nie przejdzie).
 
 ## Praca równoległa
 Każde pomieszczenie na osobnej gałęzi (np. `garderoba/...`). Konflikty mogą się pojawić tylko w `wspolne/`;
