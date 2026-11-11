@@ -5,14 +5,15 @@ Układ (do potwierdzenia, patrz `ustalenia.md`): patrząc od drzwi, ściana tyln
 lewa = z gzymsem, przednia = z drzwiami. X od lewej ściany ku prawej, Y od podłogi w górę, Z od tylnej ściany ku drzwiom.
 Szkic z kodami: `zrodla/szkic_pomiarow.svg`. Konwencja zdjęć jak w pralni: nazwa pliku = odczytany wymiar.
 RZUT = wartość z rzutu architektonicznego, tylko orientacyjnie.
+Użytkownik podaje NAJMNIEJSZY odczyt z kilku pomiarów (żeby meble nie wyszły za duże). Wartości w nawiasach są wyliczone, nie zmierzone.
 
 ## Pokój
 | KOD | WARTOŚĆ | OPIS | RZUT | WCZEŚNIEJ / UWAGI |
 |---|---|---|---|---|
-| A | | szerokość od lewej do prawej ściany, przy ścianie przedniej, na wysokości 0, 1 i 2 m | ok. 1750-1800 | |
-| S | | od boku pionu do prawej ściany, przy ścianie tylnej, na wysokości 0, 1 i 2 m | | |
-| G | | głębokość od tylnej do przedniej ściany, przy prawej ścianie, na wysokości 0, 1 i 2 m | 1490 (930 + 560) | |
-| T | | od czoła pionu (strona do drzwi) do ściany przedniej, na wysokości 0, 1 i 2 m | 930 | |
+| A | 1825 | szerokość od lewej do prawej ściany, przy ścianie przedniej (najmniejszy odczyt) | ok. 1750-1800 | 2026-11-11 |
+| S | 1133 | od boku pionu do prawej ściany, przy ścianie tylnej (najmniejszy odczyt) | | 2026-11-11 |
+| G | 1490 | głębokość od tylnej do przedniej ściany, przy prawej ścianie (najmniejszy odczyt) | 1490 (930 + 560) | 2026-11-11 |
+| T | 919 | od czoła pionu (strona do drzwi) do ściany przedniej (najmniejszy odczyt) | 930 | 2026-11-11 |
 | J | | wysokość podłoga–sufit, w kilku miejscach (najniższa) | | |
 | P1 | | przekątna podłogi: narożnik przedni lewy – narożnik tylny prawy (kontrola kątów) | | |
 | K | | grubość kafelków z klejem (docelowa podłoga) | | kafelki jeszcze nie położone |
@@ -28,8 +29,8 @@ RZUT = wartość z rzutu architektonicznego, tylko orientacyjnie.
 ## Pion i wylot wentylacyjny
 | KOD | WARTOŚĆ | OPIS | RZUT | WCZEŚNIEJ / UWAGI |
 |---|---|---|---|---|
-| PX | | wysięg pionu od lewej ściany (kontrola: A − S) | | |
-| PZ | | wysięg pionu od tylnej ściany (kontrola: G − T) | 560 | |
+| PX | (692) | wysięg pionu od lewej ściany | | wyliczone A − S, do potwierdzenia pomiarem |
+| PZ | (571) | wysięg pionu od tylnej ściany | 560 | wyliczone G − T, do potwierdzenia pomiarem |
 | W1 | | wysokość środka wylotu od podłogi | | |
 | W2 | | odległość środka wylotu od lewej ściany | | |
 | W3 | | średnica zewnętrzna wylotu | | |
