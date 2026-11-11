@@ -34,7 +34,7 @@ for p in parts:
             dr=1 if h['side']=='B' else -1
             c2=dict(pos);c2[t]=outer+dr*25
             cyl('Konfirmat 7 x 50: %s → %s'%(p['code'],h['partner']),'Konfirmaty',t,c2,3.5,50,STEEL)
-            c3=dict(pos);c3[t]=outer-dr*1
+            c3=dict(pos);c3[t]=outer+dr*1   # łeb zlicowany z lica (wpuszczony fazownikiem)
             cyl('Łeb konfirmatu: %s → %s'%(p['code'],h['partner']),'Konfirmaty',t,c3,5,2,HEAD);nconf+=1
         else:
             a_e=p['u'] if h['n_axis_is_u'] else p['v']      # oś, wzdłuż której idzie otwór

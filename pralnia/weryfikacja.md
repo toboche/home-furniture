@@ -29,3 +29,10 @@ Różnice względem planu: F9, F10, F11 osobno (teraz jeden F9 512 x 1240,5); wy
 - UTRUSTA 105.808.24 w zamówieniu – sprawdzić w instrukcji IKEA prowadnice/hak/otwory w bokach.
 - L1P (półka luzem 619×574, bez nawiertów) do dopisania w koszyku; KB1: 3 konfirmaty + 2 kołki.
 - KT1A: prześwit między półkami 415 vs wysokość 410 (po 2 mm luzu) – sprawdzić przy montażu.
+
+## Dodane 2026-11-11 (v58, lokalnie)
+- Do pomiaru: gzyms przy poziomie 489 (czy wchodzi w obrys PP1/KP1; od tego zależy podniesienie o 3 mm), potrzeba wieńca RDW2.
+- Magnesy w KT1A/B/C: potwierdzić siłę trzymania i gniazda Ø10×3 (robi użytkownik). Alternatywa: zatrzaski/rzep.
+- KT1C skrócona do 350: szczelina 18 mm pod wieńcem RDW za plecami (tył kolumny), do akceptacji.
+- Kalkulator meble.pl: Ø3×12 dla prowadników (jeśli niedostępne, Ø4).
+- Koszyk meble.pl wymaga przeróbki także o: półki PP/KP w nowych wymiarach, KT1A/B/C 407/407/350 ×127, L1P, wieńce 2 konfirmaty.

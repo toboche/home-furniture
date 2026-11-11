@@ -193,3 +193,16 @@ Z katalogu Blum 2022/2023 (str. 94-95, "Zawias do drzwi równoległych, wpuszcza
 - KB1 (bok kolumny, dół 489×200): 3 konfirmaty do PT1 (było 2) + 2 kołki Ø8×40 w styku z KB2 (y489, z 480 i 600). Razem konfirmatów 133, kołków 8, otworów 354.
 - Dodatkowa płyta w zamówieniu: L1P 619×574 (okleina 1SZ, BEZ nawiertów w półce i w szafce) – półka luzem na całą szerokość L1; nie ma jej w modelu, pozycję/wysokość wybierasz sam (uwaga: UTRUSTA zajmuje y110–1445 po lewej).
 - Formatki: 40 pozycji / 52 sztuki / 15,55 m².
+
+## 2026-11-11 – zmiany po zewnętrznym audycie (v58, lokalnie, niewypchnięte do GitHub)
+Zastosowane:
+- Półki L podzielone wzdłuż Z (brak widocznego łączenia na przodzie półki): PP z przodu na całą szerokość, KP z tyłu kolumny. Poziom 489: PP1 497×273 (x 1239–1736, z 367–640, stoją na niej PT2/PB2 w całej grubości) + KP1 184×132 (z 183–367). Poziomy 922 i 1355 (na podpórkach, luz 1,5): PP2 477,5×255 (x 1239,75–1717,25, z 385–640) + KP2 202×130,5 (z 183–385). Pas (1743, 2188,5, 2634, na konfirmatach): PP3 479×255 + KP3 202×132. Pary łączone 2 kołkami Ø8×40 (x 1270 i 1340) w z=367 (poziom 489) lub z=385. KP bez okleiny, PP okleina 1DL na przodzie.
+- Podparcie z tyłu: poziomy 922/1355 – lewa strona KB2 w 4 punktach (z 213 i 355 pod KP, z 417 i 590 pod PP), prawa PB2 w 2 punktach (z 417, 590); pozostałe poziomy na konfirmatach do ścianek i pleców (PT2/PT3/KT2). Pierwszy rząd podpórek jest 32 mm od styku PP/KP. 12 podpórek zamiast 8.
+- Usunięte 2 nadmiarowe podpórki z poziomu 489 (były wyłącznie w modelu; półki 489 stoją na konfirmatach).
+- KT1A/B/C: płyty 127 mm (w tunelu 132, kątownik 2 mm), kątowniki 25×25 tylko na boku KB2 z ramieniem ZA płytą (z 163–165), bez zależności od ruchomych półek; trzymane 2 magnesami Ø10×3 każda. Wysokości po sprawdzeniu drogi wysuwania do przodu: KT1A 407 (y 509–916), KT1B 407 (y 942–1349), KT1C 350 (y 1375–1725; wieniec RDW y 1725–1743 blokuje wysuwanie wyżej, szczelina 18 mm zostaje pod wieńcem). Podpórki półek na poziomach 922 i 1355 sięgają 5 mm pod półkę, stąd górna krawędź KT1A/B 1 mm niżej.
+- Kątowniki pod F6: prawy górny y 2550 (kolizja z kątownikiem sufitowym usunięta), lewe x 1510 (bliżej zawiasów F5).
+- GN1: nawiert środka L1B2 z 242 (było 245).
+- Wieńce L1W, RDW: 2 konfirmaty na koniec (25 i 75 od krawędzi) zamiast 1.
+- Łby konfirmatów w wizualizacji zlicowane z licem; zaślepki tylko na 19 widocznych łbach.
+- Montaż: L1/L2 jako ostatnie (5 mm luzu od lewej ściany). Gniazdo GN3/GN4 jest natynkowe (wysunięcie 15 mm, x 0–15, y 179–259, z 665–745) i koliduje z L1B2 (x 5–23) przy wsuwaniu od przodu: zdjąć gniazdo na czas montażu albo złożyć L1 na miejscu zaczynając od lewej ściany.
+Nie zastosowane (czekają na pomiary lub decyzję): patrz audyt_niezaaplikowane.md.

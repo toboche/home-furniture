@@ -1,0 +1,14 @@
+# Elementy audytu niezaaplikowane w v58 (do przekazania audytorowi)
+Stan: 2026-11-11. Zastosowane: podział półek wzdłuż Z, KT1A/B/C (zmodyfikowane), kątowniki F6, nawiert GN1 z=242, usunięcie podpórek poziomu 489, zaślepki/łby, wieńce 2 konfirmaty, uwaga o montażu L1.
+
+| # | Element audytu | Status | Motywacja |
+|---|---|---|---|
+| 1 | Prowadniki 173H7100 na eurowkręty: otwory Ø5×12, wkręty 661.1300.HG lub prowadniki 174E6100.01 | Niezastosowane | Prowadnik 173H7100 jest na wkręty do płyt wiórowych Ø3,5/4 (katalog Blum 2022/23, str. 146). 174E6100.01 to wersja EXPANDO (kołki rozporowe), nie eurowkręt. Prowadniki na eurowkręty to inne numery: 175H9100 (wkręt Ø6×14,5, nr 661.1450.HG) i 175H4100 (Ø6×12,9, nr 66B.134). Kodu 661.1300.HG nie ma na stronach katalogu, którymi dysponujemy. Pewność, że kalkulator przyjmie Ø5×12, jest niesprawdzona. Zostajemy przy 173H7100 i nawiercie Ø3×12. Do rozważenia, jeśli audytor poda poprawne numery i uzasadni korzyść. |
+| 2 | Podniesienie poziomu 489 o 3 mm (KB1, PB1, PT1 492; KB2 1251; PB2/PT2 1233; KT1A 407 od y512; przesunięcie konfirmatu PP1→PB2 poza obrys gzymsu) | Wstrzymane do pomiarów | Zależy od tego, czy gzyms (wysokość 489) wchodzi w obrys PP1/KP1, czego nie wiemy bez pomiaru w pomieszczeniu. Zmienia wysokości sześciu płyt. Szczelina F8/F9 (496,5–499,5) mieści się w obu wariantach. |
+| 3 | Wieniec RDW2 (479×100, y 1725–1743, z 385–485) | Wstrzymane | W audycie brak uzasadnienia, co dokładnie ma spinać. Do decyzji po wyjaśnieniu i po pomiarach (patrz też zachowanie szczeliny wysuwania KT1C pod wieńcem). |
+| 4 | „Tip": kołki tylko w KP2, PP2 bez kleju, żeby przekładać półki bez zdejmowania F9 | Niezastosowane | F9 jest na zawiasach i się otwiera, nie trzeba jej zdejmować w żadnym wariancie. Zostaje decyzja użytkownika: pary KP+PP sklejone i przekładane razem. |
+| 5 | Zmiana z KT1: szerokość 130 mm | Zmienione na 127 mm | Kątownik za płytą ma ramię przy boku KB2 grubości 2 mm; płyta 130 kolidowałaby z nim. 127 mm daje 0,5 mm do kątownika i 2,5 mm do pionu. |
+| 6 | KT1: mocowanie śrubą od przodu w kątownik za płytą | Zamienione na magnesy | Wkręt przez płytę w blaszane ramię (ok. 2 mm) trzyma słabo. Zastosowano 2 magnesy Ø10×3 na płytę (do potwierdzenia przez użytkownika). |
+| 7 | KT1A 407 od y512 oraz KT1B/KT1C wymiary z audytu | Inne wartości | Po sprawdzeniu drogi wysuwania: podpórki półek wystają 5 mm pod półkę (KT1A/B do y 916 i 1349), a wieniec RDW (y 1725–1743) blokuje wysuwanie KT1C (do y 1725, h 350). |
+| 8 | Wniosek audytu o gniazdkach podtynkowych (zdjęcie ramek) | Zmienione | Gniazda są natynkowe (wysunięcie 15 mm, potwierdzone przez użytkownika). Zalecenie: zdjąć gniazdo na czas montażu albo złożyć L1 na miejscu. |
+| 9 | Eurowkręty jako zamiennik 609.1700 na liście zakupów | Niezastosowane | Wynika z punktu 1. |

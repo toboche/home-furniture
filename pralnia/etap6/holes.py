@@ -49,7 +49,8 @@ for k,j in grp.items():
     along=max(oth,key=lambda a:ext[a][1]-ext[a][0])
     across=[a for a in oth if a!=along][0]
     mid=(ext[across][0]+ext[across][1])/2
-    pts=spread(*ext[along],SPACING=(200 if 'KB1' in (face['code'],edge['code']) else SPACING))   # KB1: gęstszy rozstaw (3 konfirmaty zamiast 2)
+    pts=spread(*ext[along],SPACING=(200 if 'KB1' in (face['code'],edge['code']) else SPACING))
+    if ({face['code'],edge['code']}&{'L1W','RDW'}) and 90<=ext[along][1]-ext[along][0]<=110: pts=[ext[along][0]+25,ext[along][1]-25]   # wieniec 100 mm: 2 konfirmaty na koniec   # KB1: gęstszy rozstaw (3 konfirmaty zamiast 2)
     # strona części licowej: otwór od strony przeciwnej do styku
     edge_above = abs(face['hi'][n]-j['pos'])<0.01   # część krawędziowa leży po stronie +n
     side='B' if edge_above else 'A'      # A = lico po stronie +t (t==n)
@@ -76,7 +77,7 @@ DOWEL_D=8; DOWEL_DEPTH=20
 LEVELS={'KP2-1':922,'KP2-2':1355,'PP2-1':922,'PP2-2':1355}
 for lvl in (922,1355):
     # KB2 (lico A = +x, od strony półki), kolumny przy z=233 i z=590
-    for pc,side,zs in (('KB2','A',(233,590)),('PB2','B',(417,590))):
+    for pc,side,zs in (('KB2','A',(213,355,417,590)),('PB2','B',(417,590))):
         p=P[pc]
         for z in zs:
             for k in range(-PIN_RANGE,PIN_RANGE+1):
@@ -84,17 +85,17 @@ for lvl in (922,1355):
                 pu=p['u']; pv=p['v']
                 val={'y':y,'z':z}
                 p['holes'].append(dict(kind='FACE',side=side,u=loc(p,pu,val[pu]),v=loc(p,pv,val[pv]),d=PIN_D,depth=PIN_DEPTH,partner='podpórka',axis_n='x',pin=True))
-# kołki w czołach par KP-PP (x=1371), 2 szt. w obszarze zakładki z 385..640
-for kp,pp in (('KP1','PP1'),('KP2-1','PP2-1'),('KP2-2','PP2-2')):
-    for code,xe in ((kp,1371),(pp,1371)):
+# kołki Ø8 w styku KP/PP wzdłuż osi Z (PP z przodu na całą szerokość, KP z tyłu kolumny), 2 szt. na x=1270 i x=1340
+for kp,pp,ze in (('KP1','PP1',367),('KP2-1','PP2-1',385),('KP2-2','PP2-2',385),('KP3-1','PP3-1',385),('KP3-2','PP3-2',385),('KP3-3','PP3-3',385)):
+    for code in (kp,pp):
         p=P[code]
-        eu=(p['u']=='x'); assert 'x' in (p['u'],p['v'])
-        ec=loc(p,'x',xe)
+        assert 'z' in (p['u'],p['v'])
+        eu=(p['u']=='z')
+        ec=loc(p,'z',ze)
         L=p['DL'] if eu else p['SZ']
         into=-1 if ec>=L-0.01 else 1
-        oa='z'
-        for z in (435,590):
-            p['holes'].append(dict(kind='EDGE',n_axis_is_u=eu,edge_coord=ec,along=loc(p,oa,z),depth=DOWEL_DEPTH,d=DOWEL_D,partner=(pp if code==kp else kp),into=into))
+        for x in (1270,1340):
+            p['holes'].append(dict(kind='EDGE',n_axis_is_u=eu,edge_coord=ec,along=loc(p,'x',x),depth=DOWEL_DEPTH,d=DOWEL_D,partner=(pp if code==kp else kp),into=into))
 
 # kołki Ø8 x 20 w styku KB1/KB2 (współpłaszczyznowe boki kolumny, czoła na y=489), 2 szt. – dodatkowe połączenie KB1
 for code in ('KB1','KB2'):
@@ -112,7 +113,7 @@ def pilot(code,side,y,other_axis,val):
     p=P[code]; pos={'y':y,other_axis:val}
     p['holes'].append(dict(kind='FACE',side=side,u=loc(p,p['u'],pos[p['u']]),v=loc(p,p['v'],pos[p['v']]),d=PILOT_D,depth=PILOT_DEPTH,partner='środek otworu wycinanego samodzielnie',axis_n='-',pin=False,pilot=True))
 pilot('PT3','A',2409,'x',1616)   # Ø130 pod kanał, od strony wnętrza (+z)
-pilot('L1B2','A',918,'z',245)    # wycięcie 100 x 100 pod gniazdko GN1 (y 868-968, z 192-292 od tyłu), od wnętrza (+x)
+pilot('L1B2','A',918,'z',242)    # wycięcie 100 x 100 pod gniazdko GN1 (y 868-968, z 192-292 od tyłu), od wnętrza (+x)
 
 # --- nawierty pilotowe pod wkręty prowadników zawiasów (Ø3 x 12, 2 na zawias, rozstaw 32, 37->wg prowadnika) w wewnętrznym licu ścianki ---
 PLATE_D=3; PLATE_DEPTH=12
