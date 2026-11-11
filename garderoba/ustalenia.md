@@ -30,6 +30,11 @@ Materiały źródłowe: `zrodla/` (rzut architektoniczny, zdjęcia ogólne).
 - Szafki na wprost: 2 moduły. Szafka po lewej: na górze BEZ frontów (otwarte półki).
 - Wylotu wentylacyjnego NIE przedłużamy do frontu.
 - Długość szafki po lewej liczona od T = 919 (nie od G − PZ).
+- Szerokość szafek na wprost 1117 (2 × 558,5): pion i prawa ściana pochylają się razem, pionowa szafka mieści się w 1825 − 702 = 1123, minus 2 × 3 mm.
+- Korpusy płytsze o 5 mm i odsunięte o 5 mm od ściany za nimi (regulacja przy montażu); luz 3 mm przy pionie, prawej ścianie, ścianie przedniej i pod sufitem.
+- Wylot wentylacyjny docięty do tylnej ścianki górnej części szafki po lewej; w ściance otwór z kratką (powietrze do otwartych półek).
+- Gniazdko na ścianie przedniej (E1 210, E2 195): wycięcie w boku szafki po lewej (wymiar wycięcia do ustalenia).
+- Gzyms i rura pod szafką po lewej: boki wycięte wokół gzymsu; na dole szuflady, w tym miejscu odpowiednio płytsze.
 
 ## Plan pracy
 1. Wymiary pomieszczenia z natury (zdjęcia w paczkach). Do czasu ustalenia wszystkich wymiarów NIE projektujemy szafek.

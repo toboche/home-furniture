@@ -44,7 +44,7 @@ var ITEMS=[
   {n:'Rura wystająca z gzymsu (wysięg '+GR4+', do '+GR3+' od podłogi; szerokość 80 założona)',layer:'Osprzęt',x:GZ2,y:0,z:G-GZ3,w:GR4,h:GR3,d:80,c:0xb08d57},
 
   /* Wylot wentylacyjny na licu pionu (strona do drzwi); na wylocie kratka, wylot można dociąć */
-  {t:'cyl',n:'Wylot wentylacyjny Ø'+W3+' (wysięg '+W4+', można dociąć)',layer:'Osprzęt',cx:W2,cy:W1,z:PZ,r:W3/2,len:W4,c:0x6b7b8c},
+  {t:'cyl',n:'Wylot wentylacyjny Ø'+W3+' docięty do tylnej ścianki szafki po lewej (było '+W4+')',layer:'Osprzęt',cx:W2,cy:W1,z:PZ,r:W3/2,len:ZF-PZ-2,c:0x6b7b8c},
 
   /* Przewody wodne na ścianie tylnej, zagięte w dół i na boki; szerokość 40 założona */
   {n:'Przewód wodny R1 ('+R1+' od prawej ściany, do ok. '+R3+', wysięg ok. '+R4+')',layer:'Osprzęt',x:A-R1-20,y:0,z:0,w:40,h:R3,d:R4,c:0xc0392b},
@@ -66,6 +66,11 @@ var ITEMS=[
      Nad gzymsem i rurą (część otwarta) – rozwiązanie do ustalenia. */
   {n:'Po lewej: część otwarta ('+(XL-ODS)+' × '+HW+' × '+(ZP-ZF)+'; gzyms i rura do rozwiązania)',layer:'Szafka po lewej (zamysł)',x:ODS,y:0,z:ZF,w:XL-ODS,h:HW,d:ZP-ZF,c:0x4fa36a,o:0.25},
   {n:'Po lewej: część górna bez frontów ('+(XL-ODS)+' × '+(HG-HW)+' × '+(ZP-ZF)+')',layer:'Szafka po lewej (zamysł)',x:ODS,y:HW,z:ZF,w:XL-ODS,h:HG-HW,d:ZP-ZF,c:0x7fbf7f,o:0.3},
+
+  /* Kratka wentylacyjna w otworze tylnej ścianki górnej części szafki po lewej (na wprost wylotu), od strony półek */
+  {t:'cyl',n:'Kratka wentylacyjna Ø150 w tylnej ściance szafki po lewej (zamysł; wylot docięty)',layer:'Szafka po lewej (zamysł)',cx:W2,cy:W1,z:ZF+P,r:75,len:3,c:0xe0a526},
+  /* Wycięcie w boku szafki po lewej przy ścianie przedniej, na gniazdko (wymiar wycięcia do ustalenia) */
+  {n:'Wycięcie w boku szafki po lewej na gniazdko (zamysł, 100 × 100)',layer:'Szafka po lewej (zamysł)',x:E1-50,y:E2-50,z:ZP-P,w:100,h:100,d:P,c:0xe58a2b,o:0.6},
 
   /* Lampa: oczko w suficie */
   {t:'cyl3',n:'Lampa (oczko) '+L2+' od lewej ściany, '+L1+' od tylnej',layer:'Osprzęt',ax:'y',px:L2,py:J-3,pz:L1,r:40,len:6,c:0xe0a526}
