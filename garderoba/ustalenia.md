@@ -49,9 +49,8 @@ Materiały źródłowe: `zrodla/` (rzut architektoniczny, zdjęcia ogólne).
 - Przewody wodne (ciepła i zimna woda) na ścianie tylnej, wychodzą z podłogi, kończą się zaworami na wysokości ok. 400-500.
 - Przy ścianie lewej, blisko ściany przedniej, nisko: wystający przewód elektryczny.
 - Lampa na suficie przy pionie.
-- Podłoga: wylewka, kafelki jeszcze nie położone (paczka płytek w pomieszczeniu).
+- Podłoga: kafelki już położone; wszystkie pomiary od docelowej podłogi (2026-11-11).
 
 ## Do ustalenia
 - Potwierdzenie układu ścian (wyżej).
-- Grubość kafelków z klejem (podłoga docelowa) i czy wysokości mierzymy od wylewki.
 - Czy gzym, przewody wodne, przewód elektryczny i lampa zostają w obecnym miejscu.

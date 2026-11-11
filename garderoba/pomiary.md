@@ -14,17 +14,17 @@ Użytkownik podaje NAJMNIEJSZY odczyt z kilku pomiarów (żeby meble nie wyszły
 | S | 1133 | od boku pionu do prawej ściany, przy ścianie tylnej (najmniejszy odczyt) | | 2026-11-11 |
 | G | 1490 | głębokość od tylnej do przedniej ściany, przy prawej ścianie (najmniejszy odczyt) | 1490 (930 + 560) | 2026-11-11 |
 | T | 919 | od czoła pionu (strona do drzwi) do ściany przedniej (najmniejszy odczyt) | 930 | 2026-11-11 |
-| J | | wysokość podłoga–sufit, w kilku miejscach (najniższa) | | |
-| P1 | | przekątna podłogi: narożnik przedni lewy – narożnik tylny prawy (kontrola kątów) | | |
-| K | | grubość kafelków z klejem (docelowa podłoga) | | kafelki jeszcze nie położone |
+| J | 2586 | wysokość podłoga–sufit (najmniejszy odczyt, w części najbliżej drzwi) | | 2026-11-11 |
+| P1 | 2258 | przekątna podłogi: narożnik przedni lewy – narożnik tylny prawy | | trudno trafić w narożnik; prostokąt A × G dałby 2356, więc pomiar najpewniej od lica gzymsu (zgodne przy GZ2 ok. 130) |
+| K | 0 | kafelki już położone; wszystkie pomiary od docelowej podłogi | | 2026-11-11 |
 
 ## Drzwi (ściana przednia, skrzydło otwiera się na zewnątrz)
 | KOD | WARTOŚĆ | OPIS | RZUT | WCZEŚNIEJ / UWAGI |
 |---|---|---|---|---|
 | DX | 164 | od prawej ściany do krawędzi otworu drzwi (w świetle ościeżnicy) | | 2026-11-11 |
 | DW | 694 | szerokość otworu w świetle ościeżnicy | 800 | 2026-11-11; od lewej ściany do otworu wychodzi A − DX − DW = 967 |
-| DH | | wysokość otworu w świetle ościeżnicy | 2000 | |
-| DO | | ile ościeżnica wystaje do wnętrza ponad lico ściany przedniej (0, jeśli równo) | | |
+| DH | 2014 | wysokość otworu w świetle ościeżnicy | 2000 | 2026-11-11 |
+| DO | 0 | ościeżnica nie wystaje do wnętrza | | 2026-11-11 |
 
 ## Pion i wylot wentylacyjny
 | KOD | WARTOŚĆ | OPIS | RZUT | WCZEŚNIEJ / UWAGI |
