@@ -11,7 +11,8 @@ Użytkownik podaje NAJMNIEJSZY odczyt z kilku pomiarów (żeby meble nie wyszły
 | KOD | WARTOŚĆ | OPIS | RZUT | WCZEŚNIEJ / UWAGI |
 |---|---|---|---|---|
 | A | 1825 | szerokość od lewej do prawej ściany, przy ścianie przedniej (najmniejszy odczyt) | ok. 1750-1800 | 2026-11-11 |
-| S | 1133 | od boku pionu do prawej ściany, przy ścianie tylnej (najmniejszy odczyt) | | 2026-11-11; zmierzone tam, gdzie PX = 692; tam gdzie PX = 702, prześwit może być 1123 (A − PXM) – do sprawdzenia |
+| S | 1133 | od boku pionu do prawej ściany, przy ścianie tylnej (najmniejszy odczyt, nisko, gdzie PX = 692) | | 2026-11-11 |
+| SG | 1134 | jak S, na wysokości, gdzie PX = 702 | | prawa ściana pochyla się razem z bokiem pionu (u góry ok. 1836 od lewej ściany); szafka pionowa mieści się w 1825 − 702 = 1123 |
 | G | 1490 | głębokość od tylnej do przedniej ściany, przy prawej ścianie (najmniejszy odczyt) | 1490 (930 + 560) | 2026-11-11 |
 | T | 919 | od czoła pionu (strona do drzwi) do ściany przedniej (najmniejszy odczyt) | 930 | 2026-11-11 |
 | J | 2586 | wysokość podłoga–sufit, najmniejsza w pomieszczeniu (przy drzwiach) | | 2026-11-11 |
