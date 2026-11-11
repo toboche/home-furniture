@@ -1,0 +1,28 @@
+{
+ "formatki": {
+  "pozycje": 0,
+  "sztuki": 0,
+  "m2": 0
+ },
+ "kalkulator": {
+  "typy_formatek": 0,
+  "wiersze": 0
+ },
+ "laczniki": {
+  "konfirmaty": 0,
+  "kolki": 0,
+  "otwory_pod_kolki": 0,
+  "otwory_nieprzelotowe": 0,
+  "puszki_zawiasow": 0
+ },
+ "zaslepki": {
+  "widoczne": 0,
+  "ukryte": 0,
+  "widoczne_wg_czesci": {},
+  "widoczne_miejsca": []
+ },
+ "polaczenia": 0,
+ "otwory_lacznie": 0,
+ "kolizje_otworow": 0,
+ "strony_arkusza": 0
+}

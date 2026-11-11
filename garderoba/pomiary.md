@@ -48,17 +48,17 @@ Użytkownik podaje NAJMNIEJSZY odczyt z kilku pomiarów (żeby meble nie wyszły
 Rura lekko wystaje z lica gzymsu. W razie potrzeby użytkownik wytnie w szafce wycięcie wyrzynarką.
 | KOD | WARTOŚĆ | OPIS | RZUT | WCZEŚNIEJ / UWAGI |
 |---|---|---|---|---|
-| GR1 | | odległość środka rury od lica pionu (strona do drzwi) | | |
-| GR2 | | średnica rury | | |
-| GR3 | | wysokość najwyższego punktu rury od podłogi | | |
-| GR4 | | ile rura wystaje poza lico gzymsu | | |
+| GR1 | – | położenie rury wzdłuż gzymsu | | tuż przy licu pionu (zdjęcie); środka nie da się zmierzyć, rura w gzymsie |
+| GR2 | – | średnica rury | | niedostępna |
+| GR3 | 135 | wysokość najwyższego punktu rury od podłogi | | |
+| GR4 | 55 | ile rura wystaje (maks.) | | DO POTWIERDZENIA: poza lico gzymsu? |
 
 ## Instalacje
 | KOD | WARTOŚĆ | OPIS | RZUT | WCZEŚNIEJ / UWAGI |
 |---|---|---|---|---|
-| R1, R2 | | przewody wodne: odległość osi od prawej ściany (każdy) | | |
-| R3 | | wysokość najwyższego punktu przewodów z zaworami od podłogi | | |
-| R4 | | wysięg przewodów z zaworami od tylnej ściany | | |
-| E1, E2 | | przewód elektryczny przy lewej ścianie: odległość od ściany przedniej, wysokość od podłogi | | czy zostaje? |
-| L1, L2 | | lampa sufitowa: odległość środka od tylnej i od lewej ściany | | |
-| L3 | | ile lampa wystaje poniżej sufitu | | |
+| R1, R2 | 513, 613 | przewody wodne: odległość od prawej ściany | | nie będą skracane |
+| R3 | ok. 180 | wysokość najwyższego punktu przewodów od podłogi | | po zagięciu w dół i na boki |
+| R4 | ok. 50 | wysięg przewodów od tylnej ściany | | |
+| E1, E2 | 210, 195 | przewód elektryczny (przyszłe gniazdko) na ścianie przedniej: środek od lewej ściany, od podłogi | | zostaje; będzie tam gniazdko |
+| L1, L2 | 1131, 1000 | lampa sufitowa: środek od ściany tylnej, od lewej ściany | | będzie inna lampa (raczej oczko) w mniej więcej tym samym miejscu |
+| L3 | ok. 0 | ile lampa wystaje spod sufitu | | oczko |

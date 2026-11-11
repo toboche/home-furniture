@@ -1,8 +1,10 @@
-# Garderoba
-Start projektu. Stan: zbieranie pomiarów i założeń.
+# Garderoba (A/P02 07)
+Stan: pomiary pomieszczenia prawie gotowe, model pustego pomieszczenia. Szafek jeszcze nie projektujemy.
 
-- `pomiary.md`: zmierzone wymiary (do uzupełnienia)
-- `ustalenia.md`: decyzje i założenia (do uzupełnienia)
+- `ustalenia.md`: założenia, plan pracy, decyzje
+- `pomiary.md`: wymiary z natury (najmniejsze odczyty) z kodami; szkic kodów: `zrodla/szkic_pomiarow.svg`
+- `index.html`: model 3D (z katalogu repozytorium); `wyniki/garderoba_3d.html`: to samo w jednym pliku
+- `model.js`: dane modelu (stałe z pomiarów na początku pliku), `reguly.py`: reguły dla skryptów
+- `zrodla/`: rzut architektoniczny (z dawnym układem łazienki, do pominięcia) i zdjęcia
 
-Model 3D powstanie z `szablon/` (patrz README w katalogu głównym), gdy będą pomiary.
 Założenia domyślne (płyta, okleina, złącza, sklep): `wspolne/zasady.md`.

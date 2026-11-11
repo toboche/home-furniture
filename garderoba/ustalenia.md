@@ -10,7 +10,7 @@ Materiały źródłowe: `zrodla/` (rzut architektoniczny, zdjęcia ogólne).
 - W pomieszczeniu: pion wentylacyjny, gzyms i przewody wodne (gzymsu i przewodów nie ma na rzucie, są na zdjęciach).
   Gzyms i przewody nie muszą być widoczne.
 - Na pionie jest wylot wentylacyjny: można go dociąć; na wylocie trzeba zamocować kratkę wentylacyjną.
-- Układ współrzędnych modelu (DO POTWIERDZENIA, patrz „Do ustalenia”): patrząc od drzwi w głąb pomieszczenia,
+- Układ współrzędnych modelu (potwierdzony pomiarami według szkicu `zrodla/szkic_pomiarow.svg`): patrząc od drzwi w głąb pomieszczenia,
   ściana tylna = ściana na wprost (z przewodami wodnymi), ściana lewa = ściana z gzymsem, ściana przednia = ściana z drzwiami.
   X od lewej ściany ku prawej, Y od podłogi w górę, Z od tylnej ściany ku drzwiom.
 
@@ -33,8 +33,8 @@ Materiały źródłowe: `zrodla/` (rzut architektoniczny, zdjęcia ogólne).
 9. Finalne zamówienie razem z innymi pomieszczeniami (prawdopodobnie w innej rozmowie).
 
 ## Etapy
-1. Wymiary: W TOKU (zdjęcia ogólne otrzymane 2026-11-11)
-2. Wizualizacja pustego pokoju: DO ZROBIENIA
+1. Wymiary: PRAWIE GOTOWE (2026-11-11; do potwierdzenia GR4)
+2. Wizualizacja pustego pokoju: model 3D `index.html` (2026-11-11)
 3. Potrzeby: częściowo (założenia ogólne powyżej)
 4. Koncepcja: DO ZROBIENIA
 5. Konstrukcja: DO ZROBIENIA
@@ -46,11 +46,12 @@ Materiały źródłowe: `zrodla/` (rzut architektoniczny, zdjęcia ogólne).
 - Pion w narożniku ściany tylnej i lewej, od podłogi do sufitu. Wylot wentylacyjny (rura Ø ok. 100) wysoko,
   na ścianie pionu zwróconej do drzwi, blisko ściany lewej.
 - Gzyms: niska zabudowa przy ścianie lewej, między ścianą przednią a pionem (ok. 250-300 wysokości, ok. 150 wysięgu).
-- Przewody wodne (ciepła i zimna woda) na ścianie tylnej, wychodzą z podłogi, kończą się zaworami na wysokości ok. 400-500.
-- Przy ścianie lewej, blisko ściany przedniej, nisko: wystający przewód elektryczny.
-- Lampa na suficie przy pionie.
+- Przewody wodne na ścianie tylnej (513 i 613 od prawej ściany): zostaną zagięte w dół i na boki (do ok. 180 wysokości, wysięg ok. 50), nie będą skracane.
+- W gzymsie przy pionie rura wystająca do 55, do 135 od podłogi; w razie potrzeby użytkownik wytnie wycięcie w szafce wyrzynarką.
+- Ściany na zdjęciach: rzeczy poremontowe zostaną usunięte przed montażem (pomijamy je).
+- Na ścianie przedniej, nisko, 210 od lewej ściany: przewód elektryczny; zostaje, będzie tam gniazdko.
+- Lampa na suficie (1131 od ściany tylnej, 1000 od lewej); będzie inna, raczej oczko, w podobnym miejscu.
 - Podłoga: kafelki już położone; wszystkie pomiary od docelowej podłogi (2026-11-11).
 
 ## Do ustalenia
-- Potwierdzenie układu ścian (wyżej).
-- Czy gzym, przewody wodne, przewód elektryczny i lampa zostają w obecnym miejscu.
+- GR4: czy 55 to wysięg rury poza lico gzymsu; szerokość rury wzdłuż gzymsu w modelu założona (80).
