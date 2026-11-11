@@ -21,16 +21,16 @@ Użytkownik podaje NAJMNIEJSZY odczyt z kilku pomiarów (żeby meble nie wyszły
 ## Drzwi (ściana przednia, skrzydło otwiera się na zewnątrz)
 | KOD | WARTOŚĆ | OPIS | RZUT | WCZEŚNIEJ / UWAGI |
 |---|---|---|---|---|
-| DX | | od prawej ściany do krawędzi otworu drzwi (w świetle ościeżnicy) | | |
-| DW | | szerokość otworu w świetle ościeżnicy | 800 | |
+| DX | 164 | od prawej ściany do krawędzi otworu drzwi (w świetle ościeżnicy) | | 2026-11-11 |
+| DW | 694 | szerokość otworu w świetle ościeżnicy | 800 | 2026-11-11; od lewej ściany do otworu wychodzi A − DX − DW = 967 |
 | DH | | wysokość otworu w świetle ościeżnicy | 2000 | |
 | DO | | ile ościeżnica wystaje do wnętrza ponad lico ściany przedniej (0, jeśli równo) | | |
 
 ## Pion i wylot wentylacyjny
 | KOD | WARTOŚĆ | OPIS | RZUT | WCZEŚNIEJ / UWAGI |
 |---|---|---|---|---|
-| PX | (692) | wysięg pionu od lewej ściany | | wyliczone A − S, do potwierdzenia pomiarem |
-| PZ | (571) | wysięg pionu od tylnej ściany | 560 | wyliczone G − T, do potwierdzenia pomiarem |
+| PX | 692 | wysięg pionu od lewej ściany (najmniejszy odczyt, przy podłodze) | | wyżej odczyty większe: lico pionu nie jest pionowe; zgodne z A − S = 692 |
+| PZ | 562 | wysięg pionu od tylnej ściany | 560 | G − T = 571: różnica 9 mm (G i T mierzone w innych miejscach albo ściany nie są równoległe) |
 | W1 | | wysokość środka wylotu od podłogi | | |
 | W2 | | odległość środka wylotu od lewej ściany | | |
 | W3 | | średnica zewnętrzna wylotu | | |
