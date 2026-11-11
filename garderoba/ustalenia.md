@@ -33,7 +33,7 @@ Materiały źródłowe: `zrodla/` (rzut architektoniczny, zdjęcia ogólne).
 9. Finalne zamówienie razem z innymi pomieszczeniami (prawdopodobnie w innej rozmowie).
 
 ## Etapy
-1. Wymiary: PRAWIE GOTOWE (2026-11-11; do potwierdzenia GR4)
+1. Wymiary: GOTOWE (2026-11-11)
 2. Wizualizacja pustego pokoju: model 3D `index.html` (2026-11-11)
 3. Potrzeby: częściowo (założenia ogólne powyżej)
 4. Koncepcja: DO ZROBIENIA
@@ -54,4 +54,4 @@ Materiały źródłowe: `zrodla/` (rzut architektoniczny, zdjęcia ogólne).
 - Podłoga: kafelki już położone; wszystkie pomiary od docelowej podłogi (2026-11-11).
 
 ## Do ustalenia
-- GR4: czy 55 to wysięg rury poza lico gzymsu; szerokość rury wzdłuż gzymsu w modelu założona (80).
+- Założone w modelu (niemierzone): szerokość rury w gzymsie wzdłuż gzymsu 80, szerokość przewodów wodnych 40.

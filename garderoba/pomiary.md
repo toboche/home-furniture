@@ -51,7 +51,7 @@ Rura lekko wystaje z lica gzymsu. W razie potrzeby użytkownik wytnie w szafce w
 | GR1 | – | położenie rury wzdłuż gzymsu | | tuż przy licu pionu (zdjęcie); środka nie da się zmierzyć, rura w gzymsie |
 | GR2 | – | średnica rury | | niedostępna |
 | GR3 | 135 | wysokość najwyższego punktu rury od podłogi | | |
-| GR4 | 55 | ile rura wystaje (maks.) | | DO POTWIERDZENIA: poza lico gzymsu? |
+| GR4 | 55 | ile rura wystaje poza lico gzymsu (maks.); od lewej ściany 129 + 55 = 184 | | potwierdzone 2026-11-11 |
 
 ## Instalacje
 | KOD | WARTOŚĆ | OPIS | RZUT | WCZEŚNIEJ / UWAGI |
