@@ -21,6 +21,16 @@ Materiały źródłowe: `zrodla/` (rzut architektoniczny, zdjęcia ogólne).
 - Kolory i płyta jak w pralni (Egger W1200 ST9 Biały porcelanowy 18 mm, centrum.meble.pl).
 - Dolne szafki stoją bezpośrednio na kafelkach, bez cokołu.
 
+## Bryły szafek (decyzje 2026-11-11)
+- Górna powierzchnia wieńca części otwartej: 2120. Luz pod sufitem 3 mm (góra szafek 2583).
+- Korpusy kończą się 3 mm za najdalszym punktem pionu. Głębokość szafek na wprost liczona od najmniejszego wysięgu pionu (562);
+  tam, gdzie pion wystaje do 569, szafkę odsuwa się od ściany przy montażu.
+- Szafki na wprost zachodzą na szafkę po lewej (narożnik przy pionie). Szafki są o kilka mm płytsze i odsunięte od ściany,
+  żeby przy montażu ustawić front dokładnie.
+- Szafki na wprost: 2 moduły. Szafka po lewej: na górze BEZ frontów (otwarte półki).
+- Wylotu wentylacyjnego NIE przedłużamy do frontu.
+- Długość szafki po lewej liczona od T = 919 (nie od G − PZ).
+
 ## Plan pracy
 1. Wymiary pomieszczenia z natury (zdjęcia w paczkach). Do czasu ustalenia wszystkich wymiarów NIE projektujemy szafek.
 2. Wizualizacja pustego pomieszczenia (budowana na bieżąco ze zdjęć i pomiarów).
@@ -36,7 +46,7 @@ Materiały źródłowe: `zrodla/` (rzut architektoniczny, zdjęcia ogólne).
 1. Wymiary: GOTOWE (2026-11-11)
 2. Wizualizacja pustego pokoju: model 3D `index.html` (2026-11-11)
 3. Potrzeby: częściowo (założenia ogólne powyżej)
-4. Koncepcja: DO ZROBIENIA
+4. Koncepcja: bryły szafek w modelu (2026-11-11), do potwierdzenia
 5. Konstrukcja: DO ZROBIENIA
 6. Formatki, nawierty, instrukcja montażu: DO ZROBIENIA
 7. Ręczna weryfikacja przed zamówieniem: DO ZROBIENIA

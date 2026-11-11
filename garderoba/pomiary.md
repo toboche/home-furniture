@@ -11,7 +11,7 @@ Użytkownik podaje NAJMNIEJSZY odczyt z kilku pomiarów (żeby meble nie wyszły
 | KOD | WARTOŚĆ | OPIS | RZUT | WCZEŚNIEJ / UWAGI |
 |---|---|---|---|---|
 | A | 1825 | szerokość od lewej do prawej ściany, przy ścianie przedniej (najmniejszy odczyt) | ok. 1750-1800 | 2026-11-11 |
-| S | 1133 | od boku pionu do prawej ściany, przy ścianie tylnej (najmniejszy odczyt) | | 2026-11-11 |
+| S | 1133 | od boku pionu do prawej ściany, przy ścianie tylnej (najmniejszy odczyt) | | 2026-11-11; zmierzone tam, gdzie PX = 692; tam gdzie PX = 702, prześwit może być 1123 (A − PXM) – do sprawdzenia |
 | G | 1490 | głębokość od tylnej do przedniej ściany, przy prawej ścianie (najmniejszy odczyt) | 1490 (930 + 560) | 2026-11-11 |
 | T | 919 | od czoła pionu (strona do drzwi) do ściany przedniej (najmniejszy odczyt) | 930 | 2026-11-11 |
 | J | 2586 | wysokość podłoga–sufit, najmniejsza w pomieszczeniu (przy drzwiach) | | 2026-11-11 |
@@ -31,7 +31,8 @@ Użytkownik podaje NAJMNIEJSZY odczyt z kilku pomiarów (żeby meble nie wyszły
 |---|---|---|---|---|
 | PX | 692 | wysięg pionu od lewej ściany, najmniejszy (przy podłodze) | | zgodne z A − S = 692 |
 | PXM | 702 | wysięg pionu od lewej ściany, największy | | lico pionu nie jest pionowe (większe wyżej) |
-| PZ | 562 | wysięg pionu od tylnej ściany | 560 | G − T = 571: różnica 9 mm (G i T mierzone w innych miejscach albo ściany nie są równoległe) |
+| PZ | 562 | wysięg pionu od tylnej ściany, najmniejszy | 560 | G − T = 571 (pomiary w różnych miejscach) |
+| PZM | 569 | wysięg pionu od tylnej ściany, największy (miejscami) | | lico pionu nierówne; szafkę na wprost odsunie się przy montażu |
 | W1 | 2415 | wysokość środka wylotu od podłogi | | najniższy punkt wylotu 2352 (środek 2417) |
 | W2 | 317 | odległość środka wylotu od lewej ściany | | najbliższy punkt wylotu 251 (środek 316) |
 | W3 | 130 | średnica zewnętrzna wylotu | | |
