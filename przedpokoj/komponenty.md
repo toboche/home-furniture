@@ -1,7 +1,7 @@
 # Przedpokój: okucia i komponenty (wstępnie, do potwierdzenia przed zamówieniem)
 
 Wszystko dostępne w Polsce (dystrybutorzy Blum, sklepy z okuciami meblowymi, Allegro).
-Liczby z modelu: `wyniki/podsumowanie.json` (puszki zawiasów 12, konfirmaty 110, widoczne łby 26).
+Liczby z modelu: `wyniki/podsumowanie.json` (puszki zawiasów 12, konfirmaty 113, widoczne łby 30).
 
 ## Fronty na drzwiach: zawiasy + TIP-ON
 | Pozycja | Ilość | Uwagi |
@@ -16,21 +16,22 @@ Liczby z modelu: `wyniki/podsumowanie.json` (puszki zawiasów 12, konfirmaty 110
 ## Szuflady: Blum MOVENTO (kryte prowadnice pod szufladą, pełny wysuw, płynny zsynchronizowany ruch)
 | Pozycja | Ilość | Uwagi |
 |---|---|---|
-| MOVENTO do TIP-ON BLUMOTION, 40 kg, 450 mm (760H4500S) | 1 kpl. | szuflada szezlonga F1; minimalna głębokość wnętrza 453, jest 464 |
+| MOVENTO do TIP-ON BLUMOTION, 700 mm (klasa 60 kg) | 1 kpl. | szuflada szezlonga F1; wnętrze 757 (min. NL + 3 = 703); prawa prowadnica na SDB-1 |
 | TIP-ON BLUMOTION do MOVENTO, jednostka L1 (do 20 kg) + zabierak, komplet | 1 | otwieranie naciśnięciem, domykanie z hamowaniem |
-| Synchronizator TIP-ON BLUMOTION (wałek) | 1 | szerokość wnętrza 484; zalecany przez Blum |
-| MOVENTO z BLUMOTION, 40 kg, 500 mm | 1 kpl. | szuflada wewnętrzna w szafie (za F4), wyciągana ręcznie (wycięcie w czole szuflady) |
+| Synchronizator TIP-ON BLUMOTION (wałek) | 1 | szerokość wnętrza 502; zalecany przez Blum |
+| MOVENTO z BLUMOTION, 700 mm | 1 kpl. | szuflada wewnętrzna w szafie (za F4), wyciągana ręcznie (wycięcie w czole skrzynki) |
 | Dystans pod prowadnicę 20 mm | 1 kpl. | szuflada wewnętrzna, od strony zawiasów F4 |
 | Regulatory frontu / zaczepy MOVENTO | 2 kpl. | do skrzynek drewnianych |
-| Skrzynki szuflad (płyta 16 lub 18 + dno) | 2 | szerokość skrzynki = wnętrze − 42 (MOVENTO 21 na stronę); wymiary DO ZROBIENIA |
+| Skrzynki szuflad, płyta 16 | 2 | wymiary w `ustalenia.md` (SS, SW) |
 
 ## Pozostałe
 | Pozycja | Ilość | Uwagi |
 |---|---|---|
-| Konfirmaty 7 × 50 | 110 | + zapas |
-| Zaślepki konfirmatów w kolorze płyty | 26 | widoczne łby wg `podsumowanie.json` |
+| Konfirmaty 7 × 50 | 113 | + zapas |
+| Kątownik stalowy 40 × 40 + wkręty | 2 | pod dnem szezlonga SZD, przykręcony do SDB-1 |
+| Zaślepki konfirmatów w kolorze płyty | 30 | widoczne łby wg `podsumowanie.json` |
 | Drążek Ø25 + 2 wsporniki | 1 | długość 524 (wnętrze SD) |
 | Klej montażowy do zaślepki F6 | 1 | mocny klej (np. typu MS polimer) |
 | Dystans (przedłużka) puszki włącznika Ø60 | 1 | otwór w F6 Ø60 |
-| Poduszka siedziska 520 × 402 × 30 | 1 | tapicer |
+| Poduszka siedziska 520 × 697 × 30 | 1 | tapicer |
 | Wkręty do ściany, kołki | | korpusy górne (PW, SG) i NS wieszane na ścianie; montaż od góry |

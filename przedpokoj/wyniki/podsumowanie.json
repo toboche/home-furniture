@@ -1,30 +1,30 @@
 {
  "formatki": {
   "pozycje": 26,
-  "sztuki": 32,
-  "m2": 14.68
+  "sztuki": 31,
+  "m2": 14.92
  },
  "kalkulator": {
-  "typy_formatek": 22,
-  "wiersze": 215
+  "typy_formatek": 21,
+  "wiersze": 221
  },
  "laczniki": {
-  "konfirmaty": 110,
+  "konfirmaty": 113,
   "kolki": 0,
   "otwory_pod_kolki": 0,
   "otwory_nieprzelotowe": 24,
   "puszki_zawiasow": 12
  },
  "zaslepki": {
-  "widoczne": 26,
-  "ukryte": 84,
+  "widoczne": 30,
+  "ukryte": 83,
   "widoczne_wg_czesci": {
    "NSB-1": 2,
    "PWB-1": 8,
-   "SDB-1": 7,
+   "SDB-1": 9,
    "SDD": 3,
-   "SZB-1": 4,
-   "SZD": 2
+   "SZB-1": 5,
+   "SZD": 3
   },
   "widoczne_miejsca": [
    "NSB-1 → NSD (x 1014, y 441, z 40)",
@@ -37,26 +37,30 @@
    "PWB-1 → PWW (x 1014, y 2654, z 52)",
    "PWB-1 → PWW (x 1014, y 2654, z 390)",
    "PWB-1 → PWW (x 1014, y 2654, z 727)",
-   "SDB-1 → SDD (x 1534, y 186, z 727)",
    "SDB-1 → SDP-1 (x 1534, y 504, z 398)",
    "SDB-1 → SDP-1 (x 1534, y 504, z 727)",
    "SDB-1 → SDP-2 (x 1534, y 822, z 398)",
    "SDB-1 → SDP-2 (x 1534, y 822, z 727)",
    "SDB-1 → SDW (x 1534, y 2152, z 390)",
    "SDB-1 → SDW (x 1534, y 2152, z 727)",
+   "SDB-1 → SZW (x 1564, y 421, z 52)",
+   "SDB-1 → SZW (x 1564, y 421, z 390)",
+   "SDB-1 → SZW (x 1564, y 421, z 727)",
    "SDD → SDT (x 1608, y 171, z 11)",
    "SDD → SDT (x 1820, y 171, z 11)",
    "SDD → SDT (x 2032, y 171, z 11)",
-   "SZB-1 → SZD (x 1014, y 186, z 50)",
-   "SZB-1 → SZD (x 1014, y 186, z 432)",
-   "SZB-1 → SZT (x 1014, y 245, z 9)",
-   "SZB-1 → SZT (x 1014, y 362, z 9)",
-   "SZD → SZT (x 1088, y 171, z 9)",
-   "SZD → SZT (x 1472, y 171, z 9)"
+   "SZB-1 → SZD (x 1014, y 186, z 52)",
+   "SZB-1 → SZD (x 1014, y 186, z 390)",
+   "SZB-1 → SZD (x 1014, y 186, z 727)",
+   "SZB-1 → SZT (x 1014, y 245, z 11)",
+   "SZB-1 → SZT (x 1014, y 362, z 11)",
+   "SZD → SZT (x 1088, y 171, z 11)",
+   "SZD → SZT (x 1289, y 171, z 11)",
+   "SZD → SZT (x 1490, y 171, z 11)"
   ]
  },
- "polaczenia": 42,
- "otwory_lacznie": 244,
+ "polaczenia": 41,
+ "otwory_lacznie": 250,
  "kolizje_otworow": 0,
- "strony_arkusza": 22
+ "strony_arkusza": 21
 }

@@ -15,6 +15,7 @@ var B=777, BG=783;     /* wysięg pionu od ściany z D2: przy podłodze / przy s
 var C=428;             /* czoło pionu: od krawędzi 1 (narożnik pionu) do ściany z DM1 */
 var F=1235;            /* od czoła pionu do przeciwległej ściany */
 var H=2664;            /* wysokość, najmniejsza (zakres 2664–2669) */
+var HF=2668;           /* wysokość w linii frontów, najmniejsza (2668–2671) */
 var OC=120;            /* od krawędzi 2 do ościeżnicy DM1 */
 var DR1=800, DR2=2030, DR5=3;   /* D2: szerokość i wysokość skrzydła, szczelina od strony szafy */
 var D=187, E=350, G=933, K=1000, RZ1=10;   /* rozdzielnica: od szczeliny D2, szerokość z ramką, dół od podłogi, wysokość, wysięg drzwiczek */
@@ -31,13 +32,14 @@ var ODS=2;             /* odsunięcie korpusów 775 od ściany: front w płaszcz
 var ZK=B;              /* przód korpusów szafy i pawlacza: 777 (korpus 775) */
 var ZF=ZK+P;           /* płaszczyzna frontów i zaślepki: 795 */
 var YT=H-LUZG;         /* góra korpusów: 2663 */
+var YFT=HF-LUZG;        /* góra frontów górnych i zaślepki: 2667 (fronty równo od sufitu w linii frontów) */
 var YP=YT-500;         /* podział góra / dół (dół pawlacza i szafy górnej): 2163 */
 var YD=YP-LUZK;        /* góra korpusu szafy dół: 2161 */
 var XS0=XO+20;         /* szezlong: 20 od szczeliny D2 */
 var XS1=XS0+520;       /* szezlong szerokość 520 → 540 */
 var XT0=XS1;           /* szafa wysoka od boku szezlonga */
 var XT1=XO+A;          /* przylega do boku pionu: 1100 (szerokość 560) */
-var ZS=500;            /* głębokość szezlonga (z frontem) */
+var ZS=ZF;             /* szezlong: front w linii pozostałych frontów (795) */
 var YN=177;            /* wnęka na buty: 0–177 */
 var YB=412, YS=430, YC=460;     /* szezlong: spód blatu, góra blatu, góra poduszki (30) */
 var ZN=80;             /* szafka nad szezlongiem: korpus 80 (zawiasy i TIP-ON), lico frontu 98 */
@@ -46,7 +48,8 @@ var XZ1=XO+A+C-2;      /* zaślepka: 2 mm od ściany z DM1 */
 var DMW=900, DMH=2000; /* DM1 w świetle (ZAŁOŻENIE, nominalnie 90/200) */
 
 var W=XO+A+C, DD=B+F;  /* umowny pokój: 2528 × 2012 */
-var WB=XS1-XS0-2*P;    /* wnętrze szezlonga, szafki nad nim i pawlacza: 484 */
+var WB=XS1-XS0-2*P;    /* wnętrze szafki nad szezlongiem i pawlacza: 484 */
+var WS=XS1-XS0-P;      /* wnętrze szezlonga (bez prawego boku, prawy bok = bok szafy SDB-1): 502 */
 var WT=XT1-XT0-2*P;    /* wnętrze szafy wysokiej: 521 */
 
 /* zawiasy: środek puszki 22,5 od krawędzi frontu, skrajne 100 od końców, pozostałe równo */
@@ -70,17 +73,19 @@ var ITEMS=[
   {n:'Rozdzielnica z ramką ('+E+' × '+K+', od '+G+'; drzwiczki wystają '+RZ1+', zawiasy po prawej)',layer:'Osprzęt',x:XO+D,y:G,z:0,w:E,h:K,d:RZ1,c:0xb0b4b8},
   {n:'Listwa przypodłogowa L 40 × 16 (zostaje lub do zdjęcia)',layer:'Osprzęt',x:XO-200,y:0,z:0,w:200+A,h:40,d:16,c:0xf4f4f4,o:0.8},
 
-  /* ===== Szezlong SZ (x 20–540 od szczeliny D2): wnęka na buty, szuflada TIP-ON, blat, poduszka ===== */
-  {n:'SZB-1: Szezlong: bok lewy (od D2)',layer:'Ścianki boczne',x:XS0,y:0,z:0,w:P,h:YB,d:ZS-P,c:BOK},
-  {n:'SZB-2: Szezlong: bok prawy',layer:'Ścianki boczne',x:XS1-P,y:0,z:0,w:P,h:YB,d:ZS-P,c:BOK},
-  {n:'SZW: Szezlong: blat (pod poduszką)',layer:'Półki',x:XS0,y:YB,z:0,w:XS1-XS0,h:P,d:ZS-P,c:POL},
-  {n:'SZD: Szezlong: dno szuflady (nad wnęką)',layer:'Półki',x:XS0+P,y:YN,z:0,w:WB,h:P,d:ZS-P,c:POL},
-  {n:'SZT: Szezlong: tył',layer:'Ścianki tylne',x:XS0+P,y:YN+P,z:0,w:WB,h:YB-YN-P,d:P,c:TYL,o:0.9},
-  {n:'F1: Szuflada szezlonga (517 × 253), TIP-ON',layer:'Fronty',x:XS0+1.5,y:YN,z:ZS-P,w:XS1-XS0-3,h:YS-YN,d:P,c:FR,o:0.55},
-  {n:'Skrzynka szuflady szezlonga (Blum MOVENTO 450 + TIP-ON BLUMOTION; wymiary skrzynki do ustalenia)',layer:'Szuflady (skrzynki)',x:XS0+P+21,y:YN+P+13,z:P+10,w:WB-42,h:YB-YN-P-40,d:450,c:0xc9a227,o:0.45},
-  {n:'Poduszka siedziska (30)',layer:'Tapicerka',x:XS0,y:YS,z:ZN+P,w:XS1-XS0,h:YC-YS,d:ZS-ZN-P,c:0x2b2b2b},
+  /* ===== Szezlong SZ (x 20–540 od szczeliny D2), front w linii frontów: wnęka na buty, szuflada TIP-ON BLUMOTION, blat, poduszka.
+     Bez prawego boku: blat, dno i tył dochodzą do boku szafy SDB-1 (blat i tył na konfirmatach przez SDB-1, dno na 2 kątownikach). ===== */
+  {n:'SZB-1: Szezlong: bok lewy (od D2)',layer:'Ścianki boczne',x:XS0,y:0,z:ODS,w:P,h:YB,d:ZK-ODS,c:BOK},
+  {n:'SZW: Szezlong: blat (pod poduszką), prawy koniec na boku szafy SDB-1',layer:'Półki',x:XS0,y:YB,z:ODS,w:XS1-XS0,h:P,d:ZK-ODS,c:POL},
+  {n:'SZD: Szezlong: dno szuflady (nad wnęką), prawy koniec na kątownikach przy SDB-1',layer:'Półki',x:XS0+P,y:YN,z:ODS,w:WS,h:P,d:ZK-ODS,c:POL},
+  {n:'SZT: Szezlong: tył',layer:'Ścianki tylne',x:XS0+P,y:YN+P,z:ODS,w:WS,h:YB-YN-P,d:P,c:TYL,o:0.9},
+  {n:'Kątownik 40×40 pod SZD, przykręcony do SDB-1 (z 150)',layer:'Kątowniki',x:XS1-40,y:YN-40,z:130,w:40,h:40,d:40,c:0x9aa5ad},
+  {n:'Kątownik 40×40 pod SZD, przykręcony do SDB-1 (z 650)',layer:'Kątowniki',x:XS1-40,y:YN-40,z:630,w:40,h:40,d:40,c:0x9aa5ad},
+  {n:'F1: Szuflada szezlonga (517 × 253), TIP-ON BLUMOTION',layer:'Fronty',x:XS0+1.5,y:YN,z:ZK,w:XS1-XS0-3,h:YS-YN,d:P,c:FR,o:0.55},
+  {n:'Skrzynka szuflady szezlonga 492 × 200 × 690 (MOVENTO 700, płyta 16)',layer:'Szuflady (skrzynki)',x:XS0+P+5,y:YN+P+3,z:ZK-690,w:WS-10,h:200,d:690,c:0xc9a227,o:0.45},
+  {n:'Poduszka siedziska (30)',layer:'Tapicerka',x:XS0,y:YS,z:ZN+P,w:XS1-XS0,h:YC-YS,d:ZF-ZN-P,c:0x2b2b2b},
 
-  /* ===== Szafka nad szezlongiem NS: korpus 50, bez tyłu (rozdzielnica), drzwi TIP-ON z zawiasami od D2 ===== */
+  /* ===== Szafka nad szezlongiem NS: korpus 80, bez tyłu (rozdzielnica), drzwi TIP-ON z zawiasami od D2 ===== */
   {n:'NSB-1: Nad szezlongiem: bok lewy',layer:'Ścianki boczne',x:XS0,y:YS+LUZK,z:0,w:P,h:YP-YS-LUZK,d:ZN,c:BOK},
   {n:'NSB-2: Nad szezlongiem: bok prawy',layer:'Ścianki boczne',x:XS1-P,y:YS+LUZK,z:0,w:P,h:YP-YS-LUZK,d:ZN,c:BOK},
   {n:'NSD: Nad szezlongiem: dno',layer:'Półki',x:XS0+P,y:YS+LUZK,z:0,w:WB,h:P,d:ZN,c:POL},
@@ -93,7 +98,7 @@ var ITEMS=[
   {n:'PWD: Pawlacz: dno',layer:'Półki',x:XS0+P,y:YP,z:ODS,w:WB,h:P,d:ZK-ODS,c:POL},
   {n:'PWW: Pawlacz: wieniec górny',layer:'Półki',x:XS0+P,y:YT-P,z:ODS,w:WB,h:P,d:ZK-ODS,c:POL},
   {n:'PWT: Pawlacz: tył',layer:'Ścianki tylne',x:XS0+P,y:YP+P,z:ODS,w:WB,h:YT-YP-2*P,d:P,c:TYL,o:0.9},
-  {n:'F3: Pawlacz (517 × 498,5), zawiasy od D2, TIP-ON',layer:'Fronty',x:XS0+1.5,y:YP+1.5,z:ZK,w:XS1-XS0-3,h:YT-YP-1.5,d:P,c:FR,o:0.55},
+  {n:'F3: Pawlacz (517 × 502,5; góra 1 pod sufitem w linii frontów), zawiasy od D2, TIP-ON',layer:'Fronty',x:XS0+1.5,y:YP+1.5,z:ZK,w:XS1-XS0-3,h:YFT-YP-1.5,d:P,c:FR,o:0.55},
 
   /* ===== Szafa wysoka, część dolna SD: wnęka 177, półki 300 (z szufladą) i 300, drążek na kurtki ===== */
   {n:'SDB-1: Szafa dół: bok lewy',layer:'Ścianki boczne',x:XT0,y:0,z:ODS,w:P,h:YD,d:ZK-ODS,c:BOK},
@@ -104,7 +109,7 @@ var ITEMS=[
   {n:'SDP-1: Szafa dół: półka stała (495, nad szufladą)',layer:'Półki',x:XT0+P,y:YN+P+300,z:ODS+P,w:WT,h:P,d:ZK-ODS-P,c:POL},
   {n:'SDP-2: Szafa dół: półka stała (813)',layer:'Półki',x:XT0+P,y:YN+P+300+P+300,z:ODS+P,w:WT,h:P,d:ZK-ODS-P,c:POL},
   {t:'cyl3',n:'Drążek na kurtki Ø25 (oś 2093, 50 pod wieńcem)',layer:'Wyposażenie',ax:'x',px:(XT0+XT1)/2,py:YD-P-50,pz:(ODS+P+ZK)/2,r:12.5,len:WT,c:0x9aa5ad},
-  {n:'Szuflada wewnętrzna (za drzwiami; Blum MOVENTO 500 z BLUMOTION; dystans 20 od boku z zawiasami)',layer:'Szuflady (skrzynki)',x:XT0+P+21,y:YN+P+15,z:ODS+P+10,w:WT-42-20,h:200,d:500,c:0xc9a227,o:0.45},
+  {n:'Szuflada wewnętrzna 494 × 250 × 690 (MOVENTO 700 z BLUMOTION, płyta 16; dystans 20 od boku z zawiasami)',layer:'Szuflady (skrzynki)',x:XT0+P+5,y:YN+P+3,z:ZK-25-690,w:WT-20-10,h:250,d:690,c:0xc9a227,o:0.45},
   {n:'F4: Szafa dół (557 × 1984,5), zawiasy po prawej, TIP-ON',layer:'Fronty',x:XT0+1.5,y:YN,z:ZK,w:XT1-XT0-3,h:YP-1.5-YN,d:P,c:FR,o:0.55},
 
   /* ===== Szafa wysoka, część górna SG: bez półki ===== */
@@ -113,10 +118,10 @@ var ITEMS=[
   {n:'SGD: Szafa góra: dno',layer:'Półki',x:XT0+P,y:YP,z:ODS,w:WT,h:P,d:ZK-ODS,c:POL},
   {n:'SGW: Szafa góra: wieniec górny',layer:'Półki',x:XT0+P,y:YT-P,z:ODS,w:WT,h:P,d:ZK-ODS,c:POL},
   {n:'SGT: Szafa góra: tył',layer:'Ścianki tylne',x:XT0+P,y:YP+P,z:ODS,w:WT,h:YT-YP-2*P,d:P,c:TYL,o:0.9},
-  {n:'F5: Szafa góra (557 × 498,5), zawiasy po prawej, TIP-ON',layer:'Fronty',x:XT0+1.5,y:YP+1.5,z:ZK,w:XT1-XT0-3,h:YT-YP-1.5,d:P,c:FR,o:0.55},
+  {n:'F5: Szafa góra (557 × 502,5; góra 1 pod sufitem w linii frontów), zawiasy po prawej, TIP-ON',layer:'Fronty',x:XT0+1.5,y:YP+1.5,z:ZK,w:XT1-XT0-3,h:YFT-YP-1.5,d:P,c:FR,o:0.55},
 
   /* ===== Zaślepka na czole pionu: przyklejona, od podłogi do sufitu, otwory na kabel domofonu i pod włącznik ===== */
-  {n:'F6: Zaślepka na czole pionu (424,5 × 2663), klejona, bez zawiasów',layer:'Fronty',x:XZ0,y:0,z:ZK,w:XZ1-XZ0,h:YT,d:P,c:FR,o:0.55},
+  {n:'F6: Zaślepka na czole pionu (424,5 × 2667), klejona, bez zawiasów',layer:'Fronty',x:XZ0,y:0,z:ZK,w:XZ1-XZ0,h:YFT,d:P,c:FR,o:0.55},
   {t:'cyl',n:'Otwór Ø60 na kabel domofonu w zaślepce (DF1, DF2)',layer:'Otwory w zaślepce',cx:XO+A+DF1,cy:DF2,z:ZK-0.5,r:DF3,len:P+1,c:0x15181b},
   {t:'cyl',n:'Otwór Ø60 pod dystans włącznika w zaślepce (WL1, WL2; średnica standardowej puszki podtynkowej)',layer:'Otwory w zaślepce',cx:XO+A+WL1,cy:WL2,z:ZK-0.5,r:30,len:P+1,c:0x15181b},
   {n:'Domofon na zaślepce (DF4, DF5; 125 × 165 założone)',layer:'Osprzęt',x:XO+A+DF4,y:DF5,z:ZF,w:125,h:165,d:25,c:0xf4f4f4},
@@ -126,9 +131,9 @@ var ITEMS=[
 /* zawiasy: CLIP top bez sprężyny + TIP-ON (komponenty.md) */
 ITEMS=ITEMS
   .concat(zawiasyN('nad szezlongiem',XS0+1.5,YC+1.5,XS1-XS0-3,YP-1.5-(YC+1.5),'lewa',4,ZN))
-  .concat(zawiasyN('pawlacz',XS0+1.5,YP+1.5,XS1-XS0-3,YT-YP-1.5,'lewa',2,ZK))
+  .concat(zawiasyN('pawlacz',XS0+1.5,YP+1.5,XS1-XS0-3,YFT-YP-1.5,'lewa',2,ZK))
   .concat(zawiasyN('szafa dół',XT0+1.5,YN,XT1-XT0-3,YP-1.5-YN,'prawa',4,ZK))
-  .concat(zawiasyN('szafa góra',XT0+1.5,YP+1.5,XT1-XT0-3,YT-YP-1.5,'prawa',2,ZK));
+  .concat(zawiasyN('szafa góra',XT0+1.5,YP+1.5,XT1-XT0-3,YFT-YP-1.5,'prawa',2,ZK));
 
 return {
   title:'Przedpokój 3D',

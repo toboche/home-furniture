@@ -18,6 +18,7 @@ wymiary poziome na czole pionu liczone od krawędzi 1.
 | C | 428 | czoło pionu, od krawędzi 1 do krawędzi 2 (ściana z DM1) | |
 | F | 1235 | od czoła pionu do przeciwległej ściany (przejście przed szafą) | z rzutu 1280 |
 | H | 2664 | wysokość pokoju, najmniejsza | zakres 2664–2669 |
+| HF | 2668 | wysokość w linii frontów (przy frontach szafy), najmniejsza | zakres 2668–2671 (2026-11-12) |
 | L | 1121 | linia podziału farby od podłogi | |
 | OS | 8 | wysięg ościeżnicy DM1 przed lico ściany z drzwiami | |
 | OC | 120 | od krawędzi 2 do ościeżnicy DM1, wzdłuż ściany z DM1 | zaślepka nie koliduje z ościeżnicą |
