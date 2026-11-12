@@ -84,6 +84,8 @@ var ZF=ZK+P;           /* płaszczyzna frontów szafek na wprost: 583 */
 var XL=PXM+LUZ;        /* przód szafki po lewej (bez frontów): 705 */
 var XP=A-LUZ;          /* prawy bok szafek na wprost: 1822 */
 var XM=(XL+XP)/2;      /* podział na 2 moduły */
+var HD=2052;           /* oś drążka: 50 pod spodem wieńca (2120 − 18 − 50; DO POTWIERDZENIA, czy 50 do osi) */
+var HS=900;            /* góra strefy szuflad (PROPOZYCJA, do ustalenia) */
 var ZP=PZ+T-LUZ;       /* koniec szafki po lewej przy ścianie przedniej: 562 + 919 − 3 = 1478 */
 
 var ITEMS=[
@@ -118,6 +120,18 @@ var ITEMS=[
   {n:'Po lewej: część otwarta ('+(XL-ODS)+' × '+HW+' × '+(ZP-ZF)+'; gzyms i rura do rozwiązania)',layer:'Szafka po lewej (zamysł)',x:ODS,y:0,z:ZF,w:XL-ODS,h:HW,d:ZP-ZF,c:0x4fa36a,o:0.25},
   {n:'Po lewej: część górna bez frontów ('+(XL-ODS)+' × '+(HG-HW)+' × '+(ZP-ZF)+')',layer:'Szafka po lewej (zamysł)',x:ODS,y:HW,z:ZF,w:XL-ODS,h:HG-HW,d:ZP-ZF,c:0x7fbf7f,o:0.3},
 
+  /* Wieniec na 2120 na całej głębokości szafek: zamyka część otwartą i jest jednocześnie półką części górnej */
+  {n:'Na wprost: wieniec na '+HW+' (pełna głębokość, półka części górnej)',layer:'Szafki na wprost (zamysł)',x:XL,y:HW-P,z:ODS,w:XP-XL,h:P,d:ZF-ODS,c:0xd8c7a3},
+  {n:'Po lewej: wieniec na '+HW+' (pełna głębokość, półka części górnej)',layer:'Szafka po lewej (zamysł)',x:ODS,y:HW-P,z:ZF,w:XL-ODS,h:P,d:ZP-ZF,c:0xd8c7a3},
+  /* Drążki na kurtki (oś HD), Ø25 */
+  {t:'cyl3',n:'Na wprost, moduł 1: drążek na kurtki (oś '+HD+')',layer:'Szafki na wprost (zamysł)',ax:'x',px:(XL+XM)/2,py:HD,pz:(ODS+ZF)/2,r:12.5,len:XM-XL-2*P,c:0x9aa5ad},
+  {t:'cyl3',n:'Na wprost, moduł 2: drążek na kurtki (oś '+HD+')',layer:'Szafki na wprost (zamysł)',ax:'x',px:(XM+XP)/2,py:HD,pz:(ODS+ZF)/2,r:12.5,len:XP-XM-2*P,c:0x9aa5ad},
+  {t:'cyl3',n:'Po lewej: drążek na kurtki (oś '+HD+'), wzdłuż ściany',layer:'Szafka po lewej (zamysł)',ax:'z',px:(ODS+XL)/2,py:HD,pz:(ZF+ZP)/2,r:12.5,len:ZP-ZF-2*P,c:0x9aa5ad},
+  /* Strefa szuflad (buty, czapki, rękawiczki): PROPOZYCJA wysokości, liczba szuflad do ustalenia */
+  {n:'Na wprost, moduł 1: szuflady (propozycja, do '+HS+')',layer:'Szuflady (propozycja)',x:XL+P,y:0,z:ZF-P,w:XM-XL-2*P,h:HS,d:P,c:0xc9a227,o:0.5},
+  {n:'Na wprost, moduł 2: szuflady (propozycja, do '+HS+')',layer:'Szuflady (propozycja)',x:XM+P,y:0,z:ZF-P,w:XP-XM-2*P,h:HS,d:P,c:0xc9a227,o:0.5},
+  {n:'Po lewej: szuflady (propozycja, do '+HS+'; nad gzymsem i rurą płytsze)',layer:'Szuflady (propozycja)',x:XL-P,y:0,z:ZF+P,w:P,h:HS,d:ZP-ZF-2*P,c:0xc9a227,o:0.5},
+
   /* Kratka wentylacyjna w otworze tylnej ścianki górnej części szafki po lewej (na wprost wylotu), od strony półek */
   {t:'cyl',n:'Kratka wentylacyjna Ø150 w tylnej ściance szafki po lewej (zamysł; wylot docięty)',layer:'Szafka po lewej (zamysł)',cx:W2,cy:W1,z:ZF+P,r:75,len:3,c:0xe0a526},
   /* Wycięcie w boku szafki po lewej przy ścianie przedniej, na gniazdko (wymiar wycięcia do ustalenia) */
@@ -133,7 +147,7 @@ return {
   wallThickness:100,
   openings:[{wall:'przod',pos:A-DX-DW,w:DW,y:0,h:DH}],
   views:{iso:[3.3,2.7,3.6],front:[0.91,1.3,4.9],top:[0.91,5.6,1.15],left:[-3.6,1.5,0.75]},
-  conceptLayers:['Szafki na wprost (zamysł)','Szafka po lewej (zamysł)'],
+  conceptLayers:['Szafki na wprost (zamysł)','Szafka po lewej (zamysł)','Szuflady (propozycja)'],
   hiddenLayers:[],
   fixedLayers:['Pion i gzyms','Osprzęt'],
   boardLayers:['Półki','Ścianki boczne','Ścianki tylne','Fronty'],
