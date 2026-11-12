@@ -8,8 +8,10 @@ WARSTWY_FORMATEK = ['Ścianki boczne', 'Ścianki tylne', 'Półki']
 
 
 def modul_of(it):
-    """moduł (korpus) formatki = dwie pierwsze litery kodu; konfirmaty tylko w obrębie modułu"""
-    return it['n'][:2]
+    """moduł (korpus) formatki = dwie pierwsze litery kodu; konfirmaty tylko w obrębie modułu.
+    Szezlong SZ nie ma prawego boku: jego blat, dno i tył łączą się z bokiem szafy SDB-1, więc liczymy go razem z SD."""
+    m = it['n'][:2]
+    return 'SD' if m == 'SZ' else m
 
 
 def pomijaj_czesc(p):
@@ -17,7 +19,9 @@ def pomijaj_czesc(p):
 
 
 def pomijaj_polaczenie(face, edge):
-    return False
+    # dno szezlonga SZD przy SDB-1: na tej wysokości od środka szafy jest dno SDD, konfirmatu nie da się wkręcić;
+    # SZD leży na 2 kątownikach przykręconych do SDB-1
+    return {face, edge} == {'SDB-1', 'SZD'}
 
 
 def rozstaw(face, edge, domyslny):
@@ -52,10 +56,12 @@ ZAW = 'PUSZKA Ø35, ŚRODEK 22,5 MM OD KRAWĘDZI'
 
 # Opisy formatek. Wymiary i ilości są liczone z modelu (model.js).
 FORMATKI = [
-    F('SZB', 'Szezlong: boki (stoją na podłodze, wnęka 0-177)', okleina='1SZ', nawierty='KONFIRMATY',
-      uwagi='okleina na krawędzi przedniej (pionowej)'),
-    F('SZW', 'Szezlong: blat pod poduszką (na bokach)', okleina='1DL+2SZ', nawierty='KONFIRMATY'),
-    F('SZD', 'Szezlong: dno szuflady nad wnęką', okleina='1DL', nawierty='KONFIRMATY'),
+    F('SZB', 'Szezlong: bok lewy (stoi na podłodze, wnęka 0-177)', okleina='1SZ', nawierty='KONFIRMATY',
+      uwagi='okleina na krawędzi przedniej (pionowej); prowadnica MOVENTO po stronie wnętrza'),
+    F('SZW', 'Szezlong: blat pod poduszką (na lewym boku, prawy koniec przy SDB-1)', okleina='1SZ+1DL',
+      nawierty='KONFIRMATY', uwagi='konfirmaty do SDB-1 wkręcane od środka szafy'),
+    F('SZD', 'Szezlong: dno szuflady nad wnęką (prawy koniec na 2 kątownikach przy SDB-1)', okleina='1SZ',
+      nawierty='KONFIRMATY'),
     F('SZT', 'Szezlong: tył', okleina='', nawierty='KONFIRMATY'),
     F('NSB', 'Szafka nad szezlongiem: boki (głębokość 80)', okleina='1DL', nawierty='KONFIRMATY',
       uwagi='prowadniki zawiasów F2 w lewym boku; bez tyłu (rozdzielnica)'),
@@ -66,7 +72,8 @@ FORMATKI = [
     F('PWD', 'Pawlacz: dno', okleina='1SZ', nawierty='KONFIRMATY'),
     F('PWW', 'Pawlacz: wieniec górny', okleina='1SZ', nawierty='KONFIRMATY'),
     F('PWT', 'Pawlacz: tył', okleina='', nawierty='KONFIRMATY'),
-    F('SDB', 'Szafa dół: boki (stoją na podłodze, wnęka 0-177)', okleina='1DL', nawierty='KONFIRMATY'),
+    F('SDB', 'Szafa dół: boki (stoją na podłodze, wnęka 0-177)', okleina='1DL', nawierty='KONFIRMATY',
+      uwagi='SDB-1 jest jednocześnie prawym bokiem szezlonga (prowadnica MOVENTO szezlonga po stronie szezlonga)'),
     F('SDD', 'Szafa dół: dno nad wnęką', okleina='1SZ', nawierty='KONFIRMATY'),
     F('SDW', 'Szafa dół: wieniec górny', okleina='1SZ', nawierty='KONFIRMATY'),
     F('SDT', 'Szafa dół: tył', okleina='', nawierty='KONFIRMATY'),
@@ -75,7 +82,7 @@ FORMATKI = [
     F('SGD', 'Szafa góra: dno', okleina='1SZ', nawierty='KONFIRMATY'),
     F('SGW', 'Szafa góra: wieniec górny', okleina='1SZ', nawierty='KONFIRMATY'),
     F('SGT', 'Szafa góra: tył', okleina='', nawierty='KONFIRMATY'),
-    F('F1', 'Front szuflady szezlonga (zasłania krawędź blatu)', okleina='2DL+2SZ', nawierty='BRAK (regulator frontu MOVENTO mocowany wkrętami)'),
+    F('F1', 'Front szuflady szezlonga (zasłania krawędź blatu)', okleina='2DL+2SZ', nawierty='BRAK (mocowanie frontu MOVENTO na wkręty)'),
     F('F2', 'Drzwi nad szezlongiem, zawiasy po LEWEJ (od D2)', okleina='2DL+2SZ', nawierty='ZAWIASY 4 SZT, ' + ZAW,
       uwagi='TIP-ON, zawiasy bez sprężyny'),
     F('F3', 'Front pawlacza, zawiasy po LEWEJ (od D2)', okleina='2DL+2SZ', nawierty='ZAWIASY 2 SZT, ' + ZAW,
@@ -85,5 +92,5 @@ FORMATKI = [
     F('F5', 'Front szafy, góra, zawiasy po PRAWEJ (od pionu)', okleina='2DL+2SZ', nawierty='ZAWIASY 2 SZT, ' + ZAW,
       uwagi='TIP-ON, zawiasy bez sprężyny'),
     F('F6', 'Zaślepka na czole pionu (klejona, od podłogi do sufitu)', okleina='2DL+2SZ', nawierty='BRAK; otwory wierci użytkownik',
-      uwagi='dwa otwory Ø60: kabel domofonu (środek 243,5 od lewej krawędzi, 1474 od dołu) i dystans włącznika (środek 296,5 od lewej, 1214 od dołu)'),
+      uwagi='góra 1 mm pod sufitem w linii frontów; dwa otwory Ø60: kabel domofonu (środek 243,5 od lewej krawędzi, 1474 od dołu) i dystans włącznika (środek 296,5 od lewej, 1214 od dołu)'),
 ]
