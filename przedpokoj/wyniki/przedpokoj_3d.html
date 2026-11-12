@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Przedpokój 3D</title>
+<style>
+*{box-sizing:border-box}
+:root{
+  --bg:#e8ecef; --fg:#192024; --panel:rgba(250,252,253,.9); --line:rgba(25,32,36,.2);
+  --edge:#2c363c; --accent:#16707a; --muted:#56646c;
+  color-scheme:light dark;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#12171a; --fg:#e6ecef; --panel:rgba(26,32,36,.9); --line:rgba(230,236,239,.22);
+    --edge:#c3ccd1; --accent:#4cc3cf; --muted:#9aa8b0;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#12171a; --fg:#e6ecef; --panel:rgba(26,32,36,.9); --line:rgba(230,236,239,.22);
+  --edge:#c3ccd1; --accent:#4cc3cf; --muted:#9aa8b0;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+html,body{height:100%;margin:0;overflow:hidden;background:var(--bg);color:var(--fg);
+  font:14px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",sans-serif}
+canvas{position:fixed;inset:0;display:block;touch-action:none;z-index:0}
+#panel{position:fixed;z-index:10;top:calc(env(safe-area-inset-top,0px) + 8px);left:8px;width:min(300px,calc(100vw - 16px));
+  padding:10px 12px;background:var(--panel);border:1px solid var(--line);border-radius:8px;
+  -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);max-height:calc(100vh - 80px);overflow:auto}
+#panel h1{font-size:15px;margin:0;font-weight:650}
+.head{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.group{margin-top:10px}
+.group>span{display:block;color:var(--muted);margin-bottom:4px}
+.btns{display:flex;flex-wrap:wrap;gap:6px}
+button,select{font:inherit;color:var(--fg);background:transparent;border:1px solid var(--line);border-radius:6px;padding:4px 9px;cursor:pointer}
+button:hover,select:hover{border-color:var(--accent)}
+button:focus-visible,select:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+label.chk{display:flex;align-items:center;gap:8px;padding:2px 0;cursor:pointer}
+input[type=checkbox]{accent-color:var(--accent);width:16px;height:16px;margin:0}
+.hint{margin:10px 0 0;color:var(--muted);font-size:12.5px}
+#tip{position:fixed;z-index:10;left:8px;bottom:calc(env(safe-area-inset-bottom,0px) + 8px);max-width:calc(100vw - 16px);
+  padding:6px 10px;background:var(--panel);border:1px solid var(--line);border-radius:8px;display:none;pointer-events:none}
+#err{position:fixed;z-index:20;inset:0;display:none;align-items:center;justify-content:center;padding:24px;text-align:center}
+</style>
+</head>
+<body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+<script>
+/* ========================================================================
+   PRZEDPOKÓJ (A/P02 01): DANE MODELU 3D (wszystko w milimetrach)
+   Ściana tylna (z = 0) = ściana z drzwiami łazienki D2 i rozdzielnicą. Ściana prawa (x = W) = ściana z drzwiami
+   wejściowymi DM1. W narożniku tylnej i prawej ściany: pion EI60. Lewa ściana i ściana przednia są umowne
+   (przedpokój ciągnie się dalej; modelujemy tylko fragment przy szafie).
+   Układ: X od lewej ku prawej, Y od podłogi w górę, Z od ściany z D2 w głąb przedpokoju.
+   X w pomiarach liczony od szczeliny przy ościeżnicy D2 (od strony szafy); w modelu to x = XO.
+   Wymiary z pomiary.md (najmniejsze odczyty). Opis formatu ITEMS: wspolne/STRUKTURA.md, punkt 4.
+   ======================================================================== */
+var HF_MODEL=(function(){
+'use strict';
+/* pomiary (pomiary.md) */
+var A=1100;            /* ściana od szczeliny D2 do narożnika z pionem */
+var B=777, BG=783;     /* wysięg pionu od ściany z D2: przy podłodze / przy suficie */
+var C=428;             /* czoło pionu: od krawędzi 1 (narożnik pionu) do ściany z DM1 */
+var F=1235;            /* od czoła pionu do przeciwległej ściany */
+var H=2664;            /* wysokość, najmniejsza (zakres 2664–2669) */
+var OC=120;            /* od krawędzi 2 do ościeżnicy DM1 */
+var DR1=800, DR2=2030, DR5=3;   /* D2: szerokość i wysokość skrzydła, szczelina od strony szafy */
+var D=187, E=350, G=933, K=1000, RZ1=10;   /* rozdzielnica: od szczeliny D2, szerokość z ramką, dół od podłogi, wysokość, wysięg drzwiczek */
+var DF1=245, DF2=1474, DF3=30;  /* otwór na kabel domofonu: środek od krawędzi 1, od podłogi, promień */
+var DF4=183, DF5=1365;          /* domofon: lewy dolny róg od krawędzi 1, od podłogi */
+var WL1=298, WL2=1214, WL3=70;  /* włącznik: środek od krawędzi 1, od podłogi, ramka (ok.) */
+
+/* założenia i decyzje (ustalenia.md) */
+var XO=1000;           /* położenie szczeliny D2 w modelu (umowny kawałek przedpokoju na lewo od D2) */
+var P=18;              /* płyta */
+var LUZ=3;             /* luz pod sufitem i przy boku pionu */
+var ODS=2;             /* odsunięcie korpusów 775 od ściany: front w płaszczyźnie zaślepki (u góry dystans do 8) */
+var ZK=B;              /* przód korpusów szafy i pawlacza: 777 (korpus 775) */
+var ZF=ZK+P;           /* płaszczyzna frontów i zaślepki: 795 */
+var YT=H-LUZ;          /* góra korpusów: 2661 */
+var YP=YT-500;         /* podział góra / dół (dół pawlacza): 2161 */
+var XS0=XO+20;         /* szezlong: 20 od szczeliny D2 */
+var XS1=XS0+520;       /* szezlong szerokość 520 → 540 */
+var XT0=XS1;           /* szafa wysoka od boku szezlonga */
+var XT1=XO+A-LUZ;      /* do boku pionu z luzem 3: 1097 (szerokość 557) */
+var ZS=500;            /* głębokość szezlonga (z frontem) */
+var YN=177;            /* wnęka na buty: 0–177 */
+var YB=412, YS=430, YC=460;     /* szezlong: spód blatu, góra blatu, góra poduszki (30) */
+var ZN=50;             /* szafka nad szezlongiem: korpus 50, lico frontu 68 */
+var XZ0=XO+A-1.5;      /* zaślepka: 3 mm od frontów szafy (1,5 poza narożnik pionu) */
+var XZ1=XO+A+C-2;      /* zaślepka: 2 mm od ściany z DM1 */
+var DMW=900, DMH=2000; /* DM1 w świetle (ZAŁOŻENIE, nominalnie 90/200) */
+
+var W=XO+A+C, DD=B+F;  /* umowny pokój: 2528 × 2012 */
+var WB=XS1-XS0-2*P;    /* wnętrze szezlonga, szafki nad nim i pawlacza: 484 */
+var WT=XT1-XT0-2*P;    /* wnętrze szafy wysokiej: 521 */
+
+/* zawiasy: środek puszki 22,5 od krawędzi frontu, skrajne 100 od końców, pozostałe równo */
+function zawiasy(nazwa,fx,fy,fw,fh,strona,n){
+  var out=[],x=(strona==='lewa')?fx+5:fx+fw-40;
+  for(var i=0;i<n;i++){
+    var cy=fy+100+i*(fh-200)/(n-1);
+    out.push({n:'Zawias: '+nazwa+' ('+strona+')',layer:'Zawiasy',x:x,y:cy-17.5,z:ZF-P+1,w:35,h:35,d:11,c:0x2b3034});
+  }
+  return out;
+}
+function zawiasyN(nazwa,fx,fy,fw,fh,strona,n,z){
+  return zawiasy(nazwa,fx,fy,fw,fh,strona,n).map(function(it){it.z=z+1;return it;});
+}
+
+var BOK=0xcdbb95, TYL=0x9c8b6e, POL=0xe6d7b8, FR=0x2f9e8f;
+
+var ITEMS=[
+  /* ===== Pomieszczenie ===== */
+  {n:'Pion EI60 (wysięg '+B+' przy podłodze, '+BG+' przy suficie; czoło '+C+')',layer:'Pion',x:XO+A,y:0,z:0,w:C,h:H,d:B,c:0xd9d4ca},
+  {n:'Rozdzielnica z ramką ('+E+' × '+K+', od '+G+'; drzwiczki wystają '+RZ1+', zawiasy po prawej)',layer:'Osprzęt',x:XO+D,y:G,z:0,w:E,h:K,d:RZ1,c:0xb0b4b8},
+  {n:'Listwa przypodłogowa L 40 × 16 (zostaje lub do zdjęcia)',layer:'Osprzęt',x:XO-200,y:0,z:0,w:200+A,h:40,d:16,c:0xf4f4f4,o:0.8},
+
+  /* ===== Szezlong SZ (x 20–540 od szczeliny D2): wnęka na buty, szuflada TIP-ON, blat, poduszka ===== */
+  {n:'SZB-1: Szezlong: bok lewy (od D2)',layer:'Ścianki boczne',x:XS0,y:0,z:0,w:P,h:YB,d:ZS-P,c:BOK},
+  {n:'SZB-2: Szezlong: bok prawy',layer:'Ścianki boczne',x:XS1-P,y:0,z:0,w:P,h:YB,d:ZS-P,c:BOK},
+  {n:'SZW: Szezlong: blat (pod poduszką)',layer:'Półki',x:XS0,y:YB,z:0,w:XS1-XS0,h:P,d:ZS-P,c:POL},
+  {n:'SZD: Szezlong: dno szuflady (nad wnęką)',layer:'Półki',x:XS0+P,y:YN,z:0,w:WB,h:P,d:ZS-P,c:POL},
+  {n:'SZT: Szezlong: tył',layer:'Ścianki tylne',x:XS0+P,y:YN+P,z:0,w:WB,h:YB-YN-P,d:P,c:TYL,o:0.9},
+  {n:'F1: Szuflada szezlonga (517 × 253), TIP-ON',layer:'Fronty',x:XS0+1.5,y:YN,z:ZS-P,w:XS1-XS0-3,h:YS-YN,d:P,c:FR,o:0.55},
+  {n:'Skrzynka szuflady szezlonga (prowadnice push to open 450; wymiary po wyborze prowadnic)',layer:'Szuflady (skrzynki)',x:XS0+P+13,y:YN+P+13,z:P+10,w:WB-26,h:YB-YN-P-40,d:450,c:0xc9a227,o:0.45},
+  {n:'Poduszka siedziska (30)',layer:'Tapicerka',x:XS0,y:YS,z:ZN+P,w:XS1-XS0,h:YC-YS,d:ZS-ZN-P,c:0x2b2b2b},
+
+  /* ===== Szafka nad szezlongiem NS: korpus 50, bez tyłu (rozdzielnica), drzwi TIP-ON z zawiasami od D2 ===== */
+  {n:'NSB-1: Nad szezlongiem: bok lewy',layer:'Ścianki boczne',x:XS0,y:YS,z:0,w:P,h:YP-YS,d:ZN,c:BOK},
+  {n:'NSB-2: Nad szezlongiem: bok prawy',layer:'Ścianki boczne',x:XS1-P,y:YS,z:0,w:P,h:YP-YS,d:ZN,c:BOK},
+  {n:'NSD: Nad szezlongiem: dno',layer:'Półki',x:XS0+P,y:YS,z:0,w:WB,h:P,d:ZN,c:POL},
+  {n:'NSW: Nad szezlongiem: wieniec',layer:'Półki',x:XS0+P,y:YP-P,z:0,w:WB,h:P,d:ZN,c:POL},
+  {n:'F2: Drzwi nad szezlongiem (517 × 1698), zawiasy od D2, TIP-ON',layer:'Fronty',x:XS0+1.5,y:YC+1.5,z:ZN,w:XS1-XS0-3,h:YP-1.5-(YC+1.5),d:P,c:FR,o:0.55},
+
+  /* ===== Pawlacz PW nad szezlongiem: 500 od sufitu, front w linii szafy ===== */
+  {n:'PWB-1: Pawlacz: bok lewy',layer:'Ścianki boczne',x:XS0,y:YP,z:ODS,w:P,h:YT-YP,d:ZK-ODS,c:BOK},
+  {n:'PWB-2: Pawlacz: bok prawy',layer:'Ścianki boczne',x:XS1-P,y:YP,z:ODS,w:P,h:YT-YP,d:ZK-ODS,c:BOK},
+  {n:'PWD: Pawlacz: dno',layer:'Półki',x:XS0+P,y:YP,z:ODS,w:WB,h:P,d:ZK-ODS,c:POL},
+  {n:'PWW: Pawlacz: wieniec górny',layer:'Półki',x:XS0+P,y:YT-P,z:ODS,w:WB,h:P,d:ZK-ODS,c:POL},
+  {n:'PWT: Pawlacz: tył',layer:'Ścianki tylne',x:XS0+P,y:YP+P,z:ODS,w:WB,h:YT-YP-2*P,d:P,c:TYL,o:0.9},
+  {n:'F3: Pawlacz (517 × 498,5), zawiasy od D2, TIP-ON',layer:'Fronty',x:XS0+1.5,y:YP+1.5,z:ZK,w:XS1-XS0-3,h:YT-YP-1.5,d:P,c:FR,o:0.55},
+
+  /* ===== Szafa wysoka, część dolna SD: wnęka 177, półki 300 (z szufladą) i 300, drążek na kurtki ===== */
+  {n:'SDB-1: Szafa dół: bok lewy',layer:'Ścianki boczne',x:XT0,y:0,z:ODS,w:P,h:YP,d:ZK-ODS,c:BOK},
+  {n:'SDB-2: Szafa dół: bok prawy (przy pionie)',layer:'Ścianki boczne',x:XT1-P,y:0,z:ODS,w:P,h:YP,d:ZK-ODS,c:BOK},
+  {n:'SDD: Szafa dół: dno (nad wnęką)',layer:'Półki',x:XT0+P,y:YN,z:ODS,w:WT,h:P,d:ZK-ODS,c:POL},
+  {n:'SDW: Szafa dół: wieniec górny',layer:'Półki',x:XT0+P,y:YP-P,z:ODS,w:WT,h:P,d:ZK-ODS,c:POL},
+  {n:'SDT: Szafa dół: tył',layer:'Ścianki tylne',x:XT0+P,y:YN+P,z:ODS,w:WT,h:YP-P-(YN+P),d:P,c:TYL,o:0.9},
+  {n:'SDP-1: Szafa dół: półka stała (495, nad szufladą)',layer:'Półki',x:XT0+P,y:YN+P+300,z:ODS+P,w:WT,h:P,d:ZK-ODS-P,c:POL},
+  {n:'SDP-2: Szafa dół: półka stała (813)',layer:'Półki',x:XT0+P,y:YN+P+300+P+300,z:ODS+P,w:WT,h:P,d:ZK-ODS-P,c:POL},
+  {t:'cyl3',n:'Drążek na kurtki Ø25 (oś 2093, 50 pod wieńcem)',layer:'Wyposażenie',ax:'x',px:(XT0+XT1)/2,py:YP-P-50,pz:(ODS+P+ZK)/2,r:12.5,len:WT,c:0x9aa5ad},
+  {n:'Szuflada wewnętrzna (za drzwiami; dystans 20 od boku z zawiasami; prowadnice 500)',layer:'Szuflady (skrzynki)',x:XT0+P+13,y:YN+P+15,z:ODS+P+10,w:WT-26-20,h:200,d:500,c:0xc9a227,o:0.45},
+  {n:'F4: Szafa dół (554 × 1982,5), zawiasy po prawej, TIP-ON',layer:'Fronty',x:XT0+1.5,y:YN,z:ZK,w:XT1-XT0-3,h:YP-1.5-YN,d:P,c:FR,o:0.55},
+
+  /* ===== Szafa wysoka, część górna SG: bez półki ===== */
+  {n:'SGB-1: Szafa góra: bok lewy',layer:'Ścianki boczne',x:XT0,y:YP,z:ODS,w:P,h:YT-YP,d:ZK-ODS,c:BOK},
+  {n:'SGB-2: Szafa góra: bok prawy (przy pionie)',layer:'Ścianki boczne',x:XT1-P,y:YP,z:ODS,w:P,h:YT-YP,d:ZK-ODS,c:BOK},
+  {n:'SGD: Szafa góra: dno',layer:'Półki',x:XT0+P,y:YP,z:ODS,w:WT,h:P,d:ZK-ODS,c:POL},
+  {n:'SGW: Szafa góra: wieniec górny',layer:'Półki',x:XT0+P,y:YT-P,z:ODS,w:WT,h:P,d:ZK-ODS,c:POL},
+  {n:'SGT: Szafa góra: tył',layer:'Ścianki tylne',x:XT0+P,y:YP+P,z:ODS,w:WT,h:YT-YP-2*P,d:P,c:TYL,o:0.9},
+  {n:'F5: Szafa góra (554 × 498,5), zawiasy po prawej, TIP-ON',layer:'Fronty',x:XT0+1.5,y:YP+1.5,z:ZK,w:XT1-XT0-3,h:YT-YP-1.5,d:P,c:FR,o:0.55},
+
+  /* ===== Zaślepka na czole pionu: przyklejona, od podłogi do sufitu, otwory na kabel domofonu i pod włącznik ===== */
+  {n:'F6: Zaślepka na czole pionu (427,5 × 2661), klejona, bez zawiasów',layer:'Fronty',x:XZ0,y:0,z:ZK,w:XZ1-XZ0,h:YT,d:P,c:FR,o:0.55},
+  {t:'cyl',n:'Otwór Ø60 na kabel domofonu w zaślepce (DF1, DF2)',layer:'Otwory w zaślepce',cx:XO+A+DF1,cy:DF2,z:ZK-0.5,r:DF3,len:P+1,c:0x15181b},
+  {t:'cyl',n:'Otwór pod dystans włącznika w zaślepce (WL1, WL2; średnica wg dystansu)',layer:'Otwory w zaślepce',cx:XO+A+WL1,cy:WL2,z:ZK-0.5,r:34,len:P+1,c:0x15181b},
+  {n:'Domofon na zaślepce (DF4, DF5; 125 × 165 założone)',layer:'Osprzęt',x:XO+A+DF4,y:DF5,z:ZF,w:125,h:165,d:25,c:0xf4f4f4},
+  {n:'Włącznik światła na zaślepce (WL1, WL2; ramka ok. '+WL3+')',layer:'Osprzęt',x:XO+A+WL1-WL3/2,y:WL2-WL3/2,z:ZF,w:WL3,h:WL3,d:12,c:0xc8a46a}
+];
+
+/* zawiasy: CLIP top bez sprężyny + TIP-ON (komponenty.md) */
+ITEMS=ITEMS
+  .concat(zawiasyN('nad szezlongiem',XS0+1.5,YC+1.5,XS1-XS0-3,YP-1.5-(YC+1.5),'lewa',4,ZN))
+  .concat(zawiasyN('pawlacz',XS0+1.5,YP+1.5,XS1-XS0-3,YT-YP-1.5,'lewa',2,ZK))
+  .concat(zawiasyN('szafa dół',XT0+1.5,YN,XT1-XT0-3,YP-1.5-YN,'prawa',4,ZK))
+  .concat(zawiasyN('szafa góra',XT0+1.5,YP+1.5,XT1-XT0-3,YT-YP-1.5,'prawa',2,ZK));
+
+return {
+  title:'Przedpokój 3D',
+  room:{W:W,D:DD,H:H},
+  wallThickness:100,
+  openings:[
+    {wall:'tyl',pos:XO-DR1-2*DR5,w:DR1+2*DR5,y:0,h:DR2+DR5},   /* D2 (łazienka), w świetle ok. skrzydło + szczeliny */
+    {wall:'prawa',pos:B+OC,w:DMW,y:0,h:DMH}                  /* DM1 (wejście), wymiar w świetle założony */
+  ],
+  views:{iso:[3.9,2.7,4.3],front:[1.5,1.4,5.0],top:[1.5,5.8,1.1],left:[-3.2,1.5,1.0]},
+  conceptLayers:[],
+  hiddenLayers:['Szuflady (skrzynki)'],
+  fixedLayers:['Pion','Osprzęt'],
+  boardLayers:['Półki','Ścianki boczne','Ścianki tylne','Fronty'],
+  boardColor:{hex:0xeeece5,label:'fronty na razie białe (kolor do decyzji)'},
+  variants:[],
+  items:ITEMS
+};
+})();
+</script>
+<script>
+/* GENEROWANE: python3 wspolne/pipeline/run.py przedpokoj (nie edytować ręcznie).
+   Otwory, konfirmaty, kołki i puszki zawiasów wyliczone z modelu (model.js). */
+HF_MODEL.items.push(
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SZB-1 (czoło, konfirmat z SZW)',layer:'Otwory',ax:'y',px:1029,py:394.5,pz:50,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SZB-1 (czoło, konfirmat z SZW)',layer:'Otwory',ax:'y',px:1029,py:394.5,pz:432,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SZB-1 (pod konfirmat do SZD)',layer:'Otwory',ax:'x',px:1029,py:186,pz:50,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SZB-1 → SZD',layer:'Konfirmaty',ax:'x',px:1045,py:186,pz:50,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SZB-1 → SZD',layer:'Konfirmaty',ax:'x',px:1021,py:186,pz:50,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SZB-1 (pod konfirmat do SZD)',layer:'Otwory',ax:'x',px:1029,py:186,pz:432,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SZB-1 → SZD',layer:'Konfirmaty',ax:'x',px:1045,py:186,pz:432,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SZB-1 → SZD',layer:'Konfirmaty',ax:'x',px:1021,py:186,pz:432,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SZB-1 (pod konfirmat do SZT)',layer:'Otwory',ax:'x',px:1029,py:245,pz:9,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SZB-1 → SZT',layer:'Konfirmaty',ax:'x',px:1045,py:245,pz:9,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SZB-1 → SZT',layer:'Konfirmaty',ax:'x',px:1021,py:245,pz:9,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SZB-1 (pod konfirmat do SZT)',layer:'Otwory',ax:'x',px:1029,py:362,pz:9,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SZB-1 → SZT',layer:'Konfirmaty',ax:'x',px:1045,py:362,pz:9,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SZB-1 → SZT',layer:'Konfirmaty',ax:'x',px:1021,py:362,pz:9,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SZB-2 (czoło, konfirmat z SZW)',layer:'Otwory',ax:'y',px:1531,py:394.5,pz:50,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SZB-2 (czoło, konfirmat z SZW)',layer:'Otwory',ax:'y',px:1531,py:394.5,pz:432,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SZB-2 (pod konfirmat do SZD)',layer:'Otwory',ax:'x',px:1531,py:186,pz:50,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SZB-2 → SZD',layer:'Konfirmaty',ax:'x',px:1515,py:186,pz:50,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SZB-2 → SZD',layer:'Konfirmaty',ax:'x',px:1539,py:186,pz:50,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SZB-2 (pod konfirmat do SZD)',layer:'Otwory',ax:'x',px:1531,py:186,pz:432,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SZB-2 → SZD',layer:'Konfirmaty',ax:'x',px:1515,py:186,pz:432,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SZB-2 → SZD',layer:'Konfirmaty',ax:'x',px:1539,py:186,pz:432,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SZB-2 (pod konfirmat do SZT)',layer:'Otwory',ax:'x',px:1531,py:245,pz:9,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SZB-2 → SZT',layer:'Konfirmaty',ax:'x',px:1515,py:245,pz:9,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SZB-2 → SZT',layer:'Konfirmaty',ax:'x',px:1539,py:245,pz:9,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SZB-2 (pod konfirmat do SZT)',layer:'Otwory',ax:'x',px:1531,py:362,pz:9,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SZB-2 → SZT',layer:'Konfirmaty',ax:'x',px:1515,py:362,pz:9,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SZB-2 → SZT',layer:'Konfirmaty',ax:'x',px:1539,py:362,pz:9,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SZW (pod konfirmat do SZB-1)',layer:'Otwory',ax:'y',px:1029,py:421,pz:50,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SZW → SZB-1',layer:'Konfirmaty',ax:'y',px:1029,py:405,pz:50,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SZW → SZB-1',layer:'Konfirmaty',ax:'y',px:1029,py:429,pz:50,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SZW (pod konfirmat do SZB-1)',layer:'Otwory',ax:'y',px:1029,py:421,pz:432,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SZW → SZB-1',layer:'Konfirmaty',ax:'y',px:1029,py:405,pz:432,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SZW → SZB-1',layer:'Konfirmaty',ax:'y',px:1029,py:429,pz:432,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SZW (pod konfirmat do SZB-2)',layer:'Otwory',ax:'y',px:1531,py:421,pz:50,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SZW → SZB-2',layer:'Konfirmaty',ax:'y',px:1531,py:405,pz:50,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SZW → SZB-2',layer:'Konfirmaty',ax:'y',px:1531,py:429,pz:50,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SZW (pod konfirmat do SZB-2)',layer:'Otwory',ax:'y',px:1531,py:421,pz:432,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SZW → SZB-2',layer:'Konfirmaty',ax:'y',px:1531,py:405,pz:432,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SZW → SZB-2',layer:'Konfirmaty',ax:'y',px:1531,py:429,pz:432,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SZW (pod konfirmat do SZT)',layer:'Otwory',ax:'y',px:1088,py:421,pz:9,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SZW → SZT',layer:'Konfirmaty',ax:'y',px:1088,py:405,pz:9,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SZW → SZT',layer:'Konfirmaty',ax:'y',px:1088,py:429,pz:9,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SZW (pod konfirmat do SZT)',layer:'Otwory',ax:'y',px:1472,py:421,pz:9,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SZW → SZT',layer:'Konfirmaty',ax:'y',px:1472,py:405,pz:9,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SZW → SZT',layer:'Konfirmaty',ax:'y',px:1472,py:429,pz:9,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SZD (czoło, konfirmat z SZB-1)',layer:'Otwory',ax:'x',px:1055.5,py:186,pz:50,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SZD (czoło, konfirmat z SZB-1)',layer:'Otwory',ax:'x',px:1055.5,py:186,pz:432,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SZD (czoło, konfirmat z SZB-2)',layer:'Otwory',ax:'x',px:1504.5,py:186,pz:50,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SZD (czoło, konfirmat z SZB-2)',layer:'Otwory',ax:'x',px:1504.5,py:186,pz:432,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SZD (pod konfirmat do SZT)',layer:'Otwory',ax:'y',px:1088,py:186,pz:9,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SZD → SZT',layer:'Konfirmaty',ax:'y',px:1088,py:202,pz:9,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SZD → SZT',layer:'Konfirmaty',ax:'y',px:1088,py:178,pz:9,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SZD (pod konfirmat do SZT)',layer:'Otwory',ax:'y',px:1472,py:186,pz:9,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SZD → SZT',layer:'Konfirmaty',ax:'y',px:1472,py:202,pz:9,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SZD → SZT',layer:'Konfirmaty',ax:'y',px:1472,py:178,pz:9,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SZT (czoło, konfirmat z SZB-1)',layer:'Otwory',ax:'x',px:1055.5,py:245,pz:9,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SZT (czoło, konfirmat z SZB-1)',layer:'Otwory',ax:'x',px:1055.5,py:362,pz:9,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SZT (czoło, konfirmat z SZB-2)',layer:'Otwory',ax:'x',px:1504.5,py:245,pz:9,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SZT (czoło, konfirmat z SZB-2)',layer:'Otwory',ax:'x',px:1504.5,py:362,pz:9,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SZT (czoło, konfirmat z SZW)',layer:'Otwory',ax:'y',px:1088,py:394.5,pz:9,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SZT (czoło, konfirmat z SZW)',layer:'Otwory',ax:'y',px:1472,py:394.5,pz:9,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SZT (czoło, konfirmat z SZD)',layer:'Otwory',ax:'y',px:1088,py:212.5,pz:9,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SZT (czoło, konfirmat z SZD)',layer:'Otwory',ax:'y',px:1472,py:212.5,pz:9,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w NSB-1 (pod konfirmat do NSD)',layer:'Otwory',ax:'x',px:1029,py:439,pz:25,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: NSB-1 → NSD',layer:'Konfirmaty',ax:'x',px:1045,py:439,pz:25,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: NSB-1 → NSD',layer:'Konfirmaty',ax:'x',px:1021,py:439,pz:25,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w NSB-1 (pod konfirmat do NSW)',layer:'Otwory',ax:'x',px:1029,py:2152,pz:25,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: NSB-1 → NSW',layer:'Konfirmaty',ax:'x',px:1045,py:2152,pz:25,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: NSB-1 → NSW',layer:'Konfirmaty',ax:'x',px:1021,py:2152,pz:25,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Nawiert pilotowy Ø3 x 12 pod wkręt prowadnika (F2) w NSB-1',layer:'Otwory',ax:'x',px:1032,py:545.5,pz:13,r:1.5,len:12.6,c:0x15181b},
+  {t:'cyl3',n:'Nawiert pilotowy Ø3 x 12 pod wkręt prowadnika (F2) w NSB-1',layer:'Otwory',ax:'x',px:1032,py:577.5,pz:13,r:1.5,len:12.6,c:0x15181b},
+  {t:'cyl3',n:'Nawiert pilotowy Ø3 x 12 pod wkręt prowadnika (F2) w NSB-1',layer:'Otwory',ax:'x',px:1032,py:1044.83,pz:13,r:1.5,len:12.6,c:0x15181b},
+  {t:'cyl3',n:'Nawiert pilotowy Ø3 x 12 pod wkręt prowadnika (F2) w NSB-1',layer:'Otwory',ax:'x',px:1032,py:1076.83,pz:13,r:1.5,len:12.6,c:0x15181b},
+  {t:'cyl3',n:'Nawiert pilotowy Ø3 x 12 pod wkręt prowadnika (F2) w NSB-1',layer:'Otwory',ax:'x',px:1032,py:1544.17,pz:13,r:1.5,len:12.6,c:0x15181b},
+  {t:'cyl3',n:'Nawiert pilotowy Ø3 x 12 pod wkręt prowadnika (F2) w NSB-1',layer:'Otwory',ax:'x',px:1032,py:1576.17,pz:13,r:1.5,len:12.6,c:0x15181b},
+  {t:'cyl3',n:'Nawiert pilotowy Ø3 x 12 pod wkręt prowadnika (F2) w NSB-1',layer:'Otwory',ax:'x',px:1032,py:2043.5,pz:13,r:1.5,len:12.6,c:0x15181b},
+  {t:'cyl3',n:'Nawiert pilotowy Ø3 x 12 pod wkręt prowadnika (F2) w NSB-1',layer:'Otwory',ax:'x',px:1032,py:2075.5,pz:13,r:1.5,len:12.6,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w NSB-2 (pod konfirmat do NSD)',layer:'Otwory',ax:'x',px:1531,py:439,pz:25,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: NSB-2 → NSD',layer:'Konfirmaty',ax:'x',px:1515,py:439,pz:25,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: NSB-2 → NSD',layer:'Konfirmaty',ax:'x',px:1539,py:439,pz:25,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w NSB-2 (pod konfirmat do NSW)',layer:'Otwory',ax:'x',px:1531,py:2152,pz:25,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: NSB-2 → NSW',layer:'Konfirmaty',ax:'x',px:1515,py:2152,pz:25,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: NSB-2 → NSW',layer:'Konfirmaty',ax:'x',px:1539,py:2152,pz:25,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w NSD (czoło, konfirmat z NSB-1)',layer:'Otwory',ax:'x',px:1055.5,py:439,pz:25,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w NSD (czoło, konfirmat z NSB-2)',layer:'Otwory',ax:'x',px:1504.5,py:439,pz:25,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w NSW (czoło, konfirmat z NSB-1)',layer:'Otwory',ax:'x',px:1055.5,py:2152,pz:25,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w NSW (czoło, konfirmat z NSB-2)',layer:'Otwory',ax:'x',px:1504.5,py:2152,pz:25,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w PWB-1 (pod konfirmat do PWD)',layer:'Otwory',ax:'x',px:1029,py:2170,pz:52,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: PWB-1 → PWD',layer:'Konfirmaty',ax:'x',px:1045,py:2170,pz:52,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: PWB-1 → PWD',layer:'Konfirmaty',ax:'x',px:1021,py:2170,pz:52,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w PWB-1 (pod konfirmat do PWD)',layer:'Otwory',ax:'x',px:1029,py:2170,pz:389.5,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: PWB-1 → PWD',layer:'Konfirmaty',ax:'x',px:1045,py:2170,pz:389.5,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: PWB-1 → PWD',layer:'Konfirmaty',ax:'x',px:1021,py:2170,pz:389.5,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w PWB-1 (pod konfirmat do PWD)',layer:'Otwory',ax:'x',px:1029,py:2170,pz:727,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: PWB-1 → PWD',layer:'Konfirmaty',ax:'x',px:1045,py:2170,pz:727,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: PWB-1 → PWD',layer:'Konfirmaty',ax:'x',px:1021,py:2170,pz:727,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w PWB-1 (pod konfirmat do PWW)',layer:'Otwory',ax:'x',px:1029,py:2652,pz:52,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: PWB-1 → PWW',layer:'Konfirmaty',ax:'x',px:1045,py:2652,pz:52,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: PWB-1 → PWW',layer:'Konfirmaty',ax:'x',px:1021,py:2652,pz:52,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w PWB-1 (pod konfirmat do PWW)',layer:'Otwory',ax:'x',px:1029,py:2652,pz:389.5,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: PWB-1 → PWW',layer:'Konfirmaty',ax:'x',px:1045,py:2652,pz:389.5,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: PWB-1 → PWW',layer:'Konfirmaty',ax:'x',px:1021,py:2652,pz:389.5,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w PWB-1 (pod konfirmat do PWW)',layer:'Otwory',ax:'x',px:1029,py:2652,pz:727,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: PWB-1 → PWW',layer:'Konfirmaty',ax:'x',px:1045,py:2652,pz:727,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: PWB-1 → PWW',layer:'Konfirmaty',ax:'x',px:1021,py:2652,pz:727,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w PWB-1 (pod konfirmat do PWT)',layer:'Otwory',ax:'x',px:1029,py:2229,pz:11,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: PWB-1 → PWT',layer:'Konfirmaty',ax:'x',px:1045,py:2229,pz:11,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: PWB-1 → PWT',layer:'Konfirmaty',ax:'x',px:1021,py:2229,pz:11,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w PWB-1 (pod konfirmat do PWT)',layer:'Otwory',ax:'x',px:1029,py:2593,pz:11,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: PWB-1 → PWT',layer:'Konfirmaty',ax:'x',px:1045,py:2593,pz:11,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: PWB-1 → PWT',layer:'Konfirmaty',ax:'x',px:1021,py:2593,pz:11,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Nawiert pilotowy Ø3 x 12 pod wkręt prowadnika (F3) w PWB-1',layer:'Otwory',ax:'x',px:1032,py:2246.5,pz:740,r:1.5,len:12.6,c:0x15181b},
+  {t:'cyl3',n:'Nawiert pilotowy Ø3 x 12 pod wkręt prowadnika (F3) w PWB-1',layer:'Otwory',ax:'x',px:1032,py:2278.5,pz:740,r:1.5,len:12.6,c:0x15181b},
+  {t:'cyl3',n:'Nawiert pilotowy Ø3 x 12 pod wkręt prowadnika (F3) w PWB-1',layer:'Otwory',ax:'x',px:1032,py:2545,pz:740,r:1.5,len:12.6,c:0x15181b},
+  {t:'cyl3',n:'Nawiert pilotowy Ø3 x 12 pod wkręt prowadnika (F3) w PWB-1',layer:'Otwory',ax:'x',px:1032,py:2577,pz:740,r:1.5,len:12.6,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w PWB-2 (pod konfirmat do PWD)',layer:'Otwory',ax:'x',px:1531,py:2170,pz:52,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: PWB-2 → PWD',layer:'Konfirmaty',ax:'x',px:1515,py:2170,pz:52,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: PWB-2 → PWD',layer:'Konfirmaty',ax:'x',px:1539,py:2170,pz:52,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w PWB-2 (pod konfirmat do PWD)',layer:'Otwory',ax:'x',px:1531,py:2170,pz:389.5,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: PWB-2 → PWD',layer:'Konfirmaty',ax:'x',px:1515,py:2170,pz:389.5,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: PWB-2 → PWD',layer:'Konfirmaty',ax:'x',px:1539,py:2170,pz:389.5,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w PWB-2 (pod konfirmat do PWD)',layer:'Otwory',ax:'x',px:1531,py:2170,pz:727,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: PWB-2 → PWD',layer:'Konfirmaty',ax:'x',px:1515,py:2170,pz:727,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: PWB-2 → PWD',layer:'Konfirmaty',ax:'x',px:1539,py:2170,pz:727,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w PWB-2 (pod konfirmat do PWW)',layer:'Otwory',ax:'x',px:1531,py:2652,pz:52,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: PWB-2 → PWW',layer:'Konfirmaty',ax:'x',px:1515,py:2652,pz:52,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: PWB-2 → PWW',layer:'Konfirmaty',ax:'x',px:1539,py:2652,pz:52,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w PWB-2 (pod konfirmat do PWW)',layer:'Otwory',ax:'x',px:1531,py:2652,pz:389.5,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: PWB-2 → PWW',layer:'Konfirmaty',ax:'x',px:1515,py:2652,pz:389.5,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: PWB-2 → PWW',layer:'Konfirmaty',ax:'x',px:1539,py:2652,pz:389.5,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w PWB-2 (pod konfirmat do PWW)',layer:'Otwory',ax:'x',px:1531,py:2652,pz:727,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: PWB-2 → PWW',layer:'Konfirmaty',ax:'x',px:1515,py:2652,pz:727,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: PWB-2 → PWW',layer:'Konfirmaty',ax:'x',px:1539,py:2652,pz:727,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w PWB-2 (pod konfirmat do PWT)',layer:'Otwory',ax:'x',px:1531,py:2229,pz:11,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: PWB-2 → PWT',layer:'Konfirmaty',ax:'x',px:1515,py:2229,pz:11,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: PWB-2 → PWT',layer:'Konfirmaty',ax:'x',px:1539,py:2229,pz:11,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w PWB-2 (pod konfirmat do PWT)',layer:'Otwory',ax:'x',px:1531,py:2593,pz:11,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: PWB-2 → PWT',layer:'Konfirmaty',ax:'x',px:1515,py:2593,pz:11,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: PWB-2 → PWT',layer:'Konfirmaty',ax:'x',px:1539,py:2593,pz:11,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w PWD (czoło, konfirmat z PWB-1)',layer:'Otwory',ax:'x',px:1055.5,py:2170,pz:52,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w PWD (czoło, konfirmat z PWB-1)',layer:'Otwory',ax:'x',px:1055.5,py:2170,pz:389.5,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w PWD (czoło, konfirmat z PWB-1)',layer:'Otwory',ax:'x',px:1055.5,py:2170,pz:727,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w PWD (czoło, konfirmat z PWB-2)',layer:'Otwory',ax:'x',px:1504.5,py:2170,pz:52,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w PWD (czoło, konfirmat z PWB-2)',layer:'Otwory',ax:'x',px:1504.5,py:2170,pz:389.5,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w PWD (czoło, konfirmat z PWB-2)',layer:'Otwory',ax:'x',px:1504.5,py:2170,pz:727,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w PWD (pod konfirmat do PWT)',layer:'Otwory',ax:'y',px:1088,py:2170,pz:11,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: PWD → PWT',layer:'Konfirmaty',ax:'y',px:1088,py:2186,pz:11,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: PWD → PWT',layer:'Konfirmaty',ax:'y',px:1088,py:2162,pz:11,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w PWD (pod konfirmat do PWT)',layer:'Otwory',ax:'y',px:1472,py:2170,pz:11,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: PWD → PWT',layer:'Konfirmaty',ax:'y',px:1472,py:2186,pz:11,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: PWD → PWT',layer:'Konfirmaty',ax:'y',px:1472,py:2162,pz:11,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w PWW (czoło, konfirmat z PWB-1)',layer:'Otwory',ax:'x',px:1055.5,py:2652,pz:52,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w PWW (czoło, konfirmat z PWB-1)',layer:'Otwory',ax:'x',px:1055.5,py:2652,pz:389.5,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w PWW (czoło, konfirmat z PWB-1)',layer:'Otwory',ax:'x',px:1055.5,py:2652,pz:727,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w PWW (czoło, konfirmat z PWB-2)',layer:'Otwory',ax:'x',px:1504.5,py:2652,pz:52,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w PWW (czoło, konfirmat z PWB-2)',layer:'Otwory',ax:'x',px:1504.5,py:2652,pz:389.5,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w PWW (czoło, konfirmat z PWB-2)',layer:'Otwory',ax:'x',px:1504.5,py:2652,pz:727,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w PWW (pod konfirmat do PWT)',layer:'Otwory',ax:'y',px:1088,py:2652,pz:11,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: PWW → PWT',layer:'Konfirmaty',ax:'y',px:1088,py:2636,pz:11,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: PWW → PWT',layer:'Konfirmaty',ax:'y',px:1088,py:2660,pz:11,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w PWW (pod konfirmat do PWT)',layer:'Otwory',ax:'y',px:1472,py:2652,pz:11,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: PWW → PWT',layer:'Konfirmaty',ax:'y',px:1472,py:2636,pz:11,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: PWW → PWT',layer:'Konfirmaty',ax:'y',px:1472,py:2660,pz:11,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w PWT (czoło, konfirmat z PWB-1)',layer:'Otwory',ax:'x',px:1055.5,py:2229,pz:11,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w PWT (czoło, konfirmat z PWB-1)',layer:'Otwory',ax:'x',px:1055.5,py:2593,pz:11,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w PWT (czoło, konfirmat z PWB-2)',layer:'Otwory',ax:'x',px:1504.5,py:2229,pz:11,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w PWT (czoło, konfirmat z PWB-2)',layer:'Otwory',ax:'x',px:1504.5,py:2593,pz:11,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w PWT (czoło, konfirmat z PWD)',layer:'Otwory',ax:'y',px:1088,py:2196.5,pz:11,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w PWT (czoło, konfirmat z PWD)',layer:'Otwory',ax:'y',px:1472,py:2196.5,pz:11,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w PWT (czoło, konfirmat z PWW)',layer:'Otwory',ax:'y',px:1088,py:2625.5,pz:11,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w PWT (czoło, konfirmat z PWW)',layer:'Otwory',ax:'y',px:1472,py:2625.5,pz:11,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SDB-1 (pod konfirmat do SDD)',layer:'Otwory',ax:'x',px:1549,py:186,pz:52,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SDB-1 → SDD',layer:'Konfirmaty',ax:'x',px:1565,py:186,pz:52,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SDB-1 → SDD',layer:'Konfirmaty',ax:'x',px:1541,py:186,pz:52,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SDB-1 (pod konfirmat do SDD)',layer:'Otwory',ax:'x',px:1549,py:186,pz:389.5,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SDB-1 → SDD',layer:'Konfirmaty',ax:'x',px:1565,py:186,pz:389.5,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SDB-1 → SDD',layer:'Konfirmaty',ax:'x',px:1541,py:186,pz:389.5,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SDB-1 (pod konfirmat do SDD)',layer:'Otwory',ax:'x',px:1549,py:186,pz:727,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SDB-1 → SDD',layer:'Konfirmaty',ax:'x',px:1565,py:186,pz:727,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SDB-1 → SDD',layer:'Konfirmaty',ax:'x',px:1541,py:186,pz:727,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SDB-1 (pod konfirmat do SDW)',layer:'Otwory',ax:'x',px:1549,py:2152,pz:52,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SDB-1 → SDW',layer:'Konfirmaty',ax:'x',px:1565,py:2152,pz:52,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SDB-1 → SDW',layer:'Konfirmaty',ax:'x',px:1541,py:2152,pz:52,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SDB-1 (pod konfirmat do SDW)',layer:'Otwory',ax:'x',px:1549,py:2152,pz:389.5,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SDB-1 → SDW',layer:'Konfirmaty',ax:'x',px:1565,py:2152,pz:389.5,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SDB-1 → SDW',layer:'Konfirmaty',ax:'x',px:1541,py:2152,pz:389.5,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SDB-1 (pod konfirmat do SDW)',layer:'Otwory',ax:'x',px:1549,py:2152,pz:727,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SDB-1 → SDW',layer:'Konfirmaty',ax:'x',px:1565,py:2152,pz:727,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SDB-1 → SDW',layer:'Konfirmaty',ax:'x',px:1541,py:2152,pz:727,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SDB-1 (pod konfirmat do SDT)',layer:'Otwory',ax:'x',px:1549,py:245,pz:11,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SDB-1 → SDT',layer:'Konfirmaty',ax:'x',px:1565,py:245,pz:11,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SDB-1 → SDT',layer:'Konfirmaty',ax:'x',px:1541,py:245,pz:11,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SDB-1 (pod konfirmat do SDT)',layer:'Otwory',ax:'x',px:1549,py:614.6,pz:11,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SDB-1 → SDT',layer:'Konfirmaty',ax:'x',px:1565,py:614.6,pz:11,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SDB-1 → SDT',layer:'Konfirmaty',ax:'x',px:1541,py:614.6,pz:11,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SDB-1 (pod konfirmat do SDT)',layer:'Otwory',ax:'x',px:1549,py:984.2,pz:11,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SDB-1 → SDT',layer:'Konfirmaty',ax:'x',px:1565,py:984.2,pz:11,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SDB-1 → SDT',layer:'Konfirmaty',ax:'x',px:1541,py:984.2,pz:11,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SDB-1 (pod konfirmat do SDT)',layer:'Otwory',ax:'x',px:1549,py:1353.8,pz:11,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SDB-1 → SDT',layer:'Konfirmaty',ax:'x',px:1565,py:1353.8,pz:11,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SDB-1 → SDT',layer:'Konfirmaty',ax:'x',px:1541,py:1353.8,pz:11,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SDB-1 (pod konfirmat do SDT)',layer:'Otwory',ax:'x',px:1549,py:1723.4,pz:11,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SDB-1 → SDT',layer:'Konfirmaty',ax:'x',px:1565,py:1723.4,pz:11,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SDB-1 → SDT',layer:'Konfirmaty',ax:'x',px:1541,py:1723.4,pz:11,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SDB-1 (pod konfirmat do SDT)',layer:'Otwory',ax:'x',px:1549,py:2093,pz:11,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SDB-1 → SDT',layer:'Konfirmaty',ax:'x',px:1565,py:2093,pz:11,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SDB-1 → SDT',layer:'Konfirmaty',ax:'x',px:1541,py:2093,pz:11,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SDB-1 (pod konfirmat do SDP-1)',layer:'Otwory',ax:'x',px:1549,py:504,pz:70,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SDB-1 → SDP-1',layer:'Konfirmaty',ax:'x',px:1565,py:504,pz:70,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SDB-1 → SDP-1',layer:'Konfirmaty',ax:'x',px:1541,py:504,pz:70,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SDB-1 (pod konfirmat do SDP-1)',layer:'Otwory',ax:'x',px:1549,py:504,pz:398.5,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SDB-1 → SDP-1',layer:'Konfirmaty',ax:'x',px:1565,py:504,pz:398.5,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SDB-1 → SDP-1',layer:'Konfirmaty',ax:'x',px:1541,py:504,pz:398.5,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SDB-1 (pod konfirmat do SDP-1)',layer:'Otwory',ax:'x',px:1549,py:504,pz:727,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SDB-1 → SDP-1',layer:'Konfirmaty',ax:'x',px:1565,py:504,pz:727,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SDB-1 → SDP-1',layer:'Konfirmaty',ax:'x',px:1541,py:504,pz:727,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SDB-1 (pod konfirmat do SDP-2)',layer:'Otwory',ax:'x',px:1549,py:822,pz:70,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SDB-1 → SDP-2',layer:'Konfirmaty',ax:'x',px:1565,py:822,pz:70,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SDB-1 → SDP-2',layer:'Konfirmaty',ax:'x',px:1541,py:822,pz:70,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SDB-1 (pod konfirmat do SDP-2)',layer:'Otwory',ax:'x',px:1549,py:822,pz:398.5,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SDB-1 → SDP-2',layer:'Konfirmaty',ax:'x',px:1565,py:822,pz:398.5,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SDB-1 → SDP-2',layer:'Konfirmaty',ax:'x',px:1541,py:822,pz:398.5,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SDB-1 (pod konfirmat do SDP-2)',layer:'Otwory',ax:'x',px:1549,py:822,pz:727,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SDB-1 → SDP-2',layer:'Konfirmaty',ax:'x',px:1565,py:822,pz:727,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SDB-1 → SDP-2',layer:'Konfirmaty',ax:'x',px:1541,py:822,pz:727,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SDB-2 (pod konfirmat do SDD)',layer:'Otwory',ax:'x',px:2088,py:186,pz:52,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SDB-2 → SDD',layer:'Konfirmaty',ax:'x',px:2072,py:186,pz:52,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SDB-2 → SDD',layer:'Konfirmaty',ax:'x',px:2096,py:186,pz:52,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SDB-2 (pod konfirmat do SDD)',layer:'Otwory',ax:'x',px:2088,py:186,pz:389.5,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SDB-2 → SDD',layer:'Konfirmaty',ax:'x',px:2072,py:186,pz:389.5,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SDB-2 → SDD',layer:'Konfirmaty',ax:'x',px:2096,py:186,pz:389.5,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SDB-2 (pod konfirmat do SDD)',layer:'Otwory',ax:'x',px:2088,py:186,pz:727,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SDB-2 → SDD',layer:'Konfirmaty',ax:'x',px:2072,py:186,pz:727,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SDB-2 → SDD',layer:'Konfirmaty',ax:'x',px:2096,py:186,pz:727,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SDB-2 (pod konfirmat do SDW)',layer:'Otwory',ax:'x',px:2088,py:2152,pz:52,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SDB-2 → SDW',layer:'Konfirmaty',ax:'x',px:2072,py:2152,pz:52,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SDB-2 → SDW',layer:'Konfirmaty',ax:'x',px:2096,py:2152,pz:52,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SDB-2 (pod konfirmat do SDW)',layer:'Otwory',ax:'x',px:2088,py:2152,pz:389.5,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SDB-2 → SDW',layer:'Konfirmaty',ax:'x',px:2072,py:2152,pz:389.5,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SDB-2 → SDW',layer:'Konfirmaty',ax:'x',px:2096,py:2152,pz:389.5,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SDB-2 (pod konfirmat do SDW)',layer:'Otwory',ax:'x',px:2088,py:2152,pz:727,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SDB-2 → SDW',layer:'Konfirmaty',ax:'x',px:2072,py:2152,pz:727,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SDB-2 → SDW',layer:'Konfirmaty',ax:'x',px:2096,py:2152,pz:727,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SDB-2 (pod konfirmat do SDT)',layer:'Otwory',ax:'x',px:2088,py:245,pz:11,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SDB-2 → SDT',layer:'Konfirmaty',ax:'x',px:2072,py:245,pz:11,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SDB-2 → SDT',layer:'Konfirmaty',ax:'x',px:2096,py:245,pz:11,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SDB-2 (pod konfirmat do SDT)',layer:'Otwory',ax:'x',px:2088,py:614.6,pz:11,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SDB-2 → SDT',layer:'Konfirmaty',ax:'x',px:2072,py:614.6,pz:11,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SDB-2 → SDT',layer:'Konfirmaty',ax:'x',px:2096,py:614.6,pz:11,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SDB-2 (pod konfirmat do SDT)',layer:'Otwory',ax:'x',px:2088,py:984.2,pz:11,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SDB-2 → SDT',layer:'Konfirmaty',ax:'x',px:2072,py:984.2,pz:11,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SDB-2 → SDT',layer:'Konfirmaty',ax:'x',px:2096,py:984.2,pz:11,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SDB-2 (pod konfirmat do SDT)',layer:'Otwory',ax:'x',px:2088,py:1353.8,pz:11,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SDB-2 → SDT',layer:'Konfirmaty',ax:'x',px:2072,py:1353.8,pz:11,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SDB-2 → SDT',layer:'Konfirmaty',ax:'x',px:2096,py:1353.8,pz:11,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SDB-2 (pod konfirmat do SDT)',layer:'Otwory',ax:'x',px:2088,py:1723.4,pz:11,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SDB-2 → SDT',layer:'Konfirmaty',ax:'x',px:2072,py:1723.4,pz:11,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SDB-2 → SDT',layer:'Konfirmaty',ax:'x',px:2096,py:1723.4,pz:11,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SDB-2 (pod konfirmat do SDT)',layer:'Otwory',ax:'x',px:2088,py:2093,pz:11,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SDB-2 → SDT',layer:'Konfirmaty',ax:'x',px:2072,py:2093,pz:11,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SDB-2 → SDT',layer:'Konfirmaty',ax:'x',px:2096,py:2093,pz:11,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SDB-2 (pod konfirmat do SDP-1)',layer:'Otwory',ax:'x',px:2088,py:504,pz:70,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SDB-2 → SDP-1',layer:'Konfirmaty',ax:'x',px:2072,py:504,pz:70,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SDB-2 → SDP-1',layer:'Konfirmaty',ax:'x',px:2096,py:504,pz:70,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SDB-2 (pod konfirmat do SDP-1)',layer:'Otwory',ax:'x',px:2088,py:504,pz:398.5,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SDB-2 → SDP-1',layer:'Konfirmaty',ax:'x',px:2072,py:504,pz:398.5,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SDB-2 → SDP-1',layer:'Konfirmaty',ax:'x',px:2096,py:504,pz:398.5,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SDB-2 (pod konfirmat do SDP-1)',layer:'Otwory',ax:'x',px:2088,py:504,pz:727,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SDB-2 → SDP-1',layer:'Konfirmaty',ax:'x',px:2072,py:504,pz:727,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SDB-2 → SDP-1',layer:'Konfirmaty',ax:'x',px:2096,py:504,pz:727,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SDB-2 (pod konfirmat do SDP-2)',layer:'Otwory',ax:'x',px:2088,py:822,pz:70,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SDB-2 → SDP-2',layer:'Konfirmaty',ax:'x',px:2072,py:822,pz:70,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SDB-2 → SDP-2',layer:'Konfirmaty',ax:'x',px:2096,py:822,pz:70,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SDB-2 (pod konfirmat do SDP-2)',layer:'Otwory',ax:'x',px:2088,py:822,pz:398.5,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SDB-2 → SDP-2',layer:'Konfirmaty',ax:'x',px:2072,py:822,pz:398.5,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SDB-2 → SDP-2',layer:'Konfirmaty',ax:'x',px:2096,py:822,pz:398.5,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SDB-2 (pod konfirmat do SDP-2)',layer:'Otwory',ax:'x',px:2088,py:822,pz:727,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SDB-2 → SDP-2',layer:'Konfirmaty',ax:'x',px:2072,py:822,pz:727,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SDB-2 → SDP-2',layer:'Konfirmaty',ax:'x',px:2096,py:822,pz:727,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Nawiert pilotowy Ø3 x 12 pod wkręt prowadnika (F4) w SDB-2',layer:'Otwory',ax:'x',px:2085,py:261,pz:740,r:1.5,len:12.6,c:0x15181b},
+  {t:'cyl3',n:'Nawiert pilotowy Ø3 x 12 pod wkręt prowadnika (F4) w SDB-2',layer:'Otwory',ax:'x',px:2085,py:293,pz:740,r:1.5,len:12.6,c:0x15181b},
+  {t:'cyl3',n:'Nawiert pilotowy Ø3 x 12 pod wkręt prowadnika (F4) w SDB-2',layer:'Otwory',ax:'x',px:2085,py:855.17,pz:740,r:1.5,len:12.6,c:0x15181b},
+  {t:'cyl3',n:'Nawiert pilotowy Ø3 x 12 pod wkręt prowadnika (F4) w SDB-2',layer:'Otwory',ax:'x',px:2085,py:887.17,pz:740,r:1.5,len:12.6,c:0x15181b},
+  {t:'cyl3',n:'Nawiert pilotowy Ø3 x 12 pod wkręt prowadnika (F4) w SDB-2',layer:'Otwory',ax:'x',px:2085,py:1449.33,pz:740,r:1.5,len:12.6,c:0x15181b},
+  {t:'cyl3',n:'Nawiert pilotowy Ø3 x 12 pod wkręt prowadnika (F4) w SDB-2',layer:'Otwory',ax:'x',px:2085,py:1481.33,pz:740,r:1.5,len:12.6,c:0x15181b},
+  {t:'cyl3',n:'Nawiert pilotowy Ø3 x 12 pod wkręt prowadnika (F4) w SDB-2',layer:'Otwory',ax:'x',px:2085,py:2043.5,pz:740,r:1.5,len:12.6,c:0x15181b},
+  {t:'cyl3',n:'Nawiert pilotowy Ø3 x 12 pod wkręt prowadnika (F4) w SDB-2',layer:'Otwory',ax:'x',px:2085,py:2075.5,pz:740,r:1.5,len:12.6,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SDD (czoło, konfirmat z SDB-1)',layer:'Otwory',ax:'x',px:1575.5,py:186,pz:52,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SDD (czoło, konfirmat z SDB-1)',layer:'Otwory',ax:'x',px:1575.5,py:186,pz:389.5,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SDD (czoło, konfirmat z SDB-1)',layer:'Otwory',ax:'x',px:1575.5,py:186,pz:727,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SDD (czoło, konfirmat z SDB-2)',layer:'Otwory',ax:'x',px:2061.5,py:186,pz:52,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SDD (czoło, konfirmat z SDB-2)',layer:'Otwory',ax:'x',px:2061.5,py:186,pz:389.5,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SDD (czoło, konfirmat z SDB-2)',layer:'Otwory',ax:'x',px:2061.5,py:186,pz:727,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SDD (pod konfirmat do SDT)',layer:'Otwory',ax:'y',px:1608,py:186,pz:11,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SDD → SDT',layer:'Konfirmaty',ax:'y',px:1608,py:202,pz:11,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SDD → SDT',layer:'Konfirmaty',ax:'y',px:1608,py:178,pz:11,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SDD (pod konfirmat do SDT)',layer:'Otwory',ax:'y',px:1818.5,py:186,pz:11,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SDD → SDT',layer:'Konfirmaty',ax:'y',px:1818.5,py:202,pz:11,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SDD → SDT',layer:'Konfirmaty',ax:'y',px:1818.5,py:178,pz:11,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SDD (pod konfirmat do SDT)',layer:'Otwory',ax:'y',px:2029,py:186,pz:11,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SDD → SDT',layer:'Konfirmaty',ax:'y',px:2029,py:202,pz:11,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SDD → SDT',layer:'Konfirmaty',ax:'y',px:2029,py:178,pz:11,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SDW (czoło, konfirmat z SDB-1)',layer:'Otwory',ax:'x',px:1575.5,py:2152,pz:52,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SDW (czoło, konfirmat z SDB-1)',layer:'Otwory',ax:'x',px:1575.5,py:2152,pz:389.5,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SDW (czoło, konfirmat z SDB-1)',layer:'Otwory',ax:'x',px:1575.5,py:2152,pz:727,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SDW (czoło, konfirmat z SDB-2)',layer:'Otwory',ax:'x',px:2061.5,py:2152,pz:52,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SDW (czoło, konfirmat z SDB-2)',layer:'Otwory',ax:'x',px:2061.5,py:2152,pz:389.5,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SDW (czoło, konfirmat z SDB-2)',layer:'Otwory',ax:'x',px:2061.5,py:2152,pz:727,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SDW (pod konfirmat do SDT)',layer:'Otwory',ax:'y',px:1608,py:2152,pz:11,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SDW → SDT',layer:'Konfirmaty',ax:'y',px:1608,py:2136,pz:11,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SDW → SDT',layer:'Konfirmaty',ax:'y',px:1608,py:2160,pz:11,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SDW (pod konfirmat do SDT)',layer:'Otwory',ax:'y',px:1818.5,py:2152,pz:11,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SDW → SDT',layer:'Konfirmaty',ax:'y',px:1818.5,py:2136,pz:11,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SDW → SDT',layer:'Konfirmaty',ax:'y',px:1818.5,py:2160,pz:11,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SDW (pod konfirmat do SDT)',layer:'Otwory',ax:'y',px:2029,py:2152,pz:11,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SDW → SDT',layer:'Konfirmaty',ax:'y',px:2029,py:2136,pz:11,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SDW → SDT',layer:'Konfirmaty',ax:'y',px:2029,py:2160,pz:11,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SDT (czoło, konfirmat z SDB-1)',layer:'Otwory',ax:'x',px:1575.5,py:245,pz:11,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SDT (czoło, konfirmat z SDB-1)',layer:'Otwory',ax:'x',px:1575.5,py:614.6,pz:11,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SDT (czoło, konfirmat z SDB-1)',layer:'Otwory',ax:'x',px:1575.5,py:984.2,pz:11,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SDT (czoło, konfirmat z SDB-1)',layer:'Otwory',ax:'x',px:1575.5,py:1353.8,pz:11,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SDT (czoło, konfirmat z SDB-1)',layer:'Otwory',ax:'x',px:1575.5,py:1723.4,pz:11,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SDT (czoło, konfirmat z SDB-1)',layer:'Otwory',ax:'x',px:1575.5,py:2093,pz:11,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SDT (czoło, konfirmat z SDB-2)',layer:'Otwory',ax:'x',px:2061.5,py:245,pz:11,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SDT (czoło, konfirmat z SDB-2)',layer:'Otwory',ax:'x',px:2061.5,py:614.6,pz:11,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SDT (czoło, konfirmat z SDB-2)',layer:'Otwory',ax:'x',px:2061.5,py:984.2,pz:11,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SDT (czoło, konfirmat z SDB-2)',layer:'Otwory',ax:'x',px:2061.5,py:1353.8,pz:11,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SDT (czoło, konfirmat z SDB-2)',layer:'Otwory',ax:'x',px:2061.5,py:1723.4,pz:11,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SDT (czoło, konfirmat z SDB-2)',layer:'Otwory',ax:'x',px:2061.5,py:2093,pz:11,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SDT (czoło, konfirmat z SDD)',layer:'Otwory',ax:'y',px:1608,py:212.5,pz:11,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SDT (czoło, konfirmat z SDD)',layer:'Otwory',ax:'y',px:1818.5,py:212.5,pz:11,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SDT (czoło, konfirmat z SDD)',layer:'Otwory',ax:'y',px:2029,py:212.5,pz:11,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SDT (czoło, konfirmat z SDW)',layer:'Otwory',ax:'y',px:1608,py:2125.5,pz:11,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SDT (czoło, konfirmat z SDW)',layer:'Otwory',ax:'y',px:1818.5,py:2125.5,pz:11,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SDT (czoło, konfirmat z SDW)',layer:'Otwory',ax:'y',px:2029,py:2125.5,pz:11,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SDT (pod konfirmat do SDP-1)',layer:'Otwory',ax:'z',px:1608,py:504,pz:11,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SDT → SDP-1',layer:'Konfirmaty',ax:'z',px:1608,py:504,pz:27,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SDT → SDP-1',layer:'Konfirmaty',ax:'z',px:1608,py:504,pz:3,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SDT (pod konfirmat do SDP-1)',layer:'Otwory',ax:'z',px:1818.5,py:504,pz:11,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SDT → SDP-1',layer:'Konfirmaty',ax:'z',px:1818.5,py:504,pz:27,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SDT → SDP-1',layer:'Konfirmaty',ax:'z',px:1818.5,py:504,pz:3,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SDT (pod konfirmat do SDP-1)',layer:'Otwory',ax:'z',px:2029,py:504,pz:11,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SDT → SDP-1',layer:'Konfirmaty',ax:'z',px:2029,py:504,pz:27,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SDT → SDP-1',layer:'Konfirmaty',ax:'z',px:2029,py:504,pz:3,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SDT (pod konfirmat do SDP-2)',layer:'Otwory',ax:'z',px:1608,py:822,pz:11,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SDT → SDP-2',layer:'Konfirmaty',ax:'z',px:1608,py:822,pz:27,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SDT → SDP-2',layer:'Konfirmaty',ax:'z',px:1608,py:822,pz:3,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SDT (pod konfirmat do SDP-2)',layer:'Otwory',ax:'z',px:1818.5,py:822,pz:11,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SDT → SDP-2',layer:'Konfirmaty',ax:'z',px:1818.5,py:822,pz:27,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SDT → SDP-2',layer:'Konfirmaty',ax:'z',px:1818.5,py:822,pz:3,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SDT (pod konfirmat do SDP-2)',layer:'Otwory',ax:'z',px:2029,py:822,pz:11,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SDT → SDP-2',layer:'Konfirmaty',ax:'z',px:2029,py:822,pz:27,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SDT → SDP-2',layer:'Konfirmaty',ax:'z',px:2029,py:822,pz:3,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SDP-1 (czoło, konfirmat z SDB-1)',layer:'Otwory',ax:'x',px:1575.5,py:504,pz:70,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SDP-1 (czoło, konfirmat z SDB-1)',layer:'Otwory',ax:'x',px:1575.5,py:504,pz:398.5,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SDP-1 (czoło, konfirmat z SDB-1)',layer:'Otwory',ax:'x',px:1575.5,py:504,pz:727,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SDP-1 (czoło, konfirmat z SDB-2)',layer:'Otwory',ax:'x',px:2061.5,py:504,pz:70,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SDP-1 (czoło, konfirmat z SDB-2)',layer:'Otwory',ax:'x',px:2061.5,py:504,pz:398.5,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SDP-1 (czoło, konfirmat z SDB-2)',layer:'Otwory',ax:'x',px:2061.5,py:504,pz:727,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SDP-1 (czoło, konfirmat z SDT)',layer:'Otwory',ax:'z',px:1608,py:504,pz:37.5,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SDP-1 (czoło, konfirmat z SDT)',layer:'Otwory',ax:'z',px:1818.5,py:504,pz:37.5,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SDP-1 (czoło, konfirmat z SDT)',layer:'Otwory',ax:'z',px:2029,py:504,pz:37.5,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SDP-2 (czoło, konfirmat z SDB-1)',layer:'Otwory',ax:'x',px:1575.5,py:822,pz:70,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SDP-2 (czoło, konfirmat z SDB-1)',layer:'Otwory',ax:'x',px:1575.5,py:822,pz:398.5,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SDP-2 (czoło, konfirmat z SDB-1)',layer:'Otwory',ax:'x',px:1575.5,py:822,pz:727,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SDP-2 (czoło, konfirmat z SDB-2)',layer:'Otwory',ax:'x',px:2061.5,py:822,pz:70,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SDP-2 (czoło, konfirmat z SDB-2)',layer:'Otwory',ax:'x',px:2061.5,py:822,pz:398.5,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SDP-2 (czoło, konfirmat z SDB-2)',layer:'Otwory',ax:'x',px:2061.5,py:822,pz:727,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SDP-2 (czoło, konfirmat z SDT)',layer:'Otwory',ax:'z',px:1608,py:822,pz:37.5,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SDP-2 (czoło, konfirmat z SDT)',layer:'Otwory',ax:'z',px:1818.5,py:822,pz:37.5,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SDP-2 (czoło, konfirmat z SDT)',layer:'Otwory',ax:'z',px:2029,py:822,pz:37.5,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SGB-1 (pod konfirmat do SGD)',layer:'Otwory',ax:'x',px:1549,py:2170,pz:52,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SGB-1 → SGD',layer:'Konfirmaty',ax:'x',px:1565,py:2170,pz:52,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SGB-1 → SGD',layer:'Konfirmaty',ax:'x',px:1541,py:2170,pz:52,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SGB-1 (pod konfirmat do SGD)',layer:'Otwory',ax:'x',px:1549,py:2170,pz:389.5,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SGB-1 → SGD',layer:'Konfirmaty',ax:'x',px:1565,py:2170,pz:389.5,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SGB-1 → SGD',layer:'Konfirmaty',ax:'x',px:1541,py:2170,pz:389.5,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SGB-1 (pod konfirmat do SGD)',layer:'Otwory',ax:'x',px:1549,py:2170,pz:727,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SGB-1 → SGD',layer:'Konfirmaty',ax:'x',px:1565,py:2170,pz:727,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SGB-1 → SGD',layer:'Konfirmaty',ax:'x',px:1541,py:2170,pz:727,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SGB-1 (pod konfirmat do SGW)',layer:'Otwory',ax:'x',px:1549,py:2652,pz:52,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SGB-1 → SGW',layer:'Konfirmaty',ax:'x',px:1565,py:2652,pz:52,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SGB-1 → SGW',layer:'Konfirmaty',ax:'x',px:1541,py:2652,pz:52,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SGB-1 (pod konfirmat do SGW)',layer:'Otwory',ax:'x',px:1549,py:2652,pz:389.5,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SGB-1 → SGW',layer:'Konfirmaty',ax:'x',px:1565,py:2652,pz:389.5,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SGB-1 → SGW',layer:'Konfirmaty',ax:'x',px:1541,py:2652,pz:389.5,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SGB-1 (pod konfirmat do SGW)',layer:'Otwory',ax:'x',px:1549,py:2652,pz:727,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SGB-1 → SGW',layer:'Konfirmaty',ax:'x',px:1565,py:2652,pz:727,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SGB-1 → SGW',layer:'Konfirmaty',ax:'x',px:1541,py:2652,pz:727,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SGB-1 (pod konfirmat do SGT)',layer:'Otwory',ax:'x',px:1549,py:2229,pz:11,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SGB-1 → SGT',layer:'Konfirmaty',ax:'x',px:1565,py:2229,pz:11,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SGB-1 → SGT',layer:'Konfirmaty',ax:'x',px:1541,py:2229,pz:11,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SGB-1 (pod konfirmat do SGT)',layer:'Otwory',ax:'x',px:1549,py:2593,pz:11,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SGB-1 → SGT',layer:'Konfirmaty',ax:'x',px:1565,py:2593,pz:11,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SGB-1 → SGT',layer:'Konfirmaty',ax:'x',px:1541,py:2593,pz:11,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SGB-2 (pod konfirmat do SGD)',layer:'Otwory',ax:'x',px:2088,py:2170,pz:52,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SGB-2 → SGD',layer:'Konfirmaty',ax:'x',px:2072,py:2170,pz:52,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SGB-2 → SGD',layer:'Konfirmaty',ax:'x',px:2096,py:2170,pz:52,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SGB-2 (pod konfirmat do SGD)',layer:'Otwory',ax:'x',px:2088,py:2170,pz:389.5,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SGB-2 → SGD',layer:'Konfirmaty',ax:'x',px:2072,py:2170,pz:389.5,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SGB-2 → SGD',layer:'Konfirmaty',ax:'x',px:2096,py:2170,pz:389.5,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SGB-2 (pod konfirmat do SGD)',layer:'Otwory',ax:'x',px:2088,py:2170,pz:727,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SGB-2 → SGD',layer:'Konfirmaty',ax:'x',px:2072,py:2170,pz:727,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SGB-2 → SGD',layer:'Konfirmaty',ax:'x',px:2096,py:2170,pz:727,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SGB-2 (pod konfirmat do SGW)',layer:'Otwory',ax:'x',px:2088,py:2652,pz:52,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SGB-2 → SGW',layer:'Konfirmaty',ax:'x',px:2072,py:2652,pz:52,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SGB-2 → SGW',layer:'Konfirmaty',ax:'x',px:2096,py:2652,pz:52,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SGB-2 (pod konfirmat do SGW)',layer:'Otwory',ax:'x',px:2088,py:2652,pz:389.5,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SGB-2 → SGW',layer:'Konfirmaty',ax:'x',px:2072,py:2652,pz:389.5,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SGB-2 → SGW',layer:'Konfirmaty',ax:'x',px:2096,py:2652,pz:389.5,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SGB-2 (pod konfirmat do SGW)',layer:'Otwory',ax:'x',px:2088,py:2652,pz:727,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SGB-2 → SGW',layer:'Konfirmaty',ax:'x',px:2072,py:2652,pz:727,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SGB-2 → SGW',layer:'Konfirmaty',ax:'x',px:2096,py:2652,pz:727,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SGB-2 (pod konfirmat do SGT)',layer:'Otwory',ax:'x',px:2088,py:2229,pz:11,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SGB-2 → SGT',layer:'Konfirmaty',ax:'x',px:2072,py:2229,pz:11,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SGB-2 → SGT',layer:'Konfirmaty',ax:'x',px:2096,py:2229,pz:11,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SGB-2 (pod konfirmat do SGT)',layer:'Otwory',ax:'x',px:2088,py:2593,pz:11,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SGB-2 → SGT',layer:'Konfirmaty',ax:'x',px:2072,py:2593,pz:11,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SGB-2 → SGT',layer:'Konfirmaty',ax:'x',px:2096,py:2593,pz:11,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Nawiert pilotowy Ø3 x 12 pod wkręt prowadnika (F5) w SGB-2',layer:'Otwory',ax:'x',px:2085,py:2246.5,pz:740,r:1.5,len:12.6,c:0x15181b},
+  {t:'cyl3',n:'Nawiert pilotowy Ø3 x 12 pod wkręt prowadnika (F5) w SGB-2',layer:'Otwory',ax:'x',px:2085,py:2278.5,pz:740,r:1.5,len:12.6,c:0x15181b},
+  {t:'cyl3',n:'Nawiert pilotowy Ø3 x 12 pod wkręt prowadnika (F5) w SGB-2',layer:'Otwory',ax:'x',px:2085,py:2545,pz:740,r:1.5,len:12.6,c:0x15181b},
+  {t:'cyl3',n:'Nawiert pilotowy Ø3 x 12 pod wkręt prowadnika (F5) w SGB-2',layer:'Otwory',ax:'x',px:2085,py:2577,pz:740,r:1.5,len:12.6,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SGD (czoło, konfirmat z SGB-1)',layer:'Otwory',ax:'x',px:1575.5,py:2170,pz:52,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SGD (czoło, konfirmat z SGB-1)',layer:'Otwory',ax:'x',px:1575.5,py:2170,pz:389.5,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SGD (czoło, konfirmat z SGB-1)',layer:'Otwory',ax:'x',px:1575.5,py:2170,pz:727,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SGD (czoło, konfirmat z SGB-2)',layer:'Otwory',ax:'x',px:2061.5,py:2170,pz:52,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SGD (czoło, konfirmat z SGB-2)',layer:'Otwory',ax:'x',px:2061.5,py:2170,pz:389.5,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SGD (czoło, konfirmat z SGB-2)',layer:'Otwory',ax:'x',px:2061.5,py:2170,pz:727,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SGD (pod konfirmat do SGT)',layer:'Otwory',ax:'y',px:1608,py:2170,pz:11,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SGD → SGT',layer:'Konfirmaty',ax:'y',px:1608,py:2186,pz:11,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SGD → SGT',layer:'Konfirmaty',ax:'y',px:1608,py:2162,pz:11,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SGD (pod konfirmat do SGT)',layer:'Otwory',ax:'y',px:1818.5,py:2170,pz:11,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SGD → SGT',layer:'Konfirmaty',ax:'y',px:1818.5,py:2186,pz:11,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SGD → SGT',layer:'Konfirmaty',ax:'y',px:1818.5,py:2162,pz:11,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SGD (pod konfirmat do SGT)',layer:'Otwory',ax:'y',px:2029,py:2170,pz:11,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SGD → SGT',layer:'Konfirmaty',ax:'y',px:2029,py:2186,pz:11,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SGD → SGT',layer:'Konfirmaty',ax:'y',px:2029,py:2162,pz:11,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SGW (czoło, konfirmat z SGB-1)',layer:'Otwory',ax:'x',px:1575.5,py:2652,pz:52,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SGW (czoło, konfirmat z SGB-1)',layer:'Otwory',ax:'x',px:1575.5,py:2652,pz:389.5,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SGW (czoło, konfirmat z SGB-1)',layer:'Otwory',ax:'x',px:1575.5,py:2652,pz:727,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SGW (czoło, konfirmat z SGB-2)',layer:'Otwory',ax:'x',px:2061.5,py:2652,pz:52,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SGW (czoło, konfirmat z SGB-2)',layer:'Otwory',ax:'x',px:2061.5,py:2652,pz:389.5,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SGW (czoło, konfirmat z SGB-2)',layer:'Otwory',ax:'x',px:2061.5,py:2652,pz:727,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SGW (pod konfirmat do SGT)',layer:'Otwory',ax:'y',px:1608,py:2652,pz:11,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SGW → SGT',layer:'Konfirmaty',ax:'y',px:1608,py:2636,pz:11,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SGW → SGT',layer:'Konfirmaty',ax:'y',px:1608,py:2660,pz:11,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SGW (pod konfirmat do SGT)',layer:'Otwory',ax:'y',px:1818.5,py:2652,pz:11,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SGW → SGT',layer:'Konfirmaty',ax:'y',px:1818.5,py:2636,pz:11,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SGW → SGT',layer:'Konfirmaty',ax:'y',px:1818.5,py:2660,pz:11,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø5 przelotowy w SGW (pod konfirmat do SGT)',layer:'Otwory',ax:'y',px:2029,py:2652,pz:11,r:2.5,len:18.6,c:0x15181b},
+  {t:'cyl3',n:'Konfirmat 7 x 50: SGW → SGT',layer:'Konfirmaty',ax:'y',px:2029,py:2636,pz:11,r:3.5,len:50,c:0xc7a008},
+  {t:'cyl3',n:'Łeb konfirmatu: SGW → SGT',layer:'Konfirmaty',ax:'y',px:2029,py:2660,pz:11,r:5,len:2,c:0xd8b310},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SGT (czoło, konfirmat z SGB-1)',layer:'Otwory',ax:'x',px:1575.5,py:2229,pz:11,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SGT (czoło, konfirmat z SGB-1)',layer:'Otwory',ax:'x',px:1575.5,py:2593,pz:11,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SGT (czoło, konfirmat z SGB-2)',layer:'Otwory',ax:'x',px:2061.5,py:2229,pz:11,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SGT (czoło, konfirmat z SGB-2)',layer:'Otwory',ax:'x',px:2061.5,py:2593,pz:11,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SGT (czoło, konfirmat z SGD)',layer:'Otwory',ax:'y',px:1608,py:2196.5,pz:11,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SGT (czoło, konfirmat z SGD)',layer:'Otwory',ax:'y',px:1818.5,py:2196.5,pz:11,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SGT (czoło, konfirmat z SGD)',layer:'Otwory',ax:'y',px:2029,py:2196.5,pz:11,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SGT (czoło, konfirmat z SGW)',layer:'Otwory',ax:'y',px:1608,py:2625.5,pz:11,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SGT (czoło, konfirmat z SGW)',layer:'Otwory',ax:'y',px:1818.5,py:2625.5,pz:11,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø4 x 35 w SGT (czoło, konfirmat z SGW)',layer:'Otwory',ax:'y',px:2029,py:2625.5,pz:11,r:2,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór zawiasu Ø35 x 13 w F2',layer:'Otwory',ax:'z',px:1044,py:561.5,pz:56.2,r:17.5,len:13.6,c:0x15181b},
+  {t:'cyl3',n:'Otwór zawiasu Ø35 x 13 w F2',layer:'Otwory',ax:'z',px:1044,py:1060.83,pz:56.2,r:17.5,len:13.6,c:0x15181b},
+  {t:'cyl3',n:'Otwór zawiasu Ø35 x 13 w F2',layer:'Otwory',ax:'z',px:1044,py:1560.17,pz:56.2,r:17.5,len:13.6,c:0x15181b},
+  {t:'cyl3',n:'Otwór zawiasu Ø35 x 13 w F2',layer:'Otwory',ax:'z',px:1044,py:2059.5,pz:56.2,r:17.5,len:13.6,c:0x15181b},
+  {t:'cyl3',n:'Otwór zawiasu Ø35 x 13 w F3',layer:'Otwory',ax:'z',px:1044,py:2262.5,pz:783.2,r:17.5,len:13.6,c:0x15181b},
+  {t:'cyl3',n:'Otwór zawiasu Ø35 x 13 w F3',layer:'Otwory',ax:'z',px:1044,py:2561,pz:783.2,r:17.5,len:13.6,c:0x15181b},
+  {t:'cyl3',n:'Otwór zawiasu Ø35 x 13 w F4',layer:'Otwory',ax:'z',px:2073,py:277,pz:783.2,r:17.5,len:13.6,c:0x15181b},
+  {t:'cyl3',n:'Otwór zawiasu Ø35 x 13 w F4',layer:'Otwory',ax:'z',px:2073,py:871.17,pz:783.2,r:17.5,len:13.6,c:0x15181b},
+  {t:'cyl3',n:'Otwór zawiasu Ø35 x 13 w F4',layer:'Otwory',ax:'z',px:2073,py:1465.33,pz:783.2,r:17.5,len:13.6,c:0x15181b},
+  {t:'cyl3',n:'Otwór zawiasu Ø35 x 13 w F4',layer:'Otwory',ax:'z',px:2073,py:2059.5,pz:783.2,r:17.5,len:13.6,c:0x15181b},
+  {t:'cyl3',n:'Otwór zawiasu Ø35 x 13 w F5',layer:'Otwory',ax:'z',px:2073,py:2262.5,pz:783.2,r:17.5,len:13.6,c:0x15181b},
+  {t:'cyl3',n:'Otwór zawiasu Ø35 x 13 w F5',layer:'Otwory',ax:'z',px:2073,py:2561,pz:783.2,r:17.5,len:13.6,c:0x15181b}
+);
+</script>
+<script>
+/* ========================================================================
+   Wspólny silnik wizualizacji 3D dla wszystkich pomieszczeń (Three.js r128).
+   Strona pomieszczenia (np. pralnia/index.html) wczytuje kolejno:
+     three.min.js, OrbitControls.js, model.js (HF_MODEL), laczniki.gen.js (opcjonalnie),
+     ten plik. Silnik buduje panel, scenę i wszystkie interakcje.
+
+   HF_MODEL (pola, wszystkie wymiary w mm):
+     title          tytuł panelu i karty
+     room           {W,D,H}: szerokość (X), głębokość (Z), wysokość (Y)
+     wallThickness  grubość ścian na rysunku (tylko wizualnie)
+     openings       [{wall:'przod'|'tyl'|'lewa'|'prawa', pos, w, y, h}] otwory w ścianach
+     views          {iso,front,top,left}: pozycje kamery w metrach
+     conceptLayers  warstwy brył zamysłu (rysowane za płytami)
+     hiddenLayers   warstwy domyślnie ukryte
+     fixedLayers    warstwy, które nie rozsuwają się suwakiem
+     boardLayers    warstwy płyt (kolor docelowy, fronty: nieprzezroczystość)
+     boardColor     {hex,label} kolor docelowy płyt
+     noOffset       RegExp nazw bez przesunięcia w buforze głębi i bez koloru płyty
+     explodeParent  function(item,helpers) -> mesh | null | undefined (undefined = reguły ogólne)
+     variants       [{id,label,layer?,apply(on,helpers)}]
+     items          lista obiektów (opis formatu w model.js pomieszczenia)
+   ======================================================================== */
+(function(){
+'use strict';
+var M=window.HF_MODEL;
+var MM=0.001;
+var esc=function(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});};
+function set(list){var o={};(list||[]).forEach(function(k){o[k]=1;});return o;}
+
+/* panel */
+document.title=M.title;
+var variants=M.variants||[];
+document.body.insertAdjacentHTML('afterbegin',
+'<aside id="panel" aria-label="Sterowanie widokiem">'+
+'  <div class="head"><h1>'+esc(M.title)+'</h1><button id="min" type="button" aria-label="Zwiń panel">Zwiń</button></div>'+
+'  <div id="body">'+
+'    <div class="group"><span>Widok</span>'+
+'      <div class="btns">'+
+'        <button type="button" data-v="iso">Z rogu</button>'+
+'        <button type="button" data-v="front">Z przodu</button>'+
+'        <button type="button" data-v="top">Z góry</button>'+
+'        <button type="button" data-v="left">Od lewej</button>'+
+'      </div>'+
+'    </div>'+
+'    <div class="group"><span>Ściany</span>'+
+'      <select id="walls" aria-label="Tryb ścian">'+
+'        <option value="ghost">półprzezroczyste</option>'+
+'        <option value="solid">pełne</option>'+
+'        <option value="off">ukryte</option>'+
+'      </select>'+
+'    </div>'+
+'    <div class="group"><span>Kolor płyt</span>'+
+'      <select id="boardColor" aria-label="Kolor płyt">'+
+'        <option value="target">'+esc(M.boardColor?M.boardColor.label:'docelowy')+'</option>'+
+'        <option value="parts">rozróżnienie elementów</option>'+
+'      </select>'+
+'    </div>'+
+'    <div class="group"><label class="chk"><input type="checkbox" id="frontsSolid">Fronty nieprzezroczyste</label></div>'+
+(variants.length?'    <div class="group"><span>Warianty</span>'+variants.map(function(v){return '<label class="chk"><input type="checkbox" id="'+esc(v.id)+'">'+esc(v.label)+'</label>';}).join('')+'</div>':'')+
+'    <div class="group"><span>Rozsunięcie elementów</span>'+
+'      <input type="range" id="explode" min="0" max="100" value="0" aria-label="Rozsunięcie elementów" style="width:100%">'+
+'      <button type="button" id="explodeReset" style="margin-top:6px">Złóż</button>'+
+'    </div>'+
+'    <div class="group"><span>Warstwy</span><div id="layers"></div></div>'+
+'    <p class="hint">Obrót: przeciągnij. Przesuwanie: prawy przycisk lub dwa palce. Zoom: kółko lub szczypanie. Najedź na obiekt, żeby zobaczyć nazwę i wymiary w mm. Cmd + kółko w górę: elementy mebli się rozsuwają, Cmd + kółko w dół: składają się z powrotem (to samo robi suwak).</p>'+
+'  </div>'+
+'</aside>'+
+'<div id="tip" role="status"></div>'+
+'<div id="err">Nie udało się wczytać biblioteki 3D. Sprawdź połączenie z internetem i odśwież stronę.</div>');
+
+if(!window.THREE||!THREE.OrbitControls){document.getElementById('err').style.display='flex';return;}
+
+var ROOM=M.room;
+var T=M.wallThickness||100;
+var ITEMS=M.items;
+
+/* ======================= scena ======================= */
+var root=document.documentElement;
+function css(n){return getComputedStyle(root).getPropertyValue(n).trim();}
+var scene=new THREE.Scene();
+var renderer=new THREE.WebGLRenderer({antialias:true,alpha:true});
+renderer.setPixelRatio(Math.min(window.devicePixelRatio||1,2));
+renderer.setClearColor(0x000000,0);
+document.body.appendChild(renderer.domElement);
+
+var camera=new THREE.PerspectiveCamera(40,1,0.05,60);
+var center=new THREE.Vector3(ROOM.W*MM/2,ROOM.H*MM*0.4,ROOM.D*MM/2);
+var controls=new THREE.OrbitControls(camera,renderer.domElement);
+controls.enableDamping=true;controls.dampingFactor=0.08;controls.screenSpacePanning=true;
+controls.minDistance=0.4;controls.maxDistance=14;
+
+scene.add(new THREE.HemisphereLight(0xffffff,0x8a9399,0.95));
+var sun=new THREE.DirectionalLight(0xffffff,0.55);sun.position.set(2,4,3);scene.add(sun);
+
+var edgeMats=[];
+function edgeMat(){var m=new THREE.LineBasicMaterial({color:css('--edge')||'#2c363c'});edgeMats.push(m);return m;}
+try{
+  var mq=window.matchMedia('(prefers-color-scheme: dark)');
+  var onTheme=function(){edgeMats.forEach(function(m){m.color.set(css('--edge')||'#2c363c');});};
+  if(mq.addEventListener){mq.addEventListener('change',onTheme);}else if(mq.addListener){mq.addListener(onTheme);}
+}catch(e){}
+
+/* podłoga i ściany */
+function addSlab(group,x,y,z,w,h,d,mat){
+  var g=new THREE.BoxGeometry(w*MM,h*MM,d*MM);
+  var m=new THREE.Mesh(g,mat);
+  m.position.set((x+w/2)*MM,(y+h/2)*MM,(z+d/2)*MM);
+  m.add(new THREE.LineSegments(new THREE.EdgesGeometry(g),edgeMat()));
+  group.add(m);return m;
+}
+var floorMat=new THREE.MeshStandardMaterial({color:0xc9c3b8,roughness:.95});
+addSlab(scene,-T,-40,-T,ROOM.W+2*T,40,ROOM.D+2*T,floorMat);
+
+var wallGroup=new THREE.Group();scene.add(wallGroup);
+var wallMat=new THREE.MeshStandardMaterial({color:0xd6d1c7,roughness:.95,transparent:true,opacity:.16,side:THREE.DoubleSide,depthWrite:false});
+/* ściana z otworami: kawałki pełnej wysokości między otworami, potem nadproża i podokienniki */
+function addWall(name){
+  var alongX=(name==='tyl'||name==='przod');
+  var a0=alongX?-T:0,a1=alongX?ROOM.W+T:ROOM.D+T;
+  var ops=(M.openings||[]).filter(function(o){return o.wall===name;}).sort(function(a,b){return a.pos-b.pos;});
+  function piece(s,len,y,h){
+    if(len<=0||h<=0)return;
+    if(name==='tyl')addSlab(wallGroup,s,y,-T,len,h,T,wallMat);
+    else if(name==='przod')addSlab(wallGroup,s,y,ROOM.D,len,h,T,wallMat);
+    else if(name==='lewa')addSlab(wallGroup,-T,y,s,T,h,len,wallMat);
+    else addSlab(wallGroup,ROOM.W,y,s,T,h,len,wallMat);
+  }
+  var cur=a0;
+  ops.forEach(function(o){piece(cur,o.pos-cur,0,ROOM.H);cur=o.pos+o.w;});
+  piece(cur,a1-cur,0,ROOM.H);
+  ops.forEach(function(o){var y=o.y||0;piece(o.pos,o.w,y+o.h,ROOM.H-(y+o.h));piece(o.pos,o.w,0,y);});
+}
+['tyl','lewa','prawa','przod'].forEach(addWall);
+
+function setWalls(mode){
+  wallGroup.visible=(mode!=='off');
+  var solid=(mode==='solid');
+  wallMat.opacity=solid?1:0.16;
+  wallMat.transparent=!solid;
+  wallMat.depthWrite=solid;
+  wallMat.needsUpdate=true;
+}
+
+/* obiekty */
+var layers={},pick=[];
+var CONCEPT_LAYERS=set(M.conceptLayers);
+var HIDE_DEFAULT=set(M.hiddenLayers); /* np. bryły zamysłu: domyślnie ukryte, bo rysują dodatkowe krawędzie na frontach */
+var NO_OFFSET=M.noOffset||{test:function(){return false;}};
+function build(it){
+  var mesh,g,o=(it.o==null?1:it.o);
+  var mat=new THREE.MeshStandardMaterial({color:it.c,roughness:.85,metalness:0,transparent:o<1,opacity:o,depthWrite:!(o<1)});
+  /* Współpłaszczyznowe ściany (np. zamysł szafki i front, tarcza drzwiczek i obudowa maszyny) migotały (z-fighting).
+     Bryły przesuwamy lekko w głąb bufora: zamysły szafek najdalej, płyty i maszyny trochę, a walce i elementy noOffset wcale. */
+  var po=1;
+  if(CONCEPT_LAYERS[it.layer]){po=2;}
+  if(it.t==='cyl'||it.t==='cyl3'||NO_OFFSET.test(it.n)){po=0;}
+  if(po){mat.polygonOffset=true;mat.polygonOffsetFactor=po;mat.polygonOffsetUnits=po;}
+  if(it.t==='cyl3'){
+    g=new THREE.CylinderGeometry(it.r*MM,it.r*MM,it.len*MM,16);
+    mesh=new THREE.Mesh(g,mat);
+    if(it.ax==='x')mesh.rotation.z=Math.PI/2;else if(it.ax==='z')mesh.rotation.x=Math.PI/2;
+    mesh.position.set(it.px*MM,it.py*MM,it.pz*MM);
+  }else if(it.t==='cyl'){
+    g=new THREE.CylinderGeometry(it.r*MM,it.r*MM,it.len*MM,48);
+    mesh=new THREE.Mesh(g,mat);
+    mesh.rotation.x=Math.PI/2;
+    mesh.position.set(it.cx*MM,it.cy*MM,(it.z+it.len/2)*MM);
+  }else{
+    g=new THREE.BoxGeometry(it.w*MM,it.h*MM,it.d*MM);
+    mesh=new THREE.Mesh(g,mat);
+    mesh.position.set((it.x+it.w/2)*MM,(it.y+it.h/2)*MM,(it.z+it.d/2)*MM);
+    mesh.add(new THREE.LineSegments(new THREE.EdgesGeometry(g),edgeMat()));
+  }
+  mesh.userData.info=it;
+  return mesh;
+}
+ITEMS.forEach(function(it){
+  var m=build(it);scene.add(m);
+  var L=it.layer||'Dodatki';
+  (layers[L]=layers[L]||[]).push(m);
+  pick.push(m);
+});
+
+/* warstwy wariantów: poza listą warstw, widoczne tylko po włączeniu wariantu */
+variants.forEach(function(v){
+  v.items=v.layer?(layers[v.layer]||[]).slice():[];
+  if(v.layer)delete layers[v.layer];
+  v.items.forEach(function(m){m.visible=false;});
+});
+
+/* numeracja frontów (F1, F2…), kody zgodne z listą formatek */
+(function(){
+  var arr=[];
+  ITEMS.forEach(function(it){
+    var m=/^(F\d+):/.exec(it.n);
+    if(!m||it.layer!=='Fronty')return;
+    var c=document.createElement('canvas');c.width=c.height=128;
+    var x=c.getContext('2d');
+    x.fillStyle='#ffffff';x.beginPath();x.arc(64,64,60,0,Math.PI*2);x.fill();
+    x.lineWidth=6;x.strokeStyle='#1d3557';x.stroke();
+    x.fillStyle='#1d3557';x.font='bold 58px sans-serif';x.textAlign='center';x.textBaseline='middle';
+    x.fillText(m[1],64,68);
+    var sp=new THREE.Sprite(new THREE.SpriteMaterial({map:new THREE.CanvasTexture(c),depthTest:false,transparent:true}));
+    sp.scale.set(130*MM,130*MM,1);sp.renderOrder=10;
+    sp.position.set((it.x+it.w/2)*MM,(it.y+it.h/2)*MM,(it.z+it.d+2)*MM);
+    sp.userData.item=it;scene.add(sp);arr.push(sp);
+  });
+  if(arr.length)layers['Numeracja frontów']=arr;
+})();
+
+/* numeracja tyłów (kody zgodne z listą formatek), pomarańczowe kółka */
+(function(){
+  var arr=[];
+  ITEMS.forEach(function(it){
+    var m=/^([A-Z0-9]+):/.exec(it.n);
+    if(!m||it.layer!=='Ścianki tylne')return;
+    var c=document.createElement('canvas');c.width=c.height=128;
+    var x=c.getContext('2d');
+    x.fillStyle='#ffe3b8';x.beginPath();x.arc(64,64,60,0,Math.PI*2);x.fill();
+    x.lineWidth=6;x.strokeStyle='#b45309';x.stroke();
+    x.fillStyle='#7c2d12';x.font='bold 46px sans-serif';x.textAlign='center';x.textBaseline='middle';
+    x.fillText(m[1],64,68);
+    var sp=new THREE.Sprite(new THREE.SpriteMaterial({map:new THREE.CanvasTexture(c),depthTest:false,transparent:true}));
+    sp.scale.set(120*MM,120*MM,1);sp.renderOrder=11;
+    sp.position.set((it.x+it.w/2)*MM,(it.y+it.h/2)*MM,(it.z+it.d+2)*MM);
+    sp.userData.item=it;scene.add(sp);arr.push(sp);
+  });
+  if(arr.length)layers['Numeracja tyłów']=arr;
+})();
+
+/* numeracja boków (zielone) i półek (fioletowe), kody zgodne z listą formatek; kilka brył z jednym kodem = jeden numer */
+(function(){
+  function badge(txt,bg,bd,fg,fs){
+    var c=document.createElement('canvas');c.width=c.height=128;var x=c.getContext('2d');
+    x.fillStyle=bg;x.beginPath();x.arc(64,64,60,0,Math.PI*2);x.fill();x.lineWidth=6;x.strokeStyle=bd;x.stroke();
+    x.fillStyle=fg;x.font='bold '+fs+'px sans-serif';x.textAlign='center';x.textBaseline='middle';x.fillText(txt,64,68);
+    var sp=new THREE.Sprite(new THREE.SpriteMaterial({map:new THREE.CanvasTexture(c),depthTest:false,transparent:true}));
+    sp.scale.set(110*MM,110*MM,1);sp.renderOrder=12;return sp;
+  }
+  function run(layerName,outName,bg,bd,fg){
+    var arr=[],groups={};
+    ITEMS.forEach(function(it){
+      if(it.layer!==layerName)return;
+      var m=/^([A-Z0-9-]+):/.exec(it.n);if(!m)return;
+      (groups[m[1]]=groups[m[1]]||[]).push(it);
+    });
+    Object.keys(groups).forEach(function(code){
+      var g=groups[code],lo=[1e9,1e9,1e9],hi=[-1e9,-1e9,-1e9];
+      g.forEach(function(it){var a=[it.x,it.y,it.z],b=[it.x+it.w,it.y+it.h,it.z+it.d];
+        for(var i=0;i<3;i++){lo[i]=Math.min(lo[i],a[i]);hi[i]=Math.max(hi[i],b[i]);}});
+      var sp=badge(code,bg,bd,fg,code.length>4?34:42);
+      sp.position.set((lo[0]+hi[0])/2*MM,(lo[1]+hi[1])/2*MM,(lo[2]+hi[2])/2*MM);
+      /* numer jedzie z pierwszym elementem grupy w kolejności x rosnąco */
+      g.sort(function(a,b){return a.x-b.x;});
+      sp.userData.item=g[0];scene.add(sp);arr.push(sp);
+    });
+    if(arr.length)layers[outName]=arr;
+  }
+  run('Ścianki boczne','Numeracja boków','#d8f3dc','#2d6a4f','#1b4332');
+  run('Półki','Numeracja półek','#e9d8fd','#6b46c1','#44337a');
+})();
+
+/* panel: warstwy */
+var layersBox=document.getElementById('layers');
+function applyVariants(){variants.forEach(function(v){var cb=document.getElementById(v.id);if(v.apply)v.apply(!!(cb&&cb.checked),helpers(v));});}
+Object.keys(layers).forEach(function(name){
+  var lab=document.createElement('label');lab.className='chk';
+  var cb=document.createElement('input');cb.type='checkbox';cb.checked=!HIDE_DEFAULT[name];
+  if(HIDE_DEFAULT[name]){layers[name].forEach(function(m){m.visible=false;});}
+  cb.addEventListener('change',function(){layers[name].forEach(function(m){m.visible=cb.checked;});applyVariants();});
+  lab.appendChild(cb);lab.appendChild(document.createTextNode(name));
+  layersBox.appendChild(lab);
+});
+document.getElementById('walls').addEventListener('change',function(e){setWalls(e.target.value);});
+
+/* kolor płyt i nieprzezroczystość frontów */
+var BOARD_LAYERS=set(M.boardLayers);
+var TARGET_COLOR=M.boardColor?M.boardColor.hex:0xeeece5;
+var boardMeshes=[],frontMeshes=[];
+pick.forEach(function(m){
+  var it=m.userData.info;
+  if(!BOARD_LAYERS[it.layer]||NO_OFFSET.test(it.n)){return;}
+  boardMeshes.push(m);
+  if(it.layer==='Fronty'){frontMeshes.push(m);}
+});
+function applyBoards(){
+  var target=document.getElementById('boardColor').value==='target';
+  var solid=document.getElementById('frontsSolid').checked;
+  boardMeshes.forEach(function(m){
+    m.material.color.setHex(target?TARGET_COLOR:m.userData.info.c);
+  });
+  frontMeshes.forEach(function(m){
+    var it=m.userData.info,o=(it.o==null?1:it.o),opaque=solid||o>=1;
+    m.material.opacity=opaque?1:o;
+    m.material.transparent=!opaque;
+    m.material.depthWrite=opaque;
+    m.material.needsUpdate=true;
+  });
+}
+document.getElementById('boardColor').addEventListener('change',applyBoards);
+document.getElementById('frontsSolid').addEventListener('change',applyBoards);
+applyBoards();
+var bodyEl=document.getElementById('body'),minBtn=document.getElementById('min');
+minBtn.addEventListener('click',function(){
+  var hide=bodyEl.style.display!=='none';
+  bodyEl.style.display=hide?'none':'block';
+  minBtn.textContent=hide?'Rozwiń':'Zwiń';
+  minBtn.setAttribute('aria-label',hide?'Rozwiń panel':'Zwiń panel');
+});
+
+/* widoki */
+var VIEWS=M.views||{iso:[3.3,2.7,3.6],front:[0.87,1.35,4.9],top:[0.87,5.6,1.15],left:[-3.6,1.5,0.75]};
+function setView(k){var v=VIEWS[k];camera.position.set(v[0],v[1],v[2]);controls.target.copy(center);controls.update();}
+Array.prototype.forEach.call(document.querySelectorAll('[data-v]'),function(b){
+  b.addEventListener('click',function(){setView(b.getAttribute('data-v'));});
+});
+
+/* podpowiedź po najechaniu */
+var ray=new THREE.Raycaster(),mouse=new THREE.Vector2(),tip=document.getElementById('tip');
+renderer.domElement.addEventListener('pointermove',function(e){
+  var r=renderer.domElement.getBoundingClientRect();
+  mouse.x=((e.clientX-r.left)/r.width)*2-1;
+  mouse.y=-((e.clientY-r.top)/r.height)*2+1;
+  ray.setFromCamera(mouse,camera);
+  var vis=pick.filter(function(m){return m.visible;});
+  var hit=ray.intersectObjects(vis,false)[0];
+  if(hit){
+    var it=hit.object.userData.info;
+    tip.textContent=(it.t==='cyl'||it.t==='cyl3')?(it.n+' — średnica '+(it.r*2)+' mm'):(it.n+' — '+it.w+' × '+it.h+' × '+it.d+' mm (szerokość × wysokość × głębokość)');
+    tip.style.display='block';
+  }else{tip.style.display='none';}
+});
+renderer.domElement.addEventListener('pointerleave',function(){tip.style.display='none';});
+
+/* rozmiar i pętla */
+function resize(){
+  var w=window.innerWidth,h=window.innerHeight;
+  renderer.setSize(w,h);camera.aspect=w/h;camera.updateProjectionMatrix();
+}
+window.addEventListener('resize',resize);
+resize();setWalls('ghost');setView('iso');
+
+/* Rozsuwanie mebli: tylko przesunięcia, żadnych zmian wymiarów. Warstwy fixedLayers zostają na miejscu. */
+var movers=[];
+function front(re){return movers.filter(function(m){return m.userData.info.layer==='Fronty'&&m.userData.info.t!=='cyl'&&re.test(m.userData.info.n);})[0];}
+function back(re){return movers.filter(function(m){return m.userData.info.layer==='Ścianki tylne'&&re.test(m.userData.info.n);})[0];}
+function layerOn(name){var ls=layersBox.querySelectorAll('label'),r=true;Array.prototype.forEach.call(ls,function(l){if(l.textContent===name)r=l.querySelector('input').checked;});return r;}
+function helpers(v){return {pick:pick,layers:layers,layerOn:layerOn,front:front,back:back,variantItems:(v&&v.items)||[]};}
+(function(){
+  var FIXED=set(M.fixedLayers);
+  variants.forEach(function(v){if(v.layer)FIXED[v.layer]=1;});
+  var F=new THREE.Vector3(1.0,0.6,2.0); /* im większa liczba, tym mocniej rozsuwa w danej osi */
+  movers=pick.filter(function(m){return !FIXED[m.userData.info.layer];});
+  movers.forEach(function(m){m.userData.base=m.position.clone();});
+  var mn=new THREE.Vector3(1e9,1e9,1e9),mx=new THREE.Vector3(-1e9,-1e9,-1e9);
+  movers.forEach(function(m){mn.min(m.userData.base);mx.max(m.userData.base);});
+  var C=mn.clone().add(mx).multiplyScalar(.5);
+  /* okucia jadą razem z elementem, do którego należą */
+  function piece2(code){return movers.filter(function(m){var q=m.userData.info;return (q.layer==='Ścianki boczne'||q.layer==='Ścianki tylne'||q.layer==='Półki'||q.layer==='Fronty'||q.layer==='Listwa F5')&&q.t!=='cyl'&&q.n.indexOf(code+':')===0;})[0]||null;}
+  var h=helpers();
+  movers.forEach(function(m){
+    var it=m.userData.info,par=M.explodeParent?M.explodeParent(it,h):undefined;
+    if(par===undefined){
+      par=null;
+      if(it.layer==='Zawiasy'||it.layer==='Uchwyty'){
+        var cx=it.x+it.w/2,cy=it.y+it.h/2;
+        par=movers.filter(function(f){var q=f.userData.info;return q.layer==='Fronty'&&q.t!=='cyl'&&q.w&&cx>=q.x&&cx<=q.x+q.w&&cy>=q.y&&cy<=q.y+q.h;})[0]||null;
+      }else if(it.layer==='Konfirmaty'||it.layer==='Otwory'||it.layer==='Kołki'){
+        var mm=/(?:w |: |Kołek Ø8 x 40: )([A-Z0-9]+(?:-[0-9]+)?)/.exec(it.n);
+        par=mm?piece2(mm[1]):null;
+      }
+    }
+    m.userData.parent=par;
+  });
+  var byItem=new Map();pick.forEach(function(m){byItem.set(m.userData.info,m);});
+  var sprites=[].concat(layers['Numeracja frontów']||[],layers['Numeracja tyłów']||[],layers['Numeracja boków']||[],layers['Numeracja półek']||[]);
+  sprites.forEach(function(sp){sp.userData.base=sp.position.clone();sp.userData.owner=byItem.get(sp.userData.item)||null;});
+  var t=0,slider=document.getElementById('explode');
+  function disp(m){var b=m.userData.parent?m.userData.parent.userData.base:m.userData.base;
+    return new THREE.Vector3((b.x-C.x)*F.x*t,(b.y-C.y)*F.y*t,(b.z-C.z)*F.z*t);}
+  function apply(){
+    movers.forEach(function(m){m.position.copy(m.userData.base).add(disp(m));});
+    sprites.forEach(function(sp){var o=sp.userData.owner;sp.position.copy(sp.userData.base);if(o&&o.userData.base)sp.position.add(disp(o));});
+    if(slider)slider.value=Math.round(t*100);
+  }
+  window.addEventListener('wheel',function(e){
+    if(!e.metaKey||e.target!==renderer.domElement)return;
+    e.preventDefault();e.stopImmediatePropagation();
+    t=Math.max(0,Math.min(1,t-e.deltaY*0.0015)); /* kółko w górę (deltaY < 0) rozsuwa */
+    apply();
+  },{passive:false,capture:true});
+  if(slider)slider.addEventListener('input',function(){t=slider.value/100;apply();});
+  var rb=document.getElementById('explodeReset');
+  if(rb)rb.addEventListener('click',function(){t=0;apply();});
+})();
+/* warianty */
+variants.forEach(function(v){var cb=document.getElementById(v.id);if(cb)cb.addEventListener('change',function(){if(v.apply)v.apply(cb.checked,helpers(v));});});
+(function loop(){requestAnimationFrame(loop);controls.update();renderer.render(scene,camera);})();
+})();
+</script>
+</body>
+</html>

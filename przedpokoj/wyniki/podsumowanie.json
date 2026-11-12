@@ -1,0 +1,64 @@
+{
+ "formatki": {
+  "pozycje": 26,
+  "sztuki": 32,
+  "m2": 14.52
+ },
+ "kalkulator": {
+  "typy_formatek": 22,
+  "wiersze": 215
+ },
+ "laczniki": {
+  "konfirmaty": 110,
+  "kolki": 0,
+  "otwory_pod_kolki": 0,
+  "otwory_nieprzelotowe": 24,
+  "puszki_zawiasow": 12
+ },
+ "zaslepki": {
+  "widoczne": 28,
+  "ukryte": 82,
+  "widoczne_wg_czesci": {
+   "NSB-1": 2,
+   "PWB-1": 8,
+   "SDB-1": 9,
+   "SDD": 3,
+   "SZB-1": 4,
+   "SZD": 2
+  },
+  "widoczne_miejsca": [
+   "NSB-1 → NSD (x 1014, y 439, z 25)",
+   "NSB-1 → NSW (x 1014, y 2152, z 25)",
+   "PWB-1 → PWD (x 1014, y 2170, z 52)",
+   "PWB-1 → PWD (x 1014, y 2170, z 390)",
+   "PWB-1 → PWD (x 1014, y 2170, z 727)",
+   "PWB-1 → PWT (x 1014, y 2229, z 11)",
+   "PWB-1 → PWT (x 1014, y 2593, z 11)",
+   "PWB-1 → PWW (x 1014, y 2652, z 52)",
+   "PWB-1 → PWW (x 1014, y 2652, z 390)",
+   "PWB-1 → PWW (x 1014, y 2652, z 727)",
+   "SDB-1 → SDD (x 1534, y 186, z 727)",
+   "SDB-1 → SDP-1 (x 1534, y 504, z 70)",
+   "SDB-1 → SDP-1 (x 1534, y 504, z 398)",
+   "SDB-1 → SDP-1 (x 1534, y 504, z 727)",
+   "SDB-1 → SDP-2 (x 1534, y 822, z 70)",
+   "SDB-1 → SDP-2 (x 1534, y 822, z 398)",
+   "SDB-1 → SDP-2 (x 1534, y 822, z 727)",
+   "SDB-1 → SDW (x 1534, y 2152, z 390)",
+   "SDB-1 → SDW (x 1534, y 2152, z 727)",
+   "SDD → SDT (x 1608, y 171, z 11)",
+   "SDD → SDT (x 1818, y 171, z 11)",
+   "SDD → SDT (x 2029, y 171, z 11)",
+   "SZB-1 → SZD (x 1014, y 186, z 50)",
+   "SZB-1 → SZD (x 1014, y 186, z 432)",
+   "SZB-1 → SZT (x 1014, y 245, z 9)",
+   "SZB-1 → SZT (x 1014, y 362, z 9)",
+   "SZD → SZT (x 1088, y 171, z 9)",
+   "SZD → SZT (x 1472, y 171, z 9)"
+  ]
+ },
+ "polaczenia": 42,
+ "otwory_lacznie": 244,
+ "kolizje_otworow": 0,
+ "strony_arkusza": 22
+}

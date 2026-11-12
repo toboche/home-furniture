@@ -1,0 +1,27 @@
+﻿KOD;NAZWA;DL;SZ;SZT;OKLEINA;NAWIERTY;UWAGI
+SZB;Szezlong: boki (stoją na podłodze, wnęka 0-177);482;412;2;1SZ;KONFIRMATY;okleina na krawędzi przedniej (pionowej)
+SZW;Szezlong: blat pod poduszką (na bokach);520;482;1;1DL+2SZ;KONFIRMATY;
+SZD;Szezlong: dno szuflady nad wnęką;484;482;1;1DL;KONFIRMATY;
+SZT;Szezlong: tył;484;217;1;;KONFIRMATY;
+NSB;Szafka nad szezlongiem: boki (głębokość 50);1731;50;2;1DL;KONFIRMATY;"prowadniki zawiasów F2 w lewym boku; bez tyłu (rozdzielnica)"
+NSD;Szafka nad szezlongiem: dno;484;50;1;1DL;KONFIRMATY;
+NSW;Szafka nad szezlongiem: wieniec;484;50;1;1DL;KONFIRMATY;
+PWB;Pawlacz: boki;775;500;2;1DL+1SZ;KONFIRMATY;okleina: krawędź przednia i dolna (widoczna od spodu)
+PWD;Pawlacz: dno;775;484;1;1SZ;KONFIRMATY;
+PWW;Pawlacz: wieniec górny;775;484;1;1SZ;KONFIRMATY;
+PWT;Pawlacz: tył;484;464;1;;KONFIRMATY;
+SDB;Szafa dół: boki (stoją na podłodze, wnęka 0-177);2161;775;2;1DL;KONFIRMATY;
+SDD;Szafa dół: dno nad wnęką;775;521;1;1SZ;KONFIRMATY;
+SDW;Szafa dół: wieniec górny;775;521;1;1SZ;KONFIRMATY;
+SDT;Szafa dół: tył;1948;521;1;;KONFIRMATY;
+SDP;Szafa dół: półki stałe (495 i 813);757;521;2;1SZ;KONFIRMATY;
+SGB;Szafa góra: boki;775;500;2;1SZ;KONFIRMATY;
+SGD;Szafa góra: dno;775;521;1;1SZ;KONFIRMATY;
+SGW;Szafa góra: wieniec górny;775;521;1;1SZ;KONFIRMATY;
+SGT;Szafa góra: tył;521;464;1;;KONFIRMATY;
+F1;Front szuflady szezlonga (zasłania krawędź blatu);517;253;1;2DL+2SZ;BRAK (prowadnice push to open);
+F2;Drzwi nad szezlongiem, zawiasy po LEWEJ (od D2);1698;517;1;2DL+2SZ;ZAWIASY 4 SZT, PUSZKA Ø35, ŚRODEK 22,5 MM OD KRAWĘDZI;TIP-ON, zawiasy bez sprężyny
+F3;Front pawlacza, zawiasy po LEWEJ (od D2);517;498.5;1;2DL+2SZ;ZAWIASY 2 SZT, PUSZKA Ø35, ŚRODEK 22,5 MM OD KRAWĘDZI;TIP-ON, zawiasy bez sprężyny
+F4;Front szafy, dół, zawiasy po PRAWEJ (od pionu);1982.5;554;1;2DL+2SZ;ZAWIASY 4 SZT, PUSZKA Ø35, ŚRODEK 22,5 MM OD KRAWĘDZI;TIP-ON (2 szt.), zawiasy bez sprężyny
+F5;Front szafy, góra, zawiasy po PRAWEJ (od pionu);554;498.5;1;2DL+2SZ;ZAWIASY 2 SZT, PUSZKA Ø35, ŚRODEK 22,5 MM OD KRAWĘDZI;TIP-ON, zawiasy bez sprężyny
+F6;Zaślepka na czole pionu (klejona, od podłogi do sufitu);2661;427.5;1;2DL+2SZ;"BRAK; otwory wierci użytkownik";"Ø60 na kabel domofonu: środek 246,5 od lewej krawędzi, 1474 od dołu; pod dystans włącznika: środek 299,5 od lewej, 1214 od dołu (średnica wg dystansu)"
