@@ -9,6 +9,7 @@ Dokumentacja: `wspolne/STRUKTURA.md` (struktura, decyzje, reguły modelu, nowe p
 ## Pomieszczenia
 - `pralnia/`: szafki do pralni (płyta Egger W1200 ST9 18 mm, centrum.meble.pl), przed zamówieniem
 - `garderoba/`: szafy do garderoby, start (pomiary)
+- `przedpokoj/`: szafa z szezlongiem przy drzwiach wejściowych, konstrukcja wstępna
 - `szablon/`: punkt wyjścia dla nowego pomieszczenia (jedna przykładowa szafka)
 
 ## Układ katalogu pomieszczenia
