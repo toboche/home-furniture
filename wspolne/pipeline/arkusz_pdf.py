@@ -43,7 +43,7 @@ def zapisz(parts, R, sciezka, log=print):
     for p in parts:
         if not p['holes'] or R.pomijaj_czesc(p):
             continue
-        groups.setdefault(sig(p), []).append(p)
+        groups.setdefault((sig(p), p.get('g', 18)), []).append(p)
     # bez daty w metadanych: ten sam model daje ten sam plik (porównywanie w teście regresji)
     with PdfPages(sciezka, metadata={'CreationDate': None}) as pdf:
         fig = plt.figure(figsize=(11.7, 8.3)); fig.text(.05, .9, 'ARKUSZ NAWIERTÓW POD KONFIRMATY (samodzielne wiercenie)', fontsize=18, weight='bold')
@@ -82,7 +82,7 @@ def zapisz(parts, R, sciezka, log=print):
             a_word, b_word = faceword[p['t']]
             codes = ', '.join(q['code'] for q in pl)
             fig.text(.06, .93, '%s' % name, fontsize=22, weight='bold')
-            fig.text(.06, .88, 'Kody: %s    SZT: %d    WYMIAR: %g X %g MM, PŁYTA 18 MM' % (codes, len(pl), DL, SZ), fontsize=11)
+            fig.text(.06, .88, 'Kody: %s    SZT: %d    WYMIAR: %g X %g MM, PŁYTA %g MM' % (codes, len(pl), DL, SZ, p.get('g', 18)), fontsize=11)
             fig.text(.06, .12, 'LICO A = strona %s.   LICO B = strona %s.' % (a_word, b_word), fontsize=11)
             fig.text(.06, .085, 'Liczby przy otworach: U | V w mm od lewego i dolnego brzegu rysunku. Zielone: odległość wzdłuż krawędzi od zera, Ø4, głębokość 35 mm.', fontsize=9)
             fig.text(.06, .055, 'Pomarańczowa krawędź = oklejona (przód mebla).' if be else 'Bez okleiny.', fontsize=9)

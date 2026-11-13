@@ -37,7 +37,8 @@ i jak krok po kroku dodać nowe pomieszczenie. Założenia meblarskie (płyta, o
 | `reguly.py` | reguły dla skryptów (punkt 6) i opisy formatek |
 | `index.html` | strona widoku: Three.js z CDN, `model.js`, `laczniki.gen.js`, `../wspolne/viewer/viewer.js` |
 | `laczniki.gen.js` | generowany: otwory, konfirmaty, kołki, puszki zawiasów |
-| `wyniki/formatki.csv` | lista formatek do zamówienia (KOD, NAZWA, DL, SZ, SZT, OKLEINA, NAWIERTY, UWAGI) |
+| `wyniki/formatki.csv` | lista formatek do zamówienia (KOD, NAZWA, DL, SZ, SZT, OKLEINA, NAWIERTY, UWAGI), płyta 18 mm |
+| `wyniki/formatki_16mm.csv`, `wyniki/kalkulator_nawierty_16mm.csv` | to samo dla płyty innej grubości (tylko gdy pomieszczenie ją ma; osobny materiał w zamówieniu) |
 | `wyniki/kalkulator_nawierty.csv` | nawierty do wpisania w kalkulatorze sklepu |
 | `wyniki/arkusz_nawiertow.pdf` | rysunki nawiertów, jedna strona na typ formatki |
 | `wyniki/otwory.json` | pełna lista formatek i otworów (porównywana w teście) |
@@ -64,7 +65,8 @@ pomiar zmieniał jedną liczbę. (Pralnia ma liczby wpisane wprost, bo powstała
 Jeśli model ich nie spełnia, nawierty nie powstaną albo wyjdą błędne. Sprawdzaj `podsumowanie.json` i widok 3D.
 
 1. **Formatka** to prostopadłościan w jednej z warstw `WARSTWY_FORMATEK` (zwykle `Ścianki boczne`, `Ścianki tylne`,
-   `Półki`) z **jednym wymiarem równym dokładnie 18** i nazwą zaczynającą się od kodu: `KOD: opis` albo
+   `Półki`) z **jednym wymiarem równym dokładnie grubości płyty** (18, albo inna z `reguly.GRUBOSCI`, np. 16 na skrzynki
+   szuflad; gdy pasuje kilka, wygrywa pierwsza z listy) i nazwą zaczynającą się od kodu: `KOD: opis` albo
    `KOD-1: opis`, `KOD-2: opis` dla kilku sztuk o tym samym wymiarze. Wszystkie bryły o tym samym kodzie bazowym
    muszą mieć te same wymiary.
 2. **Front** to prostopadłościan w warstwie `Fronty` z nazwą `F1: opis`, `F2: opis`… (kod wyłącznie `F` + liczba).
@@ -117,7 +119,8 @@ Wymagane (szablon: `szablon/reguly.py`, rozbudowany przykład: `pralnia/reguly.p
 | `ZASLEPKI_ZASLANIAJA` | warstwy, które zasłaniają łby konfirmatów |
 | `FORMATKI` | opisy formatek: `F(kod, nazwa, okleina, nawierty, uwagi)`; `dl`, `sz`, `szt` tylko dla pozycji spoza modelu |
 
-Opcjonalne: `PDF_LICA` (opisy lic w arkuszu), `PDF_OPIS` (tekst strony tytułowej arkusza).
+Opcjonalne: `GRUBOSCI` (krotka grubości płyt, domyślnie `(18,)`, np. `(18, 16)`), `PDF_LICA` (opisy lic w arkuszu),
+`PDF_OPIS` (tekst strony tytułowej arkusza). Pozycja `F(...)` spoza modelu o innej grubości: parametr `grubosc`.
 
 Otwory dodawane w `dodatkowe_otwory` (współrzędne lokalne płyty, liczone funkcją `loc(p, oś, wartość_modelu)`;
 osie płyty `p['u']` = dłuższa, `p['v']` = krótsza; lico A = strona +oś grubości):
