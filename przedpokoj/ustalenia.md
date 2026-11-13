@@ -62,10 +62,10 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
   Zawiasy po prawej (od pionu). Wszystkie szuflady szafy są wewnętrzne, za F4 (2026-11-13; wcześniej przez chwilę
   osobne fronty F7–F9).
   Otwarte F4 wchodzi ok. 560 w przejście (1235) i może zahaczać o otwarte DM1.
-- Wnętrze SD: szuflady wewnętrzne S1 (przedział 177–430, skrzynka jak w szezlongu), S2 (433–533, klucze), S3 (536–836),
+- Wnętrze SD: 3 szuflady wewnętrzne S1, S2, S3 w przedziałach po 300 (195–495, 495–795, 795–1095; 2026-11-13), skrzynki 250,
   MOVENTO 700 z BLUMOTION, wyciągane ręcznie (wycięcie na dłoń w czole skrzynki); od strony zawiasów F4 dystans 20 pod prowadnicą,
-  skrzynki cofnięte 25 za przód korpusu. Półka stała SDP 822–840, nad nią strefa kurtek
-  840–2143 (1303 w świetle) z drążkiem (oś 2093, 50 pod wieńcem; pod drążkiem ok. 1250). Część górna SG bez półki.
+  skrzynki cofnięte 25 za przód korpusu. Półka stała SDP 1095–1113, nad nią strefa kurtek
+  1113–2143 (1030 w świetle) z drążkiem (oś 2093, 50 pod wieńcem; pod drążkiem ok. 980). Część górna SG bez półki.
 
 ### Zaślepka na pionie F6
 - Od podłogi do 2667 (góra jak fronty), szerokość 424,5: od 1,5 za narożnikiem pionu (3 mm od frontu F4) do 2 mm przed ścianą z DM1.
@@ -85,9 +85,9 @@ i `wyniki/kalkulator_nawierty_16mm.csv`.
 | SKRZYNKA | GDZIE | WYSOKOŚĆ BOKU | WNĘTRZE (SZER. × WYS. × GŁĘB.) |
 |---|---|---|---|
 | SS | szezlong (LW 484), front F1 | 200 | 442 × 171 × 658 |
-| S1 | szafa, szuflada wewnętrzna 1 (LW 524 − dystans 20) | 200 | 462 × 171 × 658 |
-| S2 | szafa, szuflada wewnętrzna 2 (klucze) | 80 | 462 × 51 × 658 |
-| S3 | szafa, szuflada wewnętrzna 3 | 250 | 462 × 221 × 658 |
+| S1 | szafa, szuflada wewnętrzna 1 (LW 524 − dystans 20), przedział 195–495 | 250 | 462 × 221 × 658 |
+| S2 | szafa, szuflada wewnętrzna 2, przedział 495–795 | 250 | 462 × 221 × 658 |
+| S3 | szafa, szuflada wewnętrzna 3, przedział 795–1095 | 250 | 462 × 221 × 658 |
 
 ## Konstrukcja (2026-11-12)
 - Płyta 18 mm (`wspolne/zasady.md`), konfirmaty w obrębie korpusu, plecy 18 między bokami.
@@ -104,7 +104,7 @@ i `wyniki/kalkulator_nawierty_16mm.csv`.
 5. Ręczna weryfikacja przed zamówieniem: DO ZROBIENIA
 
 ## Do ustalenia
-- Wysokości skrzynek S2 (80) i S3 (250) przyjęte jako założenie (S2 max ok. 85, S3 max ok. 260).
+- Wysokość skrzynek S1–S3 przyjęta 250 (założenie; w przedziale 300 max ok. 280).
 - Dokładne położenie TIP-ON przy frontach (wzornik Blum).
 
 ## Dziennik zmian
@@ -120,3 +120,4 @@ i `wyniki/kalkulator_nawierty_16mm.csv`.
   skrzynki szuflad jako formatki 16 mm (pipeline: reguly.GRUBOSCI, osobne formatki_16mm.csv).
 - 2026-11-13: wszystkie szuflady szafy wewnętrzne za jednymi drzwiami F4 (177–2161,5, 4 zawiasy); fronty F7–F9 usunięte;
   skrzynki S1–S3 z dystansem 20 od strony zawiasów, cofnięte 25.
+- 2026-11-13: szafa: 3 szuflady wewnętrzne w przedziałach po 300, półka 1095–1113, strefa kurtek 1030 (było 1303).

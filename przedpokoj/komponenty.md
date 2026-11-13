@@ -1,7 +1,7 @@
 # Przedpokój: okucia i komponenty (wstępnie, do potwierdzenia przed zamówieniem)
 
 Wszystko dostępne w Polsce (dystrybutorzy Blum, sklepy z okuciami meblowymi, Allegro).
-Liczby z modelu: `wyniki/podsumowanie.json` (puszki zawiasów 12, konfirmaty 173 w tym skrzynki, kołki 2, widoczne łby 65, w tym 35 na skrzynkach).
+Liczby z modelu: `wyniki/podsumowanie.json` (puszki zawiasów 12, konfirmaty wg podsumowania, kołki 2, widoczne łby korpusów 30, reszta na skrzynkach).
 
 ## Fronty na drzwiach: zawiasy + TIP-ON
 | Pozycja | Ilość | Uwagi |

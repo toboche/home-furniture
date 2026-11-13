@@ -16,7 +16,7 @@ SDBP;Szafa dół: bok prawy przy pionie (stoi na podłodze, wnęka 0-177);2161;7
 SDD;Szafa dół: dno nad wnęką (od styku z SZD na x 540);775;542;1;1SZ;KONFIRMATY + KOŁKI Ø8 W CZOLE (do SZD);
 SDW;Szafa dół: wieniec górny;775;524;1;1SZ;KONFIRMATY;
 SDT;Szafa dół: tył;1948;524;1;;KONFIRMATY;
-SDP;Szafa dół: półka stała nad szufladami (822-840);757;524;1;1SZ;KONFIRMATY;
+SDP;Szafa dół: półka stała nad szufladami (1095-1113);757;524;1;1SZ;KONFIRMATY;
 SGB;Szafa góra: boki;775;500;2;1SZ;KONFIRMATY;
 SGD;Szafa góra: dno;775;524;1;1SZ;KONFIRMATY;
 SGW;Szafa góra: wieniec górny;775;524;1;1SZ;KONFIRMATY;
