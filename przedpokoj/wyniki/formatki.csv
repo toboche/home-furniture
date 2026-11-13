@@ -1,8 +1,9 @@
 ﻿KOD;NAZWA;DL;SZ;SZT;OKLEINA;NAWIERTY;UWAGI
-SZB;Szezlong: bok lewy (stoi na podłodze, wnęka 0-177);775;412;1;1SZ;KONFIRMATY;"okleina na krawędzi przedniej (pionowej); prowadnica MOVENTO po stronie wnętrza"
-SZW;Szezlong: blat pod poduszką (na lewym boku, prawy koniec przy SDB-1);775;520;1;1SZ+1DL;KONFIRMATY;konfirmaty do SDB-1 wkręcane od środka szafy
-SZD;Szezlong: dno szuflady nad wnęką (prawy koniec na 2 kątownikach przy SDB-1);775;502;1;1SZ;KONFIRMATY;
-SZT;Szezlong: tył;502;217;1;;KONFIRMATY;
+SZBL;Szezlong: bok lewy (od D2, stoi na podłodze, wnęka 0-177);775;412;1;1SZ;KONFIRMATY;okleina na krawędzi przedniej (pionowej)
+SZBP;Szezlong: bok prawy (stoi na dnie SZD);775;217;1;1SZ;KONFIRMATY;skręcony z SDBL 3 śrubami łącznikowymi
+SZW;Szezlong: blat pod poduszką (na bokach);775;520;1;1SZ+1DL;KONFIRMATY;
+SZD;Szezlong: dno szuflady nad wnęką (do styku z SDD na x 540);775;502;1;1SZ;KONFIRMATY + KOŁKI Ø8 W CZOLE (do SDD);od spodu 2 płaskowniki na styku z SDD, pod stykiem 2 nóżki
+SZT;Szezlong: tył;484;217;1;;KONFIRMATY;
 NSB;Szafka nad szezlongiem: boki (głębokość 80);1731;80;2;1DL;KONFIRMATY;"prowadniki zawiasów F2 w lewym boku; bez tyłu (rozdzielnica)"
 NSD;Szafka nad szezlongiem: dno;484;80;1;1DL;KONFIRMATY;
 NSW;Szafka nad szezlongiem: wieniec;484;80;1;1DL;KONFIRMATY;
@@ -10,8 +11,9 @@ PWB;Pawlacz: boki;775;500;2;1DL+1SZ;KONFIRMATY;okleina: krawędź przednia i dol
 PWD;Pawlacz: dno;775;484;1;1SZ;KONFIRMATY;
 PWW;Pawlacz: wieniec górny;775;484;1;1SZ;KONFIRMATY;
 PWT;Pawlacz: tył;484;464;1;;KONFIRMATY;
-SDB;Szafa dół: boki (stoją na podłodze, wnęka 0-177);2161;775;2;1DL;KONFIRMATY;SDB-1 jest jednocześnie prawym bokiem szezlonga (prowadnica MOVENTO szezlonga po stronie szezlonga)
-SDD;Szafa dół: dno nad wnęką;775;524;1;1SZ;KONFIRMATY;
+SDBL;Szafa dół: bok lewy (stoi na dnie SDD);1966;775;1;1DL;KONFIRMATY;
+SDBP;Szafa dół: bok prawy przy pionie (stoi na podłodze, wnęka 0-177);2161;775;1;1DL;KONFIRMATY;prowadniki zawiasów F4
+SDD;Szafa dół: dno nad wnęką (od styku z SZD na x 540);775;542;1;1SZ;KONFIRMATY + KOŁKI Ø8 W CZOLE (do SZD);
 SDW;Szafa dół: wieniec górny;775;524;1;1SZ;KONFIRMATY;
 SDT;Szafa dół: tył;1948;524;1;;KONFIRMATY;
 SDP;Szafa dół: półki stałe (495 i 813);757;524;2;1SZ;KONFIRMATY;
