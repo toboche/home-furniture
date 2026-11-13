@@ -2,12 +2,12 @@
 SSB;Szuflada szezlonga: boki skrzynki (MOVENTO 700, wysokość 200);690;200;2;;KONFIRMATY;płyta 16
 SSD;Szuflada szezlonga: dno skrzynki (13 nad dolną krawędzią boków);690;442;1;;KONFIRMATY;"płyta 16; otwory pod zaczepy MOVENTO wg wzornika Blum"
 SSC;Szuflada szezlonga: czoło i tył skrzynki;442;171;2;;KONFIRMATY;"płyta 16; front F1 przykręcany do czoła"
-S1B;Szafa: szuflada wewnętrzna 1: boki skrzynki (MOVENTO 700, wysokość 200);690;200;2;;KONFIRMATY;płyta 16
+S1B;Szafa: szuflada wewnętrzna 1: boki skrzynki (MOVENTO 700, wysokość 250);690;250;2;;KONFIRMATY;płyta 16
 S1D;Szafa: szuflada wewnętrzna 1: dno skrzynki (13 nad dolną krawędzią boków);690;462;1;;KONFIRMATY;"płyta 16; otwory pod zaczepy MOVENTO wg wzornika Blum"
-S1C;Szafa: szuflada wewnętrzna 1: czoło i tył skrzynki;462;171;2;;KONFIRMATY;"płyta 16; szuflada wewnętrzna: w czole wycięcie na dłoń (wycina użytkownik)"
-S2B;Szafa: szuflada wewnętrzna 2 (klucze): boki skrzynki (MOVENTO 700, wysokość 80);690;80;2;;KONFIRMATY;płyta 16
-S2D;Szafa: szuflada wewnętrzna 2 (klucze): dno skrzynki (13 nad dolną krawędzią boków);690;462;1;;KONFIRMATY;"płyta 16; otwory pod zaczepy MOVENTO wg wzornika Blum"
-S2C;Szafa: szuflada wewnętrzna 2 (klucze): czoło i tył skrzynki;462;51;2;;KONFIRMATY;"płyta 16; szuflada wewnętrzna: w czole wycięcie na dłoń (wycina użytkownik)"
+S1C;Szafa: szuflada wewnętrzna 1: czoło i tył skrzynki;462;221;2;;KONFIRMATY;"płyta 16; szuflada wewnętrzna: w czole wycięcie na dłoń (wycina użytkownik)"
+S2B;Szafa: szuflada wewnętrzna 2: boki skrzynki (MOVENTO 700, wysokość 250);690;250;2;;KONFIRMATY;płyta 16
+S2D;Szafa: szuflada wewnętrzna 2: dno skrzynki (13 nad dolną krawędzią boków);690;462;1;;KONFIRMATY;"płyta 16; otwory pod zaczepy MOVENTO wg wzornika Blum"
+S2C;Szafa: szuflada wewnętrzna 2: czoło i tył skrzynki;462;221;2;;KONFIRMATY;"płyta 16; szuflada wewnętrzna: w czole wycięcie na dłoń (wycina użytkownik)"
 S3B;Szafa: szuflada wewnętrzna 3: boki skrzynki (MOVENTO 700, wysokość 250);690;250;2;;KONFIRMATY;płyta 16
 S3D;Szafa: szuflada wewnętrzna 3: dno skrzynki (13 nad dolną krawędzią boków);690;462;1;;KONFIRMATY;"płyta 16; otwory pod zaczepy MOVENTO wg wzornika Blum"
 S3C;Szafa: szuflada wewnętrzna 3: czoło i tył skrzynki;462;221;2;;KONFIRMATY;"płyta 16; szuflada wewnętrzna: w czole wycięcie na dłoń (wycina użytkownik)"

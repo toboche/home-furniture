@@ -83,9 +83,10 @@ function skrzynka(kod,opis,xl,lw,yb,h,dyst,cof){
     {n:kod+'C-2: '+opis+': tył skrzynki',layer:'Skrzynki szuflad',x:x0+G16,y:yb+REC+G16,z:z0,w:sk,h:h-REC-G16,d:G16,c:SKR}
   ];
 }
-/* szuflady wewnętrzne szafy (za jednymi drzwiami F4, 2026-11-13): przedziały jak wcześniej przy frontach 253, 100, 300 */
-var YF1=YS, YF2=YF1+3+100, YF3=YF2+3+300;   /* granice przedziałów: 430, 533, 836 */
-var YPK=YF3+4;                              /* góra półki nad szufladami: 840 */
+/* szuflady wewnętrzne szafy (za jednymi drzwiami F4) */
+var YS0=YN+P, SL=300;                       /* 3 przedziały po 300 od dna szafy: 195–495, 495–795, 795–1095 (2026-11-13) */
+var HSK=250;                                /* wysokość boku skrzynek S1–S3 (3 nad dnem przedziału, 47 luzu nad skrzynką) */
+var YPK=YS0+3*SL+P;                         /* góra półki nad szufladami: 1113 */
 var DYS=20, COF=25;                         /* dystans pod prowadnicą od strony zawiasów F4; cofnięcie skrzynek za przód korpusu */
 
 var ITEMS=[
@@ -130,7 +131,7 @@ var ITEMS=[
   {n:'SDD: Szafa dół: dno nad wnęką (pod lewym bokiem, od styku z SZD)',layer:'Półki',x:XW,y:YN,z:ODS,w:XT1-P-XW,h:P,d:ZK-ODS,c:POL},
   {n:'SDW: Szafa dół: wieniec górny',layer:'Półki',x:XT0+P,y:YD-P,z:ODS,w:WT,h:P,d:ZK-ODS,c:POL},
   {n:'SDT: Szafa dół: tył',layer:'Ścianki tylne',x:XT0+P,y:YN+P,z:ODS,w:WT,h:YD-P-(YN+P),d:P,c:TYL,o:0.9},
-  {n:'SDP: Szafa dół: półka stała nad szufladami (822 do 840)',layer:'Półki',x:XT0+P,y:YPK-P,z:ODS+P,w:WT,h:P,d:ZK-ODS-P,c:POL},
+  {n:'SDP: Szafa dół: półka stała nad szufladami (1095 do 1113)',layer:'Półki',x:XT0+P,y:YPK-P,z:ODS+P,w:WT,h:P,d:ZK-ODS-P,c:POL},
   {t:'cyl3',n:'Drążek na kurtki Ø25 (oś 2093, 50 pod wieńcem)',layer:'Wyposażenie',ax:'x',px:(XT0+XT1)/2,py:YD-P-50,pz:(ODS+P+ZK)/2,r:12.5,len:WT,c:0x9aa5ad},
   {n:'F4: Szafa dół: jedne drzwi (557 × 1984,5), szuflady wewnętrzne za nimi, zawiasy po prawej, TIP-ON',layer:'Fronty',x:XT0+1.5,y:YN,z:ZK,w:XT1-XT0-3,h:YP-1.5-YN,d:P,c:FR,o:0.55},
 
@@ -150,12 +151,12 @@ var ITEMS=[
   {n:'Włącznik światła na zaślepce (WL1, WL2; ramka ok. '+WL3+')',layer:'Osprzęt',x:XO+A+WL1-WL3/2,y:WL2-WL3/2,z:ZF,w:WL3,h:WL3,d:12,c:0xc8a46a}
 ];
 
-/* skrzynki szuflad: szezlong SS; szafa: wewnętrzne S1 (jak w szezlongu), S2 (klucze), S3 */
+/* skrzynki szuflad: szezlong SS; szafa: wewnętrzne S1, S2, S3 w przedziałach po 300 */
 ITEMS=ITEMS
   .concat(skrzynka('SS','Szuflada szezlonga',XS0+P,WB,YN+P+3,200))
-  .concat(skrzynka('S1','Szafa: szuflada wewnętrzna 1',XT0+P,WT,YN+P+3,200,DYS,COF))
-  .concat(skrzynka('S2','Szafa: szuflada wewnętrzna 2',XT0+P,WT,YF1+3+21,80,DYS,COF))
-  .concat(skrzynka('S3','Szafa: szuflada wewnętrzna 3',XT0+P,WT,YF2+3+21,250,DYS,COF));
+  .concat(skrzynka('S1','Szafa: szuflada wewnętrzna 1',XT0+P,WT,YS0+3,HSK,DYS,COF))
+  .concat(skrzynka('S2','Szafa: szuflada wewnętrzna 2',XT0+P,WT,YS0+SL+3,HSK,DYS,COF))
+  .concat(skrzynka('S3','Szafa: szuflada wewnętrzna 3',XT0+P,WT,YS0+2*SL+3,HSK,DYS,COF));
 
 /* zawiasy: CLIP top bez sprężyny + TIP-ON (komponenty.md) */
 ITEMS=ITEMS

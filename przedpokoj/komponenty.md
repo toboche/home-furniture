@@ -1,7 +1,7 @@
 # Przedpokój: okucia i komponenty (wstępnie, do potwierdzenia przed zamówieniem)
 
 Wszystko dostępne w Polsce (dystrybutorzy Blum, sklepy z okuciami meblowymi, Allegro).
-Liczby z modelu: `wyniki/podsumowanie.json` (puszki zawiasów 12, konfirmaty 173 w tym skrzynki, kołki 2, widoczne łby 65, w tym 35 na skrzynkach).
+Liczby z modelu: `wyniki/podsumowanie.json` (puszki zawiasów 12, konfirmaty 177 w tym skrzynki, kołki 2, widoczne łby korpusów 30, reszta na skrzynkach).
 
 ## Fronty na drzwiach: zawiasy + TIP-ON
 | Pozycja | Ilość | Uwagi |
@@ -27,12 +27,12 @@ Liczby z modelu: `wyniki/podsumowanie.json` (puszki zawiasów 12, konfirmaty 173
 ## Pozostałe
 | Pozycja | Ilość | Uwagi |
 |---|---|---|
-| Konfirmaty 7 × 50 | 173 | + zapas (59 w skrzynkach szuflad) |
+| Konfirmaty 7 × 50 | 177 | + zapas (63 w skrzynkach szuflad) |
 | Kołki Ø8 × 40 + klej | 2 | styk den SZD/SDD |
 | Płaskownik stalowy 200 × 30 × 4 + wkręty 4 × 15 | 2 | od spodu na styku den SZD/SDD |
 | Nóżka meblowa regulowana, wysokość ok. 170–180 | 2 | pod stykiem den (z tyłu i 150 za frontem) |
 | Śruba łącznikowa do skręcania korpusów | 3 | SZBP z SDBL |
-| Zaślepki konfirmatów w kolorze płyty | 30 | widoczne łby korpusów wg `podsumowanie.json`; łby na skrzynkach (35, wewnątrz szafy i pod dnami) opcjonalnie |
+| Zaślepki konfirmatów w kolorze płyty | 30 | widoczne łby korpusów wg `podsumowanie.json`; łby na skrzynkach (37, wewnątrz szafy i pod dnami) opcjonalnie |
 | Drążek Ø25 + 2 wsporniki | 1 | długość 524 (wnętrze SD) |
 | Klej montażowy do zaślepki F6 | 1 | mocny klej (np. typu MS polimer) |
 | Dystans (przedłużka) puszki włącznika Ø60 | 1 | otwór w F6 Ø60 |
