@@ -10,6 +10,8 @@ Wejście (katalog pomieszczenia): model.js (dane 3D), reguly.py (reguły pomiesz
 Wyjście: laczniki.gen.js (łączniki do widoku 3D) oraz wyniki/:
     formatki.csv, kalkulator_nawierty.csv, arkusz_nawiertow.pdf, otwory.json, podsumowanie.json,
     <pomieszczenie>_3d.html (wersja jednoplikowa widoku do wysłania lub publikacji).
+    Płyty o grubości innej niż 18 mm (reguly.GRUBOSCI, np. skrzynki szuflad 16 mm) dostają osobne
+    formatki_<g>mm.csv i kalkulator_nawierty_<g>mm.csv; w podsumowaniu klucze formatki_<g>mm i kalkulator_<g>mm.
 """
 import filecmp, importlib, json, os, shutil, sys, tempfile
 
@@ -42,7 +44,8 @@ def przelicz(nazwa, cel, cel_gen, log=print):
     items = dane['items']
     os.makedirs(cel, exist_ok=True)
 
-    parts = M.formatki(items, R.WARSTWY_FORMATEK, R.modul_of)
+    grubosci = M.grubosci_z(R)
+    parts = M.formatki(items, R.WARSTWY_FORMATEK, R.modul_of, grubosci)
     J = laczenia.wykryj(parts, log)
     otwory.przygotuj(parts)
     n_pol = otwory.konfirmaty(parts, J, R)
@@ -55,18 +58,24 @@ def przelicz(nazwa, cel, cel_gen, log=print):
     tot = sum(len(p['holes']) for p in parts if not R.pomijaj_czesc(p))
     log('otworów łącznie:', tot, 'połączeń:', n_pol)
 
-    s_kalk = kalkulator.zapisz(parts, R, os.path.join(cel, 'kalkulator_nawierty.csv'), log)
+    s_kalk, s_kalk_inne = kalkulator.zapisz(parts, R, os.path.join(cel, 'kalkulator_nawierty.csv'), log)
     lines, s_lacz = laczniki_3d.generuj(parts, items, R, log)
     laczniki_3d.zapisz(lines, cel_gen, nazwa)
     s_zasl = zaslepki.policz(parts, items, dane['room'], R, log)
-    s_form = formatki.zapisz(items, R, os.path.join(cel, 'formatki.csv'), log)
+    s_form, s_form_inne = formatki.zapisz(items, R, os.path.join(cel, 'formatki.csv'), log, grubosci)
     strony = arkusz_pdf.zapisz(parts, R, os.path.join(cel, 'arkusz_nawiertow.pdf'), log)
 
-    json.dump(_round([{k: p[k] for k in ('code', 'mod', 't', 'lo', 'hi', 'u', 'v', 'DL', 'SZ', 'rh', 'holes')} for p in parts]),
+    klucze = ('code', 'mod', 't', 'lo', 'hi', 'u', 'v', 'DL', 'SZ', 'rh', 'holes')
+    # grubość zapisujemy tylko dla płyt innych niż 18 mm (pliki pomieszczeń z samą płytą 18 bez zmian)
+    json.dump(_round([dict({k: p[k] for k in klucze}, **({'g': p['g']} if p.get('g', M.GRUBOSC) != M.GRUBOSC else {})) for p in parts]),
               open(os.path.join(cel, 'otwory.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=0)
     s_zasl['widoczne_miejsca'] = ['%s → %s (x %d, y %d, z %d)' % v for v in s_zasl['widoczne_miejsca']]
     pods = dict(formatki=s_form, kalkulator=s_kalk, laczniki=s_lacz, zaslepki=s_zasl, polaczenia=n_pol,
                 otwory_lacznie=tot, kolizje_otworow=len(uwagi), strony_arkusza=strony)
+    for g, s in s_form_inne.items():
+        pods['formatki_%gmm' % g] = s
+    for g, s in s_kalk_inne.items():
+        pods['kalkulator_%gmm' % g] = s
     with open(os.path.join(cel, 'podsumowanie.json'), 'w', encoding='utf-8') as fh:
         json.dump(pods, fh, ensure_ascii=False, indent=1)
         fh.write('\n')

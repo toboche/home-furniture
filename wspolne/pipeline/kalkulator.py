@@ -27,6 +27,19 @@ def front_edge(p, R):
 
 
 def zapisz(parts, R, sciezka, log=print):
+    """Tabela dla płyty 18 mm w sciezka; płyty innej grubości (p['g']) w osobnych plikach *_<g>mm.csv.
+    Zwraca podsumowanie dla 18 mm i słownik {g: podsumowanie} dla pozostałych."""
+    from formatki import plik_grubosci
+    from model import GRUBOSC
+    inne = {}
+    for g in sorted({p.get('g', GRUBOSC) for p in parts} - {GRUBOSC}):
+        pg = [p for p in parts if p.get('g', GRUBOSC) == g]
+        if any(p['holes'] and not R.pomijaj_czesc(p) for p in pg):
+            inne[g] = _zapisz([p for p in pg], R, plik_grubosci(sciezka, g), log)
+    return _zapisz([p for p in parts if p.get('g', GRUBOSC) == GRUBOSC], R, sciezka, log), inne
+
+
+def _zapisz(parts, R, sciezka, log=print):
     groups = collections.OrderedDict()
     for p in parts:
         if not p['holes'] or R.pomijaj_czesc(p):

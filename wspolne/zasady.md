@@ -10,6 +10,7 @@ w swoim `ustalenia.md` (tam jest źródło prawdy dla pomieszczenia).
 
 ## Materiał i sklep
 - Płyta Egger 18 mm cięta na wymiar w centrum.meble.pl (w pralni: W1200 ST9 Biały porcelanowy na wszystkie elementy).
+  Inna grubość (np. 16 mm na boki skrzynek szuflad) tylko tam, gdzie wymaga tego okucie; osobna lista formatek.
 - Zamówienie: wszystkie elementy z nawiertami. Wymiary formatek podawane z okleiną.
 - Okleina: fronty bezspoinowa 1 mm, pozostałe widoczne krawędzie ABS.
 - Kalkulator sklepu wierci Ø5 w powierzchni i Ø4 w krawędzi; Ø7 w powierzchni nie do zamówienia,

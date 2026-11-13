@@ -1,8 +1,9 @@
-"""Wczytanie modelu pomieszczenia (model.js) i zamiana płyt 18 mm na formatki."""
+"""Wczytanie modelu pomieszczenia (model.js) i zamiana płyt na formatki.
+Grubości płyt: reguly.GRUBOSCI pomieszczenia (domyślnie tylko 18 mm); pierwsza na liście to płyta podstawowa."""
 import json, os, re, subprocess
 
 TU = os.path.dirname(os.path.abspath(__file__))
-GRUBOSC = 18
+GRUBOSC = 18      # płyta podstawowa (korpusy i fronty)
 
 
 def wczytaj(katalog):
@@ -23,8 +24,24 @@ def bryly(items, warstwa):
             for i in items if i.get('layer') == warstwa and 't' not in i]
 
 
-def formatki(items, warstwy, modul_of):
-    """Płyty z warstw formatek: każda bryła z kodem 'KOD:' lub 'KOD-1:' i jednym wymiarem równym 18 mm."""
+def grubosci_z(R):
+    """grubości płyt pomieszczenia: reguly.GRUBOSCI (krotka w mm), domyślnie (18,)"""
+    return tuple(getattr(R, 'GRUBOSCI', (GRUBOSC,)))
+
+
+def grubosc_bryly(it, grubosci=(GRUBOSC,)):
+    """(oś grubości, grubość) bryły: pierwsza grubość z listy, której równy jest któryś wymiar; (None, None) gdy brak"""
+    dims = {'x': it['w'], 'y': it['h'], 'z': it['d']}
+    for g in grubosci:
+        cienkie = [a for a in 'xyz' if abs(dims[a] - g) < 1e-6]
+        if cienkie:
+            return cienkie[0], g
+    return None, None
+
+
+def formatki(items, warstwy, modul_of, grubosci=(GRUBOSC,)):
+    """Płyty z warstw formatek: każda bryła z kodem 'KOD:' lub 'KOD-1:' i jednym wymiarem równym grubości płyty
+    (18 mm albo inna z reguly.GRUBOSCI). p['g'] = grubość płyty."""
     parts = []
     for it in items:
         if it.get('layer') not in warstwy:
@@ -36,9 +53,9 @@ def formatki(items, warstwy, modul_of):
         p['code'] = c
         p['mod'] = modul_of(p)
         dims = {'x': p['w'], 'y': p['h'], 'z': p['d']}
-        cienkie = [a for a in 'xyz' if abs(dims[a] - GRUBOSC) < 1e-6]
-        assert cienkie, 'formatka bez wymiaru 18 mm: ' + it['n']
-        p['t'] = cienkie[0]
+        t, g = grubosc_bryly(p, grubosci)
+        assert t, 'formatka bez wymiaru %s mm: %s' % ('/'.join('%g' % v for v in grubosci), it['n'])
+        p['t'] = t; p['g'] = g
         lo = {'x': p['x'], 'y': p['y'], 'z': p['z']}
         p['lo'] = lo
         p['hi'] = {a: lo[a] + dims[a] for a in 'xyz'}
