@@ -24,9 +24,6 @@ SGT;Szafa góra: tył;524;464;1;;KONFIRMATY;
 F1;Front szuflady szezlonga (zasłania krawędź blatu);517;253;1;2DL+2SZ;BRAK (mocowanie frontu MOVENTO na wkręty);
 F2;Drzwi nad szezlongiem, zawiasy po LEWEJ (od D2);1700;517;1;2DL+2SZ;ZAWIASY 4 SZT, PUSZKA Ø35, ŚRODEK 22,5 MM OD KRAWĘDZI;TIP-ON, zawiasy bez sprężyny
 F3;Front pawlacza, zawiasy po LEWEJ (od D2);517;502.5;1;2DL+2SZ;ZAWIASY 2 SZT, PUSZKA Ø35, ŚRODEK 22,5 MM OD KRAWĘDZI;TIP-ON, zawiasy bez sprężyny
-F4;Drzwi szafy nad szufladami, zawiasy po PRAWEJ (od pionu);1322.5;557;1;2DL+2SZ;ZAWIASY 3 SZT, PUSZKA Ø35, ŚRODEK 22,5 MM OD KRAWĘDZI;TIP-ON, zawiasy bez sprężyny
+F4;Drzwi szafy (dół, jeden front), zawiasy po PRAWEJ (od pionu);1984.5;557;1;2DL+2SZ;ZAWIASY 4 SZT, PUSZKA Ø35, ŚRODEK 22,5 MM OD KRAWĘDZI;"TIP-ON (2 szt.), zawiasy bez sprężyny; za drzwiami szuflady wewnętrzne"
 F5;Front szafy, góra, zawiasy po PRAWEJ (od pionu);557;502.5;1;2DL+2SZ;ZAWIASY 2 SZT, PUSZKA Ø35, ŚRODEK 22,5 MM OD KRAWĘDZI;TIP-ON, zawiasy bez sprężyny
-F7;Front szuflady 1 w szafie (w linii szuflady szezlonga);557;253;1;2DL+2SZ;BRAK (mocowanie frontu MOVENTO na wkręty);
-F8;Front szuflady 2 w szafie (100, klucze);557;100;1;2DL+2SZ;BRAK (mocowanie frontu MOVENTO na wkręty);
-F9;Front szuflady 3 w szafie (300);557;300;1;2DL+2SZ;BRAK (mocowanie frontu MOVENTO na wkręty);
 F6;Zaślepka na czole pionu (klejona, od podłogi do sufitu);2667;424.5;1;2DL+2SZ;"BRAK; otwory wierci użytkownik";"góra 1 mm pod sufitem w linii frontów; dwa otwory Ø60: kabel domofonu (środek 243,5 od lewej krawędzi, 1474 od dołu) i dystans włącznika (środek 296,5 od lewej, 1214 od dołu)"

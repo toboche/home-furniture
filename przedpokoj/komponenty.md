@@ -1,14 +1,14 @@
 # Przedpokój: okucia i komponenty (wstępnie, do potwierdzenia przed zamówieniem)
 
 Wszystko dostępne w Polsce (dystrybutorzy Blum, sklepy z okuciami meblowymi, Allegro).
-Liczby z modelu: `wyniki/podsumowanie.json` (puszki zawiasów 11, konfirmaty 173 w tym skrzynki, kołki 2, widoczne łby 46).
+Liczby z modelu: `wyniki/podsumowanie.json` (puszki zawiasów 12, konfirmaty 173 w tym skrzynki, kołki 2, widoczne łby 65, w tym 35 na skrzynkach).
 
 ## Fronty na drzwiach: zawiasy + TIP-ON
 | Pozycja | Ilość | Uwagi |
 |---|---|---|
-| Blum CLIP top 110°, nakładany, BEZ sprężyny (np. 71T3650 na wkręty) | 11 | TIP-ON działa tylko z zawiasami bez sprężyny; F2: 4, F3: 2, F4: 3, F5: 2 |
-| Prowadnik Blum CLIP prosty, dystans 0 | 11 | w bokach: NSB-1 (F2), PWB-1 (F3), SDBP (F4), SGB-2 (F5); otwory 37 mm od przedniej krawędzi boku |
-| Blum TIP-ON do drzwi, długi z magnesem (956A1004) + adapter prosty | 5 | F2: 2 szt. (front 1700), F3, F4 i F5: po 1 |
+| Blum CLIP top 110°, nakładany, BEZ sprężyny (np. 71T3650 na wkręty) | 12 | TIP-ON działa tylko z zawiasami bez sprężyny; F2: 4, F3: 2, F4: 4, F5: 2 |
+| Prowadnik Blum CLIP prosty, dystans 0 | 12 | w bokach: NSB-1 (F2), PWB-1 (F3), SDBP (F4), SGB-2 (F5); otwory 37 mm od przedniej krawędzi boku |
+| Blum TIP-ON do drzwi, długi z magnesem (956A1004) + adapter prosty | 6 | F2: 2 szt. (front 1700), F4: 2 szt. (front 1984,5), F3 i F5: po 1 |
 
 - TIP-ON po stronie przeciwnej do zawiasów, przy krawędzi frontu. Przy wysokich frontach Blum zaleca 2 jednostki.
 - Szafka NS ma korpus 80 (było 50): mieści prowadnik zawiasu w boku i TIP-ON na adapterze na prawym boku.
@@ -16,9 +16,11 @@ Liczby z modelu: `wyniki/podsumowanie.json` (puszki zawiasów 11, konfirmaty 173
 ## Szuflady: Blum MOVENTO (kryte prowadnice pod szufladą, pełny wysuw, płynny zsynchronizowany ruch)
 | Pozycja | Ilość | Uwagi |
 |---|---|---|
-| MOVENTO do TIP-ON BLUMOTION, 700 mm (klasa 60 kg) | 4 kpl. | szuflady F1 (szezlong), F7, F8, F9 (szafa); wnętrze 757 (min. NL + 3 = 703) |
-| TIP-ON BLUMOTION do MOVENTO, jednostka L1 (do 20 kg) + zabierak, komplet | 4 | otwieranie naciśnięciem, domykanie z hamowaniem |
-| Synchronizator TIP-ON BLUMOTION (wałek) | 4 | szerokość wnętrza 484 (szezlong) i 524 (szafa); zalecany przez Blum |
+| MOVENTO do TIP-ON BLUMOTION, 700 mm (klasa 60 kg) | 1 kpl. | szuflada szezlonga F1; wnętrze 757 (min. NL + 3 = 703) |
+| MOVENTO z BLUMOTION, 700 mm (klasa 60 kg) | 3 kpl. | szuflady wewnętrzne S1, S2, S3 za F4, wyciągane ręcznie |
+| Dystans pod prowadnicę 20 mm | 3 kpl. | szuflady wewnętrzne, prawa strona (zawiasy F4) |
+| TIP-ON BLUMOTION do MOVENTO, jednostka L1 (do 20 kg) + zabierak, komplet | 1 | otwieranie naciśnięciem, domykanie z hamowaniem |
+| Synchronizator TIP-ON BLUMOTION (wałek) | 1 | szerokość wnętrza 484 (szezlong); zalecany przez Blum |
 | Regulatory frontu / zaczepy MOVENTO | 4 kpl. | do skrzynek drewnianych |
 | Skrzynki szuflad, płyta 16 | 4 | `wyniki/formatki_16mm.csv` (SS, S1, S2, S3) |
 
@@ -30,7 +32,7 @@ Liczby z modelu: `wyniki/podsumowanie.json` (puszki zawiasów 11, konfirmaty 173
 | Płaskownik stalowy 200 × 30 × 4 + wkręty 4 × 15 | 2 | od spodu na styku den SZD/SDD |
 | Nóżka meblowa regulowana, wysokość ok. 170–180 | 2 | pod stykiem den (z tyłu i 150 za frontem) |
 | Śruba łącznikowa do skręcania korpusów | 3 | SZBP z SDBL |
-| Zaślepki konfirmatów w kolorze płyty | 30 | widoczne łby wg `podsumowanie.json` bez 16 łbów pod dnami skrzynek (schowane w podcięciu) |
+| Zaślepki konfirmatów w kolorze płyty | 30 | widoczne łby korpusów wg `podsumowanie.json`; łby na skrzynkach (35, wewnątrz szafy i pod dnami) opcjonalnie |
 | Drążek Ø25 + 2 wsporniki | 1 | długość 524 (wnętrze SD) |
 | Klej montażowy do zaślepki F6 | 1 | mocny klej (np. typu MS polimer) |
 | Dystans (przedłużka) puszki włącznika Ø60 | 1 | otwór w F6 Ø60 |
