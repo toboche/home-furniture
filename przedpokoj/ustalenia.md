@@ -58,10 +58,12 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
 ### Szafa wysoka SD + SG (X 540–1100, szerokość 560)
 - Przylega do boku pionu (2026-11-12; wcześniej luz 3 i 557), żeby front miał 3 mm do zaślepki.
 - Korpusy osobno: dolny SD (0–2161) i górny SG (2163–2663).
-- Fronty bez podziału pionowego: F4 dół (557 × 1984,5), F5 góra (557 × 502,5); zawiasy po prawej (od pionu).
+- Fronty bez podziału pionowego. Dół (2026-11-13): 3 szuflady z własnymi frontami F7 (177–430, w linii szuflady szezlonga),
+  F8 (433–533, klucze i drobiazgi), F9 (536–836), nad nimi drzwi F4 (839–2161,5; 557 × 1322,5). Góra F5 (557 × 502,5).
+  Zawiasy drzwi po prawej (od pionu).
   Otwarte F4 wchodzi ok. 560 w przejście (1235) i może zahaczać o otwarte DM1.
-- Wnętrze SD: przestrzeń 195–495 z szufladą wewnętrzną, półka 495, przestrzeń 513–813, półka 813, strefa kurtek
-  831–2143 z drążkiem (oś 2093, 50 pod wieńcem). Szuflada wewnętrzna MOVENTO 700 z dystansem 20 od strony zawiasów. Część górna SG bez półki.
+- Wnętrze SD: szuflady S1, S2, S3 (MOVENTO 700 + TIP-ON BLUMOTION), półka stała SDP 822–840, nad nią strefa kurtek
+  840–2143 (1303 w świetle) z drążkiem (oś 2093, 50 pod wieńcem; pod drążkiem ok. 1250). Część górna SG bez półki.
 
 ### Zaślepka na pionie F6
 - Od podłogi do 2667 (góra jak fronty), szerokość 424,5: od 1,5 za narożnikiem pionu (3 mm od frontu F4) do 2 mm przed ścianą z DM1.
@@ -70,24 +72,20 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
   i dystans włącznika (średnica standardowej puszki podtynkowej Ø60; środek 296,5 od lewej, 1214 od dołu).
 - Na istniejącą puszkę włącznika zostanie dodany dystans (przedłużka), włącznik montowany na licu zaślepki.
 
-## Skrzynki szuflad (2026-11-12)
+## Skrzynki szuflad (2026-11-13)
 Blum MOVENTO do szuflad drewnianych: szerokość wewnętrzna skrzynki SKW = LW − 42, długość boku = NL − 10,
-boki najwyżej 16 mm, dno wpuszczone min. 12 mm (przyjęte 13), w dnie otwór pod zaczep prowadnicy (wzornik Blum).
-Budowa: boki na całą długość, dno 16 między bokami na całą długość (spód 13 nad dolną krawędzią boków),
-czoło i tył skrzynki między bokami, stoją na dnie. Płyta 16 mm (kolor wnętrza do wyboru).
+boki najwyżej 16 mm, dno wpuszczone min. 12 mm (przyjęte 13), w dnie otwory pod zaczepy prowadnic (wzornik Blum).
+Budowa: boki na całą długość, dno między bokami na całą długość (spód 13 nad dolną krawędzią boków),
+czoło i tył skrzynki między bokami, stoją na dnie; połączenia na konfirmatach. Płyta 16 mm (kolor wnętrza do wyboru).
+Skrzynki są formatkami 16 mm w modelu (`reguly.GRUBOSCI`); do zamówienia: `wyniki/formatki_16mm.csv`
+i `wyniki/kalkulator_nawierty_16mm.csv`.
 
-| KOD | ELEMENT | WYMIAR | SZT | UWAGI |
-|---|---|---|---|---|
-| SS | szezlong: LW 484, NL 700, wysokość boku 200 (3 nad dnem SZD, 14 pod blatem) | | | wnętrze 442 × 171 × 658 |
-| SSB | bok | 690 × 200 | 2 | |
-| SSD | dno | 690 × 442 | 1 | otwory pod zaczepy MOVENTO |
-| SSC | czoło i tył skrzynki | 442 × 171 | 2 | front F1 przykręcany do czoła |
-| SW | szafa: LW 524 − dystans 20 = 504, NL 700, wysokość boku 250 (ZAŁOŻENIE, max ok. 287) | | | wnętrze 462 × 221 × 658 |
-| SWB | bok | 690 × 250 | 2 | |
-| SWD | dno | 690 × 462 | 1 | otwory pod zaczepy MOVENTO |
-| SWC | czoło i tył skrzynki | 462 × 221 | 2 | w czole wycięcie na dłoń (szuflada za drzwiami) |
-
-Skrzynki nie są formatkami w pipeline (płyta 16); zamawiane osobno według tej tabeli.
+| SKRZYNKA | GDZIE | WYSOKOŚĆ BOKU | WNĘTRZE (SZER. × WYS. × GŁĘB.) |
+|---|---|---|---|
+| SS | szezlong (LW 484), front F1 | 200 | 442 × 171 × 658 |
+| S1 | szafa, szuflada 1 (LW 524), front F7 | 200 | 482 × 171 × 658 |
+| S2 | szafa, szuflada 2 (klucze), front F8 | 80 | 482 × 51 × 658 |
+| S3 | szafa, szuflada 3, front F9 | 250 | 482 × 221 × 658 |
 
 ## Konstrukcja (2026-11-12)
 - Płyta 18 mm (`wspolne/zasady.md`), konfirmaty w obrębie korpusu, plecy 18 między bokami.
@@ -104,7 +102,7 @@ Skrzynki nie są formatkami w pipeline (płyta 16); zamawiane osobno według tej
 5. Ręczna weryfikacja przed zamówieniem: DO ZROBIENIA
 
 ## Do ustalenia
-- Wysokość szuflady wewnętrznej (przyjęte 250).
+- Wysokości skrzynek S2 (80) i S3 (250) przyjęte jako założenie (S2 max ok. 85, S3 max ok. 260).
 - Dokładne położenie TIP-ON przy frontach (wzornik Blum).
 
 ## Dziennik zmian
@@ -116,3 +114,5 @@ Skrzynki nie są formatkami w pipeline (płyta 16); zamawiane osobno według tej
   skrzynki szuflad MOVENTO 700.
 - 2026-11-13: prawy bok szezlonga przywrócony (SZBP, na dnie SZD); boki SZBP i SDBL bez części we wnęce, wspólna wnęka;
   styk den: kołki, płaskowniki, 2 nóżki; kody boków SZBL, SZBP, SDBL, SDBP (były SZB-1, SDB-1, SDB-2).
+- 2026-11-13: szafa dół: 3 szuflady z frontami (253 w linii szezlonga, 100, 300), półka nad nimi, drzwi F4 nad szufladami;
+  skrzynki szuflad jako formatki 16 mm (pipeline: reguly.GRUBOSCI, osobne formatki_16mm.csv).
