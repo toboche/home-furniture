@@ -1,28 +1,32 @@
 {
  "formatki": {
-  "pozycje": 28,
-  "sztuki": 32,
-  "m2": 14.94
+  "pozycje": 31,
+  "sztuki": 34,
+  "m2": 14.54
  },
  "kalkulator": {
   "typy_formatek": 23,
-  "wiersze": 236
+  "wiersze": 225
  },
  "laczniki": {
-  "konfirmaty": 114,
+  "konfirmaty": 173,
   "kolki": 2,
   "otwory_pod_kolki": 4,
-  "otwory_nieprzelotowe": 24,
-  "puszki_zawiasow": 12
+  "otwory_nieprzelotowe": 22,
+  "puszki_zawiasow": 11
  },
  "zaslepki": {
-  "widoczne": 32,
-  "ukryte": 82,
+  "widoczne": 46,
+  "ukryte": 127,
   "widoczne_wg_czesci": {
    "NSB-1": 2,
    "PWB-1": 8,
-   "SDBL": 6,
+   "S1D": 4,
+   "S2D": 4,
+   "S3D": 4,
+   "SDBL": 4,
    "SDD": 6,
+   "SSD": 4,
    "SZBL": 5,
    "SZD": 5
   },
@@ -37,10 +41,20 @@
    "PWB-1 → PWW (x 1014, y 2654, z 52)",
    "PWB-1 → PWW (x 1014, y 2654, z 390)",
    "PWB-1 → PWW (x 1014, y 2654, z 727)",
-   "SDBL → SDP-1 (x 1534, y 504, z 398)",
-   "SDBL → SDP-1 (x 1534, y 504, z 727)",
-   "SDBL → SDP-2 (x 1534, y 822, z 398)",
-   "SDBL → SDP-2 (x 1534, y 822, z 727)",
+   "S1D → S1C-1 (x 1629, y 205, z 769)",
+   "S1D → S1C-1 (x 2011, y 205, z 769)",
+   "S1D → S1C-2 (x 1629, y 205, z 95)",
+   "S1D → S1C-2 (x 2011, y 205, z 95)",
+   "S2D → S2C-1 (x 1629, y 461, z 769)",
+   "S2D → S2C-1 (x 2011, y 461, z 769)",
+   "S2D → S2C-2 (x 1629, y 461, z 95)",
+   "S2D → S2C-2 (x 2011, y 461, z 95)",
+   "S3D → S3C-1 (x 1629, y 564, z 769)",
+   "S3D → S3C-1 (x 2011, y 564, z 769)",
+   "S3D → S3C-2 (x 1629, y 564, z 95)",
+   "S3D → S3C-2 (x 2011, y 564, z 95)",
+   "SDBL → SDP (x 1534, y 831, z 398)",
+   "SDBL → SDP (x 1534, y 831, z 727)",
    "SDBL → SDW (x 1534, y 2152, z 390)",
    "SDBL → SDW (x 1534, y 2152, z 727)",
    "SDD → SDBL (x 1549, y 171, z 52)",
@@ -49,6 +63,10 @@
    "SDD → SDT (x 1608, y 171, z 11)",
    "SDD → SDT (x 1820, y 171, z 11)",
    "SDD → SDT (x 2032, y 171, z 11)",
+   "SSD → SSC-1 (x 1109, y 205, z 769)",
+   "SSD → SSC-1 (x 1451, y 205, z 769)",
+   "SSD → SSC-2 (x 1109, y 205, z 95)",
+   "SSD → SSC-2 (x 1451, y 205, z 95)",
    "SZBL → SZD (x 1014, y 186, z 52)",
    "SZBL → SZD (x 1014, y 186, z 390)",
    "SZBL → SZD (x 1014, y 186, z 727)",
@@ -61,8 +79,17 @@
    "SZD → SZT (x 1472, y 171, z 11)"
   ]
  },
- "polaczenia": 42,
- "otwory_lacznie": 256,
+ "polaczenia": 71,
+ "otwory_lacznie": 372,
  "kolizje_otworow": 0,
- "strony_arkusza": 23
+ "strony_arkusza": 35,
+ "formatki_16mm": {
+  "pozycje": 12,
+  "sztuki": 20,
+  "m2": 2.89
+ },
+ "kalkulator_16mm": {
+  "typy_formatek": 12,
+  "wiersze": 80
+ }
 }

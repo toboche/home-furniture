@@ -4,7 +4,10 @@ SD szafa wysoka dół, SG szafa wysoka góra. Fronty bez uchwytów (TIP-ON), za�
 from formatki import F
 
 # warstwy modelu, w których leżą formatki korpusu (fronty są brane z warstwy 'Fronty')
-WARSTWY_FORMATEK = ['Ścianki boczne', 'Ścianki tylne', 'Półki']
+WARSTWY_FORMATEK = ['Ścianki boczne', 'Ścianki tylne', 'Półki', 'Skrzynki szuflad']
+
+# korpusy i fronty 18 mm; skrzynki szuflad 16 mm (MOVENTO: bok najwyżej 16) -> wyniki/formatki_16mm.csv
+GRUBOSCI = (18, 16)
 
 
 def modul_of(it):
@@ -51,7 +54,7 @@ def zawias_specjalny(code, fr, cx, cy, cyl):
 
 
 # tyły: bez oklejonej krawędzi
-BEZ_OKLEINY_PREFIKSY = ('SZT', 'PWT', 'SDT', 'SGT')
+BEZ_OKLEINY_PREFIKSY = ('SZT', 'PWT', 'SDT', 'SGT', 'SS', 'S1', 'S2', 'S3')
 
 # łby konfirmatów zasłonięte przez bryły z tych warstw nie potrzebują zaślepek
 ZASLEPKI_ZASLANIAJA = ['Pion', 'Fronty', 'Tapicerka']
@@ -87,20 +90,47 @@ FORMATKI = [
       nawierty='KONFIRMATY + KOŁKI Ø8 W CZOLE (do SZD)'),
     F('SDW', 'Szafa dół: wieniec górny', okleina='1SZ', nawierty='KONFIRMATY'),
     F('SDT', 'Szafa dół: tył', okleina='', nawierty='KONFIRMATY'),
-    F('SDP', 'Szafa dół: półki stałe (495 i 813)', okleina='1SZ', nawierty='KONFIRMATY'),
+    F('SDP', 'Szafa dół: półka stała nad szufladami (822-840)', okleina='1SZ', nawierty='KONFIRMATY'),
     F('SGB', 'Szafa góra: boki', okleina='1SZ', nawierty='KONFIRMATY'),
     F('SGD', 'Szafa góra: dno', okleina='1SZ', nawierty='KONFIRMATY'),
     F('SGW', 'Szafa góra: wieniec górny', okleina='1SZ', nawierty='KONFIRMATY'),
     F('SGT', 'Szafa góra: tył', okleina='', nawierty='KONFIRMATY'),
+    F('SSB', 'Szuflada szezlonga: boki skrzynki (MOVENTO 700, wysokość 200)', okleina='', nawierty='KONFIRMATY',
+      uwagi='płyta 16'),
+    F('SSD', 'Szuflada szezlonga: dno skrzynki (13 nad dolną krawędzią boków)', okleina='', nawierty='KONFIRMATY',
+      uwagi='płyta 16; otwory pod zaczepy MOVENTO wg wzornika Blum'),
+    F('SSC', 'Szuflada szezlonga: czoło i tył skrzynki', okleina='', nawierty='KONFIRMATY',
+      uwagi='płyta 16; front F1 przykręcany do czoła'),
+    F('S1B', 'Szafa: szuflada 1: boki skrzynki (MOVENTO 700, wysokość 200)', okleina='', nawierty='KONFIRMATY',
+      uwagi='płyta 16'),
+    F('S1D', 'Szafa: szuflada 1: dno skrzynki (13 nad dolną krawędzią boków)', okleina='', nawierty='KONFIRMATY',
+      uwagi='płyta 16; otwory pod zaczepy MOVENTO wg wzornika Blum'),
+    F('S1C', 'Szafa: szuflada 1: czoło i tył skrzynki', okleina='', nawierty='KONFIRMATY',
+      uwagi='płyta 16; front F7 przykręcany do czoła'),
+    F('S2B', 'Szafa: szuflada 2 (klucze): boki skrzynki (MOVENTO 700, wysokość 80)', okleina='', nawierty='KONFIRMATY',
+      uwagi='płyta 16'),
+    F('S2D', 'Szafa: szuflada 2 (klucze): dno skrzynki (13 nad dolną krawędzią boków)', okleina='', nawierty='KONFIRMATY',
+      uwagi='płyta 16; otwory pod zaczepy MOVENTO wg wzornika Blum'),
+    F('S2C', 'Szafa: szuflada 2 (klucze): czoło i tył skrzynki', okleina='', nawierty='KONFIRMATY',
+      uwagi='płyta 16; front F8 przykręcany do czoła'),
+    F('S3B', 'Szafa: szuflada 3: boki skrzynki (MOVENTO 700, wysokość 250)', okleina='', nawierty='KONFIRMATY',
+      uwagi='płyta 16'),
+    F('S3D', 'Szafa: szuflada 3: dno skrzynki (13 nad dolną krawędzią boków)', okleina='', nawierty='KONFIRMATY',
+      uwagi='płyta 16; otwory pod zaczepy MOVENTO wg wzornika Blum'),
+    F('S3C', 'Szafa: szuflada 3: czoło i tył skrzynki', okleina='', nawierty='KONFIRMATY',
+      uwagi='płyta 16; front F9 przykręcany do czoła'),
     F('F1', 'Front szuflady szezlonga (zasłania krawędź blatu)', okleina='2DL+2SZ', nawierty='BRAK (mocowanie frontu MOVENTO na wkręty)'),
     F('F2', 'Drzwi nad szezlongiem, zawiasy po LEWEJ (od D2)', okleina='2DL+2SZ', nawierty='ZAWIASY 4 SZT, ' + ZAW,
       uwagi='TIP-ON, zawiasy bez sprężyny'),
     F('F3', 'Front pawlacza, zawiasy po LEWEJ (od D2)', okleina='2DL+2SZ', nawierty='ZAWIASY 2 SZT, ' + ZAW,
       uwagi='TIP-ON, zawiasy bez sprężyny'),
-    F('F4', 'Front szafy, dół, zawiasy po PRAWEJ (od pionu)', okleina='2DL+2SZ', nawierty='ZAWIASY 4 SZT, ' + ZAW,
-      uwagi='TIP-ON (2 szt.), zawiasy bez sprężyny'),
+    F('F4', 'Drzwi szafy nad szufladami, zawiasy po PRAWEJ (od pionu)', okleina='2DL+2SZ', nawierty='ZAWIASY 3 SZT, ' + ZAW,
+      uwagi='TIP-ON, zawiasy bez sprężyny'),
     F('F5', 'Front szafy, góra, zawiasy po PRAWEJ (od pionu)', okleina='2DL+2SZ', nawierty='ZAWIASY 2 SZT, ' + ZAW,
       uwagi='TIP-ON, zawiasy bez sprężyny'),
+    F('F7', 'Front szuflady 1 w szafie (w linii szuflady szezlonga)', okleina='2DL+2SZ', nawierty='BRAK (mocowanie frontu MOVENTO na wkręty)'),
+    F('F8', 'Front szuflady 2 w szafie (100, klucze)', okleina='2DL+2SZ', nawierty='BRAK (mocowanie frontu MOVENTO na wkręty)'),
+    F('F9', 'Front szuflady 3 w szafie (300)', okleina='2DL+2SZ', nawierty='BRAK (mocowanie frontu MOVENTO na wkręty)'),
     F('F6', 'Zaślepka na czole pionu (klejona, od podłogi do sufitu)', okleina='2DL+2SZ', nawierty='BRAK; otwory wierci użytkownik',
       uwagi='góra 1 mm pod sufitem w linii frontów; dwa otwory Ø60: kabel domofonu (środek 243,5 od lewej krawędzi, 1474 od dołu) i dystans włącznika (środek 296,5 od lewej, 1214 od dołu)'),
 ]

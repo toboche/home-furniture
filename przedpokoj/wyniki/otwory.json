@@ -1444,54 +1444,27 @@
 "axis_n": "x",
 "d": 5,
 "kind": "FACE",
-"partner": "SDP-1",
+"partner": "SDP",
 "side": "B",
-"u": 309.0,
+"u": 636.0,
 "v": 68.0
 },
 {
 "axis_n": "x",
 "d": 5,
 "kind": "FACE",
-"partner": "SDP-1",
+"partner": "SDP",
 "side": "B",
-"u": 309.0,
+"u": 636.0,
 "v": 396.5
 },
 {
 "axis_n": "x",
 "d": 5,
 "kind": "FACE",
-"partner": "SDP-1",
+"partner": "SDP",
 "side": "B",
-"u": 309.0,
-"v": 725.0
-},
-{
-"axis_n": "x",
-"d": 5,
-"kind": "FACE",
-"partner": "SDP-2",
-"side": "B",
-"u": 627.0,
-"v": 68.0
-},
-{
-"axis_n": "x",
-"d": 5,
-"kind": "FACE",
-"partner": "SDP-2",
-"side": "B",
-"u": 627.0,
-"v": 396.5
-},
-{
-"axis_n": "x",
-"d": 5,
-"kind": "FACE",
-"partner": "SDP-2",
-"side": "B",
-"u": 627.0,
+"u": 636.0,
 "v": 725.0
 }
 ],
@@ -1628,54 +1601,27 @@
 "axis_n": "x",
 "d": 5,
 "kind": "FACE",
-"partner": "SDP-1",
+"partner": "SDP",
 "side": "A",
-"u": 504.0,
+"u": 831.0,
 "v": 68.0
 },
 {
 "axis_n": "x",
 "d": 5,
 "kind": "FACE",
-"partner": "SDP-1",
+"partner": "SDP",
 "side": "A",
-"u": 504.0,
+"u": 831.0,
 "v": 396.5
 },
 {
 "axis_n": "x",
 "d": 5,
 "kind": "FACE",
-"partner": "SDP-1",
+"partner": "SDP",
 "side": "A",
-"u": 504.0,
-"v": 725.0
-},
-{
-"axis_n": "x",
-"d": 5,
-"kind": "FACE",
-"partner": "SDP-2",
-"side": "A",
-"u": 822.0,
-"v": 68.0
-},
-{
-"axis_n": "x",
-"d": 5,
-"kind": "FACE",
-"partner": "SDP-2",
-"side": "A",
-"u": 822.0,
-"v": 396.5
-},
-{
-"axis_n": "x",
-"d": 5,
-"kind": "FACE",
-"partner": "SDP-2",
-"side": "A",
-"u": 822.0,
+"u": 831.0,
 "v": 725.0
 },
 {
@@ -1688,7 +1634,7 @@
 "pin": false,
 "plate": true,
 "side": "B",
-"u": 261.0,
+"u": 923.0,
 "v": 738
 },
 {
@@ -1701,7 +1647,7 @@
 "pin": false,
 "plate": true,
 "side": "B",
-"u": 293.0,
+"u": 955.0,
 "v": 738
 },
 {
@@ -1714,7 +1660,7 @@
 "pin": false,
 "plate": true,
 "side": "B",
-"u": 855.833333,
+"u": 1484.25,
 "v": 738
 },
 {
@@ -1727,33 +1673,7 @@
 "pin": false,
 "plate": true,
 "side": "B",
-"u": 887.833333,
-"v": 738
-},
-{
-"axis_n": "-",
-"d": 3,
-"depth": 12,
-"kind": "FACE",
-"partner": "wkręt prowadnika zawiasu F4",
-"pilot": true,
-"pin": false,
-"plate": true,
-"side": "B",
-"u": 1450.666667,
-"v": 738
-},
-{
-"axis_n": "-",
-"d": 3,
-"depth": 12,
-"kind": "FACE",
-"partner": "wkręt prowadnika zawiasu F4",
-"pilot": true,
-"pin": false,
-"plate": true,
-"side": "B",
-"u": 1482.666667,
+"u": 1516.25,
 "v": 738
 },
 {
@@ -2223,54 +2143,27 @@
 "axis_n": "z",
 "d": 5,
 "kind": "FACE",
-"partner": "SDP-1",
+"partner": "SDP",
 "side": "B",
-"u": 1639.0,
+"u": 1312.0,
 "v": 50.0
 },
 {
 "axis_n": "z",
 "d": 5,
 "kind": "FACE",
-"partner": "SDP-1",
+"partner": "SDP",
 "side": "B",
-"u": 1639.0,
+"u": 1312.0,
 "v": 262.0
 },
 {
 "axis_n": "z",
 "d": 5,
 "kind": "FACE",
-"partner": "SDP-1",
+"partner": "SDP",
 "side": "B",
-"u": 1639.0,
-"v": 474.0
-},
-{
-"axis_n": "z",
-"d": 5,
-"kind": "FACE",
-"partner": "SDP-2",
-"side": "B",
-"u": 1321.0,
-"v": 50.0
-},
-{
-"axis_n": "z",
-"d": 5,
-"kind": "FACE",
-"partner": "SDP-2",
-"side": "B",
-"u": 1321.0,
-"v": 262.0
-},
-{
-"axis_n": "z",
-"d": 5,
-"kind": "FACE",
-"partner": "SDP-2",
-"side": "B",
-"u": 1321.0,
+"u": 1312.0,
 "v": 474.0
 }
 ],
@@ -2288,10 +2181,10 @@
 {
 "DL": 757,
 "SZ": 524,
-"code": "SDP-1",
+"code": "SDP",
 "hi": {
 "x": 2082,
-"y": 513,
+"y": 840,
 "z": 777
 },
 "holes": [
@@ -2388,119 +2281,7 @@
 ],
 "lo": {
 "x": 1558,
-"y": 495,
-"z": 20
-},
-"mod": "SD",
-"rh": true,
-"t": "y",
-"u": "z",
-"v": "x"
-},
-{
-"DL": 757,
-"SZ": 524,
-"code": "SDP-2",
-"hi": {
-"x": 2082,
-"y": 831,
-"z": 777
-},
-"holes": [
-{
-"along": 50.0,
-"d": 4,
-"depth": 35,
-"edge_coord": 0,
-"into": 1,
-"kind": "EDGE",
-"n_axis_is_u": false,
-"partner": "SDBL"
-},
-{
-"along": 378.5,
-"d": 4,
-"depth": 35,
-"edge_coord": 0,
-"into": 1,
-"kind": "EDGE",
-"n_axis_is_u": false,
-"partner": "SDBL"
-},
-{
-"along": 707.0,
-"d": 4,
-"depth": 35,
-"edge_coord": 0,
-"into": 1,
-"kind": "EDGE",
-"n_axis_is_u": false,
-"partner": "SDBL"
-},
-{
-"along": 50.0,
-"d": 4,
-"depth": 35,
-"edge_coord": 524,
-"into": -1,
-"kind": "EDGE",
-"n_axis_is_u": false,
-"partner": "SDBP"
-},
-{
-"along": 378.5,
-"d": 4,
-"depth": 35,
-"edge_coord": 524,
-"into": -1,
-"kind": "EDGE",
-"n_axis_is_u": false,
-"partner": "SDBP"
-},
-{
-"along": 707.0,
-"d": 4,
-"depth": 35,
-"edge_coord": 524,
-"into": -1,
-"kind": "EDGE",
-"n_axis_is_u": false,
-"partner": "SDBP"
-},
-{
-"along": 50.0,
-"d": 4,
-"depth": 35,
-"edge_coord": 0,
-"into": 1,
-"kind": "EDGE",
-"n_axis_is_u": true,
-"partner": "SDT"
-},
-{
-"along": 262.0,
-"d": 4,
-"depth": 35,
-"edge_coord": 0,
-"into": 1,
-"kind": "EDGE",
-"n_axis_is_u": true,
-"partner": "SDT"
-},
-{
-"along": 474.0,
-"d": 4,
-"depth": 35,
-"edge_coord": 0,
-"into": 1,
-"kind": "EDGE",
-"n_axis_is_u": true,
-"partner": "SDT"
-}
-],
-"lo": {
-"x": 1558,
-"y": 813,
+"y": 822,
 "z": 20
 },
 "mod": "SD",
@@ -3084,6 +2865,1758 @@
 "z": 2
 },
 "mod": "SG",
+"rh": true,
+"t": "z",
+"u": "x",
+"v": "y"
+},
+{
+"DL": 690,
+"SZ": 200,
+"code": "SSB-1",
+"g": 16,
+"hi": {
+"x": 1059,
+"y": 398,
+"z": 777
+},
+"holes": [
+{
+"axis_n": "x",
+"d": 5,
+"kind": "FACE",
+"partner": "SSD",
+"side": "B",
+"u": 640.0,
+"v": 21.0
+},
+{
+"axis_n": "x",
+"d": 5,
+"kind": "FACE",
+"partner": "SSD",
+"side": "B",
+"u": 345.0,
+"v": 21.0
+},
+{
+"axis_n": "x",
+"d": 5,
+"kind": "FACE",
+"partner": "SSD",
+"side": "B",
+"u": 50.0,
+"v": 21.0
+},
+{
+"axis_n": "x",
+"d": 5,
+"kind": "FACE",
+"partner": "SSC-1",
+"side": "B",
+"u": 8.0,
+"v": 79.0
+},
+{
+"axis_n": "x",
+"d": 5,
+"kind": "FACE",
+"partner": "SSC-1",
+"side": "B",
+"u": 8.0,
+"v": 150.0
+},
+{
+"axis_n": "x",
+"d": 5,
+"kind": "FACE",
+"partner": "SSC-2",
+"side": "B",
+"u": 682.0,
+"v": 79.0
+},
+{
+"axis_n": "x",
+"d": 5,
+"kind": "FACE",
+"partner": "SSC-2",
+"side": "B",
+"u": 682.0,
+"v": 150.0
+}
+],
+"lo": {
+"x": 1043,
+"y": 198,
+"z": 87
+},
+"mod": "SS",
+"rh": false,
+"t": "x",
+"u": "z",
+"v": "y"
+},
+{
+"DL": 690,
+"SZ": 200,
+"code": "SSB-2",
+"g": 16,
+"hi": {
+"x": 1517,
+"y": 398,
+"z": 777
+},
+"holes": [
+{
+"axis_n": "x",
+"d": 5,
+"kind": "FACE",
+"partner": "SSD",
+"side": "A",
+"u": 640.0,
+"v": 21.0
+},
+{
+"axis_n": "x",
+"d": 5,
+"kind": "FACE",
+"partner": "SSD",
+"side": "A",
+"u": 345.0,
+"v": 21.0
+},
+{
+"axis_n": "x",
+"d": 5,
+"kind": "FACE",
+"partner": "SSD",
+"side": "A",
+"u": 50.0,
+"v": 21.0
+},
+{
+"axis_n": "x",
+"d": 5,
+"kind": "FACE",
+"partner": "SSC-1",
+"side": "A",
+"u": 8.0,
+"v": 79.0
+},
+{
+"axis_n": "x",
+"d": 5,
+"kind": "FACE",
+"partner": "SSC-1",
+"side": "A",
+"u": 8.0,
+"v": 150.0
+},
+{
+"axis_n": "x",
+"d": 5,
+"kind": "FACE",
+"partner": "SSC-2",
+"side": "A",
+"u": 682.0,
+"v": 79.0
+},
+{
+"axis_n": "x",
+"d": 5,
+"kind": "FACE",
+"partner": "SSC-2",
+"side": "A",
+"u": 682.0,
+"v": 150.0
+}
+],
+"lo": {
+"x": 1501,
+"y": 198,
+"z": 87
+},
+"mod": "SS",
+"rh": false,
+"t": "x",
+"u": "z",
+"v": "y"
+},
+{
+"DL": 690,
+"SZ": 442,
+"code": "SSD",
+"g": 16,
+"hi": {
+"x": 1501,
+"y": 227,
+"z": 777
+},
+"holes": [
+{
+"along": 50.0,
+"d": 4,
+"depth": 35,
+"edge_coord": 0,
+"into": 1,
+"kind": "EDGE",
+"n_axis_is_u": false,
+"partner": "SSB-1"
+},
+{
+"along": 345.0,
+"d": 4,
+"depth": 35,
+"edge_coord": 0,
+"into": 1,
+"kind": "EDGE",
+"n_axis_is_u": false,
+"partner": "SSB-1"
+},
+{
+"along": 640.0,
+"d": 4,
+"depth": 35,
+"edge_coord": 0,
+"into": 1,
+"kind": "EDGE",
+"n_axis_is_u": false,
+"partner": "SSB-1"
+},
+{
+"along": 50.0,
+"d": 4,
+"depth": 35,
+"edge_coord": 442,
+"into": -1,
+"kind": "EDGE",
+"n_axis_is_u": false,
+"partner": "SSB-2"
+},
+{
+"along": 345.0,
+"d": 4,
+"depth": 35,
+"edge_coord": 442,
+"into": -1,
+"kind": "EDGE",
+"n_axis_is_u": false,
+"partner": "SSB-2"
+},
+{
+"along": 640.0,
+"d": 4,
+"depth": 35,
+"edge_coord": 442,
+"into": -1,
+"kind": "EDGE",
+"n_axis_is_u": false,
+"partner": "SSB-2"
+},
+{
+"axis_n": "y",
+"d": 5,
+"kind": "FACE",
+"partner": "SSC-1",
+"side": "B",
+"u": 682.0,
+"v": 50.0
+},
+{
+"axis_n": "y",
+"d": 5,
+"kind": "FACE",
+"partner": "SSC-1",
+"side": "B",
+"u": 682.0,
+"v": 392.0
+},
+{
+"axis_n": "y",
+"d": 5,
+"kind": "FACE",
+"partner": "SSC-2",
+"side": "B",
+"u": 8.0,
+"v": 50.0
+},
+{
+"axis_n": "y",
+"d": 5,
+"kind": "FACE",
+"partner": "SSC-2",
+"side": "B",
+"u": 8.0,
+"v": 392.0
+}
+],
+"lo": {
+"x": 1059,
+"y": 211,
+"z": 87
+},
+"mod": "SS",
+"rh": true,
+"t": "y",
+"u": "z",
+"v": "x"
+},
+{
+"DL": 442,
+"SZ": 171,
+"code": "SSC-1",
+"g": 16,
+"hi": {
+"x": 1501,
+"y": 398,
+"z": 777
+},
+"holes": [
+{
+"along": 50.0,
+"d": 4,
+"depth": 35,
+"edge_coord": 0,
+"into": 1,
+"kind": "EDGE",
+"n_axis_is_u": true,
+"partner": "SSB-1"
+},
+{
+"along": 121.0,
+"d": 4,
+"depth": 35,
+"edge_coord": 0,
+"into": 1,
+"kind": "EDGE",
+"n_axis_is_u": true,
+"partner": "SSB-1"
+},
+{
+"along": 50.0,
+"d": 4,
+"depth": 35,
+"edge_coord": 442,
+"into": -1,
+"kind": "EDGE",
+"n_axis_is_u": true,
+"partner": "SSB-2"
+},
+{
+"along": 121.0,
+"d": 4,
+"depth": 35,
+"edge_coord": 442,
+"into": -1,
+"kind": "EDGE",
+"n_axis_is_u": true,
+"partner": "SSB-2"
+},
+{
+"along": 50.0,
+"d": 4,
+"depth": 35,
+"edge_coord": 0,
+"into": 1,
+"kind": "EDGE",
+"n_axis_is_u": false,
+"partner": "SSD"
+},
+{
+"along": 392.0,
+"d": 4,
+"depth": 35,
+"edge_coord": 0,
+"into": 1,
+"kind": "EDGE",
+"n_axis_is_u": false,
+"partner": "SSD"
+}
+],
+"lo": {
+"x": 1059,
+"y": 227,
+"z": 761
+},
+"mod": "SS",
+"rh": true,
+"t": "z",
+"u": "x",
+"v": "y"
+},
+{
+"DL": 442,
+"SZ": 171,
+"code": "SSC-2",
+"g": 16,
+"hi": {
+"x": 1501,
+"y": 398,
+"z": 103
+},
+"holes": [
+{
+"along": 50.0,
+"d": 4,
+"depth": 35,
+"edge_coord": 0,
+"into": 1,
+"kind": "EDGE",
+"n_axis_is_u": true,
+"partner": "SSB-1"
+},
+{
+"along": 121.0,
+"d": 4,
+"depth": 35,
+"edge_coord": 0,
+"into": 1,
+"kind": "EDGE",
+"n_axis_is_u": true,
+"partner": "SSB-1"
+},
+{
+"along": 50.0,
+"d": 4,
+"depth": 35,
+"edge_coord": 442,
+"into": -1,
+"kind": "EDGE",
+"n_axis_is_u": true,
+"partner": "SSB-2"
+},
+{
+"along": 121.0,
+"d": 4,
+"depth": 35,
+"edge_coord": 442,
+"into": -1,
+"kind": "EDGE",
+"n_axis_is_u": true,
+"partner": "SSB-2"
+},
+{
+"along": 50.0,
+"d": 4,
+"depth": 35,
+"edge_coord": 0,
+"into": 1,
+"kind": "EDGE",
+"n_axis_is_u": false,
+"partner": "SSD"
+},
+{
+"along": 392.0,
+"d": 4,
+"depth": 35,
+"edge_coord": 0,
+"into": 1,
+"kind": "EDGE",
+"n_axis_is_u": false,
+"partner": "SSD"
+}
+],
+"lo": {
+"x": 1059,
+"y": 227,
+"z": 87
+},
+"mod": "SS",
+"rh": true,
+"t": "z",
+"u": "x",
+"v": "y"
+},
+{
+"DL": 690,
+"SZ": 200,
+"code": "S1B-1",
+"g": 16,
+"hi": {
+"x": 1579,
+"y": 398,
+"z": 777
+},
+"holes": [
+{
+"axis_n": "x",
+"d": 5,
+"kind": "FACE",
+"partner": "S1D",
+"side": "B",
+"u": 640.0,
+"v": 21.0
+},
+{
+"axis_n": "x",
+"d": 5,
+"kind": "FACE",
+"partner": "S1D",
+"side": "B",
+"u": 345.0,
+"v": 21.0
+},
+{
+"axis_n": "x",
+"d": 5,
+"kind": "FACE",
+"partner": "S1D",
+"side": "B",
+"u": 50.0,
+"v": 21.0
+},
+{
+"axis_n": "x",
+"d": 5,
+"kind": "FACE",
+"partner": "S1C-1",
+"side": "B",
+"u": 8.0,
+"v": 79.0
+},
+{
+"axis_n": "x",
+"d": 5,
+"kind": "FACE",
+"partner": "S1C-1",
+"side": "B",
+"u": 8.0,
+"v": 150.0
+},
+{
+"axis_n": "x",
+"d": 5,
+"kind": "FACE",
+"partner": "S1C-2",
+"side": "B",
+"u": 682.0,
+"v": 79.0
+},
+{
+"axis_n": "x",
+"d": 5,
+"kind": "FACE",
+"partner": "S1C-2",
+"side": "B",
+"u": 682.0,
+"v": 150.0
+}
+],
+"lo": {
+"x": 1563,
+"y": 198,
+"z": 87
+},
+"mod": "S1",
+"rh": false,
+"t": "x",
+"u": "z",
+"v": "y"
+},
+{
+"DL": 690,
+"SZ": 200,
+"code": "S1B-2",
+"g": 16,
+"hi": {
+"x": 2077,
+"y": 398,
+"z": 777
+},
+"holes": [
+{
+"axis_n": "x",
+"d": 5,
+"kind": "FACE",
+"partner": "S1D",
+"side": "A",
+"u": 640.0,
+"v": 21.0
+},
+{
+"axis_n": "x",
+"d": 5,
+"kind": "FACE",
+"partner": "S1D",
+"side": "A",
+"u": 345.0,
+"v": 21.0
+},
+{
+"axis_n": "x",
+"d": 5,
+"kind": "FACE",
+"partner": "S1D",
+"side": "A",
+"u": 50.0,
+"v": 21.0
+},
+{
+"axis_n": "x",
+"d": 5,
+"kind": "FACE",
+"partner": "S1C-1",
+"side": "A",
+"u": 8.0,
+"v": 79.0
+},
+{
+"axis_n": "x",
+"d": 5,
+"kind": "FACE",
+"partner": "S1C-1",
+"side": "A",
+"u": 8.0,
+"v": 150.0
+},
+{
+"axis_n": "x",
+"d": 5,
+"kind": "FACE",
+"partner": "S1C-2",
+"side": "A",
+"u": 682.0,
+"v": 79.0
+},
+{
+"axis_n": "x",
+"d": 5,
+"kind": "FACE",
+"partner": "S1C-2",
+"side": "A",
+"u": 682.0,
+"v": 150.0
+}
+],
+"lo": {
+"x": 2061,
+"y": 198,
+"z": 87
+},
+"mod": "S1",
+"rh": false,
+"t": "x",
+"u": "z",
+"v": "y"
+},
+{
+"DL": 690,
+"SZ": 482,
+"code": "S1D",
+"g": 16,
+"hi": {
+"x": 2061,
+"y": 227,
+"z": 777
+},
+"holes": [
+{
+"along": 50.0,
+"d": 4,
+"depth": 35,
+"edge_coord": 0,
+"into": 1,
+"kind": "EDGE",
+"n_axis_is_u": false,
+"partner": "S1B-1"
+},
+{
+"along": 345.0,
+"d": 4,
+"depth": 35,
+"edge_coord": 0,
+"into": 1,
+"kind": "EDGE",
+"n_axis_is_u": false,
+"partner": "S1B-1"
+},
+{
+"along": 640.0,
+"d": 4,
+"depth": 35,
+"edge_coord": 0,
+"into": 1,
+"kind": "EDGE",
+"n_axis_is_u": false,
+"partner": "S1B-1"
+},
+{
+"along": 50.0,
+"d": 4,
+"depth": 35,
+"edge_coord": 482,
+"into": -1,
+"kind": "EDGE",
+"n_axis_is_u": false,
+"partner": "S1B-2"
+},
+{
+"along": 345.0,
+"d": 4,
+"depth": 35,
+"edge_coord": 482,
+"into": -1,
+"kind": "EDGE",
+"n_axis_is_u": false,
+"partner": "S1B-2"
+},
+{
+"along": 640.0,
+"d": 4,
+"depth": 35,
+"edge_coord": 482,
+"into": -1,
+"kind": "EDGE",
+"n_axis_is_u": false,
+"partner": "S1B-2"
+},
+{
+"axis_n": "y",
+"d": 5,
+"kind": "FACE",
+"partner": "S1C-1",
+"side": "B",
+"u": 682.0,
+"v": 50.0
+},
+{
+"axis_n": "y",
+"d": 5,
+"kind": "FACE",
+"partner": "S1C-1",
+"side": "B",
+"u": 682.0,
+"v": 432.0
+},
+{
+"axis_n": "y",
+"d": 5,
+"kind": "FACE",
+"partner": "S1C-2",
+"side": "B",
+"u": 8.0,
+"v": 50.0
+},
+{
+"axis_n": "y",
+"d": 5,
+"kind": "FACE",
+"partner": "S1C-2",
+"side": "B",
+"u": 8.0,
+"v": 432.0
+}
+],
+"lo": {
+"x": 1579,
+"y": 211,
+"z": 87
+},
+"mod": "S1",
+"rh": true,
+"t": "y",
+"u": "z",
+"v": "x"
+},
+{
+"DL": 482,
+"SZ": 171,
+"code": "S1C-1",
+"g": 16,
+"hi": {
+"x": 2061,
+"y": 398,
+"z": 777
+},
+"holes": [
+{
+"along": 50.0,
+"d": 4,
+"depth": 35,
+"edge_coord": 0,
+"into": 1,
+"kind": "EDGE",
+"n_axis_is_u": true,
+"partner": "S1B-1"
+},
+{
+"along": 121.0,
+"d": 4,
+"depth": 35,
+"edge_coord": 0,
+"into": 1,
+"kind": "EDGE",
+"n_axis_is_u": true,
+"partner": "S1B-1"
+},
+{
+"along": 50.0,
+"d": 4,
+"depth": 35,
+"edge_coord": 482,
+"into": -1,
+"kind": "EDGE",
+"n_axis_is_u": true,
+"partner": "S1B-2"
+},
+{
+"along": 121.0,
+"d": 4,
+"depth": 35,
+"edge_coord": 482,
+"into": -1,
+"kind": "EDGE",
+"n_axis_is_u": true,
+"partner": "S1B-2"
+},
+{
+"along": 50.0,
+"d": 4,
+"depth": 35,
+"edge_coord": 0,
+"into": 1,
+"kind": "EDGE",
+"n_axis_is_u": false,
+"partner": "S1D"
+},
+{
+"along": 432.0,
+"d": 4,
+"depth": 35,
+"edge_coord": 0,
+"into": 1,
+"kind": "EDGE",
+"n_axis_is_u": false,
+"partner": "S1D"
+}
+],
+"lo": {
+"x": 1579,
+"y": 227,
+"z": 761
+},
+"mod": "S1",
+"rh": true,
+"t": "z",
+"u": "x",
+"v": "y"
+},
+{
+"DL": 482,
+"SZ": 171,
+"code": "S1C-2",
+"g": 16,
+"hi": {
+"x": 2061,
+"y": 398,
+"z": 103
+},
+"holes": [
+{
+"along": 50.0,
+"d": 4,
+"depth": 35,
+"edge_coord": 0,
+"into": 1,
+"kind": "EDGE",
+"n_axis_is_u": true,
+"partner": "S1B-1"
+},
+{
+"along": 121.0,
+"d": 4,
+"depth": 35,
+"edge_coord": 0,
+"into": 1,
+"kind": "EDGE",
+"n_axis_is_u": true,
+"partner": "S1B-1"
+},
+{
+"along": 50.0,
+"d": 4,
+"depth": 35,
+"edge_coord": 482,
+"into": -1,
+"kind": "EDGE",
+"n_axis_is_u": true,
+"partner": "S1B-2"
+},
+{
+"along": 121.0,
+"d": 4,
+"depth": 35,
+"edge_coord": 482,
+"into": -1,
+"kind": "EDGE",
+"n_axis_is_u": true,
+"partner": "S1B-2"
+},
+{
+"along": 50.0,
+"d": 4,
+"depth": 35,
+"edge_coord": 0,
+"into": 1,
+"kind": "EDGE",
+"n_axis_is_u": false,
+"partner": "S1D"
+},
+{
+"along": 432.0,
+"d": 4,
+"depth": 35,
+"edge_coord": 0,
+"into": 1,
+"kind": "EDGE",
+"n_axis_is_u": false,
+"partner": "S1D"
+}
+],
+"lo": {
+"x": 1579,
+"y": 227,
+"z": 87
+},
+"mod": "S1",
+"rh": true,
+"t": "z",
+"u": "x",
+"v": "y"
+},
+{
+"DL": 690,
+"SZ": 80,
+"code": "S2B-1",
+"g": 16,
+"hi": {
+"x": 1579,
+"y": 534,
+"z": 777
+},
+"holes": [
+{
+"axis_n": "x",
+"d": 5,
+"kind": "FACE",
+"partner": "S2D",
+"side": "B",
+"u": 640.0,
+"v": 21.0
+},
+{
+"axis_n": "x",
+"d": 5,
+"kind": "FACE",
+"partner": "S2D",
+"side": "B",
+"u": 345.0,
+"v": 21.0
+},
+{
+"axis_n": "x",
+"d": 5,
+"kind": "FACE",
+"partner": "S2D",
+"side": "B",
+"u": 50.0,
+"v": 21.0
+},
+{
+"axis_n": "x",
+"d": 5,
+"kind": "FACE",
+"partner": "S2C-1",
+"side": "B",
+"u": 8.0,
+"v": 54.5
+},
+{
+"axis_n": "x",
+"d": 5,
+"kind": "FACE",
+"partner": "S2C-2",
+"side": "B",
+"u": 682.0,
+"v": 54.5
+}
+],
+"lo": {
+"x": 1563,
+"y": 454,
+"z": 87
+},
+"mod": "S2",
+"rh": false,
+"t": "x",
+"u": "z",
+"v": "y"
+},
+{
+"DL": 690,
+"SZ": 80,
+"code": "S2B-2",
+"g": 16,
+"hi": {
+"x": 2077,
+"y": 534,
+"z": 777
+},
+"holes": [
+{
+"axis_n": "x",
+"d": 5,
+"kind": "FACE",
+"partner": "S2D",
+"side": "A",
+"u": 640.0,
+"v": 21.0
+},
+{
+"axis_n": "x",
+"d": 5,
+"kind": "FACE",
+"partner": "S2D",
+"side": "A",
+"u": 345.0,
+"v": 21.0
+},
+{
+"axis_n": "x",
+"d": 5,
+"kind": "FACE",
+"partner": "S2D",
+"side": "A",
+"u": 50.0,
+"v": 21.0
+},
+{
+"axis_n": "x",
+"d": 5,
+"kind": "FACE",
+"partner": "S2C-1",
+"side": "A",
+"u": 8.0,
+"v": 54.5
+},
+{
+"axis_n": "x",
+"d": 5,
+"kind": "FACE",
+"partner": "S2C-2",
+"side": "A",
+"u": 682.0,
+"v": 54.5
+}
+],
+"lo": {
+"x": 2061,
+"y": 454,
+"z": 87
+},
+"mod": "S2",
+"rh": false,
+"t": "x",
+"u": "z",
+"v": "y"
+},
+{
+"DL": 690,
+"SZ": 482,
+"code": "S2D",
+"g": 16,
+"hi": {
+"x": 2061,
+"y": 483,
+"z": 777
+},
+"holes": [
+{
+"along": 50.0,
+"d": 4,
+"depth": 35,
+"edge_coord": 0,
+"into": 1,
+"kind": "EDGE",
+"n_axis_is_u": false,
+"partner": "S2B-1"
+},
+{
+"along": 345.0,
+"d": 4,
+"depth": 35,
+"edge_coord": 0,
+"into": 1,
+"kind": "EDGE",
+"n_axis_is_u": false,
+"partner": "S2B-1"
+},
+{
+"along": 640.0,
+"d": 4,
+"depth": 35,
+"edge_coord": 0,
+"into": 1,
+"kind": "EDGE",
+"n_axis_is_u": false,
+"partner": "S2B-1"
+},
+{
+"along": 50.0,
+"d": 4,
+"depth": 35,
+"edge_coord": 482,
+"into": -1,
+"kind": "EDGE",
+"n_axis_is_u": false,
+"partner": "S2B-2"
+},
+{
+"along": 345.0,
+"d": 4,
+"depth": 35,
+"edge_coord": 482,
+"into": -1,
+"kind": "EDGE",
+"n_axis_is_u": false,
+"partner": "S2B-2"
+},
+{
+"along": 640.0,
+"d": 4,
+"depth": 35,
+"edge_coord": 482,
+"into": -1,
+"kind": "EDGE",
+"n_axis_is_u": false,
+"partner": "S2B-2"
+},
+{
+"axis_n": "y",
+"d": 5,
+"kind": "FACE",
+"partner": "S2C-1",
+"side": "B",
+"u": 682.0,
+"v": 50.0
+},
+{
+"axis_n": "y",
+"d": 5,
+"kind": "FACE",
+"partner": "S2C-1",
+"side": "B",
+"u": 682.0,
+"v": 432.0
+},
+{
+"axis_n": "y",
+"d": 5,
+"kind": "FACE",
+"partner": "S2C-2",
+"side": "B",
+"u": 8.0,
+"v": 50.0
+},
+{
+"axis_n": "y",
+"d": 5,
+"kind": "FACE",
+"partner": "S2C-2",
+"side": "B",
+"u": 8.0,
+"v": 432.0
+}
+],
+"lo": {
+"x": 1579,
+"y": 467,
+"z": 87
+},
+"mod": "S2",
+"rh": true,
+"t": "y",
+"u": "z",
+"v": "x"
+},
+{
+"DL": 482,
+"SZ": 51,
+"code": "S2C-1",
+"g": 16,
+"hi": {
+"x": 2061,
+"y": 534,
+"z": 777
+},
+"holes": [
+{
+"along": 25.5,
+"d": 4,
+"depth": 35,
+"edge_coord": 0,
+"into": 1,
+"kind": "EDGE",
+"n_axis_is_u": true,
+"partner": "S2B-1"
+},
+{
+"along": 25.5,
+"d": 4,
+"depth": 35,
+"edge_coord": 482,
+"into": -1,
+"kind": "EDGE",
+"n_axis_is_u": true,
+"partner": "S2B-2"
+},
+{
+"along": 50.0,
+"d": 4,
+"depth": 35,
+"edge_coord": 0,
+"into": 1,
+"kind": "EDGE",
+"n_axis_is_u": false,
+"partner": "S2D"
+},
+{
+"along": 432.0,
+"d": 4,
+"depth": 35,
+"edge_coord": 0,
+"into": 1,
+"kind": "EDGE",
+"n_axis_is_u": false,
+"partner": "S2D"
+}
+],
+"lo": {
+"x": 1579,
+"y": 483,
+"z": 761
+},
+"mod": "S2",
+"rh": true,
+"t": "z",
+"u": "x",
+"v": "y"
+},
+{
+"DL": 482,
+"SZ": 51,
+"code": "S2C-2",
+"g": 16,
+"hi": {
+"x": 2061,
+"y": 534,
+"z": 103
+},
+"holes": [
+{
+"along": 25.5,
+"d": 4,
+"depth": 35,
+"edge_coord": 0,
+"into": 1,
+"kind": "EDGE",
+"n_axis_is_u": true,
+"partner": "S2B-1"
+},
+{
+"along": 25.5,
+"d": 4,
+"depth": 35,
+"edge_coord": 482,
+"into": -1,
+"kind": "EDGE",
+"n_axis_is_u": true,
+"partner": "S2B-2"
+},
+{
+"along": 50.0,
+"d": 4,
+"depth": 35,
+"edge_coord": 0,
+"into": 1,
+"kind": "EDGE",
+"n_axis_is_u": false,
+"partner": "S2D"
+},
+{
+"along": 432.0,
+"d": 4,
+"depth": 35,
+"edge_coord": 0,
+"into": 1,
+"kind": "EDGE",
+"n_axis_is_u": false,
+"partner": "S2D"
+}
+],
+"lo": {
+"x": 1579,
+"y": 483,
+"z": 87
+},
+"mod": "S2",
+"rh": true,
+"t": "z",
+"u": "x",
+"v": "y"
+},
+{
+"DL": 690,
+"SZ": 250,
+"code": "S3B-1",
+"g": 16,
+"hi": {
+"x": 1579,
+"y": 807,
+"z": 777
+},
+"holes": [
+{
+"axis_n": "x",
+"d": 5,
+"kind": "FACE",
+"partner": "S3D",
+"side": "B",
+"u": 640.0,
+"v": 21.0
+},
+{
+"axis_n": "x",
+"d": 5,
+"kind": "FACE",
+"partner": "S3D",
+"side": "B",
+"u": 345.0,
+"v": 21.0
+},
+{
+"axis_n": "x",
+"d": 5,
+"kind": "FACE",
+"partner": "S3D",
+"side": "B",
+"u": 50.0,
+"v": 21.0
+},
+{
+"axis_n": "x",
+"d": 5,
+"kind": "FACE",
+"partner": "S3C-1",
+"side": "B",
+"u": 8.0,
+"v": 79.0
+},
+{
+"axis_n": "x",
+"d": 5,
+"kind": "FACE",
+"partner": "S3C-1",
+"side": "B",
+"u": 8.0,
+"v": 200.0
+},
+{
+"axis_n": "x",
+"d": 5,
+"kind": "FACE",
+"partner": "S3C-2",
+"side": "B",
+"u": 682.0,
+"v": 79.0
+},
+{
+"axis_n": "x",
+"d": 5,
+"kind": "FACE",
+"partner": "S3C-2",
+"side": "B",
+"u": 682.0,
+"v": 200.0
+}
+],
+"lo": {
+"x": 1563,
+"y": 557,
+"z": 87
+},
+"mod": "S3",
+"rh": false,
+"t": "x",
+"u": "z",
+"v": "y"
+},
+{
+"DL": 690,
+"SZ": 250,
+"code": "S3B-2",
+"g": 16,
+"hi": {
+"x": 2077,
+"y": 807,
+"z": 777
+},
+"holes": [
+{
+"axis_n": "x",
+"d": 5,
+"kind": "FACE",
+"partner": "S3D",
+"side": "A",
+"u": 640.0,
+"v": 21.0
+},
+{
+"axis_n": "x",
+"d": 5,
+"kind": "FACE",
+"partner": "S3D",
+"side": "A",
+"u": 345.0,
+"v": 21.0
+},
+{
+"axis_n": "x",
+"d": 5,
+"kind": "FACE",
+"partner": "S3D",
+"side": "A",
+"u": 50.0,
+"v": 21.0
+},
+{
+"axis_n": "x",
+"d": 5,
+"kind": "FACE",
+"partner": "S3C-1",
+"side": "A",
+"u": 8.0,
+"v": 79.0
+},
+{
+"axis_n": "x",
+"d": 5,
+"kind": "FACE",
+"partner": "S3C-1",
+"side": "A",
+"u": 8.0,
+"v": 200.0
+},
+{
+"axis_n": "x",
+"d": 5,
+"kind": "FACE",
+"partner": "S3C-2",
+"side": "A",
+"u": 682.0,
+"v": 79.0
+},
+{
+"axis_n": "x",
+"d": 5,
+"kind": "FACE",
+"partner": "S3C-2",
+"side": "A",
+"u": 682.0,
+"v": 200.0
+}
+],
+"lo": {
+"x": 2061,
+"y": 557,
+"z": 87
+},
+"mod": "S3",
+"rh": false,
+"t": "x",
+"u": "z",
+"v": "y"
+},
+{
+"DL": 690,
+"SZ": 482,
+"code": "S3D",
+"g": 16,
+"hi": {
+"x": 2061,
+"y": 586,
+"z": 777
+},
+"holes": [
+{
+"along": 50.0,
+"d": 4,
+"depth": 35,
+"edge_coord": 0,
+"into": 1,
+"kind": "EDGE",
+"n_axis_is_u": false,
+"partner": "S3B-1"
+},
+{
+"along": 345.0,
+"d": 4,
+"depth": 35,
+"edge_coord": 0,
+"into": 1,
+"kind": "EDGE",
+"n_axis_is_u": false,
+"partner": "S3B-1"
+},
+{
+"along": 640.0,
+"d": 4,
+"depth": 35,
+"edge_coord": 0,
+"into": 1,
+"kind": "EDGE",
+"n_axis_is_u": false,
+"partner": "S3B-1"
+},
+{
+"along": 50.0,
+"d": 4,
+"depth": 35,
+"edge_coord": 482,
+"into": -1,
+"kind": "EDGE",
+"n_axis_is_u": false,
+"partner": "S3B-2"
+},
+{
+"along": 345.0,
+"d": 4,
+"depth": 35,
+"edge_coord": 482,
+"into": -1,
+"kind": "EDGE",
+"n_axis_is_u": false,
+"partner": "S3B-2"
+},
+{
+"along": 640.0,
+"d": 4,
+"depth": 35,
+"edge_coord": 482,
+"into": -1,
+"kind": "EDGE",
+"n_axis_is_u": false,
+"partner": "S3B-2"
+},
+{
+"axis_n": "y",
+"d": 5,
+"kind": "FACE",
+"partner": "S3C-1",
+"side": "B",
+"u": 682.0,
+"v": 50.0
+},
+{
+"axis_n": "y",
+"d": 5,
+"kind": "FACE",
+"partner": "S3C-1",
+"side": "B",
+"u": 682.0,
+"v": 432.0
+},
+{
+"axis_n": "y",
+"d": 5,
+"kind": "FACE",
+"partner": "S3C-2",
+"side": "B",
+"u": 8.0,
+"v": 50.0
+},
+{
+"axis_n": "y",
+"d": 5,
+"kind": "FACE",
+"partner": "S3C-2",
+"side": "B",
+"u": 8.0,
+"v": 432.0
+}
+],
+"lo": {
+"x": 1579,
+"y": 570,
+"z": 87
+},
+"mod": "S3",
+"rh": true,
+"t": "y",
+"u": "z",
+"v": "x"
+},
+{
+"DL": 482,
+"SZ": 221,
+"code": "S3C-1",
+"g": 16,
+"hi": {
+"x": 2061,
+"y": 807,
+"z": 777
+},
+"holes": [
+{
+"along": 50.0,
+"d": 4,
+"depth": 35,
+"edge_coord": 0,
+"into": 1,
+"kind": "EDGE",
+"n_axis_is_u": true,
+"partner": "S3B-1"
+},
+{
+"along": 171.0,
+"d": 4,
+"depth": 35,
+"edge_coord": 0,
+"into": 1,
+"kind": "EDGE",
+"n_axis_is_u": true,
+"partner": "S3B-1"
+},
+{
+"along": 50.0,
+"d": 4,
+"depth": 35,
+"edge_coord": 482,
+"into": -1,
+"kind": "EDGE",
+"n_axis_is_u": true,
+"partner": "S3B-2"
+},
+{
+"along": 171.0,
+"d": 4,
+"depth": 35,
+"edge_coord": 482,
+"into": -1,
+"kind": "EDGE",
+"n_axis_is_u": true,
+"partner": "S3B-2"
+},
+{
+"along": 50.0,
+"d": 4,
+"depth": 35,
+"edge_coord": 0,
+"into": 1,
+"kind": "EDGE",
+"n_axis_is_u": false,
+"partner": "S3D"
+},
+{
+"along": 432.0,
+"d": 4,
+"depth": 35,
+"edge_coord": 0,
+"into": 1,
+"kind": "EDGE",
+"n_axis_is_u": false,
+"partner": "S3D"
+}
+],
+"lo": {
+"x": 1579,
+"y": 586,
+"z": 761
+},
+"mod": "S3",
+"rh": true,
+"t": "z",
+"u": "x",
+"v": "y"
+},
+{
+"DL": 482,
+"SZ": 221,
+"code": "S3C-2",
+"g": 16,
+"hi": {
+"x": 2061,
+"y": 807,
+"z": 103
+},
+"holes": [
+{
+"along": 50.0,
+"d": 4,
+"depth": 35,
+"edge_coord": 0,
+"into": 1,
+"kind": "EDGE",
+"n_axis_is_u": true,
+"partner": "S3B-1"
+},
+{
+"along": 171.0,
+"d": 4,
+"depth": 35,
+"edge_coord": 0,
+"into": 1,
+"kind": "EDGE",
+"n_axis_is_u": true,
+"partner": "S3B-1"
+},
+{
+"along": 50.0,
+"d": 4,
+"depth": 35,
+"edge_coord": 482,
+"into": -1,
+"kind": "EDGE",
+"n_axis_is_u": true,
+"partner": "S3B-2"
+},
+{
+"along": 171.0,
+"d": 4,
+"depth": 35,
+"edge_coord": 482,
+"into": -1,
+"kind": "EDGE",
+"n_axis_is_u": true,
+"partner": "S3B-2"
+},
+{
+"along": 50.0,
+"d": 4,
+"depth": 35,
+"edge_coord": 0,
+"into": 1,
+"kind": "EDGE",
+"n_axis_is_u": false,
+"partner": "S3D"
+},
+{
+"along": 432.0,
+"d": 4,
+"depth": 35,
+"edge_coord": 0,
+"into": 1,
+"kind": "EDGE",
+"n_axis_is_u": false,
+"partner": "S3D"
+}
+],
+"lo": {
+"x": 1579,
+"y": 586,
+"z": 87
+},
+"mod": "S3",
 "rh": true,
 "t": "z",
 "u": "x",
