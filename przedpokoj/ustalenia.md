@@ -34,9 +34,11 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
 ### Szezlong SZ (X 20–540)
 - Odstęp 20 od szczeliny D2. Szerokość 520, wysokość 460 razem z poduszką 30.
 - Front F1 w linii pozostałych frontów (2026-11-12, było 500 głębokości): korpus 775 jak szafa, poduszka 697 głębokości (98–795).
-- Bez prawego boku (2026-11-12): blat SZW i tył SZT na konfirmatach przez bok szafy SDB-1 (wkręcane od środka szafy),
-  dno SZD na 2 kątownikach 40 × 40 przykręconych do SDB-1 (na wysokości dna szezlonga od środka szafy jest dno SDD,
-  konfirmatu nie da się wkręcić). W pipeline szezlong liczony razem z modułem SD.
+- Prawy bok szezlonga zostaje (2026-11-13; 2026-11-12 był usunięty w całości), ale bez części we wnęce: SZBP stoi na dnie SZD.
+  Tak samo lewy bok szafy SDBL stoi na dnie SDD. Wnęka na buty pod szezlongiem i szafą jest wspólna (od SZBL do SDBP, ok. 1062).
+- Wzmocnienie styku den SZD i SDD (czoło do czoła na x 540): 2 kołki Ø8 × 40 w czołach, od spodu 2 płaskowniki stalowe
+  200 × 30 × 4 przykręcone do obu den, pod stykiem 2 nóżki regulowane (z tyłu przy ścianie i 150 za frontem korpusu).
+  Boki SZBP i SDBL skręcone ze sobą 3 śrubami łącznikowymi. Korpusy dolne przykręcone do ściany przez tyły.
 - Wnęka 0–177, dno 177–195, szuflada 195–412 (ok. 177 w środku), blat 412–430, poduszka 430–460.
 - Siedzisko jest schowkiem na buty: szuflada od frontu, Blum MOVENTO 700 + TIP-ON BLUMOTION (skrzynka niżej).
 - Front szuflady F1 zasłania krawędź blatu: 177–430.
@@ -76,10 +78,10 @@ czoło i tył skrzynki między bokami, stoją na dnie. Płyta 16 mm (kolor wnęt
 
 | KOD | ELEMENT | WYMIAR | SZT | UWAGI |
 |---|---|---|---|---|
-| SS | szezlong: LW 502, NL 700, wysokość boku 200 (3 nad dnem SZD, 14 pod blatem) | | | wnętrze 460 × 171 × 658 |
+| SS | szezlong: LW 484, NL 700, wysokość boku 200 (3 nad dnem SZD, 14 pod blatem) | | | wnętrze 442 × 171 × 658 |
 | SSB | bok | 690 × 200 | 2 | |
-| SSD | dno | 690 × 460 | 1 | otwory pod zaczepy MOVENTO |
-| SSC | czoło i tył skrzynki | 460 × 171 | 2 | front F1 przykręcany do czoła |
+| SSD | dno | 690 × 442 | 1 | otwory pod zaczepy MOVENTO |
+| SSC | czoło i tył skrzynki | 442 × 171 | 2 | front F1 przykręcany do czoła |
 | SW | szafa: LW 524 − dystans 20 = 504, NL 700, wysokość boku 250 (ZAŁOŻENIE, max ok. 287) | | | wnętrze 462 × 221 × 658 |
 | SWB | bok | 690 × 250 | 2 | |
 | SWD | dno | 690 × 462 | 1 | otwory pod zaczepy MOVENTO |
@@ -112,3 +114,5 @@ Skrzynki nie są formatkami w pipeline (płyta 16); zamawiane osobno według tej
   prowadnice Blum MOVENTO.
 - 2026-11-12: szezlong do linii frontów (korpus 775) bez prawego boku; fronty górne i zaślepka do 2667 (HF 2668);
   skrzynki szuflad MOVENTO 700.
+- 2026-11-13: prawy bok szezlonga przywrócony (SZBP, na dnie SZD); boki SZBP i SDBL bez części we wnęce, wspólna wnęka;
+  styk den: kołki, płaskowniki, 2 nóżki; kody boków SZBL, SZBP, SDBL, SDBP (były SZB-1, SDB-1, SDB-2).
