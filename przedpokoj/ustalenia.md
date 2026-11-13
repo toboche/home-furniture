@@ -58,11 +58,13 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
 ### Szafa wysoka SD + SG (X 540–1100, szerokość 560)
 - Przylega do boku pionu (2026-11-12; wcześniej luz 3 i 557), żeby front miał 3 mm do zaślepki.
 - Korpusy osobno: dolny SD (0–2161) i górny SG (2163–2663).
-- Fronty bez podziału pionowego. Dół (2026-11-13): 3 szuflady z własnymi frontami F7 (177–430, w linii szuflady szezlonga),
-  F8 (433–533, klucze i drobiazgi), F9 (536–836), nad nimi drzwi F4 (839–2161,5; 557 × 1322,5). Góra F5 (557 × 502,5).
-  Zawiasy drzwi po prawej (od pionu).
+- Fronty bez podziału pionowego: dół jeden front F4 (177–2161,5; 557 × 1984,5, 4 zawiasy, 2 TIP-ON), góra F5 (557 × 502,5).
+  Zawiasy po prawej (od pionu). Wszystkie szuflady szafy są wewnętrzne, za F4 (2026-11-13; wcześniej przez chwilę
+  osobne fronty F7–F9).
   Otwarte F4 wchodzi ok. 560 w przejście (1235) i może zahaczać o otwarte DM1.
-- Wnętrze SD: szuflady S1, S2, S3 (MOVENTO 700 + TIP-ON BLUMOTION), półka stała SDP 822–840, nad nią strefa kurtek
+- Wnętrze SD: szuflady wewnętrzne S1 (przedział 177–430, skrzynka jak w szezlongu), S2 (433–533, klucze), S3 (536–836),
+  MOVENTO 700 z BLUMOTION, wyciągane ręcznie (wycięcie na dłoń w czole skrzynki); od strony zawiasów F4 dystans 20 pod prowadnicą,
+  skrzynki cofnięte 25 za przód korpusu. Półka stała SDP 822–840, nad nią strefa kurtek
   840–2143 (1303 w świetle) z drążkiem (oś 2093, 50 pod wieńcem; pod drążkiem ok. 1250). Część górna SG bez półki.
 
 ### Zaślepka na pionie F6
@@ -83,9 +85,9 @@ i `wyniki/kalkulator_nawierty_16mm.csv`.
 | SKRZYNKA | GDZIE | WYSOKOŚĆ BOKU | WNĘTRZE (SZER. × WYS. × GŁĘB.) |
 |---|---|---|---|
 | SS | szezlong (LW 484), front F1 | 200 | 442 × 171 × 658 |
-| S1 | szafa, szuflada 1 (LW 524), front F7 | 200 | 482 × 171 × 658 |
-| S2 | szafa, szuflada 2 (klucze), front F8 | 80 | 482 × 51 × 658 |
-| S3 | szafa, szuflada 3, front F9 | 250 | 482 × 221 × 658 |
+| S1 | szafa, szuflada wewnętrzna 1 (LW 524 − dystans 20) | 200 | 462 × 171 × 658 |
+| S2 | szafa, szuflada wewnętrzna 2 (klucze) | 80 | 462 × 51 × 658 |
+| S3 | szafa, szuflada wewnętrzna 3 | 250 | 462 × 221 × 658 |
 
 ## Konstrukcja (2026-11-12)
 - Płyta 18 mm (`wspolne/zasady.md`), konfirmaty w obrębie korpusu, plecy 18 między bokami.
@@ -116,3 +118,5 @@ i `wyniki/kalkulator_nawierty_16mm.csv`.
   styk den: kołki, płaskowniki, 2 nóżki; kody boków SZBL, SZBP, SDBL, SDBP (były SZB-1, SDB-1, SDB-2).
 - 2026-11-13: szafa dół: 3 szuflady z frontami (253 w linii szezlonga, 100, 300), półka nad nimi, drzwi F4 nad szufladami;
   skrzynki szuflad jako formatki 16 mm (pipeline: reguly.GRUBOSCI, osobne formatki_16mm.csv).
+- 2026-11-13: wszystkie szuflady szafy wewnętrzne za jednymi drzwiami F4 (177–2161,5, 4 zawiasy); fronty F7–F9 usunięte;
+  skrzynki S1–S3 z dystansem 20 od strony zawiasów, cofnięte 25.
