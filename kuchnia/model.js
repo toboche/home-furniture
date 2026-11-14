@@ -41,6 +41,8 @@ var ZRU=RU2+RU/2;      /* oś rury okapu od ściany głównej: 97 */
 var YRU=YS-RU3-RU/2;   /* oś rury okapu: 2577 */
 var YSK=YS-RU3-RU-10;  /* góra dna skrzynki na rurę (10 pod rurą): 2502 */
 var ZWY=GK-250+93+75;  /* ZAŁOŻENIE: oś wylotu okapu od ściany głównej (korpus okapu dosunięty do przodu): 218 */
+var ZPI=ZRU+12.5;      /* oś pionu Ø150 (redukcja mimośrodowa: +12,5 od osi Ø125): 109,5 */
+var YRD=2400;          /* ZAŁOŻENIE: dół redukcji 150/125 (pod kolanem 90°) */
 var ZSK=RU2+RU+10;     /* tył zaślepki skrzynki (10 przed rurą): 172 */
 var YSOP=2150;         /* ZAŁOŻENIE: półka nad okapem (dół), pod nią redukcja i przesunięcie rury do tyłu */
 var NPW=2;             /* półki w wąskiej szafce (równe przegrody; 2026-11-14: 3 → 2) */
@@ -103,10 +105,11 @@ add(zawiasy('F1',XSO+1.5,YP+1.5,SOW-3,YT-YP-3,'prawa',3,GK));
 add([
   {n:'Okap DUO 55: szkło 550 × 290',layer:'Okap',x:XH-275,y:YP-4,z:GK-290,w:550,h:4,d:290,c:0x26282b},
   {n:'Okap DUO 55: korpus 514 × 250 × 263',layer:'Okap',x:XH-257,y:YP,z:GK-250,w:514,h:263,d:250,c:0x6f7377},
-  {t:'cyl3',n:'Wylot okapu Ø150 + redukcja mimośrodowa 150/125 (spiro, uszczelka), płaską stroną do ściany głównej',layer:'Rura okapu',ax:'y',px:XH,py:YP+263+60,pz:ZWY,r:75,len:120,c:RURA},
-  {t:'cyl3',n:'Rura Ø125 spiro: pion za redukcją (oś przesunięta 12,5 do ściany)',layer:'Rura okapu',ax:'y',px:XH,py:YP+263+150,pz:ZWY-12.5,r:62.5,len:60,c:RURA},
-  {t:'cyl3',n:'Przesunięcie do tyłu: 2 kolana 45° Ø125 (schemat)',layer:'Rura okapu',ax:'z',px:XH,py:YP+263+230,pz:(ZWY-12.5+ZRU)/2,r:62.5,len:ZWY-12.5-ZRU+125,c:RURA},
-  {t:'cyl3',n:'Rura Ø125 spiro: pion przy ścianie, kolano 90° pod sufitem',layer:'Rura okapu',ax:'y',px:XH,py:(YP+263+230+YRU)/2,pz:ZRU,r:62.5,len:YRU-(YP+263+230),c:RURA},
+  {t:'cyl3',n:'Wylot okapu Ø150 + łącznik, rura spiro Ø150',layer:'Rura okapu',ax:'y',px:XH,py:YP+263+60,pz:ZWY,r:75,len:120,c:RURA},
+  {t:'cyl3',n:'Przesunięcie do tyłu: 2 kolana 45° Ø150 (schemat), pod półką SOP',layer:'Rura okapu',ax:'z',px:XH,py:YP+263+230,pz:(ZWY+ZPI)/2,r:75,len:ZWY-ZPI+150,c:RURA},
+  {t:'cyl3',n:'Rura spiro Ø150: pion przy ścianie (z matą akustyczną)',layer:'Rura okapu',ax:'y',px:XH,py:(YP+263+230+YRD)/2,pz:ZPI,r:75,len:YRD-(YP+263+230),c:RURA},
+  {t:'cyl3',n:'Redukcja mimośrodowa 150/125 (spiro, uszczelka), płaską stroną do ściany głównej',layer:'Rura okapu',ax:'y',px:XH,py:YRD+50,pz:ZRU+6,r:69,len:100,c:RURA},
+  {t:'cyl3',n:'Rura spiro Ø125: kolano 90° tłoczone pod sufitem',layer:'Rura okapu',ax:'y',px:XH,py:(YRD+100+YRU)/2,pz:ZRU,r:62.5,len:YRU-YRD-100,c:RURA},
   {t:'cyl3',n:'Rura Ø125 spiro: poziomo do ścianki, przez SOB-2, WSB-1, WSB-2',layer:'Rura okapu',ax:'x',px:(XH+A)/2,py:YRU,pz:ZRU,r:62.5,len:A-XH,c:RURA}
 ]);
 

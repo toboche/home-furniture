@@ -43,20 +43,21 @@ PILOT_DEPTH = 5
 X_OKAP = 2656        # oś płyty i okapu (model.js: XH)
 Y_RURA = 2577        # oś rury okapu (YRU)
 Z_RURA = 97          # oś rury okapu od ściany głównej (ZRU)
+Z_PION = 109.5       # oś pionu Ø150 w SO (ZPI)
 
 
 def dodatkowe_otwory(P, parts, loc):
-    """otwory ok. Ø140 pod rurę Ø125 (z kolanami i obejmami) w bokach SOB-2, WSB-1, WSB-2 i w półce SOP:
+    """otwory Ø140 pod rurę Ø125 (pierścień gumowy) w bokach SOB-2, WSB-1, WSB-2 i Ø170 pod pion Ø150 w półce SOP:
     sklep wierci tylko środek, otwór wycina użytkownik otwornicą"""
     def pilot(code, side, pos):
         p = P[code]
         p['holes'].append(dict(kind='FACE', side=side, u=loc(p, p['u'], pos[p['u']]), v=loc(p, p['v'], pos[p['v']]),
-                               d=PILOT_D, depth=PILOT_DEPTH, partner='środek otworu Ø140 pod rurę okapu',
+                               d=PILOT_D, depth=PILOT_DEPTH, partner='środek otworu pod rurę okapu (Ø140 w bokach, Ø170 w SOP)',
                                axis_n='-', pin=False, pilot=True))
     for code in ('SOB-2', 'WSB-1', 'WSB-2'):
         if code in P:
             pilot(code, 'A', {'y': Y_RURA, 'z': Z_RURA})
-    pilot('SOP', 'A', {'x': X_OKAP, 'z': Z_RURA})
+    pilot('SOP', 'A', {'x': X_OKAP, 'z': Z_PION})
 
     # --- SOB-1: złącza mimośrodowe (np. Häfele Minifix 15) + kołki Ø8 x 30 ---
     # obudowa Ø15 x 13 w licu łączonej płyty, 24 od styku; trzpień: Ø5 x 11 w wewnętrznym licu SOB-1;
@@ -121,7 +122,7 @@ FORMATKI = [
     F('SOT', 'Szafka okapowa: tył', okleina='', nawierty='KONFIRMATY + MIMOŚRODY I KOŁKI (do SOB-1)'),
     F('SOW', 'Szafka okapowa: wieniec górny', okleina='1DL', nawierty='KONFIRMATY + MIMOŚRÓD I KOŁKI (do SOB-1)'),
     F('SOP', 'Szafka okapowa: półka nad okapem', okleina='1DL', nawierty='KONFIRMATY + MIMOŚRÓD I KOŁKI (do SOB-1)',
-      uwagi='środek otworu Ø140 pod rurę (oś 97 od ściany)'),
+      uwagi='środek otworu Ø170 pod pion Ø150 (oś 109,5 od ściany)'),
     F('WSB', 'Wąska szafka: boki', okleina='1DL', nawierty='KONFIRMATY',
       uwagi='środki otworów Ø140 pod rurę w obu bokach'),
     F('WST', 'Wąska szafka: tył', okleina='', nawierty='KONFIRMATY'),

@@ -91,7 +91,7 @@ HF_MODEL.items.push(
   {t:'cyl3',n:'Otwór Ø4 x 35 w SOP (czoło, konfirmat z SOT)',layer:'Otwory',ax:'z',px:2448,py:2159,pz:35.5,r:2,len:35,c:0x15181b},
   {t:'cyl3',n:'Otwór Ø4 x 35 w SOP (czoło, konfirmat z SOT)',layer:'Otwory',ax:'z',px:2656,py:2159,pz:35.5,r:2,len:35,c:0x15181b},
   {t:'cyl3',n:'Otwór Ø4 x 35 w SOP (czoło, konfirmat z SOT)',layer:'Otwory',ax:'z',px:2864,py:2159,pz:35.5,r:2,len:35,c:0x15181b},
-  {t:'cyl3',n:'Nawiert środka Ø5 x 5 pod otwór wycinany samodzielnie w SOP',layer:'Otwory',ax:'y',px:2656,py:2165.5,pz:97,r:2.5,len:5.6,c:0x15181b},
+  {t:'cyl3',n:'Nawiert środka Ø5 x 5 pod otwór wycinany samodzielnie w SOP',layer:'Otwory',ax:'y',px:2656,py:2165.5,pz:109.5,r:2.5,len:5.6,c:0x15181b},
   {t:'cyl3',n:'Otwór Ø15 x 13 pod obudowę mimośrodu w SOP',layer:'Otwory',ax:'y',px:2422,py:2161.5,pz:159,r:7.5,len:13.6,c:0x15181b},
   {t:'cyl3',n:'Otwór Ø8 x 33 pod trzpień mimośrodu w SOP (do SOB-1)',layer:'Otwory',ax:'x',px:2414.5,py:2159,pz:159,r:4,len:33,c:0x15181b},
   {t:'cyl3',n:'Otwór Ø8 x 20 pod kołek w SOP (do SOB-1)',layer:'Otwory',ax:'x',px:2408,py:2159,pz:60,r:4,len:20,c:0x15181b},

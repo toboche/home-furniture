@@ -48,10 +48,11 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
 ### Kanał okapu, 2026-11-14
 - Rury i kolana SZTYWNE, gładkie (PCV lub spiro), bez rury elastycznej: mniejsze opory i turbulencje, ciszej
   (producent: jak najgładszy przewód, zagięcia najwyżej 90°).
-- Średnica: rura w ścianie Ø125 wewnętrzna (130 zewnętrzna). Redukcja 150 → 125 na wylocie okapu.
-- Trasa: wylot → redukcja → pion → przesunięcie do tyłu ok. 120 (z oś wylotu ok. 218 na 97) dwoma kolanami 45° pod półką SOP
-  → pion przy ścianie (oś z 97) przez SOP → kolano 90° pod sufitem → poziomo (oś Y 2577, z 97) przez SOB-2, WSB-1, WSB-2
-  do ścianki. Otwory Ø140 wycina użytkownik, sklep wierci środek Ø5 × 5.
+- Średnica: rura w ścianie Ø125 wewnętrzna (130 zewnętrzna). Redukcja 150 → 125 pod sufitem (zmiana z 2026-11-14,
+  wcześniej na wylocie okapu; patrz „cichy kanał”).
+- Trasa (aktualna): wylot Ø150 → przesunięcie do tyłu dwoma kolanami 45° Ø150 pod półką SOP (z ok. 218 na 109,5)
+  → pion Ø150 przez SOP (otwór Ø170) → redukcja mimośrodowa 150/125 → kolano 90° Ø125 pod sufitem → poziomo
+  (oś Y 2577, z 97) przez SOB-2, WSB-1, WSB-2 (otwory Ø140) do ścianki. Otwory wycina użytkownik, sklep wierci środek Ø5 × 5.
 
 ### 2026-11-14: redukcja mimośrodowa, system spiro, 2 półki w WS
 - Redukcja 150 → 125 MIMOŚRODOWA (asymetryczna), ocynk, z uszczelką, np. lueftungsteile.ch „REDUKTION Reduzierstück
@@ -63,13 +64,15 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
   (ewentualnie łącznik/mufa 150).
 - Wąska szafka: 2 półki zamiast 3, równe przegrody (patrz wyżej).
 
-### 2026-11-14: kanał okapu ma być możliwie cichy (PROPOZYCJA, do potwierdzenia)
+### 2026-11-14: kanał okapu ma być możliwie cichy (potwierdzone)
 - Stal ocynkowana spiro z uszczelkami EPDM, kolana tłoczone (gładkie), nie segmentowe.
 - Duży przekrój jak najdłużej: pion w SO i przesunięcie kolanami 45° w Ø150, redukcja mimośrodowa 150 → 125 dopiero pod
-  sufitem (przed kolanem 90° albo za nim), poziomy odcinek Ø125. Przy 500 m³/h prędkość w Ø150 ok. 7,9 m/s, w Ø125 ok. 11,3 m/s.
-  Pion Ø150 przy ścianie (oś z 97) mieści się w SO (plecy do z 18), otwór w SOP Ø170.
-- Mata akustyczna (np. kauczukowa samoprzylepna ok. 10 mm) na zewnątrz rur; obejmy z gumową wkładką; rura nie dotyka płyt
-  (w otworach pierścień z miękkiej gumy/pianki). W skrzynce WS z matą 10: rura z matą z 24,5–169,5, Y 2504,5–2649,5 (mieści się).
+  sufitem (przed kolanem 90°; w modelu dół redukcji Y 2400, ZAŁOŻENIE), poziomy odcinek Ø125.
+  Pion Ø150 na osi z 109,5 (redukcja mimośrodowa płaską stroną do ściany przesuwa oś na 97). Przy 500 m³/h prędkość w Ø150 ok. 7,9 m/s, w Ø125 ok. 11,3 m/s.
+  Pion Ø150 mieści się w SO (z 34,5–184,5, plecy do z 18), otwór w SOP Ø170.
+- Mata akustyczna (np. kauczukowa samoprzylepna ok. 10 mm) na zewnątrz rur, przerwana w otworach; obejmy z gumową wkładką;
+  rura nie dotyka płyt (w otworach Ø140 pierścień z miękkiej gumy/pianki). W skrzynce WS z matą 10: z 24,5–169,5,
+  Y 2504,5–2649,5 (mieści się).
 - BEZ tłumika z wełną w kanale (tłuszcz osadza się w wypełnieniu: higiena i ryzyko pożaru).
 
 ## Założenia do potwierdzenia
@@ -102,3 +105,4 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
   WS ze skrzynką, rura okapu (schemat), istniejąca kuchnia jako tło.
 - 2026-11-14: SOB-1 na mimośrodach i kołkach (bez widocznych konfirmatów), SOP potwierdzona, okap bez gniazdka.
 - 2026-11-14: redukcja mimośrodowa 150/125 i system spiro Ø125; wąska szafka 2 półki (3 × 306,33).
+- 2026-11-14: cichy kanał: pion Ø150, redukcja pod sufitem, mata akustyczna, otwór w SOP Ø170.
