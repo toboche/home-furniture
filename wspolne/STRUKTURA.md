@@ -130,6 +130,7 @@ osie płyty `p['u']` = dłuższa, `p['v']` = krótsza; lico A = strona +oś grub
 - w czole: `dict(kind='EDGE', n_axis_is_u, edge_coord, along, depth, d, partner, into)`; `d` = 8 oznacza kołek.
 - opcjonalnie `opis` (np. `'Otwór Ø15 x 13 pod obudowę mimośrodu'`): nazwa otworu w widoku 3D; otwór w czole z `opis`
   nie dostaje kołka (np. otwór Ø8 pod trzpień złącza mimośrodowego).
+- opcjonalnie w czole `do_obudowy=True`: otwór celowo wchodzi do otworu w licu (obudowa mimośrodu), kontrola kolizji go pomija.
 
 ## 7. Nowe pomieszczenie krok po kroku
 1. **Gałąź:** `git checkout -b NAZWA/start` od aktualnego `main`.

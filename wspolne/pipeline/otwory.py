@@ -145,6 +145,8 @@ def kolizje(parts, R):
                 if a['n_axis_is_u'] == b['n_axis_is_u'] and abs(a['edge_coord'] - b['edge_coord']) < 1 and abs(a['along'] - b['along']) < 20:
                     issues.append((p['code'], 'dwa otwory krawędziowe blisko', a['along'], b['along']))
         for e in eh:
+            if e.get('do_obudowy'):
+                continue   # zamierzone: otwór pod trzpień mimośrodu wchodzi do obudowy Ø15 w licu
             for f in fh:
                 if e['n_axis_is_u']:
                     if abs(f['v'] - e['along']) < 8:
