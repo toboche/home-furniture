@@ -63,6 +63,15 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
   (ewentualnie łącznik/mufa 150).
 - Wąska szafka: 2 półki zamiast 3, równe przegrody (patrz wyżej).
 
+### 2026-11-14: kanał okapu ma być możliwie cichy (PROPOZYCJA, do potwierdzenia)
+- Stal ocynkowana spiro z uszczelkami EPDM, kolana tłoczone (gładkie), nie segmentowe.
+- Duży przekrój jak najdłużej: pion w SO i przesunięcie kolanami 45° w Ø150, redukcja mimośrodowa 150 → 125 dopiero pod
+  sufitem (przed kolanem 90° albo za nim), poziomy odcinek Ø125. Przy 500 m³/h prędkość w Ø150 ok. 7,9 m/s, w Ø125 ok. 11,3 m/s.
+  Pion Ø150 przy ścianie (oś z 97) mieści się w SO (plecy do z 18), otwór w SOP Ø170.
+- Mata akustyczna (np. kauczukowa samoprzylepna ok. 10 mm) na zewnątrz rur; obejmy z gumową wkładką; rura nie dotyka płyt
+  (w otworach pierścień z miękkiej gumy/pianki). W skrzynce WS z matą 10: rura z matą z 24,5–169,5, Y 2504,5–2649,5 (mieści się).
+- BEZ tłumika z wełną w kanale (tłuszcz osadza się w wypełnieniu: higiena i ryzyko pożaru).
+
 ## Założenia do potwierdzenia
 - Położenie okapu w głąb: korpus dosunięty do przodu (z 50–300), szkło z 10–300. Oś wylotu ok. 218 od ściany głównej.
   Sprawdzić przy montażu (otwory 35 i 215 od przodu boku).
@@ -84,8 +93,9 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
 - Okap bez gniazdka: przewód okapu łączony na stałe z przewodem ze ściany (ZA), złączką w puszce wewnątrz SO nad półką SOP.
   Instrukcja okapu: przy podłączeniu bez dostępnej wtyczki obwód musi mieć wyłącznik dwubiegunowy (odcięcie L i N);
   sprawdzić w rozdzielnicy (np. osobny wyłącznik dwubiegunowy albo różnicówka na tym obwodzie).
-  Obwód okapu: Legrand 403357 = S301 B16 1P (rozłącza tylko L, N nie). Do decyzji: wyłącznik 1P+N zamiast 1P,
-  różnicówka 2P/4P na tym obwodzie (odcina też inne obwody) albo jednak gniazdo w szafce.
+  Obwód okapu: Legrand 403357 = S301 B16 1P (rozłącza tylko L). Nad nim różnicówka Legrand 411708 = P304 4P 40A 30mA typ AC:
+  rozłącza wszystkie bieguny razem z N, więc odłączenie dwubiegunowe jest (wyłączając różnicówkę). Decyzja 2026-11-14:
+  bez gniazda, połączenie złączkami Wago w puszce w SO (do rozpięcia przy serwisie).
 
 ## Dziennik
 - 2026-11-14: start katalogu (kopia szablonu), pomiary z rozmowy 2026-11-12/13, model: półka P1/P3, SO z okapem,
