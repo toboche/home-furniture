@@ -66,7 +66,9 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
 ## Założenia do potwierdzenia
 - Położenie okapu w głąb: korpus dosunięty do przodu (z 50–300), szkło z 10–300. Oś wylotu ok. 218 od ściany głównej.
   Sprawdzić przy montażu (otwory 35 i 215 od przodu boku).
-- Luz 2 mm wąskiej szafki do ścianki. Luzy w półce: patrz dziennik 2026-11-14 (pytanie o P3).
+- Luz 2 mm wąskiej szafki do ścianki.
+- P3 bez luzu (1980, wypełnia odcinek P1 → SOB-1). Przed ostatecznym zamówieniem przeanalizować jeszcze raz
+  skrócenie P3 o 2 mm (1978) – decyzja użytkownika 2026-11-14: na razie bez szczeliny.
 - Dobór okuć push-to-open i liczby zawiasów F1 (frontu ok. 7,5 kg).
 
 ### 2026-11-14: bok SOB-1 bez konfirmatów, półka SOP, zasilanie okapu
@@ -82,6 +84,8 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
 - Okap bez gniazdka: przewód okapu łączony na stałe z przewodem ze ściany (ZA), złączką w puszce wewnątrz SO nad półką SOP.
   Instrukcja okapu: przy podłączeniu bez dostępnej wtyczki obwód musi mieć wyłącznik dwubiegunowy (odcięcie L i N);
   sprawdzić w rozdzielnicy (np. osobny wyłącznik dwubiegunowy albo różnicówka na tym obwodzie).
+  Obwód okapu: Legrand 403357 = S301 B16 1P (rozłącza tylko L, N nie). Do decyzji: wyłącznik 1P+N zamiast 1P,
+  różnicówka 2P/4P na tym obwodzie (odcina też inne obwody) albo jednak gniazdo w szafce.
 
 ## Dziennik
 - 2026-11-14: start katalogu (kopia szablonu), pomiary z rozmowy 2026-11-12/13, model: półka P1/P3, SO z okapem,
