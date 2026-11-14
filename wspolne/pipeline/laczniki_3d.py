@@ -37,7 +37,8 @@ def generuj(parts, items, R, log=print):
                     top = p['hi'][t] if h['side'] == 'A' else p['lo'][t]
                     sgn = -1 if h['side'] == 'A' else 1
                     c = dict(pos); c[t] = top + sgn * h['depth'] / 2
-                    cyl((('Nawiert pilotowy Ø3 x 12 pod wkręt prowadnika (%s) w %s' % (h['partner'][-2:], p['code'])) if h.get('plate') else ('Nawiert środka Ø5 x 5 pod otwór wycinany samodzielnie w %s' % p['code'])) if h.get('pilot') else ('Otwór Ø5 x 10 pod podpórkę w %s' % p['code']), 'Otwory', t, c, h['d'] / 2, h['depth'] + 0.6, DARK); npin += 1
+                    nazwa = h['opis'] + ' w ' + p['code'] if h.get('opis') else (((('Nawiert pilotowy Ø3 x 12 pod wkręt prowadnika (%s) w %s' % (h['partner'][-2:], p['code'])) if h.get('plate') else ('Nawiert środka Ø5 x 5 pod otwór wycinany samodzielnie w %s' % p['code'])) if h.get('pilot') else ('Otwór Ø5 x 10 pod podpórkę w %s' % p['code'])))
+                    cyl(nazwa, 'Otwory', t, c, h['d'] / 2, h['depth'] + 0.6, DARK); npin += 1
                     continue
                 c = dict(pos); c[t] = tm
                 cyl('Otwór Ø5 przelotowy w %s (pod konfirmat do %s)' % (p['code'], h['partner']), 'Otwory', t, c, h['d'] / 2, tn + 0.6, DARK); nhole += 1
@@ -53,7 +54,10 @@ def generuj(parts, items, R, log=print):
                 a_a = p['v'] if h['n_axis_is_u'] else p['u']
                 e0 = inv(p, a_e, h['edge_coord']); e1 = inv(p, a_e, h['edge_coord'] + h['into'] * h['depth'])
                 c = {a_e: (e0 + e1) / 2, a_a: inv(p, a_a, h['along']), t: tm}
-                if h['d'] >= 8:
+                if h.get('opis'):
+                    # otwór opisany w reguly.dodatkowe_otwory (np. pod trzpień złącza mimośrodowego), bez kołka
+                    cyl('%s w %s (do %s)' % (h['opis'], p['code'], h['partner']), 'Otwory', a_e, c, h['d'] / 2, abs(e1 - e0), DARK); nedge += 1
+                elif h['d'] >= 8:
                     cyl('Otwór Ø8 x 20 pod kołek w %s (do %s)' % (p['code'], h['partner']), 'Otwory', a_e, c, h['d'] / 2, abs(e1 - e0), DARK); ndow += 1
                     key = tuple(sorted((p['code'], h['partner']))) + (round(c[a_a]),)
                     if key not in seen_dowel:
