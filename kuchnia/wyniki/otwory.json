@@ -54,76 +54,136 @@
 },
 "holes": [
 {
-"axis_n": "x",
+"axis_n": "-",
 "d": 5,
+"depth": 11,
 "kind": "FACE",
+"opis": "Otwór Ø5 x 11 pod trzpień mimośrodu (do SOT)",
 "partner": "SOT",
-"side": "B",
-"u": 50.0,
-"v": 9.0
+"pin": true,
+"side": "A",
+"u": 69,
+"v": 9
 },
 {
-"axis_n": "x",
+"axis_n": "-",
 "d": 5,
+"depth": 11,
 "kind": "FACE",
+"opis": "Otwór Ø5 x 11 pod trzpień mimośrodu (do SOT)",
 "partner": "SOT",
-"side": "B",
-"u": 405.666667,
-"v": 9.0
+"pin": true,
+"side": "A",
+"u": 584,
+"v": 9
 },
 {
-"axis_n": "x",
+"axis_n": "-",
 "d": 5,
+"depth": 11,
 "kind": "FACE",
+"opis": "Otwór Ø5 x 11 pod trzpień mimośrodu (do SOT)",
 "partner": "SOT",
-"side": "B",
-"u": 761.333333,
-"v": 9.0
+"pin": true,
+"side": "A",
+"u": 1099,
+"v": 9
 },
 {
-"axis_n": "x",
-"d": 5,
+"axis_n": "-",
+"d": 8,
+"depth": 12,
 "kind": "FACE",
+"opis": "Otwór Ø8 x 12 pod kołek (do SOT)",
 "partner": "SOT",
-"side": "B",
-"u": 1117.0,
-"v": 9.0
+"pin": true,
+"side": "A",
+"u": 319,
+"v": 9
 },
 {
-"axis_n": "x",
-"d": 5,
+"axis_n": "-",
+"d": 8,
+"depth": 12,
 "kind": "FACE",
+"opis": "Otwór Ø8 x 12 pod kołek (do SOT)",
+"partner": "SOT",
+"pin": true,
+"side": "A",
+"u": 839,
+"v": 9
+},
+{
+"axis_n": "-",
+"d": 5,
+"depth": 11,
+"kind": "FACE",
+"opis": "Otwór Ø5 x 11 pod trzpień mimośrodu (do SOW)",
 "partner": "SOW",
-"side": "B",
-"u": 1158.0,
-"v": 68.0
+"pin": true,
+"side": "A",
+"u": 1158,
+"v": 159
 },
 {
-"axis_n": "x",
-"d": 5,
+"axis_n": "-",
+"d": 8,
+"depth": 12,
 "kind": "FACE",
+"opis": "Otwór Ø8 x 12 pod kołek (do SOW)",
 "partner": "SOW",
-"side": "B",
-"u": 1158.0,
-"v": 250.0
+"pin": true,
+"side": "A",
+"u": 1158,
+"v": 60
 },
 {
-"axis_n": "x",
-"d": 5,
+"axis_n": "-",
+"d": 8,
+"depth": 12,
 "kind": "FACE",
-"partner": "SOP",
-"side": "B",
-"u": 648.0,
-"v": 68.0
+"opis": "Otwór Ø8 x 12 pod kołek (do SOW)",
+"partner": "SOW",
+"pin": true,
+"side": "A",
+"u": 1158,
+"v": 260
 },
 {
-"axis_n": "x",
+"axis_n": "-",
 "d": 5,
+"depth": 11,
 "kind": "FACE",
+"opis": "Otwór Ø5 x 11 pod trzpień mimośrodu (do SOP)",
 "partner": "SOP",
-"side": "B",
-"u": 648.0,
-"v": 250.0
+"pin": true,
+"side": "A",
+"u": 648,
+"v": 159
+},
+{
+"axis_n": "-",
+"d": 8,
+"depth": 12,
+"kind": "FACE",
+"opis": "Otwór Ø8 x 12 pod kołek (do SOP)",
+"partner": "SOP",
+"pin": true,
+"side": "A",
+"u": 648,
+"v": 60
+},
+{
+"axis_n": "-",
+"d": 8,
+"depth": 12,
+"kind": "FACE",
+"opis": "Otwór Ø8 x 12 pod kołek (do SOP)",
+"partner": "SOP",
+"pin": true,
+"side": "A",
+"u": 648,
+"v": 260
 }
 ],
 "lo": {
@@ -335,46 +395,6 @@
 "along": 1117.0,
 "d": 4,
 "depth": 35,
-"edge_coord": 0,
-"into": 1,
-"kind": "EDGE",
-"n_axis_is_u": false,
-"partner": "SOB-1"
-},
-{
-"along": 761.333333,
-"d": 4,
-"depth": 35,
-"edge_coord": 0,
-"into": 1,
-"kind": "EDGE",
-"n_axis_is_u": false,
-"partner": "SOB-1"
-},
-{
-"along": 405.666667,
-"d": 4,
-"depth": 35,
-"edge_coord": 0,
-"into": 1,
-"kind": "EDGE",
-"n_axis_is_u": false,
-"partner": "SOB-1"
-},
-{
-"along": 50.0,
-"d": 4,
-"depth": 35,
-"edge_coord": 0,
-"into": 1,
-"kind": "EDGE",
-"n_axis_is_u": false,
-"partner": "SOB-1"
-},
-{
-"along": 1117.0,
-"d": 4,
-"depth": 35,
 "edge_coord": 516,
 "into": -1,
 "kind": "EDGE",
@@ -464,6 +484,98 @@
 "side": "B",
 "u": 519.0,
 "v": 466.0
+},
+{
+"axis_n": "-",
+"d": 15,
+"depth": 13,
+"kind": "FACE",
+"opis": "Otwór Ø15 x 13 pod obudowę mimośrodu",
+"partner": "SOB-1",
+"pin": true,
+"side": "A",
+"u": 1098,
+"v": 24
+},
+{
+"along": 1098,
+"d": 8,
+"depth": 33,
+"do_obudowy": true,
+"edge_coord": 0,
+"into": 1,
+"kind": "EDGE",
+"n_axis_is_u": false,
+"opis": "Otwór Ø8 x 33 pod trzpień mimośrodu",
+"partner": "SOB-1"
+},
+{
+"axis_n": "-",
+"d": 15,
+"depth": 13,
+"kind": "FACE",
+"opis": "Otwór Ø15 x 13 pod obudowę mimośrodu",
+"partner": "SOB-1",
+"pin": true,
+"side": "A",
+"u": 583,
+"v": 24
+},
+{
+"along": 583,
+"d": 8,
+"depth": 33,
+"do_obudowy": true,
+"edge_coord": 0,
+"into": 1,
+"kind": "EDGE",
+"n_axis_is_u": false,
+"opis": "Otwór Ø8 x 33 pod trzpień mimośrodu",
+"partner": "SOB-1"
+},
+{
+"axis_n": "-",
+"d": 15,
+"depth": 13,
+"kind": "FACE",
+"opis": "Otwór Ø15 x 13 pod obudowę mimośrodu",
+"partner": "SOB-1",
+"pin": true,
+"side": "A",
+"u": 68,
+"v": 24
+},
+{
+"along": 68,
+"d": 8,
+"depth": 33,
+"do_obudowy": true,
+"edge_coord": 0,
+"into": 1,
+"kind": "EDGE",
+"n_axis_is_u": false,
+"opis": "Otwór Ø8 x 33 pod trzpień mimośrodu",
+"partner": "SOB-1"
+},
+{
+"along": 848,
+"d": 8,
+"depth": 20,
+"edge_coord": 0,
+"into": 1,
+"kind": "EDGE",
+"n_axis_is_u": false,
+"partner": "SOB-1"
+},
+{
+"along": 328,
+"d": 8,
+"depth": 20,
+"edge_coord": 0,
+"into": 1,
+"kind": "EDGE",
+"n_axis_is_u": false,
+"partner": "SOB-1"
 }
 ],
 "lo": {
@@ -487,26 +599,6 @@
 "z": 300
 },
 "holes": [
-{
-"along": 50.0,
-"d": 4,
-"depth": 35,
-"edge_coord": 516,
-"into": -1,
-"kind": "EDGE",
-"n_axis_is_u": true,
-"partner": "SOB-1"
-},
-{
-"along": 232.0,
-"d": 4,
-"depth": 35,
-"edge_coord": 516,
-"into": -1,
-"kind": "EDGE",
-"n_axis_is_u": true,
-"partner": "SOB-1"
-},
 {
 "along": 50.0,
 "d": 4,
@@ -556,6 +648,50 @@
 "kind": "EDGE",
 "n_axis_is_u": false,
 "partner": "SOT"
+},
+{
+"axis_n": "-",
+"d": 15,
+"depth": 13,
+"kind": "FACE",
+"opis": "Otwór Ø15 x 13 pod obudowę mimośrodu",
+"partner": "SOB-1",
+"pin": true,
+"side": "B",
+"u": 492,
+"v": 141
+},
+{
+"along": 141,
+"d": 8,
+"depth": 33,
+"do_obudowy": true,
+"edge_coord": 516,
+"into": -1,
+"kind": "EDGE",
+"n_axis_is_u": true,
+"opis": "Otwór Ø8 x 33 pod trzpień mimośrodu",
+"partner": "SOB-1"
+},
+{
+"along": 42,
+"d": 8,
+"depth": 20,
+"edge_coord": 516,
+"into": -1,
+"kind": "EDGE",
+"n_axis_is_u": true,
+"partner": "SOB-1"
+},
+{
+"along": 242,
+"d": 8,
+"depth": 20,
+"edge_coord": 516,
+"into": -1,
+"kind": "EDGE",
+"n_axis_is_u": true,
+"partner": "SOB-1"
 }
 ],
 "lo": {
@@ -579,26 +715,6 @@
 "z": 300
 },
 "holes": [
-{
-"along": 50.0,
-"d": 4,
-"depth": 35,
-"edge_coord": 516,
-"into": -1,
-"kind": "EDGE",
-"n_axis_is_u": true,
-"partner": "SOB-1"
-},
-{
-"along": 232.0,
-"d": 4,
-"depth": 35,
-"edge_coord": 516,
-"into": -1,
-"kind": "EDGE",
-"n_axis_is_u": true,
-"partner": "SOB-1"
-},
 {
 "along": 50.0,
 "d": 4,
@@ -660,6 +776,50 @@
 "side": "A",
 "u": 258,
 "v": 79
+},
+{
+"axis_n": "-",
+"d": 15,
+"depth": 13,
+"kind": "FACE",
+"opis": "Otwór Ø15 x 13 pod obudowę mimośrodu",
+"partner": "SOB-1",
+"pin": true,
+"side": "A",
+"u": 492,
+"v": 141
+},
+{
+"along": 141,
+"d": 8,
+"depth": 33,
+"do_obudowy": true,
+"edge_coord": 516,
+"into": -1,
+"kind": "EDGE",
+"n_axis_is_u": true,
+"opis": "Otwór Ø8 x 33 pod trzpień mimośrodu",
+"partner": "SOB-1"
+},
+{
+"along": 42,
+"d": 8,
+"depth": 20,
+"edge_coord": 516,
+"into": -1,
+"kind": "EDGE",
+"n_axis_is_u": true,
+"partner": "SOB-1"
+},
+{
+"along": 242,
+"d": 8,
+"depth": 20,
+"edge_coord": 516,
+"into": -1,
+"kind": "EDGE",
+"n_axis_is_u": true,
+"partner": "SOB-1"
 }
 ],
 "lo": {

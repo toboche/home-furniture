@@ -20,8 +20,13 @@ def pomijaj_czesc(p):
     return p['code'] in ('P1', 'P3')
 
 
+# lewy bok szafki okapowej SOB-1 jest widoczny (nad półką P3): bez konfirmatów, złącza mimośrodowe + kołki (2026-11-14)
+BOK_CZYSTY = 'SOB-1'
+X_BOK_CZYSTY = 2398       # wewnętrzne lico SOB-1 (model.js: XSO + P)
+
+
 def pomijaj_polaczenie(face, edge):
-    return False
+    return face == BOK_CZYSTY or edge == BOK_CZYSTY
 
 
 def rozstaw(face, edge, domyslny):
@@ -53,6 +58,42 @@ def dodatkowe_otwory(P, parts, loc):
             pilot(code, 'A', {'y': Y_RURA, 'z': Z_RURA})
     pilot('SOP', 'A', {'x': X_OKAP, 'z': Z_RURA})
 
+    # --- SOB-1: złącza mimośrodowe (np. Häfele Minifix 15) + kołki Ø8 x 30 ---
+    # obudowa Ø15 x 13 w licu łączonej płyty, 24 od styku; trzpień: Ø5 x 11 w wewnętrznym licu SOB-1;
+    # otwór Ø8 x 33 w czole łączonej płyty do obudowy; kołki: Ø8 x 12 w SOB-1, Ø8 x 20 w czole
+    MF_ODL = 24
+    bok = P[BOK_CZYSTY]
+
+    def face(q, side, pos, d, depth, partner, opis):
+        q['holes'].append(dict(kind='FACE', side=side, u=loc(q, q['u'], pos[q['u']]), v=loc(q, q['v'], pos[q['v']]),
+                               d=d, depth=depth, partner=partner, axis_n='-', pin=True, opis=opis))
+
+    def edge(q, along_ax, along_val, d, depth, partner, opis=None, do_obudowy=False):
+        eu = (q['u'] == 'x')
+        ec = loc(q, 'x', X_BOK_CZYSTY)
+        L = q['DL'] if eu else q['SZ']
+        h = dict(kind='EDGE', n_axis_is_u=eu, edge_coord=ec, along=loc(q, along_ax, along_val), depth=depth, d=d,
+                 partner=partner, into=(-1 if ec >= L - 0.01 else 1))
+        if opis:
+            h['opis'] = opis
+        if do_obudowy:
+            h['do_obudowy'] = True
+        q['holes'].append(h)
+
+    def zlacze(code, side, mid_ax, mid, along_ax, mf, kolki):
+        q = P[code]
+        for a in mf:
+            face(q, side, {'x': X_BOK_CZYSTY + MF_ODL, along_ax: a}, 15, 13, BOK_CZYSTY, 'Otwór Ø15 x 13 pod obudowę mimośrodu')
+            edge(q, along_ax, a, 8, MF_ODL + 9, BOK_CZYSTY, 'Otwór Ø8 x 33 pod trzpień mimośrodu', True)
+            face(bok, 'A', {mid_ax: mid, along_ax: a}, 5, 11, code, 'Otwór Ø5 x 11 pod trzpień mimośrodu (do %s)' % code)
+        for a in kolki:
+            edge(q, along_ax, a, 8, 20, BOK_CZYSTY)
+            face(bok, 'A', {mid_ax: mid, along_ax: a}, 8, 12, code, 'Otwór Ø8 x 12 pod kołek (do %s)' % code)
+
+    zlacze('SOT', 'A', 'z', 9, 'y', (1580, 2095, 2610), (1830, 2350))      # tył: obudowy od wnętrza (+z)
+    zlacze('SOW', 'B', 'y', 2669, 'z', (159,), (60, 260))                   # wieniec: obudowy od spodu
+    zlacze('SOP', 'A', 'y', 2159, 'z', (159,), (60, 260))                   # półka: obudowy od góry
+
 
 ZAWIASY_BEZ_PROWADNIKA_W_SCIANCE = set()
 
@@ -74,11 +115,12 @@ ZAW = 'PUSZKA Ø35, ŚRODEK 22,5 MM OD KRAWĘDZI'
 
 # Opisy formatek. Wymiary i ilości są liczone z modelu (model.js).
 FORMATKI = [
-    F('SOB', 'Szafka okapowa: boki (bez dna, okap między bokami)', okleina='1DL', nawierty='KONFIRMATY',
-      uwagi='SOB-2: środek otworu Ø140 pod rurę; okap przykręcany 4 wkrętami 3,5 x 16 (81 nad dołem, 35 i 215 od przodu)'),
-    F('SOT', 'Szafka okapowa: tył', okleina='', nawierty='KONFIRMATY'),
-    F('SOW', 'Szafka okapowa: wieniec górny', okleina='1DL', nawierty='KONFIRMATY'),
-    F('SOP', 'Szafka okapowa: półka nad okapem', okleina='1DL', nawierty='KONFIRMATY',
+    F('SOB', 'Szafka okapowa: boki (bez dna, okap między bokami)', okleina='1DL',
+      nawierty='SOB-1: TRZPIENIE MIMOŚRODÓW + KOŁKI (bez otworów przelotowych); SOB-2: KONFIRMATY',
+      uwagi='SOB-1 widoczny, czyste lico zewnętrzne; SOB-2: środek otworu Ø140 pod rurę; okap przykręcany 4 wkrętami 3,5 x 16 (81 nad dołem, 35 i 215 od przodu)'),
+    F('SOT', 'Szafka okapowa: tył', okleina='', nawierty='KONFIRMATY + MIMOŚRODY I KOŁKI (do SOB-1)'),
+    F('SOW', 'Szafka okapowa: wieniec górny', okleina='1DL', nawierty='KONFIRMATY + MIMOŚRÓD I KOŁKI (do SOB-1)'),
+    F('SOP', 'Szafka okapowa: półka nad okapem', okleina='1DL', nawierty='KONFIRMATY + MIMOŚRÓD I KOŁKI (do SOB-1)',
       uwagi='środek otworu Ø140 pod rurę (oś 97 od ściany)'),
     F('WSB', 'Wąska szafka: boki', okleina='1DL', nawierty='KONFIRMATY',
       uwagi='środki otworów Ø140 pod rurę w obu bokach'),

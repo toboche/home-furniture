@@ -55,13 +55,24 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
 ## Założenia do potwierdzenia
 - Położenie okapu w głąb: korpus dosunięty do przodu (z 50–300), szkło z 10–300. Oś wylotu ok. 218 od ściany głównej.
   Sprawdzić przy montażu (otwory 35 i 215 od przodu boku).
-- Półka SOP na Y 2150 (pod nią redukcja i przesunięcie rury, nad nią ok. 490 na rzeczy).
-- Luz 2 mm wąskiej szafki do ścianki.
-- Na lewym boku SOB-1 (widoczny nad półką P3) wychodzi 8 widocznych łbów konfirmatów (zaślepki). Do decyzji: zostaje
-  czy łączniki ukryte (kołki + mimośrody) w tym boku.
-- Gniazdo okapu z przewodu ZA (356 od ścianki, 682 nad płytkami) wewnątrz SO, nad półką SOP.
+- Luz 2 mm wąskiej szafki do ścianki. Luzy w półce: patrz dziennik 2026-11-14 (pytanie o P3).
 - Dobór okuć push-to-open i liczby zawiasów F1 (frontu ok. 7,5 kg).
+
+### 2026-11-14: bok SOB-1 bez konfirmatów, półka SOP, zasilanie okapu
+- Lewy bok szafki okapowej SOB-1 jest widoczny nad półką P3: ma mieć czyste lico zewnętrzne. Zamiast konfirmatów
+  złącza mimośrodowe (np. Häfele Minifix 15) i kołki Ø8 × 30:
+  - tył SOT: 3 mimośrody (Y 1580, 2095, 2610) + 2 kołki (Y 1830, 2350); wieniec SOW i półka SOP: po 1 mimośrodzie
+    (z 159) + 2 kołki (z 60, 260);
+  - obudowa Ø15 × 13 w licu łączonej płyty, 24 od styku (SOT od wnętrza, SOW od spodu, SOP od góry), otwór Ø8 × 33
+    w czole do obudowy; w SOB-1 od wnętrza: Ø5 × 11 pod trzpień, Ø8 × 12 pod kołek. Wszystko w kalkulatorze sklepu.
+  - Widoczne łby konfirmatów: 10 → 2 (tylko pod dnem skrzynki WSS, wewnątrz wąskiej szafki).
+  - Wymaga zmiany w `wspolne/` (pole `opis` i `do_obudowy` otworów): PR #11.
+- Półka SOP zostaje na Y 2150 (potwierdzone).
+- Okap bez gniazdka: przewód okapu łączony na stałe z przewodem ze ściany (ZA), złączką w puszce wewnątrz SO nad półką SOP.
+  Instrukcja okapu: przy podłączeniu bez dostępnej wtyczki obwód musi mieć wyłącznik dwubiegunowy (odcięcie L i N);
+  sprawdzić w rozdzielnicy (np. osobny wyłącznik dwubiegunowy albo różnicówka na tym obwodzie).
 
 ## Dziennik
 - 2026-11-14: start katalogu (kopia szablonu), pomiary z rozmowy 2026-11-12/13, model: półka P1/P3, SO z okapem,
   WS ze skrzynką, rura okapu (schemat), istniejąca kuchnia jako tło.
+- 2026-11-14: SOB-1 na mimośrodach i kołkach (bez widocznych konfirmatów), SOP potwierdzona, okap bez gniazdka.

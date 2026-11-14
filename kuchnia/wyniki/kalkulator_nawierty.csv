@@ -1,12 +1,15 @@
 ﻿LP;FORMATKA;KODY;SZT;SZER=DL;WYS=SZ;OKLEJ KRAWEDZ NR;RODZAJ;POWIERZCHNIA/KRAWEDZ;X lub ODLEGLOSC OD 0;Y;SREDNICA;GLEBOKOSC
-1;SOB-1;SOB-1;1;1167;300;1;PLASZCZYZNA;Tył;50.0;9.0;5;przelotowo
-;;;;;;;PLASZCZYZNA;Tył;405.7;9.0;5;przelotowo
-;;;;;;;PLASZCZYZNA;Tył;648.0;68.0;5;przelotowo
-;;;;;;;PLASZCZYZNA;Tył;648.0;250.0;5;przelotowo
-;;;;;;;PLASZCZYZNA;Tył;761.3;9.0;5;przelotowo
-;;;;;;;PLASZCZYZNA;Tył;1117.0;9.0;5;przelotowo
-;;;;;;;PLASZCZYZNA;Tył;1158.0;68.0;5;przelotowo
-;;;;;;;PLASZCZYZNA;Tył;1158.0;250.0;5;przelotowo
+1;SOB-1;SOB-1;1;1167;300;1;PLASZCZYZNA;Przód;69;9;5;11
+;;;;;;;PLASZCZYZNA;Przód;319;9;8;12
+;;;;;;;PLASZCZYZNA;Przód;584;9;5;11
+;;;;;;;PLASZCZYZNA;Przód;648;60;8;12
+;;;;;;;PLASZCZYZNA;Przód;648;159;5;11
+;;;;;;;PLASZCZYZNA;Przód;648;260;8;12
+;;;;;;;PLASZCZYZNA;Przód;839;9;8;12
+;;;;;;;PLASZCZYZNA;Przód;1099;9;5;11
+;;;;;;;PLASZCZYZNA;Przód;1158;60;8;12
+;;;;;;;PLASZCZYZNA;Przód;1158;159;5;11
+;;;;;;;PLASZCZYZNA;Przód;1158;260;8;12
 2;SOB-2;SOB-2;1;1167;300;1;PLASZCZYZNA;Przód;50.0;9.0;5;przelotowo
 ;;;;;;;PLASZCZYZNA;Przód;405.7;9.0;5;przelotowo
 ;;;;;;;PLASZCZYZNA;Przód;648.0;68.0;5;przelotowo
@@ -22,35 +25,43 @@
 ;;;;;;;PLASZCZYZNA;Tył;599.5;263;3;12
 ;;;;;;;PLASZCZYZNA;Tył;1049.5;263;3;12
 ;;;;;;;PLASZCZYZNA;Tył;1081.5;263;3;12
-3;SOT;SOT;1;1167;516;brak;PLASZCZYZNA;Tył;9.0;50.0;5;przelotowo
+3;SOT;SOT;1;1167;516;brak;PLASZCZYZNA;Przód;68;24;15;13
+;;;;;;;PLASZCZYZNA;Przód;583;24;15;13
+;;;;;;;PLASZCZYZNA;Przód;1098;24;15;13
+;;;;;;;PLASZCZYZNA;Tył;9.0;50.0;5;przelotowo
 ;;;;;;;PLASZCZYZNA;Tył;9.0;258.0;5;przelotowo
 ;;;;;;;PLASZCZYZNA;Tył;9.0;466.0;5;przelotowo
 ;;;;;;;PLASZCZYZNA;Tył;519.0;50.0;5;przelotowo
 ;;;;;;;PLASZCZYZNA;Tył;519.0;258.0;5;przelotowo
 ;;;;;;;PLASZCZYZNA;Tył;519.0;466.0;5;przelotowo
-;;;;;;;CZOŁO;Krawędź 3;50.0;;4;35
-;;;;;;;CZOŁO;Krawędź 3;405.7;;4;35
-;;;;;;;CZOŁO;Krawędź 3;761.3;;4;35
-;;;;;;;CZOŁO;Krawędź 3;1117.0;;4;35
+;;;;;;;CZOŁO;Krawędź 3;68;;8;33
+;;;;;;;CZOŁO;Krawędź 3;328;;8;20
+;;;;;;;CZOŁO;Krawędź 3;583;;8;33
+;;;;;;;CZOŁO;Krawędź 3;848;;8;20
+;;;;;;;CZOŁO;Krawędź 3;1098;;8;33
 ;;;;;;;CZOŁO;Krawędź 1;50.0;;4;35
 ;;;;;;;CZOŁO;Krawędź 1;405.7;;4;35
 ;;;;;;;CZOŁO;Krawędź 1;761.3;;4;35
 ;;;;;;;CZOŁO;Krawędź 1;1117.0;;4;35
-4;SOW;SOW;1;516;282;1;CZOŁO;Krawędź 4;50.0;;4;35
-;;;;;;;CZOŁO;Krawędź 3;50.0;;4;35
-;;;;;;;CZOŁO;Krawędź 4;232.0;;4;35
-;;;;;;;CZOŁO;Krawędź 3;258.0;;4;35
-;;;;;;;CZOŁO;Krawędź 3;466.0;;4;35
-;;;;;;;CZOŁO;Krawędź 2;50.0;;4;35
-;;;;;;;CZOŁO;Krawędź 2;232.0;;4;35
-5;SOP;SOP;1;516;282;1;PLASZCZYZNA;Przód;258;79;5;5
+4;SOW;SOW;1;516;282;1;PLASZCZYZNA;Tył;492;141;15;13
 ;;;;;;;CZOŁO;Krawędź 4;50.0;;4;35
 ;;;;;;;CZOŁO;Krawędź 3;50.0;;4;35
 ;;;;;;;CZOŁO;Krawędź 4;232.0;;4;35
 ;;;;;;;CZOŁO;Krawędź 3;258.0;;4;35
 ;;;;;;;CZOŁO;Krawędź 3;466.0;;4;35
-;;;;;;;CZOŁO;Krawędź 2;50.0;;4;35
-;;;;;;;CZOŁO;Krawędź 2;232.0;;4;35
+;;;;;;;CZOŁO;Krawędź 2;42;;8;20
+;;;;;;;CZOŁO;Krawędź 2;141;;8;33
+;;;;;;;CZOŁO;Krawędź 2;242;;8;20
+5;SOP;SOP;1;516;282;1;PLASZCZYZNA;Przód;258;79;5;5
+;;;;;;;PLASZCZYZNA;Przód;492;141;15;13
+;;;;;;;CZOŁO;Krawędź 4;50.0;;4;35
+;;;;;;;CZOŁO;Krawędź 3;50.0;;4;35
+;;;;;;;CZOŁO;Krawędź 4;232.0;;4;35
+;;;;;;;CZOŁO;Krawędź 3;258.0;;4;35
+;;;;;;;CZOŁO;Krawędź 3;466.0;;4;35
+;;;;;;;CZOŁO;Krawędź 2;42;;8;20
+;;;;;;;CZOŁO;Krawędź 2;141;;8;33
+;;;;;;;CZOŁO;Krawędź 2;242;;8;20
 6;WSB-1;WSB-1;1;1167;300;1;PLASZCZYZNA;Przód;1066;97;5;5
 ;;;;;;;PLASZCZYZNA;Tył;9.0;68.0;5;przelotowo
 ;;;;;;;PLASZCZYZNA;Tył;9.0;250.0;5;przelotowo
