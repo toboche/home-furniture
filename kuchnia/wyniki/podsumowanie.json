@@ -1,15 +1,15 @@
 {
  "formatki": {
   "pozycje": 12,
-  "sztuki": 16,
-  "m2": 3.65
+  "sztuki": 15,
+  "m2": 3.58
  },
  "kalkulator": {
   "typy_formatek": 12,
-  "wiersze": 151
+  "wiersze": 145
  },
  "laczniki": {
-  "konfirmaty": 66,
+  "konfirmaty": 60,
   "kolki": 6,
   "otwory_pod_kolki": 6,
   "otwory_nieprzelotowe": 26,
@@ -17,7 +17,7 @@
  },
  "zaslepki": {
   "widoczne": 2,
-  "ukryte": 64,
+  "ukryte": 58,
   "widoczne_wg_czesci": {
    "WSS": 2
   },
@@ -26,8 +26,8 @@
    "WSS → WSZ (x 3138, y 2478, z 181)"
   ]
  },
- "polaczenia": 29,
- "otwory_lacznie": 169,
+ "polaczenia": 26,
+ "otwory_lacznie": 157,
  "kolizje_otworow": 0,
  "strony_arkusza": 12,
  "formatki_36mm": {

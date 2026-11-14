@@ -42,7 +42,8 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
   względem frontu F1 (zgodnie z decyzją: kratka). Głębiej się nie da: ramka kratki zaczyna się 303 od ściany głównej.
 - Pod sufitem zamknięta skrzynka na rurę, cofnięta: dno skrzynki WSS na Y 2484–2502 (10 pod rurą), zaślepka WSZ
   z = 172–190 (10 przed rurą). Przed zaślepką płytka półka: głębokość ok. 110, wysokość w świetle 158.
-- Poniżej 3 półki stałe WSP w równych odstępach: 4 przegrody po 225,25 w świetle.
+- Poniżej 2 półki stałe WSP w równych odstępach: 3 przegrody po 306,33 w świetle (2026-11-14; wcześniej 3 półki / 4 × 225,25).
+  Najwyżej płytka półka przed skrzynką (gł. ok. 110, wys. 158): akceptowane.
 
 ### Kanał okapu, 2026-11-14
 - Rury i kolana SZTYWNE, gładkie (PCV lub spiro), bez rury elastycznej: mniejsze opory i turbulencje, ciszej
@@ -51,6 +52,16 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
 - Trasa: wylot → redukcja → pion → przesunięcie do tyłu ok. 120 (z oś wylotu ok. 218 na 97) dwoma kolanami 45° pod półką SOP
   → pion przy ścianie (oś z 97) przez SOP → kolano 90° pod sufitem → poziomo (oś Y 2577, z 97) przez SOB-2, WSB-1, WSB-2
   do ścianki. Otwory Ø140 wycina użytkownik, sklep wierci środek Ø5 × 5.
+
+### 2026-11-14: redukcja mimośrodowa, system spiro, 2 półki w WS
+- Redukcja 150 → 125 MIMOŚRODOWA (asymetryczna), ocynk, z uszczelką, np. lueftungsteile.ch „REDUKTION Reduzierstück
+  exzentrisch, asymmetrisch verzinkt mit Dichtung” 150 auf 125. Płaską stroną do ściany głównej: oś rury przesuwa się
+  o 12,5 do ściany, przesunięcie kolanami 45° zmniejsza się z ok. 121 do ok. 108.
+- Cały kanał w jednym systemie: rury spiro (Wickelfalzrohr) Ø125 i kształtki z uszczelką (kolana 45° × 2, 90° × 1);
+  kształtki łączone ze sobą łącznikiem (Formteilverbinder), rura w ściance Ø125 wewn. przyjmuje kształtkę Ø125.
+  Do sprawdzenia przy zakupie: czy kołnierz wylotu okapu Ø150 wchodzi w redukcję, czy redukcja w kołnierz
+  (ewentualnie łącznik/mufa 150).
+- Wąska szafka: 2 półki zamiast 3, równe przegrody (patrz wyżej).
 
 ## Założenia do potwierdzenia
 - Położenie okapu w głąb: korpus dosunięty do przodu (z 50–300), szkło z 10–300. Oś wylotu ok. 218 od ściany głównej.
@@ -76,3 +87,4 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
 - 2026-11-14: start katalogu (kopia szablonu), pomiary z rozmowy 2026-11-12/13, model: półka P1/P3, SO z okapem,
   WS ze skrzynką, rura okapu (schemat), istniejąca kuchnia jako tło.
 - 2026-11-14: SOB-1 na mimośrodach i kołkach (bez widocznych konfirmatów), SOP potwierdzona, okap bez gniazdka.
+- 2026-11-14: redukcja mimośrodowa 150/125 i system spiro Ø125; wąska szafka 2 półki (3 × 306,33).

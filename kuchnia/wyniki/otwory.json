@@ -957,7 +957,7 @@
 "kind": "FACE",
 "partner": "WSP-1",
 "side": "B",
-"u": 252.25,
+"u": 333.333333,
 "v": 68.0
 },
 {
@@ -966,7 +966,7 @@
 "kind": "FACE",
 "partner": "WSP-1",
 "side": "B",
-"u": 252.25,
+"u": 333.333333,
 "v": 250.0
 },
 {
@@ -975,7 +975,7 @@
 "kind": "FACE",
 "partner": "WSP-2",
 "side": "B",
-"u": 495.5,
+"u": 657.666667,
 "v": 68.0
 },
 {
@@ -984,25 +984,7 @@
 "kind": "FACE",
 "partner": "WSP-2",
 "side": "B",
-"u": 495.5,
-"v": 250.0
-},
-{
-"axis_n": "x",
-"d": 5,
-"kind": "FACE",
-"partner": "WSP-3",
-"side": "B",
-"u": 738.75,
-"v": 68.0
-},
-{
-"axis_n": "x",
-"d": 5,
-"kind": "FACE",
-"partner": "WSP-3",
-"side": "B",
-"u": 738.75,
+"u": 657.666667,
 "v": 250.0
 },
 {
@@ -1153,7 +1135,7 @@
 "kind": "FACE",
 "partner": "WSP-1",
 "side": "A",
-"u": 252.25,
+"u": 333.333333,
 "v": 68.0
 },
 {
@@ -1162,7 +1144,7 @@
 "kind": "FACE",
 "partner": "WSP-1",
 "side": "A",
-"u": 252.25,
+"u": 333.333333,
 "v": 250.0
 },
 {
@@ -1171,7 +1153,7 @@
 "kind": "FACE",
 "partner": "WSP-2",
 "side": "A",
-"u": 495.5,
+"u": 657.666667,
 "v": 68.0
 },
 {
@@ -1180,25 +1162,7 @@
 "kind": "FACE",
 "partner": "WSP-2",
 "side": "A",
-"u": 495.5,
-"v": 250.0
-},
-{
-"axis_n": "x",
-"d": 5,
-"kind": "FACE",
-"partner": "WSP-3",
-"side": "A",
-"u": 738.75,
-"v": 68.0
-},
-{
-"axis_n": "x",
-"d": 5,
-"kind": "FACE",
-"partner": "WSP-3",
-"side": "A",
-"u": 738.75,
+"u": 657.666667,
 "v": 250.0
 },
 {
@@ -1375,7 +1339,7 @@
 "kind": "FACE",
 "partner": "WSP-1",
 "side": "B",
-"u": 914.75,
+"u": 833.666667,
 "v": 50.0
 },
 {
@@ -1384,7 +1348,7 @@
 "kind": "FACE",
 "partner": "WSP-1",
 "side": "B",
-"u": 914.75,
+"u": 833.666667,
 "v": 188.0
 },
 {
@@ -1393,7 +1357,7 @@
 "kind": "FACE",
 "partner": "WSP-2",
 "side": "B",
-"u": 671.5,
+"u": 509.333333,
 "v": 50.0
 },
 {
@@ -1402,25 +1366,7 @@
 "kind": "FACE",
 "partner": "WSP-2",
 "side": "B",
-"u": 671.5,
-"v": 188.0
-},
-{
-"axis_n": "z",
-"d": 5,
-"kind": "FACE",
-"partner": "WSP-3",
-"side": "B",
-"u": 428.25,
-"v": 50.0
-},
-{
-"axis_n": "z",
-"d": 5,
-"kind": "FACE",
-"partner": "WSP-3",
-"side": "B",
-"u": 428.25,
+"u": 509.333333,
 "v": 188.0
 }
 ],
@@ -1825,7 +1771,7 @@
 "code": "WSP-1",
 "hi": {
 "x": 3188,
-"y": 1772.25,
+"y": 1853.333333,
 "z": 300
 },
 "holes": [
@@ -1892,7 +1838,7 @@
 ],
 "lo": {
 "x": 2950,
-"y": 1754.25,
+"y": 1835.333333,
 "z": 18
 },
 "mod": "WS",
@@ -1907,7 +1853,7 @@
 "code": "WSP-2",
 "hi": {
 "x": 3188,
-"y": 2015.5,
+"y": 2177.666667,
 "z": 300
 },
 "holes": [
@@ -1974,89 +1920,7 @@
 ],
 "lo": {
 "x": 2950,
-"y": 1997.5,
-"z": 18
-},
-"mod": "WS",
-"rh": true,
-"t": "y",
-"u": "z",
-"v": "x"
-},
-{
-"DL": 282,
-"SZ": 238,
-"code": "WSP-3",
-"hi": {
-"x": 3188,
-"y": 2258.75,
-"z": 300
-},
-"holes": [
-{
-"along": 50.0,
-"d": 4,
-"depth": 35,
-"edge_coord": 0,
-"into": 1,
-"kind": "EDGE",
-"n_axis_is_u": false,
-"partner": "WSB-1"
-},
-{
-"along": 232.0,
-"d": 4,
-"depth": 35,
-"edge_coord": 0,
-"into": 1,
-"kind": "EDGE",
-"n_axis_is_u": false,
-"partner": "WSB-1"
-},
-{
-"along": 50.0,
-"d": 4,
-"depth": 35,
-"edge_coord": 238,
-"into": -1,
-"kind": "EDGE",
-"n_axis_is_u": false,
-"partner": "WSB-2"
-},
-{
-"along": 232.0,
-"d": 4,
-"depth": 35,
-"edge_coord": 238,
-"into": -1,
-"kind": "EDGE",
-"n_axis_is_u": false,
-"partner": "WSB-2"
-},
-{
-"along": 50.0,
-"d": 4,
-"depth": 35,
-"edge_coord": 0,
-"into": 1,
-"kind": "EDGE",
-"n_axis_is_u": true,
-"partner": "WST"
-},
-{
-"along": 188.0,
-"d": 4,
-"depth": 35,
-"edge_coord": 0,
-"into": 1,
-"kind": "EDGE",
-"n_axis_is_u": true,
-"partner": "WST"
-}
-],
-"lo": {
-"x": 2950,
-"y": 2240.75,
+"y": 2159.666667,
 "z": 18
 },
 "mod": "WS",

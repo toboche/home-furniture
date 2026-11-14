@@ -66,13 +66,11 @@
 ;;;;;;;PLASZCZYZNA;Tył;9.0;68.0;5;przelotowo
 ;;;;;;;PLASZCZYZNA;Tył;9.0;250.0;5;przelotowo
 ;;;;;;;PLASZCZYZNA;Tył;50.0;9.0;5;przelotowo
-;;;;;;;PLASZCZYZNA;Tył;252.2;68.0;5;przelotowo
-;;;;;;;PLASZCZYZNA;Tył;252.2;250.0;5;przelotowo
+;;;;;;;PLASZCZYZNA;Tył;333.3;68.0;5;przelotowo
+;;;;;;;PLASZCZYZNA;Tył;333.3;250.0;5;przelotowo
 ;;;;;;;PLASZCZYZNA;Tył;405.7;9.0;5;przelotowo
-;;;;;;;PLASZCZYZNA;Tył;495.5;68.0;5;przelotowo
-;;;;;;;PLASZCZYZNA;Tył;495.5;250.0;5;przelotowo
-;;;;;;;PLASZCZYZNA;Tył;738.8;68.0;5;przelotowo
-;;;;;;;PLASZCZYZNA;Tył;738.8;250.0;5;przelotowo
+;;;;;;;PLASZCZYZNA;Tył;657.7;68.0;5;przelotowo
+;;;;;;;PLASZCZYZNA;Tył;657.7;250.0;5;przelotowo
 ;;;;;;;PLASZCZYZNA;Tył;761.3;9.0;5;przelotowo
 ;;;;;;;PLASZCZYZNA;Tył;982.0;68.0;5;przelotowo
 ;;;;;;;PLASZCZYZNA;Tył;982.0;250.0;5;przelotowo
@@ -84,13 +82,11 @@
 7;WSB-2;WSB-2;1;1167;300;1;PLASZCZYZNA;Przód;9.0;68.0;5;przelotowo
 ;;;;;;;PLASZCZYZNA;Przód;9.0;250.0;5;przelotowo
 ;;;;;;;PLASZCZYZNA;Przód;50.0;9.0;5;przelotowo
-;;;;;;;PLASZCZYZNA;Przód;252.2;68.0;5;przelotowo
-;;;;;;;PLASZCZYZNA;Przód;252.2;250.0;5;przelotowo
+;;;;;;;PLASZCZYZNA;Przód;333.3;68.0;5;przelotowo
+;;;;;;;PLASZCZYZNA;Przód;333.3;250.0;5;przelotowo
 ;;;;;;;PLASZCZYZNA;Przód;405.7;9.0;5;przelotowo
-;;;;;;;PLASZCZYZNA;Przód;495.5;68.0;5;przelotowo
-;;;;;;;PLASZCZYZNA;Przód;495.5;250.0;5;przelotowo
-;;;;;;;PLASZCZYZNA;Przód;738.8;68.0;5;przelotowo
-;;;;;;;PLASZCZYZNA;Przód;738.8;250.0;5;przelotowo
+;;;;;;;PLASZCZYZNA;Przód;657.7;68.0;5;przelotowo
+;;;;;;;PLASZCZYZNA;Przód;657.7;250.0;5;przelotowo
 ;;;;;;;PLASZCZYZNA;Przód;761.3;9.0;5;przelotowo
 ;;;;;;;PLASZCZYZNA;Przód;982.0;68.0;5;przelotowo
 ;;;;;;;PLASZCZYZNA;Przód;982.0;250.0;5;przelotowo
@@ -104,12 +100,10 @@
 ;;;;;;;PLASZCZYZNA;Tył;9.0;188.0;5;przelotowo
 ;;;;;;;PLASZCZYZNA;Tył;185.0;50.0;5;przelotowo
 ;;;;;;;PLASZCZYZNA;Tył;185.0;188.0;5;przelotowo
-;;;;;;;PLASZCZYZNA;Tył;428.2;50.0;5;przelotowo
-;;;;;;;PLASZCZYZNA;Tył;428.2;188.0;5;przelotowo
-;;;;;;;PLASZCZYZNA;Tył;671.5;50.0;5;przelotowo
-;;;;;;;PLASZCZYZNA;Tył;671.5;188.0;5;przelotowo
-;;;;;;;PLASZCZYZNA;Tył;914.8;50.0;5;przelotowo
-;;;;;;;PLASZCZYZNA;Tył;914.8;188.0;5;przelotowo
+;;;;;;;PLASZCZYZNA;Tył;509.3;50.0;5;przelotowo
+;;;;;;;PLASZCZYZNA;Tył;509.3;188.0;5;przelotowo
+;;;;;;;PLASZCZYZNA;Tył;833.7;50.0;5;przelotowo
+;;;;;;;PLASZCZYZNA;Tył;833.7;188.0;5;przelotowo
 ;;;;;;;PLASZCZYZNA;Tył;1158.0;50.0;5;przelotowo
 ;;;;;;;PLASZCZYZNA;Tył;1158.0;188.0;5;przelotowo
 ;;;;;;;CZOŁO;Krawędź 3;50.0;;4;35
@@ -120,7 +114,7 @@
 ;;;;;;;CZOŁO;Krawędź 1;405.7;;4;35
 ;;;;;;;CZOŁO;Krawędź 1;761.3;;4;35
 ;;;;;;;CZOŁO;Krawędź 1;1117.0;;4;35
-9;WSD;WSD, WSP-1, WSP-2, WSP-3;4;282;238;2;CZOŁO;Krawędź 3;50.0;;4;35
+9;WSD;WSD, WSP-1, WSP-2;3;282;238;2;CZOŁO;Krawędź 3;50.0;;4;35
 ;;;;;;;CZOŁO;Krawędź 4;50.0;;4;35
 ;;;;;;;CZOŁO;Krawędź 4;188.0;;4;35
 ;;;;;;;CZOŁO;Krawędź 3;232.0;;4;35
