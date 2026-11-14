@@ -1,0 +1,47 @@
+{
+ "formatki": {
+  "pozycje": 12,
+  "sztuki": 16,
+  "m2": 3.65
+ },
+ "kalkulator": {
+  "typy_formatek": 12,
+  "wiersze": 140
+ },
+ "laczniki": {
+  "konfirmaty": 74,
+  "kolki": 0,
+  "otwory_pod_kolki": 0,
+  "otwory_nieprzelotowe": 10,
+  "puszki_zawiasow": 3
+ },
+ "zaslepki": {
+  "widoczne": 10,
+  "ukryte": 64,
+  "widoczne_wg_czesci": {
+   "SOB-1": 8,
+   "WSS": 2
+  },
+  "widoczne_miejsca": [
+   "SOB-1 → SOP (x 2374, y 2159, z 68)",
+   "SOB-1 → SOP (x 2374, y 2159, z 250)",
+   "SOB-1 → SOT (x 2374, y 1561, z 9)",
+   "SOB-1 → SOT (x 2374, y 1917, z 9)",
+   "SOB-1 → SOT (x 2374, y 2272, z 9)",
+   "SOB-1 → SOT (x 2374, y 2628, z 9)",
+   "SOB-1 → SOW (x 2374, y 2669, z 68)",
+   "SOB-1 → SOW (x 2374, y 2669, z 250)",
+   "WSS → WSZ (x 3000, y 2478, z 181)",
+   "WSS → WSZ (x 3138, y 2478, z 181)"
+  ]
+ },
+ "polaczenia": 32,
+ "otwory_lacznie": 158,
+ "kolizje_otworow": 0,
+ "strony_arkusza": 12,
+ "formatki_36mm": {
+  "pozycje": 2,
+  "sztuki": 2,
+  "m2": 0.72
+ }
+}
