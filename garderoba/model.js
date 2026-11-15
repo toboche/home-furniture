@@ -34,7 +34,15 @@ var XL=PXM+LUZ;        /* przód szafki po lewej (bez frontów): 705 */
 var XP=A-LUZ;          /* prawy bok szafek na wprost: 1822 */
 var XM=(XL+XP)/2;      /* podział na 2 moduły */
 var HD=2052;           /* oś drążka: 50 pod spodem wieńca (2120 − 18 − 50; DO POTWIERDZENIA, czy 50 do osi) */
-var HS=900;            /* góra strefy szuflad (PROPOZYCJA, do ustalenia) */
+var HK2=1300;          /* wysokość przedziału na dłuższe kurtki (moduł 2 na wprost, prawy) */
+var HK1=1000;          /* wysokość przedziału na krótsze kurtki (moduł 1 na wprost i szafka po lewej) */
+var BUT=270;           /* najmniejsza wysokość przedziału na buty (w świetle) */
+var N2=2, N1=3;        /* liczba przedziałów na buty: moduł 2 / pozostałe */
+/* Od dołu: dno P, przedziały na buty z półkami P, przedział szuflady (jedna szuflada nad butami), płyta P pod kurtkami.
+   Wysokość przedziału szuflady wynika z modułu 2 (przy BUT), w pozostałych ta sama szuflada, a nadmiar idzie na buty. */
+var HPK=function(hk){return HW-P-hk;};                 /* góra płyty pod kurtkami */
+var SZD=HPK(HK2)-P-P-N2*(BUT+P);                       /* przedział szuflady: 802 − 36 − 576 = 190 */
+var BUT1=(HPK(HK1)-P-P-SZD-N1*P)/N1;                   /* przedział na buty w module 1 i po lewej: 274 */
 var ZP=PZ+T-LUZ;       /* koniec szafki po lewej przy ścianie przedniej: 562 + 919 − 3 = 1478 */
 
 var ITEMS=[
@@ -76,11 +84,6 @@ var ITEMS=[
   {t:'cyl3',n:'Na wprost, moduł 1: drążek na kurtki (oś '+HD+')',layer:'Szafki na wprost (zamysł)',ax:'x',px:(XL+XM)/2,py:HD,pz:(ODS+ZF)/2,r:12.5,len:XM-XL-2*P,c:0x9aa5ad},
   {t:'cyl3',n:'Na wprost, moduł 2: drążek na kurtki (oś '+HD+')',layer:'Szafki na wprost (zamysł)',ax:'x',px:(XM+XP)/2,py:HD,pz:(ODS+ZF)/2,r:12.5,len:XP-XM-2*P,c:0x9aa5ad},
   {t:'cyl3',n:'Po lewej: drążek na kurtki (oś '+HD+'), wzdłuż ściany',layer:'Szafka po lewej (zamysł)',ax:'z',px:(ODS+XL)/2,py:HD,pz:(ZF+ZP)/2,r:12.5,len:ZP-ZF-2*P,c:0x9aa5ad},
-  /* Strefa szuflad (buty, czapki, rękawiczki): PROPOZYCJA wysokości, liczba szuflad do ustalenia */
-  {n:'Na wprost, moduł 1: szuflady (propozycja, do '+HS+')',layer:'Szuflady (propozycja)',x:XL+P,y:0,z:ZF-P,w:XM-XL-2*P,h:HS,d:P,c:0xc9a227,o:0.5},
-  {n:'Na wprost, moduł 2: szuflady (propozycja, do '+HS+')',layer:'Szuflady (propozycja)',x:XM+P,y:0,z:ZF-P,w:XP-XM-2*P,h:HS,d:P,c:0xc9a227,o:0.5},
-  {n:'Po lewej: szuflady (propozycja, do '+HS+'; nad gzymsem i rurą płytsze)',layer:'Szuflady (propozycja)',x:XL-P,y:0,z:ZF+P,w:P,h:HS,d:ZP-ZF-2*P,c:0xc9a227,o:0.5},
-
   /* Kratka wentylacyjna w otworze tylnej ścianki górnej części szafki po lewej (na wprost wylotu), od strony półek */
   {t:'cyl',n:'Kratka wentylacyjna Ø150 w tylnej ściance szafki po lewej (zamysł; wylot docięty)',layer:'Szafka po lewej (zamysł)',cx:W2,cy:W1,z:ZF+P,r:75,len:3,c:0xe0a526},
   /* Wycięcie w boku szafki po lewej przy ścianie przedniej, na gniazdko (wymiar wycięcia do ustalenia) */
@@ -90,13 +93,31 @@ var ITEMS=[
   {t:'cyl3',n:'Lampa (oczko) '+L2+' od lewej ściany, '+L1+' od tylnej',layer:'Osprzęt',ax:'y',px:L2,py:J-3,pz:L1,r:40,len:6,c:0xe0a526}
 ];
 
+/* Poziomy wnętrza części otwartych: dno, półki na buty, szuflada, płyta pod kurtkami (zamysł).
+   b: obszar w świetle {x0,x1,z0,z1}; przód na x1 (szafka po lewej) albo z1 (na wprost). */
+function poziomy(nazwa,b,hk,n,but,przodX){
+  var L='Szuflady i półki (zamysł)',y=0,i;
+  function plyta(n_,y0,x0){ITEMS.push({n:nazwa+': '+n_,layer:L,x:x0,y:y0,z:b.z0,w:b.x1-x0,h:P,d:b.z1-b.z0,c:0xd8c7a3});}
+  /* poniżej gzymsu (GZ1) płyty szafki po lewej omijają gzyms z rurą: zaczynają się za GZ2 + GR4 */
+  function x0(y0){return (przodX&&y0<GZ1)?GZ2+GR4:b.x0;}
+  plyta('dno',0,x0(0));y=P;
+  for(i=1;i<=n;i++){y+=but;plyta('półka nad butami '+i+' (przedział '+but+')',y,x0(y));y+=P;}
+  var dx=przodX?{x:b.x1-P,w:P,z:b.z0+1.5,d:b.z1-b.z0-3}:{x:b.x0+1.5,w:b.x1-b.x0-3,z:b.z1-P,d:P};
+  ITEMS.push({n:nazwa+': szuflada (przedział '+SZD+', front '+(SZD-6)+')',layer:L,x:dx.x,y:y+3,z:dx.z,w:dx.w,h:SZD-6,d:dx.d,c:0xc9a227,o:0.7});
+  y+=SZD;
+  plyta('płyta pod kurtkami (przedział na kurtki '+hk+')',y,b.x0);
+}
+poziomy('Na wprost, moduł 1',{x0:XL+P,x1:XM-P/2,z0:ODS,z1:ZF},HK1,N1,BUT1,false);
+poziomy('Na wprost, moduł 2 (dłuższe kurtki)',{x0:XM+P/2,x1:XP-P,z0:ODS,z1:ZF},HK2,N2,BUT,false);
+poziomy('Po lewej',{x0:ODS,x1:XL,z0:ZF+P,z1:ZP-P},HK1,N1,BUT1,true);
+
 return {
   title:'Garderoba 3D',
   room:{W:A,D:G,H:J},
   wallThickness:100,
   openings:[{wall:'przod',pos:A-DX-DW,w:DW,y:0,h:DH}],
   views:{iso:[3.3,2.7,3.6],front:[0.91,1.3,4.9],top:[0.91,5.6,1.15],left:[-3.6,1.5,0.75]},
-  conceptLayers:['Szafki na wprost (zamysł)','Szafka po lewej (zamysł)','Szuflady (propozycja)'],
+  conceptLayers:['Szafki na wprost (zamysł)','Szafka po lewej (zamysł)','Szuflady i półki (zamysł)'],
   hiddenLayers:[],
   fixedLayers:['Pion i gzyms','Osprzęt'],
   boardLayers:['Półki','Ścianki boczne','Ścianki tylne','Fronty'],

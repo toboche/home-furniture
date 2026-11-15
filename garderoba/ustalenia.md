@@ -36,11 +36,16 @@ Materiały źródłowe: `zrodla/` (rzut architektoniczny, zdjęcia ogólne).
 - Gniazdko na ścianie przedniej (E1 210, E2 195): wycięcie w boku szafki po lewej (wymiar wycięcia do ustalenia).
 - Gzyms i rura pod szafką po lewej: boki wycięte wokół gzymsu; na dole szuflady, w tym miejscu odpowiednio płytsze.
 
-## Wnętrze (decyzje 2026-11-12)
-- Na dole obu szafek (na wprost i po lewej): szuflady na buty i mniejsze rzeczy (czapki, rękawiczki).
-- Nad szufladami: sekcje na kurtki, drążek 50 mm od wieńca (do potwierdzenia: do osi drążka, od spodu wieńca → oś 2052).
+## Wnętrze (decyzje 2026-11-12 i 2026-11-15)
+- Części otwarte, od dołu: dno, przedziały na buty (min. 270 w świetle) z półkami, nad nimi jedna szuflada (czapki, rękawiczki),
+  płyta, nad nią przedział na kurtki z drążkiem.
+- Drążek: oś 50 mm pod spodem wieńca, czyli 2052 (potwierdzone 2026-11-15).
+- Przedział na kurtki: moduł 2 na wprost (prawy) na dłuższe kurtki 1300; moduł 1 na wprost i szafka po lewej na krótsze 1000.
+- Wyliczenie (płyta 18, dno na podłodze): przedział szuflady 190 we wszystkich szafkach (z modułu 2 przy 2 × 270 na buty);
+  moduł 2: 2 przedziały na buty po 270; moduł 1 i szafka po lewej: 3 przedziały po 274.
 - Części górne bez dodatkowych półek: wieniec na 2120 na całej głębokości szafek jest jednocześnie półką części górnej.
-- Do ustalenia: liczba i wysokości szuflad, wysokość strefy szuflad (propozycja w modelu: do 900), prowadnice.
+- Szafka po lewej: dno i pierwsza półka (poniżej gzymsu, 333) omijają gzyms z rurą (zaczynają się 184 od lewej ściany).
+- Do ustalenia: czy dno na podłodze (płyta 18) czy pierwszy poziom butów bezpośrednio na kafelkach; prowadnice szuflad.
 
 ## Plan pracy
 1. Wymiary pomieszczenia z natury (zdjęcia w paczkach). Do czasu ustalenia wszystkich wymiarów NIE projektujemy szafek.
