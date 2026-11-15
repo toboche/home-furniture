@@ -78,6 +78,24 @@ Materiały źródłowe: `zrodla/` (rzut architektoniczny, zdjęcia ogólne).
 - Gniazdko (E1, E2): LB2 stoi 12 mm od ściany przedniej, więc puszka gniazdka nie może wystawać więcej niż ok. 9 mm,
   albo musi przejść przez otwór w LB2 (do sprawdzenia przy wyborze gniazdka).
 
+## Wycena wstępna meble.pl (2026-11-15, szacunek, nie koszyk)
+Stawki z koszyka pralni w centrum.meble.pl (rozkrój 21386928, 2026-11-08): arkusz W1200 ST9 18 mm ok. 428 zł (107 zł za ćwiartkę),
+cięcie ok. 5,04 zł/mb, okleina ABS 0,8 ok. 2,13 zł/mb, laserowa 1 mm ok. 3,87 zł/mb, wiercenie ok. 13,65 zł za formatkę
+z nawiertami i 12,42 zł za front z szablonem zawiasów. Pralnia (15,55 m², 52 szt.) kosztowała 2 970 zł; ok. 475 zł z tej kwoty
+nie wynika z wymienionych pozycji (doliczone proporcjonalnie do liczby formatek).
+| Pozycja | Ilość | Kwota (zł brutto) |
+|---|---|---|
+| Płyta 18 mm (20,0 m², rozkrój ręczny mieści się na 4 arkuszach) | 4 arkusze | ok. 1 710 |
+| Płyta 16 mm na skrzynki (1,56 m²) | ok. 0,5 arkusza | ok. 150–200 (cena 16 mm do sprawdzenia) |
+| Cięcie | ok. 56 mb | ok. 280 |
+| Okleina ABS 0,8 (z zapasem) | ok. 28 mb | ok. 60 |
+| Okleina laserowa 1 mm na frontach (z zapasem) | ok. 12 mb | ok. 45 |
+| Wiercenie: formatki z nawiertami | 34 szt. | ok. 465 |
+| Wiercenie: fronty z zawiasami | 2 szt. | ok. 25 |
+| Pozostałe (jak w pralni, proporcjonalnie) | | ok. 350 |
+| RAZEM | | ok. 3 000–3 100 (przedział 2 700–3 300) |
+Bez okuć (Blum, drążki, konfirmaty, TIP-ON) i bez dostawy. Dokładna cena: koszyk w kalkulatorze meble.pl.
+
 ## Plan pracy
 1. Wymiary pomieszczenia z natury (zdjęcia w paczkach). Do czasu ustalenia wszystkich wymiarów NIE projektujemy szafek.
 2. Wizualizacja pustego pomieszczenia (budowana na bieżąco ze zdjęć i pomiarów).
