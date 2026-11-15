@@ -39,7 +39,7 @@ Materiały źródłowe: `zrodla/` (rzut architektoniczny, zdjęcia ogólne).
 ## Wnętrze (decyzje 2026-11-12 i 2026-11-15)
 - Części otwarte, od dołu: dno, przedziały na buty (min. 270 w świetle) z półkami, nad nimi jedna szuflada (czapki, rękawiczki),
   płyta, nad nią przedział na kurtki z drążkiem.
-- Drążek: oś 50 mm pod spodem wieńca, czyli 2052 (potwierdzone 2026-11-15).
+- Drążek: oś 65 mm pod spodem wieńca, czyli 2037 (zmiana 2026-11-15; wcześniej 50 → 2052).
 - Przedział na kurtki: moduł 2 na wprost (prawy) na dłuższe kurtki 1300; moduł 1 na wprost i szafka po lewej na krótsze 1000.
 - Wyliczenie (płyta 18, dno na podłodze): przedział szuflady 190 we wszystkich szafkach (z modułu 2 przy 2 × 270 na buty);
   moduł 2: 2 przedziały na buty po 270; moduł 1 i szafka po lewej: 3 przedziały po 274.
