@@ -96,6 +96,23 @@ nie wynika z wymienionych pozycji (doliczone proporcjonalnie do liczby formatek)
 | RAZEM | | ok. 3 000–3 100 (przedział 2 700–3 300) |
 Bez okuć (Blum, drążki, konfirmaty, TIP-ON) i bez dostawy. Dokładna cena: koszyk w kalkulatorze meble.pl.
 
+## Wstępne zamówienie meble.pl (2026-11-15): rozkrój 21629487
+Rozkrój nr 21629487 w centrum.meble.pl (PREMIUM +standard), podgląd do 13.01.2027; NIE dodany do koszyka (przeglądarka niezalogowana).
+Wpisane: 20 pozycji / 28 formatek z płyty 18 mm W1200 ST9 (okleina ABS 0,8 i laserowa 1 mm na frontach, F1/F2 szablon Front lewy/prawy
+z zawiasami BLUM, puszki 22,5 i 100 od końców), nawierty z `wyniki/kalkulator_nawierty.csv`.
+| Pozycja | Kwota brutto |
+|---|---|
+| Płyta W1200 ST9 18 mm, 4,5 arkusza | 1 926,27 |
+| Obrzeże ABS 0,8 (30 mb) i laserowe 1 mm (15 mb) | 121,95 |
+| Cięcie (46 + 34 mb) | 395,04 |
+| Oklejanie (13 + 8 + 11 mb) | 263,37 |
+| Wiercenie: 2 fronty z zawiasami + 19 formatek | 312,48 |
+| RAZEM | 3 019,11 (netto 2 454,74) |
+USTALENIA Z KALKULATORA:
+- Nawierty (i wybór szablonu) są niedostępne dla formatek dłuższych niż 2500 mm: NB-1, NB-2, NP, LB1, LB2 zamówione BEZ nawiertów
+  (ok. 150 otworów do wywiercenia samodzielnie wg `wyniki/arkusz_nawiertow.pdf`) – do decyzji.
+- Płyty 16 mm do skrzynek szuflad nie ma w W1200 ani W1100 (tylko 18 i 36 mm) – skrzynki nie są w rozkroju, do decyzji.
+
 ## Plan pracy
 1. Wymiary pomieszczenia z natury (zdjęcia w paczkach). Do czasu ustalenia wszystkich wymiarów NIE projektujemy szafek.
 2. Wizualizacja pustego pomieszczenia (budowana na bieżąco ze zdjęć i pomiarów).
