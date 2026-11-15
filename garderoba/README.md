@@ -5,6 +5,7 @@ Stan: pomiary pomieszczenia prawie gotowe, model pustego pomieszczenia. Szafek j
 - `pomiary.md`: wymiary z natury (najmniejsze odczyty) z kodami; szkic kodów: `zrodla/szkic_pomiarow.svg`
 - `index.html`: model 3D (z katalogu repozytorium); `wyniki/garderoba_3d.html`: to samo w jednym pliku
 - Wersja online: https://claude.ai/artifact/6a4SiyispMMPnFrgEY48Me
+- `komponenty.md`: okucia (szuflady, uchwyty); `sprawdz_szuflady.js`: kontrola kolizji przy otwieraniu szuflad
 - `model.js`: dane modelu (stałe z pomiarów na początku pliku), `reguly.py`: reguły dla skryptów
 - `zrodla/`: rzut architektoniczny (z dawnym układem łazienki, do pominięcia) i zdjęcia
 

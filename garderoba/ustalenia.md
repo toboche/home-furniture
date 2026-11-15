@@ -48,7 +48,12 @@ Materiały źródłowe: `zrodla/` (rzut architektoniczny, zdjęcia ogólne).
 - Moduł 2 na wprost (dłuższe kurtki): BEZ szuflady i bez płyty pod kurtkami (2026-11-15); 2 półki (335, 596,5),
   druga jest dnem przedziału na kurtki (1487,5 do spodu wieńca, od osi drążka 1422,5).
 - Części górne bez dodatkowych półek: wieniec na 2120 na całej głębokości szafek jest jednocześnie półką części górnej.
-- Do ustalenia: prowadnice szuflad.
+- Szuflady (2026-11-15): Blum MOVENTO z BLUMOTION, skrzynki z płyty 16 (jak w przedpokoju), fronty CHOWANE między boki szafki,
+  równo z krawędzią korpusu (583 / 705), szczelina 3. SZ1 (na wprost, moduł 1): NL 500, front 516,5 × 202; SZ2 (po lewej): NL 650,
+  front 853 × 202. Moduły na wprost to osobne korpusy (każdy z dwoma bokami).
+- Uchwyty w stylu GUBBARP, bez nawiertów (okucia wybierze użytkownik później). Otwieranie każdej szuflady przy zamkniętej drugiej
+  sprawdzone (`sprawdz_szuflady.js`): uchwyt SZ1 o wysięgu najwyżej 15 (GUBBARP 27 koliduje z otwieraną SZ2), uchwyt SZ2
+  ze środkiem co najmniej 1160 od ściany tylnej (bliżej koliduje z otwieraną SZ1). Okucia: `komponenty.md`.
 
 ## Plan pracy
 1. Wymiary pomieszczenia z natury (zdjęcia w paczkach). Do czasu ustalenia wszystkich wymiarów NIE projektujemy szafek.
