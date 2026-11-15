@@ -109,6 +109,7 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
   pod osią poziomą 2577).
 - Luzy (stan): ściana główna tylko 2 przy ściance (WS do 3206); P3 bez luzu między P1 a SOB-1; ściana lewa 2 przy słupku
   (P1 803 / J 805); sufit 2 (szafki 1167 / M 1169); korpusy i półki przy ścianach bez luzu (nierówności ściany: podkładki).
+  Decyzja użytkownika: 2 mm wystarczy; w razie potrzeby P1 docinany ręcznie na końcu w narożniku (pod szafkami górnymi, niewidoczny).
 
 ## Założenia do potwierdzenia
 - Położenie okapu w głąb: korpus dosunięty do przodu (z 50–300), szkło z 10–300. Oś wylotu ok. 218 od ściany głównej.
