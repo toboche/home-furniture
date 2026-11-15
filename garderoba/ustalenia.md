@@ -37,7 +37,7 @@ Materiały źródłowe: `zrodla/` (rzut architektoniczny, zdjęcia ogólne).
 - Gzyms i rura pod szafką po lewej: boki wycięte wokół gzymsu; na dole szuflady, w tym miejscu odpowiednio płytsze.
 
 ## Wnętrze (decyzje 2026-11-12 i 2026-11-15)
-- Części otwarte, od dołu: dno, przedziały na buty (min. 270 w świetle) z półkami, nad nimi jedna szuflada (czapki, rękawiczki),
+- Części otwarte, od dołu: przedziały na buty (min. 270 w świetle) z półkami, nad nimi jedna szuflada (czapki, rękawiczki),
   płyta, nad nią przedział na kurtki z drążkiem.
 - Drążek: oś 65 mm pod spodem wieńca, czyli 2037 (zmiana 2026-11-15; wcześniej 50 → 2052).
 - Przedział na kurtki: moduł 2 na wprost (prawy) na dłuższe kurtki 1300; moduł 1 na wprost i szafka po lewej na krótsze 1000.
