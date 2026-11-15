@@ -1,1 +1,20 @@
 ﻿KOD;NAZWA;DL;SZ;SZT;OKLEINA;NAWIERTY;UWAGI
+NB;N: boki (lewy przy pionie, prawy przy prawej ścianie);2583;578;2;1DL;KONFIRMATY + NAWIERTY PILOTOWE Ø3 × 12 POD PROWADNIKI ZAWIASÓW (F1 w NB-1, F2 w NB-2);
+NP;N: przegroda środkowa (od podłogi do wieńca górnego);2565;560;1;1DL;KONFIRMATY;
+NT;N: plecy (od 335 do wieńca górnego, nad osłonami przewodów);2230;1081;1;;KONFIRMATY;
+NG;N: wieniec górny;1081;578;1;1DL;KONFIRMATY;
+NW;N: wieniec na 2120 (półka części górnej), 2 połowy;560;531.5;2;1SZ;KONFIRMATY;
+NS;"N: półki nad butami (335, 596,5, 858 w połowie lewej; 335, 596,5 w prawej)";560;531.5;5;1SZ;KONFIRMATY;
+NK;N: płyta pod kurtkami, połowa lewa (1084);560;531.5;1;1SZ;KONFIRMATY;
+NO;N: osłony przewodów wodnych (od podłogi do 335, 55 od ściany);531.5;335;2;;KONFIRMATY;
+LB1;L: bok przy pionie;2583;700;1;1DL;KONFIRMATY + NAWIERT ŚRODKA Ø5 × 5;"WYCIĘCIE NAROŻNIKA 184 × 335 (dolny narożnik przy ścianie lewej, wokół gzymsu i rury): w kalkulatorze jako wycięcie albo wykonuje użytkownik; otwór na przewód wentylacyjny Ø130 (np. Ø135) wierci użytkownik otwornicą wg nawiertu środka"
+LB2;L: bok przy ścianie przedniej;2583;700;1;1DL;KONFIRMATY + NAWIERT ŚRODKA Ø5 × 5;"WYCIĘCIE NAROŻNIKA 129 × 335 (dolny narożnik przy ścianie lewej, wokół gzymsu): w kalkulatorze jako wycięcie albo wykonuje użytkownik; otwór na gniazdko wierci użytkownik otwornicą wg nawiertu środka"
+LT;L: plecy (od 335 do wieńca górnego, nad gzymsem);2230;859;1;;KONFIRMATY;
+LG;L: wieniec górny;859;700;1;1DL;KONFIRMATY;
+LW;L: wieniec na 2120 (półka części górnej);859;682;1;1DL;KONFIRMATY;
+LS;L: półki nad butami (335, 596,5, 858);859;682;3;1DL;KONFIRMATY;
+LK;L: płyta pod kurtkami (1084);859;682;1;1DL;KONFIRMATY;
+F1;Front górny N, połowa lewa (chowany, TIP-ON, zawiasy po lewej);525.5;439;1;2DL+2SZ;ZAWIASY 2 SZT, PUSZKA Ø35, ŚRODEK 22.5 MM OD KRAWĘDZI (zawias do frontu chowanego);
+F2;Front górny N, połowa prawa (chowany, TIP-ON, zawiasy po prawej);525.5;439;1;2DL+2SZ;ZAWIASY 2 SZT, PUSZKA Ø35, ŚRODEK 22.5 MM OD KRAWĘDZI (zawias do frontu chowanego);
+F3;"Front szuflady SZ1 (N, połowa lewa; chowany, TIP-ON BLUMOTION)";525.5;202;1;2DL+2SZ;BRAK (mocowanie frontu MOVENTO na wkręty);
+F4;"Front szuflady SZ2 (L; chowany, TIP-ON BLUMOTION)";853;202;1;2DL+2SZ;BRAK (mocowanie frontu MOVENTO na wkręty);

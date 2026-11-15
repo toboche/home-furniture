@@ -5,6 +5,7 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from matplotlib.backends.backend_pdf import PdfPages
 from otwory import loc
+from kalkulator import os_przodu
 
 FACEWORD = {'x': ('PRAWA', 'LEWA'), 'y': ('GÓRNA', 'DOLNA'), 'z': ('PRZEDNIA (od strony pokoju)', 'TYLNA (do ściany)')}
 OPIS = ("Każda strona = jeden typ formatki. Wymiary w mm, liczone od lewej (U) i dołu (V) rysunku.\n"
@@ -27,12 +28,13 @@ def sig(p):
 
 
 def band_edge(p, R):
-    """krawędź oklejona = przód (maks. z), jeśli leży w płaszczyźnie płyty; zwraca (oś_lok, wartość)"""
+    """krawędź oklejona = przód (maks. na osi przodu, domyślnie z), jeśli leży w płaszczyźnie płyty; zwraca (oś_lok, wartość)"""
     if p['code'].startswith(R.BEZ_OKLEINY_PREFIKSY):
         return None
+    oz = os_przodu(p, R)
     for ax in ('u', 'v'):
-        if p[ax] == 'z':
-            return (ax, loc(p, 'z', p['hi']['z']))
+        if p[ax] == oz:
+            return (ax, loc(p, oz, p['hi'][oz]))
     return None
 
 

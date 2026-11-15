@@ -36,11 +36,47 @@ Materiały źródłowe: `zrodla/` (rzut architektoniczny, zdjęcia ogólne).
 - Gniazdko na ścianie przedniej (E1 210, E2 195): wycięcie w boku szafki po lewej (wymiar wycięcia do ustalenia).
 - Gzyms i rura pod szafką po lewej: boki wycięte wokół gzymsu; na dole szuflady, w tym miejscu odpowiednio płytsze.
 
-## Wnętrze (decyzje 2026-11-12)
-- Na dole obu szafek (na wprost i po lewej): szuflady na buty i mniejsze rzeczy (czapki, rękawiczki).
-- Nad szufladami: sekcje na kurtki, drążek 50 mm od wieńca (do potwierdzenia: do osi drążka, od spodu wieńca → oś 2052).
+## Wnętrze (decyzje 2026-11-12 i 2026-11-15)
+- Części otwarte, od dołu: przedziały na buty (min. 270 w świetle) z półkami, nad nimi jedna szuflada (czapki, rękawiczki),
+  płyta, nad nią przedział na kurtki z drążkiem.
+- Drążek: oś 65 mm pod spodem wieńca, czyli 2037 (zmiana 2026-11-15; wcześniej 50 → 2052).
+- Przedział na kurtki: moduł 2 na wprost (prawy) na dłuższe kurtki (od półki 614,5 do spodu wieńca 2102 = 1487,5); moduł 1 na wprost i szafka po lewej na krótsze 1000.
+- Bez dna: najniższe przedziały na buty stoją bezpośrednio na kafelkach (2026-11-15).
+- Wysokości półek wspólne dla wszystkich szafek (przyjęte 2026-11-15, według szafki po lewej): spody półek 335 (2 mm nad gzymsem),
+  596,5 i 858; przedziały na buty 335, 243,5, 243,5 (przyjęte mimo wcześniejszego minimum 270).
+- Szafki z krótszymi kurtkami (moduł 1 na wprost, po lewej): 3 półki, szuflada 208 (front 202), płyta pod kurtkami 1084–1102.
+- Moduł 2 na wprost (dłuższe kurtki): BEZ szuflady i bez płyty pod kurtkami (2026-11-15); 2 półki (335, 596,5),
+  druga jest dnem przedziału na kurtki (1487,5 do spodu wieńca, od osi drążka 1422,5).
 - Części górne bez dodatkowych półek: wieniec na 2120 na całej głębokości szafek jest jednocześnie półką części górnej.
-- Do ustalenia: liczba i wysokości szuflad, wysokość strefy szuflad (propozycja w modelu: do 900), prowadnice.
+- Szuflady (2026-11-15): Blum MOVENTO do TIP-ON BLUMOTION (otwieranie naciśnięciem, bez uchwytów), skrzynki z płyty 16
+  (jak w przedpokoju), fronty CHOWANE między boki szafki, równo z krawędzią korpusu (583 / 705), szczelina 3.
+  SZ1 (na wprost, moduł 1): NL 500, front 516,5 × 202; SZ2 (po lewej): NL 650, front 853 × 202.
+  Moduły na wprost to osobne korpusy (każdy z dwoma bokami).
+- Osłona przewodów wodnych (2026-11-15): w obu modułach na wprost pionowa płyta od podłogi do pierwszej półki (335),
+  55–73 od ściany tylnej (przewody wystają ok. 50, luz 5); najniższy przedział na buty płytszy o ok. 50, reszta bez zmian.
+  Plecy modułów zaczynają się nad tym przedziałem.
+- Uchwyty odrzucone (2026-11-15): uchwyt SZ1 blokowałby otwieraną SZ2, a uchwyt SZ2 bliżej niż 1160 od ściany tylnej – SZ1.
+  Otwieranie każdej szuflady przy zamkniętej drugiej sprawdzone (`sprawdz_szuflady.js`): brak kolizji. Okucia: `komponenty.md`.
+
+## Konstrukcja (decyzje 2026-11-15)
+- Płyta 18, plecy 18 (solidne, bo na dole nie ma wieńca), złącza: konfirmaty. Montaż: najpierw szafka na wprost, potem po lewej.
+- Szafka na wprost (N): JEDEN korpus 1117 × 2583 × 578 z przegrodą NP na pół (od podłogi do wieńca górnego);
+  plecy NT na całą szerokość od 335 (nad osłonami przewodów) do wieńca górnego; wieniec 2120 i półki w obu połowach.
+- Szafka po lewej (L): boki LB1 (przy pionie) i LB2 (przy ścianie przedniej) z wycięciem dolnego narożnika przy ścianie
+  wokół gzymsu: LB1 184 × 335 (gzyms z rurą), LB2 129 × 335; plecy LT nad gzymsem (od 335).
+- Otwory na przewód wentylacyjny (LB1, środek: X 317, Y 2415) i gniazdko (LB2, środek: X 210, Y 195) wierci użytkownik
+  otwornicą; w zamówieniu tylko nawierty środków Ø5 × 5. Przewód wentylacyjny Ø130 docięty do wewnętrznego lica LB1,
+  kratka prostokątna nasuwana na przewód od strony półek.
+- Fronty górne F1, F2: chowane, TIP-ON, zawiasy po zewnętrznych stronach (F1 przy NB-1, F2 przy NB-2), bez sprężyny.
+  F2 dotyka prawej ściany przy ok. 92° otwarcia: ogranicznik kąta.
+- Szuflady: skrzynki wg katalogu Blum (patrz `komponenty.md`), kontrola otwierania bez kolizji.
+- Konfirmaty z prawej strony przegrody NP przesunięte o 25, żeby otwory z obu stron NP się nie pokrywały.
+- MONTAŻ: złożonego korpusu nie da się postawić w pomieszczeniu (przekątna boku 2583 × 578 to 2647, sufit 2586),
+  a boki NB-1, NB-2, LB1, LB2 mają z zewnątrz tylko 3–20 mm luzu do ścian i pionu (konfirmaty wkręca się od zewnątrz boków).
+  Korpusy składamy na stojąco na wolnej podłodze przed docelowym miejscem i dosuwamy: N do ściany tylnej, L w stronę
+  ściany lewej (wycięcia boków przechodzą nad gzymsem). Pojedynczą płytę stawia się, podnosząc ją przez krawędź 18 mm.
+- Gniazdko (E1, E2): LB2 stoi 12 mm od ściany przedniej, więc puszka gniazdka nie może wystawać więcej niż ok. 9 mm,
+  albo musi przejść przez otwór w LB2 (do sprawdzenia przy wyborze gniazdka).
 
 ## Plan pracy
 1. Wymiary pomieszczenia z natury (zdjęcia w paczkach). Do czasu ustalenia wszystkich wymiarów NIE projektujemy szafek.
@@ -56,10 +92,10 @@ Materiały źródłowe: `zrodla/` (rzut architektoniczny, zdjęcia ogólne).
 ## Etapy
 1. Wymiary: GOTOWE (2026-11-11)
 2. Wizualizacja pustego pokoju: model 3D `index.html` (2026-11-11)
-3. Potrzeby: częściowo (założenia ogólne powyżej)
-4. Koncepcja: bryły szafek w modelu (2026-11-11), do potwierdzenia
-5. Konstrukcja: DO ZROBIENIA
-6. Formatki, nawierty, instrukcja montażu: DO ZROBIENIA
+3. Potrzeby: gotowe (2026-11-15)
+4. Koncepcja: gotowa (2026-11-15)
+5. Konstrukcja: formatki, nawierty i okucia w modelu (2026-11-15), do sprawdzenia
+6. Wstępne zamówienie meble.pl, instrukcja montażu: DO ZROBIENIA
 7. Ręczna weryfikacja przed zamówieniem: DO ZROBIENIA
 
 ## Odczyt ze zdjęć i rzutu (do potwierdzenia pomiarami)

@@ -2,17 +2,19 @@
    GARDEROBA (A/P02 07): DANE MODELU 3D (wszystko w milimetrach)
    Patrząc od drzwi: ściana tylna = na wprost (przewody wodne), lewa = z gzymsem, przednia = z drzwiami.
    Układ: X od lewej ściany ku prawej, Y od podłogi w górę, Z od tylnej ściany ku drzwiom.
-   Wymiary z pomiary.md (najmniejsze odczyty). Szafki: na razie tylko bryły (zamysł), bez wnętrza i bez formatek.
-   Opis formatu ITEMS: wspolne/STRUKTURA.md, punkt 4.
+   Wymiary z pomiary.md (najmniejsze odczyty), decyzje z ustalenia.md.
+   Formatki (płyta 18 i skrzynki 16) mają nazwy 'KOD: opis'; format: wspolne/STRUKTURA.md, punkt 4.
+   Moduły: N = szafka na wprost (jeden korpus z przegrodą), L = szafka po lewej, S1/S2 = skrzynki szuflad.
    ======================================================================== */
 var HF_MODEL=(function(){
 'use strict';
-/* pomiary (pomiary.md) */
+/* ---------- pomiary (pomiary.md) ---------- */
 var A=1825;            /* szerokość: lewa–prawa ściana */
 var G=1490;            /* głębokość: tylna–przednia ściana */
 var J=2586;            /* wysokość, najmniejsza (przy drzwiach) */
 var PX=692, PXM=702;   /* wysięg pionu od lewej ściany: przy podłodze / największy (lico pionu nie jest pionowe) */
 var PZ=562;            /* wysięg pionu od tylnej ściany */
+var T=919;             /* od lica pionu do ściany przedniej (najmniejszy) */
 var DX=164, DW=694, DH=2014;   /* drzwi: od prawej ściany, szerokość i wysokość w świetle ościeżnicy */
 var W1=2415, W2=317, W3=130, W4=120;   /* wylot wentylacyjny: wysokość środka, od lewej ściany, średnica, wysięg od lica pionu */
 var GZ1=333, GZ2=129, GZ3=927;         /* gzyms: wysokość, wysięg od lewej ściany, długość od pionu */
@@ -20,75 +22,124 @@ var GR3=135, GR4=55;                   /* rura w gzymsie: góra od podłogi, wys
 var R1=513, R2=613, R3=180, R4=50;     /* przewody wodne: od prawej ściany, wysokość po zagięciu, wysięg (ok.) */
 var E1=210, E2=195;                    /* przyszłe gniazdko na ścianie przedniej: środek od lewej ściany, od podłogi */
 var L1=1131, L2=1000;                  /* lampa (oczko): środek od tylnej ściany, od lewej ściany */
-var T=919;                             /* od lica pionu do ściany przedniej (najmniejszy) */
 
-/* założenia szafek (ustalenia.md, 2026-11-11) */
-var P=18;              /* płyta */
-var LUZ=3;             /* luz: od pionu, pod sufitem, przy ścianie przedniej */
-var ODS=5;             /* odsunięcie korpusu od ściany na regulację przy montażu (ZAŁOŻENIE, do potwierdzenia) */
+/* ---------- założenia (ustalenia.md) ---------- */
+var P=18, PS=16;       /* płyta korpusów i frontów / skrzynek szuflad */
+var LUZ=3;             /* luz: od pionu, pod sufitem, przy prawej ścianie i ścianie przedniej */
+var ODS=5;             /* odsunięcie korpusu od ściany za nim (regulacja przy montażu) */
+var SZCZ=3;            /* szczelina wokół frontów chowanych */
 var HW=2120;           /* górna powierzchnia wieńca części otwartej */
 var HG=J-LUZ;          /* góra szafek: 2583 */
-var ZK=PZ+LUZ;         /* przód korpusu górnej części szafek na wprost: 565 */
-var ZF=ZK+P;           /* płaszczyzna frontów szafek na wprost: 583 */
-var XL=PXM+LUZ;        /* przód szafki po lewej (bez frontów): 705 */
-var XP=A-LUZ;          /* prawy bok szafek na wprost: 1822 */
-var XM=(XL+XP)/2;      /* podział na 2 moduły */
-var HD=2052;           /* oś drążka: 50 pod spodem wieńca (2120 − 18 − 50; DO POTWIERDZENIA, czy 50 do osi) */
-var HS=900;            /* góra strefy szuflad (PROPOZYCJA, do ustalenia) */
-var ZP=PZ+T-LUZ;       /* koniec szafki po lewej przy ścianie przedniej: 562 + 919 − 3 = 1478 */
+var ZF=PZ+LUZ+P;       /* płaszczyzna przodu szafki na wprost: 583 */
+var XL=PXM+LUZ;        /* płaszczyzna przodu szafki po lewej: 705 */
+var XP=A-LUZ;          /* prawy bok szafki na wprost: 1822 */
+var XM=(XL+XP)/2;      /* oś przegrody: 1263,5 */
+var ZP=PZ+T-LUZ;       /* koniec szafki po lewej przy ścianie przedniej: 1478 */
+var HD=HW-P-65;        /* oś drążka: 65 pod spodem wieńca = 2037 */
+var HK1=1000;          /* przedział na krótsze kurtki (połowa lewa szafki na wprost, szafka po lewej) */
+var YP=[GZ1+2];        /* spody półek na buty: 335 (2 mm nad gzymsem), dalej dwa przedziały po równo */
+var SZD=208;           /* przedział szuflady */
+var ZO=R4+5;           /* tylne lico osłony przewodów: 55 od ściany */
+var WYC1=GZ2+GR4+5, WYC2=GZ2+5, WYCH=YP[0];   /* wycięcia boków L wokół gzymsu (od ściany lewej): przy pionie (z rurą) do 189, przy ścianie przedniej do 134; wysokość 335 */
+var NL1=500, NL2=650;  /* prowadnice MOVENTO: SZ1, SZ2 */
+var HSK=180;           /* wysokość boków skrzynek (≤ przedział − 23 = 185, katalog Blum) */
+(function(){var b2=(HW-P-HK1-P-SZD-(YP[0]+P)-2*P)/2;YP.push(YP[0]+P+b2);YP.push(YP[1]+P+b2);})();   /* 335, 596,5, 858 */
+var YK=HW-P-HK1-P;     /* spód płyty pod kurtkami: 1084 */
 
+var C={bok:0xcdbb95,tyl:0xb9a37a,pol:0xd8c7a3,front:0x2f9e8f,skr:0xb08a5b};
 var ITEMS=[
-  /* Pion (PX przy podłodze 692, wyżej do 702: rysowany z największym wysięgiem PXM) */
+  /* ===== Pomieszczenie ===== */
   {n:'Pion (wysięg '+PXM+' od lewej ściany, '+PZ+' od tylnej; przy podłodze '+PX+')',layer:'Pion i gzyms',x:0,y:0,z:0,w:PXM,h:J,d:PZ,c:0xd9d4ca},
-  /* Gzyms wzdłuż lewej ściany od pionu do ściany przedniej */
   {n:'Gzyms ('+GZ2+' × '+GZ1+', długość '+GZ3+')',layer:'Pion i gzyms',x:0,y:0,z:G-GZ3,w:GZ2,h:GZ1,d:GZ3,c:0xc7c1b5},
-  /* Rura w gzymsie przy licu pionu; wymiar wzdłuż gzymsu (80) ZAŁOŻONY, nie mierzony */
   {n:'Rura wystająca z gzymsu (wysięg '+GR4+', do '+GR3+' od podłogi; szerokość 80 założona)',layer:'Osprzęt',x:GZ2,y:0,z:G-GZ3,w:GR4,h:GR3,d:80,c:0xb08d57},
-
-  /* Wylot wentylacyjny na licu pionu (strona do drzwi); na wylocie kratka, wylot można dociąć */
-  {t:'cyl',n:'Wylot wentylacyjny Ø'+W3+' docięty do tylnej ścianki szafki po lewej (było '+W4+')',layer:'Osprzęt',cx:W2,cy:W1,z:PZ,r:W3/2,len:ZF-PZ-2,c:0x6b7b8c},
-
-  /* Przewody wodne na ścianie tylnej, zagięte w dół i na boki; szerokość 40 założona */
+  {t:'cyl',n:'Przewód wentylacyjny Ø'+W3+' docięty do wewnętrznego lica boku LB1 (było '+W4+')',layer:'Osprzęt',cx:W2,cy:W1,z:PZ,r:W3/2,len:ZF+P-PZ,c:0x6b7b8c},
   {n:'Przewód wodny R1 ('+R1+' od prawej ściany, do ok. '+R3+', wysięg ok. '+R4+')',layer:'Osprzęt',x:A-R1-20,y:0,z:0,w:40,h:R3,d:R4,c:0xc0392b},
   {n:'Przewód wodny R2 ('+R2+' od prawej ściany, do ok. '+R3+', wysięg ok. '+R4+')',layer:'Osprzęt',x:A-R2-20,y:0,z:0,w:40,h:R3,d:R4,c:0x2e5fb3},
-
-  /* Przyszłe gniazdko na ścianie przedniej (rysowane 80 × 80, grubość 15 założona) */
   {n:'Gniazdko (E1 '+E1+' od lewej ściany, E2 '+E2+' od podłogi)',layer:'Osprzęt',x:E1-40,y:E2-40,z:G-15,w:80,h:80,d:15,c:0xe58a2b},
+  {t:'cyl3',n:'Lampa (oczko) '+L2+' od lewej ściany, '+L1+' od tylnej',layer:'Osprzęt',ax:'y',px:L2,py:J-3,pz:L1,r:40,len:6,c:0xe0a526},
 
-  /* ===== Bryły szafek (zamysł, bez wnętrza) ===== */
-  /* Szafki na wprost: 2 moduły od boku pionu (+3) do prawej ściany (−3). Część otwarta do HW pełnej głębokości do płaszczyzny frontów,
-     część górna: korpus do ZK i fronty ZK–ZF (3 mm przerwy między frontami). Odsunięte od ściany tylnej o ODS. */
-  {n:'Na wprost, moduł 1: część otwarta ('+(XM-XL)+' × '+HW+' × '+(ZF-ODS)+')',layer:'Szafki na wprost (zamysł)',x:XL,y:0,z:ODS,w:XM-XL,h:HW,d:ZF-ODS,c:0x4f84c4,o:0.25},
-  {n:'Na wprost, moduł 2: część otwarta ('+(XP-XM)+' × '+HW+' × '+(ZF-ODS)+')',layer:'Szafki na wprost (zamysł)',x:XM,y:0,z:ODS,w:XP-XM,h:HW,d:ZF-ODS,c:0x4f84c4,o:0.25},
-  {n:'Na wprost, moduł 1: część górna z frontem ('+(XM-XL)+' × '+(HG-HW)+', korpus do '+ZK+')',layer:'Szafki na wprost (zamysł)',x:XL,y:HW,z:ODS,w:XM-XL,h:HG-HW,d:ZK-ODS,c:0x8a6bb8,o:0.3},
-  {n:'Na wprost, moduł 2: część górna z frontem ('+(XP-XM)+' × '+(HG-HW)+', korpus do '+ZK+')',layer:'Szafki na wprost (zamysł)',x:XM,y:HW,z:ODS,w:XP-XM,h:HG-HW,d:ZK-ODS,c:0x8a6bb8,o:0.3},
-  {n:'Na wprost: front górny 1 (zamysł)',layer:'Fronty (zamysł)',x:XL,y:HW+1.5,z:ZK,w:XM-XL-1.5,h:HG-HW-1.5,d:P,c:0x2f9e8f,o:0.55},
-  {n:'Na wprost: front górny 2 (zamysł)',layer:'Fronty (zamysł)',x:XM+1.5,y:HW+1.5,z:ZK,w:XP-XM-1.5,h:HG-HW-1.5,d:P,c:0x2f9e8f,o:0.55},
-  /* Szafka po lewej: od lewej ściany (ODS) do XL, od płaszczyzny frontów szafek na wprost (ZF) do ściany przedniej (−3); góra bez frontów.
-     Nad gzymsem i rurą (część otwarta) – rozwiązanie do ustalenia. */
-  {n:'Po lewej: część otwarta ('+(XL-ODS)+' × '+HW+' × '+(ZP-ZF)+'; gzyms i rura do rozwiązania)',layer:'Szafka po lewej (zamysł)',x:ODS,y:0,z:ZF,w:XL-ODS,h:HW,d:ZP-ZF,c:0x4fa36a,o:0.25},
-  {n:'Po lewej: część górna bez frontów ('+(XL-ODS)+' × '+(HG-HW)+' × '+(ZP-ZF)+')',layer:'Szafka po lewej (zamysł)',x:ODS,y:HW,z:ZF,w:XL-ODS,h:HG-HW,d:ZP-ZF,c:0x7fbf7f,o:0.3},
+  /* ===== Szafka na wprost N: jeden korpus, przegroda NP na pół, plecy 18 na całą szerokość, bez dna ===== */
+  {n:'NB-1: bok lewy (przy pionie; zawiasy F1)',layer:'Ścianki boczne',x:XL,y:0,z:ODS,w:P,h:HG,d:ZF-ODS,c:C.bok},
+  {n:'NB-2: bok prawy (przy prawej ścianie; zawiasy F2)',layer:'Ścianki boczne',x:XP-P,y:0,z:ODS,w:P,h:HG,d:ZF-ODS,c:C.bok},
+  {n:'NP: przegroda środkowa (od podłogi do wieńca górnego)',layer:'Ścianki boczne',x:XM-P/2,y:0,z:ODS+P,w:P,h:HG-P,d:ZF-ODS-P,c:C.bok},
+  {n:'NT: plecy (nad osłoną przewodów, do wieńca górnego)',layer:'Ścianki tylne',x:XL+P,y:YP[0],z:ODS,w:XP-XL-2*P,h:HG-P-YP[0],d:P,c:C.tyl},
+  {n:'NG: wieniec górny',layer:'Półki',x:XL+P,y:HG-P,z:ODS,w:XP-XL-2*P,h:P,d:ZF-ODS,c:C.pol},
 
-  /* Wieniec na 2120 na całej głębokości szafek: zamyka część otwartą i jest jednocześnie półką części górnej */
-  {n:'Na wprost: wieniec na '+HW+' (pełna głębokość, półka części górnej)',layer:'Szafki na wprost (zamysł)',x:XL,y:HW-P,z:ODS,w:XP-XL,h:P,d:ZF-ODS,c:0xd8c7a3},
-  {n:'Po lewej: wieniec na '+HW+' (pełna głębokość, półka części górnej)',layer:'Szafka po lewej (zamysł)',x:ODS,y:HW-P,z:ZF,w:XL-ODS,h:P,d:ZP-ZF,c:0xd8c7a3},
-  /* Drążki na kurtki (oś HD), Ø25 */
-  {t:'cyl3',n:'Na wprost, moduł 1: drążek na kurtki (oś '+HD+')',layer:'Szafki na wprost (zamysł)',ax:'x',px:(XL+XM)/2,py:HD,pz:(ODS+ZF)/2,r:12.5,len:XM-XL-2*P,c:0x9aa5ad},
-  {t:'cyl3',n:'Na wprost, moduł 2: drążek na kurtki (oś '+HD+')',layer:'Szafki na wprost (zamysł)',ax:'x',px:(XM+XP)/2,py:HD,pz:(ODS+ZF)/2,r:12.5,len:XP-XM-2*P,c:0x9aa5ad},
-  {t:'cyl3',n:'Po lewej: drążek na kurtki (oś '+HD+'), wzdłuż ściany',layer:'Szafka po lewej (zamysł)',ax:'z',px:(ODS+XL)/2,py:HD,pz:(ZF+ZP)/2,r:12.5,len:ZP-ZF-2*P,c:0x9aa5ad},
-  /* Strefa szuflad (buty, czapki, rękawiczki): PROPOZYCJA wysokości, liczba szuflad do ustalenia */
-  {n:'Na wprost, moduł 1: szuflady (propozycja, do '+HS+')',layer:'Szuflady (propozycja)',x:XL+P,y:0,z:ZF-P,w:XM-XL-2*P,h:HS,d:P,c:0xc9a227,o:0.5},
-  {n:'Na wprost, moduł 2: szuflady (propozycja, do '+HS+')',layer:'Szuflady (propozycja)',x:XM+P,y:0,z:ZF-P,w:XP-XM-2*P,h:HS,d:P,c:0xc9a227,o:0.5},
-  {n:'Po lewej: szuflady (propozycja, do '+HS+'; nad gzymsem i rurą płytsze)',layer:'Szuflady (propozycja)',x:XL-P,y:0,z:ZF+P,w:P,h:HS,d:ZP-ZF-2*P,c:0xc9a227,o:0.5},
+  /* ===== Szafka po lewej L: boki z wycięciem wokół gzymsu, plecy 18 nad gzymsem, góra bez frontów ===== */
+  {n:'LB1: bok przy pionie (wycięcie '+(WYC1-ODS)+' × '+WYCH+' wokół gzymsu i rury; otwór na przewód wentylacyjny)',layer:'Ścianki boczne',x:ODS,y:0,z:ZF,w:XL-ODS,h:HG,d:P,c:C.bok},
+  {n:'LB2: bok przy ścianie przedniej (wycięcie '+(WYC2-ODS)+' × '+WYCH+' wokół gzymsu; otwór na gniazdko)',layer:'Ścianki boczne',x:ODS,y:0,z:ZP-P,w:XL-ODS,h:HG,d:P,c:C.bok},
+  {n:'LT: plecy (nad gzymsem)',layer:'Ścianki tylne',x:ODS,y:YP[0],z:ZF+P,w:P,h:HG-P-YP[0],d:ZP-ZF-2*P,c:C.tyl},
+  {n:'LG: wieniec górny',layer:'Półki',x:ODS,y:HG-P,z:ZF+P,w:XL-ODS,h:P,d:ZP-ZF-2*P,c:C.pol},
+  {n:'LW: wieniec na '+HW+' (półka części górnej)',layer:'Półki',x:ODS+P,y:HW-P,z:ZF+P,w:XL-ODS-P,h:P,d:ZP-ZF-2*P,c:C.pol},
+  {n:'LK: płyta pod kurtkami',layer:'Półki',x:ODS+P,y:YK,z:ZF+P,w:XL-ODS-P,h:P,d:ZP-ZF-2*P,c:C.pol},
 
-  /* Kratka wentylacyjna w otworze tylnej ścianki górnej części szafki po lewej (na wprost wylotu), od strony półek */
-  {t:'cyl',n:'Kratka wentylacyjna Ø150 w tylnej ściance szafki po lewej (zamysł; wylot docięty)',layer:'Szafka po lewej (zamysł)',cx:W2,cy:W1,z:ZF+P,r:75,len:3,c:0xe0a526},
-  /* Wycięcie w boku szafki po lewej przy ścianie przedniej, na gniazdko (wymiar wycięcia do ustalenia) */
-  {n:'Wycięcie w boku szafki po lewej na gniazdko (zamysł, 100 × 100)',layer:'Szafka po lewej (zamysł)',x:E1-50,y:E2-50,z:ZP-P,w:100,h:100,d:P,c:0xe58a2b,o:0.6},
+  /* wycięcia w bokach L: tylko poglądowo (formatki są prostokątami, wycięcie w uwagach do zamówienia) */
+  {n:'Wycięcie w LB1 ('+(WYC1-ODS)+' × '+WYCH+', narożnik dolny przy ścianie)',layer:'Wycięcia',x:ODS,y:0,z:ZF-0.5,w:WYC1-ODS,h:WYCH,d:P+1,c:0xd23c3c,o:0.45},
+  {n:'Wycięcie w LB2 ('+(WYC2-ODS)+' × '+WYCH+', narożnik dolny przy ścianie)',layer:'Wycięcia',x:ODS,y:0,z:ZP-P-0.5,w:WYC2-ODS,h:WYCH,d:P+1,c:0xd23c3c,o:0.45},
+  /* kratka prostokątna nasunięta na przewód wentylacyjny, od strony półek (wymiar 180 × 180 ZAŁOŻONY) */
+  {n:'Kratka wentylacyjna prostokątna na przewodzie Ø'+W3+' (180 × 180 założone)',layer:'Osprzęt',x:W2-90,y:W1-90,z:ZF+P,w:180,h:180,d:8,c:0xe0a526},
 
-  /* Lampa: oczko w suficie */
-  {t:'cyl3',n:'Lampa (oczko) '+L2+' od lewej ściany, '+L1+' od tylnej',layer:'Osprzęt',ax:'y',px:L2,py:J-3,pz:L1,r:40,len:6,c:0xe0a526}
+  /* drążki na kurtki Ø25 */
+  {t:'cyl3',n:'Drążek na kurtki N, połowa lewa (oś '+HD+')',layer:'Drążki',ax:'x',px:(XL+P+XM-P/2)/2,py:HD,pz:(ODS+P+ZF)/2,r:12.5,len:XM-P/2-XL-P,c:0x9aa5ad},
+  {t:'cyl3',n:'Drążek na dłuższe kurtki N, połowa prawa (oś '+HD+')',layer:'Drążki',ax:'x',px:(XM+P/2+XP-P)/2,py:HD,pz:(ODS+P+ZF)/2,r:12.5,len:XP-P-XM-P/2,c:0x9aa5ad},
+  {t:'cyl3',n:'Drążek na kurtki L, wzdłuż ściany (oś '+HD+')',layer:'Drążki',ax:'z',px:(ODS+P+XL)/2,py:HD,pz:(ZF+ZP)/2,r:12.5,len:ZP-ZF-2*P,c:0x9aa5ad}
 ];
+
+function add(it){ITEMS.push(it);return it;}
+
+/* ---------- połowy szafki N ---------- */
+var H1={x0:XL+P,x1:XM-P/2}, H2={x0:XM+P/2,x1:XP-P}, ZW=ODS+P;   /* wnętrze: od lica pleców 23 do 583 */
+var ns=0;
+function polkaN(h,y,opis){ns++;add({n:'NS-'+ns+': półka nad butami ('+opis+')',layer:'Półki',x:h.x0,y:y,z:ZW,w:h.x1-h.x0,h:P,d:ZF-ZW,c:C.pol});}
+[[H1,'1'],[H2,'2']].forEach(function(q){
+  var h=q[0];
+  add({n:'NO-'+q[1]+': osłona przewodów wodnych (0–'+YP[0]+', '+ZO+'–'+(ZO+P)+' od ściany)',layer:'Ścianki tylne',x:h.x0,y:0,z:ZO,w:h.x1-h.x0,h:YP[0],d:P,c:C.tyl});
+  add({n:'NW-'+q[1]+': wieniec na '+HW+' (półka części górnej)',layer:'Półki',x:h.x0,y:HW-P,z:ZW,w:h.x1-h.x0,h:P,d:ZF-ZW,c:C.pol});
+});
+polkaN(H1,YP[0],'połowa lewa, 1');polkaN(H1,YP[1],'połowa lewa, 2');polkaN(H1,YP[2],'połowa lewa, 3');
+polkaN(H2,YP[0],'połowa prawa, 1');polkaN(H2,YP[1],'połowa prawa, 2; dno przedziału na dłuższe kurtki');
+add({n:'NK: płyta pod kurtkami (połowa lewa)',layer:'Półki',x:H1.x0,y:YK,z:ZW,w:H1.x1-H1.x0,h:P,d:ZF-ZW,c:C.pol});
+for(var i=0;i<3;i++){add({n:'LS-'+(i+1)+': półka nad butami '+(i+1),layer:'Półki',x:ODS+P,y:YP[i],z:ZF+P,w:XL-ODS-P,h:P,d:ZP-ZF-2*P,c:C.pol});}
+
+/* ---------- fronty górne N: chowane, TIP-ON, zawiasy po zewnętrznych stronach ---------- */
+var YF0=HW+SZCZ, YF1=HG-P-SZCZ;   /* 2123–2562 */
+function zawiasy(fx,fw,lewa){var cx=lewa?fx+22.5:fx+fw-22.5;[YF0+100,YF1-100].forEach(function(cy){
+  add({n:'Zawias wpuszczany ('+(lewa?'lewa':'prawa')+')',layer:'Zawiasy',x:cx-17.5,y:cy-17.5,z:ZF-P+1,w:35,h:35,d:11,c:0x2b3034});});}
+add({n:'F1: front górny, połowa lewa (chowany, TIP-ON)',layer:'Fronty',x:H1.x0+SZCZ,y:YF0,z:ZF-P,w:H1.x1-H1.x0-2*SZCZ,h:YF1-YF0,d:P,c:C.front,o:0.55});
+add({n:'F2: front górny, połowa prawa (chowany, TIP-ON)',layer:'Fronty',x:H2.x0+SZCZ,y:YF0,z:ZF-P,w:H2.x1-H2.x0-2*SZCZ,h:YF1-YF0,d:P,c:C.front,o:0.55});
+zawiasy(H1.x0+SZCZ,H1.x1-H1.x0-2*SZCZ,true);
+zawiasy(H2.x0+SZCZ,H2.x1-H2.x0-2*SZCZ,false);
+
+/* ---------- szuflady: Blum MOVENTO do TIP-ON BLUMOTION, skrzynki 16, fronty chowane ----------
+   Katalog Blum (drewniane skrzynki, bok 16): szer. wewn. = LW − 42, długość = NL − 10, dno wpuszczone 13,
+   prześwit pod skrzynką 16, nad skrzynką min. 7 (wysokość skrzynki ≤ przedział − 23), głębokość wnętrza ≥ NL + 3.
+   Pola sz/rola/ruch/skok: kontrola kolizji przy otwieraniu (garderoba/sprawdz_szuflady.js). */
+function szuflada(kod,fkod,opis,przodX,LW,NL,y0,b){
+  /* b: {x0,x1,z0,z1} wnętrze przedziału; przód na x1 (przodX) albo z1 */
+  var SKW=LW-42,DB=NL-10,yb=y0+16,REC=13,fh=SZD-2*SZCZ,r=przodX?'x':'z';
+  var tag=function(it,rola){it.sz=fkod;it.rola=rola;it.ruch=r;it.skok=NL;return add(it);};
+  var H=HSK, HC=H-REC-PS;   /* czoło i tył skrzynki stoją na dnie */
+  if(przodX){
+    var zc=(b.z0+b.z1)/2, z0=zc-SKW/2-PS, xf=b.x1-P, x0=xf-DB;
+    tag({n:fkod+': front szuflady '+opis+' (chowany, TIP-ON)',layer:'Fronty',x:xf,y:y0+SZCZ,z:b.z0+SZCZ,w:P,h:fh,d:b.z1-b.z0-2*SZCZ,c:C.front,o:0.8},'front');
+    tag({n:kod+'B-1: skrzynka '+opis+': bok',layer:'Skrzynki szuflad',x:x0,y:yb,z:z0,w:DB,h:H,d:PS,c:C.skr},'skrzynka');
+    tag({n:kod+'B-2: skrzynka '+opis+': bok',layer:'Skrzynki szuflad',x:x0,y:yb,z:z0+PS+SKW,w:DB,h:H,d:PS,c:C.skr},'skrzynka');
+    tag({n:kod+'D: skrzynka '+opis+': dno',layer:'Skrzynki szuflad',x:x0,y:yb+REC,z:z0+PS,w:DB,h:PS,d:SKW,c:C.skr},'skrzynka');
+    tag({n:kod+'C-1: skrzynka '+opis+': czoło',layer:'Skrzynki szuflad',x:xf-PS,y:yb+REC+PS,z:z0+PS,w:PS,h:HC,d:SKW,c:C.skr},'skrzynka');
+    tag({n:kod+'C-2: skrzynka '+opis+': tył',layer:'Skrzynki szuflad',x:x0,y:yb+REC+PS,z:z0+PS,w:PS,h:HC,d:SKW,c:C.skr},'skrzynka');
+  }else{
+    var xc=(b.x0+b.x1)/2, x0b=xc-SKW/2-PS, zf=b.z1-P, z0b=zf-DB;
+    tag({n:fkod+': front szuflady '+opis+' (chowany, TIP-ON)',layer:'Fronty',x:b.x0+SZCZ,y:y0+SZCZ,z:zf,w:b.x1-b.x0-2*SZCZ,h:fh,d:P,c:C.front,o:0.8},'front');
+    tag({n:kod+'B-1: skrzynka '+opis+': bok',layer:'Skrzynki szuflad',x:x0b,y:yb,z:z0b,w:PS,h:H,d:DB,c:C.skr},'skrzynka');
+    tag({n:kod+'B-2: skrzynka '+opis+': bok',layer:'Skrzynki szuflad',x:x0b+PS+SKW,y:yb,z:z0b,w:PS,h:H,d:DB,c:C.skr},'skrzynka');
+    tag({n:kod+'D: skrzynka '+opis+': dno',layer:'Skrzynki szuflad',x:x0b+PS,y:yb+REC,z:z0b,w:SKW,h:PS,d:DB,c:C.skr},'skrzynka');
+    tag({n:kod+'C-1: skrzynka '+opis+': czoło',layer:'Skrzynki szuflad',x:x0b+PS,y:yb+REC+PS,z:zf-PS,w:SKW,h:HC,d:PS,c:C.skr},'skrzynka');
+    tag({n:kod+'C-2: skrzynka '+opis+': tył',layer:'Skrzynki szuflad',x:x0b+PS,y:yb+REC+PS,z:z0b,w:SKW,h:HC,d:PS,c:C.skr},'skrzynka');
+  }
+}
+var YS=YP[2]+P;   /* dół przedziału szuflady: 876 */
+szuflada('S1','F3','SZ1 (N, połowa lewa)',false,H1.x1-H1.x0,NL1,YS,{x0:H1.x0,x1:H1.x1,z0:ZW,z1:ZF});
+szuflada('S2','F4','SZ2 (L)',true,ZP-ZF-2*P,NL2,YS,{x0:ODS+P,x1:XL,z0:ZF+P,z1:ZP-P});
 
 return {
   title:'Garderoba 3D',
@@ -96,9 +147,9 @@ return {
   wallThickness:100,
   openings:[{wall:'przod',pos:A-DX-DW,w:DW,y:0,h:DH}],
   views:{iso:[3.3,2.7,3.6],front:[0.91,1.3,4.9],top:[0.91,5.6,1.15],left:[-3.6,1.5,0.75]},
-  conceptLayers:['Szafki na wprost (zamysł)','Szafka po lewej (zamysł)','Szuflady (propozycja)'],
+  conceptLayers:[],
   hiddenLayers:[],
-  fixedLayers:['Pion i gzyms','Osprzęt'],
+  fixedLayers:['Pion i gzyms','Osprzęt','Wycięcia'],
   boardLayers:['Półki','Ścianki boczne','Ścianki tylne','Fronty'],
   boardColor:{hex:0xeeece5,label:'docelowy: Egger W1200 ST9 Biały porcelanowy'},
   variants:[],
