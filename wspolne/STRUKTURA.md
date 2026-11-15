@@ -119,7 +119,7 @@ Wymagane (szablon: `szablon/reguly.py`, rozbudowany przykład: `pralnia/reguly.p
 | `ZASLEPKI_ZASLANIAJA` | warstwy, które zasłaniają łby konfirmatów |
 | `FORMATKI` | opisy formatek: `F(kod, nazwa, okleina, nawierty, uwagi)`; `dl`, `sz`, `szt` tylko dla pozycji spoza modelu |
 
-Opcjonalne: `GRUBOSCI` (krotka grubości płyt, domyślnie `(18,)`, np. `(18, 16)`), `PDF_LICA` (opisy lic w arkuszu),
+Opcjonalne: `os_przodu(p)` (oś przodu formatki, domyślnie `'z'`; np. `'x'` dla szafki przy ścianie lewej – decyduje o oklejonej krawędzi w kalkulatorze i arkuszu), `GRUBOSCI` (krotka grubości płyt, domyślnie `(18,)`, np. `(18, 16)`), `PDF_LICA` (opisy lic w arkuszu),
 `PDF_OPIS` (tekst strony tytułowej arkusza). Pozycja `F(...)` spoza modelu o innej grubości: parametr `grubosc`.
 
 Otwory dodawane w `dodatkowe_otwory` (współrzędne lokalne płyty, liczone funkcją `loc(p, oś, wartość_modelu)`;
