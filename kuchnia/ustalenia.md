@@ -46,7 +46,7 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
     oś profilu 39,1 od przodu półki. Odcinki: P3 ok. 2030 (od narożnika P1 do 20 przed SOB-1), P1 wzdłuż przodu ok. 620,
     przy słupku ok. 370 → razem ok. 3,0 m: kupić 4 szt. po 1 m (lepiej 5, zapas na cięcia 45° i pomyłkę).
     Narożniki: profile cięte pod 45°, taśma łączona łącznikami 3-pin lub lutowana. Styki odcinków na P3 nieuniknione (1 m).
-    Do sprawdzenia po dostawie: wymiary profilu suwmiarką PRZED wysłaniem zamówienia płyt.
+    Wymiary profilu wg karty producenta (bez mierzenia, decyzja 2026-11-15).
 - LED (2026-11-15): zamiast rowka na kabel dodatkowy odcinek profilu pod P1 przy słupku (oś 39 od końca P1), od ściany
   lewej (wejście kabla 24 V) do profilu wzdłuż przodu P1: rozjaśnia ciemny róg przy słupku. Profil w kształcie U/L:
   przy słupku → wzdłuż przodu P1 → wzdłuż przodu P3. Narożniki: osobne odcinki taśmy łączone przewodem/łącznikami.
@@ -143,8 +143,6 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
 - Położenie okapu w głąb: korpus dosunięty do przodu (z 50–300), szkło z 10–300. Oś wylotu ok. 218 od ściany głównej.
   Sprawdzić przy montażu (otwory 35 i 215 od przodu boku).
 - Luz 2 mm wąskiej szafki do ścianki.
-- P3 bez luzu (1980, wypełnia odcinek P1 → SOB-1). Przed ostatecznym zamówieniem przeanalizować jeszcze raz
-  skrócenie P3 o 2 mm (1978) – decyzja użytkownika 2026-11-14: na razie bez szczeliny.
 - Dobór okuć push-to-open i liczby zawiasów F1 (frontu ok. 7,5 kg).
 
 ### 2026-11-14: bok SOB-1 bez konfirmatów, półka SOP, zasilanie okapu
@@ -176,3 +174,4 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
 - 2026-11-15: koniec P1 przykręcany przez bok słupka; LED: taśma COB CCT 10 mm w płaskim profilu nakładanym.
 - 2026-11-15: P1 804 (luz 1 przy słupku); profil LED całkowicie wpuszczany (rowek ok. 14 × 8).
 - 2026-11-15: profil LED MasterLED wpuszczany 12 mm; rowki 18,2 × 6 z wręgów w zamówieniu meble.pl.
+- 2026-11-15: P3 zostaje na styk z P1 (bez luzu; ostateczne). Luz na ścianie głównej tylko 2 przy ściance (WS).
