@@ -52,6 +52,9 @@ Materiały źródłowe: `zrodla/` (rzut architektoniczny, zdjęcia ogólne).
   (jak w przedpokoju), fronty CHOWANE między boki szafki, równo z krawędzią korpusu (583 / 705), szczelina 3.
   SZ1 (na wprost, moduł 1): NL 500, front 516,5 × 202; SZ2 (po lewej): NL 650, front 853 × 202.
   Moduły na wprost to osobne korpusy (każdy z dwoma bokami).
+- Osłona przewodów wodnych (2026-11-15): w obu modułach na wprost pionowa płyta od podłogi do pierwszej półki (335),
+  55–73 od ściany tylnej (przewody wystają ok. 50, luz 5); najniższy przedział na buty płytszy o ok. 50, reszta bez zmian.
+  Plecy modułów zaczynają się nad tym przedziałem.
 - Uchwyty odrzucone (2026-11-15): uchwyt SZ1 blokowałby otwieraną SZ2, a uchwyt SZ2 bliżej niż 1160 od ściany tylnej – SZ1.
   Otwieranie każdej szuflady przy zamkniętej drugiej sprawdzone (`sprawdz_szuflady.js`): brak kolizji. Okucia: `komponenty.md`.
 

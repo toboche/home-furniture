@@ -128,6 +128,13 @@ poziomy('Na wprost, moduł 1',{x0:XL+P,x1:XM-P,z0:ODS,z1:ZF},HK1,false,0,{kod:'S
 poziomy('Na wprost, moduł 2 (dłuższe kurtki, bez szuflady; kurtki od '+(YP[1]+P)+' do '+(HW-P)+')',{x0:XM+P,x1:XP-P,z0:ODS,z1:ZF},0,false,2);
 poziomy('Po lewej',{x0:ODS,x1:XL,z0:ZF+P,z1:ZP-P},HK1,true,0,{kod:'SZ2',NL:650});
 
+/* Osłona przewodów wodnych (2026-11-15): pionowa płyta w obu modułach na wprost, od podłogi do pierwszej półki (YP[0]),
+   przed przewodami (wysięg ok. R4 = 50) z luzem 5; plecy modułów zaczynają się nad tym przedziałem. */
+var ZO=R4+5;   /* tylne lico osłony: 55 od ściany (przewody wystają ok. 50 – sprawdzić przy montażu) */
+[['Na wprost, moduł 1',XL+P,XM-P],['Na wprost, moduł 2',XM+P,XP-P]].forEach(function(m){
+  ITEMS.push({n:m[0]+': osłona przewodów wodnych (0–'+YP[0]+', '+ZO+'–'+(ZO+P)+' od ściany)',layer:'Szuflady i półki (zamysł)',x:m[1],y:0,z:ZO,w:m[2]-m[1],h:YP[0],d:P,c:0xcdbb95});
+});
+
 /* Boki korpusów (zamysł; formatki powstaną na etapie konstrukcji) – do sprawdzania kolizji szuflad */
 var BOKI=[
   {n:'Moduł 1: bok lewy',x:XL,y:0,z:ODS,w:P,h:HG,d:ZF-ODS},{n:'Moduł 1: bok prawy',x:XM-P,y:0,z:ODS,w:P,h:HG,d:ZF-ODS},
