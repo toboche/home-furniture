@@ -40,13 +40,13 @@ Materiały źródłowe: `zrodla/` (rzut architektoniczny, zdjęcia ogólne).
 - Części otwarte, od dołu: przedziały na buty (min. 270 w świetle) z półkami, nad nimi jedna szuflada (czapki, rękawiczki),
   płyta, nad nią przedział na kurtki z drążkiem.
 - Drążek: oś 65 mm pod spodem wieńca, czyli 2037 (zmiana 2026-11-15; wcześniej 50 → 2052).
-- Przedział na kurtki: moduł 2 na wprost (prawy) na dłuższe kurtki 1300; moduł 1 na wprost i szafka po lewej na krótsze 1000.
+- Przedział na kurtki: moduł 2 na wprost (prawy) na dłuższe kurtki (od półki 614,5 do spodu wieńca 2102 = 1487,5); moduł 1 na wprost i szafka po lewej na krótsze 1000.
 - Bez dna: najniższe przedziały na buty stoją bezpośrednio na kafelkach (2026-11-15).
 - Wysokości półek wspólne dla wszystkich szafek (przyjęte 2026-11-15, według szafki po lewej): spody półek 335 (2 mm nad gzymsem),
   596,5 i 858; przedziały na buty 335, 243,5, 243,5 (przyjęte mimo wcześniejszego minimum 270).
 - Szafki z krótszymi kurtkami (moduł 1 na wprost, po lewej): 3 półki, szuflada 208 (front 202), płyta pod kurtkami 1084–1102.
-- Moduł 2 na wprost (dłuższe kurtki): przedział na kurtki zostaje 1300 (płyta 784–802); 2 półki (335, 596,5),
-  szuflada 169,5 (front 163,5) między półką a płytą.
+- Moduł 2 na wprost (dłuższe kurtki): BEZ szuflady i bez płyty pod kurtkami (2026-11-15); 2 półki (335, 596,5),
+  druga jest dnem przedziału na kurtki (1487,5 do spodu wieńca, od osi drążka 1422,5).
 - Części górne bez dodatkowych półek: wieniec na 2120 na całej głębokości szafek jest jednocześnie półką części górnej.
 - Do ustalenia: prowadnice szuflad.
 
