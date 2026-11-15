@@ -42,8 +42,8 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
     Profil CAŁKOWICIE WPUSZCZANY w spód półki (decyzja 2026-11-15): MasterLED wpuszczany czarny 12 mm, klosz mleczny,
     odcinki 1 m (Allegro, oferta 18841961757). Przekrój: kołnierz 23,6, korpus 16,9, wys. 7 razem z kołnierzem
     (korpus ok. 5,5 w rowku, kołnierz ok. 1,5 zostaje pod spodem półki i zakrywa krawędzie rowka), wnętrze 12,4.
-    Rowek 18,2 × 6 (zostaje 12 mm płyty) z dwóch wręgów 10,2 w kalkulatorze meble.pl, odległości 30 i 38 od krawędzi;
-    oś profilu 39,1 od przodu półki. Odcinki: P3 ok. 2030 (od narożnika P1 do 20 przed SOB-1), P1 wzdłuż przodu ok. 620,
+    Rowek 18,2 × 6 (zostaje 12 mm płyty), oś profilu 39,1 od przodu półki. Frezuje użytkownik: kalkulator meble.pl
+    odrzuca wręgi zachodzące na siebie (sprawdzone 2026-11-15: „minimalna odległość między wręgowaniami to 5mm”). Odcinki: P3 ok. 2030 (od narożnika P1 do 20 przed SOB-1), P1 wzdłuż przodu ok. 620,
     przy słupku ok. 370 → razem ok. 3,0 m: kupić 4 szt. po 1 m (lepiej 5, zapas na cięcia 45° i pomyłkę).
     Narożniki: profile cięte pod 45°, taśma łączona łącznikami 3-pin lub lutowana. Styki odcinków na P3 nieuniknione (1 m).
     Wymiary profilu wg karty producenta (bez mierzenia, decyzja 2026-11-15).
@@ -129,13 +129,12 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
 - Kalkulator, szablon „Wręgowanie i nawierty” → „Wręgowanie (nutowanie)”: powierzchnia przód/tył, krawędź 1–4,
   głębokość 2–13 mm (dla 18: grubość − 5), szerokość wręgu tylko 3,2 / 4,2 / 10,2 mm, odległość od krawędzi 0–50 mm,
   przelotowe albo nieprzelotowe (X1/X2 od końców), kilka wręgów na formatce („+ dodaj wręg”).
-- Rowek 18,2 × 6 pod profil MasterLED (korpus 16,9): 2 wręgi 10,2, gł. 6, odległości 30 i 38 od krawędzi.
-  NIEPEWNE (zapytać w mailu przed zamówieniem): czy przyjmą nakładające się wręgi; czy „odległość” liczą do bliższej
-  krawędzi wręgu (założenie) czy do osi; jak długie są płytsze końce nieprzelotowego wręgu (wejście/wyjście narzędzia).
-  Plan B: rowek frezuje użytkownik frezarką z frezem prostym i prowadnicą.
-- P3: wręgi wzdłuż przodu, przelotowe na całej długości (końce schowane przy P1 i przy SOB-1).
-- P1: wręgi wzdłuż przodu (krawędź 804), od 152 od ściany głównej, przelotowe przy słupku (koniec schowany przy słupku);
-  wręgi wzdłuż krawędzi 400 przy słupku, przelotowe od ściany lewej (tam wchodzi kabel), do rowka przedniego.
+- Rowek 18,2 × 6 pod profil MasterLED NIE do zrobienia w meble.pl: kalkulator przy przeliczeniu odrzuca dwa wręgi
+  10,2 w odległościach 30 i 38 (minimalny odstęp między wręgami 5 mm). Rowki frezuje użytkownik frezarką z prowadnicą.
+  Przebieg rowków bez zmian (poniżej).
+- P3: rowek wzdłuż przodu, przelotowe na całej długości (końce schowane przy P1 i przy SOB-1).
+- P1: rowek wzdłuż przodu (krawędź 804), od 152 od ściany głównej, przelotowe przy słupku (koniec schowany przy słupku);
+  rowek wzdłuż krawędzi 400 przy słupku, przelotowe od ściany lewej (tam wchodzi kabel), do rowka przedniego.
 - Narożnik P1/P3: ok. 30 mm rowka w P1 (od rowka przedniego P1 do krawędzi przy P3) biegnie w poprzek krawędzi,
   kalkulator go nie zrobi: użytkownik dłutem/frezarką przed montażem.
 
@@ -175,3 +174,4 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
 - 2026-11-15: P1 804 (luz 1 przy słupku); profil LED całkowicie wpuszczany (rowek ok. 14 × 8).
 - 2026-11-15: profil LED MasterLED wpuszczany 12 mm; rowki 18,2 × 6 z wręgów w zamówieniu meble.pl.
 - 2026-11-15: P3 zostaje na styk z P1 (bez luzu; ostateczne). Luz na ścianie głównej tylko 2 przy ściance (WS).
+- 2026-11-15: wstępna wycena meble.pl (`zamowienie/wycena.md`); rowki LED frezuje użytkownik (meble.pl nie zrobi 18 mm).
