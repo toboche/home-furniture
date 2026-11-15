@@ -13,13 +13,21 @@ def sig(p):
     return (round(p['DL'], 1), round(p['SZ'], 1), tuple(sorted(hs)), 0)
 
 
+def os_przodu(p, R):
+    """oś, w której stronę patrzy przód mebla (domyślnie z); pomieszczenie może podać reguly.os_przodu(p),
+    np. 'x' dla szafki stojącej przy ścianie lewej z przodem w stronę +x"""
+    f = getattr(R, 'os_przodu', None)
+    return f(p) if f else 'z'
+
+
 def front_edge(p, R):
-    """numer oklejonej krawędzi (przód mebla = maks. z) w numeracji kalkulatora: 1 góra, 2 prawa, 3 dół, 4 lewa"""
+    """numer oklejonej krawędzi (przód mebla = maks. na osi przodu) w numeracji kalkulatora: 1 góra, 2 prawa, 3 dół, 4 lewa"""
     if p['code'].startswith(R.BEZ_OKLEINY_PREFIKSY):
         return None
+    oz = os_przodu(p, R)
     for ax in ('u', 'v'):
-        if p[ax] == 'z':
-            val = loc(p, 'z', p['hi']['z'])
+        if p[ax] == oz:
+            val = loc(p, oz, p['hi'][oz])
             if ax == 'u':
                 return 2 if abs(val - p['DL']) < 0.01 else 4
             return 1 if abs(val - p['SZ']) < 0.01 else 3
