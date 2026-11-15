@@ -89,9 +89,9 @@ add([
 add([
   {n:'P1: Półka LED, ściana lewa (803 × 400)',layer:'Półka LED',x:0,y:YP,z:0,w:GP1,h:PP,d:LP1,c:POL},
   {n:'P3: Półka LED, ściana główna (1980 × 200)',layer:'Półka LED',x:GP1,y:YP,z:0,w:XSO-GP1,h:PP,d:GP3,c:POL},
-  {n:'Profil LED pod P1',layer:'LED',x:GP1-60,y:YP-1,z:GP3-60,w:12,h:8,d:ZLS+6-(GP3-60),c:LED},
-  {n:'Profil LED pod P1 przy słupku (od kabla przy ścianie, zamiast rowka; 2026-11-15)',layer:'LED',x:10,y:YP-1,z:ZLS-6,w:GP1-60+2,h:8,d:12,c:LED},
-  {n:'Profil LED pod P3',layer:'LED',x:GP1-60,y:YP-1,z:GP3-60,w:XSO-GP1+40,h:8,d:12,c:LED}
+  {n:'Profil LED nakładany ok. 17 × 7 pod P1',layer:'LED',x:GP1-60,y:YP-7,z:GP3-60,w:17,h:7,d:ZLS+6-(GP3-60),c:LED},
+  {n:'Profil LED nakładany pod P1 przy słupku (od kabla przy ścianie; 2026-11-15)',layer:'LED',x:10,y:YP-7,z:ZLS-6,w:GP1-60+2,h:7,d:17,c:LED},
+  {n:'Profil LED nakładany ok. 17 × 7 pod P3',layer:'LED',x:GP1-60,y:YP-7,z:GP3-60,w:XSO-GP1+40,h:7,d:17,c:LED}
 ]);
 
 /* wsporniki ukryte (trzpień Ø10, długość 113, regulacja w 3 kierunkach), korpus w otworze w ścianie (2026-11-15) */
