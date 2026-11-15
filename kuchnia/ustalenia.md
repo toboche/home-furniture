@@ -75,6 +75,20 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
   Y 2504,5–2649,5 (mieści się).
 - BEZ tłumika z wełną w kanale (tłuszcz osadza się w wypełnieniu: higiena i ryzyko pożaru).
 
+### 2026-11-15: brakujące fronty szuflad METOD (MAXIMERA)
+- Sześć frontów szuflad do istniejących szafek IKEA METOD, płyta H3710 18 mm, słoje NA WYSOKOŚĆ, okleina 0,8 mm na wszystkich
+  krawędziach (jak w poprzednim zamówieniu w meble.pl). Wymiary = idealny − 3 mm, szerokość 597.
+  - kolumna 1 (od góry): 142 (szuflada niska), 397 (wysoka), 397 (wysoka);
+  - kolumna 2 (od góry): 197 (średnia), 197 (średnia), 397 (wysoka).
+- Dół szuflady przy dolnej krawędzi frontu (standard METOD). Nawierty pod mocowanie MAXIMERA na tyle frontu (wierci sklep,
+  szablon „Wręgowanie i nawierty”): Ø5 × 13 (w poprzednim zamówieniu 10), x = 32 i 565 od lewej krawędzi (widok od tyłu),
+  y od dołu: niska 39, 58; średnia + 117, 136; wysoka + 185, 204 (pozycje z poprzedniego zamówienia, potwierdzone).
+- Otworów na gałki nie zamawiamy (wierci użytkownik).
+- Dopasowanie usłojenia w kolumnie: nie da się zamówić przez stronę. Fronty nazwane w kalkulatorze „usłojenie 21a–21c”
+  i „usłojenie 22a–22c”, potem mail do sklepu z rysunkiem `zamowienie/fronty_metod_rysunek.pdf`
+  (jak przy poprzednim zamówieniu, grupy 1a–20).
+- Pliki: `zamowienie/fronty_metod.py` (generuje `fronty_metod.csv` i rysunek). Położenie kolumn w kuchni: do opisania.
+
 ## Założenia do potwierdzenia
 - Położenie okapu w głąb: korpus dosunięty do przodu (z 50–300), szkło z 10–300. Oś wylotu ok. 218 od ściany głównej.
   Sprawdzić przy montażu (otwory 35 i 215 od przodu boku).
@@ -106,3 +120,4 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
 - 2026-11-14: SOB-1 na mimośrodach i kołkach (bez widocznych konfirmatów), SOP potwierdzona, okap bez gniazdka.
 - 2026-11-14: redukcja mimośrodowa 150/125 i system spiro Ø125; wąska szafka 2 półki (3 × 306,33).
 - 2026-11-14: cichy kanał: pion Ø150, redukcja pod sufitem, mata akustyczna, otwór w SOP Ø170.
+- 2026-11-15: fronty szuflad METOD (6 szt.), lista i rysunek dopasowania usłojenia w `zamowienie/`.

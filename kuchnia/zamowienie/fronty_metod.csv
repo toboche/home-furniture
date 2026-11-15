@@ -1,0 +1,7 @@
+﻿KOD;NAZWA W KALKULATORZE;SZER;WYS;SZT;SŁOJE;OKLEINA;SZUFLADA;"NAWIERTY (TYŁ, X;Y od lewego dolnego rogu widoku od tyłu, Ø5 x 13)"
+FM1;usłojenie 21a;597;142;1;na wysokość;0,8 mm H3710, wszystkie krawędzie, kryjące długie;NISKA;"32;39 | 32;58 | 565;39 | 565;58"
+FM2;usłojenie 21b;597;397;1;na wysokość;0,8 mm H3710, wszystkie krawędzie, kryjące długie;WYSOKA;"32;39 | 32;58 | 32;117 | 32;136 | 32;185 | 32;204 | 565;39 | 565;58 | 565;117 | 565;136 | 565;185 | 565;204"
+FM3;usłojenie 21c;597;397;1;na wysokość;0,8 mm H3710, wszystkie krawędzie, kryjące długie;WYSOKA;"32;39 | 32;58 | 32;117 | 32;136 | 32;185 | 32;204 | 565;39 | 565;58 | 565;117 | 565;136 | 565;185 | 565;204"
+FM4;usłojenie 22a;597;197;1;na wysokość;0,8 mm H3710, wszystkie krawędzie, kryjące długie;SREDNIA;"32;39 | 32;58 | 32;117 | 32;136 | 565;39 | 565;58 | 565;117 | 565;136"
+FM5;usłojenie 22b;597;197;1;na wysokość;0,8 mm H3710, wszystkie krawędzie, kryjące długie;SREDNIA;"32;39 | 32;58 | 32;117 | 32;136 | 565;39 | 565;58 | 565;117 | 565;136"
+FM6;usłojenie 22c;597;397;1;na wysokość;0,8 mm H3710, wszystkie krawędzie, kryjące długie;WYSOKA;"32;39 | 32;58 | 32;117 | 32;136 | 32;185 | 32;204 | 565;39 | 565;58 | 565;117 | 565;136 | 565;185 | 565;204"
