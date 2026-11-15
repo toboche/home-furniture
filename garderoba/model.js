@@ -95,13 +95,15 @@ var ITEMS=[
 
 /* Poziomy wnętrza części otwartych: dno, półki na buty, szuflada, płyta pod kurtkami (zamysł).
    b: obszar w świetle {x0,x1,z0,z1}; przód na x1 (szafka po lewej) albo z1 (na wprost). */
-function poziomy(nazwa,b,hk,n,but,przodX){
+function poziomy(nazwa,b,hk,n,but,przodX,y1){
+  /* y1: (opcjonalnie) wysokość spodu pierwszej półki; pozostałe przedziały na buty dzielą resztę po równo */
   var L='Szuflady i półki (zamysł)',y=0,i;
+  if(y1!=null){var but2=(HPK(hk)-P-SZD-(y1+P)-(n-1)*P)/(n-1);}
   function plyta(n_,y0,x0){ITEMS.push({n:nazwa+': '+n_,layer:L,x:x0,y:y0,z:b.z0,w:b.x1-x0,h:P,d:b.z1-b.z0,c:0xd8c7a3});}
   /* poniżej gzymsu (GZ1) płyty szafki po lewej omijają gzyms z rurą: zaczynają się za GZ2 + GR4 */
   function x0(y0){return (przodX&&y0<GZ1)?GZ2+GR4:b.x0;}
   plyta('dno',0,x0(0));y=P;
-  for(i=1;i<=n;i++){y+=but;plyta('półka nad butami '+i+' (przedział '+but+')',y,x0(y));y+=P;}
+  for(i=1;i<=n;i++){var bi=(y1!=null)?(i===1?y1-P:but2):but;y+=bi;plyta('półka nad butami '+i+' (przedział '+bi+')',y,x0(y));y+=P;}
   var dx=przodX?{x:b.x1-P,w:P,z:b.z0+1.5,d:b.z1-b.z0-3}:{x:b.x0+1.5,w:b.x1-b.x0-3,z:b.z1-P,d:P};
   ITEMS.push({n:nazwa+': szuflada (przedział '+SZD+', front '+(SZD-6)+')',layer:L,x:dx.x,y:y+3,z:dx.z,w:dx.w,h:SZD-6,d:dx.d,c:0xc9a227,o:0.7});
   y+=SZD;
@@ -109,7 +111,8 @@ function poziomy(nazwa,b,hk,n,but,przodX){
 }
 poziomy('Na wprost, moduł 1',{x0:XL+P,x1:XM-P/2,z0:ODS,z1:ZF},HK1,N1,BUT1,false);
 poziomy('Na wprost, moduł 2 (dłuższe kurtki)',{x0:XM+P/2,x1:XP-P,z0:ODS,z1:ZF},HK2,N2,BUT,false);
-poziomy('Po lewej',{x0:ODS,x1:XL,z0:ZF+P,z1:ZP-P},HK1,N1,BUT1,true);
+var YL1=GZ1+2;         /* szafka po lewej: spód dolnej półki 2 mm nad gzymsem = 335 (2026-11-15) */
+poziomy('Po lewej',{x0:ODS,x1:XL,z0:ZF+P,z1:ZP-P},HK1,N1,BUT1,true,YL1);
 
 return {
   title:'Garderoba 3D',

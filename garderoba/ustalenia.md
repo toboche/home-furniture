@@ -44,7 +44,8 @@ Materiały źródłowe: `zrodla/` (rzut architektoniczny, zdjęcia ogólne).
 - Wyliczenie (płyta 18, dno na podłodze): przedział szuflady 190 we wszystkich szafkach (z modułu 2 przy 2 × 270 na buty);
   moduł 2: 2 przedziały na buty po 270; moduł 1 i szafka po lewej: 3 przedziały po 274.
 - Części górne bez dodatkowych półek: wieniec na 2120 na całej głębokości szafek jest jednocześnie półką części górnej.
-- Szafka po lewej: dno i pierwsza półka (poniżej gzymsu, 333) omijają gzyms z rurą (zaczynają się 184 od lewej ściany).
+- Szafka po lewej: dno omija gzyms z rurą (zaczyna się 184 od lewej ściany). Dolna półka 2 mm nad gzymsem (spód 335, pełna głębokość; 2026-11-15):
+  pierwszy przedział 317 (przy gzymsie), dwa kolejne po 252,5 – PONIŻEJ minimum 270, do decyzji (warianty w rozmowie 2026-11-15).
 - Do ustalenia: czy dno na podłodze (płyta 18) czy pierwszy poziom butów bezpośrednio na kafelkach; prowadnice szuflad.
 
 ## Plan pracy
