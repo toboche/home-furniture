@@ -88,25 +88,23 @@ var ITEMS=[
   {t:'cyl3',n:'Lampa (oczko) '+L2+' od lewej ściany, '+L1+' od tylnej',layer:'Osprzęt',ax:'y',px:L2,py:J-3,pz:L1,r:40,len:6,c:0xe0a526}
 ];
 
-/* Szuflada (2026-11-15): Blum MOVENTO z BLUMOTION, skrzynka z płyty 16 (jak w przedpokoju: szer. wewn. = LW − 42,
+/* Szuflada (2026-11-15): Blum MOVENTO do TIP-ON BLUMOTION, skrzynka z płyty 16 (jak w przedpokoju: szer. wewn. = LW − 42,
    długość boku = NL − 10, dno wpuszczone 13), front CHOWANY między boki szafki, równo z krawędzią korpusu, szczelina 3.
-   Uchwyt w stylu GUBBARP 116 × 21 (wysięg 27), BEZ nawiertów (okucia wybierze użytkownik).
+   Bez uchwytów: TIP-ON BLUMOTION (otwieranie naciśnięciem frontu, 2026-11-15; uchwyty kolidowały z otwieraną drugą szufladą).
    Pola sz/rola/ruch służą do sprawdzenia kolizji przy otwieraniu (garderoba/sprawdz_szuflady.js). */
 var SZCZ=3, PS=16, HSK=180;   /* szczelina frontu, płyta skrzynki, wysokość boku skrzynki (ZAŁOŻENIE, do katalogu Blum) */
 function szuflada(nazwa,b,y,yb,przodX,o){
-  var L='Szuflady (zamysł)',kod=o.kod,NL=o.NL,LW=przodX?(b.z1-b.z0):(b.x1-b.x0),SKW=LW-42,DB=NL-10,u=o.uchwyt;
+  var L='Szuflady (zamysł)',kod=o.kod,NL=o.NL,LW=przodX?(b.z1-b.z0):(b.x1-b.x0),SKW=LW-42,DB=NL-10;
   var tag=function(it,rola){it.sz=kod;it.rola=rola;it.ruch=przodX?'x':'z';it.skok=NL;ITEMS.push(it);};
   var fh=yb-y-2*SZCZ, yf=y+SZCZ, yk=y+SZCZ;
   if(przodX){
     var zc=(b.z0+b.z1)/2;
     tag({n:kod+': front szuflady (chowany, '+(LW-2*SZCZ)+' × '+fh+')',layer:L,x:b.x1-P,y:yf,z:b.z0+SZCZ,w:P,h:fh,d:LW-2*SZCZ,c:0x2f9e8f,o:0.8},'front');
-    tag({n:kod+': skrzynka 16 (wnętrze '+SKW+' × '+DB+', MOVENTO '+NL+')',layer:L,x:b.x1-P-DB,y:yk,z:zc-SKW/2-PS,w:DB,h:HSK,d:SKW+2*PS,c:0xb08a5b,o:0.45},'skrzynka');
-    tag({n:kod+': uchwyt (w stylu GUBBARP 116, wysięg '+u.wys+', bez nawiertów)',layer:L,x:b.x1,y:yf+fh-u.od_gory-21,z:u.srodek-58,w:u.wys,h:21,d:116,c:0xf4f4f4},'uchwyt');
+    tag({n:kod+': skrzynka 16 (wnętrze '+SKW+' × '+DB+', MOVENTO '+NL+' + TIP-ON BLUMOTION)',layer:L,x:b.x1-P-DB,y:yk,z:zc-SKW/2-PS,w:DB,h:HSK,d:SKW+2*PS,c:0xb08a5b,o:0.45},'skrzynka');
   }else{
     var xc=(b.x0+b.x1)/2;
     tag({n:kod+': front szuflady (chowany, '+(LW-2*SZCZ)+' × '+fh+')',layer:L,x:b.x0+SZCZ,y:yf,z:b.z1-P,w:LW-2*SZCZ,h:fh,d:P,c:0x2f9e8f,o:0.8},'front');
-    tag({n:kod+': skrzynka 16 (wnętrze '+SKW+' × '+DB+', MOVENTO '+NL+')',layer:L,x:xc-SKW/2-PS,y:yk,z:b.z1-P-DB,w:SKW+2*PS,h:HSK,d:DB,c:0xb08a5b,o:0.45},'skrzynka');
-    tag({n:kod+': uchwyt (niski, wysięg '+u.wys+'; GUBBARP 27 koliduje z szufladą po lewej)',layer:L,x:u.srodek-58,y:yf+fh-u.od_gory-21,z:b.z1,w:116,h:21,d:u.wys,c:0xf4f4f4},'uchwyt');
+    tag({n:kod+': skrzynka 16 (wnętrze '+SKW+' × '+DB+', MOVENTO '+NL+' + TIP-ON BLUMOTION)',layer:L,x:xc-SKW/2-PS,y:yk,z:b.z1-P-DB,w:SKW+2*PS,h:HSK,d:DB,c:0xb08a5b,o:0.45},'skrzynka');
   }
 }
 
@@ -126,9 +124,9 @@ function poziomy(nazwa,b,hk,przodX,npolek,opts){
   szuflada(nazwa,b,y,yb,przodX,opts);
   plyta('płyta pod kurtkami (przedział na kurtki '+hk+')',yb,b.x0);
 }
-poziomy('Na wprost, moduł 1',{x0:XL+P,x1:XM-P,z0:ODS,z1:ZF},HK1,false,0,{kod:'SZ1',NL:500,uchwyt:{srodek:(XL+XM)/2,od_gory:20,wys:15}});
+poziomy('Na wprost, moduł 1',{x0:XL+P,x1:XM-P,z0:ODS,z1:ZF},HK1,false,0,{kod:'SZ1',NL:500});
 poziomy('Na wprost, moduł 2 (dłuższe kurtki, bez szuflady; kurtki od '+(YP[1]+P)+' do '+(HW-P)+')',{x0:XM+P,x1:XP-P,z0:ODS,z1:ZF},0,false,2);
-poziomy('Po lewej',{x0:ODS,x1:XL,z0:ZF+P,z1:ZP-P},HK1,true,0,{kod:'SZ2',NL:650,uchwyt:{srodek:1300,od_gory:20,wys:27}});
+poziomy('Po lewej',{x0:ODS,x1:XL,z0:ZF+P,z1:ZP-P},HK1,true,0,{kod:'SZ2',NL:650});
 
 /* Boki korpusów (zamysł; formatki powstaną na etapie konstrukcji) – do sprawdzania kolizji szuflad */
 var BOKI=[
