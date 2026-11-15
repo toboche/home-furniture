@@ -84,8 +84,11 @@ var ZF=ZK+P;           /* płaszczyzna frontów szafek na wprost: 583 */
 var XL=PXM+LUZ;        /* przód szafki po lewej (bez frontów): 705 */
 var XP=A-LUZ;          /* prawy bok szafek na wprost: 1822 */
 var XM=(XL+XP)/2;      /* podział na 2 moduły */
-var HD=2052;           /* oś drążka: 50 pod spodem wieńca (2120 − 18 − 50; DO POTWIERDZENIA, czy 50 do osi) */
-var HS=900;            /* góra strefy szuflad (PROPOZYCJA, do ustalenia) */
+var HD=HW-P-65;        /* oś drążka: 65 pod spodem wieńca = 2037 (2026-11-15; wcześniej 50 → 2052) */
+var HK1=1000;          /* wysokość przedziału na krótsze kurtki (moduł 1 na wprost i szafka po lewej) */
+var N1=3;              /* liczba przedziałów na buty (szafki z krótszymi kurtkami) */
+var HPK=function(hk){return HW-P-hk;};                 /* góra płyty pod kurtkami */
+var SZD=208;           /* przedział szuflady w szafkach z krótszymi kurtkami (przyjęte 2026-11-15) */
 var ZP=PZ+T-LUZ;       /* koniec szafki po lewej przy ścianie przedniej: 562 + 919 − 3 = 1478 */
 
 var ITEMS=[
@@ -127,11 +130,6 @@ var ITEMS=[
   {t:'cyl3',n:'Na wprost, moduł 1: drążek na kurtki (oś '+HD+')',layer:'Szafki na wprost (zamysł)',ax:'x',px:(XL+XM)/2,py:HD,pz:(ODS+ZF)/2,r:12.5,len:XM-XL-2*P,c:0x9aa5ad},
   {t:'cyl3',n:'Na wprost, moduł 2: drążek na kurtki (oś '+HD+')',layer:'Szafki na wprost (zamysł)',ax:'x',px:(XM+XP)/2,py:HD,pz:(ODS+ZF)/2,r:12.5,len:XP-XM-2*P,c:0x9aa5ad},
   {t:'cyl3',n:'Po lewej: drążek na kurtki (oś '+HD+'), wzdłuż ściany',layer:'Szafka po lewej (zamysł)',ax:'z',px:(ODS+XL)/2,py:HD,pz:(ZF+ZP)/2,r:12.5,len:ZP-ZF-2*P,c:0x9aa5ad},
-  /* Strefa szuflad (buty, czapki, rękawiczki): PROPOZYCJA wysokości, liczba szuflad do ustalenia */
-  {n:'Na wprost, moduł 1: szuflady (propozycja, do '+HS+')',layer:'Szuflady (propozycja)',x:XL+P,y:0,z:ZF-P,w:XM-XL-2*P,h:HS,d:P,c:0xc9a227,o:0.5},
-  {n:'Na wprost, moduł 2: szuflady (propozycja, do '+HS+')',layer:'Szuflady (propozycja)',x:XM+P,y:0,z:ZF-P,w:XP-XM-2*P,h:HS,d:P,c:0xc9a227,o:0.5},
-  {n:'Po lewej: szuflady (propozycja, do '+HS+'; nad gzymsem i rurą płytsze)',layer:'Szuflady (propozycja)',x:XL-P,y:0,z:ZF+P,w:P,h:HS,d:ZP-ZF-2*P,c:0xc9a227,o:0.5},
-
   /* Kratka wentylacyjna w otworze tylnej ścianki górnej części szafki po lewej (na wprost wylotu), od strony półek */
   {t:'cyl',n:'Kratka wentylacyjna Ø150 w tylnej ściance szafki po lewej (zamysł; wylot docięty)',layer:'Szafka po lewej (zamysł)',cx:W2,cy:W1,z:ZF+P,r:75,len:3,c:0xe0a526},
   /* Wycięcie w boku szafki po lewej przy ścianie przedniej, na gniazdko (wymiar wycięcia do ustalenia) */
@@ -141,13 +139,68 @@ var ITEMS=[
   {t:'cyl3',n:'Lampa (oczko) '+L2+' od lewej ściany, '+L1+' od tylnej',layer:'Osprzęt',ax:'y',px:L2,py:J-3,pz:L1,r:40,len:6,c:0xe0a526}
 ];
 
+/* Szuflada (2026-11-15): Blum MOVENTO do TIP-ON BLUMOTION, skrzynka z płyty 16 (jak w przedpokoju: szer. wewn. = LW − 42,
+   długość boku = NL − 10, dno wpuszczone 13), front CHOWANY między boki szafki, równo z krawędzią korpusu, szczelina 3.
+   Bez uchwytów: TIP-ON BLUMOTION (otwieranie naciśnięciem frontu, 2026-11-15; uchwyty kolidowały z otwieraną drugą szufladą).
+   Pola sz/rola/ruch służą do sprawdzenia kolizji przy otwieraniu (garderoba/sprawdz_szuflady.js). */
+var SZCZ=3, PS=16, HSK=180;   /* szczelina frontu, płyta skrzynki, wysokość boku skrzynki (ZAŁOŻENIE, do katalogu Blum) */
+function szuflada(nazwa,b,y,yb,przodX,o){
+  var L='Szuflady (zamysł)',kod=o.kod,NL=o.NL,LW=przodX?(b.z1-b.z0):(b.x1-b.x0),SKW=LW-42,DB=NL-10;
+  var tag=function(it,rola){it.sz=kod;it.rola=rola;it.ruch=przodX?'x':'z';it.skok=NL;ITEMS.push(it);};
+  var fh=yb-y-2*SZCZ, yf=y+SZCZ, yk=y+SZCZ;
+  if(przodX){
+    var zc=(b.z0+b.z1)/2;
+    tag({n:kod+': front szuflady (chowany, '+(LW-2*SZCZ)+' × '+fh+')',layer:L,x:b.x1-P,y:yf,z:b.z0+SZCZ,w:P,h:fh,d:LW-2*SZCZ,c:0x2f9e8f,o:0.8},'front');
+    tag({n:kod+': skrzynka 16 (wnętrze '+SKW+' × '+DB+', MOVENTO '+NL+' + TIP-ON BLUMOTION)',layer:L,x:b.x1-P-DB,y:yk,z:zc-SKW/2-PS,w:DB,h:HSK,d:SKW+2*PS,c:0xb08a5b,o:0.45},'skrzynka');
+  }else{
+    var xc=(b.x0+b.x1)/2;
+    tag({n:kod+': front szuflady (chowany, '+(LW-2*SZCZ)+' × '+fh+')',layer:L,x:b.x0+SZCZ,y:yf,z:b.z1-P,w:LW-2*SZCZ,h:fh,d:P,c:0x2f9e8f,o:0.8},'front');
+    tag({n:kod+': skrzynka 16 (wnętrze '+SKW+' × '+DB+', MOVENTO '+NL+' + TIP-ON BLUMOTION)',layer:L,x:xc-SKW/2-PS,y:yk,z:b.z1-P-DB,w:SKW+2*PS,h:HSK,d:DB,c:0xb08a5b,o:0.45},'skrzynka');
+  }
+}
+
+/* Poziomy wnętrza części otwartych (bez dna): półki na buty, szuflada, płyta pod kurtkami (zamysł).
+   Wysokości półek wspólne dla wszystkich szafek, wyliczone dla szafki po lewej (2026-11-15):
+   dolna półka 2 mm nad gzymsem, dwa przedziały nad nią po równo, szuflada SZD, płyta pod kurtkami HK1.
+   Moduł 2 (dłuższe kurtki): bez szuflady i bez płyty pod kurtkami; 2 półki, druga jest dnem przedziału na kurtki (2026-11-15). */
+var YP=[GZ1+2];        /* spody półek: 335, … */
+(function(){var b2=(HPK(HK1)-P-SZD-(YP[0]+P)-(N1-1)*P)/(N1-1),i;for(i=1;i<N1;i++){YP.push(YP[i-1]+P+b2);}})();
+function poziomy(nazwa,b,hk,przodX,npolek,opts){
+  var L='Szuflady i półki (zamysł)',yb=hk?HPK(hk)-P:HW-P,y=0,i;
+  function plyta(n_,y0,x0){ITEMS.push({n:nazwa+': '+n_,layer:L,x:x0,y:y0,z:b.z0,w:b.x1-x0,h:P,d:b.z1-b.z0,c:0xd8c7a3});}
+  /* poniżej gzymsu (GZ1) płyty szafki po lewej omijałyby gzyms z rurą (zaczynają się za GZ2 + GR4) */
+  function x0(y0){return (przodX&&y0<GZ1)?GZ2+GR4:b.x0;}
+  for(i=0;i<(npolek||YP.length);i++){plyta('półka nad butami '+(i+1)+' (przedział '+(YP[i]-y)+')',YP[i],x0(YP[i]));y=YP[i]+P;}
+  if(!hk){return;}   /* bez szuflady: nad ostatnią półką przedział na kurtki do spodu wieńca */
+  szuflada(nazwa,b,y,yb,przodX,opts);
+  plyta('płyta pod kurtkami (przedział na kurtki '+hk+')',yb,b.x0);
+}
+poziomy('Na wprost, moduł 1',{x0:XL+P,x1:XM-P,z0:ODS,z1:ZF},HK1,false,0,{kod:'SZ1',NL:500});
+poziomy('Na wprost, moduł 2 (dłuższe kurtki, bez szuflady; kurtki od '+(YP[1]+P)+' do '+(HW-P)+')',{x0:XM+P,x1:XP-P,z0:ODS,z1:ZF},0,false,2);
+poziomy('Po lewej',{x0:ODS,x1:XL,z0:ZF+P,z1:ZP-P},HK1,true,0,{kod:'SZ2',NL:650});
+
+/* Osłona przewodów wodnych (2026-11-15): pionowa płyta w obu modułach na wprost, od podłogi do pierwszej półki (YP[0]),
+   przed przewodami (wysięg ok. R4 = 50) z luzem 5; plecy modułów zaczynają się nad tym przedziałem. */
+var ZO=R4+5;   /* tylne lico osłony: 55 od ściany (przewody wystają ok. 50 – sprawdzić przy montażu) */
+[['Na wprost, moduł 1',XL+P,XM-P],['Na wprost, moduł 2',XM+P,XP-P]].forEach(function(m){
+  ITEMS.push({n:m[0]+': osłona przewodów wodnych (0–'+YP[0]+', '+ZO+'–'+(ZO+P)+' od ściany)',layer:'Szuflady i półki (zamysł)',x:m[1],y:0,z:ZO,w:m[2]-m[1],h:YP[0],d:P,c:0xcdbb95});
+});
+
+/* Boki korpusów (zamysł; formatki powstaną na etapie konstrukcji) – do sprawdzania kolizji szuflad */
+var BOKI=[
+  {n:'Moduł 1: bok lewy',x:XL,y:0,z:ODS,w:P,h:HG,d:ZF-ODS},{n:'Moduł 1: bok prawy',x:XM-P,y:0,z:ODS,w:P,h:HG,d:ZF-ODS},
+  {n:'Moduł 2: bok lewy',x:XM,y:0,z:ODS,w:P,h:HG,d:ZF-ODS},{n:'Moduł 2: bok prawy',x:XP-P,y:0,z:ODS,w:P,h:HG,d:ZF-ODS},
+  {n:'Po lewej: bok przy pionie',x:ODS,y:0,z:ZF,w:XL-ODS,h:HG,d:P},{n:'Po lewej: bok przy ścianie przedniej',x:ODS,y:0,z:ZP-P,w:XL-ODS,h:HG,d:P}
+];
+
 return {
   title:'Garderoba 3D',
+  boki:BOKI,
   room:{W:A,D:G,H:J},
   wallThickness:100,
   openings:[{wall:'przod',pos:A-DX-DW,w:DW,y:0,h:DH}],
   views:{iso:[3.3,2.7,3.6],front:[0.91,1.3,4.9],top:[0.91,5.6,1.15],left:[-3.6,1.5,0.75]},
-  conceptLayers:['Szafki na wprost (zamysł)','Szafka po lewej (zamysł)','Szuflady (propozycja)'],
+  conceptLayers:['Szafki na wprost (zamysł)','Szafka po lewej (zamysł)','Szuflady i półki (zamysł)','Szuflady (zamysł)'],
   hiddenLayers:[],
   fixedLayers:['Pion i gzyms','Osprzęt'],
   boardLayers:['Półki','Ścianki boczne','Ścianki tylne','Fronty'],

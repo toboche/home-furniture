@@ -36,11 +36,27 @@ Materiały źródłowe: `zrodla/` (rzut architektoniczny, zdjęcia ogólne).
 - Gniazdko na ścianie przedniej (E1 210, E2 195): wycięcie w boku szafki po lewej (wymiar wycięcia do ustalenia).
 - Gzyms i rura pod szafką po lewej: boki wycięte wokół gzymsu; na dole szuflady, w tym miejscu odpowiednio płytsze.
 
-## Wnętrze (decyzje 2026-11-12)
-- Na dole obu szafek (na wprost i po lewej): szuflady na buty i mniejsze rzeczy (czapki, rękawiczki).
-- Nad szufladami: sekcje na kurtki, drążek 50 mm od wieńca (do potwierdzenia: do osi drążka, od spodu wieńca → oś 2052).
+## Wnętrze (decyzje 2026-11-12 i 2026-11-15)
+- Części otwarte, od dołu: przedziały na buty (min. 270 w świetle) z półkami, nad nimi jedna szuflada (czapki, rękawiczki),
+  płyta, nad nią przedział na kurtki z drążkiem.
+- Drążek: oś 65 mm pod spodem wieńca, czyli 2037 (zmiana 2026-11-15; wcześniej 50 → 2052).
+- Przedział na kurtki: moduł 2 na wprost (prawy) na dłuższe kurtki (od półki 614,5 do spodu wieńca 2102 = 1487,5); moduł 1 na wprost i szafka po lewej na krótsze 1000.
+- Bez dna: najniższe przedziały na buty stoją bezpośrednio na kafelkach (2026-11-15).
+- Wysokości półek wspólne dla wszystkich szafek (przyjęte 2026-11-15, według szafki po lewej): spody półek 335 (2 mm nad gzymsem),
+  596,5 i 858; przedziały na buty 335, 243,5, 243,5 (przyjęte mimo wcześniejszego minimum 270).
+- Szafki z krótszymi kurtkami (moduł 1 na wprost, po lewej): 3 półki, szuflada 208 (front 202), płyta pod kurtkami 1084–1102.
+- Moduł 2 na wprost (dłuższe kurtki): BEZ szuflady i bez płyty pod kurtkami (2026-11-15); 2 półki (335, 596,5),
+  druga jest dnem przedziału na kurtki (1487,5 do spodu wieńca, od osi drążka 1422,5).
 - Części górne bez dodatkowych półek: wieniec na 2120 na całej głębokości szafek jest jednocześnie półką części górnej.
-- Do ustalenia: liczba i wysokości szuflad, wysokość strefy szuflad (propozycja w modelu: do 900), prowadnice.
+- Szuflady (2026-11-15): Blum MOVENTO do TIP-ON BLUMOTION (otwieranie naciśnięciem, bez uchwytów), skrzynki z płyty 16
+  (jak w przedpokoju), fronty CHOWANE między boki szafki, równo z krawędzią korpusu (583 / 705), szczelina 3.
+  SZ1 (na wprost, moduł 1): NL 500, front 516,5 × 202; SZ2 (po lewej): NL 650, front 853 × 202.
+  Moduły na wprost to osobne korpusy (każdy z dwoma bokami).
+- Osłona przewodów wodnych (2026-11-15): w obu modułach na wprost pionowa płyta od podłogi do pierwszej półki (335),
+  55–73 od ściany tylnej (przewody wystają ok. 50, luz 5); najniższy przedział na buty płytszy o ok. 50, reszta bez zmian.
+  Plecy modułów zaczynają się nad tym przedziałem.
+- Uchwyty odrzucone (2026-11-15): uchwyt SZ1 blokowałby otwieraną SZ2, a uchwyt SZ2 bliżej niż 1160 od ściany tylnej – SZ1.
+  Otwieranie każdej szuflady przy zamkniętej drugiej sprawdzone (`sprawdz_szuflady.js`): brak kolizji. Okucia: `komponenty.md`.
 
 ## Plan pracy
 1. Wymiary pomieszczenia z natury (zdjęcia w paczkach). Do czasu ustalenia wszystkich wymiarów NIE projektujemy szafek.
