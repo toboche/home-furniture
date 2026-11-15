@@ -87,7 +87,8 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
 - Dopasowanie usłojenia w kolumnie: nie da się zamówić przez stronę. Fronty nazwane w kalkulatorze „usłojenie 21a–21c”
   i „usłojenie 22a–22c”, potem mail do sklepu z rysunkiem `zamowienie/fronty_metod_rysunek.pdf`
   (jak przy poprzednim zamówieniu, grupy 1a–20).
-- Pliki: `zamowienie/fronty_metod.py` (generuje `fronty_metod.csv` i rysunek). Położenie kolumn w kuchni: do opisania.
+- Pliki: `zamowienie/fronty_metod.py` (generuje `fronty_metod.csv` i rysunek). Kolumny to nowa część mebli,
+  nie ma ich na rysunku z poprzedniego zamówienia (2026-11-15).
 
 ## Założenia do potwierdzenia
 - Położenie okapu w głąb: korpus dosunięty do przodu (z 50–300), szkło z 10–300. Oś wylotu ok. 218 od ściany głównej.

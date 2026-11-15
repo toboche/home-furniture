@@ -61,6 +61,7 @@ def rysunek():
     ax.text(0, -40, 'Nawierty (tył frontu, wierci sklep): Ø5 x 13, x = 32 i 565 od lewej krawędzi (widok od tyłu),', fontsize=8.5)
     ax.text(0, -75, 'y od dolnej krawędzi: szuflada niska 39, 58; średnia 39, 58, 117, 136; wysoka 39, 58, 117, 136, 185, 204.', fontsize=8.5)
     ax.text(0, -110, 'Otworów na gałki nie wiercić. Szczeliny między frontami na rysunku: 3 mm (poglądowo).', fontsize=8.5)
+    ax.text(0, -145, 'Nowa część mebli: tych kolumn nie ma na rysunku z poprzedniego zamówienia.', fontsize=8.5)
     fig.savefig(os.path.join(TU, 'fronty_metod_rysunek.pdf'))
     fig.savefig(os.path.join(TU, 'fronty_metod_rysunek.png'), dpi=110)
 
