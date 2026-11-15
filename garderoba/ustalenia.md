@@ -42,12 +42,13 @@ Materiały źródłowe: `zrodla/` (rzut architektoniczny, zdjęcia ogólne).
 - Drążek: oś 65 mm pod spodem wieńca, czyli 2037 (zmiana 2026-11-15; wcześniej 50 → 2052).
 - Przedział na kurtki: moduł 2 na wprost (prawy) na dłuższe kurtki 1300; moduł 1 na wprost i szafka po lewej na krótsze 1000.
 - Bez dna: najniższe przedziały na buty stoją bezpośrednio na kafelkach (2026-11-15).
-- Wyliczenie (płyta 18): przedział szuflady 208 we wszystkich szafkach (z modułu 2 przy 2 × 270 na buty);
-  moduł 2: 2 przedziały na buty po 270; moduł 1: 3 przedziały po 274.
+- Wysokości półek wspólne dla wszystkich szafek (przyjęte 2026-11-15, według szafki po lewej): spody półek 335 (2 mm nad gzymsem),
+  596,5 i 858; przedziały na buty 335, 243,5, 243,5 (przyjęte mimo wcześniejszego minimum 270).
+- Szafki z krótszymi kurtkami (moduł 1 na wprost, po lewej): 3 półki, szuflada 208 (front 202), płyta pod kurtkami 1084–1102.
+- Moduł 2 na wprost (dłuższe kurtki): przedział na kurtki zostaje 1300 (płyta 784–802); 2 półki (335, 596,5),
+  szuflada 169,5 (front 163,5) między półką a płytą.
 - Części górne bez dodatkowych półek: wieniec na 2120 na całej głębokości szafek jest jednocześnie półką części górnej.
-- Szafka po lewej: dolna półka 2 mm nad gzymsem (spód 335, pełna głębokość; 2026-11-15). Pierwszy przedział 335 (przy gzymsie),
-  dwa kolejne po 243,5 – PONIŻEJ minimum 270, do decyzji.
-- Do ustalenia: prowadnice szuflad; układ przedziałów po lewej.
+- Do ustalenia: prowadnice szuflad.
 
 ## Plan pracy
 1. Wymiary pomieszczenia z natury (zdjęcia w paczkach). Do czasu ustalenia wszystkich wymiarów NIE projektujemy szafek.

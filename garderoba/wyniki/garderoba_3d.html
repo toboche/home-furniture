@@ -87,13 +87,9 @@ var XM=(XL+XP)/2;      /* podział na 2 moduły */
 var HD=HW-P-65;        /* oś drążka: 65 pod spodem wieńca = 2037 (2026-11-15; wcześniej 50 → 2052) */
 var HK2=1300;          /* wysokość przedziału na dłuższe kurtki (moduł 2 na wprost, prawy) */
 var HK1=1000;          /* wysokość przedziału na krótsze kurtki (moduł 1 na wprost i szafka po lewej) */
-var BUT=270;           /* najmniejsza wysokość przedziału na buty (w świetle) */
-var N2=2, N1=3;        /* liczba przedziałów na buty: moduł 2 / pozostałe */
-/* Od dołu (bez dna, przedziały na buty stoją na kafelkach): przedziały na buty z półkami P, przedział szuflady (jedna szuflada nad butami), płyta P pod kurtkami.
-   Wysokość przedziału szuflady wynika z modułu 2 (przy BUT), w pozostałych ta sama szuflada, a nadmiar idzie na buty. */
+var N1=3;              /* liczba przedziałów na buty (szafki z krótszymi kurtkami) */
 var HPK=function(hk){return HW-P-hk;};                 /* góra płyty pod kurtkami */
-var SZD=HPK(HK2)-P-N2*(BUT+P);                         /* przedział szuflady: 802 − 18 − 576 = 208 */
-var BUT1=(HPK(HK1)-P-SZD-N1*P)/N1;                     /* przedział na buty w module 1: 274 */
+var SZD=208;           /* przedział szuflady w szafkach z krótszymi kurtkami (przyjęte 2026-11-15) */
 var ZP=PZ+T-LUZ;       /* koniec szafki po lewej przy ścianie przedniej: 562 + 919 − 3 = 1478 */
 
 var ITEMS=[
@@ -145,24 +141,25 @@ var ITEMS=[
 ];
 
 /* Poziomy wnętrza części otwartych (bez dna): półki na buty, szuflada, płyta pod kurtkami (zamysł).
-   b: obszar w świetle {x0,x1,z0,z1}; przód na x1 (szafka po lewej) albo z1 (na wprost). */
-function poziomy(nazwa,b,hk,n,but,przodX,y1){
-  /* y1: (opcjonalnie) wysokość spodu pierwszej półki; pozostałe przedziały na buty dzielą resztę po równo */
-  var L='Szuflady i półki (zamysł)',y=0,i;
-  if(y1!=null){var but2=(HPK(hk)-P-SZD-(y1+P)-(n-1)*P)/(n-1);}
+   Wysokości półek wspólne dla wszystkich szafek, wyliczone dla szafki po lewej (2026-11-15):
+   dolna półka 2 mm nad gzymsem, dwa przedziały nad nią po równo, szuflada SZD, płyta pod kurtkami HK1.
+   Moduł 2 (dłuższe kurtki, HK2): te same półki, które mieszczą się pod płytą; szuflada wypełnia resztę. */
+var YP=[GZ1+2];        /* spody półek: 335, … */
+(function(){var b2=(HPK(HK1)-P-SZD-(YP[0]+P)-(N1-1)*P)/(N1-1),i;for(i=1;i<N1;i++){YP.push(YP[i-1]+P+b2);}})();
+function poziomy(nazwa,b,hk,przodX){
+  var L='Szuflady i półki (zamysł)',yb=HPK(hk)-P,y=0,i;
   function plyta(n_,y0,x0){ITEMS.push({n:nazwa+': '+n_,layer:L,x:x0,y:y0,z:b.z0,w:b.x1-x0,h:P,d:b.z1-b.z0,c:0xd8c7a3});}
-  /* poniżej gzymsu (GZ1) płyty szafki po lewej omijają gzyms z rurą: zaczynają się za GZ2 + GR4 */
+  /* poniżej gzymsu (GZ1) płyty szafki po lewej omijałyby gzyms z rurą (zaczynają się za GZ2 + GR4) */
   function x0(y0){return (przodX&&y0<GZ1)?GZ2+GR4:b.x0;}
-  for(i=1;i<=n;i++){var bi=(y1!=null)?(i===1?y1:but2):but;y+=bi;plyta('półka nad butami '+i+' (przedział '+bi+')',y,x0(y));y+=P;}
+  for(i=0;i<YP.length&&YP[i]+P<=yb-150;i++){plyta('półka nad butami '+(i+1)+' (przedział '+(YP[i]-y)+')',YP[i],x0(YP[i]));y=YP[i]+P;}
+  var hs=yb-y;
   var dx=przodX?{x:b.x1-P,w:P,z:b.z0+1.5,d:b.z1-b.z0-3}:{x:b.x0+1.5,w:b.x1-b.x0-3,z:b.z1-P,d:P};
-  ITEMS.push({n:nazwa+': szuflada (przedział '+SZD+', front '+(SZD-6)+')',layer:L,x:dx.x,y:y+3,z:dx.z,w:dx.w,h:SZD-6,d:dx.d,c:0xc9a227,o:0.7});
-  y+=SZD;
-  plyta('płyta pod kurtkami (przedział na kurtki '+hk+')',y,b.x0);
+  ITEMS.push({n:nazwa+': szuflada (przedział '+hs+', front '+(hs-6)+')',layer:L,x:dx.x,y:y+3,z:dx.z,w:dx.w,h:hs-6,d:dx.d,c:0xc9a227,o:0.7});
+  plyta('płyta pod kurtkami (przedział na kurtki '+hk+')',yb,b.x0);
 }
-poziomy('Na wprost, moduł 1',{x0:XL+P,x1:XM-P/2,z0:ODS,z1:ZF},HK1,N1,BUT1,false);
-poziomy('Na wprost, moduł 2 (dłuższe kurtki)',{x0:XM+P/2,x1:XP-P,z0:ODS,z1:ZF},HK2,N2,BUT,false);
-var YL1=GZ1+2;         /* szafka po lewej: spód dolnej półki 2 mm nad gzymsem = 335 (2026-11-15) */
-poziomy('Po lewej',{x0:ODS,x1:XL,z0:ZF+P,z1:ZP-P},HK1,N1,BUT1,true,YL1);
+poziomy('Na wprost, moduł 1',{x0:XL+P,x1:XM-P/2,z0:ODS,z1:ZF},HK1,false);
+poziomy('Na wprost, moduł 2 (dłuższe kurtki)',{x0:XM+P/2,x1:XP-P,z0:ODS,z1:ZF},HK2,false);
+poziomy('Po lewej',{x0:ODS,x1:XL,z0:ZF+P,z1:ZP-P},HK1,true);
 
 return {
   title:'Garderoba 3D',
