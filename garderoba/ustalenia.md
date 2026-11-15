@@ -41,12 +41,13 @@ Materiały źródłowe: `zrodla/` (rzut architektoniczny, zdjęcia ogólne).
   płyta, nad nią przedział na kurtki z drążkiem.
 - Drążek: oś 65 mm pod spodem wieńca, czyli 2037 (zmiana 2026-11-15; wcześniej 50 → 2052).
 - Przedział na kurtki: moduł 2 na wprost (prawy) na dłuższe kurtki 1300; moduł 1 na wprost i szafka po lewej na krótsze 1000.
-- Wyliczenie (płyta 18, dno na podłodze): przedział szuflady 190 we wszystkich szafkach (z modułu 2 przy 2 × 270 na buty);
-  moduł 2: 2 przedziały na buty po 270; moduł 1 i szafka po lewej: 3 przedziały po 274.
+- Bez dna: najniższe przedziały na buty stoją bezpośrednio na kafelkach (2026-11-15).
+- Wyliczenie (płyta 18): przedział szuflady 208 we wszystkich szafkach (z modułu 2 przy 2 × 270 na buty);
+  moduł 2: 2 przedziały na buty po 270; moduł 1: 3 przedziały po 274.
 - Części górne bez dodatkowych półek: wieniec na 2120 na całej głębokości szafek jest jednocześnie półką części górnej.
-- Szafka po lewej: dno omija gzyms z rurą (zaczyna się 184 od lewej ściany). Dolna półka 2 mm nad gzymsem (spód 335, pełna głębokość; 2026-11-15):
-  pierwszy przedział 317 (przy gzymsie), dwa kolejne po 252,5 – PONIŻEJ minimum 270, do decyzji (warianty w rozmowie 2026-11-15).
-- Do ustalenia: czy dno na podłodze (płyta 18) czy pierwszy poziom butów bezpośrednio na kafelkach; prowadnice szuflad.
+- Szafka po lewej: dolna półka 2 mm nad gzymsem (spód 335, pełna głębokość; 2026-11-15). Pierwszy przedział 335 (przy gzymsie),
+  dwa kolejne po 243,5 – PONIŻEJ minimum 270, do decyzji.
+- Do ustalenia: prowadnice szuflad; układ przedziałów po lewej.
 
 ## Plan pracy
 1. Wymiary pomieszczenia z natury (zdjęcia w paczkach). Do czasu ustalenia wszystkich wymiarów NIE projektujemy szafek.

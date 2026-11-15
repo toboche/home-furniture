@@ -89,11 +89,11 @@ var HK2=1300;          /* wysokość przedziału na dłuższe kurtki (moduł 2 n
 var HK1=1000;          /* wysokość przedziału na krótsze kurtki (moduł 1 na wprost i szafka po lewej) */
 var BUT=270;           /* najmniejsza wysokość przedziału na buty (w świetle) */
 var N2=2, N1=3;        /* liczba przedziałów na buty: moduł 2 / pozostałe */
-/* Od dołu: dno P, przedziały na buty z półkami P, przedział szuflady (jedna szuflada nad butami), płyta P pod kurtkami.
+/* Od dołu (bez dna, przedziały na buty stoją na kafelkach): przedziały na buty z półkami P, przedział szuflady (jedna szuflada nad butami), płyta P pod kurtkami.
    Wysokość przedziału szuflady wynika z modułu 2 (przy BUT), w pozostałych ta sama szuflada, a nadmiar idzie na buty. */
 var HPK=function(hk){return HW-P-hk;};                 /* góra płyty pod kurtkami */
-var SZD=HPK(HK2)-P-P-N2*(BUT+P);                       /* przedział szuflady: 802 − 36 − 576 = 190 */
-var BUT1=(HPK(HK1)-P-P-SZD-N1*P)/N1;                   /* przedział na buty w module 1 i po lewej: 274 */
+var SZD=HPK(HK2)-P-N2*(BUT+P);                         /* przedział szuflady: 802 − 18 − 576 = 208 */
+var BUT1=(HPK(HK1)-P-SZD-N1*P)/N1;                     /* przedział na buty w module 1: 274 */
 var ZP=PZ+T-LUZ;       /* koniec szafki po lewej przy ścianie przedniej: 562 + 919 − 3 = 1478 */
 
 var ITEMS=[
@@ -144,7 +144,7 @@ var ITEMS=[
   {t:'cyl3',n:'Lampa (oczko) '+L2+' od lewej ściany, '+L1+' od tylnej',layer:'Osprzęt',ax:'y',px:L2,py:J-3,pz:L1,r:40,len:6,c:0xe0a526}
 ];
 
-/* Poziomy wnętrza części otwartych: dno, półki na buty, szuflada, płyta pod kurtkami (zamysł).
+/* Poziomy wnętrza części otwartych (bez dna): półki na buty, szuflada, płyta pod kurtkami (zamysł).
    b: obszar w świetle {x0,x1,z0,z1}; przód na x1 (szafka po lewej) albo z1 (na wprost). */
 function poziomy(nazwa,b,hk,n,but,przodX,y1){
   /* y1: (opcjonalnie) wysokość spodu pierwszej półki; pozostałe przedziały na buty dzielą resztę po równo */
@@ -153,8 +153,7 @@ function poziomy(nazwa,b,hk,n,but,przodX,y1){
   function plyta(n_,y0,x0){ITEMS.push({n:nazwa+': '+n_,layer:L,x:x0,y:y0,z:b.z0,w:b.x1-x0,h:P,d:b.z1-b.z0,c:0xd8c7a3});}
   /* poniżej gzymsu (GZ1) płyty szafki po lewej omijają gzyms z rurą: zaczynają się za GZ2 + GR4 */
   function x0(y0){return (przodX&&y0<GZ1)?GZ2+GR4:b.x0;}
-  plyta('dno',0,x0(0));y=P;
-  for(i=1;i<=n;i++){var bi=(y1!=null)?(i===1?y1-P:but2):but;y+=bi;plyta('półka nad butami '+i+' (przedział '+bi+')',y,x0(y));y+=P;}
+  for(i=1;i<=n;i++){var bi=(y1!=null)?(i===1?y1:but2):but;y+=bi;plyta('półka nad butami '+i+' (przedział '+bi+')',y,x0(y));y+=P;}
   var dx=przodX?{x:b.x1-P,w:P,z:b.z0+1.5,d:b.z1-b.z0-3}:{x:b.x0+1.5,w:b.x1-b.x0-3,z:b.z1-P,d:P};
   ITEMS.push({n:nazwa+': szuflada (przedział '+SZD+', front '+(SZD-6)+')',layer:L,x:dx.x,y:y+3,z:dx.z,w:dx.w,h:SZD-6,d:dx.d,c:0xc9a227,o:0.7});
   y+=SZD;
