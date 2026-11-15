@@ -76,7 +76,7 @@ var RU=130, RU2=32, RU3=38;      /* rura okapu w ściance: średnica zewnętrzna
 var KR=130, KR2=323, KR3=175;    /* otwór wentylacji grawitacyjnej w ściance */
 
 /* założenia i decyzje (ustalenia.md) */
-var P=18, PP=36;       /* płyta korpusów, płyta półki z LED */
+var P=18, PP=18;       /* płyta korpusów, płyta półki z LED (2026-11-15: 36 → 18) */
 var YP=C+D;            /* góra płytek = dół półki i szafek: 1511 */
 var YS=YP+M;           /* sufit: 2680 */
 var LUZS=2;            /* luz pod sufitem (2026-11-14) */
@@ -93,12 +93,19 @@ var YRU=YS-RU3-RU/2;   /* oś rury okapu: 2577 */
 var YSK=YS-RU3-RU-10;  /* góra dna skrzynki na rurę (10 pod rurą): 2502 */
 var ZWY=GK-250+93+75;  /* ZAŁOŻENIE: oś wylotu okapu od ściany głównej (korpus okapu dosunięty do przodu): 218 */
 var ZPI=ZRU+12.5;      /* oś pionu Ø150 (redukcja mimośrodowa: +12,5 od osi Ø125): 109,5 */
-var YRD=2400;          /* ZAŁOŻENIE: dół redukcji 150/125 (pod kolanem 90°) */
+var YRD=2300;          /* ZAŁOŻENIE: dół redukcji 150/125; kolano 90° R ok. 1D zajmuje ok. 165 pod osią poziomą (2026-11-15: było 2400) */
 var ZSK=RU2+RU+10;     /* tył zaślepki skrzynki (10 przed rurą): 172 */
 var YSOP=2150;         /* ZAŁOŻENIE: półka nad okapem (dół), pod nią redukcja i przesunięcie rury do tyłu */
 var NPW=2;             /* półki w wąskiej szafce (równe przegrody; 2026-11-14: 3 → 2) */
-var LP1=J-2;           /* półka P1 wzdłuż ściany lewej: 803 */
+var LP1=J-1;           /* półka P1 wzdłuż ściany lewej: 804 (2026-11-15: luz 2 → 1) */
 var GP1=400, GP3=200;  /* głębokości półek */
+/* Profil LED MasterLED wpuszczany 12 mm (2026-11-15): kołnierz 23,6, korpus 16,9, wys. 7 (korpus ok. 5,5 + kołnierz ok. 1,5).
+   Rowek 18,2 × 6 = 2 wręgi 10,2 w odległościach 30 i 38 od krawędzi półki (kalkulator meble.pl). */
+var LRO=30, LRW=18.2, LRG=6, LKW=23.6, LKH=1.5;
+var LRA=LRO+LRW/2;     /* oś rowka od krawędzi półki: 39,1 */
+var ZLS=LP1-LRA;       /* oś profilu przy słupku (od ściany głównej) */
+var PR=5;              /* wsporniki ukryte z trzpieniem Ø10 (Italiana Ferramenta C010002803, dł. 113, 2026-11-15) */
+var WT=80;             /* ZAŁOŻENIE: część trzpienia w półce (do sprawdzenia na wsporniku) */
 
 var BOK=0xcdbb95, TYL=0x9c8b6e, POL=0xe6d7b8, FR=0x2f9e8f, IST=0x8a6f55, LED=0xffd66b, RURA=0xb8bcc2;
 
@@ -135,11 +142,26 @@ add([
 
 /* ---- półka z LED na płytkach (płyta 36, z meble.pl, oklejona) ---- */
 add([
-  {n:'P1: Półka LED, ściana lewa (803 × 400)',layer:'Półka LED',x:0,y:YP,z:0,w:GP1,h:PP,d:LP1,c:POL},
+  {n:'P1: Półka LED, ściana lewa (804 × 400)',layer:'Półka LED',x:0,y:YP,z:0,w:GP1,h:PP,d:LP1,c:POL},
   {n:'P3: Półka LED, ściana główna (1980 × 200)',layer:'Półka LED',x:GP1,y:YP,z:0,w:XSO-GP1,h:PP,d:GP3,c:POL},
-  {n:'Profil LED pod P1',layer:'LED',x:GP1-60,y:YP-1,z:GP3-60,w:12,h:8,d:LP1-GP3+40,c:LED},
-  {n:'Profil LED pod P3',layer:'LED',x:GP1-60,y:YP-1,z:GP3-60,w:XSO-GP1+40,h:8,d:12,c:LED}
+  {n:'Profil LED wpuszczany pod P1, wzdłuż przodu (rowek 18,2 × 6)',layer:'LED',x:GP1-LRO-LRW,y:YP,z:GP3-LRO-LRW,w:LRW,h:LRG,d:LP1-LRO-(GP3-LRO-LRW),c:LED},
+  {n:'Profil LED wpuszczany pod P1 przy słupku (od kabla w ścianie lewej)',layer:'LED',x:0,y:YP,z:LP1-LRO-LRW,w:GP1-LRO,h:LRG,d:LRW,c:LED},
+  {n:'Profil LED wpuszczany pod P3 (rowek 18,2 × 6)',layer:'LED',x:GP1-LRO-LRW,y:YP,z:GP3-LRO-LRW,w:XSO-(GP1-LRO-LRW)-20,h:LRG,d:LRW,c:LED},
+  {n:'Kołnierz profilu LED pod P1, wzdłuż przodu',layer:'LED',x:GP1-LRA-LKW/2,y:YP-LKH,z:GP3-LRA-LKW/2,w:LKW,h:LKH,d:ZLS-(GP3-LRA)+LKW,c:LED},
+  {n:'Kołnierz profilu LED pod P1 przy słupku',layer:'LED',x:0,y:YP-LKH,z:ZLS-LKW/2,w:GP1-LRA-LKW/2,h:LKH,d:LKW,c:LED},
+  {n:'Kołnierz profilu LED pod P3',layer:'LED',x:GP1-LRA-LKW/2,y:YP-LKH,z:GP3-LRA-LKW/2,w:XSO-(GP1-LRA-LKW/2)-20,h:LKH,d:LKW,c:LED}
 ]);
+
+/* wsporniki ukryte (trzpień Ø10, długość 113, regulacja w 3 kierunkach), korpus w otworze w ścianie (2026-11-15) */
+[150,570,990,1410,1830].forEach(function(xp){
+  ITEMS.push({t:'cyl3',n:'Wspornik ukryty Ø10 × 113 pod P3, x od lewego końca P3 '+xp,layer:'Mocowanie półki',ax:'z',px:GP1+xp,py:YP+PP/2,pz:WT-113/2,r:PR,len:113,c:0x555555});
+});
+[150,400,650].forEach(function(zp){
+  ITEMS.push({t:'cyl3',n:'Wspornik ukryty Ø10 × 113 pod P1 (ściana lewa)',layer:'Mocowanie półki',ax:'x',px:WT-113/2,py:YP+PP/2,pz:zp,r:PR,len:113,c:0x555555});
+});
+[100,300].forEach(function(xp){
+  ITEMS.push({t:'cyl3',n:'Wspornik ukryty Ø10 × 113 pod P1 (ściana główna)',layer:'Mocowanie półki',ax:'z',px:xp,py:YP+PP/2,pz:WT-113/2,r:PR,len:113,c:0x555555});
+});
 
 /* ---- szafka okapowa SO: bez dna (okap między bokami), plecy między bokami, wieniec, półka nad okapem ---- */
 add([

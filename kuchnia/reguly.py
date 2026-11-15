@@ -1,13 +1,13 @@
 """Reguły kuchni dla wspólnego pipeline'u (wspolne/pipeline/run.py kuchnia).
 Moduły: SO szafka okapowa (bez dna, okap DUO 55 między bokami), WS wąska szafka otwarta ze skrzynką na rurę,
-P1 i P3 półka z LED z płyty 36 mm (bez nawiertów, mocowana na prętach w ścianie, otwory wierci użytkownik)."""
+P1 i P3 półka z LED z płyty 18 mm (bez nawiertów, na wspornikach ukrytych Ø10, otwory wierci użytkownik)."""
 from formatki import F
 
 # warstwy modelu, w których leżą formatki korpusu (fronty są brane z warstwy 'Fronty')
 WARSTWY_FORMATEK = ['Ścianki boczne', 'Ścianki tylne', 'Półki', 'Półka LED']
 
-# korpusy i fronty 18 mm; półka z LED 36 mm -> wyniki/formatki_36mm.csv
-GRUBOSCI = (18, 36)
+# wszystko z płyty 18 mm (półka z LED: 36 → 18, 2026-11-15)
+GRUBOSCI = (18,)
 
 
 def modul_of(it):
@@ -133,11 +133,11 @@ FORMATKI = [
       uwagi='widoczne lico przednie; krawędzie schowane'),
     F('WSP', 'Wąska szafka: półki stałe', okleina='1DL', nawierty='KONFIRMATY'),
     F('P1', 'Półka LED: ściana lewa (wnęka)', okleina='1DL',
-      nawierty='BRAK (pręty w tylnej krawędzi i rowek na kabel wierci użytkownik)',
-      uwagi='okleina na długiej krawędzi od strony kuchni (803); płyta 36'),
+      nawierty='BRAK (otwory Ø10 pod wsporniki ukryte w krawędziach przy ścianach wierci użytkownik)',
+      uwagi='okleina na długiej krawędzi od strony kuchni (804). WRĘGI pod profil LED (spód, gł. 6, 2 × 10,2 w odl. 30 i 38): wzdłuż krawędzi 804 od 152 od ściany głównej, przelotowe przy słupku; wzdłuż krawędzi 400 przy słupku, przelotowe od ściany lewej, do 30 od przodu'),
     F('P3', 'Półka LED: ściana główna', okleina='1DL',
-      nawierty='BRAK (pręty w tylnej krawędzi wierci użytkownik)',
-      uwagi='okleina na przedniej krawędzi (1980); płyta 36'),
+      nawierty='BRAK (otwory Ø10 pod wsporniki ukryte w tylnej krawędzi wierci użytkownik)',
+      uwagi='okleina na przedniej krawędzi (1980). WRĘGI pod profil LED (spód, gł. 6, 2 × 10,2 w odl. 30 i 38 od przodu), przelotowe na całej długości'),
     F('F1', 'Front szafki okapowej, otwierany na docisk', okleina='2DL+2SZ',
       nawierty='ZAWIASY 3 SZT (PRAWA), ' + ZAW, uwagi='zawiasy bez cichego domyku + popychacz (push-to-open)'),
 ]

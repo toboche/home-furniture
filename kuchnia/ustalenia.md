@@ -15,20 +15,41 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
   NIE zasłaniać, otworu nie da się przesunąć).
 
 ## Różnice względem `wspolne/zasady.md`
-- Płyta: Egger H3710 ST12 Orzech Carini naturalny (jak istniejąca kuchnia), meble.pl. Korpusy 18 mm, półka z LED 36 mm
-  (jednolita płyta 2800 × 1032, oklejona przez sklep; obrzeże H3710 ST12 2 × 43). Użytkownik nie okleja sam.
+- Płyta: Egger H3710 ST12 Orzech Carini naturalny 18 mm (jak istniejąca kuchnia), meble.pl, wszystkie elementy
+  (półka z LED: 36 → 18, 2026-11-15). Oklejanie przez sklep; użytkownik nie okleja sam.
 - Front F1 otwierany na docisk (push-to-open), zawiasy bez cichego domyku + popychacz (do doboru).
 - Luz pod sufitem 2 mm (szafki 1167 wysokości).
 
 ## Decyzje
 ### Półka z LED (P1, P3), 2026-11-13
-- Kształt L, leży na górnej krawędzi płytek (Y 1511), płyta 36 mm. Dwa prostokąty:
-  P1 803 × 400 na ścianie lewej (narożnik → słupek, J − 2), P3 1980 × 200 na ścianie głównej (od przedniej krawędzi P1
+- Kształt L, leży na górnej krawędzi płytek (Y 1511), płyta 18 mm (2026-11-15; wcześniej 36). Dwa prostokąty:
+  P1 804 × 400 na ścianie lewej (narożnik → słupek, J − 1; 2026-11-15, było J − 2), P3 1980 × 200 na ścianie głównej (od przedniej krawędzi P1
   do szafki okapowej). Pod szafkami górnymi na ścianie głównej głębokość 200 (element P2 usunięty).
-- Nad półką pod szafkami górnymi zostaje 154 − 36 = 118.
-- LED świeci w dół na blat: profil aluminiowy z mlecznym kloszem wpuszczony w spód ok. 50 od przednich krawędzi, w kształcie L.
-- Mocowanie (PROPOZYCJA): ukryte pręty stalowe wklejone w żelbet na kotwę chemiczną, wchodzące w otwory w tylnej
-  krawędzi płyty (połowa grubości). Kabel 24 V płytkim rowkiem w spodzie P1 do profilu. Otwory i rowek robi użytkownik.
+- Nad półką pod szafkami górnymi zostaje 154 − 18 = 136.
+- LED świeci w dół na blat: profil aluminiowy z mlecznym kloszem, wpuszczany w spód ok. 50 od przednich krawędzi.
+- Mocowanie (2026-11-15, obciążenie lekkie): wsporniki ukryte z trzpieniem Ø10, dł. 113, regulacja w 3 kierunkach,
+  np. Italiana Ferramenta C010002803 (magolodz.pl, „od 18 mm”, nośność 15 kg wg sklepu). Otwory Ø10 w krawędzi płyty
+  18 mm (po 4 mm płyty z każdej strony) wierci użytkownik z prowadnikiem; meble.pl tego nie wywierci (kalkulator: w czole
+  tylko Ø4/Ø8, głębokość do 35). Przed zamówieniem: wymiary otworu w ścianie i głębokość otworu w półce z karty wspornika.
+  - P3 (1980 × 200): 5 wsporników co 420 (150, 570, 990, 1410, 1830 od lewego końca P3).
+  - P1 (804 × 400): 3 wsporniki od ściany lewej (z 150, 400, 650) + 2 od ściany głównej (x 100, 300).
+    Koniec P1 przy słupku: przykręcony kilkoma wkrętami przez bok słupka (od wnętrza słupka) w czoło P1 (2026-11-15);
+    nawierty pilotowe w czole P1, szczelinę 2 mm wypełnić podkładką.
+  - Styk P3/P1: 2 kołki Ø8 w czołach (wierci użytkownik), żeby górne powierzchnie były równo.
+  - Przed wierceniem w ścianie: wykrywacz zbrojenia; wsporniki w jednej linii (laser).
+  - LED (2026-11-15): taśma użytkownika PAUTIX COB CCT 24 V, szer. 10 mm, cięcie co 25 mm, 5 m. Kabel ze ściany
+    przygotowany pod tę taśmę (sprawdzone przez użytkownika).
+    Profil CAŁKOWICIE WPUSZCZANY w spód półki (decyzja 2026-11-15): MasterLED wpuszczany czarny 12 mm, klosz mleczny,
+    odcinki 1 m (Allegro, oferta 18841961757). Przekrój: kołnierz 23,6, korpus 16,9, wys. 7 razem z kołnierzem
+    (korpus ok. 5,5 w rowku, kołnierz ok. 1,5 zostaje pod spodem półki i zakrywa krawędzie rowka), wnętrze 12,4.
+    Rowek 18,2 × 6 (zostaje 12 mm płyty) z dwóch wręgów 10,2 w kalkulatorze meble.pl, odległości 30 i 38 od krawędzi;
+    oś profilu 39,1 od przodu półki. Odcinki: P3 ok. 2030 (od narożnika P1 do 20 przed SOB-1), P1 wzdłuż przodu ok. 620,
+    przy słupku ok. 370 → razem ok. 3,0 m: kupić 4 szt. po 1 m (lepiej 5, zapas na cięcia 45° i pomyłkę).
+    Narożniki: profile cięte pod 45°, taśma łączona łącznikami 3-pin lub lutowana. Styki odcinków na P3 nieuniknione (1 m).
+    Wymiary profilu wg karty producenta (bez mierzenia, decyzja 2026-11-15).
+- LED (2026-11-15): zamiast rowka na kabel dodatkowy odcinek profilu pod P1 przy słupku (oś 39 od końca P1), od ściany
+  lewej (wejście kabla 24 V) do profilu wzdłuż przodu P1: rozjaśnia ciemny róg przy słupku. Profil w kształcie U/L:
+  przy słupku → wzdłuż przodu P1 → wzdłuż przodu P3. Narożniki: osobne odcinki taśmy łączone przewodem/łącznikami.
 
 ### Szafka okapowa SO, 2026-11-13 / 2026-11-14
 - Okap Ciarko Design DUO 55 do zabudowy: szafka bez dna, 516 w świetle (A + 2), na zewnątrz 552, osiowo nad płytą
@@ -67,7 +88,7 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
 ### 2026-11-14: kanał okapu ma być możliwie cichy (potwierdzone)
 - Stal ocynkowana spiro z uszczelkami EPDM, kolana tłoczone (gładkie), nie segmentowe.
 - Duży przekrój jak najdłużej: pion w SO i przesunięcie kolanami 45° w Ø150, redukcja mimośrodowa 150 → 125 dopiero pod
-  sufitem (przed kolanem 90°; w modelu dół redukcji Y 2400, ZAŁOŻENIE), poziomy odcinek Ø125.
+  sufitem (przed kolanem 90°; w modelu dół redukcji Y 2300, ZAŁOŻENIE), poziomy odcinek Ø125.
   Pion Ø150 na osi z 109,5 (redukcja mimośrodowa płaską stroną do ściany przesuwa oś na 97). Przy 500 m³/h prędkość w Ø150 ok. 7,9 m/s, w Ø125 ok. 11,3 m/s.
   Pion Ø150 mieści się w SO (z 34,5–184,5, plecy do z 18), otwór w SOP Ø170.
 - Mata akustyczna (np. kauczukowa samoprzylepna ok. 10 mm) na zewnątrz rur, przerwana w otworach; obejmy z gumową wkładką;
@@ -75,12 +96,53 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
   Y 2504,5–2649,5 (mieści się).
 - BEZ tłumika z wełną w kanale (tłuszcz osadza się w wypełnieniu: higiena i ryzyko pożaru).
 
+### 2026-11-15: brakujące fronty szuflad METOD (MAXIMERA)
+- Sześć frontów szuflad do istniejących szafek IKEA METOD, płyta H3710 18 mm, słoje NA WYSOKOŚĆ, okleina 0,8 mm na wszystkich
+  krawędziach (jak w poprzednim zamówieniu w meble.pl). Wymiary = idealny − 3 mm, szerokość 597.
+  - kolumna 1 (od góry): 142 (szuflada niska), 397 (wysoka), 397 (wysoka);
+  - kolumna 2 (od góry): 197 (średnia), 197 (średnia), 397 (wysoka).
+- Dół szuflady przy dolnej krawędzi frontu (standard METOD). Nawierty pod mocowanie MAXIMERA na tyle frontu (wierci sklep,
+  szablon „Wręgowanie i nawierty”): Ø5 × 13 (w poprzednim zamówieniu 10), x = 32 i 565 od lewej krawędzi (widok od tyłu),
+  y od dołu: niska 39, 58; średnia + 117, 136; wysoka + 185, 204 (pozycje z poprzedniego zamówienia, potwierdzone).
+- Otworów na gałki nie zamawiamy (wierci użytkownik).
+- Dopasowanie usłojenia w kolumnie: nie da się zamówić przez stronę. Fronty nazwane w kalkulatorze „usłojenie 21a–21c”
+  i „usłojenie 22a–22c”, potem mail do sklepu z rysunkiem `zamowienie/fronty_metod_rysunek.pdf`
+  (jak przy poprzednim zamówieniu, grupy 1a–20).
+- Pliki: `zamowienie/fronty_metod.py` (generuje `fronty_metod.csv` i rysunek). Kolumny to nowa część mebli,
+  nie ma ich na rysunku z poprzedniego zamówienia (2026-11-15).
+
+### 2026-11-15: nowe szafki METOD, luzy, kolano 90°
+- Boki nowych szafek METOD z frontami szuflad nie są widoczne; cokołu ani listew z płyty nie zamawiamy.
+- Zakupy poza meble.pl (okucia, rury, LED, okap) od razu po zamówieniu płyt.
+- Kolano pod sufitem: zostaje JEDNO tłoczone 90° Ø125 (najlepiej o większym promieniu, jeśli dostępne), nie 2 × 45°
+  (porównanie w rozmowie: bez prostego odcinka między kolanami opory podobne, a z odcinkiem nie mieści się przed SOB-2;
+  każde dodatkowe złącze to ryzyko nieszczelności i świstu). Dół redukcji poprawiony na Y 2300 (kolano zajmuje ok. 165
+  pod osią poziomą 2577).
+- Luzy (stan): ściana główna tylko 2 przy ściance (WS do 3206); P3 bez luzu między P1 a SOB-1; ściana lewa 1 przy słupku
+  (P1 804 / J 805, zmiana 2026-11-15); sufit 2 (szafki 1167 / M 1169); korpusy i półki przy ścianach bez luzu (nierówności ściany: podkładki).
+  Decyzja użytkownika: 2 mm wystarczy; w razie potrzeby P1 docinany ręcznie na końcu w narożniku (pod szafkami górnymi, niewidoczny).
+
+### 2026-11-15: bez maskowania rury w SO
+- Rura w szafce okapowej zostaje widoczna po otwarciu frontu; przy zamkniętych frontach niewidoczna. Bez obudowy.
+
+### 2026-11-15: rowek pod profil LED w kalkulatorze meble.pl (sprawdzone na stronie)
+- Kalkulator, szablon „Wręgowanie i nawierty” → „Wręgowanie (nutowanie)”: powierzchnia przód/tył, krawędź 1–4,
+  głębokość 2–13 mm (dla 18: grubość − 5), szerokość wręgu tylko 3,2 / 4,2 / 10,2 mm, odległość od krawędzi 0–50 mm,
+  przelotowe albo nieprzelotowe (X1/X2 od końców), kilka wręgów na formatce („+ dodaj wręg”).
+- Rowek 18,2 × 6 pod profil MasterLED (korpus 16,9): 2 wręgi 10,2, gł. 6, odległości 30 i 38 od krawędzi.
+  NIEPEWNE (zapytać w mailu przed zamówieniem): czy przyjmą nakładające się wręgi; czy „odległość” liczą do bliższej
+  krawędzi wręgu (założenie) czy do osi; jak długie są płytsze końce nieprzelotowego wręgu (wejście/wyjście narzędzia).
+  Plan B: rowek frezuje użytkownik frezarką z frezem prostym i prowadnicą.
+- P3: wręgi wzdłuż przodu, przelotowe na całej długości (końce schowane przy P1 i przy SOB-1).
+- P1: wręgi wzdłuż przodu (krawędź 804), od 152 od ściany głównej, przelotowe przy słupku (koniec schowany przy słupku);
+  wręgi wzdłuż krawędzi 400 przy słupku, przelotowe od ściany lewej (tam wchodzi kabel), do rowka przedniego.
+- Narożnik P1/P3: ok. 30 mm rowka w P1 (od rowka przedniego P1 do krawędzi przy P3) biegnie w poprzek krawędzi,
+  kalkulator go nie zrobi: użytkownik dłutem/frezarką przed montażem.
+
 ## Założenia do potwierdzenia
 - Położenie okapu w głąb: korpus dosunięty do przodu (z 50–300), szkło z 10–300. Oś wylotu ok. 218 od ściany głównej.
   Sprawdzić przy montażu (otwory 35 i 215 od przodu boku).
 - Luz 2 mm wąskiej szafki do ścianki.
-- P3 bez luzu (1980, wypełnia odcinek P1 → SOB-1). Przed ostatecznym zamówieniem przeanalizować jeszcze raz
-  skrócenie P3 o 2 mm (1978) – decyzja użytkownika 2026-11-14: na razie bez szczeliny.
 - Dobór okuć push-to-open i liczby zawiasów F1 (frontu ok. 7,5 kg).
 
 ### 2026-11-14: bok SOB-1 bez konfirmatów, półka SOP, zasilanie okapu
@@ -106,3 +168,10 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
 - 2026-11-14: SOB-1 na mimośrodach i kołkach (bez widocznych konfirmatów), SOP potwierdzona, okap bez gniazdka.
 - 2026-11-14: redukcja mimośrodowa 150/125 i system spiro Ø125; wąska szafka 2 półki (3 × 306,33).
 - 2026-11-14: cichy kanał: pion Ø150, redukcja pod sufitem, mata akustyczna, otwór w SOP Ø170.
+- 2026-11-15: fronty szuflad METOD (6 szt.), lista i rysunek dopasowania usłojenia w `zamowienie/`.
+- 2026-11-15: mocowanie półki (pręty Ø10, propozycja), LED przy słupku zamiast rowka, jedno kolano 90°, redukcja Y 2300.
+- 2026-11-15: półka z LED z płyty 18 na wspornikach ukrytych Ø10 × 113; rura w SO bez maskowania.
+- 2026-11-15: koniec P1 przykręcany przez bok słupka; LED: taśma COB CCT 10 mm w płaskim profilu nakładanym.
+- 2026-11-15: P1 804 (luz 1 przy słupku); profil LED całkowicie wpuszczany (rowek ok. 14 × 8).
+- 2026-11-15: profil LED MasterLED wpuszczany 12 mm; rowki 18,2 × 6 z wręgów w zamówieniu meble.pl.
+- 2026-11-15: P3 zostaje na styk z P1 (bez luzu; ostateczne). Luz na ścianie głównej tylko 2 przy ściance (WS).
