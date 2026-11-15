@@ -123,6 +123,17 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
 ### 2026-11-15: bez maskowania rury w SO
 - Rura w szafce okapowej zostaje widoczna po otwarciu frontu; przy zamkniętych frontach niewidoczna. Bez obudowy.
 
+### 2026-11-15: rowek pod profil LED w kalkulatorze meble.pl (sprawdzone na stronie)
+- Kalkulator, szablon „Wręgowanie i nawierty” → „Wręgowanie (nutowanie)”: powierzchnia przód/tył, krawędź 1–4,
+  głębokość 2–13 mm (dla 18: grubość − 5), szerokość wręgu tylko 3,2 / 4,2 / 10,2 mm, odległość od krawędzi 0–50 mm,
+  przelotowe albo nieprzelotowe (X1/X2 od końców), kilka wręgów na formatce („+ dodaj wręg”).
+- Rowek ok. 14 mm = dwa wręgi obok siebie (np. 10,2 + 4,2), oba w odległości ≤ 50 od krawędzi, więc oś profilu
+  ok. 43 od przedniej krawędzi (zamiast 50). Do ustalenia po wymiarach profilu (szerokość korpusu i wysokość).
+- P1: rowek wzdłuż przodu (krawędź od strony kuchni) i przy słupku (krawędź krótka, od ściany do rowka przedniego).
+  P3: rowek wzdłuż przodu, przelotowy na lewym końcu (styk z P1). Odcinek łączący profil P3 z profilem P1 w narożniku
+  (ok. 50 mm, pod szafkami górnymi) jest dalej niż 50 od krawędzi P1: kalkulator go nie zrobi (dociąć ręcznie albo
+  zostawić przerwę w świetle w ciemnym narożniku).
+
 ## Założenia do potwierdzenia
 - Położenie okapu w głąb: korpus dosunięty do przodu (z 50–300), szkło z 10–300. Oś wylotu ok. 218 od ściany głównej.
   Sprawdzić przy montażu (otwory 35 i 215 od przodu boku).
