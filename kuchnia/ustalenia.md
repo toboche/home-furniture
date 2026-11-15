@@ -27,8 +27,18 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
   do szafki okapowej). Pod szafkami górnymi na ścianie głównej głębokość 200 (element P2 usunięty).
 - Nad półką pod szafkami górnymi zostaje 154 − 36 = 118.
 - LED świeci w dół na blat: profil aluminiowy z mlecznym kloszem wpuszczony w spód ok. 50 od przednich krawędzi, w kształcie L.
-- Mocowanie (PROPOZYCJA): ukryte pręty stalowe wklejone w żelbet na kotwę chemiczną, wchodzące w otwory w tylnej
-  krawędzi płyty (połowa grubości). Kabel 24 V płytkim rowkiem w spodzie P1 do profilu. Otwory i rowek robi użytkownik.
+- Mocowanie (PROPOZYCJA 2026-11-15, obciążenie lekkie: przyprawy, drobne rzeczy): pręty stalowe Ø10 (gładkie lub
+  gwintowane, ocynk), ok. 100 w żelbecie na kotwie chemicznej, półka nasuwana na pręty w otwory Ø10 w tylnej krawędzi,
+  w połowie grubości (13 mm płyty z każdej strony). Otwory wierci użytkownik (prowadnik/przyrząd do kołków, długie wiertło).
+  - P3 (1980 × 200): 5 prętów co 420 (150, 570, 990, 1410, 1830 od lewego końca P3), 120 w półce
+    (kończą się przed profilem LED).
+  - P1 (803 × 400): 3 pręty od ściany lewej (z 150, 400, 650 od ściany głównej), 250 w półce, + 2 pręty od ściany
+    głównej (x 100, 300), 120 w półce. Półka narożna podparta na dwóch ścianach.
+  - Styk P3/P1: 2 kołki Ø8 w czołach (wierci użytkownik), żeby górne powierzchnie były równo.
+  - Przed wierceniem w ścianie: wykrywacz zbrojenia; pręty poziomo, wspólna linia (laser).
+- LED (2026-11-15): zamiast rowka na kabel dodatkowy odcinek profilu pod P1 przy słupku (50 od końca P1), od ściany
+  lewej (wejście kabla 24 V) do profilu wzdłuż przodu P1: rozjaśnia ciemny róg przy słupku. Profil w kształcie U/L:
+  przy słupku → wzdłuż przodu P1 → wzdłuż przodu P3. Narożniki: osobne odcinki taśmy łączone przewodem/łącznikami.
 
 ### Szafka okapowa SO, 2026-11-13 / 2026-11-14
 - Okap Ciarko Design DUO 55 do zabudowy: szafka bez dna, 516 w świetle (A + 2), na zewnątrz 552, osiowo nad płytą
@@ -67,7 +77,7 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
 ### 2026-11-14: kanał okapu ma być możliwie cichy (potwierdzone)
 - Stal ocynkowana spiro z uszczelkami EPDM, kolana tłoczone (gładkie), nie segmentowe.
 - Duży przekrój jak najdłużej: pion w SO i przesunięcie kolanami 45° w Ø150, redukcja mimośrodowa 150 → 125 dopiero pod
-  sufitem (przed kolanem 90°; w modelu dół redukcji Y 2400, ZAŁOŻENIE), poziomy odcinek Ø125.
+  sufitem (przed kolanem 90°; w modelu dół redukcji Y 2300, ZAŁOŻENIE), poziomy odcinek Ø125.
   Pion Ø150 na osi z 109,5 (redukcja mimośrodowa płaską stroną do ściany przesuwa oś na 97). Przy 500 m³/h prędkość w Ø150 ok. 7,9 m/s, w Ø125 ok. 11,3 m/s.
   Pion Ø150 mieści się w SO (z 34,5–184,5, plecy do z 18), otwór w SOP Ø170.
 - Mata akustyczna (np. kauczukowa samoprzylepna ok. 10 mm) na zewnątrz rur, przerwana w otworach; obejmy z gumową wkładką;
@@ -89,6 +99,16 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
   (jak przy poprzednim zamówieniu, grupy 1a–20).
 - Pliki: `zamowienie/fronty_metod.py` (generuje `fronty_metod.csv` i rysunek). Kolumny to nowa część mebli,
   nie ma ich na rysunku z poprzedniego zamówienia (2026-11-15).
+
+### 2026-11-15: nowe szafki METOD, luzy, kolano 90°
+- Boki nowych szafek METOD z frontami szuflad nie są widoczne; cokołu ani listew z płyty nie zamawiamy.
+- Zakupy poza meble.pl (okucia, rury, LED, okap) od razu po zamówieniu płyt.
+- Kolano pod sufitem: zostaje JEDNO tłoczone 90° Ø125 (najlepiej o większym promieniu, jeśli dostępne), nie 2 × 45°
+  (porównanie w rozmowie: bez prostego odcinka między kolanami opory podobne, a z odcinkiem nie mieści się przed SOB-2;
+  każde dodatkowe złącze to ryzyko nieszczelności i świstu). Dół redukcji poprawiony na Y 2300 (kolano zajmuje ok. 165
+  pod osią poziomą 2577).
+- Luzy (stan): ściana główna tylko 2 przy ściance (WS do 3206); P3 bez luzu między P1 a SOB-1; ściana lewa 2 przy słupku
+  (P1 803 / J 805); sufit 2 (szafki 1167 / M 1169); korpusy i półki przy ścianach bez luzu (nierówności ściany: podkładki).
 
 ## Założenia do potwierdzenia
 - Położenie okapu w głąb: korpus dosunięty do przodu (z 50–300), szkło z 10–300. Oś wylotu ok. 218 od ściany głównej.
@@ -122,3 +142,4 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
 - 2026-11-14: redukcja mimośrodowa 150/125 i system spiro Ø125; wąska szafka 2 półki (3 × 306,33).
 - 2026-11-14: cichy kanał: pion Ø150, redukcja pod sufitem, mata akustyczna, otwór w SOP Ø170.
 - 2026-11-15: fronty szuflad METOD (6 szt.), lista i rysunek dopasowania usłojenia w `zamowienie/`.
+- 2026-11-15: mocowanie półki (pręty Ø10, propozycja), LED przy słupku zamiast rowka, jedno kolano 90°, redukcja Y 2300.

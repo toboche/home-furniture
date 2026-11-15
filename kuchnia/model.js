@@ -42,12 +42,14 @@ var YRU=YS-RU3-RU/2;   /* oś rury okapu: 2577 */
 var YSK=YS-RU3-RU-10;  /* góra dna skrzynki na rurę (10 pod rurą): 2502 */
 var ZWY=GK-250+93+75;  /* ZAŁOŻENIE: oś wylotu okapu od ściany głównej (korpus okapu dosunięty do przodu): 218 */
 var ZPI=ZRU+12.5;      /* oś pionu Ø150 (redukcja mimośrodowa: +12,5 od osi Ø125): 109,5 */
-var YRD=2400;          /* ZAŁOŻENIE: dół redukcji 150/125 (pod kolanem 90°) */
+var YRD=2300;          /* ZAŁOŻENIE: dół redukcji 150/125; kolano 90° R ok. 1D zajmuje ok. 165 pod osią poziomą (2026-11-15: było 2400) */
 var ZSK=RU2+RU+10;     /* tył zaślepki skrzynki (10 przed rurą): 172 */
 var YSOP=2150;         /* ZAŁOŻENIE: półka nad okapem (dół), pod nią redukcja i przesunięcie rury do tyłu */
 var NPW=2;             /* półki w wąskiej szafce (równe przegrody; 2026-11-14: 3 → 2) */
 var LP1=J-2;           /* półka P1 wzdłuż ściany lewej: 803 */
 var GP1=400, GP3=200;  /* głębokości półek */
+var ZLS=LP1-50;        /* profil LED przy słupku: 50 od końca P1 (2026-11-15) */
+var PR=5;              /* pręty mocujące półkę Ø10 (PROPOZYCJA 2026-11-15) */
 
 var BOK=0xcdbb95, TYL=0x9c8b6e, POL=0xe6d7b8, FR=0x2f9e8f, IST=0x8a6f55, LED=0xffd66b, RURA=0xb8bcc2;
 
@@ -86,9 +88,21 @@ add([
 add([
   {n:'P1: Półka LED, ściana lewa (803 × 400)',layer:'Półka LED',x:0,y:YP,z:0,w:GP1,h:PP,d:LP1,c:POL},
   {n:'P3: Półka LED, ściana główna (1980 × 200)',layer:'Półka LED',x:GP1,y:YP,z:0,w:XSO-GP1,h:PP,d:GP3,c:POL},
-  {n:'Profil LED pod P1',layer:'LED',x:GP1-60,y:YP-1,z:GP3-60,w:12,h:8,d:LP1-GP3+40,c:LED},
+  {n:'Profil LED pod P1',layer:'LED',x:GP1-60,y:YP-1,z:GP3-60,w:12,h:8,d:ZLS+6-(GP3-60),c:LED},
+  {n:'Profil LED pod P1 przy słupku (od kabla przy ścianie, zamiast rowka; 2026-11-15)',layer:'LED',x:10,y:YP-1,z:ZLS-6,w:GP1-60+2,h:8,d:12,c:LED},
   {n:'Profil LED pod P3',layer:'LED',x:GP1-60,y:YP-1,z:GP3-60,w:XSO-GP1+40,h:8,d:12,c:LED}
 ]);
+
+/* pręty Ø10 wklejone w żelbet (ok. 100 w ścianie), półka nasuwana na pręty (PROPOZYCJA 2026-11-15) */
+[150,570,990,1410,1830].forEach(function(xp){
+  ITEMS.push({t:'cyl3',n:'Pręt Ø10 P3 (100 w ścianie głównej, 120 w półce), x od narożnika P3 '+xp,layer:'Mocowanie półki',ax:'z',px:GP1+xp,py:YP+PP/2,pz:10,r:PR,len:220,c:0x555555});
+});
+[150,400,650].forEach(function(zp){
+  ITEMS.push({t:'cyl3',n:'Pręt Ø10 P1 (100 w ścianie lewej, 250 w półce)',layer:'Mocowanie półki',ax:'x',px:75,py:YP+PP/2,pz:zp,r:PR,len:350,c:0x555555});
+});
+[100,300].forEach(function(xp){
+  ITEMS.push({t:'cyl3',n:'Pręt Ø10 P1 od ściany głównej (100 w ścianie, 120 w półce)',layer:'Mocowanie półki',ax:'z',px:xp,py:YP+PP/2,pz:10,r:PR,len:220,c:0x555555});
+});
 
 /* ---- szafka okapowa SO: bez dna (okap między bokami), plecy między bokami, wieniec, półka nad okapem ---- */
 add([
