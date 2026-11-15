@@ -127,8 +127,11 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
 - Kalkulator, szablon „Wręgowanie i nawierty” → „Wręgowanie (nutowanie)”: powierzchnia przód/tył, krawędź 1–4,
   głębokość 2–13 mm (dla 18: grubość − 5), szerokość wręgu tylko 3,2 / 4,2 / 10,2 mm, odległość od krawędzi 0–50 mm,
   przelotowe albo nieprzelotowe (X1/X2 od końców), kilka wręgów na formatce („+ dodaj wręg”).
-- Rowek ok. 14 mm = dwa wręgi obok siebie (np. 10,2 + 4,2), oba w odległości ≤ 50 od krawędzi, więc oś profilu
-  ok. 43 od przedniej krawędzi (zamiast 50). Do ustalenia po wymiarach profilu (szerokość korpusu i wysokość).
+- Rowek szerszy niż 10,2 = kilka wręgów obok siebie, zachodzących na siebie (np. profil z korpusem 16: 2 × 10,2
+  w odległościach 30 i 36 → rowek 30–46,2, oś ok. 38 od przodu). Wszystkie wręgi w odległości ≤ 50 od krawędzi.
+  NIEPEWNE: czy sklep przyjmie nakładające się wręgi i od której strony wręgu liczy „odległość od krawędzi”;
+  nieprzelotowy wręg jest płytszy na końcach (wejście/wyjście narzędzia). Zapytać w mailu przed zamówieniem.
+  Plan B: rowek frezuje użytkownik frezarką z frezem prostym 16 i prowadnicą.
 - P1: rowek wzdłuż przodu (krawędź od strony kuchni) i przy słupku (krawędź krótka, od ściany do rowka przedniego).
   P3: rowek wzdłuż przodu, przelotowy na lewym końcu (styk z P1). Odcinek łączący profil P3 z profilem P1 w narożniku
   (ok. 50 mm, pod szafkami górnymi) jest dalej niż 50 od krawędzi P1: kalkulator go nie zrobi (dociąć ręcznie albo
