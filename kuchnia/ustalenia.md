@@ -15,27 +15,28 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
   NIE zasłaniać, otworu nie da się przesunąć).
 
 ## Różnice względem `wspolne/zasady.md`
-- Płyta: Egger H3710 ST12 Orzech Carini naturalny (jak istniejąca kuchnia), meble.pl. Korpusy 18 mm, półka z LED 36 mm
-  (jednolita płyta 2800 × 1032, oklejona przez sklep; obrzeże H3710 ST12 2 × 43). Użytkownik nie okleja sam.
+- Płyta: Egger H3710 ST12 Orzech Carini naturalny 18 mm (jak istniejąca kuchnia), meble.pl, wszystkie elementy
+  (półka z LED: 36 → 18, 2026-11-15). Oklejanie przez sklep; użytkownik nie okleja sam.
 - Front F1 otwierany na docisk (push-to-open), zawiasy bez cichego domyku + popychacz (do doboru).
 - Luz pod sufitem 2 mm (szafki 1167 wysokości).
 
 ## Decyzje
 ### Półka z LED (P1, P3), 2026-11-13
-- Kształt L, leży na górnej krawędzi płytek (Y 1511), płyta 36 mm. Dwa prostokąty:
+- Kształt L, leży na górnej krawędzi płytek (Y 1511), płyta 18 mm (2026-11-15; wcześniej 36). Dwa prostokąty:
   P1 803 × 400 na ścianie lewej (narożnik → słupek, J − 2), P3 1980 × 200 na ścianie głównej (od przedniej krawędzi P1
   do szafki okapowej). Pod szafkami górnymi na ścianie głównej głębokość 200 (element P2 usunięty).
-- Nad półką pod szafkami górnymi zostaje 154 − 36 = 118.
+- Nad półką pod szafkami górnymi zostaje 154 − 18 = 136.
 - LED świeci w dół na blat: profil aluminiowy z mlecznym kloszem wpuszczony w spód ok. 50 od przednich krawędzi, w kształcie L.
-- Mocowanie (PROPOZYCJA 2026-11-15, obciążenie lekkie: przyprawy, drobne rzeczy): pręty stalowe Ø10 (gładkie lub
-  gwintowane, ocynk), ok. 100 w żelbecie na kotwie chemicznej, półka nasuwana na pręty w otwory Ø10 w tylnej krawędzi,
-  w połowie grubości (13 mm płyty z każdej strony). Otwory wierci użytkownik (prowadnik/przyrząd do kołków, długie wiertło).
-  - P3 (1980 × 200): 5 prętów co 420 (150, 570, 990, 1410, 1830 od lewego końca P3), 120 w półce
-    (kończą się przed profilem LED).
-  - P1 (803 × 400): 3 pręty od ściany lewej (z 150, 400, 650 od ściany głównej), 250 w półce, + 2 pręty od ściany
-    głównej (x 100, 300), 120 w półce. Półka narożna podparta na dwóch ścianach.
+- Mocowanie (2026-11-15, obciążenie lekkie): wsporniki ukryte z trzpieniem Ø10, dł. 113, regulacja w 3 kierunkach,
+  np. Italiana Ferramenta C010002803 (magolodz.pl, „od 18 mm”, nośność 15 kg wg sklepu). Otwory Ø10 w krawędzi płyty
+  18 mm (po 4 mm płyty z każdej strony) wierci użytkownik z prowadnikiem; meble.pl tego nie wywierci (kalkulator: w czole
+  tylko Ø4/Ø8, głębokość do 35). Przed zamówieniem: wymiary otworu w ścianie i głębokość otworu w półce z karty wspornika.
+  - P3 (1980 × 200): 5 wsporników co 420 (150, 570, 990, 1410, 1830 od lewego końca P3).
+  - P1 (803 × 400): 3 wsporniki od ściany lewej (z 150, 400, 650) + 2 od ściany głównej (x 100, 300).
+    Do decyzji: dodatkowe podparcie końca P1 przy słupku (P1 ma 400 głębokości, trzpień tylko ok. 80 w płycie).
   - Styk P3/P1: 2 kołki Ø8 w czołach (wierci użytkownik), żeby górne powierzchnie były równo.
-  - Przed wierceniem w ścianie: wykrywacz zbrojenia; pręty poziomo, wspólna linia (laser).
+  - Przed wierceniem w ścianie: wykrywacz zbrojenia; wsporniki w jednej linii (laser).
+  - LED w płycie 18: zamiast wpuszczanego profilu raczej płaski profil nakładany (bez frezowania osłabiającego płytę).
 - LED (2026-11-15): zamiast rowka na kabel dodatkowy odcinek profilu pod P1 przy słupku (50 od końca P1), od ściany
   lewej (wejście kabla 24 V) do profilu wzdłuż przodu P1: rozjaśnia ciemny róg przy słupku. Profil w kształcie U/L:
   przy słupku → wzdłuż przodu P1 → wzdłuż przodu P3. Narożniki: osobne odcinki taśmy łączone przewodem/łącznikami.
@@ -111,6 +112,9 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
   (P1 803 / J 805); sufit 2 (szafki 1167 / M 1169); korpusy i półki przy ścianach bez luzu (nierówności ściany: podkładki).
   Decyzja użytkownika: 2 mm wystarczy; w razie potrzeby P1 docinany ręcznie na końcu w narożniku (pod szafkami górnymi, niewidoczny).
 
+### 2026-11-15: bez maskowania rury w SO
+- Rura w szafce okapowej zostaje widoczna po otwarciu frontu; przy zamkniętych frontach niewidoczna. Bez obudowy.
+
 ## Założenia do potwierdzenia
 - Położenie okapu w głąb: korpus dosunięty do przodu (z 50–300), szkło z 10–300. Oś wylotu ok. 218 od ściany głównej.
   Sprawdzić przy montażu (otwory 35 i 215 od przodu boku).
@@ -144,3 +148,4 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
 - 2026-11-14: cichy kanał: pion Ø150, redukcja pod sufitem, mata akustyczna, otwór w SOP Ø170.
 - 2026-11-15: fronty szuflad METOD (6 szt.), lista i rysunek dopasowania usłojenia w `zamowienie/`.
 - 2026-11-15: mocowanie półki (pręty Ø10, propozycja), LED przy słupku zamiast rowka, jedno kolano 90°, redukcja Y 2300.
+- 2026-11-15: półka z LED z płyty 18 na wspornikach ukrytych Ø10 × 113; rura w SO bez maskowania.
