@@ -46,7 +46,7 @@ var YRD=2300;          /* ZAŁOŻENIE: dół redukcji 150/125; kolano 90° R ok.
 var ZSK=RU2+RU+10;     /* tył zaślepki skrzynki (10 przed rurą): 172 */
 var YSOP=2150;         /* ZAŁOŻENIE: półka nad okapem (dół), pod nią redukcja i przesunięcie rury do tyłu */
 var NPW=2;             /* półki w wąskiej szafce (równe przegrody; 2026-11-14: 3 → 2) */
-var LP1=J-2;           /* półka P1 wzdłuż ściany lewej: 803 */
+var LP1=J-1;           /* półka P1 wzdłuż ściany lewej: 804 (2026-11-15: luz 2 → 1) */
 var GP1=400, GP3=200;  /* głębokości półek */
 var ZLS=LP1-50;        /* profil LED przy słupku: 50 od końca P1 (2026-11-15) */
 var PR=5;              /* wsporniki ukryte z trzpieniem Ø10 (Italiana Ferramenta C010002803, dł. 113, 2026-11-15) */
@@ -87,11 +87,11 @@ add([
 
 /* ---- półka z LED na płytkach (płyta 36, z meble.pl, oklejona) ---- */
 add([
-  {n:'P1: Półka LED, ściana lewa (803 × 400)',layer:'Półka LED',x:0,y:YP,z:0,w:GP1,h:PP,d:LP1,c:POL},
+  {n:'P1: Półka LED, ściana lewa (804 × 400)',layer:'Półka LED',x:0,y:YP,z:0,w:GP1,h:PP,d:LP1,c:POL},
   {n:'P3: Półka LED, ściana główna (1980 × 200)',layer:'Półka LED',x:GP1,y:YP,z:0,w:XSO-GP1,h:PP,d:GP3,c:POL},
-  {n:'Profil LED nakładany ok. 17 × 7 pod P1',layer:'LED',x:GP1-60,y:YP-7,z:GP3-60,w:17,h:7,d:ZLS+6-(GP3-60),c:LED},
-  {n:'Profil LED nakładany pod P1 przy słupku (od kabla przy ścianie; 2026-11-15)',layer:'LED',x:10,y:YP-7,z:ZLS-6,w:GP1-60+2,h:7,d:17,c:LED},
-  {n:'Profil LED nakładany ok. 17 × 7 pod P3',layer:'LED',x:GP1-60,y:YP-7,z:GP3-60,w:XSO-GP1+40,h:7,d:17,c:LED}
+  {n:'Profil LED wpuszczany pod P1 (rowek ok. 14 × 8)',layer:'LED',x:GP1-60,y:YP,z:GP3-60,w:14,h:8,d:ZLS+6-(GP3-60),c:LED},
+  {n:'Profil LED wpuszczany pod P1 przy słupku (od kabla przy ścianie; 2026-11-15)',layer:'LED',x:10,y:YP,z:ZLS-6,w:GP1-60+2,h:8,d:14,c:LED},
+  {n:'Profil LED wpuszczany pod P3 (rowek ok. 14 × 8)',layer:'LED',x:GP1-60,y:YP,z:GP3-60,w:XSO-GP1+40,h:8,d:14,c:LED}
 ]);
 
 /* wsporniki ukryte (trzpień Ø10, długość 113, regulacja w 3 kierunkach), korpus w otworze w ścianie (2026-11-15) */

@@ -134,10 +134,10 @@ FORMATKI = [
     F('WSP', 'Wąska szafka: półki stałe', okleina='1DL', nawierty='KONFIRMATY'),
     F('P1', 'Półka LED: ściana lewa (wnęka)', okleina='1DL',
       nawierty='BRAK (otwory Ø10 pod wsporniki ukryte w krawędziach przy ścianach wierci użytkownik)',
-      uwagi='okleina na długiej krawędzi od strony kuchni (803)'),
+      uwagi='okleina na długiej krawędzi od strony kuchni (804); rowek pod profil LED w spodzie frezuje użytkownik'),
     F('P3', 'Półka LED: ściana główna', okleina='1DL',
       nawierty='BRAK (otwory Ø10 pod wsporniki ukryte w tylnej krawędzi wierci użytkownik)',
-      uwagi='okleina na przedniej krawędzi (1980)'),
+      uwagi='okleina na przedniej krawędzi (1980); rowek pod profil LED w spodzie frezuje użytkownik'),
     F('F1', 'Front szafki okapowej, otwierany na docisk', okleina='2DL+2SZ',
       nawierty='ZAWIASY 3 SZT (PRAWA), ' + ZAW, uwagi='zawiasy bez cichego domyku + popychacz (push-to-open)'),
 ]

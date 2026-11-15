@@ -23,25 +23,28 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
 ## Decyzje
 ### Półka z LED (P1, P3), 2026-11-13
 - Kształt L, leży na górnej krawędzi płytek (Y 1511), płyta 18 mm (2026-11-15; wcześniej 36). Dwa prostokąty:
-  P1 803 × 400 na ścianie lewej (narożnik → słupek, J − 2), P3 1980 × 200 na ścianie głównej (od przedniej krawędzi P1
+  P1 804 × 400 na ścianie lewej (narożnik → słupek, J − 1; 2026-11-15, było J − 2), P3 1980 × 200 na ścianie głównej (od przedniej krawędzi P1
   do szafki okapowej). Pod szafkami górnymi na ścianie głównej głębokość 200 (element P2 usunięty).
 - Nad półką pod szafkami górnymi zostaje 154 − 18 = 136.
-- LED świeci w dół na blat: profil aluminiowy z mlecznym kloszem, nakładany na spód ok. 50 od przednich krawędzi (2026-11-15; wcześniej wpuszczany).
+- LED świeci w dół na blat: profil aluminiowy z mlecznym kloszem, wpuszczany w spód ok. 50 od przednich krawędzi.
 - Mocowanie (2026-11-15, obciążenie lekkie): wsporniki ukryte z trzpieniem Ø10, dł. 113, regulacja w 3 kierunkach,
   np. Italiana Ferramenta C010002803 (magolodz.pl, „od 18 mm”, nośność 15 kg wg sklepu). Otwory Ø10 w krawędzi płyty
   18 mm (po 4 mm płyty z każdej strony) wierci użytkownik z prowadnikiem; meble.pl tego nie wywierci (kalkulator: w czole
   tylko Ø4/Ø8, głębokość do 35). Przed zamówieniem: wymiary otworu w ścianie i głębokość otworu w półce z karty wspornika.
   - P3 (1980 × 200): 5 wsporników co 420 (150, 570, 990, 1410, 1830 od lewego końca P3).
-  - P1 (803 × 400): 3 wsporniki od ściany lewej (z 150, 400, 650) + 2 od ściany głównej (x 100, 300).
+  - P1 (804 × 400): 3 wsporniki od ściany lewej (z 150, 400, 650) + 2 od ściany głównej (x 100, 300).
     Koniec P1 przy słupku: przykręcony kilkoma wkrętami przez bok słupka (od wnętrza słupka) w czoło P1 (2026-11-15);
     nawierty pilotowe w czole P1, szczelinę 2 mm wypełnić podkładką.
   - Styk P3/P1: 2 kołki Ø8 w czołach (wierci użytkownik), żeby górne powierzchnie były równo.
   - Przed wierceniem w ścianie: wykrywacz zbrojenia; wsporniki w jednej linii (laser).
-  - LED (2026-11-15): taśma użytkownika PAUTIX COB CCT 24 V, szer. 10 mm, cięcie co 25 mm, 5 m (zestaw Tuya).
-    Profil aluminiowy NAKŁADANY, płaski (ok. 17 × 7, wnętrze ≥ 11), klosz mleczny, przykręcany/klejony do spodu,
-    bez frezowania. Odcinki: wzdłuż przodu P3 ok. 2020, wzdłuż przodu P1 ok. 620, przy słupku ok. 340 (razem ok. 3 m).
-    Narożniki: łączniki do COB 10 mm 3-pin (CCT) albo lutowanie. DO SPRAWDZENIA: ile żył ma kabel ze ściany –
-    CCT potrzebuje 3 (V+, ciepła, zimna); przy 2 żyłach sterownik musi być przy półce (np. w szafce górnej nad wnęką).
+  - LED (2026-11-15): taśma użytkownika PAUTIX COB CCT 24 V, szer. 10 mm, cięcie co 25 mm, 5 m. Kabel ze ściany
+    przygotowany pod tę taśmę (sprawdzone przez użytkownika).
+    Profil CAŁKOWICIE WPUSZCZANY w spód półki (decyzja 2026-11-15, zamiast nakładanego): profil aluminiowy wpuszczany
+    z kołnierzem i kloszem mlecznym, wnętrze ≥ 10,5, rowek ok. 13–14 szer. × najwyżej 8 głęb. (zostaje ≥ 10 mm płyty).
+    Rowek frezuje użytkownik (frezarka z prowadnicą) albo sklep, jeśli przyjmie zlecenie CNC (zapytać w mailu
+    o fronty; „Wręgowanie” w kalkulatorze to raczej wpust pod plecy HDF, nie rowek 14 mm). Dobrać konkretny profil
+    PRZED frezowaniem i wymiary rowka wziąć z jego karty. Odcinki: P3 ok. 2020, P1 ok. 620, przy słupku ok. 340;
+    narożniki: profile cięte pod 45°, taśma łączona łącznikami 3-pin lub lutowana.
 - LED (2026-11-15): zamiast rowka na kabel dodatkowy odcinek profilu pod P1 przy słupku (50 od końca P1), od ściany
   lewej (wejście kabla 24 V) do profilu wzdłuż przodu P1: rozjaśnia ciemny róg przy słupku. Profil w kształcie U/L:
   przy słupku → wzdłuż przodu P1 → wzdłuż przodu P3. Narożniki: osobne odcinki taśmy łączone przewodem/łącznikami.
@@ -113,8 +116,8 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
   (porównanie w rozmowie: bez prostego odcinka między kolanami opory podobne, a z odcinkiem nie mieści się przed SOB-2;
   każde dodatkowe złącze to ryzyko nieszczelności i świstu). Dół redukcji poprawiony na Y 2300 (kolano zajmuje ok. 165
   pod osią poziomą 2577).
-- Luzy (stan): ściana główna tylko 2 przy ściance (WS do 3206); P3 bez luzu między P1 a SOB-1; ściana lewa 2 przy słupku
-  (P1 803 / J 805); sufit 2 (szafki 1167 / M 1169); korpusy i półki przy ścianach bez luzu (nierówności ściany: podkładki).
+- Luzy (stan): ściana główna tylko 2 przy ściance (WS do 3206); P3 bez luzu między P1 a SOB-1; ściana lewa 1 przy słupku
+  (P1 804 / J 805, zmiana 2026-11-15); sufit 2 (szafki 1167 / M 1169); korpusy i półki przy ścianach bez luzu (nierówności ściany: podkładki).
   Decyzja użytkownika: 2 mm wystarczy; w razie potrzeby P1 docinany ręcznie na końcu w narożniku (pod szafkami górnymi, niewidoczny).
 
 ### 2026-11-15: bez maskowania rury w SO
@@ -155,3 +158,4 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
 - 2026-11-15: mocowanie półki (pręty Ø10, propozycja), LED przy słupku zamiast rowka, jedno kolano 90°, redukcja Y 2300.
 - 2026-11-15: półka z LED z płyty 18 na wspornikach ukrytych Ø10 × 113; rura w SO bez maskowania.
 - 2026-11-15: koniec P1 przykręcany przez bok słupka; LED: taśma COB CCT 10 mm w płaskim profilu nakładanym.
+- 2026-11-15: P1 804 (luz 1 przy słupku); profil LED całkowicie wpuszczany (rowek ok. 14 × 8).
