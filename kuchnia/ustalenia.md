@@ -39,13 +39,15 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
   - Przed wierceniem w ścianie: wykrywacz zbrojenia; wsporniki w jednej linii (laser).
   - LED (2026-11-15): taśma użytkownika PAUTIX COB CCT 24 V, szer. 10 mm, cięcie co 25 mm, 5 m. Kabel ze ściany
     przygotowany pod tę taśmę (sprawdzone przez użytkownika).
-    Profil CAŁKOWICIE WPUSZCZANY w spód półki (decyzja 2026-11-15, zamiast nakładanego): profil aluminiowy wpuszczany
-    z kołnierzem i kloszem mlecznym, wnętrze ≥ 10,5, rowek ok. 13–14 szer. × najwyżej 8 głęb. (zostaje ≥ 10 mm płyty).
-    Rowek frezuje użytkownik (frezarka z prowadnicą) albo sklep, jeśli przyjmie zlecenie CNC (zapytać w mailu
-    o fronty; „Wręgowanie” w kalkulatorze to raczej wpust pod plecy HDF, nie rowek 14 mm). Dobrać konkretny profil
-    PRZED frezowaniem i wymiary rowka wziąć z jego karty. Odcinki: P3 ok. 2020, P1 ok. 620, przy słupku ok. 340;
-    narożniki: profile cięte pod 45°, taśma łączona łącznikami 3-pin lub lutowana.
-- LED (2026-11-15): zamiast rowka na kabel dodatkowy odcinek profilu pod P1 przy słupku (50 od końca P1), od ściany
+    Profil CAŁKOWICIE WPUSZCZANY w spód półki (decyzja 2026-11-15): MasterLED wpuszczany czarny 12 mm, klosz mleczny,
+    odcinki 1 m (Allegro, oferta 18841961757). Przekrój: kołnierz 23,6, korpus 16,9, wys. 7 razem z kołnierzem
+    (korpus ok. 5,5 w rowku, kołnierz ok. 1,5 zostaje pod spodem półki i zakrywa krawędzie rowka), wnętrze 12,4.
+    Rowek 18,2 × 6 (zostaje 12 mm płyty) z dwóch wręgów 10,2 w kalkulatorze meble.pl, odległości 30 i 38 od krawędzi;
+    oś profilu 39,1 od przodu półki. Odcinki: P3 ok. 2030 (od narożnika P1 do 20 przed SOB-1), P1 wzdłuż przodu ok. 620,
+    przy słupku ok. 370 → razem ok. 3,0 m: kupić 4 szt. po 1 m (lepiej 5, zapas na cięcia 45° i pomyłkę).
+    Narożniki: profile cięte pod 45°, taśma łączona łącznikami 3-pin lub lutowana. Styki odcinków na P3 nieuniknione (1 m).
+    Do sprawdzenia po dostawie: wymiary profilu suwmiarką PRZED wysłaniem zamówienia płyt.
+- LED (2026-11-15): zamiast rowka na kabel dodatkowy odcinek profilu pod P1 przy słupku (oś 39 od końca P1), od ściany
   lewej (wejście kabla 24 V) do profilu wzdłuż przodu P1: rozjaśnia ciemny róg przy słupku. Profil w kształcie U/L:
   przy słupku → wzdłuż przodu P1 → wzdłuż przodu P3. Narożniki: osobne odcinki taśmy łączone przewodem/łącznikami.
 
@@ -127,15 +129,15 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
 - Kalkulator, szablon „Wręgowanie i nawierty” → „Wręgowanie (nutowanie)”: powierzchnia przód/tył, krawędź 1–4,
   głębokość 2–13 mm (dla 18: grubość − 5), szerokość wręgu tylko 3,2 / 4,2 / 10,2 mm, odległość od krawędzi 0–50 mm,
   przelotowe albo nieprzelotowe (X1/X2 od końców), kilka wręgów na formatce („+ dodaj wręg”).
-- Rowek szerszy niż 10,2 = kilka wręgów obok siebie, zachodzących na siebie (np. profil z korpusem 16: 2 × 10,2
-  w odległościach 30 i 36 → rowek 30–46,2, oś ok. 38 od przodu). Wszystkie wręgi w odległości ≤ 50 od krawędzi.
-  NIEPEWNE: czy sklep przyjmie nakładające się wręgi i od której strony wręgu liczy „odległość od krawędzi”;
-  nieprzelotowy wręg jest płytszy na końcach (wejście/wyjście narzędzia). Zapytać w mailu przed zamówieniem.
-  Plan B: rowek frezuje użytkownik frezarką z frezem prostym 16 i prowadnicą.
-- P1: rowek wzdłuż przodu (krawędź od strony kuchni) i przy słupku (krawędź krótka, od ściany do rowka przedniego).
-  P3: rowek wzdłuż przodu, przelotowy na lewym końcu (styk z P1). Odcinek łączący profil P3 z profilem P1 w narożniku
-  (ok. 50 mm, pod szafkami górnymi) jest dalej niż 50 od krawędzi P1: kalkulator go nie zrobi (dociąć ręcznie albo
-  zostawić przerwę w świetle w ciemnym narożniku).
+- Rowek 18,2 × 6 pod profil MasterLED (korpus 16,9): 2 wręgi 10,2, gł. 6, odległości 30 i 38 od krawędzi.
+  NIEPEWNE (zapytać w mailu przed zamówieniem): czy przyjmą nakładające się wręgi; czy „odległość” liczą do bliższej
+  krawędzi wręgu (założenie) czy do osi; jak długie są płytsze końce nieprzelotowego wręgu (wejście/wyjście narzędzia).
+  Plan B: rowek frezuje użytkownik frezarką z frezem prostym i prowadnicą.
+- P3: wręgi wzdłuż przodu, przelotowe na całej długości (końce schowane przy P1 i przy SOB-1).
+- P1: wręgi wzdłuż przodu (krawędź 804), od 152 od ściany głównej, przelotowe przy słupku (koniec schowany przy słupku);
+  wręgi wzdłuż krawędzi 400 przy słupku, przelotowe od ściany lewej (tam wchodzi kabel), do rowka przedniego.
+- Narożnik P1/P3: ok. 30 mm rowka w P1 (od rowka przedniego P1 do krawędzi przy P3) biegnie w poprzek krawędzi,
+  kalkulator go nie zrobi: użytkownik dłutem/frezarką przed montażem.
 
 ## Założenia do potwierdzenia
 - Położenie okapu w głąb: korpus dosunięty do przodu (z 50–300), szkło z 10–300. Oś wylotu ok. 218 od ściany głównej.
@@ -173,3 +175,4 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
 - 2026-11-15: półka z LED z płyty 18 na wspornikach ukrytych Ø10 × 113; rura w SO bez maskowania.
 - 2026-11-15: koniec P1 przykręcany przez bok słupka; LED: taśma COB CCT 10 mm w płaskim profilu nakładanym.
 - 2026-11-15: P1 804 (luz 1 przy słupku); profil LED całkowicie wpuszczany (rowek ok. 14 × 8).
+- 2026-11-15: profil LED MasterLED wpuszczany 12 mm; rowki 18,2 × 6 z wręgów w zamówieniu meble.pl.

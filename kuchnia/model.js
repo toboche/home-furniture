@@ -48,7 +48,11 @@ var YSOP=2150;         /* ZAŁOŻENIE: półka nad okapem (dół), pod nią redu
 var NPW=2;             /* półki w wąskiej szafce (równe przegrody; 2026-11-14: 3 → 2) */
 var LP1=J-1;           /* półka P1 wzdłuż ściany lewej: 804 (2026-11-15: luz 2 → 1) */
 var GP1=400, GP3=200;  /* głębokości półek */
-var ZLS=LP1-50;        /* profil LED przy słupku: 50 od końca P1 (2026-11-15) */
+/* Profil LED MasterLED wpuszczany 12 mm (2026-11-15): kołnierz 23,6, korpus 16,9, wys. 7 (korpus ok. 5,5 + kołnierz ok. 1,5).
+   Rowek 18,2 × 6 = 2 wręgi 10,2 w odległościach 30 i 38 od krawędzi półki (kalkulator meble.pl). */
+var LRO=30, LRW=18.2, LRG=6, LKW=23.6, LKH=1.5;
+var LRA=LRO+LRW/2;     /* oś rowka od krawędzi półki: 39,1 */
+var ZLS=LP1-LRA;       /* oś profilu przy słupku (od ściany głównej) */
 var PR=5;              /* wsporniki ukryte z trzpieniem Ø10 (Italiana Ferramenta C010002803, dł. 113, 2026-11-15) */
 var WT=80;             /* ZAŁOŻENIE: część trzpienia w półce (do sprawdzenia na wsporniku) */
 
@@ -89,9 +93,12 @@ add([
 add([
   {n:'P1: Półka LED, ściana lewa (804 × 400)',layer:'Półka LED',x:0,y:YP,z:0,w:GP1,h:PP,d:LP1,c:POL},
   {n:'P3: Półka LED, ściana główna (1980 × 200)',layer:'Półka LED',x:GP1,y:YP,z:0,w:XSO-GP1,h:PP,d:GP3,c:POL},
-  {n:'Profil LED wpuszczany pod P1 (rowek ok. 14 × 8)',layer:'LED',x:GP1-60,y:YP,z:GP3-60,w:14,h:8,d:ZLS+6-(GP3-60),c:LED},
-  {n:'Profil LED wpuszczany pod P1 przy słupku (od kabla przy ścianie; 2026-11-15)',layer:'LED',x:10,y:YP,z:ZLS-6,w:GP1-60+2,h:8,d:14,c:LED},
-  {n:'Profil LED wpuszczany pod P3 (rowek ok. 14 × 8)',layer:'LED',x:GP1-60,y:YP,z:GP3-60,w:XSO-GP1+40,h:8,d:14,c:LED}
+  {n:'Profil LED wpuszczany pod P1, wzdłuż przodu (rowek 18,2 × 6)',layer:'LED',x:GP1-LRO-LRW,y:YP,z:GP3-LRO-LRW,w:LRW,h:LRG,d:LP1-LRO-(GP3-LRO-LRW),c:LED},
+  {n:'Profil LED wpuszczany pod P1 przy słupku (od kabla w ścianie lewej)',layer:'LED',x:0,y:YP,z:LP1-LRO-LRW,w:GP1-LRO,h:LRG,d:LRW,c:LED},
+  {n:'Profil LED wpuszczany pod P3 (rowek 18,2 × 6)',layer:'LED',x:GP1-LRO-LRW,y:YP,z:GP3-LRO-LRW,w:XSO-(GP1-LRO-LRW)-20,h:LRG,d:LRW,c:LED},
+  {n:'Kołnierz profilu LED pod P1, wzdłuż przodu',layer:'LED',x:GP1-LRA-LKW/2,y:YP-LKH,z:GP3-LRA-LKW/2,w:LKW,h:LKH,d:ZLS-(GP3-LRA)+LKW,c:LED},
+  {n:'Kołnierz profilu LED pod P1 przy słupku',layer:'LED',x:0,y:YP-LKH,z:ZLS-LKW/2,w:GP1-LRA-LKW/2,h:LKH,d:LKW,c:LED},
+  {n:'Kołnierz profilu LED pod P3',layer:'LED',x:GP1-LRA-LKW/2,y:YP-LKH,z:GP3-LRA-LKW/2,w:XSO-(GP1-LRA-LKW/2)-20,h:LKH,d:LKW,c:LED}
 ]);
 
 /* wsporniki ukryte (trzpień Ø10, długość 113, regulacja w 3 kierunkach), korpus w otworze w ścianie (2026-11-15) */
