@@ -41,10 +41,11 @@ Pomiary z 2026-11-12 i 2026-11-13 (rozmowa z Claude, zdjęcia kuchni).
 ## Okap Ciarko Design DUO 55 (instrukcja Uno/Duo i rysunek techniczny DUO 55)
 | KOD | WARTOŚĆ | OPIS | WCZEŚNIEJ / UWAGI |
 |---|---|---|---|
-| OK1 | 514 | szerokość korpusu okapu (A w instrukcji) | rysunek techniczny 513 |
-| OK2 | 250 | głębokość korpusu | rysunek techniczny 253 |
-| OK3 | 263 | wysokość korpusu | rysunek techniczny 265 |
+| OK1 | 513 | szerokość korpusu okapu (rysunek techniczny) | 514 (A w instrukcji); zmiana 2026-11-16 |
+| OK2 | 253 | głębokość korpusu (rysunek techniczny) | 250; zmiana 2026-11-16 |
+| OK3 | 265 | wysokość korpusu (rysunek techniczny) | 263; zmiana 2026-11-16 |
 | OK4 | 551 × 290 | kołnierz (ramka ze szkłem) na dole, widoczny od spodu: dno szafki; grubość ok. 4 (ZAŁOŻENIE) | 550 × 290 (instrukcja); 551 z rysunku technicznego 2026-11-16 |
 | OK5 | 150 | wylot (średnica), wyśrodkowany na szerokości | 93 od tyłu korpusu do krawędzi wylotu |
 | OK6 | 516 | wymagana szerokość wewnętrzna szafki (A + 2) | |
+| OK8 | 19 / 18,5 | wysięg kołnierza poza korpus: z boków (551 − 513) / 2, z przodu i z tyłu (290 − 253) / 2 | kołnierz na środku (użytkownik, 2026-11-16) |
 | OK7 | 450 | minimalna odległość od płyty indukcyjnej | gaz 650 |
