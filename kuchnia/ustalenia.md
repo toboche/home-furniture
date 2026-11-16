@@ -36,7 +36,10 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
   - P1 (804 × 400): 3 pręty od ściany lewej (z 150, 400, 650) + 2 od ściany głównej (x 100, 300).
     Koniec P1 przy słupku: przykręcony kilkoma wkrętami przez bok słupka (od wnętrza słupka) w czoło P1 (2026-11-15);
     nawierty pilotowe w czole P1, szczelinę 2 mm wypełnić podkładką.
-  - Styk P3/P1: 2 kołki Ø8 × 30 w czołach (z 60 i 120; otwory Ø8 × 16 wierci meble.pl, 2026-11-16), żeby górne powierzchnie były równo.
+  - Styk P3/P1 (2026-11-16, zamiast kołków: P3 nasuwa się na pręty w kierunku ściany, kołki w poprzek tego ruchu
+    nie weszłyby): 2 płaskie łączniki stalowe od spodu w poprzek styku (z ok. 50 i 110, poza rowkiem LED z 152–170),
+    wkręty 3,5 × 12 (nie przebijają płyty 18). Górne powierzchnie równo: przy osadzaniu prętów P3 w żywicy położyć P3
+    na prętach i dopasować do P1 przed związaniem żywicy.
   - Przed wierceniem w ścianie: wykrywacz zbrojenia; otwory w jednej linii (laser).
   - LED (2026-11-15): taśma użytkownika PAUTIX COB CCT 24 V, szer. 10 mm, cięcie co 25 mm, 5 m. Kabel ze ściany
     przygotowany pod tę taśmę (sprawdzone przez użytkownika).
@@ -169,6 +172,11 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
 - Półka LED na prętach M8 w betonie (decyzja 2026-11-16), patrz „Mocowanie” wyżej.
 - TIP-ON: zaplanowane 2; użytkownik sprawdzi przy montażu, czy wystarczy jeden (dolny).
 
+
+## Do zmierzenia przy pomiarach weryfikacyjnych w mieszkaniu
+- O ile płytki wystają przed ścianę nad nimi (górna krawędź płytek przy szafce okapowej). Tył kołnierza okapu jest
+  10 od ściany: przy występie ponad ok. 9 kołnierz oprze się na płytkach (wtedy SO głębsza o różnicę). (2026-11-16)
+
 ## Założenia do potwierdzenia
 - Położenie okapu w głąb: korpus dosunięty do przodu (z 50–300), szkło z 10–300. Oś wylotu ok. 218 od ściany głównej.
   Sprawdzić przy montażu (otwory 35 i 215 od przodu boku).
@@ -209,3 +217,4 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
 - 2026-11-16: redukcja 150/125 w wąskiej szafce za kolanem 90° Ø150; półka SOD nad okapem, SOP na 2104; korpus okapu wg rysunku.
 - 2026-11-16: okucia F1 (CLIP top bez sprężyny + 2 × TIP-ON), wycięcie SOD silikonem, WT 80.
 - 2026-11-16: półka LED na prętach M8 (otwory Ø8 × 35 i kołki na styku P3/P1 w zamówieniu); TIP-ON 2 (test 1).
+- 2026-11-16: styk P3/P1 na łącznikach od spodu zamiast kołków; do zmierzenia: występ płytek.
