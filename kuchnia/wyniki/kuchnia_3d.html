@@ -110,7 +110,8 @@ var GP1=400, GP3=200;  /* głębokości półek */
 var LRO=30, LRW=18.2, LRG=6, LKW=23.6, LKH=1.5;
 var LRA=LRO+LRW/2;     /* oś rowka od krawędzi półki: 39,1 */
 var ZLS=LP1-LRA;       /* oś profilu przy słupku (od ściany głównej) */
-var PR=5;              /* wsporniki ukryte z trzpieniem Ø10 (Italiana Ferramenta C010002803, dł. 113, 2026-11-15) */
+var PR=4;              /* pręty gwintowane M8 kl. 8.8 na kotwie chemicznej w betonie (2026-11-16; wcześniej wsporniki ukryte Ø10) */
+var WB=80;             /* część pręta w betonie */
 var WT=80;             /* część trzpienia w półce: 80 (decyzja użytkownika 2026-11-16) */
 
 var BOK=0xcdbb95, TYL=0x9c8b6e, POL=0xe6d7b8, FR=0x2f9e8f, IST=0x8a6f55, LED=0xffd66b, RURA=0xb8bcc2;
@@ -158,15 +159,15 @@ add([
   {n:'Kołnierz profilu LED pod P3',layer:'LED',x:GP1-LRA-LKW/2,y:YP-LKH,z:GP3-LRA-LKW/2,w:XSO-(GP1-LRA-LKW/2)-20,h:LKH,d:LKW,c:LED}
 ]);
 
-/* wsporniki ukryte (trzpień Ø10, długość 113, regulacja w 3 kierunkach), korpus w otworze w ścianie (2026-11-15) */
+/* pręty M8 (2026-11-16): 80 w betonie (kotwa chemiczna) + 80 w półce; otwór w półce Ø8: 35 meble.pl, pogłębia użytkownik do 85 */
 [150,570,990,1410,1830].forEach(function(xp){
-  ITEMS.push({t:'cyl3',n:'Wspornik ukryty Ø10 × 113 pod P3, x od lewego końca P3 '+xp,layer:'Mocowanie półki',ax:'z',px:GP1+xp,py:YP+PP/2,pz:WT-113/2,r:PR,len:113,c:0x555555});
+  ITEMS.push({t:'cyl3',n:'Pręt M8 × 160 pod P3, x od lewego końca P3 '+xp,layer:'Mocowanie półki',ax:'z',px:GP1+xp,py:YP+PP/2,pz:(WT-WB)/2,r:PR,len:WT+WB,c:0x555555});
 });
 [150,400,650].forEach(function(zp){
-  ITEMS.push({t:'cyl3',n:'Wspornik ukryty Ø10 × 113 pod P1 (ściana lewa)',layer:'Mocowanie półki',ax:'x',px:WT-113/2,py:YP+PP/2,pz:zp,r:PR,len:113,c:0x555555});
+  ITEMS.push({t:'cyl3',n:'Pręt M8 × 160 pod P1 (ściana lewa)',layer:'Mocowanie półki',ax:'x',px:(WT-WB)/2,py:YP+PP/2,pz:zp,r:PR,len:WT+WB,c:0x555555});
 });
 [100,300].forEach(function(xp){
-  ITEMS.push({t:'cyl3',n:'Wspornik ukryty Ø10 × 113 pod P1 (ściana główna)',layer:'Mocowanie półki',ax:'z',px:xp,py:YP+PP/2,pz:WT-113/2,r:PR,len:113,c:0x555555});
+  ITEMS.push({t:'cyl3',n:'Pręt M8 × 160 pod P1 (ściana główna)',layer:'Mocowanie półki',ax:'z',px:xp,py:YP+PP/2,pz:(WT-WB)/2,r:PR,len:WT+WB,c:0x555555});
 });
 
 /* ---- szafka okapowa SO: bez dna (okap między bokami), plecy między bokami, wieniec, półka nad okapem ---- */
@@ -231,6 +232,24 @@ return {
 /* GENEROWANE: python3 wspolne/pipeline/run.py kuchnia (nie edytować ręcznie).
    Otwory, konfirmaty, kołki i puszki zawiasów wyliczone z modelu (model.js). */
 HF_MODEL.items.push(
+  {t:'cyl3',n:'Otwór Ø8 x 35 pod pręt M8 (pogłębia użytkownik do 85) w P1 (do ściana: pręt M8)',layer:'Otwory',ax:'x',px:17.5,py:1520,pz:150,r:4,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø8 x 35 pod pręt M8 (pogłębia użytkownik do 85) w P1 (do ściana: pręt M8)',layer:'Otwory',ax:'x',px:17.5,py:1520,pz:400,r:4,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø8 x 35 pod pręt M8 (pogłębia użytkownik do 85) w P1 (do ściana: pręt M8)',layer:'Otwory',ax:'x',px:17.5,py:1520,pz:650,r:4,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø8 x 35 pod pręt M8 (pogłębia użytkownik do 85) w P1 (do ściana: pręt M8)',layer:'Otwory',ax:'z',px:100,py:1520,pz:17.5,r:4,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø8 x 35 pod pręt M8 (pogłębia użytkownik do 85) w P1 (do ściana: pręt M8)',layer:'Otwory',ax:'z',px:300,py:1520,pz:17.5,r:4,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø8 x 20 pod kołek w P1 (do P1/P3: kołek)',layer:'Otwory',ax:'x',px:392,py:1520,pz:60,r:4,len:16,c:0x15181b},
+  {t:'cyl3',n:'Kołek drewniany Ø8 x 40: P1 + P1/P3: kołek',layer:'Kołki',ax:'x',px:400,py:1520,pz:60,r:4,len:40,c:0xb08a5b},
+  {t:'cyl3',n:'Otwór Ø8 x 20 pod kołek w P1 (do P1/P3: kołek)',layer:'Otwory',ax:'x',px:392,py:1520,pz:120,r:4,len:16,c:0x15181b},
+  {t:'cyl3',n:'Kołek drewniany Ø8 x 40: P1 + P1/P3: kołek',layer:'Kołki',ax:'x',px:400,py:1520,pz:120,r:4,len:40,c:0xb08a5b},
+  {t:'cyl3',n:'Otwór Ø8 x 35 pod pręt M8 (pogłębia użytkownik do 85) w P3 (do ściana: pręt M8)',layer:'Otwory',ax:'z',px:550,py:1520,pz:17.5,r:4,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø8 x 35 pod pręt M8 (pogłębia użytkownik do 85) w P3 (do ściana: pręt M8)',layer:'Otwory',ax:'z',px:970,py:1520,pz:17.5,r:4,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø8 x 35 pod pręt M8 (pogłębia użytkownik do 85) w P3 (do ściana: pręt M8)',layer:'Otwory',ax:'z',px:1390,py:1520,pz:17.5,r:4,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø8 x 35 pod pręt M8 (pogłębia użytkownik do 85) w P3 (do ściana: pręt M8)',layer:'Otwory',ax:'z',px:1810,py:1520,pz:17.5,r:4,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø8 x 35 pod pręt M8 (pogłębia użytkownik do 85) w P3 (do ściana: pręt M8)',layer:'Otwory',ax:'z',px:2230,py:1520,pz:17.5,r:4,len:35,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø8 x 20 pod kołek w P3 (do P1/P3: kołek)',layer:'Otwory',ax:'x',px:408,py:1520,pz:60,r:4,len:16,c:0x15181b},
+  {t:'cyl3',n:'Kołek drewniany Ø8 x 40: P1/P3: kołek + P3',layer:'Kołki',ax:'x',px:400,py:1520,pz:60,r:4,len:40,c:0xb08a5b},
+  {t:'cyl3',n:'Otwór Ø8 x 20 pod kołek w P3 (do P1/P3: kołek)',layer:'Otwory',ax:'x',px:408,py:1520,pz:120,r:4,len:16,c:0x15181b},
+  {t:'cyl3',n:'Kołek drewniany Ø8 x 40: P1/P3: kołek + P3',layer:'Kołki',ax:'x',px:400,py:1520,pz:120,r:4,len:40,c:0xb08a5b},
   {t:'cyl3',n:'Otwór Ø5 x 10 pod podpórkę w SOB-1',layer:'Otwory',ax:'x',px:2393,py:1781,pz:50,r:2.5,len:10.6,c:0x15181b},
   {t:'cyl3',n:'Otwór Ø5 x 10 pod podpórkę w SOB-1',layer:'Otwory',ax:'x',px:2393,py:1781,pz:250,r:2.5,len:10.6,c:0x15181b},
   {t:'cyl3',n:'Otwór Ø5 x 11 pod trzpień mimośrodu (do SOT) w SOB-1',layer:'Otwory',ax:'x',px:2392.5,py:1580,pz:9,r:2.5,len:11.6,c:0x15181b},
