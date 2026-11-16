@@ -27,16 +27,17 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
   do szafki okapowej). Pod szafkami górnymi na ścianie głównej głębokość 200 (element P2 usunięty).
 - Nad półką pod szafkami górnymi zostaje 154 − 18 = 136.
 - LED świeci w dół na blat: profil aluminiowy z mlecznym kloszem, wpuszczany w spód ok. 50 od przednich krawędzi.
-- Mocowanie (2026-11-15, obciążenie lekkie): wsporniki ukryte z trzpieniem Ø10, dł. 113, regulacja w 3 kierunkach,
-  np. Italiana Ferramenta C010002803 (magolodz.pl, „od 18 mm”, nośność 15 kg wg sklepu). Otwory Ø10 w krawędzi płyty
-  18 mm (po 4 mm płyty z każdej strony) wierci użytkownik z prowadnikiem; meble.pl tego nie wywierci (kalkulator: w czole
-  tylko Ø4/Ø8, głębokość do 35). Przed zamówieniem: wymiary otworu w ścianie i głębokość otworu w półce z karty wspornika.
-  - P3 (1980 × 200): 5 wsporników co 420 (150, 570, 990, 1410, 1830 od lewego końca P3).
-  - P1 (804 × 400): 3 wsporniki od ściany lewej (z 150, 400, 650) + 2 od ściany głównej (x 100, 300).
+- Mocowanie (2026-11-16, obciążenie lekkie; wcześniej wsporniki ukryte Ø10): pręty gwintowane M8, ocynk, klasa 8.8,
+  dł. ok. 160: 80 w betonie na kotwie chemicznej (otwór w ścianie wg karty kotwy, np. Ø10), 80 w półce.
+  Otwory Ø8 w czołach półki: meble.pl wierci Ø8 × 35 (dokładne położenie), użytkownik pogłębia długim wiertłem Ø8 do 85.
+  Montaż: pręty w otworach półki, półka jako szablon wsuwana w otwory z żywicą; końce prętów od strony półki owinięte
+  taśmą / natłuszczone; półkę zdjąć po związaniu żywicy (pręty równoległe, bez regulacji).
+  - P3 (1980 × 200): 5 prętów co 420 (150, 570, 990, 1410, 1830 od lewego końca P3).
+  - P1 (804 × 400): 3 pręty od ściany lewej (z 150, 400, 650) + 2 od ściany głównej (x 100, 300).
     Koniec P1 przy słupku: przykręcony kilkoma wkrętami przez bok słupka (od wnętrza słupka) w czoło P1 (2026-11-15);
     nawierty pilotowe w czole P1, szczelinę 2 mm wypełnić podkładką.
-  - Styk P3/P1: 2 kołki Ø8 w czołach (wierci użytkownik), żeby górne powierzchnie były równo.
-  - Przed wierceniem w ścianie: wykrywacz zbrojenia; wsporniki w jednej linii (laser).
+  - Styk P3/P1: 2 kołki Ø8 × 30 w czołach (z 60 i 120; otwory Ø8 × 16 wierci meble.pl, 2026-11-16), żeby górne powierzchnie były równo.
+  - Przed wierceniem w ścianie: wykrywacz zbrojenia; otwory w jednej linii (laser).
   - LED (2026-11-15): taśma użytkownika PAUTIX COB CCT 24 V, szer. 10 mm, cięcie co 25 mm, 5 m. Kabel ze ściany
     przygotowany pod tę taśmę (sprawdzone przez użytkownika).
     Profil CAŁKOWICIE WPUSZCZANY w spód półki (decyzja 2026-11-15): MasterLED wpuszczany czarny 12 mm, klosz mleczny,
@@ -165,8 +166,8 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
   SOB-1 przy przodzie (wkręty 3,5 × 15, nie przechodzą przez widoczny bok), nad okapem: ok. Y 1850 i ok. Y 2550.
   Płytka TIP-ON na froncie w komplecie. Z TIP-ON tylko zawiasy bez sprężyny (zalecenie Blum).
 - SOD: wycięcie na wylot wycina użytkownik, krawędzie wycięcia zabezpieczone silikonem.
-- Wsporniki półki: część w półce 80. Rozważany wariant użytkownika: pręty gwintowane M8 osadzone w betonie na kotwie
-  chemicznej zamiast wsporników ukrytych (do decyzji; patrz rozmowa 2026-11-16).
+- Półka LED na prętach M8 w betonie (decyzja 2026-11-16), patrz „Mocowanie” wyżej.
+- TIP-ON: zaplanowane 2; użytkownik sprawdzi przy montażu, czy wystarczy jeden (dolny).
 
 ## Założenia do potwierdzenia
 - Położenie okapu w głąb: korpus dosunięty do przodu (z 50–300), szkło z 10–300. Oś wylotu ok. 218 od ściany głównej.
@@ -207,3 +208,4 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
 - 2026-11-16: dno szafki okapowej to kołnierz okapu 551 × 290 (rysunek techniczny DUO 55), bez deski/maskownicy; od przodu pod F1 widać tylko krawędź kołnierza cofniętą o 18.
 - 2026-11-16: redukcja 150/125 w wąskiej szafce za kolanem 90° Ø150; półka SOD nad okapem, SOP na 2104; korpus okapu wg rysunku.
 - 2026-11-16: okucia F1 (CLIP top bez sprężyny + 2 × TIP-ON), wycięcie SOD silikonem, WT 80.
+- 2026-11-16: półka LED na prętach M8 (otwory Ø8 × 35 i kołki na styku P3/P1 w zamówieniu); TIP-ON 2 (test 1).

@@ -59,7 +59,8 @@ var GP1=400, GP3=200;  /* głębokości półek */
 var LRO=30, LRW=18.2, LRG=6, LKW=23.6, LKH=1.5;
 var LRA=LRO+LRW/2;     /* oś rowka od krawędzi półki: 39,1 */
 var ZLS=LP1-LRA;       /* oś profilu przy słupku (od ściany głównej) */
-var PR=5;              /* wsporniki ukryte z trzpieniem Ø10 (Italiana Ferramenta C010002803, dł. 113, 2026-11-15) */
+var PR=4;              /* pręty gwintowane M8 kl. 8.8 na kotwie chemicznej w betonie (2026-11-16; wcześniej wsporniki ukryte Ø10) */
+var WB=80;             /* część pręta w betonie */
 var WT=80;             /* część trzpienia w półce: 80 (decyzja użytkownika 2026-11-16) */
 
 var BOK=0xcdbb95, TYL=0x9c8b6e, POL=0xe6d7b8, FR=0x2f9e8f, IST=0x8a6f55, LED=0xffd66b, RURA=0xb8bcc2;
@@ -107,15 +108,15 @@ add([
   {n:'Kołnierz profilu LED pod P3',layer:'LED',x:GP1-LRA-LKW/2,y:YP-LKH,z:GP3-LRA-LKW/2,w:XSO-(GP1-LRA-LKW/2)-20,h:LKH,d:LKW,c:LED}
 ]);
 
-/* wsporniki ukryte (trzpień Ø10, długość 113, regulacja w 3 kierunkach), korpus w otworze w ścianie (2026-11-15) */
+/* pręty M8 (2026-11-16): 80 w betonie (kotwa chemiczna) + 80 w półce; otwór w półce Ø8: 35 meble.pl, pogłębia użytkownik do 85 */
 [150,570,990,1410,1830].forEach(function(xp){
-  ITEMS.push({t:'cyl3',n:'Wspornik ukryty Ø10 × 113 pod P3, x od lewego końca P3 '+xp,layer:'Mocowanie półki',ax:'z',px:GP1+xp,py:YP+PP/2,pz:WT-113/2,r:PR,len:113,c:0x555555});
+  ITEMS.push({t:'cyl3',n:'Pręt M8 × 160 pod P3, x od lewego końca P3 '+xp,layer:'Mocowanie półki',ax:'z',px:GP1+xp,py:YP+PP/2,pz:(WT-WB)/2,r:PR,len:WT+WB,c:0x555555});
 });
 [150,400,650].forEach(function(zp){
-  ITEMS.push({t:'cyl3',n:'Wspornik ukryty Ø10 × 113 pod P1 (ściana lewa)',layer:'Mocowanie półki',ax:'x',px:WT-113/2,py:YP+PP/2,pz:zp,r:PR,len:113,c:0x555555});
+  ITEMS.push({t:'cyl3',n:'Pręt M8 × 160 pod P1 (ściana lewa)',layer:'Mocowanie półki',ax:'x',px:(WT-WB)/2,py:YP+PP/2,pz:zp,r:PR,len:WT+WB,c:0x555555});
 });
 [100,300].forEach(function(xp){
-  ITEMS.push({t:'cyl3',n:'Wspornik ukryty Ø10 × 113 pod P1 (ściana główna)',layer:'Mocowanie półki',ax:'z',px:xp,py:YP+PP/2,pz:WT-113/2,r:PR,len:113,c:0x555555});
+  ITEMS.push({t:'cyl3',n:'Pręt M8 × 160 pod P1 (ściana główna)',layer:'Mocowanie półki',ax:'z',px:xp,py:YP+PP/2,pz:(WT-WB)/2,r:PR,len:WT+WB,c:0x555555});
 });
 
 /* ---- szafka okapowa SO: bez dna (okap między bokami), plecy między bokami, wieniec, półka nad okapem ---- */
