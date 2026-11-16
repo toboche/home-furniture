@@ -16,7 +16,7 @@ def modul_of(it):
 
 
 def pomijaj_czesc(p):
-    """wszystkie formatki z nawiertami; P1 i P3 tylko otwory w czołach (pręty M8, kołki na styku), 2026-11-16"""
+    """wszystkie formatki z nawiertami; P1 i P3 tylko otwory w czołach pod pręty M8, 2026-11-16"""
     return False
 
 
@@ -100,7 +100,7 @@ def dodatkowe_otwory(P, parts, loc):
             edge(q, along_ax, a, 8, 20, BOK_CZYSTY)
             face(bok, 'A', {mid_ax: mid, along_ax: a}, 8, 12, code, 'Otwór Ø8 x 12 pod kołek (do %s)' % code)
 
-    # --- półka LED: otwory Ø8 x 35 w czołach przy ścianach pod pręty M8 (pogłębia użytkownik do 85), kołki na styku P3/P1 ---
+    # --- półka LED: otwory Ø8 x 35 w czołach przy ścianach pod pręty M8 (pogłębia użytkownik do 85) ---
     def czolo(code, n_ax, n_val, al_ax, vals, depth, opis=None):
         q = P[code]
         eu = (q['u'] == n_ax)
@@ -116,8 +116,6 @@ def dodatkowe_otwory(P, parts, loc):
     czolo('P3', 'z', 0, 'x', [400 + v for v in (150, 570, 990, 1410, 1830)], 35, PRET)
     czolo('P1', 'x', 0, 'z', (150, 400, 650), 35, PRET)
     czolo('P1', 'z', 0, 'x', (100, 300), 35, PRET)
-    czolo('P3', 'x', 400, 'z', (60, 120), 16)
-    czolo('P1', 'x', 400, 'z', (60, 120), 16)
 
     zlacze('SOT', 'A', 'z', 9, 'y', (1580, 2040, 2610), (1830, 2350))      # tył: obudowy od wnętrza (+z)
     zlacze('SOW', 'B', 'y', 2669, 'z', (159,), (60, 260))                   # wieniec: obudowy od spodu
@@ -163,10 +161,10 @@ FORMATKI = [
       uwagi='widoczne lico przednie; krawędzie schowane'),
     F('WSP', 'Wąska szafka: półki stałe', okleina='1DL', nawierty='KONFIRMATY'),
     F('P1', 'Półka LED: ściana lewa (wnęka)', okleina='1DL',
-      nawierty='CZOŁA: 5 x Ø8 x 35 pod pręty M8 (3 od ściany lewej, 2 od ściany głównej; użytkownik pogłębia do 85) + 2 x Ø8 x 16 pod kołki (styk z P3)',
+      nawierty='CZOŁA: 5 x Ø8 x 35 pod pręty M8 (3 od ściany lewej, 2 od ściany głównej; użytkownik pogłębia do 85)',
       uwagi='okleina na długiej krawędzi od strony kuchni (804). rowki 18,2 × 6 pod profil LED w spodzie frezuje użytkownik (meble.pl nie robi wręgów zachodzących na siebie)'),
     F('P3', 'Półka LED: ściana główna', okleina='1DL',
-      nawierty='CZOŁA: 5 x Ø8 x 35 pod pręty M8 w tylnej krawędzi (użytkownik pogłębia do 85) + 2 x Ø8 x 16 pod kołki (lewy koniec, styk z P1)',
+      nawierty='CZOŁA: 5 x Ø8 x 35 pod pręty M8 w tylnej krawędzi (użytkownik pogłębia do 85)',
       uwagi='okleina na przedniej krawędzi (1980). rowek 18,2 × 6 pod profil LED w spodzie frezuje użytkownik (meble.pl nie robi wręgów zachodzących na siebie)'),
     F('F1', 'Front szafki okapowej, otwierany na docisk', okleina='2DL+2SZ',
       nawierty='ZAWIASY 3 SZT (PRAWA), ' + ZAW, uwagi='3 zawiasy Blum CLIP top 110° bez sprężyny 70T3550.TL + prowadniki 173L6100; 2 x TIP-ON 956A1004 na adapterze 956A1201 (push-to-open)'),

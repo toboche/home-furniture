@@ -63,26 +63,6 @@
 "n_axis_is_u": true,
 "opis": "Otwór Ø8 x 35 pod pręt M8 (pogłębia użytkownik do 85)",
 "partner": "ściana: pręt M8"
-},
-{
-"along": 60,
-"d": 8,
-"depth": 16,
-"edge_coord": 400,
-"into": -1,
-"kind": "EDGE",
-"n_axis_is_u": false,
-"partner": "P1/P3: kołek"
-},
-{
-"along": 120,
-"d": 8,
-"depth": 16,
-"edge_coord": 400,
-"into": -1,
-"kind": "EDGE",
-"n_axis_is_u": false,
-"partner": "P1/P3: kołek"
 }
 ],
 "lo": {
@@ -160,26 +140,6 @@
 "n_axis_is_u": false,
 "opis": "Otwór Ø8 x 35 pod pręt M8 (pogłębia użytkownik do 85)",
 "partner": "ściana: pręt M8"
-},
-{
-"along": 60,
-"d": 8,
-"depth": 16,
-"edge_coord": 1980,
-"into": -1,
-"kind": "EDGE",
-"n_axis_is_u": true,
-"partner": "P1/P3: kołek"
-},
-{
-"along": 120,
-"d": 8,
-"depth": 16,
-"edge_coord": 1980,
-"into": -1,
-"kind": "EDGE",
-"n_axis_is_u": true,
-"partner": "P1/P3: kołek"
 }
 ],
 "lo": {

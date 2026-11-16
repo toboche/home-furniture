@@ -6,12 +6,12 @@
  },
  "kalkulator": {
   "typy_formatek": 14,
-  "wiersze": 163
+  "wiersze": 159
  },
  "laczniki": {
   "konfirmaty": 60,
-  "kolki": 10,
-  "otwory_pod_kolki": 10,
+  "kolki": 6,
+  "otwory_pod_kolki": 6,
   "otwory_nieprzelotowe": 30,
   "puszki_zawiasow": 3
  },
@@ -27,7 +27,7 @@
   ]
  },
  "polaczenia": 26,
- "otwory_lacznie": 175,
+ "otwory_lacznie": 171,
  "kolizje_otworow": 0,
  "strony_arkusza": 14
 }
