@@ -44,7 +44,7 @@ Pomiary z 2026-11-12 i 2026-11-13 (rozmowa z Claude, zdjęcia kuchni).
 | OK1 | 514 | szerokość korpusu okapu (A w instrukcji) | rysunek techniczny 513 |
 | OK2 | 250 | głębokość korpusu | rysunek techniczny 253 |
 | OK3 | 263 | wysokość korpusu | rysunek techniczny 265 |
-| OK4 | 550 × 290 | szkło / ramka na dole | |
+| OK4 | 551 × 290 | kołnierz (ramka ze szkłem) na dole, widoczny od spodu: dno szafki; grubość ok. 4 (ZAŁOŻENIE) | 550 × 290 (instrukcja); 551 z rysunku technicznego 2026-11-16 |
 | OK5 | 150 | wylot (średnica), wyśrodkowany na szerokości | 93 od tyłu korpusu do krawędzi wylotu |
 | OK6 | 516 | wymagana szerokość wewnętrzna szafki (A + 2) | |
 | OK7 | 450 | minimalna odległość od płyty indukcyjnej | gaz 650 |

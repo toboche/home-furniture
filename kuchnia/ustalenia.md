@@ -175,3 +175,4 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
 - 2026-11-15: profil LED MasterLED wpuszczany 12 mm; rowki 18,2 × 6 z wręgów w zamówieniu meble.pl.
 - 2026-11-15: P3 zostaje na styk z P1 (bez luzu; ostateczne). Luz na ścianie głównej tylko 2 przy ściance (WS).
 - 2026-11-15: wstępna wycena meble.pl (`zamowienie/wycena.md`); rowki LED frezuje użytkownik (meble.pl nie zrobi 18 mm).
+- 2026-11-16: dno szafki okapowej to kołnierz okapu 551 × 290 (rysunek techniczny DUO 55), bez deski/maskownicy; od przodu pod F1 widać tylko krawędź kołnierza cofniętą o 18.
