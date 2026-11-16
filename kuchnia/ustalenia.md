@@ -55,14 +55,16 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
 - Okap Ciarko Design DUO 55 do zabudowy: szafka bez dna, 516 w świetle (A + 2), na zewnątrz 552, osiowo nad płytą
   (oś X 2656): X 2380–2932. Korpus 300 + front 18. Okap przykręcany 4 wkrętami 3,5 × 16 przez boki.
   Odległość od płyty ok. 600 (min. 450 dla indukcji): OK.
-- Od płytek do sufitu (1167). Plecy 18 między bokami, wieniec górny, półka nad okapem SOP z otworem Ø140 pod rurę.
+- Od płytek do sufitu (1167). Plecy 18 między bokami, wieniec górny, półka nad okapem SOP z otworem Ø170 pod rurę.
+  Od 2026-11-16 także wkładana półka SOD tuż nad okapem (patrz niżej).
 - Front F1: JEDEN, 549 × 1164, push-to-open, zawiasy po PRAWEJ (otwierany w stronę wąskiej szafki), 3 zawiasy.
 
 ### Wąska szafka WS, 2026-11-13 / 2026-11-14
 - Między SO a ścianką, X 2932–3206 (274; ZAŁOŻENIE: luz 2 mm do ścianki), korpus 300, BEZ frontu. Przód cofnięty o 18
   względem frontu F1 (zgodnie z decyzją: kratka). Głębiej się nie da: ramka kratki zaczyna się 303 od ściany głównej.
-- Pod sufitem zamknięta skrzynka na rurę, cofnięta: dno skrzynki WSS na Y 2484–2502 (10 pod rurą), zaślepka WSZ
-  z = 172–190 (10 przed rurą). Przed zaślepką płytka półka: głębokość ok. 110, wysokość w świetle 158.
+- Pod sufitem zamknięta skrzynka na rurę, cofnięta: dno skrzynki WSS na Y 2474–2492, zaślepka WSZ z = 195–213
+  (2026-11-16, bo w skrzynce jest redukcja z końcem Ø150; wcześniej 2484–2502 i 172–190). Przed zaślepką płytka półka:
+  głębokość ok. 87, wysokość w świetle 168.
 - Poniżej 2 półki stałe WSP w równych odstępach: 3 przegrody po 306,33 w świetle (2026-11-14; wcześniej 3 półki / 4 × 225,25).
   Najwyżej płytka półka przed skrzynką (gł. ok. 110, wys. 158): akceptowane.
 
@@ -71,9 +73,10 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
   (producent: jak najgładszy przewód, zagięcia najwyżej 90°).
 - Średnica: rura w ścianie Ø125 wewnętrzna (130 zewnętrzna). Redukcja 150 → 125 pod sufitem (zmiana z 2026-11-14,
   wcześniej na wylocie okapu; patrz „cichy kanał”).
-- Trasa (aktualna): wylot Ø150 → przesunięcie do tyłu dwoma kolanami 45° Ø150 pod półką SOP (z ok. 218 na 109,5)
-  → pion Ø150 przez SOP (otwór Ø170) → redukcja mimośrodowa 150/125 → kolano 90° Ø125 pod sufitem → poziomo
-  (oś Y 2577, z 97) przez SOB-2, WSB-1, WSB-2 (otwory Ø140) do ścianki. Otwory wycina użytkownik, sklep wierci środek Ø5 × 5.
+- Trasa (aktualna od 2026-11-16): wylot Ø150 → przesunięcie do tyłu dwoma kolanami 45° Ø150 między SOD a SOP
+  (z 197,5 na 109,5) → pion Ø150 przez SOP (otwór Ø170) → kolano 90° Ø150 pod sufitem → poziomo Ø150 (oś Y 2577,
+  z 109,5) przez SOB-2 i WSB-1 (otwory Ø160) → redukcja mimośrodowa 150/125 w wąskiej szafce (płaską stroną do ściany
+  głównej, oś na z 97) → Ø125 przez WSB-2 (otwór Ø140) do ścianki. Otwory wycina użytkownik, sklep wierci środek Ø5 × 5.
 
 ### 2026-11-14: redukcja mimośrodowa, system spiro, 2 półki w WS
 - Redukcja 150 → 125 MIMOŚRODOWA (asymetryczna), ocynk, z uszczelką, np. lueftungsteile.ch „REDUKTION Reduzierstück
@@ -138,6 +141,22 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
 - Narożnik P1/P3: ok. 30 mm rowka w P1 (od rowka przedniego P1 do krawędzi przy P3) biegnie w poprzek krawędzi,
   kalkulator go nie zrobi: użytkownik dłutem/frezarką przed montażem.
 
+### 2026-11-16: redukcja za kolanem, półka tuż nad okapem, kołnierz okapu
+- Sklep z okapami: redukcja jak najdalej od okapu. Redukcja 150/125 przeniesiona za kolano 90°: na końcu poziomego
+  odcinka, w wąskiej szafce, tuż przed bokiem WSB-2 (od X 2960, długość 120 ZAŁOŻENIE). Kolano 90° w Ø150.
+  Dalej się nie da: za WSB-2 jest już rura w ściance Ø125.
+- Skutki: otwory w SOB-2 i WSB-1 Ø160 (Ø150 + pierścień; góra otworu 3 pod wieńcem); skrzynka w WS większa
+  (dno 10 niżej, zaślepka 23 do przodu). Nad poziomym Ø150 zostaje 8 mm do wieńca SOW: mata akustyczna tylko od spodu
+  i z przodu (albo cienka, do 5 mm).
+- Rysunek techniczny DUO 55: korpus 513 × 253 × 265, kołnierz 551 × 290 wystaje po 19 z boków i po 18,5 z przodu i z tyłu
+  (wg użytkownika: kołnierz na środku, nie dosunięty). Oś wylotu z 197,5 (było 218). Grubość kołnierza: ok. 4 (ZAŁOŻENIE).
+- Półka SOD tuż nad okapem: 10 nad korpusem okapu (Y 1786–1804), 514 × 280, na 4 podpórkach Ø5 (luz 1 z boków),
+  bez konfirmatów. Wkładana na końcu, po montażu okapu i rury: wycięcie od przodu na wylot Ø150 (szer. ok. 170,
+  do ok. 112 od tyłu), wycina użytkownik. Krawędzie wycięcia bez okleiny (pytanie: CNC w meble.pl?).
+- Półka SOP przesunięta: dół Y 2104 (przegroda między SOD i SOP ok. 300; było 2150). Przesunięcie 2 × 45° mieści się
+  między nimi (do ok. Y 2048). Środkowy zawias F1 przeniesiony na Y 1950 (prowadnik nie trafia w SOD ani SOP);
+  mimośród SOT na Y 2040 (było 2095).
+
 ## Założenia do potwierdzenia
 - Położenie okapu w głąb: korpus dosunięty do przodu (z 50–300), szkło z 10–300. Oś wylotu ok. 218 od ściany głównej.
   Sprawdzić przy montażu (otwory 35 i 215 od przodu boku).
@@ -153,7 +172,7 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
     w czole do obudowy; w SOB-1 od wnętrza: Ø5 × 11 pod trzpień, Ø8 × 12 pod kołek. Wszystko w kalkulatorze sklepu.
   - Widoczne łby konfirmatów: 10 → 2 (tylko pod dnem skrzynki WSS, wewnątrz wąskiej szafki).
   - Wymaga zmiany w `wspolne/` (pole `opis` i `do_obudowy` otworów): PR #11.
-- Półka SOP zostaje na Y 2150 (potwierdzone).
+- Półka SOP zostaje na Y 2150 (potwierdzone; 2026-11-16 zmiana na 2104, patrz niżej).
 - Okap bez gniazdka: przewód okapu łączony na stałe z przewodem ze ściany (ZA), złączką w puszce wewnątrz SO nad półką SOP.
   Instrukcja okapu: przy podłączeniu bez dostępnej wtyczki obwód musi mieć wyłącznik dwubiegunowy (odcięcie L i N);
   sprawdzić w rozdzielnicy (np. osobny wyłącznik dwubiegunowy albo różnicówka na tym obwodzie).
@@ -176,3 +195,4 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
 - 2026-11-15: P3 zostaje na styk z P1 (bez luzu; ostateczne). Luz na ścianie głównej tylko 2 przy ściance (WS).
 - 2026-11-15: wstępna wycena meble.pl (`zamowienie/wycena.md`); rowki LED frezuje użytkownik (meble.pl nie zrobi 18 mm).
 - 2026-11-16: dno szafki okapowej to kołnierz okapu 551 × 290 (rysunek techniczny DUO 55), bez deski/maskownicy; od przodu pod F1 widać tylko krawędź kołnierza cofniętą o 18.
+- 2026-11-16: redukcja 150/125 w wąskiej szafce za kolanem 90° Ø150; półka SOD nad okapem, SOP na 2104; korpus okapu wg rysunku.

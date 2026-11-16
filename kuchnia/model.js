@@ -39,12 +39,18 @@ var LUZP=2;            /* ZAŁOŻENIE: luz wąskiej szafki do ścianki */
 var XWE=A-LUZP;        /* prawy bok wąskiej szafki: 3206 (szerokość 274) */
 var ZRU=RU2+RU/2;      /* oś rury okapu od ściany głównej: 97 */
 var YRU=YS-RU3-RU/2;   /* oś rury okapu: 2577 */
-var YSK=YS-RU3-RU-10;  /* góra dna skrzynki na rurę (10 pod rurą): 2502 */
-var ZWY=GK-250+93+75;  /* ZAŁOŻENIE: oś wylotu okapu od ściany głównej (korpus okapu dosunięty do przodu): 218 */
+var YSK=YRU-75-10;     /* góra dna skrzynki na rurę (10 pod końcem Ø150 redukcji; 2026-11-16: było 2502): 2492 */
+var OKW=513, OKG=253, OKH=265;  /* korpus okapu DUO 55 (rysunek techniczny) */
+var OKZ=GK-(290-OKG)/2-OKG;     /* tył korpusu: kołnierz 290 wystaje po 18,5 z przodu i z tyłu (2026-11-16): 28,5 */
+var ZWY=OKZ+94+75;     /* oś wylotu Ø150 (94 od tyłu korpusu do krawędzi wylotu): 197,5 (wcześniej 218) */
+var YOK=YP+OKH;        /* góra korpusu okapu: 1776 */
 var ZPI=ZRU+12.5;      /* oś pionu Ø150 (redukcja mimośrodowa: +12,5 od osi Ø125): 109,5 */
-var YRD=2300;          /* ZAŁOŻENIE: dół redukcji 150/125; kolano 90° R ok. 1D zajmuje ok. 165 pod osią poziomą (2026-11-15: było 2400) */
-var ZSK=RU2+RU+10;     /* tył zaślepki skrzynki (10 przed rurą): 172 */
-var YSOP=2150;         /* ZAŁOŻENIE: półka nad okapem (dół), pod nią redukcja i przesunięcie rury do tyłu */
+var XRD=XWS+P+10;      /* redukcja mimośrodowa 150/125 w wąskiej szafce, za kolanem 90° Ø150 (2026-11-16): od 2960 */
+var LRD=120;           /* ZAŁOŻENIE: długość redukcji */
+var ZSK=195;           /* tył zaślepki skrzynki (10 przed końcem Ø150 redukcji, oś z 109,5; 2026-11-16: było 172) */
+var YSOD=YOK+10;       /* półka wkładana tuż nad okapem (dół), 10 zapasu (2026-11-16): 1786 */
+var YSOP=YSOD+P+300;   /* półka stała nad okapem (dół): przegroda ok. 300 nad SOD (2026-11-16; było 2150): 2104 */
+var YZ2=1950;          /* środkowy zawias F1: między SOD i SOP (prowadnik nie trafia w półkę) */
 var NPW=2;             /* półki w wąskiej szafce (równe przegrody; 2026-11-14: 3 → 2) */
 var LP1=J-1;           /* półka P1 wzdłuż ściany lewej: 804 (2026-11-15: luz 2 → 1) */
 var GP1=400, GP3=200;  /* głębokości półek */
@@ -59,10 +65,10 @@ var WT=80;             /* ZAŁOŻENIE: część trzpienia w półce (do sprawdze
 var BOK=0xcdbb95, TYL=0x9c8b6e, POL=0xe6d7b8, FR=0x2f9e8f, IST=0x8a6f55, LED=0xffd66b, RURA=0xb8bcc2;
 
 /* zawiasy: środek puszki 22,5 od krawędzi frontu, skrajne 100 od końców, pozostałe równo */
-function zawiasy(nazwa,fx,fy,fw,fh,strona,n,zt){
+function zawiasy(nazwa,fx,fy,fw,fh,strona,n,zt,ys){
   var out=[],x=(strona==='lewa')?fx+5:fx+fw-40;
   for(var i=0;i<n;i++){
-    var cy=fy+100+i*(fh-200)/(n-1);
+    var cy=ys?ys[i]:fy+100+i*(fh-200)/(n-1);
     out.push({n:'Zawias: '+nazwa+' ('+strona+')',layer:'Zawiasy',x:x,y:cy-17.5,z:zt+1,w:35,h:35,d:11,c:0x2b3034});
   }
   return out;
@@ -118,21 +124,25 @@ add([
   {n:'SOB-2: SO: bok prawy',layer:'Ścianki boczne',x:XWS-P,y:YP,z:0,w:P,h:YT-YP,d:GK,c:BOK},
   {n:'SOT: SO: tył',layer:'Ścianki tylne',x:XSO+P,y:YP,z:0,w:SOW-2*P,h:YT-YP,d:P,c:TYL},
   {n:'SOW: SO: wieniec górny',layer:'Półki',x:XSO+P,y:YT-P,z:P,w:SOW-2*P,h:P,d:GK-P,c:POL},
+  {n:'SOD: SO: półka wkładana tuż nad okapem, na podpórkach, z wycięciem od przodu na wylot (wkładana po montażu okapu)',layer:'Półki',x:XSO+P+1,y:YSOD,z:P,w:SOW-2*P-2,h:P,d:GK-P-2,c:POL},
   {n:'SOP: SO: półka nad okapem (otwór na rurę)',layer:'Półki',x:XSO+P,y:YSOP,z:P,w:SOW-2*P,h:P,d:GK-P,c:POL},
   {n:'F1: Front szafki okapowej (549 × 1164)',layer:'Fronty',x:XSO+1.5,y:YP+1.5,z:GK,w:SOW-3,h:YT-YP-3,d:P,c:FR,o:0.55}
 ]);
-add(zawiasy('F1',XSO+1.5,YP+1.5,SOW-3,YT-YP-3,'prawa',3,GK));
+add(zawiasy('F1',XSO+1.5,YP+1.5,SOW-3,YT-YP-3,'prawa',3,GK,[YP+1.5+100,YZ2,YT-1.5-100]));
 
-/* okap DUO 55: szkło pod korpusem szafki, korpus 514 × 250 × 263 dosunięty do przodu (ZAŁOŻENIE) */
+/* okap DUO 55: kołnierz 551 × 290 pod korpusem szafki (dno), korpus 513 × 253 × 265 na środku kołnierza (2026-11-16) */
+var YKL=YRU-150;       /* początek kolana 90° Ø150 (R ok. 1D): 2427 */
+var YPR=YOK+60+212;    /* koniec przesunięcia 2 × 45° Ø150 (R 150: 88 w bok, ok. 212 w górę): 2048 */
 add([
   {n:'Okap DUO 55: kołnierz ze szkłem 551 × 290 (dno szafki, widoczny od spodu)',layer:'Okap',x:XH-275.5,y:YP-4,z:GK-290,w:551,h:4,d:290,c:0x26282b},
-  {n:'Okap DUO 55: korpus 514 × 250 × 263',layer:'Okap',x:XH-257,y:YP,z:GK-250,w:514,h:263,d:250,c:0x6f7377},
-  {t:'cyl3',n:'Wylot okapu Ø150 + łącznik, rura spiro Ø150',layer:'Rura okapu',ax:'y',px:XH,py:YP+263+60,pz:ZWY,r:75,len:120,c:RURA},
-  {t:'cyl3',n:'Przesunięcie do tyłu: 2 kolana 45° Ø150 (schemat), pod półką SOP',layer:'Rura okapu',ax:'z',px:XH,py:YP+263+230,pz:(ZWY+ZPI)/2,r:75,len:ZWY-ZPI+150,c:RURA},
-  {t:'cyl3',n:'Rura spiro Ø150: pion przy ścianie (z matą akustyczną)',layer:'Rura okapu',ax:'y',px:XH,py:(YP+263+230+YRD)/2,pz:ZPI,r:75,len:YRD-(YP+263+230),c:RURA},
-  {t:'cyl3',n:'Redukcja mimośrodowa 150/125 (spiro, uszczelka), płaską stroną do ściany głównej',layer:'Rura okapu',ax:'y',px:XH,py:YRD+50,pz:ZRU+6,r:69,len:100,c:RURA},
-  {t:'cyl3',n:'Rura spiro Ø125: kolano 90° tłoczone pod sufitem',layer:'Rura okapu',ax:'y',px:XH,py:(YRD+100+YRU)/2,pz:ZRU,r:62.5,len:YRU-YRD-100,c:RURA},
-  {t:'cyl3',n:'Rura Ø125 spiro: poziomo do ścianki, przez SOB-2, WSB-1, WSB-2',layer:'Rura okapu',ax:'x',px:(XH+A)/2,py:YRU,pz:ZRU,r:62.5,len:A-XH,c:RURA}
+  {n:'Okap DUO 55: korpus 513 × 253 × 265',layer:'Okap',x:XH-OKW/2,y:YP,z:OKZ,w:OKW,h:OKH,d:OKG,c:0x6f7377},
+  {t:'cyl3',n:'Wylot okapu Ø150 + łącznik spiro',layer:'Rura okapu',ax:'y',px:XH,py:YOK+30,pz:ZWY,r:75,len:60,c:RURA},
+  {t:'cyl3',n:'Przesunięcie do tyłu: 2 kolana 45° Ø150 (schemat), między SOD i SOP',layer:'Rura okapu',ax:'z',px:XH,py:(YOK+60+YPR)/2,pz:(ZWY+ZPI)/2,r:75,len:ZWY-ZPI+150,c:RURA},
+  {t:'cyl3',n:'Rura spiro Ø150: pion przy ścianie przez SOP (z matą akustyczną)',layer:'Rura okapu',ax:'y',px:XH,py:(YPR+YKL)/2,pz:ZPI,r:75,len:YKL-YPR,c:RURA},
+  {t:'cyl3',n:'Kolano 90° Ø150 tłoczone pod sufitem (schemat)',layer:'Rura okapu',ax:'y',px:XH,py:(YKL+YRU)/2,pz:ZPI,r:75,len:YRU-YKL,c:RURA},
+  {t:'cyl3',n:'Rura spiro Ø150: poziomo przez SOB-2 i WSB-1 (otwory Ø160)',layer:'Rura okapu',ax:'x',px:(XH+XRD)/2,py:YRU,pz:ZPI,r:75,len:XRD-XH,c:RURA},
+  {t:'cyl3',n:'Redukcja mimośrodowa 150/125 (spiro, uszczelka), płaską stroną do ściany głównej, w wąskiej szafce',layer:'Rura okapu',ax:'x',px:XRD+LRD/2,py:YRU,pz:ZRU+6,r:69,len:LRD,c:RURA},
+  {t:'cyl3',n:'Rura Ø125 spiro: przez WSB-2 (otwór Ø140) do rury w ściance',layer:'Rura okapu',ax:'x',px:(XRD+LRD+A)/2,py:YRU,pz:ZRU,r:62.5,len:A-XRD-LRD,c:RURA}
 ]);
 
 /* ---- wąska szafka WS: bez frontu, dno, wieniec, 3 półki, skrzynka na rurę cofnięta (płytka półka przed nią) ---- */

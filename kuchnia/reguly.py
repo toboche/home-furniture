@@ -26,7 +26,7 @@ X_BOK_CZYSTY = 2398       # wewnętrzne lico SOB-1 (model.js: XSO + P)
 
 
 def pomijaj_polaczenie(face, edge):
-    return face == BOK_CZYSTY or edge == BOK_CZYSTY
+    return face == BOK_CZYSTY or edge == BOK_CZYSTY or 'SOD' in (face, edge)
 
 
 def rozstaw(face, edge, domyslny):
@@ -43,20 +43,29 @@ PILOT_DEPTH = 5
 X_OKAP = 2656        # oś płyty i okapu (model.js: XH)
 Y_RURA = 2577        # oś rury okapu (YRU)
 Z_RURA = 97          # oś rury okapu od ściany głównej (ZRU)
-Z_PION = 109.5       # oś pionu Ø150 w SO (ZPI)
+Z_PION = 109.5       # oś pionu i poziomu Ø150 w SO (ZPI)
+Y_SOD = 1786         # dół półki wkładanej SOD (model.js: YSOD)
+Y_SOP = 2104         # dół półki SOP (model.js: YSOP)
 
 
 def dodatkowe_otwory(P, parts, loc):
-    """otwory Ø140 pod rurę Ø125 (pierścień gumowy) w bokach SOB-2, WSB-1, WSB-2 i Ø170 pod pion Ø150 w półce SOP:
-    sklep wierci tylko środek, otwór wycina użytkownik otwornicą"""
+    """otwory pod rurę (pierścień gumowy): Ø160 pod Ø150 w SOB-2 i WSB-1 (góra otworu 3 pod wieńcem), Ø170 w półce SOP, Ø140 pod Ø125 w WSB-2
+    (redukcja w wąskiej szafce, 2026-11-16): sklep wierci tylko środek, otwór wycina użytkownik otwornicą.
+    Podpórki Ø5 × 10 pod wkładaną półkę SOD w SOB-1 i SOB-2."""
     def pilot(code, side, pos):
         p = P[code]
         p['holes'].append(dict(kind='FACE', side=side, u=loc(p, p['u'], pos[p['u']]), v=loc(p, p['v'], pos[p['v']]),
-                               d=PILOT_D, depth=PILOT_DEPTH, partner='środek otworu pod rurę okapu (Ø140 w bokach, Ø170 w SOP)',
+                               d=PILOT_D, depth=PILOT_DEPTH, partner='środek otworu pod rurę okapu (Ø160 w SOB-2, WSB-1; Ø170 w SOP; Ø140 w WSB-2)',
                                axis_n='-', pin=False, pilot=True))
-    for code in ('SOB-2', 'WSB-1', 'WSB-2'):
+    for code, z in (('SOB-2', Z_PION), ('WSB-1', Z_PION), ('WSB-2', Z_RURA)):
         if code in P:
-            pilot(code, 'A', {'y': Y_RURA, 'z': Z_RURA})
+            pilot(code, 'A', {'y': Y_RURA, 'z': z})
+    for code, side in (('SOB-1', 'A'), ('SOB-2', 'B')):      # lico od wnętrza SO
+        q = P[code]
+        for z in (50, 250):
+            q['holes'].append(dict(kind='FACE', side=side, u=loc(q, q['u'], {'y': Y_SOD - 5, 'z': z}[q['u']]),
+                                   v=loc(q, q['v'], {'y': Y_SOD - 5, 'z': z}[q['v']]), d=5, depth=10,
+                                   partner='SOD', axis_n='-', pin=True))
     pilot('SOP', 'A', {'x': X_OKAP, 'z': Z_PION})
 
     # --- SOB-1: złącza mimośrodowe (np. Häfele Minifix 15) + kołki Ø8 x 30 ---
@@ -91,9 +100,9 @@ def dodatkowe_otwory(P, parts, loc):
             edge(q, along_ax, a, 8, 20, BOK_CZYSTY)
             face(bok, 'A', {mid_ax: mid, along_ax: a}, 8, 12, code, 'Otwór Ø8 x 12 pod kołek (do %s)' % code)
 
-    zlacze('SOT', 'A', 'z', 9, 'y', (1580, 2095, 2610), (1830, 2350))      # tył: obudowy od wnętrza (+z)
+    zlacze('SOT', 'A', 'z', 9, 'y', (1580, 2040, 2610), (1830, 2350))      # tył: obudowy od wnętrza (+z)
     zlacze('SOW', 'B', 'y', 2669, 'z', (159,), (60, 260))                   # wieniec: obudowy od spodu
-    zlacze('SOP', 'A', 'y', 2159, 'z', (159,), (60, 260))                   # półka: obudowy od góry
+    zlacze('SOP', 'A', 'y', Y_SOP + 9, 'z', (159,), (60, 260))                   # półka: obudowy od góry
 
 
 ZAWIASY_BEZ_PROWADNIKA_W_SCIANCE = set()
@@ -117,14 +126,16 @@ ZAW = 'PUSZKA Ø35, ŚRODEK 22,5 MM OD KRAWĘDZI'
 # Opisy formatek. Wymiary i ilości są liczone z modelu (model.js).
 FORMATKI = [
     F('SOB', 'Szafka okapowa: boki (bez dna, okap między bokami)', okleina='1DL',
-      nawierty='SOB-1: TRZPIENIE MIMOŚRODÓW + KOŁKI (bez otworów przelotowych); SOB-2: KONFIRMATY',
-      uwagi='SOB-1 widoczny, czyste lico zewnętrzne; SOB-2: środek otworu Ø140 pod rurę; okap przykręcany 4 wkrętami 3,5 x 16 (81 nad dołem, 35 i 215 od przodu)'),
+      nawierty='SOB-1: TRZPIENIE MIMOŚRODÓW + KOŁKI (bez otworów przelotowych); SOB-2: KONFIRMATY; OBA: 2 PODPÓRKI Ø5 x 10 POD SOD',
+      uwagi='SOB-1 widoczny, czyste lico zewnętrzne; SOB-2: środek otworu Ø160 pod rurę Ø150; okap przykręcany 4 wkrętami 3,5 x 16 (81 nad dołem, 35 i 215 od przodu)'),
     F('SOT', 'Szafka okapowa: tył', okleina='', nawierty='KONFIRMATY + MIMOŚRODY I KOŁKI (do SOB-1)'),
     F('SOW', 'Szafka okapowa: wieniec górny', okleina='1DL', nawierty='KONFIRMATY + MIMOŚRÓD I KOŁKI (do SOB-1)'),
+    F('SOD', 'Szafka okapowa: półka wkładana tuż nad okapem (na 4 podpórkach Ø5)', okleina='1DL', nawierty='BRAK',
+      uwagi='wkładana po montażu okapu; wycięcie od przodu na wylot Ø150 (szer. ok. 170, do ok. 112 od tyłu, oś x na środku) wycina użytkownik'),
     F('SOP', 'Szafka okapowa: półka nad okapem', okleina='1DL', nawierty='KONFIRMATY + MIMOŚRÓD I KOŁKI (do SOB-1)',
       uwagi='środek otworu Ø170 pod pion Ø150 (oś 109,5 od ściany)'),
     F('WSB', 'Wąska szafka: boki', okleina='1DL', nawierty='KONFIRMATY',
-      uwagi='środki otworów Ø140 pod rurę w obu bokach'),
+      uwagi='środki otworów pod rurę: WSB-1 Ø160 (pod Ø150), WSB-2 Ø140 (pod Ø125)'),
     F('WST', 'Wąska szafka: tył', okleina='', nawierty='KONFIRMATY'),
     F('WSD', 'Wąska szafka: dno', okleina='1DL', nawierty='KONFIRMATY'),
     F('WSW', 'Wąska szafka: wieniec górny', okleina='1DL', nawierty='KONFIRMATY'),

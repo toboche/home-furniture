@@ -1,18 +1,18 @@
 {
  "formatki": {
-  "pozycje": 14,
-  "sztuki": 17,
-  "m2": 4.3
+  "pozycje": 15,
+  "sztuki": 18,
+  "m2": 4.45
  },
  "kalkulator": {
   "typy_formatek": 12,
-  "wiersze": 145
+  "wiersze": 149
  },
  "laczniki": {
   "konfirmaty": 60,
   "kolki": 6,
   "otwory_pod_kolki": 6,
-  "otwory_nieprzelotowe": 26,
+  "otwory_nieprzelotowe": 30,
   "puszki_zawiasow": 3
  },
  "zaslepki": {
@@ -22,12 +22,12 @@
    "WSS": 2
   },
   "widoczne_miejsca": [
-   "WSS → WSZ (x 3000, y 2478, z 181)",
-   "WSS → WSZ (x 3138, y 2478, z 181)"
+   "WSS → WSZ (x 3000, y 2468, z 204)",
+   "WSS → WSZ (x 3138, y 2468, z 204)"
   ]
  },
  "polaczenia": 26,
- "otwory_lacznie": 157,
+ "otwory_lacznie": 161,
  "kolizje_otworow": 0,
  "strony_arkusza": 12
 }

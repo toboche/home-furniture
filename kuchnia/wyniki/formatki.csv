@@ -1,14 +1,15 @@
 ﻿KOD;NAZWA;DL;SZ;SZT;OKLEINA;NAWIERTY;UWAGI
-SOB;Szafka okapowa: boki (bez dna, okap między bokami);1167;300;2;1DL;"SOB-1: TRZPIENIE MIMOŚRODÓW + KOŁKI (bez otworów przelotowych); SOB-2: KONFIRMATY";"SOB-1 widoczny, czyste lico zewnętrzne; SOB-2: środek otworu Ø140 pod rurę; okap przykręcany 4 wkrętami 3,5 x 16 (81 nad dołem, 35 i 215 od przodu)"
+SOB;Szafka okapowa: boki (bez dna, okap między bokami);1167;300;2;1DL;"SOB-1: TRZPIENIE MIMOŚRODÓW + KOŁKI (bez otworów przelotowych); SOB-2: KONFIRMATY; OBA: 2 PODPÓRKI Ø5 x 10 POD SOD";"SOB-1 widoczny, czyste lico zewnętrzne; SOB-2: środek otworu Ø160 pod rurę Ø150; okap przykręcany 4 wkrętami 3,5 x 16 (81 nad dołem, 35 i 215 od przodu)"
 SOT;Szafka okapowa: tył;1167;516;1;;KONFIRMATY + MIMOŚRODY I KOŁKI (do SOB-1);
 SOW;Szafka okapowa: wieniec górny;516;282;1;1DL;KONFIRMATY + MIMOŚRÓD I KOŁKI (do SOB-1);
+SOD;Szafka okapowa: półka wkładana tuż nad okapem (na 4 podpórkach Ø5);514;280;1;1DL;BRAK;"wkładana po montażu okapu; wycięcie od przodu na wylot Ø150 (szer. ok. 170, do ok. 112 od tyłu, oś x na środku) wycina użytkownik"
 SOP;Szafka okapowa: półka nad okapem;516;282;1;1DL;KONFIRMATY + MIMOŚRÓD I KOŁKI (do SOB-1);środek otworu Ø170 pod pion Ø150 (oś 109,5 od ściany)
-WSB;Wąska szafka: boki;1167;300;2;1DL;KONFIRMATY;środki otworów Ø140 pod rurę w obu bokach
+WSB;Wąska szafka: boki;1167;300;2;1DL;KONFIRMATY;środki otworów pod rurę: WSB-1 Ø160 (pod Ø150), WSB-2 Ø140 (pod Ø125)
 WST;Wąska szafka: tył;1167;238;1;;KONFIRMATY;
 WSD;Wąska szafka: dno;282;238;1;1DL;KONFIRMATY;
 WSW;Wąska szafka: wieniec górny;282;238;1;1DL;KONFIRMATY;
 WSS;Wąska szafka: dno skrzynki na rurę (płytka półka przed zaślepką);282;238;1;1DL;KONFIRMATY;
-WSZ;Wąska szafka: zaślepka skrzynki na rurę;238;158;1;;KONFIRMATY;"widoczne lico przednie; krawędzie schowane"
+WSZ;Wąska szafka: zaślepka skrzynki na rurę;238;168;1;;KONFIRMATY;"widoczne lico przednie; krawędzie schowane"
 WSP;Wąska szafka: półki stałe;282;238;2;1DL;KONFIRMATY;
 P1;Półka LED: ściana lewa (wnęka);804;400;1;1DL;BRAK (otwory Ø10 pod wsporniki ukryte w krawędziach przy ścianach wierci użytkownik);okleina na długiej krawędzi od strony kuchni (804). rowki 18,2 × 6 pod profil LED w spodzie frezuje użytkownik (meble.pl nie robi wręgów zachodzących na siebie)
 P3;Półka LED: ściana główna;1980;200;1;1DL;BRAK (otwory Ø10 pod wsporniki ukryte w tylnej krawędzi wierci użytkownik);okleina na przedniej krawędzi (1980). rowek 18,2 × 6 pod profil LED w spodzie frezuje użytkownik (meble.pl nie robi wręgów zachodzących na siebie)

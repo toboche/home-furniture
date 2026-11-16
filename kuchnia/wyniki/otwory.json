@@ -54,6 +54,28 @@
 {
 "axis_n": "-",
 "d": 5,
+"depth": 10,
+"kind": "FACE",
+"partner": "SOD",
+"pin": true,
+"side": "A",
+"u": 270,
+"v": 50
+},
+{
+"axis_n": "-",
+"d": 5,
+"depth": 10,
+"kind": "FACE",
+"partner": "SOD",
+"pin": true,
+"side": "A",
+"u": 270,
+"v": 250
+},
+{
+"axis_n": "-",
+"d": 5,
 "depth": 11,
 "kind": "FACE",
 "opis": "Otwór Ø5 x 11 pod trzpień mimośrodu (do SOT)",
@@ -72,7 +94,7 @@
 "partner": "SOT",
 "pin": true,
 "side": "A",
-"u": 584,
+"u": 529,
 "v": 9
 },
 {
@@ -156,7 +178,7 @@
 "partner": "SOP",
 "pin": true,
 "side": "A",
-"u": 648,
+"u": 602,
 "v": 159
 },
 {
@@ -168,7 +190,7 @@
 "partner": "SOP",
 "pin": true,
 "side": "A",
-"u": 648,
+"u": 602,
 "v": 60
 },
 {
@@ -180,7 +202,7 @@
 "partner": "SOP",
 "pin": true,
 "side": "A",
-"u": 648,
+"u": 602,
 "v": 260
 }
 ],
@@ -265,7 +287,7 @@
 "kind": "FACE",
 "partner": "SOP",
 "side": "A",
-"u": 648.0,
+"u": 602.0,
 "v": 68.0
 },
 {
@@ -274,7 +296,7 @@
 "kind": "FACE",
 "partner": "SOP",
 "side": "A",
-"u": 648.0,
+"u": 602.0,
 "v": 250.0
 },
 {
@@ -282,12 +304,34 @@
 "d": 5,
 "depth": 5,
 "kind": "FACE",
-"partner": "środek otworu pod rurę okapu (Ø140 w bokach, Ø170 w SOP)",
+"partner": "środek otworu pod rurę okapu (Ø160 w SOB-2, WSB-1; Ø170 w SOP; Ø140 w WSB-2)",
 "pilot": true,
 "pin": false,
 "side": "A",
 "u": 1066,
-"v": 97
+"v": 109.5
+},
+{
+"axis_n": "-",
+"d": 5,
+"depth": 10,
+"kind": "FACE",
+"partner": "SOD",
+"pin": true,
+"side": "B",
+"u": 270,
+"v": 50
+},
+{
+"axis_n": "-",
+"d": 5,
+"depth": 10,
+"kind": "FACE",
+"partner": "SOD",
+"pin": true,
+"side": "B",
+"u": 270,
+"v": 250
 },
 {
 "axis_n": "-",
@@ -325,7 +369,7 @@
 "pin": false,
 "plate": true,
 "side": "B",
-"u": 567.5,
+"u": 423.0,
 "v": 263
 },
 {
@@ -338,7 +382,7 @@
 "pin": false,
 "plate": true,
 "side": "B",
-"u": 599.5,
+"u": 455.0,
 "v": 263
 },
 {
@@ -462,7 +506,7 @@
 "kind": "FACE",
 "partner": "SOP",
 "side": "B",
-"u": 519.0,
+"u": 565.0,
 "v": 50.0
 },
 {
@@ -471,7 +515,7 @@
 "kind": "FACE",
 "partner": "SOP",
 "side": "B",
-"u": 519.0,
+"u": 565.0,
 "v": 258.0
 },
 {
@@ -480,7 +524,7 @@
 "kind": "FACE",
 "partner": "SOP",
 "side": "B",
-"u": 519.0,
+"u": 565.0,
 "v": 466.0
 },
 {
@@ -516,11 +560,11 @@
 "partner": "SOB-1",
 "pin": true,
 "side": "A",
-"u": 583,
+"u": 638,
 "v": 24
 },
 {
-"along": 583,
+"along": 638,
 "d": 8,
 "depth": 33,
 "do_obudowy": true,
@@ -704,12 +748,33 @@
 "v": "z"
 },
 {
+"DL": 514,
+"SZ": 280,
+"code": "SOD",
+"hi": {
+"x": 2913,
+"y": 1804,
+"z": 298
+},
+"holes": [],
+"lo": {
+"x": 2399,
+"y": 1786,
+"z": 18
+},
+"mod": "SO",
+"rh": false,
+"t": "y",
+"u": "x",
+"v": "z"
+},
+{
 "DL": 516,
 "SZ": 282,
 "code": "SOP",
 "hi": {
 "x": 2914,
-"y": 2168,
+"y": 2122,
 "z": 300
 },
 "holes": [
@@ -768,7 +833,7 @@
 "d": 5,
 "depth": 5,
 "kind": "FACE",
-"partner": "środek otworu pod rurę okapu (Ø140 w bokach, Ø170 w SOP)",
+"partner": "środek otworu pod rurę okapu (Ø160 w SOB-2, WSB-1; Ø170 w SOP; Ø140 w WSB-2)",
 "pilot": true,
 "pin": false,
 "side": "A",
@@ -822,7 +887,7 @@
 ],
 "lo": {
 "x": 2398,
-"y": 2150,
+"y": 2104,
 "z": 18
 },
 "mod": "SO",
@@ -919,7 +984,7 @@
 "kind": "FACE",
 "partner": "WSS",
 "side": "B",
-"u": 982.0,
+"u": 972.0,
 "v": 68.0
 },
 {
@@ -928,7 +993,7 @@
 "kind": "FACE",
 "partner": "WSS",
 "side": "B",
-"u": 982.0,
+"u": 972.0,
 "v": 250.0
 },
 {
@@ -937,8 +1002,8 @@
 "kind": "FACE",
 "partner": "WSZ",
 "side": "B",
-"u": 1041.0,
-"v": 181.0
+"u": 1031.0,
+"v": 204.0
 },
 {
 "axis_n": "x",
@@ -947,7 +1012,7 @@
 "partner": "WSZ",
 "side": "B",
 "u": 1099.0,
-"v": 181.0
+"v": 204.0
 },
 {
 "axis_n": "x",
@@ -955,7 +1020,7 @@
 "kind": "FACE",
 "partner": "WSP-1",
 "side": "B",
-"u": 333.333333,
+"u": 330.0,
 "v": 68.0
 },
 {
@@ -964,7 +1029,7 @@
 "kind": "FACE",
 "partner": "WSP-1",
 "side": "B",
-"u": 333.333333,
+"u": 330.0,
 "v": 250.0
 },
 {
@@ -973,7 +1038,7 @@
 "kind": "FACE",
 "partner": "WSP-2",
 "side": "B",
-"u": 657.666667,
+"u": 651.0,
 "v": 68.0
 },
 {
@@ -982,7 +1047,7 @@
 "kind": "FACE",
 "partner": "WSP-2",
 "side": "B",
-"u": 657.666667,
+"u": 651.0,
 "v": 250.0
 },
 {
@@ -990,12 +1055,12 @@
 "d": 5,
 "depth": 5,
 "kind": "FACE",
-"partner": "środek otworu pod rurę okapu (Ø140 w bokach, Ø170 w SOP)",
+"partner": "środek otworu pod rurę okapu (Ø160 w SOB-2, WSB-1; Ø170 w SOP; Ø140 w WSB-2)",
 "pilot": true,
 "pin": false,
 "side": "A",
 "u": 1066,
-"v": 97
+"v": 109.5
 }
 ],
 "lo": {
@@ -1097,7 +1162,7 @@
 "kind": "FACE",
 "partner": "WSS",
 "side": "A",
-"u": 982.0,
+"u": 972.0,
 "v": 68.0
 },
 {
@@ -1106,7 +1171,7 @@
 "kind": "FACE",
 "partner": "WSS",
 "side": "A",
-"u": 982.0,
+"u": 972.0,
 "v": 250.0
 },
 {
@@ -1115,8 +1180,8 @@
 "kind": "FACE",
 "partner": "WSZ",
 "side": "A",
-"u": 1041.0,
-"v": 181.0
+"u": 1031.0,
+"v": 204.0
 },
 {
 "axis_n": "x",
@@ -1125,7 +1190,7 @@
 "partner": "WSZ",
 "side": "A",
 "u": 1099.0,
-"v": 181.0
+"v": 204.0
 },
 {
 "axis_n": "x",
@@ -1133,7 +1198,7 @@
 "kind": "FACE",
 "partner": "WSP-1",
 "side": "A",
-"u": 333.333333,
+"u": 330.0,
 "v": 68.0
 },
 {
@@ -1142,7 +1207,7 @@
 "kind": "FACE",
 "partner": "WSP-1",
 "side": "A",
-"u": 333.333333,
+"u": 330.0,
 "v": 250.0
 },
 {
@@ -1151,7 +1216,7 @@
 "kind": "FACE",
 "partner": "WSP-2",
 "side": "A",
-"u": 657.666667,
+"u": 651.0,
 "v": 68.0
 },
 {
@@ -1160,7 +1225,7 @@
 "kind": "FACE",
 "partner": "WSP-2",
 "side": "A",
-"u": 657.666667,
+"u": 651.0,
 "v": 250.0
 },
 {
@@ -1168,7 +1233,7 @@
 "d": 5,
 "depth": 5,
 "kind": "FACE",
-"partner": "środek otworu pod rurę okapu (Ø140 w bokach, Ø170 w SOP)",
+"partner": "środek otworu pod rurę okapu (Ø160 w SOB-2, WSB-1; Ø170 w SOP; Ø140 w WSB-2)",
 "pilot": true,
 "pin": false,
 "side": "A",
@@ -1319,7 +1384,7 @@
 "kind": "FACE",
 "partner": "WSS",
 "side": "B",
-"u": 185.0,
+"u": 195.0,
 "v": 50.0
 },
 {
@@ -1328,7 +1393,7 @@
 "kind": "FACE",
 "partner": "WSS",
 "side": "B",
-"u": 185.0,
+"u": 195.0,
 "v": 188.0
 },
 {
@@ -1337,7 +1402,7 @@
 "kind": "FACE",
 "partner": "WSP-1",
 "side": "B",
-"u": 833.666667,
+"u": 837.0,
 "v": 50.0
 },
 {
@@ -1346,7 +1411,7 @@
 "kind": "FACE",
 "partner": "WSP-1",
 "side": "B",
-"u": 833.666667,
+"u": 837.0,
 "v": 188.0
 },
 {
@@ -1355,7 +1420,7 @@
 "kind": "FACE",
 "partner": "WSP-2",
 "side": "B",
-"u": 509.333333,
+"u": 516.0,
 "v": 50.0
 },
 {
@@ -1364,7 +1429,7 @@
 "kind": "FACE",
 "partner": "WSP-2",
 "side": "B",
-"u": 509.333333,
+"u": 516.0,
 "v": 188.0
 }
 ],
@@ -1537,7 +1602,7 @@
 "kind": "FACE",
 "partner": "WSZ",
 "side": "A",
-"u": 163.0,
+"u": 186.0,
 "v": 50.0
 },
 {
@@ -1546,7 +1611,7 @@
 "kind": "FACE",
 "partner": "WSZ",
 "side": "A",
-"u": 163.0,
+"u": 186.0,
 "v": 188.0
 }
 ],
@@ -1567,7 +1632,7 @@
 "code": "WSS",
 "hi": {
 "x": 3188,
-"y": 2502,
+"y": 2492,
 "z": 300
 },
 "holes": [
@@ -1637,7 +1702,7 @@
 "kind": "FACE",
 "partner": "WSZ",
 "side": "B",
-"u": 163.0,
+"u": 186.0,
 "v": 50.0
 },
 {
@@ -1646,13 +1711,13 @@
 "kind": "FACE",
 "partner": "WSZ",
 "side": "B",
-"u": 163.0,
+"u": 186.0,
 "v": 188.0
 }
 ],
 "lo": {
 "x": 2950,
-"y": 2484,
+"y": 2474,
 "z": 18
 },
 "mod": "WS",
@@ -1663,12 +1728,12 @@
 },
 {
 "DL": 238,
-"SZ": 158,
+"SZ": 168,
 "code": "WSZ",
 "hi": {
 "x": 3188,
 "y": 2660,
-"z": 190
+"z": 213
 },
 "holes": [
 {
@@ -1682,7 +1747,7 @@
 "partner": "WSB-1"
 },
 {
-"along": 108.0,
+"along": 118.0,
 "d": 4,
 "depth": 35,
 "edge_coord": 0,
@@ -1702,7 +1767,7 @@
 "partner": "WSB-2"
 },
 {
-"along": 108.0,
+"along": 118.0,
 "d": 4,
 "depth": 35,
 "edge_coord": 238,
@@ -1715,7 +1780,7 @@
 "along": 50.0,
 "d": 4,
 "depth": 35,
-"edge_coord": 158,
+"edge_coord": 168,
 "into": -1,
 "kind": "EDGE",
 "n_axis_is_u": false,
@@ -1725,7 +1790,7 @@
 "along": 188.0,
 "d": 4,
 "depth": 35,
-"edge_coord": 158,
+"edge_coord": 168,
 "into": -1,
 "kind": "EDGE",
 "n_axis_is_u": false,
@@ -1754,8 +1819,8 @@
 ],
 "lo": {
 "x": 2950,
-"y": 2502,
-"z": 172
+"y": 2492,
+"z": 195
 },
 "mod": "WS",
 "rh": true,
@@ -1769,7 +1834,7 @@
 "code": "WSP-1",
 "hi": {
 "x": 3188,
-"y": 1853.333333,
+"y": 1850,
 "z": 300
 },
 "holes": [
@@ -1836,7 +1901,7 @@
 ],
 "lo": {
 "x": 2950,
-"y": 1835.333333,
+"y": 1832,
 "z": 18
 },
 "mod": "WS",
@@ -1851,7 +1916,7 @@
 "code": "WSP-2",
 "hi": {
 "x": 3188,
-"y": 2177.666667,
+"y": 2171,
 "z": 300
 },
 "holes": [
@@ -1918,7 +1983,7 @@
 ],
 "lo": {
 "x": 2950,
-"y": 2159.666667,
+"y": 2153,
 "z": 18
 },
 "mod": "WS",
