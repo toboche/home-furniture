@@ -149,7 +149,8 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
   (dno 10 niżej, zaślepka 23 do przodu). Nad poziomym Ø150 zostaje 8 mm do wieńca SOW: mata akustyczna tylko od spodu
   i z przodu (albo cienka, do 5 mm).
 - Rysunek techniczny DUO 55: korpus 513 × 253 × 265, kołnierz 551 × 290 wystaje po 19 z boków i po 18,5 z przodu i z tyłu
-  (wg użytkownika: kołnierz na środku, nie dosunięty). Oś wylotu z 197,5 (było 218). Grubość kołnierza: ok. 4 (ZAŁOŻENIE).
+  (wg użytkownika: kołnierz na środku, nie dosunięty). Oś wylotu z 197,5 (było 218). Grubość kołnierza: w modelu ok. 4, nie wpływa na zamówienie
+  (okap i tak zwisa o nią poniżej linii półki; wysokość SOD liczona od góry korpusu).
 - Półka SOD tuż nad okapem: 10 nad korpusem okapu (Y 1786–1804), 514 × 280, na 4 podpórkach Ø5 (luz 1 z boków),
   bez konfirmatów. Wkładana na końcu, po montażu okapu i rury: wycięcie od przodu na wylot Ø150 (szer. ok. 170,
   do ok. 112 od tyłu), wycina użytkownik. Krawędzie wycięcia bez okleiny (pytanie: CNC w meble.pl?).
@@ -157,11 +158,20 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
   między nimi (do ok. Y 2048). Środkowy zawias F1 przeniesiony na Y 1950 (prowadnik nie trafia w SOD ani SOP);
   mimośród SOT na Y 2040 (było 2095).
 
+### 2026-11-16: okucia F1, wycięcie SOD, wsporniki
+- F1 (549 × 1164, ok. 7,5 kg, push-to-open, zawiasy po prawej): 3 zawiasy Blum CLIP top 110° BEZ sprężyny, nakładane,
+  puszka na wkręty (70T3550.TL) + 3 prowadniki krzyżakowe 0 mm na wkręty (173L6100); 2 × Blum TIP-ON do drzwi,
+  wersja przedłużona, sprężyna standardowa (956A1004) na adapterze prostym przykręcanym (956A1201) na wewnętrznym licu
+  SOB-1 przy przodzie (wkręty 3,5 × 15, nie przechodzą przez widoczny bok), nad okapem: ok. Y 1850 i ok. Y 2550.
+  Płytka TIP-ON na froncie w komplecie. Z TIP-ON tylko zawiasy bez sprężyny (zalecenie Blum).
+- SOD: wycięcie na wylot wycina użytkownik, krawędzie wycięcia zabezpieczone silikonem.
+- Wsporniki półki: część w półce 80. Rozważany wariant użytkownika: pręty gwintowane M8 osadzone w betonie na kotwie
+  chemicznej zamiast wsporników ukrytych (do decyzji; patrz rozmowa 2026-11-16).
+
 ## Założenia do potwierdzenia
 - Położenie okapu w głąb: korpus dosunięty do przodu (z 50–300), szkło z 10–300. Oś wylotu ok. 218 od ściany głównej.
   Sprawdzić przy montażu (otwory 35 i 215 od przodu boku).
 - Luz 2 mm wąskiej szafki do ścianki.
-- Dobór okuć push-to-open i liczby zawiasów F1 (frontu ok. 7,5 kg).
 
 ### 2026-11-14: bok SOB-1 bez konfirmatów, półka SOP, zasilanie okapu
 - Lewy bok szafki okapowej SOB-1 jest widoczny nad półką P3: ma mieć czyste lico zewnętrzne. Zamiast konfirmatów
@@ -196,3 +206,4 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
 - 2026-11-15: wstępna wycena meble.pl (`zamowienie/wycena.md`); rowki LED frezuje użytkownik (meble.pl nie zrobi 18 mm).
 - 2026-11-16: dno szafki okapowej to kołnierz okapu 551 × 290 (rysunek techniczny DUO 55), bez deski/maskownicy; od przodu pod F1 widać tylko krawędź kołnierza cofniętą o 18.
 - 2026-11-16: redukcja 150/125 w wąskiej szafce za kolanem 90° Ø150; półka SOD nad okapem, SOP na 2104; korpus okapu wg rysunku.
+- 2026-11-16: okucia F1 (CLIP top bez sprężyny + 2 × TIP-ON), wycięcie SOD silikonem, WT 80.
