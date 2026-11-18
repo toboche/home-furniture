@@ -51,4 +51,4 @@ Weryfikacja nawiertów: wszystkie 13 prowadników mieści się w ściankach (y z
 - Półka luzem L1P: 619 × 574 mm, 18 mm, okleina ABS 0,8 na jednej krawędzi 574, BEZ nawiertów.
 
 ## Wentylacja
-- Kanał Ø125 (z 362–640), środek x 1624, y 2418. Kratka kupiona: króciec Ø123 wchodzi do rury Ø125. Otwór w F6 Ø127 (otwornica; założenie), środek 124 od lewej krawędzi F6, 219 od dolnej. Otwór w PT3 Ø130.
+- Kanał Ø125 (z 362–640), środek x 1624, y 2418. Kratka kupiona: króciec Ø123 wchodzi do rury Ø125. Otwór w F6 Ø127 (otwornica; założenie), środek 124 od lewej krawędzi F6, 219 od dolnej. Otwór w PT3 też Ø127 (ta sama otwornica; rura Ø125, luz ok. 1 mm – otwór wiercić wg rzeczywistego położenia rury, nawiert środka ze sklepu jest wg modelu).

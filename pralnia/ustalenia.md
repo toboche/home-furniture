@@ -257,3 +257,4 @@ Sekcja C (zmiany w `wspolne/pipeline/`: kolizje otworów lico A–lico B i kraw�
 - Elementy tyłu kolumny sięgające do pionu zwężone, żeby zostało 3 mm luzu przy U = 1371 (5 mm przy 1373): KT2 909×129 (było 132), KP1 184×129 (zamówienie 200×129), KP3 202×129 (było 132), KP2 202×128 (było 130,5; x 1239,75–1367,75). KT1A/B/C (do 1368) mają 3 mm. Kołki KP/PP (x 1270, 1340) i konfirmaty bez zmian położenia.
 - Q (118) nie zgadza się z U = 1371 i R = 42 (wychodzi 113) – nie wpływa na szafki (gzyms przy maszynach jest pod KP1, z prześwitem 22 mm), do sprawdzenia przy okazji.
 - Wyniki v63: formatki 41 pozycji / 53 sztuki / 15,38 m²; 424 otwory, 58 połączeń, 0 kolizji; 154 konfirmaty.
+- Otwór w PT3 pod rurę: Ø127 (było Ø130), ta sama otwornica co w F6 (decyzja 2026-11-18). Luz do rury Ø125 ok. 1 mm: wiercić wg rzeczywistego położenia rury.

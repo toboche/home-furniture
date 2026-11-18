@@ -83,7 +83,7 @@ def dodatkowe_otwory(P, parts, loc):
     def pilot(code,side,y,other_axis,val):
         p=P[code]; pos={'y':y,other_axis:val}
         p['holes'].append(dict(kind='FACE',side=side,u=loc(p,p['u'],pos[p['u']]),v=loc(p,p['v'],pos[p['v']]),d=PILOT_D,depth=PILOT_DEPTH,partner='środek otworu wycinanego samodzielnie',axis_n='-',pin=False,pilot=True))
-    pilot('PT3','A',2418,'x',1624)   # Ø130 pod kanał, od strony wnętrza (+z); środek otworu w ścianie wg pomiaru 2026-11-18
+    pilot('PT3','A',2418,'x',1624)   # Ø127 pod kanał, od strony wnętrza (+z); środek otworu w ścianie wg pomiaru 2026-11-18
     pilot('L1B2','A',918,'z',242)    # wycięcie 100 x 100 pod gniazdko GN1 (y 868-968, z 192-292 od tyłu), od wnętrza (+x)
 
 
@@ -157,7 +157,7 @@ FORMATKI = [
       okleina='', nawierty='KONFIRMATY'),
     F('PT2', 'Prawa: tył, dół i środek',
       okleina='', nawierty='KONFIRMATY'),
-    F('PT3', 'Prawa: tył, pas (otwór Ø130 pod kanał wierci użytkownik: środek 253 od lewej krawędzi, 234 od górnej)',
+    F('PT3', 'Prawa: tył, pas (otwór Ø127 pod kanał wierci użytkownik: środek 253 od lewej krawędzi, 234 od górnej)',
       okleina='', nawierty='KONFIRMATY + NAWIERT ŚRODKA Ø5 x 5'),
     F('KP1', 'Półka kolumny (tył), poziom 489: z 183 do 367; kołki Ø8 do PP1',
       okleina='', nawierty='KONFIRMATY + KOŁKI Ø8 W CZOLE (do PP1)',

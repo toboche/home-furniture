@@ -20,7 +20,7 @@ KT1B;Kolumna: tył środkowy (gniazdka GP1/GP2), zdejmowany, y 943-1348;405;124;
 KT1C;Kolumna: tył górny, zdejmowany, y 1376-1723;347;124;1;;KONFIRMATY;stoi na kątowniku-podporze, 2 kątowniki za płytą + 2 magnesy Ø10x3 (gniazda wiercisz sam)
 KT2;Kolumna: tył, pas;909;129;1;;KONFIRMATY;
 PT2;Prawa: tył, dół i środek;1236;347;1;;KONFIRMATY;
-PT3;Prawa: tył, pas (otwór Ø130 pod kanał wierci użytkownik: środek 253 od lewej krawędzi, 234 od górnej);909;347;1;;KONFIRMATY + NAWIERT ŚRODKA Ø5 x 5;
+PT3;Prawa: tył, pas (otwór Ø127 pod kanał wierci użytkownik: środek 253 od lewej krawędzi, 234 od górnej);909;347;1;;KONFIRMATY + NAWIERT ŚRODKA Ø5 x 5;
 KP1;"Półka kolumny (tył), poziom 489: z 183 do 367; kołki Ø8 do PP1";184;129;1;;KONFIRMATY + KOŁKI Ø8 W CZOLE (do PP1);"ZAMÓWIĆ 200 x 129 (minimum sklepu 200): naddatek 16 mm po stronie krawędzi 4 (tył, bez otworów) – w kalkulatorze SZER 200 i X otworów w krawędzi 3 + 16 (66 i 150); po dostawie odciąć 16 mm od krawędzi 4"
 KP2;"Półka kolumny (tył), poziomy 922 i 1355: z 183 do 385 (na wciskanych podpórkach; kołki Ø8 do PP2, bez okleiny)";202;128;2;;"KOŁKI Ø8 W CZOLE (do PP2); BEZ KONFIRMATÓW";
 KP3;"Półka kolumny (tył), pas: 1743, 2188,5, 2634 (z 183 do 385; kołki Ø8 do PP3)";202;129;3;;KONFIRMATY + KOŁKI Ø8 W CZOLE (do PP3);

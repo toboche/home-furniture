@@ -14,10 +14,31 @@ Kontrola automatyczna: 424 otwory, 58 połączeń, 0 kolizji otworów; 154 konfi
 3. Montaż prawego dołu: skręcony na podłodze i wsunięty w całości (konfirmaty PP1 → PB2/PT2 od spodu). Prześwit nad gzymsem 22 mm.
 4. Odkurzacz bezprzewodowy w L1: mocowanie (bez UTRUSTA). Wysokość i podparcie L1P.
 
-## Pomiary weryfikacyjne
-- V; A i G w kilku punktach; J w kilku punktach (także nad otworem wentylacyjnym).
-- GN1 (środek), GN3/GN4 i wysunięcie wtyczek; zawór ZW (wysięg); GP1/GP2.
-- Pion ścian i poziom podłogi; listwy przypodłogowe; droga transportu (L1B1/L1B2 1743×655).
+## Pomiary kontrolne (czy zabudowa się zmieści) – lista z 2026-11-18
+Mierzyć w mm, w kilku miejscach; liczy się najgorszy wynik (najmniejsza szerokość, najniższy sufit, najbardziej wystający punkt).
+| KOD | CO I GDZIE | MODEL | DOBRY WYNIK |
+|---|---|---|---|
+| A | lewa ↔ prawa ściana: wys. ok. 0,1 / 1,0 / 1,7 / 2,6 m, przy tylnej ścianie i ok. 0,65 m od niej | 1739 | ≥ 1735 (1733–1734: na styk; < 1733: do zmiany) |
+| B | lewa ściana → lewy bok maszyn (najbardziej wystający punkt) | 618 | ≥ 616 |
+| BP | prawa ściana → prawy bok maszyn (najbardziej wystający punkt) | 523 | ≥ 519 |
+| C | szerokość maszyn w najszerszym miejscu | 598 | ≤ 604 |
+| U | lewa ściana → lewy bok pionu | 1371 | ≥ 1369 (zmierzone 1371–1373: OK) |
+| GZ1 | lewa ściana → lewy bok gzymsu na prawej ścianie | 1666 | ≥ 1665 |
+| J | sufit: nad całą zabudową i ok. 0,5 m przed frontami | 2661 | ≥ 2655 |
+| H | najwyższy punkt suszarki (z zestawem łączącym) | 1713 | ≤ 1738 |
+| X | najwyższy punkt gzymsu na pionie | 467 | ≤ 486 (zmierzone 467: OK) |
+| GZ3 | najwyższy punkt gzymsu na prawej ścianie | 466 | ≤ 486 |
+| PD | różnica poziomu podłogi pod L1 (x 0–0,62 m) i pod prawym dołem (x 1,22–1,74 m) | 0 | ≤ 3 (podkładki) |
+| V | tylna ściana → przód pionu, wys. 0,5 / 1,5 / 2,5 m | 362 | ≤ 365 |
+| GZ2 | tylna ściana → przód gzymsu na pionie | 435 | ≤ 438 |
+| TS | tylna ściana za L1/L2 i nad maszynami: odchyłka od płaszczyzny | 0 | ≤ 3 |
+| E | tylna ściana → przód maszyn (drzwiczki) | 658 | ≤ 658 (więcej: maszyny wystają przed fronty) |
+| GN1 | gniazdko w L1: krawędzie od podłogi / od tylnej ściany | 878–958 / 202–282 | dół ≥ 873, góra ≤ 963, tył ≥ 197, przód ≤ 287 |
+| GN3 | gniazdko przy L1: tylna krawędź od tylnej ściany | 665 | ≥ 660 |
+| ZW | zawór z pokrętłem: wysięg od tylnej ściany; wysokość | 160; 777–837 | wysięg ≤ 162; wysokość w 515–910 |
+| GP | gniazdka za maszynami z wtyczkami: wysięg; wysokość | 60; 977–1037 | wysięg ≤ 162; wysokość w 948–1343 |
+| WN | środek otworu wentylacyjnego: od prawej ściany / od sufitu | 115 / 243 | ± 2 (zmierzone: OK) |
+Transport: największe płyty L1B1/L1B2 1743 × 655 – drzwi 805 × 2016 OK; sprawdzić korytarz i zakręty.
 
 ## Uwagi konstrukcyjne (stałe)
 - Moduły lewy, wnęka i kolumna stykają się (0 mm), bez dodatkowych luzów: składać na sucho przed dokręceniem.
