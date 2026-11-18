@@ -237,6 +237,12 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
 - 2026-11-18: wymiary producenta (513 × 253) obejmują nity na wszystkich ścianach korpusu; 516 w świetle szafki
   daje 1,5 luzu do nitów z każdej strony (wymóg producenta A + 2). Nawierty okapu liczone od lica przodu korpusu.
 
+### 2026-11-18: weryfikacja projektu (`weryfikacja.md`)
+- Profil LED przy słupku zaczyna się 13 od ściany lewej (płytki wystają do 12; kołnierz profilu wchodził w płytki);
+  rowek dalej przelotowy od ściany (wejście kabla). Płytki w modelu 12.
+- SOD: podcięcie ok. 25 × 25 w tylnym prawym narożniku na przewód okapu (z puszki nad SOP do okapu).
+- Zamówienie dopiero po pomiarach z arkusza weryfikacyjnego (zmierzone 7 z 31 pozycji).
+
 ## Do zmierzenia przy pomiarach weryfikacyjnych w mieszkaniu
 - [ZMIERZONE 2026-11-18: 9–12, SO głębsza do 304] O ile płytki wystają przed ścianę nad nimi.
 
@@ -285,3 +291,4 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
 - 2026-11-16: styk P3/P1 na łącznikach od spodu zamiast kołków; do zmierzenia: występ płytek.
 - 2026-11-18: audyt v1: poprawki bezsporne (P1 bez prętów od ściany głównej, SOP, SOD, WSZ, okleina P1/P3, przewód okapu, mocowanie do ściany).
 - 2026-11-18: zawiasy F1 nad okapem (1850, 2210, 2576,5), 1 TIP-ON, WSZ na kołkach i magnesach, SO 304, redukcja w rurze ze ścianki, wycięcie U w WSB-2.
+- 2026-11-18: weryfikacja projektu; profil LED przy słupku od 13, podcięcie w SOD na przewód.

@@ -20,6 +20,7 @@ var J=805;             /* wnęka: narożnik → bok słupka */
 var K=629;             /* głębokość blatu */
 var L=657;             /* głębokość ścianki */
 var M=1169;            /* góra płytek → sufit */
+var PLW=12;            /* płytki wystają przed ścianę 9–12 (zmierzone 2026-11-18): w modelu 12 */
 var ZA1=356, ZA2=487;  /* przewód okapu: od ścianki, od sufitu */
 var RU=130, RU2=32, RU3=38;      /* rura okapu w ściance: średnica zewnętrzna, od ściany głównej, od sufitu */
 var KR=130, KR2=323, KR3=175;    /* otwór wentylacji grawitacyjnej w ściance */
@@ -90,8 +91,8 @@ add([
   {n:'Blat we wnęce (istniejący)',layer:'Kuchnia istniejąca',x:0,y:C-38,z:K,w:I,h:38,d:J-K,c:0xe7e1d6},
   {n:'Szafki dolne (istniejące)',layer:'Kuchnia istniejąca',x:I,y:0,z:0,w:A-I,h:C-38,d:K-20,c:IST,o:0.5},
   {n:'Szafki dolne we wnęce (istniejące)',layer:'Kuchnia istniejąca',x:0,y:0,z:0,w:I,h:C-38,d:J-20,c:IST,o:0.5},
-  {n:'Pas płytek (istniejący)',layer:'Kuchnia istniejąca',x:I,y:C,z:0,w:A-I,h:D,d:8,c:0xf2f0ea},
-  {n:'Pas płytek we wnęce (istniejący)',layer:'Kuchnia istniejąca',x:0,y:C,z:0,w:8,h:D,d:J,c:0xf2f0ea},
+  {n:'Pas płytek (istniejący, wystaje 9–12)',layer:'Kuchnia istniejąca',x:I,y:C,z:0,w:A-I,h:D,d:PLW,c:0xf2f0ea},
+  {n:'Pas płytek we wnęce (istniejący, wystaje 9–12)',layer:'Kuchnia istniejąca',x:0,y:C,z:0,w:PLW,h:D,d:J,c:0xf2f0ea},
   {n:'Szafki górne nad wnęką (istniejące)',layer:'Kuchnia istniejąca',x:0,y:C+H,z:0,w:I,h:YS-C-H,d:J,c:IST,o:0.5},
   {n:'Słupek z piekarnikiem (istniejący, szerokość umowna)',layer:'Kuchnia istniejąca',x:0,y:0,z:J,w:I,h:YS,d:600,c:IST,o:0.5},
   {n:'Płyta grzewcza (istniejąca)',layer:'Kuchnia istniejąca',x:A-E-F,y:C,z:30,w:F,h:6,d:520,c:0x1d1d1f},
@@ -106,10 +107,10 @@ add([
   {n:'P1: Półka LED, ściana lewa (804 × 400)',layer:'Półka LED',x:0,y:YP,z:0,w:GP1,h:PP,d:LP1,c:POL},
   {n:'P3: Półka LED, ściana główna (1980 × 200)',layer:'Półka LED',x:GP1,y:YP,z:0,w:XSO-GP1,h:PP,d:GP3,c:POL},
   {n:'Profil LED wpuszczany pod P1, wzdłuż przodu (rowek 18,2 × 6)',layer:'LED',x:GP1-LRO-LRW,y:YP,z:GP3-LRO-LRW,w:LRW,h:LRG,d:LP1-LRO-(GP3-LRO-LRW),c:LED},
-  {n:'Profil LED wpuszczany pod P1 przy słupku (od kabla w ścianie lewej)',layer:'LED',x:0,y:YP,z:LP1-LRO-LRW,w:GP1-LRO,h:LRG,d:LRW,c:LED},
+  {n:'Profil LED wpuszczany pod P1 przy słupku (od kabla w ścianie lewej; zaczyna się za płytkami)',layer:'LED',x:PLW+1,y:YP,z:LP1-LRO-LRW,w:GP1-LRO-PLW-1,h:LRG,d:LRW,c:LED},
   {n:'Profil LED wpuszczany pod P3 (rowek 18,2 × 6)',layer:'LED',x:GP1-LRO-LRW,y:YP,z:GP3-LRO-LRW,w:XSO-(GP1-LRO-LRW)-20,h:LRG,d:LRW,c:LED},
   {n:'Kołnierz profilu LED pod P1, wzdłuż przodu',layer:'LED',x:GP1-LRA-LKW/2,y:YP-LKH,z:GP3-LRA-LKW/2,w:LKW,h:LKH,d:ZLS-(GP3-LRA)+LKW,c:LED},
-  {n:'Kołnierz profilu LED pod P1 przy słupku',layer:'LED',x:0,y:YP-LKH,z:ZLS-LKW/2,w:GP1-LRA-LKW/2,h:LKH,d:LKW,c:LED},
+  {n:'Kołnierz profilu LED pod P1 przy słupku',layer:'LED',x:PLW+1,y:YP-LKH,z:ZLS-LKW/2,w:GP1-LRA-LKW/2-PLW-1,h:LKH,d:LKW,c:LED},
   {n:'Kołnierz profilu LED pod P3',layer:'LED',x:GP1-LRA-LKW/2,y:YP-LKH,z:GP3-LRA-LKW/2,w:XSO-(GP1-LRA-LKW/2)-20,h:LKH,d:LKW,c:LED}
 ]);
 
