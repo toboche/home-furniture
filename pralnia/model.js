@@ -26,10 +26,10 @@ var ITEMS=[
   {t:'cyl',n:'Drzwiczki pralki',layer:'Maszyny',cx:917,cy:424,z:634,r:150,len:12,c:0xaebdc6},
   {t:'cyl',n:'Drzwiczki suszarki',layer:'Maszyny',cx:917,cy:1300,z:646,r:165,len:12,c:0xaebdc6},
 
-  /* Pion i gzyms: R = 42, Q = 118, GZ1 = 73, GZ2 = 73, X = 467 (najwyższy punkt, pomiar 2026-11-18; wcześniej 489), GZ3 = 466, GZ4 = 680 */
-  {n:'Pion',layer:'Pion i gzyms',x:1376,y:0,z:0,w:363,h:2661,d:362,c:0xd9d4ca},
-  {n:'Gzyms przy maszynach (118)',layer:'Pion i gzyms',x:1258,y:0,z:0,w:118,h:467,d:435,c:0xc7c1b5},
-  {n:'Gzyms na froncie pionu (73)',layer:'Pion i gzyms',x:1376,y:0,z:362,w:363,h:467,d:73,c:0xc7c1b5},
+  /* Pion od U = 1371 (pomiar 2026-11-18: 1371–1373 na różnych wysokościach; przyjęte minimum; wcześniej w modelu 1376). Pion i gzyms: R = 42, Q = 118, GZ1 = 73, GZ2 = 73, X = 467 (najwyższy punkt, pomiar 2026-11-18; wcześniej 489), GZ3 = 466, GZ4 = 680 */
+  {n:'Pion',layer:'Pion i gzyms',x:1371,y:0,z:0,w:368,h:2661,d:362,c:0xd9d4ca},
+  {n:'Gzyms przy maszynach (118; do pionu 113)',layer:'Pion i gzyms',x:1258,y:0,z:0,w:113,h:467,d:435,c:0xc7c1b5},
+  {n:'Gzyms na froncie pionu (73)',layer:'Pion i gzyms',x:1371,y:0,z:362,w:368,h:467,d:73,c:0xc7c1b5},
   {n:'Gzyms na prawej ścianie (73 × 680)',layer:'Pion i gzyms',x:1666,y:0,z:435,w:73,h:466,d:607,c:0xc7c1b5},
 
   /* Osprzęt: GN1–GN4, ZW1, ZW2, GP1, GP2, otwór K, L, M, N */
@@ -141,17 +141,17 @@ var ITEMS=[
   /* Półki (płyta 18 mm). Dolne moduły stoją na kafelkach, bez płyty dolnej i bez nóżek. Spód pasa frontów (1743 do 1761) zamyka dolne moduły.
      Pas: moduły kończą się na 2652; płyty 1743, 2188,5 i 2634 (przedziały po 427,5), szczelinę 3 mm między frontami obejmuje płyta środkowa. */
   {n:'PP1: Półka przednia (489 do 507)',layer:'Półki',x:1239,y:489,z:367,w:497,h:18,d:273,c:0xe6d7b8},
-  {n:'KP1: Półka kolumny, tył (489 do 507)',layer:'Półki',x:1239,y:489,z:183,w:132,h:18,d:184,c:0xe6d7b8},
+  {n:'KP1: Półka kolumny, tył (489 do 507)',layer:'Półki',x:1239,y:489,z:183,w:129,h:18,d:184,c:0xe6d7b8},
   {n:'PP2-1: Półka przednia (922 do 940)',layer:'Półki',x:1239.75,y:922,z:385,w:477.5,h:18,d:255,c:0xe6d7b8},
-  {n:'KP2-1: Półka kolumny, tył (922 do 940)',layer:'Półki',x:1239.75,y:922,z:183,w:130.5,h:18,d:202,c:0xe6d7b8},
+  {n:'KP2-1: Półka kolumny, tył (922 do 940)',layer:'Półki',x:1239.75,y:922,z:183,w:128,h:18,d:202,c:0xe6d7b8},
   {n:'PP2-2: Półka przednia (1355 do 1373)',layer:'Półki',x:1239.75,y:1355,z:385,w:477.5,h:18,d:255,c:0xe6d7b8},
-  {n:'KP2-2: Półka kolumny, tył (1355 do 1373)',layer:'Półki',x:1239.75,y:1355,z:183,w:130.5,h:18,d:202,c:0xe6d7b8},
+  {n:'KP2-2: Półka kolumny, tył (1355 do 1373)',layer:'Półki',x:1239.75,y:1355,z:183,w:128,h:18,d:202,c:0xe6d7b8},
   {n:'PP3-1: Półka przednia (1743 do 1761)',layer:'Półki',x:1239,y:1743,z:385,w:479,h:18,d:255,c:0xe6d7b8},
-  {n:'KP3-1: Półka kolumny, tył (1743 do 1761)',layer:'Półki',x:1239,y:1743,z:183,w:132,h:18,d:202,c:0xe6d7b8},
+  {n:'KP3-1: Półka kolumny, tył (1743 do 1761)',layer:'Półki',x:1239,y:1743,z:183,w:129,h:18,d:202,c:0xe6d7b8},
   {n:'PP3-2: Półka przednia (2188,5 do 2206,5)',layer:'Półki',x:1239,y:2188.5,z:385,w:479,h:18,d:255,c:0xe6d7b8},
-  {n:'KP3-2: Półka kolumny, tył (2188,5 do 2206,5)',layer:'Półki',x:1239,y:2188.5,z:183,w:132,h:18,d:202,c:0xe6d7b8},
+  {n:'KP3-2: Półka kolumny, tył (2188,5 do 2206,5)',layer:'Półki',x:1239,y:2188.5,z:183,w:129,h:18,d:202,c:0xe6d7b8},
   {n:'PP3-3: Półka przednia (2634 do 2652)',layer:'Półki',x:1239,y:2634,z:385,w:479,h:18,d:255,c:0xe6d7b8},
-  {n:'KP3-3: Półka kolumny, tył (2634 do 2652)',layer:'Półki',x:1239,y:2634,z:183,w:132,h:18,d:202,c:0xe6d7b8},
+  {n:'KP3-3: Półka kolumny, tył (2634 do 2652)',layer:'Półki',x:1239,y:2634,z:183,w:129,h:18,d:202,c:0xe6d7b8},
   {n:'L2P-1: Pas, lewa: spód (1743 do 1761)',layer:'Półki',x:23,y:1743,z:21,w:574,h:18,d:619,c:0xe6d7b8},
   {n:'NWP-1: Pas, nad maszynami: spód (1743 do 1761)',layer:'Półki',x:633,y:1743,z:23,w:570,h:18,d:617,c:0xe6d7b8},
   {n:'L2P-2: Pas, lewa: środek (2188,5 do 2206,5)',layer:'Półki',x:23,y:2188.5,z:21,w:574,h:18,d:619,c:0xe6d7b8},
@@ -217,7 +217,7 @@ var ITEMS=[
   {n:'Kątownik KT1C, ramię przy boku KB2',layer:'Kątowniki pod KT1',x:1239,y:1688,z:165,w:2,h:25,d:25,c:0x9aa5ad},
   {n:'Kątownik KT1C, ramię za płytą',layer:'Kątowniki pod KT1',x:1239,y:1688,z:163,w:25,h:25,d:2,c:0x9aa5ad},
   {n:'Magnes Ø10 x 3 w KT1C (gniazdo wiercisz sam)',layer:'Kątowniki pod KT1',x:1250,y:1695,z:165,w:10,h:10,d:3,c:0x222222},
-  {n:'KT2: Kolumna: tył, pas (1743-2652)',layer:'Ścianki tylne',x:1239,y:1743,z:165,w:132,h:909,d:18,c:0x9c8b6e,o:0.9},
+  {n:'KT2: Kolumna: tył, pas (1743-2652)',layer:'Ścianki tylne',x:1239,y:1743,z:165,w:129,h:909,d:18,c:0x9c8b6e,o:0.9},
   {n:'PT2: Prawa: tył, dół i środek (507-1743)',layer:'Ścianki tylne',x:1371,y:507,z:367,w:347,h:1236,d:18,c:0x9c8b6e,o:0.9},
   {n:'PT3: Prawa: tył, pas (1743-2652), otwór Ø130 pod kanał wiercony samodzielnie: środek 245 od lewej, 243 od góry krawędzi',layer:'Ścianki tylne',x:1371,y:1743,z:367,w:347,h:909,d:18,c:0x9c8b6e,o:0.9},
   /* Wzmocnienie lewej dolnej szafki: lewy bok 18 mm z wycięciem 100 × 100 pod gniazdko GN1 (z 192 do 292, y 868 do 968),

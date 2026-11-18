@@ -17,10 +17,10 @@ Układ: X od lewej ściany ku prawej, Y od podłogi w górę, Z od tylnej ścian
 ## Pion, gzyms (obudowa przewodów od podłogi), wywiew
 | KOD | WARTOŚĆ | OPIS | WCZEŚNIEJ / UWAGI |
 |---|---|---|---|
-| U | 1372 | od lewej ściany do pionu | 1379 |
+| U | 1371–1373 | od lewej ściany do lewego boku pionu, na różnych wysokościach (pomiar 2026-11-18); w modelu 1371 | 1372, 1379; model wcześniej 1376 |
 | P | 371 | szerokość pionu | |
 | V | 362 | wysięg pionu od tylnej ściany | podane 0,362 m |
-| Q | 118 | gzyms po stronie maszyn | |
+| Q | 118 | gzyms po stronie maszyn | przy U = 1371 i krawędzi gzymsu 1258 (maszyny do 1216 + R 42) wychodzi 113 – do sprawdzenia, nie wpływa na szafki |
 | X | 467 | najwyższy punkt gzymsu na pionie (pod PP1/KP1), pomiar 2026-11-18 | 489 |
 | GZ1 | 73 | szerokość gzymsu na prawej ścianie | |
 | GZ2 | 73 | szerokość gzymsu na froncie pionu | |

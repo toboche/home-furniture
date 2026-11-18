@@ -251,3 +251,9 @@ Sekcja C (zmiany w `wspolne/pipeline/`: kolizje otworów lico A–lico B i kraw�
 - Ogranicznik na F3 pominięty (uchwyty wierci użytkownik; uchwyt F5 dalej od krawędzi).
 - PP3-2 ma teraz inne nawierty niż PP3-1/PP3-3 (osobny typ w kalkulatorze).
 - Wyniki v62: formatki 41 pozycji / 53 sztuki / 15,39 m²; 424 otwory, 58 połączeń, 0 kolizji; 154 konfirmaty, 26 widocznych łbów; kalkulator 32 typy / 366 wierszy.
+
+## 2026-11-18 – pion U = 1371–1373 (v63)
+- Pomiar U: 1371–1373 (od lewej ściany do lewego boku pionu). W modelu pion od 1371 (najmniejsza wartość; wcześniej 1376), szer. do prawej ściany 368.
+- Elementy tyłu kolumny sięgające do pionu zwężone, żeby zostało 3 mm luzu przy U = 1371 (5 mm przy 1373): KT2 909×129 (było 132), KP1 184×129 (zamówienie 200×129), KP3 202×129 (było 132), KP2 202×128 (było 130,5; x 1239,75–1367,75). KT1A/B/C (do 1368) mają 3 mm. Kołki KP/PP (x 1270, 1340) i konfirmaty bez zmian położenia.
+- Q (118) nie zgadza się z U = 1371 i R = 42 (wychodzi 113) – nie wpływa na szafki (gzyms przy maszynach jest pod KP1, z prześwitem 22 mm), do sprawdzenia przy okazji.
+- Wyniki v63: formatki 41 pozycji / 53 sztuki / 15,38 m²; 424 otwory, 58 połączeń, 0 kolizji; 154 konfirmaty.

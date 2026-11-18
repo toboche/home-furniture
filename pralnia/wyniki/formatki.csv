@@ -18,12 +18,12 @@ PT1;Prawa dół: tył;489;406;1;;KONFIRMATY;
 KT1A;Kolumna: tył dolny (zawór ZW1/ZW2), zdejmowany bez narzędzi, y 510-915;405;124;1;;KONFIRMATY;"stoi na kątowniku-podporze, 2 kątowniki 25x25 za płytą na KB2 + 2 magnesy Ø10x3 (gniazda wiercisz sam); szer. 124 (luz na łby wkrętów kątowników)"
 KT1B;Kolumna: tył środkowy (gniazdka GP1/GP2), zdejmowany, y 943-1348;405;124;1;;KONFIRMATY;stoi na kątowniku-podporze, 2 kątowniki za płytą + 2 magnesy Ø10x3 (gniazda wiercisz sam)
 KT1C;Kolumna: tył górny, zdejmowany, y 1376-1723;347;124;1;;KONFIRMATY;stoi na kątowniku-podporze, 2 kątowniki za płytą + 2 magnesy Ø10x3 (gniazda wiercisz sam)
-KT2;Kolumna: tył, pas;909;132;1;;KONFIRMATY;
+KT2;Kolumna: tył, pas;909;129;1;;KONFIRMATY;
 PT2;Prawa: tył, dół i środek;1236;347;1;;KONFIRMATY;
 PT3;Prawa: tył, pas (otwór Ø130 pod kanał wierci użytkownik: środek 253 od lewej krawędzi, 234 od górnej);909;347;1;;KONFIRMATY + NAWIERT ŚRODKA Ø5 x 5;
-KP1;"Półka kolumny (tył), poziom 489: z 183 do 367; kołki Ø8 do PP1";184;132;1;;KONFIRMATY + KOŁKI Ø8 W CZOLE (do PP1);"ZAMÓWIĆ 200 x 132 (minimum sklepu 200): naddatek 16 mm po stronie krawędzi 4 (tył, bez otworów) – w kalkulatorze SZER 200 i X otworów w krawędzi 3 + 16 (66 i 150); po dostawie odciąć 16 mm od krawędzi 4"
-KP2;"Półka kolumny (tył), poziomy 922 i 1355: z 183 do 385 (na wciskanych podpórkach; kołki Ø8 do PP2, bez okleiny)";202;130.5;2;;"KOŁKI Ø8 W CZOLE (do PP2); BEZ KONFIRMATÓW";
-KP3;"Półka kolumny (tył), pas: 1743, 2188,5, 2634 (z 183 do 385; kołki Ø8 do PP3)";202;132;3;;KONFIRMATY + KOŁKI Ø8 W CZOLE (do PP3);
+KP1;"Półka kolumny (tył), poziom 489: z 183 do 367; kołki Ø8 do PP1";184;129;1;;KONFIRMATY + KOŁKI Ø8 W CZOLE (do PP1);"ZAMÓWIĆ 200 x 129 (minimum sklepu 200): naddatek 16 mm po stronie krawędzi 4 (tył, bez otworów) – w kalkulatorze SZER 200 i X otworów w krawędzi 3 + 16 (66 i 150); po dostawie odciąć 16 mm od krawędzi 4"
+KP2;"Półka kolumny (tył), poziomy 922 i 1355: z 183 do 385 (na wciskanych podpórkach; kołki Ø8 do PP2, bez okleiny)";202;128;2;;"KOŁKI Ø8 W CZOLE (do PP2); BEZ KONFIRMATÓW";
+KP3;"Półka kolumny (tył), pas: 1743, 2188,5, 2634 (z 183 do 385; kołki Ø8 do PP3)";202;129;3;;KONFIRMATY + KOŁKI Ø8 W CZOLE (do PP3);
 PP1;"Półka przednia, poziom 489 (x 1239-1736, z 367-640; stoi na niej PT2/PB2)";497;273;1;1DL;KONFIRMATY + KOŁKI Ø8 W CZOLE (do KP1);
 PP2;"Półka przednia, poziomy 922 i 1355 (x 1239,75-1717,25, z 385-640; na wciskanych podpórkach; kołki Ø8 do KP2)";477.5;255;2;1DL;"KOŁKI Ø8 W CZOLE (do KP2); BEZ KONFIRMATÓW";
 PP3;"Półka przednia, pas: 1743, 2188,5, 2634 (x 1239-1718, z 385-640; kołki Ø8 do KP3)";479;255;3;1DL;KONFIRMATY + KOŁKI Ø8 W CZOLE (do KP3);

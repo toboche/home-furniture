@@ -1,11 +1,11 @@
-# Zestawienie okuć i elementów (pralnia) – stan v62, 2026-11-18 (po audycie v1 i decyzjach użytkownika)
+# Zestawienie okuć i elementów (pralnia) – stan v63, 2026-11-18 (po audycie v1 i decyzjach użytkownika)
 Wersja robocza do niezależnej weryfikacji. Wymiary w mm. Kody wymiarów wielkimi literami.
 Liczby łączników, otworów i zaślepek: `wyniki/podsumowanie.json` (źródło), poniżej przepisane.
 
 ## Płyta
-- Egger W1200 ST9 „Biały porcelanowy" 18 mm, centrum.meble.pl; 41 pozycji / 53 sztuki / 15,39 m² (wyniki/formatki.csv, razem z L1P, RDW2 i LF6, bez F8).
+- Egger W1200 ST9 „Biały porcelanowy" 18 mm, centrum.meble.pl; 41 pozycji / 53 sztuki / 15,38 m² (wyniki/formatki.csv, razem z L1P, RDW2 i LF6, bez F8).
 - Okleina: fronty 1,0 mm bezspoinowa (szablony zawiasów), reszta ABS 0,8 mm z nawiertami.
-- KP1: w modelu 184×132, ZAMÓWIĆ 200×132 (minimum kalkulatora) i skrócić samodzielnie o 16 mm od tyłu (krawędź 4, bez otworów); w kalkulatorze X otworów w krawędzi 3: 66 i 150.
+- KP1: w modelu 184×129, ZAMÓWIĆ 200×129 (minimum kalkulatora) i skrócić samodzielnie o 16 mm od tyłu (krawędź 4, bez otworów); w kalkulatorze X otworów w krawędzi 3: 66 i 150.
 
 ## Zawiasy i prowadniki (Blum)
 | Element | Kod | Ilość | Uwagi |

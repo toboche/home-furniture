@@ -161,7 +161,7 @@ FORMATKI = [
       okleina='', nawierty='KONFIRMATY + NAWIERT ŚRODKA Ø5 x 5'),
     F('KP1', 'Półka kolumny (tył), poziom 489: z 183 do 367; kołki Ø8 do PP1',
       okleina='', nawierty='KONFIRMATY + KOŁKI Ø8 W CZOLE (do PP1)',
-      uwagi='ZAMÓWIĆ 200 x 132 (minimum sklepu 200): naddatek 16 mm po stronie krawędzi 4 (tył, bez otworów) – w kalkulatorze SZER 200 i X otworów w krawędzi 3 + 16 (66 i 150); po dostawie odciąć 16 mm od krawędzi 4'),
+      uwagi='ZAMÓWIĆ 200 x 129 (minimum sklepu 200): naddatek 16 mm po stronie krawędzi 4 (tył, bez otworów) – w kalkulatorze SZER 200 i X otworów w krawędzi 3 + 16 (66 i 150); po dostawie odciąć 16 mm od krawędzi 4'),
     F('KP2', 'Półka kolumny (tył), poziomy 922 i 1355: z 183 do 385 (na wciskanych podpórkach; kołki Ø8 do PP2, bez okleiny)',
       okleina='', nawierty='KOŁKI Ø8 W CZOLE (do PP2); BEZ KONFIRMATÓW'),
     F('KP3', 'Półka kolumny (tył), pas: 1743, 2188,5, 2634 (z 183 do 385; kołki Ø8 do PP3)',
