@@ -3,7 +3,7 @@
 Cel: sprawdzić w pomieszczeniu, że szafki z projektu (stan po rozkroju 21629487) zmieszczą się i dadzą się wnieść i złożyć.
 Mierz NAJMNIEJSZĄ wartość (jak przy pomiarach), wpisz ją w kolumnę WYNIK. Wymiary w mm, od docelowej podłogi (kafelki).
 Patrząc od drzwi: ściana tylna = na wprost (przewody wodne), lewa = z gzymsem, przednia = z drzwiami.
-Szkic kodów: `zrodla/szkic_pomiarow.svg`. Kody tylko dużymi literami.
+Szkic kodów: `zrodla/szkic_pomiarow.svg`; rysunek ścian z pomiarami 1–12 (stan 2026-11-18): `weryfikacja_szkic.html`. Kody tylko dużymi literami.
 
 Przydatne: miernik laserowy, poziomica (najlepiej 2 m), taśma malarska, listwa lub łata ok. 2,6 m (albo sznurek tej długości).
 
