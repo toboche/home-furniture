@@ -1,19 +1,19 @@
 {
  "formatki": {
-  "pozycje": 41,
-  "sztuki": 53,
-  "m2": 15.38
+  "pozycje": 43,
+  "sztuki": 55,
+  "m2": 16.61
  },
  "kalkulator": {
   "typy_formatek": 32,
-  "wiersze": 366
+  "wiersze": 370
  },
  "laczniki": {
   "konfirmaty": 154,
   "kolki": 14,
   "otwory_pod_kolki": 28,
-  "otwory_nieprzelotowe": 88,
-  "puszki_zawiasow": 15
+  "otwory_nieprzelotowe": 92,
+  "puszki_zawiasow": 21
  },
  "zaslepki": {
   "widoczne": 26,
@@ -32,17 +32,17 @@
    "KB2 → RDW2 (x 1215, y 1734, z 410)",
    "KB2 → RDW2 (x 1215, y 1734, z 460)",
    "KT2 → KP3-1 (x 1304, y 1752, z 159)",
-   "KT2 → KP3-2 (x 1304, y 2198, z 159)",
-   "KT2 → KP3-3 (x 1304, y 2643, z 159)",
+   "KT2 → KP3-2 (x 1304, y 2199, z 159)",
+   "KT2 → KP3-3 (x 1304, y 2646, z 159)",
    "L1B1 → L1W (x 621, y 1734, z 565)",
    "L1B1 → L1W (x 621, y 1734, z 615)",
    "NWB-2 → NWP-1 (x 1227, y 1752, z 73)",
-   "NWB-2 → NWP-2 (x 1227, y 2198, z 73)",
-   "NWB-2 → NWP-3 (x 1227, y 2643, z 73)",
+   "NWB-2 → NWP-2 (x 1227, y 2199, z 73)",
+   "NWB-2 → NWP-3 (x 1227, y 2646, z 73)",
    "NWB-2 → NWT (x 1227, y 1793, z 14)",
-   "NWB-2 → NWT (x 1227, y 2063, z 14)",
-   "NWB-2 → NWT (x 1227, y 2332, z 14)",
-   "NWB-2 → NWT (x 1227, y 2602, z 14)",
+   "NWB-2 → NWT (x 1227, y 2064, z 14)",
+   "NWB-2 → NWT (x 1227, y 2334, z 14)",
+   "NWB-2 → NWT (x 1227, y 2605, z 14)",
    "PP1 → PB1 (x 1654, y 513, z 490)",
    "PP1 → PB1 (x 1654, y 513, z 590)",
    "PP1 → PB2 (x 1727, y 483, z 417)",
@@ -51,12 +51,12 @@
    "PP1 → PT1 (x 1595, y 513, z 449)",
    "PP1 → PT2 (x 1421, y 483, z 376)",
    "PP1 → PT2 (x 1668, y 483, z 376)",
-   "PP3-2 → LF6 (x 1555, y 2182, z 631)",
-   "PP3-2 → LF6 (x 1655, y 2182, z 631)"
+   "PP3-2 → LF6 (x 1555, y 2184, z 631)",
+   "PP3-2 → LF6 (x 1655, y 2184, z 631)"
   ]
  },
  "polaczenia": 58,
- "otwory_lacznie": 424,
+ "otwory_lacznie": 428,
  "kolizje_otworow": 0,
  "strony_arkusza": 32
 }

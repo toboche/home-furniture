@@ -1,11 +1,11 @@
-# Pralnia: lista do weryfikacji przed zamówieniem (stan 2026-11-18, model v63)
+# Pralnia: lista do weryfikacji przed zamówieniem (stan 2026-11-18, model v65)
 
-Źródła: model 3D (`index.html` albo `wyniki/pralnia_3d.html`), `wyniki/formatki.csv` (41 pozycji, 53 sztuki, 15,38 m²), `wyniki/kalkulator_nawierty.csv` (32 typy, 366 wierszy), `wyniki/arkusz_nawiertow.pdf` (32 strony), `wyniki/podsumowanie.json`, `pomiary.md`, `ustalenia.md`, `komponenty.md`, audyt `audyt/v1.md`.
-Kontrola automatyczna: 424 otwory, 58 połączeń, 0 kolizji otworów; 154 konfirmaty, 14 kołków, 12 podpórek, 15 puszek. Kolizje brył: tylko zamierzone (puszki w frontach, magnesy w gniazdach, gniazdko GN1 w wycięciu).
+Źródła: model 3D (`index.html` albo `wyniki/pralnia_3d.html`), `wyniki/formatki.csv` (43 pozycje, 55 sztuk, 16,61 m²), `wyniki/kalkulator_nawierty.csv` (32 typy, 370 wierszy), `wyniki/arkusz_nawiertow.pdf` (32 strony), `wyniki/podsumowanie.json`, `pomiary.md`, `ustalenia.md`, `komponenty.md`, audyt `audyt/v1.md`.
+Kontrola automatyczna: 428 otworów, 58 połączeń, 0 kolizji otworów; 154 konfirmaty, 14 kołków, 12 podpórek, 21 puszek. Kolizje brył: tylko zamierzone (puszki w frontach, magnesy w gniazdach, gniazdko GN1 w wycięciu).
 
 ## Zamówienie
 - Koszyk 21386928 (2 970,11 zł, 2026-11-08) jest NIEAKTUALNY i nie należy go używać.
-- Wycena wstępna 2026-11-15: rozkrój 21629244 (stan v58, bez nawiertów) = 2 204,10 zł; z wierceniem szacunkowo 2 850–2 950 zł. Od tego czasu: +RDW2, +LF6, −F8, KT1 124 mm. Do przeliczenia.
+- Wycena wstępna 2026-11-15: rozkrój 21629244 (stan v58, bez nawiertów) = 2 204,10 zł; z wierceniem szacunkowo 2 850–2 950 zł. Od tego czasu: +RDW2, +LF6, +F10, pasy +3 mm, KT1 124 mm, L1B 637. Do złożenia od nowa (zamowienie.md).
 - Kalkulator przyjął przy wycenie wymiary z połówką mm i formatki 100 mm. KP1 zamawiamy jako 200×129 (skracana samodzielnie). Do sprawdzenia przy wpisie: nawierty Ø3×12.
 
 ## Do dopracowania / potwierdzenia
@@ -24,7 +24,7 @@ Mierzyć w mm, w kilku miejscach; liczy się najgorszy wynik (najmniejsza szerok
 | C | szerokość maszyn w najszerszym miejscu | 598 | ≤ 604 |
 | U | lewa ściana → lewy bok pionu | 1371 | ≥ 1369 (zmierzone 1371–1373: OK) |
 | GZ1 | lewa ściana → lewy bok gzymsu na prawej ścianie | 1666 | ≥ 1665 |
-| J | sufit: nad całą zabudową i ok. 0,5 m przed frontami | 2660 | ≥ 2655 (zmierzone min. 2661, przyjęte 2660: OK) |
+| J | sufit: nad całą zabudową i ok. 0,5 m przed frontami | 2660 | ≥ 2658 (szafki do 2655; zmierzone min. 2661, przyjęte 2660: OK) |
 | H | najwyższy punkt suszarki (z zestawem łączącym) | 1713 | ≤ 1738 |
 | X | najwyższy punkt gzymsu na pionie | 467 | ≤ 486 (zmierzone 467: OK) |
 | GZ3 | najwyższy punkt gzymsu na prawej ścianie | 466 | ≤ 486 |
@@ -42,7 +42,7 @@ Transport: największe płyty L1B1/L1B2 1743 × 655 – drzwi 805 × 2016 OK; sp
 
 ## Uwagi konstrukcyjne (stałe)
 - Moduły lewy, wnęka i kolumna stykają się (0 mm), bez dodatkowych luzów: składać na sucho przed dokręceniem.
-- Luzy: lewa ściana 5 mm, prawa 3 mm, tył 3–5, sufit 8 (korpusy do 2652, J = 2660). Maszyny: 3 mm z lewej, 5 z prawej, można je przesuwać (ok. 4 mm po bokach).
+- Luzy: lewa ściana 5 mm, prawa 3 mm, tył 3–5, sufit 5 (korpusy do 2655, J = 2660). Maszyny: 3 mm z lewej, 5 z prawej, można je przesuwać (ok. 4 mm po bokach).
 - Montaż L1 jako ostatni; gniazdo GN3/GN4 natynkowe (15 mm) koliduje z L1B2 przy wsuwaniu – zdjąć na czas montażu albo złożyć L1 na miejscu.
 - Model 3D nie był oglądany wizualnie przez Claude (brak biblioteki w środowisku): proszę obejrzeć warstwy „Kątowniki pod KT1" (nowe podpory), „Dodatki" (kuweta we wnęce), RDW2, kanał i kratkę.
 

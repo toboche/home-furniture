@@ -88,7 +88,7 @@ def dodatkowe_otwory(P, parts, loc):
 
 
 # zawiasy, które nie mają prowadnika w ściance szafki
-ZAWIASY_BEZ_PROWADNIKA_W_SCIANCE = {'F5'}
+ZAWIASY_BEZ_PROWADNIKA_W_SCIANCE = {'F5', 'F10'}   # F10: front L1 na zapas, bez nawiertów w L1B1
 
 
 def zawias_specjalny(code, fr, cx, cy, cyl):
@@ -99,7 +99,7 @@ def zawias_specjalny(code, fr, cx, cy, cyl):
 
 
 # tyły: bez oklejonej krawędzi
-BEZ_OKLEINY_PREFIKSY = ('L1T', 'L2T', 'NWT', 'PT', 'KT')
+BEZ_OKLEINY_PREFIKSY = ('L1T', 'L2T', 'NWT', 'PT', 'KT', 'KP')   # KP: półki tylne kolumny, krawędź przednia schowana przy PP
 
 # łby konfirmatów zasłonięte przez bryły z tych warstw nie potrzebują zaślepek
 ZASLEPKI_ZASLANIAJA = ['Maszyny', 'Pion i gzyms', 'Fronty']
@@ -148,29 +148,29 @@ FORMATKI = [
     F('PT1', 'Prawa dół: tył',
       okleina='', nawierty='KONFIRMATY'),
     F('KT1A', 'Kolumna: tył dolny (zawór ZW1/ZW2), zdejmowany bez narzędzi, y 510-915',
-      okleina='', nawierty='KONFIRMATY', uwagi='stoi na kątowniku-podporze, 2 kątowniki 25x25 za płytą na KB2 + 2 magnesy Ø10x3 (gniazda wiercisz sam); szer. 124 (luz na łby wkrętów kątowników)'),
+      okleina='', nawierty='BEZ NAWIERTÓW', uwagi='stoi na kątowniku-podporze, 2 kątowniki 25x25 za płytą na KB2 + 2 magnesy Ø10x3 (gniazda wiercisz sam); szer. 124 (luz na łby wkrętów kątowników)'),
     F('KT1B', 'Kolumna: tył środkowy (gniazdka GP1/GP2), zdejmowany, y 943-1348',
-      okleina='', nawierty='KONFIRMATY', uwagi='stoi na kątowniku-podporze, 2 kątowniki za płytą + 2 magnesy Ø10x3 (gniazda wiercisz sam)'),
+      okleina='', nawierty='BEZ NAWIERTÓW', uwagi='stoi na kątowniku-podporze, 2 kątowniki za płytą + 2 magnesy Ø10x3 (gniazda wiercisz sam)'),
     F('KT1C', 'Kolumna: tył górny, zdejmowany, y 1376-1723',
-      okleina='', nawierty='KONFIRMATY', uwagi='stoi na kątowniku-podporze, 2 kątowniki za płytą + 2 magnesy Ø10x3 (gniazda wiercisz sam)'),
+      okleina='', nawierty='BEZ NAWIERTÓW', uwagi='stoi na kątowniku-podporze, 2 kątowniki za płytą + 2 magnesy Ø10x3 (gniazda wiercisz sam)'),
     F('KT2', 'Kolumna: tył, pas',
       okleina='', nawierty='KONFIRMATY'),
     F('PT2', 'Prawa: tył, dół i środek',
       okleina='', nawierty='KONFIRMATY'),
-    F('PT3', 'Prawa: tył, pas (otwór Ø127 pod kanał wierci użytkownik: środek 253 od lewej krawędzi, 234 od górnej)',
+    F('PT3', 'Prawa: tył, pas (otwór Ø127 pod kanał wierci użytkownik: środek 253 od lewej krawędzi, 237 od górnej)',
       okleina='', nawierty='KONFIRMATY + NAWIERT ŚRODKA Ø5 x 5'),
     F('KP1', 'Półka kolumny (tył), poziom 489: z 183 do 367; kołki Ø8 do PP1',
       okleina='', nawierty='KONFIRMATY + KOŁKI Ø8 W CZOLE (do PP1)',
       uwagi='ZAMÓWIĆ 200 x 129 (minimum sklepu 200): naddatek 16 mm po stronie krawędzi 4 (tył, bez otworów) – w kalkulatorze SZER 200 i X otworów w krawędzi 3 + 16 (66 i 150); po dostawie odciąć 16 mm od krawędzi 4'),
     F('KP2', 'Półka kolumny (tył), poziomy 922 i 1355: z 183 do 385 (na wciskanych podpórkach; kołki Ø8 do PP2, bez okleiny)',
       okleina='', nawierty='KOŁKI Ø8 W CZOLE (do PP2); BEZ KONFIRMATÓW'),
-    F('KP3', 'Półka kolumny (tył), pas: 1743, 2188,5, 2634 (z 183 do 385; kołki Ø8 do PP3)',
+    F('KP3', 'Półka kolumny (tył), pas: 1743, 2190, 2637 (z 183 do 385; kołki Ø8 do PP3)',
       okleina='', nawierty='KONFIRMATY + KOŁKI Ø8 W CZOLE (do PP3)'),
     F('PP1', 'Półka przednia, poziom 489 (x 1239-1736, z 367-640; stoi na niej PT2/PB2)',
       okleina='1DL', nawierty='KONFIRMATY + KOŁKI Ø8 W CZOLE (do KP1)'),
     F('PP2', 'Półka przednia, poziomy 922 i 1355 (x 1239,75-1717,25, z 385-640; na wciskanych podpórkach; kołki Ø8 do KP2)',
       okleina='1DL', nawierty='KOŁKI Ø8 W CZOLE (do KP2); BEZ KONFIRMATÓW'),
-    F('PP3', 'Półka przednia, pas: 1743, 2188,5, 2634 (x 1239-1718, z 385-640; kołki Ø8 do KP3)',
+    F('PP3', 'Półka przednia, pas: 1743, 2190, 2637 (x 1239-1718, z 385-640; kołki Ø8 do KP3)',
       okleina='1DL', nawierty='KONFIRMATY + KOŁKI Ø8 W CZOLE (do KP3)'),
     F('LF6', 'Listwa oporowa za F6, dół (leży płasko na tyle F6, stoi na PP3-2)',
       okleina='', nawierty='KONFIRMATY (od spodu z PP3-2)', uwagi='do tyłu F6: klej + 4 wkręty Ø3,5x30 od strony listwy (maks. 12 mm w F6)'),
@@ -193,9 +193,13 @@ FORMATKI = [
     F('F5', 'Front P pas: góra, otwierany',
       okleina='2DL+2SZ', nawierty='ZAWIASY 2 SZT, PUSZKA Ø35, ŚRODEK 22.5 MM OD KRAWĘDZI', uwagi='zawiasy po PRAWEJ: Blum 79B9590 INSERTA (do drzwi równoległych); prowadnik na tylnej ściance F6, linia wkrętów 21,5 od jej lewej krawędzi, bez nawiertów; uchwyt GUBBARP 116 mm: otwory samodzielnie, bez nawiertów'),
     F('F6', 'Front P pas: góra, stały z kratką (króciec Ø123 do rury Ø125)',
-      okleina='2DL+2SZ', nawierty='BRAK; otwór Ø127 własnoręcznie otwornicą', uwagi='otwór Ø127 pod króciec kratki Ø123: ŚRODEK 124 MM OD LEWEJ KRAWĘDZI, 219 MM OD DOLNEJ (234 OD GÓRNEJ); nawiertu środka kalkulator nie zrobi (okleina bezspoinowa), zaznaczyć ręcznie'),
+      okleina='2DL+2SZ', nawierty='BRAK; otwór Ø127 własnoręcznie otwornicą', uwagi='otwór Ø127 pod króciec kratki Ø123: ŚRODEK 124 MM OD LEWEJ KRAWĘDZI, 217,5 MM OD DOLNEJ (237 OD GÓRNEJ); nawiertu środka kalkulator nie zrobi (okleina bezspoinowa), zaznaczyć ręcznie'),
     F('F7', 'Front P pas: dół',
       okleina='2DL+2SZ', nawierty='ZAWIASY 2 SZT, PUSZKA Ø35, ŚRODEK 22.5 MM OD KRAWĘDZI', uwagi='uchwyt GUBBARP 116 mm: otwory samodzielnie, bez nawiertów'),
-    F('F9', 'Front P dół: jeden wysoki (dawne F9+F10+F11)',
+    F('F8', 'Front P dół: przy gzymsie, ZAPASOWY (teraz kuweta we wnęce)',
+      okleina='2DL+2SZ', nawierty='ZAWIASY 2 SZT, PUSZKA Ø35, ŚRODEK 22.5 MM OD KRAWĘDZI', uwagi='zawiasy po PRAWEJ; nawierty prowadników w PB1 są w zamówieniu; uchwyt GUBBARP: otwory samodzielnie'),
+    F('F10', 'Front L dół: szafka L1, NA ZAPAS',
+      okleina='2DL+2SZ', nawierty='ZAWIASY 4 SZT, PUSZKA Ø35, ŚRODEK 22.5 MM OD KRAWĘDZI', uwagi='zawiasy po PRAWEJ (szablon Front prawy), 100 od końców + 2 pośrednie (środki 103, 615, 1128, 1640 od dołu); w szafce L1 BEZ nawiertów pod prowadniki; uchwyt: otwory samodzielnie'),
+    F('F9', 'Front P dół: jeden wysoki',
       okleina='2DL+2SZ', nawierty='ZAWIASY 3 SZT, PUSZKA Ø35, ŚRODEK 22.5 MM OD KRAWĘDZI', uwagi='uchwyt GUBBARP 116 mm: otwory samodzielnie, bez nawiertów'),
 ]

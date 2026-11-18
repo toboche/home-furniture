@@ -72,14 +72,14 @@ var ITEMS=[
 
   /* Fronty w pasie od 1743 do 2658: dwa rzędy po 456 z odstępem 3 mm, grubość 18, front do z = 658.
      Odstęp 3 mm między modułami (po 1,5 mm z każdej strony granicy 613 i 1221). */
-  {n:'F1: Front lewa, góra (607 × 453)',layer:'Fronty',x:6.5,y:2199,z:640,w:607,h:453,d:18,c:0x2f9e8f,o:0.55},
-  {n:'F2: Front lewa, dół (607 × 453)',layer:'Fronty',x:6.5,y:1743,z:640,w:607,h:453,d:18,c:0x2f9e8f,o:0.55},
-  {n:'F3: Front nad maszynami, góra (603 × 453)',layer:'Fronty',x:616.5,y:2199,z:640,w:603,h:453,d:18,c:0x2f9e8f,o:0.55},
-  {n:'F4: Front nad maszynami, dół (603 × 453)',layer:'Fronty',x:616.5,y:1743,z:640,w:603,h:453,d:18,c:0x2f9e8f,o:0.55},
+  {n:'F1: Front lewa, góra (607 × 454,5)',layer:'Fronty',x:6.5,y:2200.5,z:640,w:607,h:454.5,d:18,c:0x2f9e8f,o:0.55},
+  {n:'F2: Front lewa, dół (607 × 454,5)',layer:'Fronty',x:6.5,y:1743,z:640,w:607,h:454.5,d:18,c:0x2f9e8f,o:0.55},
+  {n:'F3: Front nad maszynami, góra (603 × 454,5)',layer:'Fronty',x:616.5,y:2200.5,z:640,w:603,h:454.5,d:18,c:0x2f9e8f,o:0.55},
+  {n:'F4: Front nad maszynami, dół (603 × 454,5)',layer:'Fronty',x:616.5,y:1743,z:640,w:603,h:454.5,d:18,c:0x2f9e8f,o:0.55},
   /* Front górny po prawej podzielony pionowo: część otwierana (zawiasy po prawej, przy linii podziału, prowadnik zawiasu Blum 79B9590 na tylnej ściance F6) i część stała z kratką, przykręcana od wewnątrz. */
-  {n:'F5: Front prawa, góra, otwierany (274,5 × 453)',layer:'Fronty',x:1222.5,y:2199,z:640,w:274.5,h:453,d:18,c:0x2f9e8f,o:0.55},
-  {n:'F6: Front prawa, góra, stały z kratką (234,5 × 453)',layer:'Fronty',x:1500,y:2199,z:640,w:234.5,h:453,d:18,c:0x2f9e8f,o:0.55},
-  {n:'F7: Front prawa, dół (512 × 453)',layer:'Fronty',x:1222.5,y:1743,z:640,w:512,h:453,d:18,c:0x2f9e8f,o:0.55},
+  {n:'F5: Front prawa, góra, otwierany (274,5 × 454,5)',layer:'Fronty',x:1222.5,y:2200.5,z:640,w:274.5,h:454.5,d:18,c:0x2f9e8f,o:0.55},
+  {n:'F6: Front prawa, góra, stały z kratką (234,5 × 454,5)',layer:'Fronty',x:1500,y:2200.5,z:640,w:234.5,h:454.5,d:18,c:0x2f9e8f,o:0.55},
+  {n:'F7: Front prawa, dół (512 × 454,5)',layer:'Fronty',x:1222.5,y:1743,z:640,w:512,h:454.5,d:18,c:0x2f9e8f,o:0.55},
   {t:'cyl',n:'Kratka wywiewu w froncie stałym (króciec Ø123 do rury Ø125; rozeta przyjęta Ø150)',layer:'Fronty',cx:1624,cy:2418,z:640,r:75,len:19,c:0xe0a526},
   /* Kanał wentylacyjny: rura okrągła Ø 125 od otworu w ścianie (z = 362) do tylnej strony frontu stałego (z = 640), zamocowana do szafki, uszczelniona pianką przy ścianie i przy froncie. */
   {t:'cyl',n:'Kanał wentylacyjny (rura Ø 125, z 362 do 640)',layer:'Kanał wentylacyjny',cx:1624,cy:2418,z:362,r:62.5,len:278,c:0x9aa5ad},
@@ -90,38 +90,50 @@ var ITEMS=[
   {n:'Kątownik 25×25 pod F6, bok prawy: ramię przy boku',layer:'Kątowniki pod F6',x:1716,y:2550,z:615,w:2,h:25,d:25,c:0x9aa5ad},
   /* Mocowanie F6 (v62, 2026-11-18): dół – listwa oporowa LF6 (płyta 18, 200 × 60) przyklejona i przykręcona do tyłu F6, stoi na PP3-2 (konfirmaty od spodu);
      lewa góra (strona zawiasów F5) – kątownik 40×40; prawa strona i prawa góra – kątowniki 25×25. Strefa prowadników 173H7130 (x 1500–1545, y 2277–2321 i 2530–2575) wolna. */
-  {n:'Kątownik 40×40 pod F6, góra lewa: ramię przy froncie',layer:'Kątowniki pod F6',x:1505,y:2594,z:638,w:40,h:40,d:2,c:0x9aa5ad},
-  {n:'Kątownik 40×40 pod F6, góra lewa: ramię pod półką',layer:'Kątowniki pod F6',x:1505,y:2632,z:600,w:40,h:2,d:40,c:0x9aa5ad},
-  {n:'Kątownik 25×25 pod F6, góra: ramię przy froncie',layer:'Kątowniki pod F6',x:1680,y:2609,z:638,w:25,h:25,d:2,c:0x9aa5ad},
-  {n:'Kątownik 25×25 pod F6, góra: ramię pod półką',layer:'Kątowniki pod F6',x:1680,y:2632,z:615,w:25,h:2,d:25,c:0x9aa5ad},
+  {n:'Kątownik 40×40 pod F6, góra lewa: ramię przy froncie',layer:'Kątowniki pod F6',x:1505,y:2597,z:638,w:40,h:40,d:2,c:0x9aa5ad},
+  {n:'Kątownik 40×40 pod F6, góra lewa: ramię pod półką',layer:'Kątowniki pod F6',x:1505,y:2635,z:600,w:40,h:2,d:40,c:0x9aa5ad},
+  {n:'Kątownik 25×25 pod F6, góra: ramię przy froncie',layer:'Kątowniki pod F6',x:1680,y:2612,z:638,w:25,h:25,d:2,c:0x9aa5ad},
+  {n:'Kątownik 25×25 pod F6, góra: ramię pod półką',layer:'Kątowniki pod F6',x:1680,y:2635,z:615,w:25,h:2,d:25,c:0x9aa5ad},
   /* Front prawego modułu dolnego: F9 (zawiasy po prawej). F8 usunięty 2026-11-18: wnęka 406 × 489 pod PP1 otwarta, stoi w niej kuweta. */
+  /* F8 (v65): front zapasowy, zamówiony z puszkami zawiasów i nawiertami prowadników w PB1, żeby dało się go zamontować w miejsce kuwety (wariant w widoku). */
+  {n:'F8: Front prawa dolna, przy gzymsie (439 × 493,5), zapasowy – teraz kuweta we wnęce',layer:'Fronty',x:1222.5,y:3,z:640,w:439,h:493.5,d:18,c:0x2f9e8f,o:0.55},
+  /* F10 (v65): front lewej dolnej szafki L1, zamówiony z puszkami zawiasów (zawiasy po PRAWEJ, przy L1B1 – po lewej stronie przeszkadza gniazdko GN3/GN4), BEZ nawiertów prowadników w L1B1. */
+  {n:'F10: Front lewa, dół L1 (607 × 1737), na zapas',layer:'Fronty',x:6.5,y:3,z:640,w:607,h:1737,d:18,c:0x2f9e8f,o:0.55},
   {n:'F9: Front prawa dolna, jeden wysoki (512 × 1240,5)',layer:'Fronty',x:1222.5,y:499.5,z:640,w:512,h:1240.5,d:18,c:0x2f9e8f,o:0.55},
 
   /* Zawiasy puszkowe (otwory Ø 35; środek puszki 22,5 mm od krawędzi frontu (F5: Blum 79B9590 do drzwi równoległych, prowadnik na tyle F6, puszka 22,5 mm), po 100 mm od końców frontu). Lewa strona: fronty lewego modułu i modułu nad maszynami; prawa strona: wszystkie fronty prawego modułu. */
-  {n:'Zawias: lewa, góra (lewa)',layer:'Zawiasy',x:11.5,y:2281.5,z:641,w:35,h:35,d:11,c:0x2b3034},
-  {n:'Zawias: lewa, góra (lewa)',layer:'Zawiasy',x:11.5,y:2534.5,z:641,w:35,h:35,d:11,c:0x2b3034},
+  {n:'Zawias: lewa, góra (lewa)',layer:'Zawiasy',x:11.5,y:2283,z:641,w:35,h:35,d:11,c:0x2b3034},
+  {n:'Zawias: lewa, góra (lewa)',layer:'Zawiasy',x:11.5,y:2537.5,z:641,w:35,h:35,d:11,c:0x2b3034},
   {n:'Zawias: lewa, dół (lewa)',layer:'Zawiasy',x:11.5,y:1825.5,z:641,w:35,h:35,d:11,c:0x2b3034},
-  {n:'Zawias: lewa, dół (lewa)',layer:'Zawiasy',x:11.5,y:2078.5,z:641,w:35,h:35,d:11,c:0x2b3034},
-  {n:'Zawias: nad maszynami, góra (prawa)',layer:'Zawiasy',x:1179.5,y:2281.5,z:641,w:35,h:35,d:11,c:0x2b3034},
-  {n:'Zawias: nad maszynami, góra (prawa)',layer:'Zawiasy',x:1179.5,y:2534.5,z:641,w:35,h:35,d:11,c:0x2b3034},
+  {n:'Zawias: lewa, dół (lewa)',layer:'Zawiasy',x:11.5,y:2080,z:641,w:35,h:35,d:11,c:0x2b3034},
+  {n:'Zawias: nad maszynami, góra (prawa)',layer:'Zawiasy',x:1179.5,y:2283,z:641,w:35,h:35,d:11,c:0x2b3034},
+  {n:'Zawias: nad maszynami, góra (prawa)',layer:'Zawiasy',x:1179.5,y:2537.5,z:641,w:35,h:35,d:11,c:0x2b3034},
   {n:'Zawias: nad maszynami, dół (prawa)',layer:'Zawiasy',x:1179.5,y:1825.5,z:641,w:35,h:35,d:11,c:0x2b3034},
-  {n:'Zawias: nad maszynami, dół (prawa)',layer:'Zawiasy',x:1179.5,y:2078.5,z:641,w:35,h:35,d:11,c:0x2b3034},
-  {n:'Zawias: prawa, góra (otwierany) (prawa)',layer:'Zawiasy',x:1457,y:2281.5,z:641,w:35,h:35,d:11,c:0x2b3034},
-  {n:'Zawias: prawa, góra (otwierany) (prawa)',layer:'Zawiasy',x:1457,y:2534.5,z:641,w:35,h:35,d:11,c:0x2b3034},
+  {n:'Zawias: nad maszynami, dół (prawa)',layer:'Zawiasy',x:1179.5,y:2080,z:641,w:35,h:35,d:11,c:0x2b3034},
+  {n:'Zawias: prawa, góra (otwierany) (prawa)',layer:'Zawiasy',x:1457,y:2283,z:641,w:35,h:35,d:11,c:0x2b3034},
+  {n:'Zawias: prawa, góra (otwierany) (prawa)',layer:'Zawiasy',x:1457,y:2537.5,z:641,w:35,h:35,d:11,c:0x2b3034},
   {n:'Zawias: prawa, dół (prawa)',layer:'Zawiasy',x:1694.5,y:1825.5,z:641,w:35,h:35,d:11,c:0x2b3034},
-  {n:'Zawias: prawa, dół (prawa)',layer:'Zawiasy',x:1694.5,y:2078.5,z:641,w:35,h:35,d:11,c:0x2b3034},
+  {n:'Zawias: prawa, dół (prawa)',layer:'Zawiasy',x:1694.5,y:2080,z:641,w:35,h:35,d:11,c:0x2b3034},
+  {n:'Zawias: prawa dolna, rząd 1 (prawa)',layer:'Zawiasy',x:1621.5,y:85.5,z:641,w:35,h:35,d:11,c:0x2b3034},
+  {n:'Zawias: prawa dolna, rząd 1 (prawa)',layer:'Zawiasy',x:1621.5,y:379.0,z:641,w:35,h:35,d:11,c:0x2b3034},
+  {n:'Zawias: lewa dolna L1 (prawa)',layer:'Zawiasy',x:573.5,y:85.5,z:641,w:35,h:35,d:11,c:0x2b3034},
+  {n:'Zawias: lewa dolna L1 (prawa)',layer:'Zawiasy',x:573.5,y:597.5,z:641,w:35,h:35,d:11,c:0x2b3034},
+  {n:'Zawias: lewa dolna L1 (prawa)',layer:'Zawiasy',x:573.5,y:1110.5,z:641,w:35,h:35,d:11,c:0x2b3034},
+  {n:'Zawias: lewa dolna L1 (prawa)',layer:'Zawiasy',x:573.5,y:1622.5,z:641,w:35,h:35,d:11,c:0x2b3034},
   {n:'Zawias: prawa dolna, wysoki front (prawa)',layer:'Zawiasy',x:1694.5,y:582.0,z:641,w:35,h:35,d:11,c:0x2b3034},
   {n:'Zawias: prawa dolna, wysoki front (prawa)',layer:'Zawiasy',x:1694.5,y:1102.0,z:641,w:35,h:35,d:11,c:0x2b3034},
   {n:'Zawias: prawa dolna, wysoki front (prawa)',layer:'Zawiasy',x:1694.5,y:1622.5,z:641,w:35,h:35,d:11,c:0x2b3034},
 
 
   /* Uchwyty IKEA GUBBARP, biały, 116 mm (rozstaw otworów 96, szerokość 21, wysokość od frontu 27). Otwory pod uchwyty wykonuje użytkownik samodzielnie, nie ma ich w nawiertach. */
-  {n:'Uchwyt GUBBARP przy F1',layer:'Uchwyty',x:573,y:2249,z:658,w:21,h:116,d:27,c:0xf4f4f4},
-  {n:'Uchwyt GUBBARP przy F2',layer:'Uchwyty',x:573,y:2030,z:658,w:21,h:116,d:27,c:0xf4f4f4},
-  {n:'Uchwyt GUBBARP przy F3',layer:'Uchwyty',x:636,y:2249,z:658,w:21,h:116,d:27,c:0xf4f4f4},
-  {n:'Uchwyt GUBBARP przy F4',layer:'Uchwyty',x:636,y:2030,z:658,w:21,h:116,d:27,c:0xf4f4f4},
-  {n:'Uchwyt GUBBARP przy F5',layer:'Uchwyty',x:1242,y:2249,z:658,w:21,h:116,d:27,c:0xf4f4f4},
-  {n:'Uchwyt GUBBARP przy F7',layer:'Uchwyty',x:1242,y:2030,z:658,w:21,h:116,d:27,c:0xf4f4f4},
+  {n:'Uchwyt GUBBARP przy F1',layer:'Uchwyty',x:573,y:2250.5,z:658,w:21,h:116,d:27,c:0xf4f4f4},
+  {n:'Uchwyt GUBBARP przy F2',layer:'Uchwyty',x:573,y:2031.5,z:658,w:21,h:116,d:27,c:0xf4f4f4},
+  {n:'Uchwyt GUBBARP przy F3',layer:'Uchwyty',x:636,y:2250.5,z:658,w:21,h:116,d:27,c:0xf4f4f4},
+  {n:'Uchwyt GUBBARP przy F4',layer:'Uchwyty',x:636,y:2031.5,z:658,w:21,h:116,d:27,c:0xf4f4f4},
+  {n:'Uchwyt GUBBARP przy F5',layer:'Uchwyty',x:1242,y:2250.5,z:658,w:21,h:116,d:27,c:0xf4f4f4},
+  {n:'Uchwyt GUBBARP przy F7',layer:'Uchwyty',x:1242,y:2031.5,z:658,w:21,h:116,d:27,c:0xf4f4f4},
+  {n:'Uchwyt GUBBARP przy F8',layer:'Uchwyty',x:1242,y:330.5,z:658,w:21,h:116,d:27,c:0xf4f4f4},
+  {n:'Uchwyt GUBBARP przy F10',layer:'Uchwyty',x:26,y:942,z:658,w:21,h:116,d:27,c:0xf4f4f4},
   {n:'Uchwyt GUBBARP przy F9',layer:'Uchwyty',x:1242,y:992,z:658,w:21,h:116,d:27,c:0xf4f4f4},
 
   /* Wciskane podpórki półek Ø5 (półka L = PP z przodu + KP z tyłu kolumny, połączone kołkami w z=385; przesuwane razem). Lewa strona opiera się na KB2 w 4 punktach (z 213 i 355 pod KP, z 417 i 590 pod PP), prawa na PB2 w 2 punktach (z 417, 590). Poziom 489 stoi na konfirmatach (bez podpórek). */
@@ -139,7 +151,7 @@ var ITEMS=[
   {n:'Podpórka półki PP, bok PB2 (poziom 1355)',layer:'Podpórki półek',x:1711,y:1350,z:587,w:7,h:5,d:5,c:0xc0392b},
 
   /* Półki (płyta 18 mm). Dolne moduły stoją na kafelkach, bez płyty dolnej i bez nóżek. Spód pasa frontów (1743 do 1761) zamyka dolne moduły.
-     Pas: moduły kończą się na 2652; płyty 1743, 2188,5 i 2634 (przedziały po 427,5), szczelinę 3 mm między frontami obejmuje płyta środkowa. */
+     Pas (v65, luz pod sufitem 5 mm przy J = 2660): moduły kończą się na 2655; płyty 1743, 2190 i 2637 (przedziały po 429), fronty 454,5, szczelinę 3 mm między frontami obejmuje płyta środkowa. */
   {n:'PP1: Półka przednia (489 do 507)',layer:'Półki',x:1239,y:489,z:367,w:497,h:18,d:273,c:0xe6d7b8},
   {n:'KP1: Półka kolumny, tył (489 do 507)',layer:'Półki',x:1239,y:489,z:183,w:129,h:18,d:184,c:0xe6d7b8},
   {n:'PP2-1: Półka przednia (922 do 940)',layer:'Półki',x:1239.75,y:922,z:385,w:477.5,h:18,d:255,c:0xe6d7b8},
@@ -148,44 +160,44 @@ var ITEMS=[
   {n:'KP2-2: Półka kolumny, tył (1355 do 1373)',layer:'Półki',x:1239.75,y:1355,z:183,w:128,h:18,d:202,c:0xe6d7b8},
   {n:'PP3-1: Półka przednia (1743 do 1761)',layer:'Półki',x:1239,y:1743,z:385,w:479,h:18,d:255,c:0xe6d7b8},
   {n:'KP3-1: Półka kolumny, tył (1743 do 1761)',layer:'Półki',x:1239,y:1743,z:183,w:129,h:18,d:202,c:0xe6d7b8},
-  {n:'PP3-2: Półka przednia (2188,5 do 2206,5)',layer:'Półki',x:1239,y:2188.5,z:385,w:479,h:18,d:255,c:0xe6d7b8},
-  {n:'KP3-2: Półka kolumny, tył (2188,5 do 2206,5)',layer:'Półki',x:1239,y:2188.5,z:183,w:129,h:18,d:202,c:0xe6d7b8},
-  {n:'PP3-3: Półka przednia (2634 do 2652)',layer:'Półki',x:1239,y:2634,z:385,w:479,h:18,d:255,c:0xe6d7b8},
-  {n:'KP3-3: Półka kolumny, tył (2634 do 2652)',layer:'Półki',x:1239,y:2634,z:183,w:129,h:18,d:202,c:0xe6d7b8},
+  {n:'PP3-2: Półka przednia (2190 do 2208)',layer:'Półki',x:1239,y:2190,z:385,w:479,h:18,d:255,c:0xe6d7b8},
+  {n:'KP3-2: Półka kolumny, tył (2190 do 2208)',layer:'Półki',x:1239,y:2190,z:183,w:129,h:18,d:202,c:0xe6d7b8},
+  {n:'PP3-3: Półka przednia (2637 do 2655)',layer:'Półki',x:1239,y:2637,z:385,w:479,h:18,d:255,c:0xe6d7b8},
+  {n:'KP3-3: Półka kolumny, tył (2637 do 2655)',layer:'Półki',x:1239,y:2637,z:183,w:129,h:18,d:202,c:0xe6d7b8},
   {n:'L2P-1: Pas, lewa: spód (1743 do 1761)',layer:'Półki',x:23,y:1743,z:21,w:574,h:18,d:619,c:0xe6d7b8},
   {n:'NWP-1: Pas, nad maszynami: spód (1743 do 1761)',layer:'Półki',x:633,y:1743,z:23,w:570,h:18,d:617,c:0xe6d7b8},
-  {n:'L2P-2: Pas, lewa: środek (2188,5 do 2206,5)',layer:'Półki',x:23,y:2188.5,z:21,w:574,h:18,d:619,c:0xe6d7b8},
-  {n:'NWP-2: Pas, nad maszynami: środek (2188,5 do 2206,5)',layer:'Półki',x:633,y:2188.5,z:23,w:570,h:18,d:617,c:0xe6d7b8},
-  {n:'L2P-3: Pas, lewa: góra (2634 do 2652)',layer:'Półki',x:23,y:2634,z:21,w:574,h:18,d:619,c:0xe6d7b8},
-  {n:'NWP-3: Pas, nad maszynami: góra (2634 do 2652)',layer:'Półki',x:633,y:2634,z:23,w:570,h:18,d:617,c:0xe6d7b8},
+  {n:'L2P-2: Pas, lewa: środek (2190 do 2208)',layer:'Półki',x:23,y:2190,z:21,w:574,h:18,d:619,c:0xe6d7b8},
+  {n:'NWP-2: Pas, nad maszynami: środek (2190 do 2208)',layer:'Półki',x:633,y:2190,z:23,w:570,h:18,d:617,c:0xe6d7b8},
+  {n:'L2P-3: Pas, lewa: góra (2637 do 2655)',layer:'Półki',x:23,y:2637,z:21,w:574,h:18,d:619,c:0xe6d7b8},
+  {n:'NWP-3: Pas, nad maszynami: góra (2637 do 2655)',layer:'Półki',x:633,y:2637,z:23,w:570,h:18,d:617,c:0xe6d7b8},
   /* Wieńce górne (usztywnienie dolnych szafek): pas 100 mm przy froncie, pod samym pasem (y 1725 do 1743), tył do z 640 (front od z 640). */
   {n:'L1W: L1: wieniec górny, przód (1725 do 1743)',layer:'Półki',x:23,y:1725,z:540,w:574,h:18,d:100,c:0xe6d7b8},
-  {n:'LF6: Listwa oporowa za F6, dół (na PP3-2, przyklejona i przykręcona do tyłu F6)',layer:'Półki',x:1505,y:2206.5,z:622,w:200,h:60,d:18,c:0xe6d7b8},
+  {n:'LF6: Listwa oporowa za F6, dół (na PP3-2, przyklejona i przykręcona do tyłu F6)',layer:'Półki',x:1505,y:2208,z:622,w:200,h:60,d:18,c:0xe6d7b8},
   {n:'RDW: Prawa dolna: wieniec górny, przód (1725 do 1743)',layer:'Półki',x:1239,y:1725,z:540,w:479,h:18,d:100,c:0xe6d7b8},
   /* RDW2 (audyt v1, 2026-11-18): wieniec górny tylny, spina górę tylnej części KB2 z PB2 i PT2 (wcześniej KB2 z tyłu u góry nie był niczym usztywniony: KP2 na podpórkach, KT1 zdejmowane). */
   {n:'RDW2: Prawa dolna: wieniec górny, tył (1725 do 1743)',layer:'Półki',x:1239,y:1725,z:385,w:479,h:18,d:100,c:0xe6d7b8},
   /* Kuweta (decyzja 2026-11-18): we wnęce prawego dołu zamiast frontu F8 (F8 usunięty). Wnęka 406 × 489, głębokość od PT1 (z 458) do frontów (z 640) = 182; kuweta 600 × 400 × 400 węższym końcem do środka, wystaje 418 przed fronty. */
-  {n:'Kuweta we wnęce po F8 (600 × 400 × 400)',layer:'Dodatki',x:1242,y:0,z:458,w:400,h:400,d:600,c:0xbfa98a},
+  {n:'Kuweta we wnęce po F8 (600 × 400 × 400)',layer:'Kuweta we wnęce',x:1242,y:0,z:458,w:400,h:400,d:600,c:0xbfa98a},
 
   /* Ścianki boczne (płyta 18 mm). Boki stoją prosto na kafelkach. Lewa ściana pokoju jest lewym bokiem dolnej lewej szafki (odkurzacz bezprzewodowy, gniazdko GN1).
      Moduł nad maszynami ma własne boki (po 1 mm luzu od boków sąsiadów). */
-  {n:'L1B1: L1: bok prawy (przy maszynach)',layer:'Ścianki boczne',x:597,y:0,z:3,w:18,h:1743,d:655,c:0xcdbb95},
-  {n:'L2B-1: L2: bok lewy (pas)',layer:'Ścianki boczne',x:5,y:1743,z:3,w:18,h:909,d:637,c:0xcdbb95},
-  {n:'L2B-2: L2: bok prawy (pas)',layer:'Ścianki boczne',x:597,y:1743,z:3,w:18,h:909,d:637,c:0xcdbb95},
+  {n:'L1B1: L1: bok prawy (przy maszynach)',layer:'Ścianki boczne',x:597,y:0,z:3,w:18,h:1743,d:637,c:0xcdbb95},
+  {n:'L2B-1: L2: bok lewy (pas)',layer:'Ścianki boczne',x:5,y:1743,z:3,w:18,h:912,d:637,c:0xcdbb95},
+  {n:'L2B-2: L2: bok prawy (pas)',layer:'Ścianki boczne',x:597,y:1743,z:3,w:18,h:912,d:637,c:0xcdbb95},
   /* Moduł nad maszynami ma własne boki: korpus 606 mm (x 614 do 1220) w szczelinie 608 mm między bokami sąsiadów, wnętrze 570 mm. */
-  {n:'NWB-1: Wnęka: bok lewy (pas)',layer:'Ścianki boczne',x:615,y:1743,z:5,w:18,h:909,d:635,c:0xcdbb95},
-  {n:'NWB-2: Wnęka: bok prawy (pas)',layer:'Ścianki boczne',x:1203,y:1743,z:5,w:18,h:909,d:635,c:0xcdbb95},
+  {n:'NWB-1: Wnęka: bok lewy (pas)',layer:'Ścianki boczne',x:615,y:1743,z:5,w:18,h:912,d:635,c:0xcdbb95},
+  {n:'NWB-2: Wnęka: bok prawy (pas)',layer:'Ścianki boczne',x:1203,y:1743,z:5,w:18,h:912,d:635,c:0xcdbb95},
   {n:'KB1: Kolumna: bok lewy, dół',layer:'Ścianki boczne',x:1221,y:0,z:440,w:18,h:489,d:200,c:0xcdbb95},
   {n:'KB2: Kolumna: bok lewy, środek i góra',layer:'Ścianki boczne',x:1221,y:489,z:165,w:18,h:1254,d:475,c:0xcdbb95},
-  {n:'KB3: Kolumna: bok lewy, pas',layer:'Ścianki boczne',x:1221,y:1743,z:165,w:18,h:909,d:475,c:0xcdbb95},
+  {n:'KB3: Kolumna: bok lewy, pas',layer:'Ścianki boczne',x:1221,y:1743,z:165,w:18,h:912,d:475,c:0xcdbb95},
   {n:'PB1: Prawa: bok prawy, dół (przy gzymsie)',layer:'Ścianki boczne',x:1645,y:0,z:440,w:18,h:489,d:200,c:0xcdbb95},
   {n:'PB2: Prawa: bok prawy, góra',layer:'Ścianki boczne',x:1718,y:507,z:367,w:18,h:1236,d:273,c:0xcdbb95},
-  {n:'PB3: Prawa: bok prawy, pas',layer:'Ścianki boczne',x:1718,y:1743,z:367,w:18,h:909,d:273,c:0xcdbb95},
+  {n:'PB3: Prawa: bok prawy, pas',layer:'Ścianki boczne',x:1718,y:1743,z:367,w:18,h:912,d:273,c:0xcdbb95},
 
   /* Ścianki tylne (płyta 18 mm, wpuszczone między boki, tył równo z tylną krawędzią boków). Osobna warstwa. Tył prawej szafki przy otworze wywiewu jest rozcięty (otwór 140 × 140 na 2339 do 2479). */
   {n:'L1T: L1: tył',layer:'Ścianki tylne',x:23,y:0,z:3,w:574,h:1743,d:18,c:0x9c8b6e,o:0.9},
-  {n:'L2T: L2: tył (pas)',layer:'Ścianki tylne',x:23,y:1743,z:3,w:574,h:909,d:18,c:0x9c8b6e,o:0.9},
-  {n:'NWT: Wnęka nad maszynami: tył',layer:'Ścianki tylne',x:633,y:1743,z:5,w:570,h:909,d:18,c:0x9c8b6e,o:0.9},
+  {n:'L2T: L2: tył (pas)',layer:'Ścianki tylne',x:23,y:1743,z:3,w:574,h:912,d:18,c:0x9c8b6e,o:0.9},
+  {n:'NWT: Wnęka nad maszynami: tył',layer:'Ścianki tylne',x:633,y:1743,z:5,w:570,h:912,d:18,c:0x9c8b6e,o:0.9},
   {n:'PT1: Prawa dół: tył (kolumna i część przed pionem)',layer:'Ścianki tylne',x:1239,y:0,z:440,w:406,h:489,d:18,c:0x9c8b6e,o:0.9},
   /* KT1A/B/C (v60, audyt v1 A2, decyzja 2026-11-18): szer. 124 (x 1244-1368, 3 mm luzu na łby wkrętów w ramieniu kątownika na KB2),
      stoją na kątowniku-podporze (ramię poziome 2 mm pod płytą, z 158-183, poza półkami KP), trzymane 2 magnesami do ramion za płytą.
@@ -217,13 +229,13 @@ var ITEMS=[
   {n:'Kątownik KT1C, ramię przy boku KB2',layer:'Kątowniki pod KT1',x:1239,y:1688,z:165,w:2,h:25,d:25,c:0x9aa5ad},
   {n:'Kątownik KT1C, ramię za płytą',layer:'Kątowniki pod KT1',x:1239,y:1688,z:163,w:25,h:25,d:2,c:0x9aa5ad},
   {n:'Magnes Ø10 x 3 w KT1C (gniazdo wiercisz sam)',layer:'Kątowniki pod KT1',x:1250,y:1695,z:165,w:10,h:10,d:3,c:0x222222},
-  {n:'KT2: Kolumna: tył, pas (1743-2652)',layer:'Ścianki tylne',x:1239,y:1743,z:165,w:129,h:909,d:18,c:0x9c8b6e,o:0.9},
+  {n:'KT2: Kolumna: tył, pas (1743-2655)',layer:'Ścianki tylne',x:1239,y:1743,z:165,w:129,h:912,d:18,c:0x9c8b6e,o:0.9},
   {n:'PT2: Prawa: tył, dół i środek (507-1743)',layer:'Ścianki tylne',x:1371,y:507,z:367,w:347,h:1236,d:18,c:0x9c8b6e,o:0.9},
-  {n:'PT3: Prawa: tył, pas (1743-2652), otwór Ø127 pod kanał wiercony samodzielnie: środek 253 od lewej, 234 od góry krawędzi',layer:'Ścianki tylne',x:1371,y:1743,z:367,w:347,h:909,d:18,c:0x9c8b6e,o:0.9},
+  {n:'PT3: Prawa: tył, pas (1743-2655), otwór Ø127 pod kanał wiercony samodzielnie: środek 253 od lewej, 237 od góry krawędzi',layer:'Ścianki tylne',x:1371,y:1743,z:367,w:347,h:912,d:18,c:0x9c8b6e,o:0.9},
   /* Wzmocnienie lewej dolnej szafki: lewy bok 18 mm z wycięciem 100 × 100 pod gniazdko GN1 (z 192 do 292, y 868 do 968),
      płyta dolna 18 mm (listwy tylne zbędne, rolę ramy przejął tył 18 mm). Odkurzacz bezprzewodowy po złożeniu 700 mm, góra 1600. */
-  {n:'L1B2: L1: bok lewy (jedna formatka; wycięcie pod gniazdko GN1 100×100 robi użytkownik: y 868-968, z 192-292)',layer:'Ścianki boczne',x:5,y:0,z:3,w:18,h:1743,d:655,c:0xcdbb95},
-  /* Moduły dolne stoją bezpośrednio na podłodze: bez stopek, bez płyty dolnej (y = 0). */
+  {n:'L1B2: L1: bok lewy (jedna formatka; wycięcie pod gniazdko GN1 100×100 robi użytkownik: y 868-968, z 192-292)',layer:'Ścianki boczne',x:5,y:0,z:3,w:18,h:1743,d:637,c:0xcdbb95},
+  /* L1B1, L1B2 (v65): głębokość 637 (było 655), jak boki L2 – z przodu miejsce na front F10 (z 640–658). Moduły dolne stoją bezpośrednio na podłodze: bez stopek, bez płyty dolnej (y = 0). */
 ];
 
 return {
@@ -248,6 +260,19 @@ return {
     var k=/^Kątownik (KT1[ABC])/.exec(it.n);if(k){return h.back(new RegExp('^'+k[1]+':'))||null;}
     return undefined;
   },
+  variants:[{
+    id:'variantKuweta',
+    label:'Kuweta we wnęce zamiast frontu F8 (tak jest używane)',
+    layer:'Kuweta we wnęce', /* warstwa widoczna tylko w tym wariancie */
+    apply:function(on,h){
+      function inF8(it){if((it.layer!=='Zawiasy'&&it.layer!=='Uchwyty')||!it.w)return false;var cx=it.x+it.w/2,cy=it.y+it.h/2;return cx>=1222.5&&cx<=1661.5&&cy>=3&&cy<=496.5;}
+      h.pick.forEach(function(m){var it=m.userData.info;
+        if((it.layer==='Fronty'&&/^F8:/.test(it.n))||inF8(it)){m.visible=on?false:h.layerOn(it.layer);}});
+      (h.layers['Numeracja frontów']||[]).forEach(function(sp){var it=sp.userData.item;
+        if(it&&/^F8:/.test(it.n))sp.visible=on?false:h.layerOn('Numeracja frontów');});
+      h.variantItems.forEach(function(m){m.visible=on;});
+    }
+  }],
   items:ITEMS
 };
 })();

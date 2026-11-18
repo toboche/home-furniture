@@ -262,3 +262,10 @@ Sekcja C (zmiany w `wspolne/pipeline/`: kolizje otworów lico A–lico B i kraw�
 ## 2026-11-18 – pomiary kontrolne: wszystkie OK (v64)
 - Użytkownik zmierzył wszystkie wymiary z listy kontrolnej (weryfikacja.md): wszystkie w granicach „dobry wynik".
 - Sufit: najniższy punkt 2661 w jednym miejscu (lewy przedni róg przy lewej ścianie); przyjęte J = 2660. Korpusy i fronty kończą się na 2652: luz pod sufitem 8 mm (wymóg ≥ 5 dla wsuwania pasów od frontu: spełniony). Szafki bez zmian; środek otworu wentylacyjnego bez zmian (y 2418, sufit nad otworem 2661).
+
+## 2026-11-18 – luz pod sufitem 5 mm, fronty F8 i F10 na zapas (v65)
+- Luz pod sufitem 5 mm (było 8): pasy (L2, NW, prawy pas) wyższe o 3 mm – boki i tyły 912 (było 909), półka środkowa 2190 (było 2188,5), górna 2637–2655 (było 2634–2652). Fronty pasa 454,5 (było 453): dolne 1743–2197,5, górne 2200,5–2655, szczelina 3. Zawiasy, uchwyty, LF6 i kątowniki F6 przesunięte razem z frontami. Środek otworu wentylacyjnego bez zmian (y 2418): w F6 217,5 od dolnej / 237 od górnej krawędzi, w PT3 253 od lewej / 237 od górnej.
+- F8 wraca do zamówienia jako front ZAPASOWY (439 × 493,5, 2 puszki, zawiasy po prawej, nawierty prowadników w PB1 jak dawniej). Kuweta zostaje we wnęce; w widoku przełącznik „Kuweta we wnęce zamiast frontu F8". Przy montażu F8: 2 ograniczniki 70T3553 (gzyms na prawej ścianie), 2 zawiasy 71B3590, 2 prowadniki 173H7100.
+- F10: front lewej dolnej szafki L1 (607 × 1737, y 3–1740), na zapas: 4 puszki (środki 103, 615, 1128, 1640 od dołu), zawiasy po PRAWEJ (przy L1B1; po lewej przeszkadzałoby gniazdko GN3/GN4 wystające 15 mm przed szafkę), w L1B1 BEZ nawiertów pod prowadniki (decyzja użytkownika). Boki L1B1/L1B2 skrócone do głębokości 637 (było 655, do z 640), żeby front zmieścił się przed nimi – jak boki L2.
+- Wyniki v65: formatki 43 pozycje / 55 sztuk / 16,61 m²; 428 otworów, 58 połączeń, 0 kolizji; 154 konfirmaty, 21 puszek, 30 nawiertów pilotowych prowadników, 26 widocznych łbów.
+- Zamówienie: opis dla rozmowy o zamówieniu w `zamowienie.md`.
