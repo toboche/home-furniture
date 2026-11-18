@@ -135,6 +135,12 @@ USTALENIA Z KALKULATORA:
 - Osłony przewodów NO-1, NO-2 zdejmowane (dostęp do przewodów): bez konfirmatów; u góry 2 kątowniki pod półką NS-1 / NS-4
   (niewidoczne), na dole 2 zatrzaski magnetyczne na bokach za osłoną, blaszki na tylnym licu osłony. Zdjęcie: odkręcić
   kątowniki i odciągnąć dół osłony. Korpus dolny poniżej 335 trzymają półka NS-1 / NS-4 i plecy NT nad nią.
+- WYMIARY Z POMIARÓW WERYFIKACYJNYCH (2026-11-18, wieczór): pion pochylony (PX 692 na dole, 700 na samej górze; PZ 563–573),
+  prawa ściana przy ścianie tylnej najbliżej 1829 od lewej (AT = PX + pion–ściana), ściana przednia przy lewej 1488 od tylnej.
+  Szafka na wprost 703–1825 (szerokość 1122, połowy 534; było 705–1821): luz 3 do pionu na samej górze, 4 do prawej ściany.
+  Narożnik: front szafki na wprost = tył boku LB1 = 576 (3 przed pionem 573; było 583 = PZ + 3 + 18, te 18 nie były potrzebne,
+  bo LB1 stoi przed frontem szafki na wprost); szafka na wprost głęboka 571 (było 578). Szafka po lewej 576–1485
+  (długość 909, było 583–1478), głębokość 698 (było 700). Fronty: F1, F2, F3 530, F4 869. Przewód wentylacyjny docięty o ok. 89.
 - Pomiary weryfikacyjne (`weryfikacja.md`): sufit 2587, 2589, 2589 (każdy powtórzony 4 razy); przewody wodne nie są zagięte w stronę pokoju;
   GZ1 333; puszka gniazdka nie wystaje. LB2 przy pionie stoi ok. 3 mm od ściany przedniej (T = 919 zmierzone przy pionie);
   12 mm wychodziło z G = 1490 mierzonego przy prawej ścianie (model rysuje ścianę przednią prosto).

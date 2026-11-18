@@ -10,12 +10,13 @@
 var HF_MODEL=(function(){
 'use strict';
 /* ---------- pomiary (pomiary.md) ---------- */
-var A=1825;            /* szerokość: lewa–prawa ściana */
+var A=1825;            /* szerokość: lewa–prawa ściana przy ścianie przedniej */
+var AT=1829;           /* szerokość przy ścianie tylnej (PX + pion–prawa ściana, najmniejsza): tu stoi szafka na wprost */
 var G=1490;            /* głębokość: tylna–przednia ściana */
 var J=2586;            /* wysokość, najmniejsza (przy drzwiach) */
-var PX=692, PXM=702;   /* wysięg pionu od lewej ściany: przy podłodze / największy (lico pionu nie jest pionowe) */
-var PZ=562;            /* wysięg pionu od tylnej ściany */
-var T=919;             /* od lica pionu do ściany przedniej (najmniejszy) */
+var PX=692, PXM=700;   /* wysięg pionu od lewej ściany: przy podłodze / największy (lico pionu nie jest pionowe) */
+var PZ=563, PZM=573;   /* wysięg pionu od tylnej ściany: najmniejszy / największy */
+var T=925;             /* od lica pionu do ściany przedniej (najmniejszy) */
 var DX=164, DW=694, DH=2014;   /* drzwi: od prawej ściany, szerokość i wysokość w świetle ościeżnicy */
 var W1=2415, W2=317, W3=130, W4=120;   /* wylot wentylacyjny: wysokość środka, od lewej ściany, średnica, wysięg od lica pionu */
 var GZ1=333, GZ2=129, GZ3=927;         /* gzyms: wysokość, wysięg od lewej ściany, długość od pionu */
@@ -32,11 +33,11 @@ var ODS=5;             /* odsunięcie korpusu od ściany za nim (regulacja przy 
 var SZCZ=2;            /* szczelina wokół frontów chowanych (2026-11-18: 2 zamiast 3, więcej regulacji zawiasów) */
 var HW=2120;           /* górna powierzchnia wieńca części otwartej = góra korpusów dolnych, dół korpusów górnych */
 var HG=J-LUZS;         /* góra szafek: 2582 */
-var ZF=PZ+LUZ+P;       /* płaszczyzna przodu szafki na wprost: 583 */
-var XL=PXM+LUZ;        /* płaszczyzna przodu szafki po lewej: 705 */
-var XP=A-LUZ-1;        /* prawy bok szafki na wprost: 1821 (luz 4 przy prawej ścianie, żeby połowy miały po 531) */
-var XM=(XL+XP)/2;      /* oś przegrody: 1263 (połowy po 531) */
-var ZP=PZ+T-LUZ;       /* koniec szafki po lewej przy ścianie przedniej: 1478 */
+var ZF=PZM+LUZ;        /* płaszczyzna przodu szafki na wprost = tył boku LB1: 576 (3 przed najdalszym punktem pionu; do 2026-11-18: PZ + 3 + 18 = 583) */
+var XL=PXM+LUZ;        /* płaszczyzna przodu szafki po lewej = lewy bok szafki na wprost: 703 */
+var XP=AT-LUZ-1;       /* prawy bok szafki na wprost: 1825 (luz 4 przy prawej ścianie; szerokość 1122, połowy po 534) */
+var XM=(XL+XP)/2;      /* oś przegrody: 1264 (połowy po 534) */
+var ZP=PZ+T-LUZ;       /* koniec szafki po lewej przy ścianie przedniej: 1485 */
 var HD=HW-P-65;        /* oś drążka: 65 pod spodem wieńca = 2037 */
 var HK1=1000;          /* przedział na krótsze kurtki (połowa lewa szafki na wprost, szafka po lewej) */
 var YP=[GZ1+2];        /* spody półek na buty: 335 (2 mm nad gzymsem), dalej dwa przedziały po równo */
@@ -166,7 +167,7 @@ szuflada('S2','F4','SZ2 (L)',true,ZP-ZF-2*P,NL2,YS,{x0:ODS+P,x1:XL,z0:ZF+P,z1:ZP
 
 return {
   title:'Garderoba 3D',
-  room:{W:A,D:G,H:J},
+  room:{W:AT,D:G,H:J},   /* ściany rysowane prosto: szerokość przy ścianie tylnej (przy przedniej A = 1825) */
   wallThickness:100,
   openings:[{wall:'przod',pos:A-DX-DW,w:DW,y:0,h:DH}],
   views:{iso:[3.3,2.7,3.6],front:[0.91,1.3,4.9],top:[0.91,5.6,1.15],left:[-3.6,1.5,0.75]},

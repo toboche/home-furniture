@@ -1,28 +1,28 @@
 ﻿KOD;NAZWA;DL;SZ;SZT;OKLEINA;NAWIERTY;UWAGI
-NB;N dół: boki (lewy przy pionie, prawy przy prawej ścianie);2120;578;2;1DL + 1SZ (dół);KONFIRMATY;"DOLNA KRAWĘDŹ OKLEJONA ABS (stoi na kafelkach; w kalkulatorze dodać ręcznie), ślizgacze w razie potrzeby"
-NP;N dół: przegroda środkowa (od podłogi do wieńca NW);2102;560;1;1DL + 1SZ (dół);KONFIRMATY;"DOLNA KRAWĘDŹ OKLEJONA ABS (stoi na kafelkach; w kalkulatorze dodać ręcznie), ślizgacze w razie potrzeby"
-NT;N dół: plecy (od 335 do wieńca NW, nad osłonami przewodów);1767;1080;1;;KONFIRMATY;
-NW;N dół: wieniec na 2120 (sufit części otwartej, cała szerokość);1080;578;1;1DL;KONFIRMATY;
-NS;"N dół: półki nad butami (335, 596, 858 w połowie lewej; 335, 596 w prawej)";560;531;5;1SZ;KONFIRMATY;
-NK;N dół: płyta pod kurtkami, połowa lewa (1084);560;531;1;1SZ;KONFIRMATY;
-NO;N dół: osłony przewodów wodnych, zdejmowane (od podłogi do 335, 55 od ściany);531;335;2;1DL (dół);BRAK;"bez konfirmatów: u góry 2 kątowniki pod półką, na dole 2 zatrzaski magnetyczne (blaszki na tylnym licu); DOLNA KRAWĘDŹ OKLEJONA ABS (stoi na kafelkach; w kalkulatorze dodać ręcznie), ślizgacze w razie potrzeby"
-GNB;N góra: boki (zawiasy F1 w GNB-1, F2 w GNB-2);578;462;2;1SZ;KONFIRMATY + NAWIERTY PILOTOWE Ø3 × 12 POD PROWADNIKI ZAWIASÓW;
-GND;N góra: dno;1080;578;1;1DL;KONFIRMATY;korpus górny przykręcony do dolnego wkrętami przez dno (patrz ustalenia.md)
-GNG;N góra: wieniec górny;1080;578;1;1DL;KONFIRMATY;
-GNP;N góra: przegroda środkowa (TIP-ON F1 i F2 z obu stron);560;426;1;1SZ;KONFIRMATY;
-GNT;N góra: plecy;1080;426;1;;KONFIRMATY;
-LB1;L dół: bok przy pionie;2120;700;1;1DL + 1SZ (dół);KONFIRMATY;"WYCIĘCIE NAROŻNIKA 184 × 335 (dolny narożnik przy ścianie lewej, wokół gzymsu i rury): w kalkulatorze jako wycięcie albo wykonuje użytkownik; DOLNA KRAWĘDŹ OKLEJONA ABS (stoi na kafelkach; w kalkulatorze dodać ręcznie), ślizgacze w razie potrzeby"
-LB2;L dół: bok przy ścianie przedniej;2120;700;1;1DL + 1SZ (dół);KONFIRMATY + NAWIERT ŚRODKA Ø5 × 5;"WYCIĘCIE NAROŻNIKA 129 × 335 (dolny narożnik przy ścianie lewej, wokół gzymsu): w kalkulatorze jako wycięcie albo wykonuje użytkownik; otwór na gniazdko wierci użytkownik otwornicą wg nawiertu środka; DOLNA KRAWĘDŹ OKLEJONA ABS (stoi na kafelkach; w kalkulatorze dodać ręcznie), ślizgacze w razie potrzeby"
-LT;L dół: plecy (od 335 do wieńca LW, nad gzymsem);1767;859;1;;KONFIRMATY;
-LW;L dół: wieniec na 2120 (sufit części otwartej);859;700;1;1DL;KONFIRMATY;
-LS;L dół: półki nad butami (335, 596, 858);859;682;3;1DL;KONFIRMATY;
-LK;L dół: płyta pod kurtkami (1084);859;682;1;1DL;KONFIRMATY;
-GLB1;L góra: bok przy pionie;700;462;1;1SZ;KONFIRMATY + NAWIERT ŚRODKA Ø5 × 5;otwór na przewód wentylacyjny Ø130 (np. Ø135) wierci użytkownik otwornicą wg nawiertu środka
-GLB2;L góra: bok przy ścianie przedniej;700;462;1;1SZ;KONFIRMATY;
-GLD;L góra: dno;859;700;1;1DL;KONFIRMATY;korpus górny przykręcony do dolnego wkrętami przez dno (patrz ustalenia.md)
-GLG;L góra: wieniec górny;859;700;1;1DL;KONFIRMATY;
-GLT;L góra: plecy;859;426;1;;KONFIRMATY;
-F1;Front górny N, połowa lewa (chowany, TIP-ON, zawiasy po lewej);527;422;1;2DL+2SZ;ZAWIASY 2 SZT, PUSZKA Ø35, ŚRODEK 22.5 MM OD KRAWĘDZI (zawias do frontu chowanego);
-F2;Front górny N, połowa prawa (chowany, TIP-ON, zawiasy po prawej);527;422;1;2DL+2SZ;ZAWIASY 2 SZT, PUSZKA Ø35, ŚRODEK 22.5 MM OD KRAWĘDZI (zawias do frontu chowanego);
-F3;"Front szuflady SZ1 (N, połowa lewa; chowany, TIP-ON BLUMOTION)";527;204;1;2DL+2SZ;BRAK (mocowanie frontu MOVENTO na wkręty);
-F4;"Front szuflady SZ2 (L; chowany, TIP-ON BLUMOTION)";855;204;1;2DL+2SZ;BRAK (mocowanie frontu MOVENTO na wkręty);
+NB;N dół: boki (lewy przy pionie, prawy przy prawej ścianie);2120;571;2;1DL + 1SZ (dół);KONFIRMATY;"DOLNA KRAWĘDŹ OKLEJONA ABS (stoi na kafelkach; w kalkulatorze dodać ręcznie), ślizgacze w razie potrzeby"
+NP;N dół: przegroda środkowa (od podłogi do wieńca NW);2102;553;1;1DL + 1SZ (dół);KONFIRMATY;"DOLNA KRAWĘDŹ OKLEJONA ABS (stoi na kafelkach; w kalkulatorze dodać ręcznie), ślizgacze w razie potrzeby"
+NT;N dół: plecy (od 335 do wieńca NW, nad osłonami przewodów);1767;1086;1;;KONFIRMATY;
+NW;N dół: wieniec na 2120 (sufit części otwartej, cała szerokość);1086;571;1;1DL;KONFIRMATY;
+NS;"N dół: półki nad butami (335, 596, 858 w połowie lewej; 335, 596 w prawej)";553;534;5;1SZ;KONFIRMATY;
+NK;N dół: płyta pod kurtkami, połowa lewa (1084);553;534;1;1SZ;KONFIRMATY;
+NO;N dół: osłony przewodów wodnych, zdejmowane (od podłogi do 335, 55 od ściany);534;335;2;1DL (dół);BRAK;"bez konfirmatów: u góry 2 kątowniki pod półką, na dole 2 zatrzaski magnetyczne (blaszki na tylnym licu); DOLNA KRAWĘDŹ OKLEJONA ABS (stoi na kafelkach; w kalkulatorze dodać ręcznie), ślizgacze w razie potrzeby"
+GNB;N góra: boki (zawiasy F1 w GNB-1, F2 w GNB-2);571;462;2;1SZ;KONFIRMATY + NAWIERTY PILOTOWE Ø3 × 12 POD PROWADNIKI ZAWIASÓW;
+GND;N góra: dno;1086;571;1;1DL;KONFIRMATY;korpus górny przykręcony do dolnego wkrętami przez dno (patrz ustalenia.md)
+GNG;N góra: wieniec górny;1086;571;1;1DL;KONFIRMATY;
+GNP;N góra: przegroda środkowa (TIP-ON F1 i F2 z obu stron);553;426;1;1SZ;KONFIRMATY;
+GNT;N góra: plecy;1086;426;1;;KONFIRMATY;
+LB1;L dół: bok przy pionie;2120;698;1;1DL + 1SZ (dół);KONFIRMATY;"WYCIĘCIE NAROŻNIKA 184 × 335 (dolny narożnik przy ścianie lewej, wokół gzymsu i rury): w kalkulatorze jako wycięcie albo wykonuje użytkownik; DOLNA KRAWĘDŹ OKLEJONA ABS (stoi na kafelkach; w kalkulatorze dodać ręcznie), ślizgacze w razie potrzeby"
+LB2;L dół: bok przy ścianie przedniej;2120;698;1;1DL + 1SZ (dół);KONFIRMATY + NAWIERT ŚRODKA Ø5 × 5;"WYCIĘCIE NAROŻNIKA 129 × 335 (dolny narożnik przy ścianie lewej, wokół gzymsu): w kalkulatorze jako wycięcie albo wykonuje użytkownik; otwór na gniazdko wierci użytkownik otwornicą wg nawiertu środka; DOLNA KRAWĘDŹ OKLEJONA ABS (stoi na kafelkach; w kalkulatorze dodać ręcznie), ślizgacze w razie potrzeby"
+LT;L dół: plecy (od 335 do wieńca LW, nad gzymsem);1767;873;1;;KONFIRMATY;
+LW;L dół: wieniec na 2120 (sufit części otwartej);873;698;1;1DL;KONFIRMATY;
+LS;L dół: półki nad butami (335, 596, 858);873;680;3;1DL;KONFIRMATY;
+LK;L dół: płyta pod kurtkami (1084);873;680;1;1DL;KONFIRMATY;
+GLB1;L góra: bok przy pionie;698;462;1;1SZ;KONFIRMATY + NAWIERT ŚRODKA Ø5 × 5;otwór na przewód wentylacyjny Ø130 (np. Ø135) wierci użytkownik otwornicą wg nawiertu środka
+GLB2;L góra: bok przy ścianie przedniej;698;462;1;1SZ;KONFIRMATY;
+GLD;L góra: dno;873;698;1;1DL;KONFIRMATY;korpus górny przykręcony do dolnego wkrętami przez dno (patrz ustalenia.md)
+GLG;L góra: wieniec górny;873;698;1;1DL;KONFIRMATY;
+GLT;L góra: plecy;873;426;1;;KONFIRMATY;
+F1;Front górny N, połowa lewa (chowany, TIP-ON, zawiasy po lewej);530;422;1;2DL+2SZ;ZAWIASY 2 SZT, PUSZKA Ø35, ŚRODEK 22.5 MM OD KRAWĘDZI (zawias do frontu chowanego);
+F2;Front górny N, połowa prawa (chowany, TIP-ON, zawiasy po prawej);530;422;1;2DL+2SZ;ZAWIASY 2 SZT, PUSZKA Ø35, ŚRODEK 22.5 MM OD KRAWĘDZI (zawias do frontu chowanego);
+F3;"Front szuflady SZ1 (N, połowa lewa; chowany, TIP-ON BLUMOTION)";530;204;1;2DL+2SZ;BRAK (mocowanie frontu MOVENTO na wkręty);
+F4;"Front szuflady SZ2 (L; chowany, TIP-ON BLUMOTION)";869;204;1;2DL+2SZ;BRAK (mocowanie frontu MOVENTO na wkręty);
