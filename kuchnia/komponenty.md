@@ -46,7 +46,7 @@ punkty z audytu v1 (sekcja B), patrz `ustalenia.md` i rozmowa.
 | POZYCJA | ILOŚĆ | UWAGI |
 |---|---|---|
 | Krótki odcinek rury spiro Ø150 na króciec | z rury 1 m | króciec Ø148,5 zewn., 26 wysokości: rura nachodzi na króciec, opaska/taśma |
-| Kolano 15° Ø150 tłoczone | 2 | przesunięcie 28,5 (do sprawdzenia z kartą kształtek) |
+| Kolano 15° Ø150 tłoczone (ZAPAS, opcjonalnie) | 2 | tylko jeśli pochylona rura (28,5 na ok. 625) nie wejdzie bez naprężeń |
 | Rura spiro Ø150 | 1 m | pion ok. 380 + poziom ok. 170 + wsunięcia |
 | Kolano 90° Ø150 tłoczone | 1 | pod sufitem |
 | Redukcja mimośrodowa 150/125 | 1 | w wąskiej szafce, płaską stroną do ściany głównej, wąskim końcem w rurze ze ścianki (wystaje 115) |
@@ -64,4 +64,3 @@ punkty z audytu v1 (sekcja B), patrz `ustalenia.md` i rozmowa.
 | Przelotka gumowa Ø25 | 1 | otwór w SOT na przewód |
 
 ## Do decyzji
-- Kąt kolan przesunięcia Ø150 po wyborze sklepu (przesunięcie 28,5).

@@ -49,7 +49,7 @@ Pomiary z 2026-11-12 i 2026-11-13 (rozmowa z Claude, zdjęcia kuchni).
 | OK4 | 551 × 290 × 1,5 | kołnierz (ramka ze szkłem) na dole, widoczny od spodu: dno szafki; grubość 1,5 zmierzona na okapie | 550 × 290 (instrukcja); 551 z rysunku 2026-11-16; grubość w modelu 4 do 2026-11-18 |
 | OK5 | 150 | wylot (średnica), wyśrodkowany na szerokości; 49 od tylnej krawędzi kołnierza do tylnej krawędzi wylotu (oś z 138) | zmierzone 2026-11-18 (wieczór); 94 na rysunku liczone od przodu; wcześniej błędnie od tyłu |
 | OK6 | 516 | wymagana szerokość wewnętrzna szafki (A + 2) | |
-| OK8 | 19 / 21 / 16 | wysięg kołnierza poza korpus: z boków; z tyłu 21 (zmierzone); z przodu 290 − 253 − 21 = 16 (DO POTWIERDZENIA) | wcześniej 18,5 z przodu i z tyłu |
+| OK8 | 19 / 19 / 18 | wysięg kołnierza poza korpus: z boków; z przodu 19 od lica korpusu (z nitami efektywnie 16,5–17); z tyłu 290 − 253 − 19 = 18 | zmierzone 2026-11-18; pomiar 21 z tyłu liczony do nitów; wcześniej 18,5 |
 | OK9 | 26 | wysokość króćca wylotu ponad korpus (okap, 2026-11-18) | |
 | OK10 | 35 / 215, 81 | otwory montażowe w boku korpusu: od przodu korpusu (bez kołnierza); 81 nad dołem korpusu; 2 na bok; nawierty Ø3 × 5 | potwierdzone na okapie 2026-11-18 |
 | OK11 | 148,5 | średnica zewnętrzna króćca wylotu; rura nachodzi na króciec | zmierzone 2026-11-18 |

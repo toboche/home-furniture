@@ -42,8 +42,8 @@ var ZRU=RU2+RU/2;      /* oś rury okapu od ściany głównej: 97 */
 var YRU=YS-RU3-RU/2;   /* oś rury okapu: 2577 */
 var YSK=YRU-75-10;     /* góra dna skrzynki na rurę (10 pod końcem Ø150 redukcji; 2026-11-16: było 2502): 2492 */
 var OKW=513, OKG=253, OKH=265;  /* korpus okapu DUO 55 (rysunek techniczny) */
-var OKT=21;            /* kołnierz wystaje za tył korpusu (zmierzone 2026-11-18; z przodu 290 - 253 - 21 = 16, do potwierdzenia) */
-var OKZ=GKS-290+OKT;   /* tył korpusu: 35 */
+var OKF=19;            /* kołnierz wystaje przed lico przodu korpusu (zmierzone 2026-11-18; z nitami efektywnie 16,5–17) */
+var OKZ=GKS-OKF-OKG;   /* tył korpusu: 32 (przód 285) */
 var OKK=1.5;           /* grubość kołnierza (zmierzone 2026-11-18) */
 var ZWY=GKS-290+49+75;  /* oś wylotu Ø150: 49 od tylnej krawędzi kołnierza do tylnej krawędzi wylotu (zmierzone 2026-11-18): 138 */
 var YOK=YP+OKH;        /* góra korpusu okapu: 1776 */
@@ -141,7 +141,7 @@ add([
   {n:'Okap DUO 55: kołnierz ze szkłem 551 × 290 × 1,5 (dno szafki, widoczny od spodu)',layer:'Okap',x:XH-275.5,y:YP-OKK,z:GKS-290,w:551,h:OKK,d:290,c:0x26282b},
   {n:'Okap DUO 55: korpus 513 × 253 × 265',layer:'Okap',x:XH-OKW/2,y:YP,z:OKZ,w:OKW,h:OKH,d:OKG,c:0x6f7377},
   {t:'cyl3',n:'Wylot okapu Ø150 + łącznik spiro',layer:'Rura okapu',ax:'y',px:XH,py:YOK+30,pz:ZWY,r:75,len:60,c:RURA},
-  {t:'cyl3',n:'Przesunięcie do tyłu o 28,5: 2 kolana 15° Ø150 (schemat, kąt do doboru), między SOD i SOP',layer:'Rura okapu',ax:'z',px:XH,py:(YOK+60+YPR)/2,pz:(ZWY+ZPI)/2,r:75,len:ZWY-ZPI+150,c:RURA},
+  {t:'cyl3',n:'Przejście do pionu: rura lekko pochylona (28,5 na ok. 625, ok. 2,6°; schemat), w razie potrzeby 2 kolana 15°',layer:'Rura okapu',ax:'z',px:XH,py:(YOK+60+YPR)/2,pz:(ZWY+ZPI)/2,r:75,len:ZWY-ZPI+150,c:RURA},
   {t:'cyl3',n:'Rura spiro Ø150: pion przy ścianie przez SOP (z matą akustyczną)',layer:'Rura okapu',ax:'y',px:XH,py:(YPR+YKL)/2,pz:ZPI,r:75,len:YKL-YPR,c:RURA},
   {t:'cyl3',n:'Kolano 90° Ø150 tłoczone pod sufitem (schemat)',layer:'Rura okapu',ax:'y',px:XH,py:(YKL+YRU)/2,pz:ZPI,r:75,len:YRU-YKL,c:RURA},
   {t:'cyl3',n:'Rura spiro Ø150: poziomo przez SOB-2 i WSB-1 (otwory Ø160)',layer:'Rura okapu',ax:'x',px:(XH+XRD)/2,py:YRU,pz:ZPI,r:75,len:XRD-XH,c:RURA},

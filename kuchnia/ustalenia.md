@@ -225,11 +225,15 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
 - 2026-11-18 (wieczór): okap zmierzony: korpus 513 × 253 × 265 potwierdzony. Wylot jest bliżej TYŁU: 49 od tylnej
   krawędzi kołnierza do tylnej krawędzi wylotu, kołnierz wystaje za korpus 21 (94 na rysunku liczone od przodu; wcześniej
   pomylone przód z tyłem). Oś wylotu z 138, korpus z 35–288; przesunięcie do pionu Ø150 (z 109,5) tylko 28,5.
-  Wysięg kołnierza z przodu 16 (290 − 253 − 21): DO POTWIERDZENIA, od niego zależą nawierty pod wkręty okapu.
   Króciec Ø148,5 zewn., 26 wysokości: rura Ø150 nachodzi na króciec (pierwszy element: krótki odcinek rury spiro).
   Otwory montażowe: 2 na bok, 81 nad dołem korpusu, 35 i 215 od przodu korpusu: nawierty pilotowe Ø3 × 5 w SOB-1
   i SOB-2 od wnętrza (Y 1592, z 253 i 73). Wycięcie U w WSB-2 i SO 304 zaakceptowane.
   Wycięcie w SOD: szer. 170, R85 wokół osi wylotu, najgłębiej 35 od tylnej krawędzi.
+- 2026-11-18 (wieczór, korekta): kołnierz wystaje 19 przed lico przodu korpusu (nity na obudowie: efektywnie 16,5–17),
+  więc korpus z 32–285, nawierty pod wkręty okapu na z 250 i 70. Oś wylotu bez zmian (z 138, mierzone od kołnierza).
+  Przejście z wylotu (z 138) do pionu przy plecach (z 109,5): użytkownik chce bez kolan 15°, przez lekkie pochylenie
+  rury (28,5 na ok. 625, ok. 2,6°; luz złączy z uszczelką EPDM). Kolana 15° jako zapas. Środek otworu w SOP na z 124
+  (przecięcie pochylonej rury z półką), otwór dalej otwarty do tyłu.
 
 ## Do zmierzenia przy pomiarach weryfikacyjnych w mieszkaniu
 - [ZMIERZONE 2026-11-18: 9–12, SO głębsza do 304] O ile płytki wystają przed ścianę nad nimi.
