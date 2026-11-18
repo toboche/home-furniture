@@ -49,3 +49,8 @@ Przydatne: miernik laserowy, poziomica (najlepiej 2 m), taśma malarska, listwa 
 - Sprawdź z otwartymi drzwiami do garderoby, że wolna podłoga (ok. 1100 × 900) jest wygodna.
 
 Po pomiarach: wyniki wpisać tutaj, różnice nanieść w `pomiary.md`, przeliczyć model (`python3 wspolne/pipeline/run.py garderoba`) i rozkrój.
+
+## Potwierdzenie (2026-11-18, wieczór)
+Użytkownik sprawdził w pomieszczeniu skrajne wymiary szafek po zmianach (szafka na wprost 703–1825 × 5–576, szafka po lewej
+5–703 × 576–1485, wysokość 2582) i potwierdził, że wszystkie mieszczą się w jego pomiarach (liczby nie podane).
+
