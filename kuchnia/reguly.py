@@ -39,8 +39,10 @@ def punkty(face, edge, zakres, pts):
     przed otworem Ø160 pod rurę (z 30-190), żeby konfirmat nie stał nad otworem (KU-14)"""
     if {face, edge} == {'SOT', 'SOP'}:
         return [p for p in pts if abs(p - X_OKAP) > 95]
-    if (face, edge) in (('SOB-2', 'SOW'), ('WSB-1', 'WSW')):
+    if (face, edge) in (('SOB-2', 'SOW'), ('WSB-1', 'WSW'), ('WSB-2', 'WSW')):
         return [215, 265]
+    if (face, edge) == ('WSB-2', 'WST'):     # wycięcie w WSB-2 od tyłu na rurę ze ścianki (Y 2507-2647)
+        return [p for p in pts if not 2490 <= p <= 2665]
     return pts
 
 
@@ -81,6 +83,17 @@ def dodatkowe_otwory(P, parts, loc):
                                    v=loc(q, q['v'], {'y': Y_SOD - 5, 'z': z}[q['v']]), d=5, depth=10,
                                    partner='SOD', axis_n='-', pin=True))
     pilot('SOP', 'A', {'x': X_OKAP, 'z': Z_PION})
+    # zaślepka WSZ zdejmowana: 2 kołki Ø8 wklejone w dolne czoło WSZ, wchodzą w otwory Ø8 x 12 w WSS (KU-07, 2026-11-18)
+    wsz, wss = P['WSZ'], P['WSS']
+    for x in (3000, 3138):
+        eu = (wsz['u'] == 'y')
+        ec = loc(wsz, 'y', 2492)
+        L = wsz['DL'] if eu else wsz['SZ']
+        wsz['holes'].append(dict(kind='EDGE', n_axis_is_u=eu, edge_coord=ec, along=loc(wsz, 'x', x),
+                                 depth=16, d=8, partner='WSS', into=(-1 if ec >= L - 0.01 else 1)))
+        wss['holes'].append(dict(kind='FACE', side='A', u=loc(wss, wss['u'], {'x': x, 'z': 204}[wss['u']]),
+                                 v=loc(wss, wss['v'], {'x': x, 'z': 204}[wss['v']]), d=8, depth=12, partner='WSZ',
+                                 axis_n='-', pin=True, opis='Otwór Ø8 x 12 pod kołek zaślepki WSZ'))
     # przewód zasilający okap wychodzi ze ściany głównej za plecami SOT (ZA1, ZA2): środek otworu Ø25 (audyt v1 KU-10)
     q = P['SOT']
     q['holes'].append(dict(kind='FACE', side='A', u=loc(q, q['u'], {'x': X_ZA, 'y': Y_ZA}[q['u']]),
@@ -162,22 +175,22 @@ ZAW = 'PUSZKA Ø35, ŚRODEK 22,5 MM OD KRAWĘDZI'
 FORMATKI = [
     F('SOB', 'Szafka okapowa: boki (bez dna, okap między bokami)', okleina='1DL',
       nawierty='SOB-1: TRZPIENIE MIMOŚRODÓW + KOŁKI (bez otworów przelotowych); SOB-2: KONFIRMATY; OBA: 2 PODPÓRKI Ø5 x 10 POD SOD',
-      uwagi='SOB-1 widoczny, czyste lico zewnętrzne; SOB-2: środek otworu Ø160 pod rurę Ø150; okap przykręcany 4 wkrętami 3,5 x 16 (81 nad dołem, 35 i 215 od przodu)'),
+      uwagi='SOB-1 widoczny, czyste lico zewnętrzne; SOB-2: środek otworu Ø160 pod rurę Ø150; okap przykręcany 4 wkrętami 3,5 x 16 (35 i 215 od przodu korpusu okapu, korpus 18,5 za przodem szafki)'),
     F('SOT', 'Szafka okapowa: tył', okleina='', nawierty='KONFIRMATY + MIMOŚRODY I KOŁKI (do SOB-1)',
       uwagi='środek otworu Ø25 pod przewód zasilający okap (x 2852, y 2193) wycina użytkownik'),
     F('SOW', 'Szafka okapowa: wieniec górny', okleina='1DL', nawierty='KONFIRMATY + MIMOŚRÓD I KOŁKI (do SOB-1)'),
     F('SOD', 'Szafka okapowa: półka wkładana tuż nad okapem (na 4 podpórkach Ø5)', okleina='1DL', nawierty='BRAK',
-      uwagi='wkładana po montażu okapu; wycięcie od przodu na wylot Ø150: szer. 180 (oś x na środku), zakończone półkolem R90 o środku 179,5 od tylnej krawędzi (najgłębiej 89,5 od tylnej krawędzi); wycina użytkownik, krawędzie silikonem'),
+      uwagi='wkładana po montażu okapu; wycięcie od przodu na wylot Ø150: szer. 180 (oś x na środku), zakończone półkolem R90 o środku 183,5 od tylnej krawędzi (najgłębiej 93,5 od tylnej krawędzi); wycina użytkownik, krawędzie silikonem'),
     F('SOP', 'Szafka okapowa: półka nad okapem', okleina='1DL', nawierty='KONFIRMATY + MIMOŚRÓD I KOŁKI (do SOB-1)',
       uwagi='środek otworu Ø170 pod pion Ø150 (oś 109,5 od ściany = 91,5 od tylnej krawędzi); otwór otwarty do tyłu (wycięcie U szer. 170 od tylnej krawędzi), bo za otworem zostaje tylko 6,5 płyty; wycina użytkownik'),
     F('WSB', 'Wąska szafka: boki', okleina='1DL', nawierty='KONFIRMATY',
-      uwagi='środki otworów pod rurę: WSB-1 Ø160 (pod Ø150), WSB-2 Ø140 (pod Ø125)'),
+      uwagi='WSB-1: środek otworu Ø160 pod Ø150; WSB-2: rura ze ścianki wystaje 115, więc wycięcie U od tylnej krawędzi szer. 140 z półkolem R70 o środku w zaznaczonym punkcie (z 97), żeby szafkę dało się nasunąć na rurę; wycina użytkownik'),
     F('WST', 'Wąska szafka: tył', okleina='', nawierty='KONFIRMATY'),
     F('WSD', 'Wąska szafka: dno', okleina='1DL', nawierty='KONFIRMATY'),
     F('WSW', 'Wąska szafka: wieniec górny', okleina='1DL', nawierty='KONFIRMATY'),
     F('WSS', 'Wąska szafka: dno skrzynki na rurę (płytka półka przed zaślepką)', okleina='1DL', nawierty='KONFIRMATY'),
     F('WSZ', 'Wąska szafka: zaślepka skrzynki na rurę (zdejmowana)', okleina='', nawierty='BRAK',
-      uwagi='widoczne lico przednie; krawędzie schowane; bez konfirmatów, mocowanie zdejmowane od przodu (dostęp do redukcji) do ustalenia'),
+      uwagi='widoczne lico przednie; krawędzie schowane; bez konfirmatów, zdejmowana: 2 kołki Ø8 na dole (wklejone w WSZ), 2 zatrzaski magnetyczne u góry (pod WSW)'),
     F('WSP', 'Wąska szafka: półki stałe', okleina='1DL', nawierty='KONFIRMATY'),
     F('P1', 'Półka LED: ściana lewa (wnęka)', okleina='1DL',
       nawierty='CZOŁA: 3 x Ø8 x 35 pod pręty M8 od ściany lewej (użytkownik pogłębia do 85)',
@@ -186,5 +199,5 @@ FORMATKI = [
       nawierty='CZOŁA: 5 x Ø8 x 35 pod pręty M8 w tylnej krawędzi (użytkownik pogłębia do 85)',
       uwagi='okleina na przedniej krawędzi (1980). Rowek 18,2 × 6 pod profil LED w spodzie frezuje użytkownik (meble.pl nie robi wręgów zachodzących na siebie)'),
     F('F1', 'Front szafki okapowej, otwierany na docisk', okleina='2DL+2SZ',
-      nawierty='ZAWIASY 3 SZT (PRAWA), ' + ZAW, uwagi='3 zawiasy Blum CLIP top 110° bez sprężyny 70T3550.TL + prowadniki 173L6100; 2 x TIP-ON 956A1004 na adapterze 956A1201 (push-to-open)'),
+      nawierty='ZAWIASY 3 SZT (PRAWA), ' + ZAW, uwagi='3 zawiasy Blum CLIP top 110° bez sprężyny 70T3550.TL + prowadniki 173L6100, puszki 337,5, 697,5 i 1064 od dołu frontu (wszystkie nad okapem i SOD); 1 x TIP-ON 956A1004 na adapterze 956A1201 na SOB-1 ok. Y 1850 (drugi w razie potrzeby); szczelina pod TIP-ON ok. 2'),
 ]

@@ -2,27 +2,27 @@
  "formatki": {
   "pozycje": 15,
   "sztuki": 18,
-  "m2": 4.45
+  "m2": 4.46
  },
  "kalkulator": {
-  "typy_formatek": 12,
-  "wiersze": 134
+  "typy_formatek": 14,
+  "wiersze": 142
  },
  "laczniki": {
-  "konfirmaty": 51,
-  "kolki": 6,
-  "otwory_pod_kolki": 6,
-  "otwory_nieprzelotowe": 31,
+  "konfirmaty": 50,
+  "kolki": 8,
+  "otwory_pod_kolki": 8,
+  "otwory_nieprzelotowe": 33,
   "puszki_zawiasow": 3
  },
  "zaslepki": {
   "widoczne": 0,
-  "ukryte": 51,
+  "ukryte": 50,
   "widoczne_wg_czesci": {},
   "widoczne_miejsca": []
  },
  "polaczenia": 22,
- "otwory_lacznie": 152,
+ "otwory_lacznie": 154,
  "kolizje_otworow": 0,
- "strony_arkusza": 12
+ "strony_arkusza": 14
 }

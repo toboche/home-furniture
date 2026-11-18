@@ -133,12 +133,12 @@
 },
 {
 "DL": 1167,
-"SZ": 300,
+"SZ": 304,
 "code": "SOB-1",
 "hi": {
 "x": 2398,
 "y": 2678,
-"z": 300
+"z": 304
 },
 "holes": [
 {
@@ -309,12 +309,12 @@
 },
 {
 "DL": 1167,
-"SZ": 300,
+"SZ": 304,
 "code": "SOB-2",
 "hi": {
 "x": 2932,
 "y": 2678,
-"z": 300
+"z": 304
 },
 "holes": [
 {
@@ -387,7 +387,7 @@
 "partner": "SOP",
 "side": "A",
 "u": 602.0,
-"v": 250.0
+"v": 254.0
 },
 {
 "axis_n": "-",
@@ -433,8 +433,8 @@
 "pin": false,
 "plate": true,
 "side": "B",
-"u": 85.5,
-"v": 263
+"u": 323.0,
+"v": 267
 },
 {
 "axis_n": "-",
@@ -446,8 +446,8 @@
 "pin": false,
 "plate": true,
 "side": "B",
-"u": 117.5,
-"v": 263
+"u": 355.0,
+"v": 267
 },
 {
 "axis_n": "-",
@@ -459,8 +459,8 @@
 "pin": false,
 "plate": true,
 "side": "B",
-"u": 423.0,
-"v": 263
+"u": 683.0,
+"v": 267
 },
 {
 "axis_n": "-",
@@ -472,8 +472,8 @@
 "pin": false,
 "plate": true,
 "side": "B",
-"u": 455.0,
-"v": 263
+"u": 715.0,
+"v": 267
 },
 {
 "axis_n": "-",
@@ -486,7 +486,7 @@
 "plate": true,
 "side": "B",
 "u": 1049.5,
-"v": 263
+"v": 267
 },
 {
 "axis_n": "-",
@@ -499,7 +499,7 @@
 "plate": true,
 "side": "B",
 "u": 1081.5,
-"v": 263
+"v": 267
 }
 ],
 "lo": {
@@ -726,12 +726,12 @@
 },
 {
 "DL": 516,
-"SZ": 282,
+"SZ": 286,
 "code": "SOW",
 "hi": {
 "x": 2914,
 "y": 2678,
-"z": 300
+"z": 304
 },
 "holes": [
 {
@@ -842,12 +842,12 @@
 },
 {
 "DL": 514,
-"SZ": 280,
+"SZ": 284,
 "code": "SOD",
 "hi": {
 "x": 2913,
 "y": 1804,
-"z": 298
+"z": 302
 },
 "holes": [],
 "lo": {
@@ -863,12 +863,12 @@
 },
 {
 "DL": 516,
-"SZ": 282,
+"SZ": 286,
 "code": "SOP",
 "hi": {
 "x": 2914,
 "y": 2122,
-"z": 300
+"z": 304
 },
 "holes": [
 {
@@ -882,7 +882,7 @@
 "partner": "SOB-2"
 },
 {
-"along": 232.0,
+"along": 236.0,
 "d": 4,
 "depth": 35,
 "edge_coord": 0,
@@ -1180,15 +1180,6 @@
 "axis_n": "x",
 "d": 5,
 "kind": "FACE",
-"partner": "WST",
-"side": "A",
-"u": 1117.0,
-"v": 9.0
-},
-{
-"axis_n": "x",
-"d": 5,
-"kind": "FACE",
 "partner": "WSD",
 "side": "A",
 "u": 9.0,
@@ -1210,7 +1201,7 @@
 "partner": "WSW",
 "side": "A",
 "u": 1158.0,
-"v": 68.0
+"v": 215
 },
 {
 "axis_n": "x",
@@ -1219,7 +1210,7 @@
 "partner": "WSW",
 "side": "A",
 "u": 1158.0,
-"v": 250.0
+"v": 265
 },
 {
 "axis_n": "x",
@@ -1371,16 +1362,6 @@
 },
 {
 "along": 405.666667,
-"d": 4,
-"depth": 35,
-"edge_coord": 238,
-"into": -1,
-"kind": "EDGE",
-"n_axis_is_u": false,
-"partner": "WSB-2"
-},
-{
-"along": 50.0,
 "d": 4,
 "depth": 35,
 "edge_coord": 238,
@@ -1604,7 +1585,7 @@
 "partner": "WSB-1"
 },
 {
-"along": 50.0,
+"along": 197,
 "d": 4,
 "depth": 35,
 "edge_coord": 238,
@@ -1614,7 +1595,7 @@
 "partner": "WSB-2"
 },
 {
-"along": 232.0,
+"along": 247,
 "d": 4,
 "depth": 35,
 "edge_coord": 238,
@@ -1724,6 +1705,30 @@
 "kind": "EDGE",
 "n_axis_is_u": true,
 "partner": "WST"
+},
+{
+"axis_n": "-",
+"d": 8,
+"depth": 12,
+"kind": "FACE",
+"opis": "Otwór Ø8 x 12 pod kołek zaślepki WSZ",
+"partner": "WSZ",
+"pin": true,
+"side": "A",
+"u": 186,
+"v": 50
+},
+{
+"axis_n": "-",
+"d": 8,
+"depth": 12,
+"kind": "FACE",
+"opis": "Otwór Ø8 x 12 pod kołek zaślepki WSZ",
+"partner": "WSZ",
+"pin": true,
+"side": "A",
+"u": 186,
+"v": 188
 }
 ],
 "lo": {
@@ -1746,7 +1751,28 @@
 "y": 2660,
 "z": 213
 },
-"holes": [],
+"holes": [
+{
+"along": 50,
+"d": 8,
+"depth": 16,
+"edge_coord": 0,
+"into": 1,
+"kind": "EDGE",
+"n_axis_is_u": false,
+"partner": "WSS"
+},
+{
+"along": 188,
+"d": 8,
+"depth": 16,
+"edge_coord": 0,
+"into": 1,
+"kind": "EDGE",
+"n_axis_is_u": false,
+"partner": "WSS"
+}
+],
 "lo": {
 "x": 2950,
 "y": 2492,

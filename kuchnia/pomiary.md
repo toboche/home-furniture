@@ -33,6 +33,8 @@ Pomiary z 2026-11-12 i 2026-11-13 (rozmowa z Claude, zdjęcia kuchni).
 | RU1 | 125 | rura okapu w ściance (wychodzi poziomo ze ścianki): średnica wewnętrzna | zewnętrzna 130 (pierwszy odczyt 130 był po zewnętrznej stronie) |
 | RU2 | 32 | rura okapu: ściana główna → najbliższy punkt rury (po zewnętrznej) | oś 32 + 65 = 97 |
 | RU3 | 38 | rura okapu: sufit → najbliższy punkt rury (po zewnętrznej) | oś 38 + 65 = 103 pod sufitem |
+| RU4 | 115 | rura okapu wystaje ze ścianki (koniec na X 3093, w wąskiej szafce) | zmierzone 2026-11-18 |
+| PL1 | 9–12 | płytki wystają przed ścianę nad nimi (ryflowane) | zmierzone 2026-11-18; w modelu wcześniej 8 |
 | KR1 | 125 | otwór wentylacji grawitacyjnej w ściance: średnica wewnętrzna | zewnętrzna 130; kratka, nie zasłaniać, otworu nie da się przesunąć |
 | KR2 | 323 | otwór: ściana główna → najbliższy punkt (po zewnętrznej) | |
 | KR3 | 175 | otwór: sufit → najbliższy punkt (po zewnętrznej) | |
@@ -44,8 +46,10 @@ Pomiary z 2026-11-12 i 2026-11-13 (rozmowa z Claude, zdjęcia kuchni).
 | OK1 | 513 | szerokość korpusu okapu (rysunek techniczny) | 514 (A w instrukcji); zmiana 2026-11-16 |
 | OK2 | 253 | głębokość korpusu (rysunek techniczny) | 250; zmiana 2026-11-16 |
 | OK3 | 265 | wysokość korpusu (rysunek techniczny) | 263; zmiana 2026-11-16 |
-| OK4 | 551 × 290 | kołnierz (ramka ze szkłem) na dole, widoczny od spodu: dno szafki; grubość w modelu ok. 4 (bez znaczenia dla zamówienia) | 550 × 290 (instrukcja); 551 z rysunku technicznego 2026-11-16 |
+| OK4 | 551 × 290 × 1,5 | kołnierz (ramka ze szkłem) na dole, widoczny od spodu: dno szafki; grubość 1,5 zmierzona na okapie | 550 × 290 (instrukcja); 551 z rysunku 2026-11-16; grubość w modelu 4 do 2026-11-18 |
 | OK5 | 150 | wylot (średnica), wyśrodkowany na szerokości; 94 od tyłu korpusu do krawędzi wylotu (rysunek techniczny) | 93 (instrukcja); 94 od 2026-11-18 |
 | OK6 | 516 | wymagana szerokość wewnętrzna szafki (A + 2) | |
 | OK8 | 19 / 18,5 | wysięg kołnierza poza korpus: z boków (551 − 513) / 2, z przodu i z tyłu (290 − 253) / 2 | kołnierz na środku (użytkownik, 2026-11-16) |
+| OK9 | 26 | wysokość króćca wylotu ponad korpus (okap, 2026-11-18) | |
+| OK10 | 35 / 215 | otwory montażowe w boku korpusu: od przodu korpusu (bez kołnierza) | potwierdzone na okapie 2026-11-18 |
 | OK7 | 450 | minimalna odległość od płyty indukcyjnej | gaz 650 |

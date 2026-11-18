@@ -201,9 +201,29 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
 - Do `wspolne/` (osobny PR, audyt sekcja C): kolizje otworów z pełną średnicą wycięć wokół pilotów, fronty w
   `otwory.json` i kalkulatorze (puszki F1), okleina vs `BEZ_OKLEINY_PREFIKSY`.
 
+### 2026-11-18: decyzje po audycie v1 i pomiary z okapu
+- KU-02, wariant A: wszystkie zawiasy F1 nad okapem i SOD: Y 1850, 2210, 2576,5 (puszki 337,5, 697,5 i 1064 od dołu
+  frontu). Dolne ok. 337 frontu przed okapem bez zawiasu (akceptowane).
+- KU-09: jeden TIP-ON (956A1004 + adapter 956A1201) na SOB-1 ok. Y 1850; drugi dokupiony, jeśli jeden okaże się za słaby.
+  Szczelina front–korpus pod TIP-ON ok. 2 (regulacja zawiasu).
+- KU-04: pręty M8 zostają; OPCJONALNIE 2 kątowniki 40 × 40 pod tylną krawędzią P1 przy ścianie głównej (przez fugę),
+  dokupione, jeśli P1 będzie się uginać. Na półce nic ciężkiego.
+- KU-07: WSZ na 2 kołkach Ø8 (wklejone w dolne czoło WSZ, otwory Ø8 × 12 w WSS wierci meble.pl) + 2 zatrzaski
+  magnetyczne u góry (pod WSW, przykręca użytkownik).
+- KU-12: FM1 = 142 celowo (dopasowany do wysokości piekarnika nad nim), bez zmian.
+- Pomiary z okapu: kołnierz 1,5 grubości, króciec wylotu 26 nad korpusem, otwory montażowe 35 i 215 od przodu korpusu.
+- Płytki wystają 9–12 (ryflowane), więc szafka okapowa głębsza: 304 zamiast 300 (kołnierz z 14–304, 2 mm od płytek).
+  F1 4 mm dalej do przodu, wąska szafka cofnięta względem F1 o 22 (było 18). Korpus okapu z 32,5–285,5, oś wylotu 201,5,
+  przesunięcie do pionu 92 (było 88).
+- Rura ze ścianki wystaje 115 (do X 3093, w wąskiej szafce): redukcja 150/125 wąskim końcem bezpośrednio w tę rurę
+  (od X 2973), bez odcinka Ø125. W WSB-2 zamiast otworu Ø140 wycięcie U od tylnej krawędzi (szer. 140, R70 wokół osi
+  z 97), żeby szafkę dało się nasunąć na wystającą rurę; konfirmaty WSW–WSB-2 przed wycięciem, bez konfirmatu WST–WSB-2
+  w strefie wycięcia. Alternatywa: skrócić rurę w ściance (wtedy otwór i krótki odcinek Ø125).
+- Otwarte (KU-10): przesunięcie 92 dwoma kolanami 45° wymaga ich złączenia bez prostego odcinka; z łącznikiem wychodzi
+  ok. 130–160. Do decyzji: 2 × 30° z krótkim odcinkiem (ok. 300 w pionie, SOP wtedy ok. Y 2150) albo dobór kształtek.
+
 ## Do zmierzenia przy pomiarach weryfikacyjnych w mieszkaniu
-- O ile płytki wystają przed ścianę nad nimi (górna krawędź płytek przy szafce okapowej). Tył kołnierza okapu jest
-  10 od ściany: przy występie ponad ok. 9 kołnierz oprze się na płytkach (wtedy SO głębsza o różnicę). (2026-11-16)
+- [ZMIERZONE 2026-11-18: 9–12, SO głębsza do 304] O ile płytki wystają przed ścianę nad nimi.
 
 ## Założenia do potwierdzenia
 - Położenie okapu w głąb (2026-11-16): kołnierz z 10–300, korpus na środku kołnierza (z 28,5–281,5), oś wylotu 197,5
@@ -249,3 +269,4 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
 - 2026-11-16: półka LED na prętach M8 (otwory Ø8 × 35 i kołki na styku P3/P1 w zamówieniu); TIP-ON 2 (test 1).
 - 2026-11-16: styk P3/P1 na łącznikach od spodu zamiast kołków; do zmierzenia: występ płytek.
 - 2026-11-18: audyt v1: poprawki bezsporne (P1 bez prętów od ściany głównej, SOP, SOD, WSZ, okleina P1/P3, przewód okapu, mocowanie do ściany).
+- 2026-11-18: zawiasy F1 nad okapem (1850, 2210, 2576,5), 1 TIP-ON, WSZ na kołkach i magnesach, SO 304, redukcja w rurze ze ścianki, wycięcie U w WSB-2.
