@@ -166,28 +166,28 @@
 {
 "axis_n": "-",
 "d": 3,
-"depth": 10,
+"depth": 5,
 "kind": "FACE",
-"opis": "Nawiert pilotowy Ø3 x 10 pod wkręt okapu",
+"opis": "Nawiert pilotowy Ø3 x 5 pod wkręt okapu",
 "partner": "wkręt okapu 3,5 x 16",
 "pilot": true,
 "pin": false,
 "side": "A",
 "u": 81,
-"v": 250.5
+"v": 253
 },
 {
 "axis_n": "-",
 "d": 3,
-"depth": 10,
+"depth": 5,
 "kind": "FACE",
-"opis": "Nawiert pilotowy Ø3 x 10 pod wkręt okapu",
+"opis": "Nawiert pilotowy Ø3 x 5 pod wkręt okapu",
 "partner": "wkręt okapu 3,5 x 16",
 "pilot": true,
 "pin": false,
 "side": "A",
 "u": 81,
-"v": 70.5
+"v": 73
 },
 {
 "axis_n": "-",
@@ -452,28 +452,28 @@
 {
 "axis_n": "-",
 "d": 3,
-"depth": 10,
+"depth": 5,
 "kind": "FACE",
-"opis": "Nawiert pilotowy Ø3 x 10 pod wkręt okapu",
+"opis": "Nawiert pilotowy Ø3 x 5 pod wkręt okapu",
 "partner": "wkręt okapu 3,5 x 16",
 "pilot": true,
 "pin": false,
 "side": "B",
 "u": 81,
-"v": 250.5
+"v": 253
 },
 {
 "axis_n": "-",
 "d": 3,
-"depth": 10,
+"depth": 5,
 "kind": "FACE",
-"opis": "Nawiert pilotowy Ø3 x 10 pod wkręt okapu",
+"opis": "Nawiert pilotowy Ø3 x 5 pod wkręt okapu",
 "partner": "wkręt okapu 3,5 x 16",
 "pilot": true,
 "pin": false,
 "side": "B",
 "u": 81,
-"v": 70.5
+"v": 73
 },
 {
 "axis_n": "-",

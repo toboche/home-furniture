@@ -61,7 +61,7 @@ Z_PION = 109.5       # oś pionu i poziomu Ø150 w SO (ZPI)
 Y_SOD = 1786         # dół półki wkładanej SOD (model.js: YSOD)
 Y_SOP = 2104         # dół półki SOP (model.js: YSOP)
 Y_OKW = 1592         # otwory montażowe okapu: 81 nad dołem korpusu (YP)
-Z_OKW = (250.5, 70.5)  # 35 i 215 od przodu korpusu okapu (z 285,5)
+Z_OKW = (253, 73)    # 35 i 215 od przodu korpusu okapu (z 288)
 X_ZA = 2852          # przewód okapu: A - ZA1
 Y_ZA = 2193          # przewód okapu: YS - ZA2
 
@@ -85,14 +85,14 @@ def dodatkowe_otwory(P, parts, loc):
                                    v=loc(q, q['v'], {'y': Y_SOD - 5, 'z': z}[q['v']]), d=5, depth=10,
                                    partner='SOD', axis_n='-', pin=True))
     pilot('SOP', 'A', {'x': X_OKAP, 'z': Z_PION})
-    # otwory montażowe okapu: nawierty pilotowe Ø3 x 10 od wnętrza SO, po 2 w każdym boku (2026-11-18)
+    # otwory montażowe okapu: nawierty pilotowe Ø3 x 5 od wnętrza SO, po 2 w każdym boku (2026-11-18)
     for code, side in (('SOB-1', 'A'), ('SOB-2', 'B')):
         q = P[code]
         for z in Z_OKW:
             pos = {'y': Y_OKW, 'z': z}
             q['holes'].append(dict(kind='FACE', side=side, u=loc(q, q['u'], pos[q['u']]), v=loc(q, q['v'], pos[q['v']]),
-                                   d=3, depth=10, partner='wkręt okapu 3,5 x 16', axis_n='-', pin=False, pilot=True,
-                                   opis='Nawiert pilotowy Ø3 x 10 pod wkręt okapu'))
+                                   d=3, depth=5, partner='wkręt okapu 3,5 x 16', axis_n='-', pin=False, pilot=True,
+                                   opis='Nawiert pilotowy Ø3 x 5 pod wkręt okapu'))
     # zaślepka WSZ zdejmowana: 2 kołki Ø8 wklejone w dolne czoło WSZ, wchodzą w otwory Ø8 x 12 w WSS (KU-07, 2026-11-18)
     wsz, wss = P['WSZ'], P['WSS']
     for x in (3000, 3138):
@@ -185,12 +185,12 @@ ZAW = 'PUSZKA Ø35, ŚRODEK 22,5 MM OD KRAWĘDZI'
 FORMATKI = [
     F('SOB', 'Szafka okapowa: boki (bez dna, okap między bokami)', okleina='1DL',
       nawierty='SOB-1: TRZPIENIE MIMOŚRODÓW + KOŁKI (bez otworów przelotowych); SOB-2: KONFIRMATY; OBA: 2 PODPÓRKI Ø5 x 10 POD SOD',
-      uwagi='SOB-1 widoczny, czyste lico zewnętrzne; SOB-2: środek otworu Ø160 pod rurę Ø150; okap przykręcany 4 wkrętami 3,5 x 16: nawierty pilotowe Ø3 x 10 od wnętrza na Y 1592 (81 nad dołem), z 250,5 i 70,5 (35 i 215 od przodu korpusu okapu)'),
+      uwagi='SOB-1 widoczny, czyste lico zewnętrzne; SOB-2: środek otworu Ø160 pod rurę Ø150; okap przykręcany 4 wkrętami 3,5 x 16: nawierty pilotowe Ø3 x 5 od wnętrza na Y 1592 (81 nad dołem), z 253 i 73 (35 i 215 od przodu korpusu okapu)'),
     F('SOT', 'Szafka okapowa: tył', okleina='', nawierty='KONFIRMATY + MIMOŚRODY I KOŁKI (do SOB-1)',
       uwagi='środek otworu Ø25 pod przewód zasilający okap (x 2852, y 2193) wycina użytkownik'),
     F('SOW', 'Szafka okapowa: wieniec górny', okleina='1DL', nawierty='KONFIRMATY + MIMOŚRÓD I KOŁKI (do SOB-1)'),
     F('SOD', 'Szafka okapowa: półka wkładana tuż nad okapem (na 4 podpórkach Ø5)', okleina='1DL', nawierty='BRAK',
-      uwagi='wkładana po montażu okapu; wycięcie od przodu na wylot Ø150: szer. 180 (oś x na środku), zakończone półkolem R90 o środku 165 od tylnej krawędzi (najgłębiej 75 od tylnej krawędzi); wycina użytkownik, krawędzie silikonem'),
+      uwagi='wkładana po montażu okapu; wycięcie od przodu na wylot Ø150: szer. 170 (oś x na środku), zakończone półkolem R85 o środku 120 od tylnej krawędzi (najgłębiej 35 od tylnej krawędzi); wycina użytkownik, krawędzie silikonem'),
     F('SOP', 'Szafka okapowa: półka nad okapem', okleina='1DL', nawierty='KONFIRMATY + MIMOŚRÓD I KOŁKI (do SOB-1)',
       uwagi='środek otworu Ø170 pod pion Ø150 (oś 109,5 od ściany = 91,5 od tylnej krawędzi); otwór otwarty do tyłu (wycięcie U szer. 170 od tylnej krawędzi), bo za otworem zostaje tylko 6,5 płyty; wycina użytkownik'),
     F('WSB', 'Wąska szafka: boki', okleina='1DL', nawierty='KONFIRMATY',

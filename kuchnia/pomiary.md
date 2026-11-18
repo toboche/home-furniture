@@ -47,10 +47,10 @@ Pomiary z 2026-11-12 i 2026-11-13 (rozmowa z Claude, zdjęcia kuchni).
 | OK2 | 253 | głębokość korpusu (rysunek techniczny) | 250; zmiana 2026-11-16 |
 | OK3 | 265 | wysokość korpusu (rysunek techniczny) | 263; zmiana 2026-11-16 |
 | OK4 | 551 × 290 × 1,5 | kołnierz (ramka ze szkłem) na dole, widoczny od spodu: dno szafki; grubość 1,5 zmierzona na okapie | 550 × 290 (instrukcja); 551 z rysunku 2026-11-16; grubość w modelu 4 do 2026-11-18 |
-| OK5 | 150 | wylot (średnica), wyśrodkowany na szerokości; 94 od tylnej krawędzi kołnierza do krawędzi wylotu | zmierzone 2026-11-18; wcześniej 94 od tyłu korpusu (rysunek), 93 (instrukcja) |
+| OK5 | 150 | wylot (średnica), wyśrodkowany na szerokości; 49 od tylnej krawędzi kołnierza do tylnej krawędzi wylotu (oś z 138) | zmierzone 2026-11-18 (wieczór); 94 na rysunku liczone od przodu; wcześniej błędnie od tyłu |
 | OK6 | 516 | wymagana szerokość wewnętrzna szafki (A + 2) | |
-| OK8 | 19 / 18,5 | wysięg kołnierza poza korpus: z boków (551 − 513) / 2, z przodu i z tyłu (290 − 253) / 2 | kołnierz na środku (użytkownik, 2026-11-16) |
+| OK8 | 19 / 21 / 16 | wysięg kołnierza poza korpus: z boków; z tyłu 21 (zmierzone); z przodu 290 − 253 − 21 = 16 (DO POTWIERDZENIA) | wcześniej 18,5 z przodu i z tyłu |
 | OK9 | 26 | wysokość króćca wylotu ponad korpus (okap, 2026-11-18) | |
-| OK10 | 35 / 215, 81 | otwory montażowe w boku korpusu: od przodu korpusu (bez kołnierza); 81 nad dołem korpusu; 2 na bok | potwierdzone na okapie 2026-11-18 |
+| OK10 | 35 / 215, 81 | otwory montażowe w boku korpusu: od przodu korpusu (bez kołnierza); 81 nad dołem korpusu; 2 na bok; nawierty Ø3 × 5 | potwierdzone na okapie 2026-11-18 |
 | OK11 | 148,5 | średnica zewnętrzna króćca wylotu; rura nachodzi na króciec | zmierzone 2026-11-18 |
 | OK7 | 450 | minimalna odległość od płyty indukcyjnej | gaz 650 |

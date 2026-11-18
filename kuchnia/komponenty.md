@@ -20,7 +20,7 @@ punkty z audytu v1 (sekcja B), patrz `ustalenia.md` i rozmowa.
 | TIP-ON do drzwi, przedłużony, sprężyna standard | 956A1004 | 1 | drugi dokupić, jeśli jeden za słaby |
 | Adapter prosty przykręcany do TIP-ON | 956A1201 | 1 | na wewnętrznym licu SOB-1 ok. Y 1850, wkręty 3,5 × 15 |
 | Wkręty do płyty 3,5 × 15 | ok. 20 | prowadniki, adaptery, zawiasy |
-| Wkręty okapu 3,5 × 16 | 4 | w komplecie z okapem; nawierty pilotowe Ø3 × 10 robi sklep |
+| Wkręty okapu 3,5 × 16 | 4 | w komplecie z okapem; nawierty pilotowe Ø3 × 5 robi sklep |
 
 ## Mocowanie szafek i półki LED
 | POZYCJA | ILOŚĆ | UWAGI |
@@ -46,7 +46,7 @@ punkty z audytu v1 (sekcja B), patrz `ustalenia.md` i rozmowa.
 | POZYCJA | ILOŚĆ | UWAGI |
 |---|---|---|
 | Krótki odcinek rury spiro Ø150 na króciec | z rury 1 m | króciec Ø148,5 zewn., 26 wysokości: rura nachodzi na króciec, opaska/taśma |
-| Kolano 45° lub 30° Ø150 tłoczone | 2 | DO DECYZJI (KU-10): przesunięcie 73,5 |
+| Kolano 15° Ø150 tłoczone | 2 | przesunięcie 28,5 (do sprawdzenia z kartą kształtek) |
 | Rura spiro Ø150 | 1 m | pion ok. 380 + poziom ok. 170 + wsunięcia |
 | Kolano 90° Ø150 tłoczone | 1 | pod sufitem |
 | Redukcja mimośrodowa 150/125 | 1 | w wąskiej szafce, płaską stroną do ściany głównej, wąskim końcem w rurze ze ścianki (wystaje 115) |
@@ -64,4 +64,4 @@ punkty z audytu v1 (sekcja B), patrz `ustalenia.md` i rozmowa.
 | Przelotka gumowa Ø25 | 1 | otwór w SOT na przewód |
 
 ## Do decyzji
-- Kolana przesunięcia Ø150 (KU-10).
+- Kąt kolan przesunięcia Ø150 po wyborze sklepu (przesunięcie 28,5).
