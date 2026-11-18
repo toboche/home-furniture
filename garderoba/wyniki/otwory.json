@@ -94,24 +94,6 @@
 "axis_n": "x",
 "d": 5,
 "kind": "FACE",
-"partner": "NO-1",
-"side": "B",
-"u": 50,
-"v": 59.0
-},
-{
-"axis_n": "x",
-"d": 5,
-"kind": "FACE",
-"partner": "NO-1",
-"side": "B",
-"u": 285,
-"v": 59.0
-},
-{
-"axis_n": "x",
-"d": 5,
-"kind": "FACE",
 "partner": "NS-1",
 "side": "B",
 "u": 344.0,
@@ -323,24 +305,6 @@
 "axis_n": "x",
 "d": 5,
 "kind": "FACE",
-"partner": "NO-2",
-"side": "A",
-"u": 50,
-"v": 59.0
-},
-{
-"axis_n": "x",
-"d": 5,
-"kind": "FACE",
-"partner": "NO-2",
-"side": "A",
-"u": 285,
-"v": 59.0
-},
-{
-"axis_n": "x",
-"d": 5,
-"kind": "FACE",
 "partner": "NS-4",
 "side": "A",
 "u": 344.0,
@@ -502,42 +466,6 @@
 "kind": "EDGE",
 "n_axis_is_u": true,
 "partner": "NW"
-},
-{
-"axis_n": "x",
-"d": 5,
-"kind": "FACE",
-"partner": "NO-1",
-"side": "A",
-"u": 50,
-"v": 41.0
-},
-{
-"axis_n": "x",
-"d": 5,
-"kind": "FACE",
-"partner": "NO-1",
-"side": "A",
-"u": 285,
-"v": 41.0
-},
-{
-"axis_n": "x",
-"d": 5,
-"kind": "FACE",
-"partner": "NO-2",
-"side": "B",
-"u": 75,
-"v": 41.0
-},
-{
-"axis_n": "x",
-"d": 5,
-"kind": "FACE",
-"partner": "NO-2",
-"side": "B",
-"u": 310,
-"v": 41.0
 },
 {
 "axis_n": "x",
@@ -1258,11 +1186,11 @@
 },
 {
 "DL": 578,
-"SZ": 463,
+"SZ": 462,
 "code": "GNB-1",
 "hi": {
 "x": 723,
-"y": 2583,
+"y": 2582,
 "z": 583
 },
 "holes": [
@@ -1300,7 +1228,7 @@
 "partner": "GNG",
 "side": "B",
 "u": 528,
-"v": 454.0
+"v": 453.0
 },
 {
 "axis_n": "x",
@@ -1309,7 +1237,7 @@
 "partner": "GNG",
 "side": "B",
 "u": 289,
-"v": 454.0
+"v": 453.0
 },
 {
 "axis_n": "x",
@@ -1318,7 +1246,7 @@
 "partner": "GNG",
 "side": "B",
 "u": 50,
-"v": 454.0
+"v": 453.0
 },
 {
 "axis_n": "x",
@@ -1336,7 +1264,7 @@
 "partner": "GNT",
 "side": "B",
 "u": 569.0,
-"v": 395
+"v": 394
 },
 {
 "axis_n": "-",
@@ -1375,7 +1303,7 @@
 "plate": true,
 "side": "A",
 "u": 57,
-"v": 327.0
+"v": 326.0
 },
 {
 "axis_n": "-",
@@ -1388,7 +1316,7 @@
 "plate": true,
 "side": "A",
 "u": 57,
-"v": 359.0
+"v": 358.0
 }
 ],
 "lo": {
@@ -1404,11 +1332,11 @@
 },
 {
 "DL": 578,
-"SZ": 463,
+"SZ": 462,
 "code": "GNB-2",
 "hi": {
 "x": 1821,
-"y": 2583,
+"y": 2582,
 "z": 583
 },
 "holes": [
@@ -1446,7 +1374,7 @@
 "partner": "GNG",
 "side": "A",
 "u": 528,
-"v": 454.0
+"v": 453.0
 },
 {
 "axis_n": "x",
@@ -1455,7 +1383,7 @@
 "partner": "GNG",
 "side": "A",
 "u": 289,
-"v": 454.0
+"v": 453.0
 },
 {
 "axis_n": "x",
@@ -1464,7 +1392,7 @@
 "partner": "GNG",
 "side": "A",
 "u": 50,
-"v": 454.0
+"v": 453.0
 },
 {
 "axis_n": "x",
@@ -1482,7 +1410,7 @@
 "partner": "GNT",
 "side": "A",
 "u": 569.0,
-"v": 395
+"v": 394
 },
 {
 "axis_n": "-",
@@ -1521,7 +1449,7 @@
 "plate": true,
 "side": "B",
 "u": 57,
-"v": 327.0
+"v": 326.0
 },
 {
 "axis_n": "-",
@@ -1534,7 +1462,7 @@
 "plate": true,
 "side": "B",
 "u": 57,
-"v": 359.0
+"v": 358.0
 }
 ],
 "lo": {
@@ -1699,7 +1627,7 @@
 "code": "GNG",
 "hi": {
 "x": 1803,
-"y": 2583,
+"y": 2582,
 "z": 583
 },
 "holes": [
@@ -1829,7 +1757,7 @@
 ],
 "lo": {
 "x": 723,
-"y": 2565,
+"y": 2564,
 "z": 5
 },
 "mod": "GN",
@@ -1840,11 +1768,11 @@
 },
 {
 "DL": 560,
-"SZ": 427,
+"SZ": 426,
 "code": "GNP",
 "hi": {
 "x": 1272,
-"y": 2565,
+"y": 2564,
 "z": 583
 },
 "holes": [
@@ -1882,7 +1810,7 @@
 "along": 510,
 "d": 4,
 "depth": 35,
-"edge_coord": 427,
+"edge_coord": 426,
 "into": -1,
 "kind": "EDGE",
 "n_axis_is_u": false,
@@ -1892,7 +1820,7 @@
 "along": 280,
 "d": 4,
 "depth": 35,
-"edge_coord": 427,
+"edge_coord": 426,
 "into": -1,
 "kind": "EDGE",
 "n_axis_is_u": false,
@@ -1902,7 +1830,7 @@
 "along": 50,
 "d": 4,
 "depth": 35,
-"edge_coord": 427,
+"edge_coord": 426,
 "into": -1,
 "kind": "EDGE",
 "n_axis_is_u": false,
@@ -1919,7 +1847,7 @@
 "partner": "GNT"
 },
 {
-"along": 377,
+"along": 376,
 "d": 4,
 "depth": 35,
 "edge_coord": 560,
@@ -1942,11 +1870,11 @@
 },
 {
 "DL": 1080,
-"SZ": 427,
+"SZ": 426,
 "code": "GNT",
 "hi": {
 "x": 1803,
-"y": 2565,
+"y": 2564,
 "z": 23
 },
 "holes": [
@@ -1961,7 +1889,7 @@
 "partner": "GNB-1"
 },
 {
-"along": 377,
+"along": 376,
 "d": 4,
 "depth": 35,
 "edge_coord": 0,
@@ -1981,7 +1909,7 @@
 "partner": "GNB-2"
 },
 {
-"along": 377,
+"along": 376,
 "d": 4,
 "depth": 35,
 "edge_coord": 1080,
@@ -2034,7 +1962,7 @@
 "along": 50,
 "d": 4,
 "depth": 35,
-"edge_coord": 427,
+"edge_coord": 426,
 "into": -1,
 "kind": "EDGE",
 "n_axis_is_u": false,
@@ -2044,7 +1972,7 @@
 "along": 377,
 "d": 4,
 "depth": 35,
-"edge_coord": 427,
+"edge_coord": 426,
 "into": -1,
 "kind": "EDGE",
 "n_axis_is_u": false,
@@ -2054,7 +1982,7 @@
 "along": 703,
 "d": 4,
 "depth": 35,
-"edge_coord": 427,
+"edge_coord": 426,
 "into": -1,
 "kind": "EDGE",
 "n_axis_is_u": false,
@@ -2064,7 +1992,7 @@
 "along": 1030,
 "d": 4,
 "depth": 35,
-"edge_coord": 427,
+"edge_coord": 426,
 "into": -1,
 "kind": "EDGE",
 "n_axis_is_u": false,
@@ -2086,7 +2014,7 @@
 "partner": "GNP",
 "side": "B",
 "u": 540.0,
-"v": 377
+"v": 376
 }
 ],
 "lo": {
@@ -3038,11 +2966,11 @@
 },
 {
 "DL": 700,
-"SZ": 463,
+"SZ": 462,
 "code": "GLB1",
 "hi": {
 "x": 705,
-"y": 2583,
+"y": 2582,
 "z": 601
 },
 "holes": [
@@ -3080,7 +3008,7 @@
 "partner": "GLG",
 "side": "B",
 "u": 50,
-"v": 454.0
+"v": 453.0
 },
 {
 "axis_n": "z",
@@ -3089,7 +3017,7 @@
 "partner": "GLG",
 "side": "B",
 "u": 350,
-"v": 454.0
+"v": 453.0
 },
 {
 "axis_n": "z",
@@ -3098,7 +3026,7 @@
 "partner": "GLG",
 "side": "B",
 "u": 650,
-"v": 454.0
+"v": 453.0
 },
 {
 "axis_n": "z",
@@ -3116,7 +3044,7 @@
 "partner": "GLT",
 "side": "B",
 "u": 9.0,
-"v": 395
+"v": 394
 },
 {
 "axis_n": "-",
@@ -3145,11 +3073,11 @@
 },
 {
 "DL": 700,
-"SZ": 463,
+"SZ": 462,
 "code": "GLB2",
 "hi": {
 "x": 705,
-"y": 2583,
+"y": 2582,
 "z": 1478
 },
 "holes": [
@@ -3187,7 +3115,7 @@
 "partner": "GLG",
 "side": "A",
 "u": 50,
-"v": 454.0
+"v": 453.0
 },
 {
 "axis_n": "z",
@@ -3196,7 +3124,7 @@
 "partner": "GLG",
 "side": "A",
 "u": 350,
-"v": 454.0
+"v": 453.0
 },
 {
 "axis_n": "z",
@@ -3205,7 +3133,7 @@
 "partner": "GLG",
 "side": "A",
 "u": 650,
-"v": 454.0
+"v": 453.0
 },
 {
 "axis_n": "z",
@@ -3223,7 +3151,7 @@
 "partner": "GLT",
 "side": "A",
 "u": 9.0,
-"v": 395
+"v": 394
 }
 ],
 "lo": {
@@ -3352,7 +3280,7 @@
 "code": "GLG",
 "hi": {
 "x": 705,
-"y": 2583,
+"y": 2582,
 "z": 1460
 },
 "holes": [
@@ -3446,7 +3374,7 @@
 ],
 "lo": {
 "x": 5,
-"y": 2565,
+"y": 2564,
 "z": 601
 },
 "mod": "GL",
@@ -3457,11 +3385,11 @@
 },
 {
 "DL": 859,
-"SZ": 427,
+"SZ": 426,
 "code": "GLT",
 "hi": {
 "x": 23,
-"y": 2565,
+"y": 2564,
 "z": 1460
 },
 "holes": [
@@ -3476,7 +3404,7 @@
 "partner": "GLB1"
 },
 {
-"along": 377,
+"along": 376,
 "d": 4,
 "depth": 35,
 "edge_coord": 859,
@@ -3496,7 +3424,7 @@
 "partner": "GLB2"
 },
 {
-"along": 377,
+"along": 376,
 "d": 4,
 "depth": 35,
 "edge_coord": 0,
@@ -3539,7 +3467,7 @@
 "along": 809,
 "d": 4,
 "depth": 35,
-"edge_coord": 427,
+"edge_coord": 426,
 "into": -1,
 "kind": "EDGE",
 "n_axis_is_u": false,
@@ -3549,7 +3477,7 @@
 "along": 429,
 "d": 4,
 "depth": 35,
-"edge_coord": 427,
+"edge_coord": 426,
 "into": -1,
 "kind": "EDGE",
 "n_axis_is_u": false,
@@ -3559,7 +3487,7 @@
 "along": 50,
 "d": 4,
 "depth": 35,
-"edge_coord": 427,
+"edge_coord": 426,
 "into": -1,
 "kind": "EDGE",
 "n_axis_is_u": false,
@@ -3586,78 +3514,7 @@
 "y": 335,
 "z": 73
 },
-"holes": [
-{
-"along": 50,
-"d": 4,
-"depth": 35,
-"edge_coord": 0,
-"into": 1,
-"kind": "EDGE",
-"n_axis_is_u": true,
-"partner": "NB-1"
-},
-{
-"along": 285,
-"d": 4,
-"depth": 35,
-"edge_coord": 0,
-"into": 1,
-"kind": "EDGE",
-"n_axis_is_u": true,
-"partner": "NB-1"
-},
-{
-"along": 50,
-"d": 4,
-"depth": 35,
-"edge_coord": 531,
-"into": -1,
-"kind": "EDGE",
-"n_axis_is_u": true,
-"partner": "NP"
-},
-{
-"along": 285,
-"d": 4,
-"depth": 35,
-"edge_coord": 531,
-"into": -1,
-"kind": "EDGE",
-"n_axis_is_u": true,
-"partner": "NP"
-},
-{
-"along": 50,
-"d": 4,
-"depth": 35,
-"edge_coord": 335,
-"into": -1,
-"kind": "EDGE",
-"n_axis_is_u": false,
-"partner": "NS-1"
-},
-{
-"along": 266,
-"d": 4,
-"depth": 35,
-"edge_coord": 335,
-"into": -1,
-"kind": "EDGE",
-"n_axis_is_u": false,
-"partner": "NS-1"
-},
-{
-"along": 481,
-"d": 4,
-"depth": 35,
-"edge_coord": 335,
-"into": -1,
-"kind": "EDGE",
-"n_axis_is_u": false,
-"partner": "NS-1"
-}
-],
+"holes": [],
 "lo": {
 "x": 723,
 "y": 0,
@@ -3678,78 +3535,7 @@
 "y": 335,
 "z": 73
 },
-"holes": [
-{
-"along": 50,
-"d": 4,
-"depth": 35,
-"edge_coord": 531,
-"into": -1,
-"kind": "EDGE",
-"n_axis_is_u": true,
-"partner": "NB-2"
-},
-{
-"along": 285,
-"d": 4,
-"depth": 35,
-"edge_coord": 531,
-"into": -1,
-"kind": "EDGE",
-"n_axis_is_u": true,
-"partner": "NB-2"
-},
-{
-"along": 75,
-"d": 4,
-"depth": 35,
-"edge_coord": 0,
-"into": 1,
-"kind": "EDGE",
-"n_axis_is_u": true,
-"partner": "NP"
-},
-{
-"along": 310,
-"d": 4,
-"depth": 35,
-"edge_coord": 0,
-"into": 1,
-"kind": "EDGE",
-"n_axis_is_u": true,
-"partner": "NP"
-},
-{
-"along": 50,
-"d": 4,
-"depth": 35,
-"edge_coord": 335,
-"into": -1,
-"kind": "EDGE",
-"n_axis_is_u": false,
-"partner": "NS-4"
-},
-{
-"along": 266,
-"d": 4,
-"depth": 35,
-"edge_coord": 335,
-"into": -1,
-"kind": "EDGE",
-"n_axis_is_u": false,
-"partner": "NS-4"
-},
-{
-"along": 481,
-"d": 4,
-"depth": 35,
-"edge_coord": 335,
-"into": -1,
-"kind": "EDGE",
-"n_axis_is_u": false,
-"partner": "NS-4"
-}
-],
+"holes": [],
 "lo": {
 "x": 1272,
 "y": 0,
@@ -3860,33 +3646,6 @@
 "kind": "EDGE",
 "n_axis_is_u": true,
 "partner": "NT"
-},
-{
-"axis_n": "y",
-"d": 5,
-"kind": "FACE",
-"partner": "NO-1",
-"side": "A",
-"u": 41.0,
-"v": 50
-},
-{
-"axis_n": "y",
-"d": 5,
-"kind": "FACE",
-"partner": "NO-1",
-"side": "A",
-"u": 41.0,
-"v": 266
-},
-{
-"axis_n": "y",
-"d": 5,
-"kind": "FACE",
-"partner": "NO-1",
-"side": "A",
-"u": 41.0,
-"v": 481
 }
 ],
 "lo": {
@@ -4223,33 +3982,6 @@
 "kind": "EDGE",
 "n_axis_is_u": true,
 "partner": "NT"
-},
-{
-"axis_n": "y",
-"d": 5,
-"kind": "FACE",
-"partner": "NO-2",
-"side": "A",
-"u": 41.0,
-"v": 50
-},
-{
-"axis_n": "y",
-"d": 5,
-"kind": "FACE",
-"partner": "NO-2",
-"side": "A",
-"u": 41.0,
-"v": 266
-},
-{
-"axis_n": "y",
-"d": 5,
-"kind": "FACE",
-"partner": "NO-2",
-"side": "A",
-"u": 41.0,
-"v": 481
 }
 ],
 "lo": {

@@ -26,11 +26,12 @@ var L1=1131, L2=1000;                  /* lampa (oczko): środek od tylnej ścia
 
 /* ---------- założenia (ustalenia.md) ---------- */
 var P=18, PS=16;       /* płyta korpusów i frontów / skrzynek szuflad */
-var LUZ=3;             /* luz: od pionu, pod sufitem, przy prawej ścianie i ścianie przedniej */
+var LUZ=3;             /* luz: od pionu, przy prawej ścianie i ścianie przedniej */
+var LUZS=4;            /* luz pod sufitem (2026-11-18: 4 zamiast 3, łatwiejsze wsuwanie korpusów górnych) */
 var ODS=5;             /* odsunięcie korpusu od ściany za nim (regulacja przy montażu) */
 var SZCZ=2;            /* szczelina wokół frontów chowanych (2026-11-18: 2 zamiast 3, więcej regulacji zawiasów) */
 var HW=2120;           /* górna powierzchnia wieńca części otwartej = góra korpusów dolnych, dół korpusów górnych */
-var HG=J-LUZ;          /* góra szafek: 2583 */
+var HG=J-LUZS;         /* góra szafek: 2582 */
 var ZF=PZ+LUZ+P;       /* płaszczyzna przodu szafki na wprost: 583 */
 var XL=PXM+LUZ;        /* płaszczyzna przodu szafki po lewej: 705 */
 var XP=A-LUZ-1;        /* prawy bok szafki na wprost: 1821 (luz 4 przy prawej ścianie, żeby połowy miały po 531) */
@@ -108,7 +109,11 @@ var ns=0;
 function polkaN(h,y,opis){ns++;add({n:'NS-'+ns+': półka nad butami ('+opis+')',layer:'Półki',x:h.x0,y:y,z:ZW,w:h.x1-h.x0,h:P,d:ZF-ZW,c:C.pol});}
 [[H1,'1'],[H2,'2']].forEach(function(q){
   var h=q[0];
-  add({n:'NO-'+q[1]+': osłona przewodów wodnych (0–'+YP[0]+', '+ZO+'–'+(ZO+P)+' od ściany)',layer:'Ścianki tylne',x:h.x0,y:0,z:ZO,w:h.x1-h.x0,h:YP[0],d:P,c:C.tyl});
+  add({n:'NO-'+q[1]+': osłona przewodów wodnych, zdejmowana (0–'+YP[0]+', '+ZO+'–'+(ZO+P)+' od ściany)',layer:'Ścianki tylne',x:h.x0,y:0,z:ZO,w:h.x1-h.x0,h:YP[0],d:P,c:C.tyl});
+  /* osłona bez konfirmatów: u góry 2 kątowniki pod półką (od strony pokoju, niewidoczne), na dole 2 zatrzaski magnetyczne
+     na bokach za osłoną (blaszki na tylnym licu osłony); zdjęcie: odkręcić kątowniki, odciągnąć dół od magnesów */
+  [h.x0+60,h.x1-80].forEach(function(x){add({n:'Kątownik osłony NO-'+q[1]+' (pod półką, wkręty w półkę i osłonę)',layer:'Osprzęt',x:x,y:YP[0]-20,z:ZO+P,w:20,h:20,d:20,c:0x8a8f94});});
+  [[h.x0,1],[h.x1-12,-1]].forEach(function(m){add({n:'Zatrzask magnetyczny osłony NO-'+q[1]+' (na boku, za osłoną)',layer:'Osprzęt',x:m[0],y:40,z:ZO-14,w:12,h:30,d:14,c:0x5a6068});});
 });
 polkaN(H1,YP[0],'połowa lewa, 1');polkaN(H1,YP[1],'połowa lewa, 2');polkaN(H1,YP[2],'połowa lewa, 3');
 polkaN(H2,YP[0],'połowa prawa, 1');polkaN(H2,YP[1],'połowa prawa, 2; dno przedziału na dłuższe kurtki');

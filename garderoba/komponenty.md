@@ -1,5 +1,5 @@
 # Garderoba: okucia i elementy (stan 2026-11-18, po audycie v1)
-Wymiary w mm. Kody tylko dużymi literami. Płyty: `wyniki/formatki.csv` (18 mm, 27 pozycji / 36 sztuk / 21,16 m²; korpusy dolne N, L do 2120 i górne GN, GL 2120–2583)
+Wymiary w mm. Kody tylko dużymi literami. Płyty: `wyniki/formatki.csv` (18 mm, 27 pozycji / 36 sztuk / 21,15 m²; korpusy dolne N, L do 2120 i górne GN, GL 2120–2582)
 i `wyniki/formatki_16mm.csv` (skrzynki szuflad, 6 pozycji / 10 sztuk / 1,50 m²; inna biała płyta 16 mm, bo W1200 nie ma 16); nawierty: `wyniki/kalkulator_nawierty*.csv`.
 
 ## Zawiasy i TIP-ON (fronty górne F1, F2: chowane, bez uchwytów)
@@ -43,10 +43,12 @@ Kontrola otwierania: `node garderoba/sprawdz_szuflady.js`. Każda szuflada sama:
 ## Złącza i pozostałe
 | Pozycja | Ilość | Uwagi |
 |---|---|---|
-| Konfirmaty 7 × 50 | 244 | N 99, L 57, GN 32, GL 22, skrzynki 34; + zapas |
+| Konfirmaty 7 × 50 | 230 | N 85, L 57, GN 32, GL 22, skrzynki 34 (osłony NO bez konfirmatów); + zapas |
 | Wkręty łączące korpus górny z dolnym, np. 4 × 30 (przez dno GND / GLD w wieniec NW / LW) | ok. 10 | 6 w N, 4 w L, od środka korpusu górnego, z dala od konfirmatów |
-| Zaślepki konfirmatów | ok. 12 (skrypt: 80) | widoczne łby: przegroda NP (6) i półki nad osłonami przewodów (6). Skrypt liczy więcej, bo nie widzi, że łby na zewnętrznych licach LB1, LB2, GLB1, GLB2 zasłania pion i ściana, a łby pod dnami skrzynek (10) są niewidoczne; poprawka skryptu w osobnym PR `wspolne/` (audyt v1, sekcja C) |
+| Zaślepki konfirmatów | ok. 6 (skrypt: 74) | widoczne łby: przegroda NP (6). Skrypt liczy więcej, bo nie widzi, że łby na zewnętrznych licach LB1, LB2, GLB1, GLB2 zasłania pion i ściana, a łby pod dnami skrzynek (10) są niewidoczne; poprawka skryptu w osobnym PR `wspolne/` (audyt v1, sekcja C) |
 | Drążki Ø25 z uchwytami | 3 | N połowa lewa 531, N połowa prawa 531, L wzdłuż ściany 859; oś 2037 |
 | Wkręty i kołki do ściany (przez plecy NT, LT, GNT, GLT) | – | rodzaj zależy od ścian (do ustalenia) |
 | Kratka wentylacyjna prostokątna nasuwana na przewód Ø130 | 1 | na wewnętrznym licu GLB1; otwór w GLB1 wierci użytkownik |
+| Kątowniki meblowe małe (np. 20 × 20) z wkrętami 3,5 × 15 | 4 | osłony NO-1, NO-2: po 2 u góry, pod półką NS-1 / NS-4, od strony pokoju |
+| Zatrzaski magnetyczne meblowe z blaszkami | 4 | osłony NO-1, NO-2: po 2 na dole, na bokach NB-1, NP, NB-2 za osłoną; blaszki na tylnym licu osłony |
 | Ślizgacze pod boki i przegrodę dolnych korpusów | wg potrzeby | dolne krawędzie NB, NP, LB1, LB2, NO oklejone ABS; ślizgacze tylko w razie potrzeby |

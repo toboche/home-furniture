@@ -13,7 +13,7 @@ Przydatne: miernik laserowy, poziomica (najlepiej 2 m), taśma malarska, listwa 
 | V1 | od boku pionu do prawej ściany | wysokość 0, 1000, 2000, 2550 | min. 1123 w każdym punkcie | 1117 + 2 × 3 luzu | |
 | V2 | czy bok pionu i prawa ściana są w pionie (poziomica) | całą wysokość | pionowa szafka wymaga 1123 między NAJDALSZYM punktem pionu a NAJBLIŻSZYM punktem prawej ściany | pion 692–702, ściana ok. 1825–1836 od lewej | |
 | V3 | wysięg pionu od ściany tylnej (PZ) | co 500 mm wysokości | najwięcej 565 (inaczej szafkę odsuwa się od ściany) | korpus 5–583, przód pionu 562–569 | |
-| V4 | wysokość podłoga–sufit | 4 narożniki obszaru szafki (X 705 i 1822, Z 5 i 583) | min. 2586 | szafka 2583 + 3 | 2026-11-18: 2587, 2589, 2589 (podane 3 wartości z 4 pomiarów; miejsca nie podane) – OK |
+| V4 | wysokość podłoga–sufit | 4 narożniki obszaru szafki (X 705 i 1822, Z 5 i 583) | min. 2586 | szafka 2583 + 3 | 2026-11-18: 2587, 2589, 2589 (każdy pomiar powtórzony 4 razy z tym samym wynikiem) – OK; po zmianie luzu wymagane min. 2586 (2582 + 4) |
 | V5 | poziom podłogi wzdłuż ściany tylnej (różnica wysokości) | od pionu do prawej ściany | najlepiej do 2 mm (szafka stoi bez nóżek) | – | |
 | V6 | przewody wodne po zagięciu: wysięg od ściany tylnej | oba przewody | najwięcej 50 (osłona stoi 55 od ściany) | 50 | 2026-11-18: przewody nie są zagięte w stronę pokoju – OK |
 | V7 | przewody wodne: najwyższy punkt | oba | najwięcej 330 (pod półką na 335) | 180 | |

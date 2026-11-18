@@ -22,7 +22,7 @@ Materiały źródłowe: `zrodla/` (rzut architektoniczny, zdjęcia ogólne).
 - Dolne szafki stoją bezpośrednio na kafelkach, bez cokołu.
 
 ## Bryły szafek (decyzje 2026-11-11)
-- Górna powierzchnia wieńca części otwartej: 2120. Luz pod sufitem 3 mm (góra szafek 2583).
+- Górna powierzchnia wieńca części otwartej: 2120. Luz pod sufitem 3 mm (góra szafek 2583); od 2026-11-18: 4 mm, góra 2582.
 - Korpusy kończą się 3 mm za najdalszym punktem pionu. Głębokość szafek na wprost liczona od najmniejszego wysięgu pionu (562);
   tam, gdzie pion wystaje do 569, szafkę odsuwa się od ściany przy montażu.
 - Szafki na wprost zachodzą na szafkę po lewej (narożnik przy pionie). Szafki są o kilka mm płytsze i odsunięte od ściany,
@@ -116,22 +116,26 @@ USTALENIA Z KALKULATORA:
 
 ## Decyzje 2026-11-18 (rozmowa po audycie v1)
 - PODZIAŁ NA KORPUSY: każda szafka ma korpus dolny (0–2120: N, L) i górny (2120–2583, wys. 463: GN, GL). Dolny kończy się
-  wieńcem NW / LW na całą szerokość (góra 2120 = dotychczasowy wieniec części otwartej), górny ma własne dno GND / GLD,
+  wieńcem NW / LW na całą szerokość (góra 2120 = dotychczasowy wieniec części otwartej), górny ma własne dno GND / GLD (od luzu 4: 2120–2582, wys. 462),
   boki, plecy i wieniec GNG / GLG; na 2120 leżą więc dwie płyty (2102–2138). Najdłuższa formatka 2120 (wcześniej 2583):
   wszystkie formatki poniżej 2500, więc meble.pl wierci wszystkie otwory (koniec ręcznego wiercenia 146 otworów).
 - Montaż: korpus dolny składa się na podłodze i stawia (przekątna boku 2120 × 578 to 2197, sufit min. 2586), dosuwa do ściany;
   górny składa się osobno, podnosi na dolny i wsuwa od przodu po wieńcu dolnego (pod sufitem 3 mm w projekcie,
-  pomiary V4: 2587–2589, czyli ok. 4–6 mm). Górny przykręcony do dolnego wkrętami przez dno i do ściany przez plecy.
-- Fronty F1, F2 w korpusie górnym między dnem GND a wieńcem GNG: 2140–2563, 527 × 423; zawiasy i nawierty pilotowe w GNB-1, GNB-2;
+  pomiary V4: 2587–2589, czyli 5–7 mm przy luzie 4 w projekcie). Górny przykręcony do dolnego wkrętami przez dno i do ściany przez plecy.
+- Fronty F1, F2 w korpusie górnym między dnem GND a wieńcem GNG: 2140–2562, 527 × 422; zawiasy i nawierty pilotowe w GNB-1, GNB-2;
   TIP-ON F1 i F2 na przegrodzie GNP.
-- Szczelina frontów chowanych SZCZ = 2 (było 3), żeby zostało więcej regulacji. Fronty: F1, F2 527 × 423, F3 527 × 204, F4 855 × 204.
+- Szczelina frontów chowanych SZCZ = 2 (było 3), żeby zostało więcej regulacji. Fronty: F1, F2 527 × 422 (po luzie 4), F3 527 × 204, F4 855 × 204.
 - Wszystkie wymiary formatek i położenia otworów w pełnych mm (meble.pl): szafka na wprost 1116 (było 1117, luz przy prawej
   ścianie 4), połowy po 531; półki 335, 596, 858 (przedziały 243 i 244); linia prowadników zawiasów 57 (katalog 56,5).
 - Szuflady: L1 (T60L7340) w obu. Skrzynki bez podcięć (wariant Blum sprawdzony w katalogu MOVENTO); konfirmaty dna odsunięte
   od zaczepów i TIP-ON (`komponenty.md`). Płyta 16 mm na skrzynki: inna biała płyta 16 mm (W1200 nie ma 16).
 - Dolne krawędzie stojące na kafelkach (NB, NP, LB1, LB2, NO) oklejone ABS; ślizgacze dopiero, jeśli będą potrzebne.
   Kalkulator meble.pl w `kalkulator_nawierty.csv` ma tylko krawędź przednią: dolną dopisać ręcznie przy zamówieniu.
-- Pomiary weryfikacyjne (`weryfikacja.md`): sufit 2587, 2589, 2589; przewody wodne nie są zagięte w stronę pokoju;
+- Luz pod sufitem 4 (było 3): góra szafek 2582, korpusy górne 462 wysokości, fronty F1, F2 527 × 422.
+- Osłony przewodów NO-1, NO-2 zdejmowane (dostęp do przewodów): bez konfirmatów; u góry 2 kątowniki pod półką NS-1 / NS-4
+  (niewidoczne), na dole 2 zatrzaski magnetyczne na bokach za osłoną, blaszki na tylnym licu osłony. Zdjęcie: odkręcić
+  kątowniki i odciągnąć dół osłony. Korpus dolny poniżej 335 trzymają półka NS-1 / NS-4 i plecy NT nad nią.
+- Pomiary weryfikacyjne (`weryfikacja.md`): sufit 2587, 2589, 2589 (każdy powtórzony 4 razy); przewody wodne nie są zagięte w stronę pokoju;
   GZ1 333; puszka gniazdka nie wystaje. LB2 przy pionie stoi ok. 3 mm od ściany przedniej (T = 919 zmierzone przy pionie);
   12 mm wychodziło z G = 1490 mierzonego przy prawej ścianie (model rysuje ścianę przednią prosto).
 

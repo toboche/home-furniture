@@ -31,14 +31,15 @@ def pomijaj_czesc(p):
 
 
 def pomijaj_polaczenie(face, edge):
-    return False
+    """osłony przewodów NO-1, NO-2 są zdejmowane (kątowniki u góry, magnesy na dole), więc bez konfirmatów"""
+    return face.startswith('NO') or edge.startswith('NO')
 
 
 def rozstaw(face, edge, domyslny):
     return domyslny
 
 
-PRAWA_POLOWA = ('NS-4', 'NS-5', 'NO-2')
+PRAWA_POLOWA = ('NS-4', 'NS-5')
 
 # skrzynki szuflad: konfirmaty dna z dala od zaczepów T51.7601 (przód, przy bokach) i od strefy TIP-ON BLUMOTION
 # (tył, 125 od boków); przód skrzynki leży zawsze na końcu 'hi' zakresu
@@ -136,7 +137,8 @@ FORMATKI = [
     F('NW', 'N dół: wieniec na 2120 (sufit części otwartej, cała szerokość)', okleina='1DL', nawierty=K),
     F('NS', 'N dół: półki nad butami (335, 596, 858 w połowie lewej; 335, 596 w prawej)', okleina='1SZ', nawierty=K),
     F('NK', 'N dół: płyta pod kurtkami, połowa lewa (1084)', okleina='1SZ', nawierty=K),
-    F('NO', 'N dół: osłony przewodów wodnych (od podłogi do 335, 55 od ściany)', okleina='1DL (dół)', nawierty=K, uwagi=DOL),
+    F('NO', 'N dół: osłony przewodów wodnych, zdejmowane (od podłogi do 335, 55 od ściany)', okleina='1DL (dół)', nawierty='BRAK',
+      uwagi='bez konfirmatów: u góry 2 kątowniki pod półką, na dole 2 zatrzaski magnetyczne (blaszki na tylnym licu); ' + DOL),
     # szafka na wprost: korpus górny GN
     F('GNB', 'N góra: boki (zawiasy F1 w GNB-1, F2 w GNB-2)', okleina='1SZ', nawierty=K + ' + NAWIERTY PILOTOWE Ø3 × 12 POD PROWADNIKI ZAWIASÓW'),
     F('GND', 'N góra: dno', okleina='1DL', nawierty=K, uwagi=SCIANA),
