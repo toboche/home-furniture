@@ -16,7 +16,7 @@ def modul_of(it):
     return 'RD' if cy < 1743 - 0.01 else 'RB'
 
 
-# zdejmowane tyły kolumny KT1A/B/C: bez nawiertów, na kątownikach i magnesach
+# zdejmowane tyły kolumny KT1A/B/C: bez nawiertów, na kątowniku-podporze, kątownikach i magnesach
 def pomijaj_czesc(p):
     return p['code'].startswith('KT1')
 
@@ -83,7 +83,7 @@ def dodatkowe_otwory(P, parts, loc):
     def pilot(code,side,y,other_axis,val):
         p=P[code]; pos={'y':y,other_axis:val}
         p['holes'].append(dict(kind='FACE',side=side,u=loc(p,p['u'],pos[p['u']]),v=loc(p,p['v'],pos[p['v']]),d=PILOT_D,depth=PILOT_DEPTH,partner='środek otworu wycinanego samodzielnie',axis_n='-',pin=False,pilot=True))
-    pilot('PT3','A',2409,'x',1616)   # Ø130 pod kanał, od strony wnętrza (+z)
+    pilot('PT3','A',2418,'x',1624)   # Ø130 pod kanał, od strony wnętrza (+z); środek otworu w ścianie wg pomiaru 2026-11-18
     pilot('L1B2','A',918,'z',242)    # wycięcie 100 x 100 pod gniazdko GN1 (y 868-968, z 192-292 od tyłu), od wnętrza (+x)
 
 
@@ -147,20 +147,21 @@ FORMATKI = [
       okleina='1DL', nawierty='KONFIRMATY'),
     F('PT1', 'Prawa dół: tył',
       okleina='', nawierty='KONFIRMATY'),
-    F('KT1A', 'Kolumna: tył dolny (zawór ZW1/ZW2), zdejmowany bez narzędzi, y 509-916',
-      okleina='', nawierty='KONFIRMATY', uwagi='2 kątowniki 25x25 za płytą na KB2 + 2 magnesy Ø10x3 (gniazda Ø10x3 wiercisz sam); szer. 127 zamiast 132 (luz na kątownik 2 mm i tolerancję)'),
-    F('KT1B', 'Kolumna: tył środkowy (gniazdka GP1/GP2), zdejmowany, y 942-1349',
-      okleina='', nawierty='KONFIRMATY', uwagi='2 kątowniki 25x25 za płytą na KB2 + 2 magnesy Ø10x3 (gniazda wiercisz sam)'),
-    F('KT1C', 'Kolumna: tył górny, zdejmowany, y 1375-1725',
-      okleina='', nawierty='KONFIRMATY', uwagi='2 kątowniki 25x25 za płytą na KB2 + 2 magnesy Ø10x3 (gniazda wiercisz sam)'),
+    F('KT1A', 'Kolumna: tył dolny (zawór ZW1/ZW2), zdejmowany bez narzędzi, y 510-915',
+      okleina='', nawierty='KONFIRMATY', uwagi='stoi na kątowniku-podporze, 2 kątowniki 25x25 za płytą na KB2 + 2 magnesy Ø10x3 (gniazda wiercisz sam); szer. 124 (luz na łby wkrętów kątowników)'),
+    F('KT1B', 'Kolumna: tył środkowy (gniazdka GP1/GP2), zdejmowany, y 943-1348',
+      okleina='', nawierty='KONFIRMATY', uwagi='stoi na kątowniku-podporze, 2 kątowniki za płytą + 2 magnesy Ø10x3 (gniazda wiercisz sam)'),
+    F('KT1C', 'Kolumna: tył górny, zdejmowany, y 1376-1723',
+      okleina='', nawierty='KONFIRMATY', uwagi='stoi na kątowniku-podporze, 2 kątowniki za płytą + 2 magnesy Ø10x3 (gniazda wiercisz sam)'),
     F('KT2', 'Kolumna: tył, pas',
       okleina='', nawierty='KONFIRMATY'),
     F('PT2', 'Prawa: tył, dół i środek',
       okleina='', nawierty='KONFIRMATY'),
-    F('PT3', 'Prawa: tył, pas (otwór Ø130 pod kanał wierci użytkownik: środek 245 od lewej krawędzi, 243 od górnej)',
+    F('PT3', 'Prawa: tył, pas (otwór Ø130 pod kanał wierci użytkownik: środek 253 od lewej krawędzi, 234 od górnej)',
       okleina='', nawierty='KONFIRMATY + NAWIERT ŚRODKA Ø5 x 5'),
     F('KP1', 'Półka kolumny (tył), poziom 489: z 183 do 367; kołki Ø8 do PP1',
-      okleina='', nawierty='KONFIRMATY + KOŁKI Ø8 W CZOLE (do PP1)'),
+      okleina='', nawierty='KONFIRMATY + KOŁKI Ø8 W CZOLE (do PP1)',
+      uwagi='ZAMÓWIĆ 200 x 132 (minimum sklepu 200): naddatek 16 mm po stronie krawędzi 4 (tył, bez otworów) – w kalkulatorze SZER 200 i X otworów w krawędzi 3 + 16 (66 i 150); po dostawie odciąć 16 mm od krawędzi 4'),
     F('KP2', 'Półka kolumny (tył), poziomy 922 i 1355: z 183 do 385 (na wciskanych podpórkach; kołki Ø8 do PP2, bez okleiny)',
       okleina='', nawierty='KOŁKI Ø8 W CZOLE (do PP2); BEZ KONFIRMATÓW'),
     F('KP3', 'Półka kolumny (tył), pas: 1743, 2188,5, 2634 (z 183 do 385; kołki Ø8 do PP3)',
@@ -189,11 +190,9 @@ FORMATKI = [
       okleina='2DL+2SZ', nawierty='ZAWIASY 2 SZT, PUSZKA Ø35, ŚRODEK 22.5 MM OD KRAWĘDZI', uwagi='uchwyt GUBBARP 116 mm: otwory samodzielnie, bez nawiertów; zawiasy po PRAWEJ'),
     F('F5', 'Front P pas: góra, otwierany',
       okleina='2DL+2SZ', nawierty='ZAWIASY 2 SZT, PUSZKA Ø35, ŚRODEK 22.5 MM OD KRAWĘDZI', uwagi='zawiasy po PRAWEJ: Blum 79B9590 INSERTA (do drzwi równoległych); prowadnik na tylnej ściance F6, linia wkrętów 21,5 od jej lewej krawędzi, bez nawiertów; uchwyt GUBBARP 116 mm: otwory samodzielnie, bez nawiertów'),
-    F('F6', 'Front P pas: góra, stały z kratką Ø150',
-      okleina='2DL+2SZ', nawierty='BRAK; otwór Ø150 własnoręcznie otwornicą', uwagi='otwór Ø150: ŚRODEK 116 MM OD LEWEJ KRAWĘDZI, 210 MM OD DOLNEJ (243 OD GÓRNEJ); nawiertu środka kalkulator nie zrobi (okleina bezspoinowa), zaznaczyć ręcznie'),
+    F('F6', 'Front P pas: góra, stały z kratką (króciec Ø123 do rury Ø125)',
+      okleina='2DL+2SZ', nawierty='BRAK; otwór Ø127 własnoręcznie otwornicą', uwagi='otwór Ø127 pod króciec kratki Ø123: ŚRODEK 124 MM OD LEWEJ KRAWĘDZI, 219 MM OD DOLNEJ (234 OD GÓRNEJ); nawiertu środka kalkulator nie zrobi (okleina bezspoinowa), zaznaczyć ręcznie'),
     F('F7', 'Front P pas: dół',
-      okleina='2DL+2SZ', nawierty='ZAWIASY 2 SZT, PUSZKA Ø35, ŚRODEK 22.5 MM OD KRAWĘDZI', uwagi='uchwyt GUBBARP 116 mm: otwory samodzielnie, bez nawiertów'),
-    F('F8', 'Front P dół: rząd 1 (przy gzymsie)',
       okleina='2DL+2SZ', nawierty='ZAWIASY 2 SZT, PUSZKA Ø35, ŚRODEK 22.5 MM OD KRAWĘDZI', uwagi='uchwyt GUBBARP 116 mm: otwory samodzielnie, bez nawiertów'),
     F('F9', 'Front P dół: jeden wysoki (dawne F9+F10+F11)',
       okleina='2DL+2SZ', nawierty='ZAWIASY 3 SZT, PUSZKA Ø35, ŚRODEK 22.5 MM OD KRAWĘDZI', uwagi='uchwyt GUBBARP 116 mm: otwory samodzielnie, bez nawiertów'),

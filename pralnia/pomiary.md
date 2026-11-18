@@ -21,13 +21,14 @@ Układ: X od lewej ściany ku prawej, Y od podłogi w górę, Z od tylnej ścian
 | P | 371 | szerokość pionu | |
 | V | 362 | wysięg pionu od tylnej ściany | podane 0,362 m |
 | Q | 118 | gzyms po stronie maszyn | |
-| X | 489 | wysokość gzymsu na pionie | |
+| X | 467 | najwyższy punkt gzymsu na pionie (pod PP1/KP1), pomiar 2026-11-18 | 489 |
 | GZ1 | 73 | szerokość gzymsu na prawej ścianie | |
 | GZ2 | 73 | szerokość gzymsu na froncie pionu | |
 | GZ3 | 466 | wysokość gzymsu na prawej ścianie | |
 | GZ4 | 680 | długość gzymsu na prawej ścianie, od frontu pionu | |
 | D | 490 | od krawędzi gzymsu do prawej ściany | |
-| M, N | 121, 53 | otwór wentylacyjny | podane 12,1 i 5,3 bez jednostki; w modelu środek x 1616, y 2409 |
+| WN1, WN2 | 115, 243 | środek otworu wentylacyjnego: od prawej ściany, od sufitu (pomiar 2026-11-18); w modelu x 1624, y 2418 (sufit przyjęty J = 2661) | wcześniej M, N = 121, 53 (niejasne), model x 1616, y 2409 |
+| KR | 123 | kratka wentylacyjna (kupiona): króciec Ø123, wchodzi do rury Ø125 | |
 
 ## Maszyny (pralka Bosch WGG244EPL, suszarka Bosch WQG245DEPL, oryginalny zestaw łączący)
 | KOD | WARTOŚĆ | OPIS | WCZEŚNIEJ / UWAGI |

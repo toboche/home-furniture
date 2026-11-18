@@ -3457,58 +3457,6 @@
 "side": "A",
 "u": 439.0,
 "v": 9.0
-},
-{
-"axis_n": "-",
-"d": 3,
-"depth": 12,
-"kind": "FACE",
-"partner": "wkręt prowadnika zawiasu F8",
-"pilot": true,
-"pin": false,
-"plate": true,
-"side": "B",
-"u": 87.0,
-"v": 163
-},
-{
-"axis_n": "-",
-"d": 3,
-"depth": 12,
-"kind": "FACE",
-"partner": "wkręt prowadnika zawiasu F8",
-"pilot": true,
-"pin": false,
-"plate": true,
-"side": "B",
-"u": 119.0,
-"v": 163
-},
-{
-"axis_n": "-",
-"d": 3,
-"depth": 12,
-"kind": "FACE",
-"partner": "wkręt prowadnika zawiasu F8",
-"pilot": true,
-"pin": false,
-"plate": true,
-"side": "B",
-"u": 380.5,
-"v": 163
-},
-{
-"axis_n": "-",
-"d": 3,
-"depth": 12,
-"kind": "FACE",
-"partner": "wkręt prowadnika zawiasu F8",
-"pilot": true,
-"pin": false,
-"plate": true,
-"side": "B",
-"u": 412.5,
-"v": 163
 }
 ],
 "lo": {
@@ -4699,18 +4647,18 @@
 "v": "x"
 },
 {
-"DL": 407,
-"SZ": 127.0,
+"DL": 405,
+"SZ": 124,
 "code": "KT1A",
 "hi": {
-"x": 1368.5,
-"y": 916,
+"x": 1368,
+"y": 915,
 "z": 183
 },
 "holes": [],
 "lo": {
-"x": 1241.5,
-"y": 509,
+"x": 1244,
+"y": 510,
 "z": 165
 },
 "mod": "RD",
@@ -4720,18 +4668,18 @@
 "v": "x"
 },
 {
-"DL": 407,
-"SZ": 127.0,
+"DL": 405,
+"SZ": 124,
 "code": "KT1B",
 "hi": {
-"x": 1368.5,
-"y": 1349,
+"x": 1368,
+"y": 1348,
 "z": 183
 },
 "holes": [],
 "lo": {
-"x": 1241.5,
-"y": 942,
+"x": 1244,
+"y": 943,
 "z": 165
 },
 "mod": "RD",
@@ -4741,18 +4689,18 @@
 "v": "x"
 },
 {
-"DL": 350,
-"SZ": 127.0,
+"DL": 347,
+"SZ": 124,
 "code": "KT1C",
 "hi": {
-"x": 1368.5,
-"y": 1725,
+"x": 1368,
+"y": 1723,
 "z": 183
 },
 "holes": [],
 "lo": {
-"x": 1241.5,
-"y": 1375,
+"x": 1244,
+"y": 1376,
 "z": 165
 },
 "mod": "RD",
@@ -5063,8 +5011,8 @@
 "pilot": true,
 "pin": false,
 "side": "A",
-"u": 243,
-"v": 245
+"u": 234,
+"v": 253
 }
 ],
 "lo": {

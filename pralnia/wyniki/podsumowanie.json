@@ -1,29 +1,29 @@
 {
  "formatki": {
-  "pozycje": 41,
-  "sztuki": 53,
-  "m2": 15.6
+  "pozycje": 40,
+  "sztuki": 52,
+  "m2": 15.38
  },
  "kalkulator": {
   "typy_formatek": 30,
-  "wiersze": 358
+  "wiersze": 354
  },
  "laczniki": {
   "konfirmaty": 152,
   "kolki": 14,
   "otwory_pod_kolki": 28,
-  "otwory_nieprzelotowe": 92,
-  "puszki_zawiasow": 17
+  "otwory_nieprzelotowe": 88,
+  "puszki_zawiasow": 15
  },
  "zaslepki": {
-  "widoczne": 21,
-  "ukryte": 131,
+  "widoczne": 24,
+  "ukryte": 128,
   "widoczne_wg_czesci": {
    "KB2": 4,
    "KT2": 3,
    "L1B1": 2,
    "NWB-2": 7,
-   "PP1": 5
+   "PP1": 8
   },
   "widoczne_miejsca": [
    "KB2 → RDW (x 1215, y 1734, z 565)",
@@ -44,13 +44,16 @@
    "NWB-2 → NWT (x 1227, y 2602, z 14)",
    "PP1 → PB1 (x 1654, y 513, z 490)",
    "PP1 → PB1 (x 1654, y 513, z 590)",
+   "PP1 → PB2 (x 1727, y 483, z 417)",
    "PP1 → PB2 (x 1727, y 483, z 590)",
    "PP1 → PT1 (x 1289, y 513, z 449)",
-   "PP1 → PT1 (x 1595, y 513, z 449)"
+   "PP1 → PT1 (x 1595, y 513, z 449)",
+   "PP1 → PT2 (x 1421, y 483, z 376)",
+   "PP1 → PT2 (x 1668, y 483, z 376)"
   ]
  },
  "polaczenia": 57,
- "otwory_lacznie": 424,
+ "otwory_lacznie": 420,
  "kolizje_otworow": 0,
  "strony_arkusza": 30
 }

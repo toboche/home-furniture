@@ -232,3 +232,15 @@ Nie wdrożone z Sekcji A (wymagają decyzji, opis w weryfikacja.md):
 - Skutek ograniczników dla F9 (przekładanie półek PP2+KP2 przy 86°) – do akceptacji.
 Sekcja C (zmiany w `wspolne/pipeline/`: kolizje otworów lico A–lico B i krawędź–krawędź w otwory.py, opisy średnic i pilotów w arkusz_pdf.py) – do osobnego PR na gałęzi `wspolne/...`, tutaj nie zmieniane.
 
+## 2026-11-18 – decyzje użytkownika po audycie v1 (v61)
+- UTRUSTA usunięta z planów całkowicie (z modelu i zestawienia). Wymagania audytu B1 związane z UTRUSTA (dno L1D, strona, kolizje wysuwu) nieaktualne. Odkurzacz bezprzewodowy: mocowanie do ustalenia. L1P zostaje półką luzem.
+- Kuweta we wnęce prawego dołu, F8 USUNIĘTY (z modelu i z zamówienia; zastępuje decyzję „F8 zostaje" z 2026-11-08). Wnęka 406 × 489, głębokość od PT1 (z 458) do frontów 182 (wcześniej błędnie 205: kuweta w wariancie nachodziła 23 mm na PT1); kuweta 600 × 400 × 400 wystaje 418 przed fronty. Mniej: 2 zawiasy 71B3590, 2 prowadniki, 4 nawierty pilotowe w PB1, 2 ograniczniki, 1 uchwyt. Problem kolizji F8 z gzymsem (audyt PR-03) znika. Przełącznik wariantu F8 usunięty z widoku.
+- Gzyms: najwyższy punkt X = 467 (wcześniej 489). Prześwit pod PP1/KP1 22 mm, więc podniesienia poziomu 489 o 3 mm (audyt B2) NIE robimy; konfirmaty PP1 → PB2/PT2 nadal nie do wkręcenia od spodu na miejscu – zalecana kolejność: prawy dół skręcony na podłodze i wsunięty w całości (do potwierdzenia przy montażu). Łby PP1 → PB2/PT2 są teraz w szczelinie 22 mm nad gzymsem (liczone jako widoczne: 24 zaślepki).
+- F5 ↔ F6: zostaje 79B9590 na F6 (B3 wariant 1). Do dopracowania: listwa oporowa za F6 zamiast 2 małych kątowników, krótsze wkręty, ogranicznik na F3.
+- Wentylacja: kratka kupiona, króciec Ø123 do rury Ø125. Środek otworu: 115 od prawej ściany, 243 od sufitu → x 1624, y 2418 (przy suficie J = 2661; było x 1616, y 2409). Otwór w F6: Ø127 (założenie: otwornica 127 pod króciec 123), środek 124 od lewej krawędzi F6, 219 od dolnej (234 od górnej). Otwór Ø130 w PT3: środek 253 od lewej, 234 od górnej. Kanał i kratka przesunięte, bez kolizji z kątownikami F6 (min. 5,5 mm).
+- KT1A/B/C (A2, zgoda): szer. 124 (x 1244–1368, 3 mm luzu na łby wkrętów w ramieniu kątownika), KT1A y 510–915 (405), KT1B y 943–1348 (405), KT1C y 1376–1723 (347). Każda płyta stoi na kątowniku-podporze (ramię pionowe na KB2, ramię poziome 2 mm pod płytą w z 158–183, poza półkami KP), 2 dotychczasowe kątowniki z ramieniem za płytą zostają, magnesy (2 na płytę) tylko przytrzymują. Luz przy wysuwaniu: 3 mm nad półką pod spodem, 2 mm do podpórek/wieńców.
+- Ograniczniki 86° na F9 zaakceptowane (przekładanie PP2+KP2 z pochyleniem albo po wypięciu F9). Razem 9: F1, F2, F7 po 2, F9 3.
+- KP1: zamówić 200 × 132, użytkownik skraca do 184 (naddatek po stronie tylnej, bez otworów; X otworów w krawędzi 3 w kalkulatorze +16).
+- Luzy między modułami: bez dodatkowych (luzy tylko po bokach zabudowy).
+- Wyniki v61: formatki 40 pozycji / 52 sztuki / 15,38 m²; 420 otworów, 57 połączeń, 0 kolizji; 152 konfirmaty, 14 kołków, 12 podpórek, 15 puszek; 24 widoczne łby.
+

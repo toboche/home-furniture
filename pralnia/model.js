@@ -26,10 +26,10 @@ var ITEMS=[
   {t:'cyl',n:'Drzwiczki pralki',layer:'Maszyny',cx:917,cy:424,z:634,r:150,len:12,c:0xaebdc6},
   {t:'cyl',n:'Drzwiczki suszarki',layer:'Maszyny',cx:917,cy:1300,z:646,r:165,len:12,c:0xaebdc6},
 
-  /* Pion i gzyms: R = 42, Q = 118, GZ1 = 73, GZ2 = 73, X = 489, GZ3 = 466, GZ4 = 680 */
+  /* Pion i gzyms: R = 42, Q = 118, GZ1 = 73, GZ2 = 73, X = 467 (najwyższy punkt, pomiar 2026-11-18; wcześniej 489), GZ3 = 466, GZ4 = 680 */
   {n:'Pion',layer:'Pion i gzyms',x:1376,y:0,z:0,w:363,h:2661,d:362,c:0xd9d4ca},
-  {n:'Gzyms przy maszynach (118)',layer:'Pion i gzyms',x:1258,y:0,z:0,w:118,h:489,d:435,c:0xc7c1b5},
-  {n:'Gzyms na froncie pionu (73)',layer:'Pion i gzyms',x:1376,y:0,z:362,w:363,h:489,d:73,c:0xc7c1b5},
+  {n:'Gzyms przy maszynach (118)',layer:'Pion i gzyms',x:1258,y:0,z:0,w:118,h:467,d:435,c:0xc7c1b5},
+  {n:'Gzyms na froncie pionu (73)',layer:'Pion i gzyms',x:1376,y:0,z:362,w:363,h:467,d:73,c:0xc7c1b5},
   {n:'Gzyms na prawej ścianie (73 × 680)',layer:'Pion i gzyms',x:1666,y:0,z:435,w:73,h:466,d:607,c:0xc7c1b5},
 
   /* Osprzęt: GN1–GN4, ZW1, ZW2, GP1, GP2, otwór K, L, M, N */
@@ -37,7 +37,7 @@ var ITEMS=[
   {n:'Gniazdko 2 (GN3, GN4)',layer:'Osprzęt',x:0,y:179,z:665,w:15,h:80,d:80,c:0xe58a2b},
   {n:'Zawór (ZW1, ZW2)',layer:'Osprzęt',x:1240,y:777,z:0,w:50,h:60,d:160,c:0xb08d57},
   {n:'Gniazdka za maszynami (GP1, GP2)',layer:'Osprzęt',x:1305,y:977,z:0,w:60,h:60,d:60,c:0xe58a2b},
-  {t:'cyl',n:'Otwór wentylacyjny (M, N)',layer:'Osprzęt',cx:1616,cy:2409,z:362,r:60.5,len:2,c:0x2b3034},
+  {t:'cyl',n:'Otwór wentylacyjny (WN1, WN2: 115 od prawej ściany, 243 od sufitu)',layer:'Osprzęt',cx:1624,cy:2418,z:362,r:60.5,len:2,c:0x2b3034},
 
   /* Zabudowa szczeliny nad gzymsem: ZB1 = 160, ZB2 = 160, ZB3 = 1070 */
   {n:'Zabudowa ZB (zamysł)',layer:'Zabudowa ZB',x:1216,y:489,z:0,w:160,h:581,d:160,c:0xe0a526,o:0.3},
@@ -54,19 +54,16 @@ var ITEMS=[
   {n:'Prawa: dół z wcięciem na gzyms (218 głęb.)',layer:'Szafka prawa',x:1376,y:0,z:440,w:287,h:466,d:218,c:0x4fa36a,o:0.32},
   {n:'Prawa: pas nad gzymsem prawej ściany (218 głęb.)',layer:'Szafka prawa',x:1376,y:466,z:440,w:360,h:23,d:218,c:0x4fa36a,o:0.32},
   {n:'Prawa: góra przed pionem (291 głęb.)',layer:'Szafka prawa',x:1376,y:489,z:367,w:360,h:2169,d:291,c:0x4fa36a,o:0.32},
-  {n:'Wentylowany fragment przy otworze (zamysł)',layer:'Szafka prawa',x:1546,y:2339,z:367,w:140,h:140,d:291,c:0xe0a526,o:0.5},
+  {n:'Wentylowany fragment przy otworze (zamysł)',layer:'Szafka prawa',x:1554,y:2348,z:367,w:140,h:140,d:291,c:0xe0a526,o:0.5},
 
   /* Szafka nad maszynami (zamysł): dolna krawęd 1743 = 1713 + 30, góra J − 3 = 2658, korpus 606 mm w szczelinie 608 mm, własne boki.
      Front równo z resztą na z = 658, pełna głębokość, tył na z = 5. */
   {n:'Szafka nad maszynami (korpus 606 × 915 w szczelinie 608, pełna głęb. 653)',layer:'Szafka nad maszynami',x:615,y:1743,z:5,w:606,h:915,d:653,c:0x8a6bb8,o:0.32},
 
-  /* Kuweta w rogu naprzeciwko lewej szafki: 600 × 400 × 400, dłuższy bok wzdłuż ściany frontowej (orientacja do potwierdzenia) */
-  {n:'Kuweta (600 × 400 × 400)',layer:'Dodatki',x:3,y:0,z:1094,w:600,h:400,d:400,c:0xbfa98a},
 
   /* Wyposażenie lewej szafki: tylko elementy o znanych wymiarach, układ wstępny */
   {n:'Suszarka na pranie, złożona (50 × 1400 × 600)',layer:'Wyposażenie',x:537,y:0,z:26,w:50,h:1400,d:600,c:0xd2b48c},
-  {n:'IKEA UTRUSTA wnętrze szafy gospodarczej (330 × 1335 × 530), wysuwane na prowadnicach',layer:'Wyposażenie',x:23,y:110,z:60,w:330,h:1335,d:530,c:0x9aa5ad,o:0.3},
-  {n:'Odkurzacz bezprzewodowy na haku zestawu UTRUSTA (250 × 700 × 300)',layer:'Wyposażenie',x:63,y:745,z:150,w:250,h:700,d:300,c:0x6b7b8c},
+  {n:'Odkurzacz bezprzewodowy (250 × 700 × 300), mocowanie do ustalenia (bez UTRUSTA)',layer:'Wyposażenie',x:63,y:745,z:150,w:250,h:700,d:300,c:0x6b7b8c},
   {n:'Deska do prasowania (60 × 1400 × 400)',layer:'Wyposażenie',x:473,y:0,z:126,w:60,h:1400,d:400,c:0x8d99ae},
 
   /* Kosz, klasyczny odkurzacz i półka z żelazkiem: układ wstępny.
@@ -83,9 +80,9 @@ var ITEMS=[
   {n:'F5: Front prawa, góra, otwierany (274,5 × 453)',layer:'Fronty',x:1222.5,y:2199,z:640,w:274.5,h:453,d:18,c:0x2f9e8f,o:0.55},
   {n:'F6: Front prawa, góra, stały z kratką (234,5 × 453)',layer:'Fronty',x:1500,y:2199,z:640,w:234.5,h:453,d:18,c:0x2f9e8f,o:0.55},
   {n:'F7: Front prawa, dół (512 × 453)',layer:'Fronty',x:1222.5,y:1743,z:640,w:512,h:453,d:18,c:0x2f9e8f,o:0.55},
-  {t:'cyl',n:'Kratka wywiewu Ø 150 w froncie stałym',layer:'Fronty',cx:1616,cy:2409,z:640,r:75,len:19,c:0xe0a526},
+  {t:'cyl',n:'Kratka wywiewu w froncie stałym (króciec Ø123 do rury Ø125; rozeta przyjęta Ø150)',layer:'Fronty',cx:1624,cy:2418,z:640,r:75,len:19,c:0xe0a526},
   /* Kanał wentylacyjny: rura okrągła Ø 125 od otworu w ścianie (z = 362) do tylnej strony frontu stałego (z = 640), zamocowana do szafki, uszczelniona pianką przy ścianie i przy froncie. */
-  {t:'cyl',n:'Kanał wentylacyjny (rura Ø 125, z 362 do 640)',layer:'Kanał wentylacyjny',cx:1616,cy:2409,z:362,r:62.5,len:278,c:0x9aa5ad},
+  {t:'cyl',n:'Kanał wentylacyjny (rura Ø 125, z 362 do 640)',layer:'Kanał wentylacyjny',cx:1624,cy:2418,z:362,r:62.5,len:278,c:0x9aa5ad},
   /* Listwy pod wkręty frontu stałego (18 × 18), po wewnętrznej stronie przodu komory. */
   {n:'Kątownik 25×25 pod F6, bok prawy: ramię przy froncie',layer:'Kątowniki pod F6',x:1693,y:2260,z:638,w:25,h:25,d:2,c:0x9aa5ad},
   {n:'Kątownik 25×25 pod F6, bok prawy: ramię przy boku',layer:'Kątowniki pod F6',x:1716,y:2260,z:615,w:2,h:25,d:25,c:0x9aa5ad},
@@ -99,8 +96,7 @@ var ITEMS=[
   {n:'Kątownik 25×25 pod F6, góra: ramię pod półką',layer:'Kątowniki pod F6',x:1510,y:2632,z:615,w:25,h:2,d:25,c:0x9aa5ad},
   {n:'Kątownik 25×25 pod F6, góra: ramię przy froncie',layer:'Kątowniki pod F6',x:1680,y:2609,z:638,w:25,h:25,d:2,c:0x9aa5ad},
   {n:'Kątownik 25×25 pod F6, góra: ramię pod półką',layer:'Kątowniki pod F6',x:1680,y:2632,z:615,w:25,h:2,d:25,c:0x9aa5ad},
-  /* Fronty prawego modułu dolnego (zawiasy po prawej): przerwy 3 mm w środku płyt na 498, 910 i 1322; dolny rząd węższy (do 1661,5) przez gzyms przy prawej ścianie. */
-  {n:'F8: Front prawa dolna, rząd 1 (439 × 493,5)',layer:'Fronty',x:1222.5,y:3,z:640,w:439,h:493.5,d:18,c:0x2f9e8f,o:0.55},
+  /* Front prawego modułu dolnego: F9 (zawiasy po prawej). F8 usunięty 2026-11-18: wnęka 406 × 489 pod PP1 otwarta, stoi w niej kuweta. */
   {n:'F9: Front prawa dolna, jeden wysoki (512 × 1240,5)',layer:'Fronty',x:1222.5,y:499.5,z:640,w:512,h:1240.5,d:18,c:0x2f9e8f,o:0.55},
 
   /* Zawiasy puszkowe (otwory Ø 35; środek puszki 22,5 mm od krawędzi frontu (F5: Blum 79B9590 do drzwi równoległych, prowadnik na tyle F6, puszka 22,5 mm), po 100 mm od końców frontu). Lewa strona: fronty lewego modułu i modułu nad maszynami; prawa strona: wszystkie fronty prawego modułu. */
@@ -116,8 +112,6 @@ var ITEMS=[
   {n:'Zawias: prawa, góra (otwierany) (prawa)',layer:'Zawiasy',x:1457,y:2534.5,z:641,w:35,h:35,d:11,c:0x2b3034},
   {n:'Zawias: prawa, dół (prawa)',layer:'Zawiasy',x:1694.5,y:1825.5,z:641,w:35,h:35,d:11,c:0x2b3034},
   {n:'Zawias: prawa, dół (prawa)',layer:'Zawiasy',x:1694.5,y:2078.5,z:641,w:35,h:35,d:11,c:0x2b3034},
-  {n:'Zawias: prawa dolna, rząd 1 (prawa)',layer:'Zawiasy',x:1621.5,y:85.5,z:641,w:35,h:35,d:11,c:0x2b3034},
-  {n:'Zawias: prawa dolna, rząd 1 (prawa)',layer:'Zawiasy',x:1621.5,y:379.0,z:641,w:35,h:35,d:11,c:0x2b3034},
   {n:'Zawias: prawa dolna, wysoki front (prawa)',layer:'Zawiasy',x:1694.5,y:582.0,z:641,w:35,h:35,d:11,c:0x2b3034},
   {n:'Zawias: prawa dolna, wysoki front (prawa)',layer:'Zawiasy',x:1694.5,y:1102.0,z:641,w:35,h:35,d:11,c:0x2b3034},
   {n:'Zawias: prawa dolna, wysoki front (prawa)',layer:'Zawiasy',x:1694.5,y:1622.5,z:641,w:35,h:35,d:11,c:0x2b3034},
@@ -130,7 +124,6 @@ var ITEMS=[
   {n:'Uchwyt GUBBARP przy F4',layer:'Uchwyty',x:636,y:2030,z:658,w:21,h:116,d:27,c:0xf4f4f4},
   {n:'Uchwyt GUBBARP przy F5',layer:'Uchwyty',x:1242,y:2249,z:658,w:21,h:116,d:27,c:0xf4f4f4},
   {n:'Uchwyt GUBBARP przy F7',layer:'Uchwyty',x:1242,y:2030,z:658,w:21,h:116,d:27,c:0xf4f4f4},
-  {n:'Uchwyt GUBBARP przy F8',layer:'Uchwyty',x:1242,y:330.5,z:658,w:21,h:116,d:27,c:0xf4f4f4},
   {n:'Uchwyt GUBBARP przy F9',layer:'Uchwyty',x:1242,y:992,z:658,w:21,h:116,d:27,c:0xf4f4f4},
 
   /* Wciskane podpórki półek Ø5 (półka L = PP z przodu + KP z tyłu kolumny, połączone kołkami w z=385; przesuwane razem). Lewa strona opiera się na KB2 w 4 punktach (z 213 i 355 pod KP, z 417 i 590 pod PP), prawa na PB2 w 2 punktach (z 417, 590). Poziom 489 stoi na konfirmatach (bez podpórek). */
@@ -172,8 +165,8 @@ var ITEMS=[
   {n:'RDW: Prawa dolna: wieniec górny, przód (1725 do 1743)',layer:'Półki',x:1239,y:1725,z:540,w:479,h:18,d:100,c:0xe6d7b8},
   /* RDW2 (audyt v1, 2026-11-18): wieniec górny tylny, spina górę tylnej części KB2 z PB2 i PT2 (wcześniej KB2 z tyłu u góry nie był niczym usztywniony: KP2 na podpórkach, KT1 zdejmowane). */
   {n:'RDW2: Prawa dolna: wieniec górny, tył (1725 do 1743)',layer:'Półki',x:1239,y:1725,z:385,w:479,h:18,d:100,c:0xe6d7b8},
-  /* Wariant: F8 usunięte, ta sama kuweta 600 × 400 × 400 wchodzi węższym końcem (400) we wnękę 406 × 489 × 205 (z 435 do 640); wystaje 395. Kuweta z rogu jest wtedy ukryta. */
-  {n:'Kuweta w F8 (600 × 400 × 400)',layer:'Kuweta (przykład)',x:1242,y:0,z:435,w:400,h:400,d:600,c:0xbfa98a},
+  /* Kuweta (decyzja 2026-11-18): we wnęce prawego dołu zamiast frontu F8 (F8 usunięty). Wnęka 406 × 489, głębokość od PT1 (z 458) do frontów (z 640) = 182; kuweta 600 × 400 × 400 węższym końcem do środka, wystaje 418 przed fronty. */
+  {n:'Kuweta we wnęce po F8 (600 × 400 × 400)',layer:'Dodatki',x:1242,y:0,z:458,w:400,h:400,d:600,c:0xbfa98a},
 
   /* Ścianki boczne (płyta 18 mm). Boki stoją prosto na kafelkach. Lewa ściana pokoju jest lewym bokiem dolnej lewej szafki (odkurzacz bezprzewodowy, gniazdko GN1).
      Moduł nad maszynami ma własne boki (po 1 mm luzu od boków sąsiadów). */
@@ -195,27 +188,36 @@ var ITEMS=[
   {n:'L2T: L2: tył (pas)',layer:'Ścianki tylne',x:23,y:1743,z:3,w:574,h:909,d:18,c:0x9c8b6e,o:0.9},
   {n:'NWT: Wnęka nad maszynami: tył',layer:'Ścianki tylne',x:633,y:1743,z:5,w:570,h:909,d:18,c:0x9c8b6e,o:0.9},
   {n:'PT1: Prawa dół: tył (kolumna i część przed pionem)',layer:'Ścianki tylne',x:1239,y:0,z:440,w:406,h:489,d:18,c:0x9c8b6e,o:0.9},
-  {n:'KT1A: Kolumna: tył, zawór, zdejmowany do przodu, trzymany magnesami (y 509-916)',layer:'Ścianki tylne',x:1241.5,y:509,z:165,w:127,h:407,d:18,c:0x9c8b6e,o:0.9},
+  /* KT1A/B/C (v60, audyt v1 A2, decyzja 2026-11-18): szer. 124 (x 1244-1368, 3 mm luzu na łby wkrętów w ramieniu kątownika na KB2),
+     stoją na kątowniku-podporze (ramię poziome 2 mm pod płytą, z 158-183, poza półkami KP), trzymane 2 magnesami do ramion za płytą.
+     Wysuwane do przodu ponad półkami: 3 mm luzu od półki pod spodem, 2 mm do podpórek / wieńców nad płytą. */
+  {n:'KT1A: Kolumna: tył, zawór, zdejmowany do przodu, stoi na podporze, trzymany magnesami (y 510-915)',layer:'Ścianki tylne',x:1244,y:510,z:165,w:124,h:405,d:18,c:0x9c8b6e,o:0.9},
+  {n:'Kątownik KT1A, podpora: ramię przy boku KB2',layer:'Kątowniki pod KT1',x:1239,y:508,z:158,w:2,h:25,d:25,c:0x9aa5ad},
+  {n:'Kątownik KT1A, podpora: ramię pod płytą',layer:'Kątowniki pod KT1',x:1241,y:508,z:158,w:25,h:2,d:25,c:0x9aa5ad},
   {n:'Kątownik KT1A, ramię przy boku KB2',layer:'Kątowniki pod KT1',x:1239,y:579,z:165,w:2,h:25,d:25,c:0x9aa5ad},
   {n:'Kątownik KT1A, ramię za płytą',layer:'Kątowniki pod KT1',x:1239,y:579,z:163,w:25,h:25,d:2,c:0x9aa5ad},
-  {n:'Magnes Ø10 x 3 w KT1A (gniazdo wiercisz sam)',layer:'Kątowniki pod KT1',x:1248,y:586,z:165,w:10,h:10,d:3,c:0x222222},
+  {n:'Magnes Ø10 x 3 w KT1A (gniazdo wiercisz sam)',layer:'Kątowniki pod KT1',x:1250,y:586,z:165,w:10,h:10,d:3,c:0x222222},
   {n:'Kątownik KT1A, ramię przy boku KB2',layer:'Kątowniki pod KT1',x:1239,y:804,z:165,w:2,h:25,d:25,c:0x9aa5ad},
   {n:'Kątownik KT1A, ramię za płytą',layer:'Kątowniki pod KT1',x:1239,y:804,z:163,w:25,h:25,d:2,c:0x9aa5ad},
-  {n:'Magnes Ø10 x 3 w KT1A (gniazdo wiercisz sam)',layer:'Kątowniki pod KT1',x:1248,y:811,z:165,w:10,h:10,d:3,c:0x222222},
-  {n:'KT1B: Kolumna: tył, gniazdka, zdejmowany do przodu, trzymany magnesami (y 942-1349)',layer:'Ścianki tylne',x:1241.5,y:942,z:165,w:127,h:407,d:18,c:0x9c8b6e,o:0.9},
+  {n:'Magnes Ø10 x 3 w KT1A (gniazdo wiercisz sam)',layer:'Kątowniki pod KT1',x:1250,y:811,z:165,w:10,h:10,d:3,c:0x222222},
+  {n:'KT1B: Kolumna: tył, gniazdka, zdejmowany do przodu, stoi na podporze, trzymany magnesami (y 943-1348)',layer:'Ścianki tylne',x:1244,y:943,z:165,w:124,h:405,d:18,c:0x9c8b6e,o:0.9},
+  {n:'Kątownik KT1B, podpora: ramię przy boku KB2',layer:'Kątowniki pod KT1',x:1239,y:941,z:158,w:2,h:25,d:25,c:0x9aa5ad},
+  {n:'Kątownik KT1B, podpora: ramię pod płytą',layer:'Kątowniki pod KT1',x:1241,y:941,z:158,w:25,h:2,d:25,c:0x9aa5ad},
   {n:'Kątownik KT1B, ramię przy boku KB2',layer:'Kątowniki pod KT1',x:1239,y:1012,z:165,w:2,h:25,d:25,c:0x9aa5ad},
   {n:'Kątownik KT1B, ramię za płytą',layer:'Kątowniki pod KT1',x:1239,y:1012,z:163,w:25,h:25,d:2,c:0x9aa5ad},
-  {n:'Magnes Ø10 x 3 w KT1B (gniazdo wiercisz sam)',layer:'Kątowniki pod KT1',x:1248,y:1019,z:165,w:10,h:10,d:3,c:0x222222},
+  {n:'Magnes Ø10 x 3 w KT1B (gniazdo wiercisz sam)',layer:'Kątowniki pod KT1',x:1250,y:1019,z:165,w:10,h:10,d:3,c:0x222222},
   {n:'Kątownik KT1B, ramię przy boku KB2',layer:'Kątowniki pod KT1',x:1239,y:1237,z:165,w:2,h:25,d:25,c:0x9aa5ad},
   {n:'Kątownik KT1B, ramię za płytą',layer:'Kątowniki pod KT1',x:1239,y:1237,z:163,w:25,h:25,d:2,c:0x9aa5ad},
-  {n:'Magnes Ø10 x 3 w KT1B (gniazdo wiercisz sam)',layer:'Kątowniki pod KT1',x:1248,y:1244,z:165,w:10,h:10,d:3,c:0x222222},
-  {n:'KT1C: Kolumna: tył, zdejmowany do przodu, trzymany magnesami (y 1375-1725)',layer:'Ścianki tylne',x:1241.5,y:1375,z:165,w:127,h:350,d:18,c:0x9c8b6e,o:0.9},
+  {n:'Magnes Ø10 x 3 w KT1B (gniazdo wiercisz sam)',layer:'Kątowniki pod KT1',x:1250,y:1244,z:165,w:10,h:10,d:3,c:0x222222},
+  {n:'KT1C: Kolumna: tył, zdejmowany do przodu, stoi na podporze, trzymany magnesami (y 1376-1723)',layer:'Ścianki tylne',x:1244,y:1376,z:165,w:124,h:347,d:18,c:0x9c8b6e,o:0.9},
+  {n:'Kątownik KT1C, podpora: ramię przy boku KB2',layer:'Kątowniki pod KT1',x:1239,y:1374,z:158,w:2,h:25,d:25,c:0x9aa5ad},
+  {n:'Kątownik KT1C, podpora: ramię pod płytą',layer:'Kątowniki pod KT1',x:1241,y:1374,z:158,w:25,h:2,d:25,c:0x9aa5ad},
   {n:'Kątownik KT1C, ramię przy boku KB2',layer:'Kątowniki pod KT1',x:1239,y:1445,z:165,w:2,h:25,d:25,c:0x9aa5ad},
   {n:'Kątownik KT1C, ramię za płytą',layer:'Kątowniki pod KT1',x:1239,y:1445,z:163,w:25,h:25,d:2,c:0x9aa5ad},
-  {n:'Magnes Ø10 x 3 w KT1C (gniazdo wiercisz sam)',layer:'Kątowniki pod KT1',x:1248,y:1452,z:165,w:10,h:10,d:3,c:0x222222},
+  {n:'Magnes Ø10 x 3 w KT1C (gniazdo wiercisz sam)',layer:'Kątowniki pod KT1',x:1250,y:1452,z:165,w:10,h:10,d:3,c:0x222222},
   {n:'Kątownik KT1C, ramię przy boku KB2',layer:'Kątowniki pod KT1',x:1239,y:1688,z:165,w:2,h:25,d:25,c:0x9aa5ad},
   {n:'Kątownik KT1C, ramię za płytą',layer:'Kątowniki pod KT1',x:1239,y:1688,z:163,w:25,h:25,d:2,c:0x9aa5ad},
-  {n:'Magnes Ø10 x 3 w KT1C (gniazdo wiercisz sam)',layer:'Kątowniki pod KT1',x:1248,y:1695,z:165,w:10,h:10,d:3,c:0x222222},
+  {n:'Magnes Ø10 x 3 w KT1C (gniazdo wiercisz sam)',layer:'Kątowniki pod KT1',x:1250,y:1695,z:165,w:10,h:10,d:3,c:0x222222},
   {n:'KT2: Kolumna: tył, pas (1743-2652)',layer:'Ścianki tylne',x:1239,y:1743,z:165,w:132,h:909,d:18,c:0x9c8b6e,o:0.9},
   {n:'PT2: Prawa: tył, dół i środek (507-1743)',layer:'Ścianki tylne',x:1371,y:507,z:367,w:347,h:1236,d:18,c:0x9c8b6e,o:0.9},
   {n:'PT3: Prawa: tył, pas (1743-2652), otwór Ø130 pod kanał wiercony samodzielnie: środek 245 od lewej, 243 od góry krawędzi',layer:'Ścianki tylne',x:1371,y:1743,z:367,w:347,h:909,d:18,c:0x9c8b6e,o:0.9},
@@ -247,20 +249,6 @@ return {
     var k=/^Kątownik (KT1[ABC])/.exec(it.n);if(k){return h.back(new RegExp('^'+k[1]+':'))||null;}
     return undefined;
   },
-  variants:[{
-    id:'variantF8',
-    label:'F8 usunięte: kuweta we wnęce zamiast w rogu (406 × 489 × 205)',
-    layer:'Kuweta (przykład)', /* warstwa widoczna tylko w tym wariancie */
-    apply:function(on,h){
-      function inF8(it){if((it.layer!=='Zawiasy'&&it.layer!=='Uchwyty')||!it.w)return false;var cx=it.x+it.w/2,cy=it.y+it.h/2;return cx>=1222.5&&cx<=1661.5&&cy>=3&&cy<=496.5;}
-      h.pick.forEach(function(m){var it=m.userData.info;
-        if((it.layer==='Fronty'&&/^F8:/.test(it.n))||inF8(it)){m.visible=on?false:h.layerOn(it.layer);}});
-      (h.layers['Numeracja frontów']||[]).forEach(function(sp){var it=sp.userData.item;
-        if(it&&/^F8:/.test(it.n))sp.visible=on?false:h.layerOn('Numeracja frontów');});
-      h.variantItems.forEach(function(m){m.visible=on;});
-      h.pick.forEach(function(m){if(/^Kuweta \(600/.test(m.userData.info.n))m.visible=on?false:h.layerOn(m.userData.info.layer);});
-    }
-  }],
   items:ITEMS
 };
 })();
