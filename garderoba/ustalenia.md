@@ -22,7 +22,7 @@ Materiały źródłowe: `zrodla/` (rzut architektoniczny, zdjęcia ogólne).
 - Dolne szafki stoją bezpośrednio na kafelkach, bez cokołu.
 
 ## Bryły szafek (decyzje 2026-11-11)
-- Górna powierzchnia wieńca części otwartej: 2120. Luz pod sufitem 3 mm (góra szafek 2583).
+- Górna powierzchnia wieńca części otwartej: 2120. Luz pod sufitem 3 mm (góra szafek 2583); od 2026-11-18: 4 mm, góra 2582.
 - Korpusy kończą się 3 mm za najdalszym punktem pionu. Głębokość szafek na wprost liczona od najmniejszego wysięgu pionu (562);
   tam, gdzie pion wystaje do 569, szafkę odsuwa się od ściany przy montażu.
 - Szafki na wprost zachodzą na szafkę po lewej (narożnik przy pionie). Szafki są o kilka mm płytsze i odsunięte od ściany,
@@ -43,24 +43,25 @@ Materiały źródłowe: `zrodla/` (rzut architektoniczny, zdjęcia ogólne).
 - Przedział na kurtki: moduł 2 na wprost (prawy) na dłuższe kurtki (od półki 614,5 do spodu wieńca 2102 = 1487,5); moduł 1 na wprost i szafka po lewej na krótsze 1000.
 - Bez dna: najniższe przedziały na buty stoją bezpośrednio na kafelkach (2026-11-15).
 - Wysokości półek wspólne dla wszystkich szafek (przyjęte 2026-11-15, według szafki po lewej): spody półek 335 (2 mm nad gzymsem),
-  596,5 i 858; przedziały na buty 335, 243,5, 243,5 (przyjęte mimo wcześniejszego minimum 270).
+  596,5 (od 2026-11-18: 596) i 858; przedziały na buty 335, 243,5, 243,5 (od 2026-11-18: 243 i 244) (przyjęte mimo wcześniejszego minimum 270).
 - Szafki z krótszymi kurtkami (moduł 1 na wprost, po lewej): 3 półki, szuflada 208 (front 202), płyta pod kurtkami 1084–1102.
 - Moduł 2 na wprost (dłuższe kurtki): BEZ szuflady i bez płyty pod kurtkami (2026-11-15); 2 półki (335, 596,5),
   druga jest dnem przedziału na kurtki (1487,5 do spodu wieńca, od osi drążka 1422,5).
 - Części górne bez dodatkowych półek: wieniec na 2120 na całej głębokości szafek jest jednocześnie półką części górnej.
 - Szuflady (2026-11-15): Blum MOVENTO do TIP-ON BLUMOTION (otwieranie naciśnięciem, bez uchwytów), skrzynki z płyty 16
   (jak w przedpokoju), fronty CHOWANE między boki szafki, równo z krawędzią korpusu (583 / 705), szczelina 3.
-  SZ1 (na wprost, moduł 1): NL 500, front 516,5 × 202; SZ2 (po lewej): NL 650, front 853 × 202.
-  Moduły na wprost to osobne korpusy (każdy z dwoma bokami).
+  SZ1 (na wprost, moduł 1): NL 500, front 525,5 × 202; SZ2 (po lewej): NL 600 (do 2026-11-18: 650), front 853 × 202.
+  Szafka na wprost to jeden korpus z przegrodą NP (patrz Konstrukcja).
 - Osłona przewodów wodnych (2026-11-15): w obu modułach na wprost pionowa płyta od podłogi do pierwszej półki (335),
   55–73 od ściany tylnej (przewody wystają ok. 50, luz 5); najniższy przedział na buty płytszy o ok. 50, reszta bez zmian.
   Plecy modułów zaczynają się nad tym przedziałem.
 - Uchwyty odrzucone (2026-11-15): uchwyt SZ1 blokowałby otwieraną SZ2, a uchwyt SZ2 bliżej niż 1160 od ściany tylnej – SZ1.
   Otwieranie każdej szuflady przy zamkniętej drugiej sprawdzone (`sprawdz_szuflady.js`): brak kolizji. Okucia: `komponenty.md`.
+  SZ1 i SZ2 otwarte JEDNOCZEŚNIE zderzają się w narożniku (już przy 25 mm wysuwu drugiej): nie otwierać obu naraz (2026-11-18).
 
-## Konstrukcja (decyzje 2026-11-15)
+## Konstrukcja (decyzje 2026-11-15; podział na korpusy dolne i górne: sekcja 2026-11-18 niżej)
 - Płyta 18, plecy 18 (solidne, bo na dole nie ma wieńca), złącza: konfirmaty. Montaż: najpierw szafka na wprost, potem po lewej.
-- Szafka na wprost (N): JEDEN korpus 1117 × 2583 × 578 z przegrodą NP na pół (od podłogi do wieńca górnego);
+- (do 2026-11-18) Szafka na wprost (N): JEDEN korpus 1117 × 2583 × 578 z przegrodą NP na pół (od podłogi do wieńca górnego);
   plecy NT na całą szerokość od 335 (nad osłonami przewodów) do wieńca górnego; wieniec 2120 i półki w obu połowach.
 - Szafka po lewej (L): boki LB1 (przy pionie) i LB2 (przy ścianie przedniej) z wycięciem dolnego narożnika przy ścianie
   wokół gzymsu: LB1 184 × 335 (gzyms z rurą), LB2 129 × 335; plecy LT nad gzymsem (od 335).
@@ -71,11 +72,11 @@ Materiały źródłowe: `zrodla/` (rzut architektoniczny, zdjęcia ogólne).
   F2 dotyka prawej ściany przy ok. 92° otwarcia: ogranicznik kąta.
 - Szuflady: skrzynki wg katalogu Blum (patrz `komponenty.md`), kontrola otwierania bez kolizji.
 - Konfirmaty z prawej strony przegrody NP przesunięte o 25, żeby otwory z obu stron NP się nie pokrywały.
-- MONTAŻ: złożonego korpusu nie da się postawić w pomieszczeniu (przekątna boku 2583 × 578 to 2647, sufit 2586),
+- (do 2026-11-18) MONTAŻ: złożonego korpusu nie da się postawić w pomieszczeniu (przekątna boku 2583 × 578 to 2647, sufit 2586),
   a boki NB-1, NB-2, LB1, LB2 mają z zewnątrz tylko 3–20 mm luzu do ścian i pionu (konfirmaty wkręca się od zewnątrz boków).
   Korpusy składamy na stojąco na wolnej podłodze przed docelowym miejscem i dosuwamy: N do ściany tylnej, L w stronę
   ściany lewej (wycięcia boków przechodzą nad gzymsem). Pojedynczą płytę stawia się, podnosząc ją przez krawędź 18 mm.
-- Gniazdko (E1, E2): LB2 stoi 12 mm od ściany przedniej, więc puszka gniazdka nie może wystawać więcej niż ok. 9 mm,
+- (wyjaśnione 2026-11-18, patrz niżej) Gniazdko (E1, E2): LB2 stoi 12 mm od ściany przedniej, więc puszka gniazdka nie może wystawać więcej niż ok. 9 mm,
   albo musi przejść przez otwór w LB2 (do sprawdzenia przy wyborze gniazdka).
 
 ## Wycena wstępna meble.pl (2026-11-15, szacunek, nie koszyk)
@@ -98,7 +99,7 @@ Bez okuć (Blum, drążki, konfirmaty, TIP-ON) i bez dostawy. Dokładna cena: ko
 
 ## Wstępne zamówienie meble.pl (2026-11-15): rozkrój 21629487
 Rozkrój nr 21629487 w centrum.meble.pl (PREMIUM +standard), podgląd do 13.01.2027; NIE dodany do koszyka (przeglądarka niezalogowana).
-Wpisane: 20 pozycji / 28 formatek z płyty 18 mm W1200 ST9 (okleina ABS 0,8 i laserowa 1 mm na frontach, F1/F2 szablon Front lewy/prawy
+Wpisane: 19 pozycji / 28 formatek z płyty 18 mm W1200 ST9 (okleina ABS 0,8 i laserowa 1 mm na frontach, F1/F2 szablon Front lewy/prawy
 z zawiasami BLUM, puszki 22,5 i 100 od końców), nawierty z `wyniki/kalkulator_nawierty.csv`.
 | Pozycja | Kwota brutto |
 |---|---|
@@ -112,6 +113,53 @@ USTALENIA Z KALKULATORA:
 - Nawierty (i wybór szablonu) są niedostępne dla formatek dłuższych niż 2500 mm: NB-1, NB-2, NP, LB1, LB2 zamówione BEZ nawiertów
   (ok. 150 otworów do wywiercenia samodzielnie wg `wyniki/arkusz_nawiertow.pdf`) – do decyzji.
 - Płyty 16 mm do skrzynek szuflad nie ma w W1200 ani W1100 (tylko 18 i 36 mm) – skrzynki nie są w rozkroju, do decyzji.
+
+## Decyzje 2026-11-18 (rozmowa po audycie v1)
+- PODZIAŁ NA KORPUSY: każda szafka ma korpus dolny (0–2120: N, L) i górny (2120–2583, wys. 463: GN, GL). Dolny kończy się
+  wieńcem NW / LW na całą szerokość (góra 2120 = dotychczasowy wieniec części otwartej), górny ma własne dno GND / GLD (od luzu 4: 2120–2582, wys. 462),
+  boki, plecy i wieniec GNG / GLG; na 2120 leżą więc dwie płyty (2102–2138). Najdłuższa formatka 2120 (wcześniej 2583):
+  wszystkie formatki poniżej 2500, więc meble.pl wierci wszystkie otwory (koniec ręcznego wiercenia 146 otworów).
+- Montaż: korpus dolny składa się na podłodze i stawia (przekątna boku 2120 × 578 to 2197, sufit min. 2586), dosuwa do ściany;
+  górny składa się osobno, podnosi na dolny i wsuwa od przodu po wieńcu dolnego (pod sufitem 3 mm w projekcie,
+  pomiary V4: 2587–2589, czyli 5–7 mm przy luzie 4 w projekcie). Górny przykręcony do dolnego wkrętami przez dno i do ściany przez plecy.
+- Fronty F1, F2 w korpusie górnym między dnem GND a wieńcem GNG: 2140–2562, 527 × 422; zawiasy i nawierty pilotowe w GNB-1, GNB-2;
+  TIP-ON F1 i F2 na przegrodzie GNP.
+- Szczelina frontów chowanych SZCZ = 2 (było 3), żeby zostało więcej regulacji. Fronty: F1, F2 527 × 422 (po luzie 4), F3 527 × 204, F4 855 × 204.
+- Wszystkie wymiary formatek i położenia otworów w pełnych mm (meble.pl): szafka na wprost 1116 (było 1117, luz przy prawej
+  ścianie 4), połowy po 531; półki 335, 596, 858 (przedziały 243 i 244); linia prowadników zawiasów 57 (katalog 56,5).
+- Szuflady: L1 (T60L7340) w obu. Skrzynki bez podcięć (wariant Blum sprawdzony w katalogu MOVENTO); konfirmaty dna odsunięte
+  od zaczepów i TIP-ON (`komponenty.md`). Płyta 16 mm na skrzynki: inna biała płyta 16 mm (W1200 nie ma 16).
+- Dolne krawędzie stojące na kafelkach (NB, NP, LB1, LB2, NO) oklejone ABS; ślizgacze dopiero, jeśli będą potrzebne.
+  Kalkulator meble.pl w `kalkulator_nawierty.csv` ma tylko krawędź przednią: dolną dopisać ręcznie przy zamówieniu.
+- Luz pod sufitem 4 (było 3): góra szafek 2582, korpusy górne 462 wysokości, fronty F1, F2 527 × 422.
+- Osłony przewodów NO-1, NO-2 zdejmowane (dostęp do przewodów): bez konfirmatów; u góry 2 kątowniki pod półką NS-1 / NS-4
+  (niewidoczne), na dole 2 zatrzaski magnetyczne na bokach za osłoną, blaszki na tylnym licu osłony. Zdjęcie: odkręcić
+  kątowniki i odciągnąć dół osłony. Korpus dolny poniżej 335 trzymają półka NS-1 / NS-4 i plecy NT nad nią.
+- WYMIARY Z POMIARÓW WERYFIKACYJNYCH (2026-11-18, wieczór): pion pochylony (PX 692 na dole, 700 na samej górze; PZ 563–573),
+  prawa ściana przy ścianie tylnej najbliżej 1829 od lewej (AT = PX + pion–ściana), ściana przednia przy lewej 1488 od tylnej.
+  Szafka na wprost 703–1825 (szerokość 1122, połowy 534; było 705–1821): luz 3 do pionu na samej górze, 4 do prawej ściany.
+  Narożnik: front szafki na wprost = tył boku LB1 = 576 (3 przed pionem 573; było 583 = PZ + 3 + 18, te 18 nie były potrzebne,
+  bo LB1 stoi przed frontem szafki na wprost); szafka na wprost głęboka 571 (było 578). Szafka po lewej 576–1485
+  (długość 909, było 583–1478), głębokość 698 (było 700). Fronty: F1, F2, F3 530, F4 869. Przewód wentylacyjny docięty o ok. 89.
+- Skrajne wymiary szafek (703–1825 × 5–576 i 5–703 × 576–1485, wys. 2582) potwierdzone w pomieszczeniu przez użytkownika (2026-11-18).
+- Pomiary weryfikacyjne (`weryfikacja.md`): sufit 2587, 2589, 2589 (każdy powtórzony 4 razy); przewody wodne nie są zagięte w stronę pokoju;
+  GZ1 333; puszka gniazdka nie wystaje. LB2 przy pionie stoi ok. 3 mm od ściany przedniej (T = 919 zmierzone przy pionie);
+  12 mm wychodziło z G = 1490 mierzonego przy prawej ścianie (model rysuje ścianę przednią prosto).
+
+## Audyt v1 (`audyt/v1.md`), wdrożone 2026-11-18
+- SZ2: prowadnice MOVENTO NL 650 → NL 600 (760H6000S, 40 kg). NL 650 jest tylko w serii 766H, której jednostka TIP-ON
+  BLUMOTION L5 wymaga min. 35 kg; skrzynka SZ2 krótsza: 590 (było 640). Głębokość za frontem przyjęta z zapasem NL + 7:
+  SZ1 542 ≥ 507, SZ2 664 ≥ 607.
+- Prowadniki zawiasów F1, F2: krzyżakowe 0 mm (173L6100), linia wkrętów 56,5 od przodu boku (było 55; katalog Blum:
+  front wpuszczany = cofnięcie o grubość frontu + 1,5). Nawierty pilotowe w NB-1, NB-2 przesunięte o 1,5.
+- Kody okuć Blum w `komponenty.md`; ogranicznik 86° (70T3553) zamiast nieistniejącego 95°; TIP-ON F1 i F2 na NP
+  na różnych wysokościach (≥ 30) albo wkręty 3,5 × 13.
+- Skrzynki szuflad: zostaje konstrukcja „tył i czoło na dnie, dno do końca boków” = wariant Blum bez podcięć (audyt proponował
+  pełny tył z podcięciami 125; do rozmowy). Dopisane otwory Ø6 × 10 pod haki prowadnic w tylnej krawędzi dna.
+- Poprawki dokumentacji: F3 525,5 × 202, rozkrój 21629487 miał 19 pozycji. Rozkrój trzeba zaktualizować (S2 krótsze, piloty NB).
+- Do osobnego PR w `wspolne/` (audyt, sekcja C, NIE w tej zmianie): `otwory.py` natywne fronty wpuszczane (prowadniki 37 + FD + 1,5),
+  `zaslepki.py` warunek brzegowy (≥ przy D − TOL) i zamknięte komory (np. zewnętrzne lica LB1, LB2), `arkusz_pdf.py` opisy
+  nawiertów pilotowych i otworów krawędziowych.
 
 ## Plan pracy
 1. Wymiary pomieszczenia z natury (zdjęcia w paczkach). Do czasu ustalenia wszystkich wymiarów NIE projektujemy szafek.

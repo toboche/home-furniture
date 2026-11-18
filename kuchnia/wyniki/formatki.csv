@@ -1,16 +1,16 @@
 ﻿KOD;NAZWA;DL;SZ;SZT;OKLEINA;NAWIERTY;UWAGI
-SOB;Szafka okapowa: boki (bez dna, okap między bokami);1167;300;2;1DL;"SOB-1: TRZPIENIE MIMOŚRODÓW + KOŁKI (bez otworów przelotowych); SOB-2: KONFIRMATY; OBA: 2 PODPÓRKI Ø5 x 10 POD SOD";"SOB-1 widoczny, czyste lico zewnętrzne; SOB-2: środek otworu Ø160 pod rurę Ø150; okap przykręcany 4 wkrętami 3,5 x 16 (81 nad dołem, 35 i 215 od przodu)"
-SOT;Szafka okapowa: tył;1167;516;1;;KONFIRMATY + MIMOŚRODY I KOŁKI (do SOB-1);
-SOW;Szafka okapowa: wieniec górny;516;282;1;1DL;KONFIRMATY + MIMOŚRÓD I KOŁKI (do SOB-1);
-SOD;Szafka okapowa: półka wkładana tuż nad okapem (na 4 podpórkach Ø5);514;280;1;1DL;BRAK;"wkładana po montażu okapu; wycięcie od przodu na wylot Ø150 (szer. ok. 170, do ok. 112 od tyłu, oś x na środku) wycina użytkownik, krawędzie silikonem"
-SOP;Szafka okapowa: półka nad okapem;516;282;1;1DL;KONFIRMATY + MIMOŚRÓD I KOŁKI (do SOB-1);środek otworu Ø170 pod pion Ø150 (oś 109,5 od ściany)
-WSB;Wąska szafka: boki;1167;300;2;1DL;KONFIRMATY;środki otworów pod rurę: WSB-1 Ø160 (pod Ø150), WSB-2 Ø140 (pod Ø125)
+SOB;Szafka okapowa: boki (bez dna, okap między bokami);1167;304;2;1DL;"SOB-1: TRZPIENIE MIMOŚRODÓW + KOŁKI (bez otworów przelotowych); SOB-2: KONFIRMATY; OBA: 2 PODPÓRKI Ø5 x 10 POD SOD";"SOB-1 widoczny, czyste lico zewnętrzne; SOB-2: środek otworu Ø160 pod rurę Ø150; okap przykręcany 4 wkrętami 3,5 x 16: nawierty pilotowe Ø3 x 5 od wnętrza na Y 1592 (81 nad dołem), z 250 i 70 (35 i 215 od lica przodu korpusu okapu)"
+SOT;Szafka okapowa: tył;1167;516;1;;KONFIRMATY + MIMOŚRODY I KOŁKI (do SOB-1);środek otworu Ø25 pod przewód zasilający okap (x 2852, y 2193) wycina użytkownik
+SOW;Szafka okapowa: wieniec górny;516;286;1;1DL;KONFIRMATY + MIMOŚRÓD I KOŁKI (do SOB-1);
+SOD;Szafka okapowa: półka wkładana tuż nad okapem (na 4 podpórkach Ø5);514;284;1;1DL;BRAK;"wkładana po montażu okapu; wycięcie od przodu na wylot Ø150: szer. 170 (oś x na środku), zakończone półkolem R85 o środku 120 od tylnej krawędzi (najgłębiej 35 od tylnej krawędzi); wycina użytkownik, krawędzie silikonem; w tylnym prawym narożniku podcięcie ok. 25 × 25 na przewód okapu"
+SOP;Szafka okapowa: półka nad okapem;516;286;1;1DL;KONFIRMATY + MIMOŚRÓD I KOŁKI (do SOB-1);"środek otworu Ø170 pod rurę Ø150 (z 124 = 106 od tylnej krawędzi; rura lekko pochylona); otwór otwarty do tyłu (wycięcie U szer. 170 od tylnej krawędzi), przewód okapu przechodzi tym wycięciem; wycina użytkownik"
+WSB;Wąska szafka: boki;1167;300;2;1DL;KONFIRMATY;"WSB-1: środek otworu Ø160 pod Ø150; WSB-2: rura ze ścianki wystaje 115, więc wycięcie U od tylnej krawędzi szer. 140 z półkolem R70 o środku w zaznaczonym punkcie (z 97), żeby szafkę dało się nasunąć na rurę; wycina użytkownik"
 WST;Wąska szafka: tył;1167;238;1;;KONFIRMATY;
 WSD;Wąska szafka: dno;282;238;1;1DL;KONFIRMATY;
 WSW;Wąska szafka: wieniec górny;282;238;1;1DL;KONFIRMATY;
 WSS;Wąska szafka: dno skrzynki na rurę (płytka półka przed zaślepką);282;238;1;1DL;KONFIRMATY;
-WSZ;Wąska szafka: zaślepka skrzynki na rurę;238;168;1;;KONFIRMATY;"widoczne lico przednie; krawędzie schowane"
+WSZ;Wąska szafka: zaślepka skrzynki na rurę (zdejmowana);238;168;1;;BRAK;"widoczne lico przednie; krawędzie schowane; bez konfirmatów, zdejmowana: 2 kołki Ø8 na dole (wklejone w WSZ), 2 zatrzaski magnetyczne u góry (pod WSW)"
 WSP;Wąska szafka: półki stałe;282;238;2;1DL;KONFIRMATY;
-P1;Półka LED: ściana lewa (wnęka);804;400;1;1DL;"CZOŁA: 5 x Ø8 x 35 pod pręty M8 (3 od ściany lewej, 2 od ściany głównej; użytkownik pogłębia do 85)";okleina na długiej krawędzi od strony kuchni (804). rowki 18,2 × 6 pod profil LED w spodzie frezuje użytkownik (meble.pl nie robi wręgów zachodzących na siebie)
-P3;Półka LED: ściana główna;1980;200;1;1DL;CZOŁA: 5 x Ø8 x 35 pod pręty M8 w tylnej krawędzi (użytkownik pogłębia do 85);okleina na przedniej krawędzi (1980). rowek 18,2 × 6 pod profil LED w spodzie frezuje użytkownik (meble.pl nie robi wręgów zachodzących na siebie)
-F1;Front szafki okapowej, otwierany na docisk;1164;549;1;2DL+2SZ;ZAWIASY 3 SZT (PRAWA), PUSZKA Ø35, ŚRODEK 22,5 MM OD KRAWĘDZI;"3 zawiasy Blum CLIP top 110° bez sprężyny 70T3550.TL + prowadniki 173L6100; 2 x TIP-ON 956A1004 na adapterze 956A1201 (push-to-open)"
+P1;Półka LED: ściana lewa (wnęka);804;400;1;1DL;CZOŁA: 3 x Ø8 x 35 pod pręty M8 od ściany lewej (użytkownik pogłębia do 85);"okleina na długiej krawędzi od strony kuchni (804); koniec przy słupku przykręcany przez bok słupka (wkręty do 4 x 40, nawierty ręczne). Rowki 18,2 × 6 pod profil LED w spodzie frezuje użytkownik (meble.pl nie robi wręgów zachodzących na siebie)"
+P3;Półka LED: ściana główna;1980;200;1;1DL;CZOŁA: 5 x Ø8 x 35 pod pręty M8 w tylnej krawędzi (użytkownik pogłębia do 85);okleina na przedniej krawędzi (1980). Rowek 18,2 × 6 pod profil LED w spodzie frezuje użytkownik (meble.pl nie robi wręgów zachodzących na siebie)
+F1;Front szafki okapowej, otwierany na docisk;1164;549;1;2DL+2SZ;ZAWIASY 3 SZT (PRAWA), PUSZKA Ø35, ŚRODEK 22,5 MM OD KRAWĘDZI;"3 zawiasy Blum CLIP top 110° bez sprężyny 70T3550.TL + prowadniki 173L6100, puszki 337,5, 697,5 i 1064 od dołu frontu (wszystkie nad okapem i SOD); 1 x TIP-ON 956A1004 na adapterze 956A1201 na SOB-1 ok. Y 1850 (drugi w razie potrzeby); szczelina pod TIP-ON ok. 2"

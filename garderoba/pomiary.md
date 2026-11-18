@@ -11,11 +11,12 @@ Użytkownik podaje NAJMNIEJSZY odczyt z kilku pomiarów (żeby meble nie wyszły
 | KOD | WARTOŚĆ | OPIS | RZUT | WCZEŚNIEJ / UWAGI |
 |---|---|---|---|---|
 | A | 1825 | szerokość od lewej do prawej ściany, przy ścianie przedniej (najmniejszy odczyt) | ok. 1750-1800 | 2026-11-11 |
-| S | 1133 | od boku pionu do prawej ściany, przy ścianie tylnej (najmniejszy odczyt, nisko, gdzie PX = 692) | | 2026-11-11 |
+| S | 1133 | od boku pionu do prawej ściany, przy ścianie tylnej (najmniejszy odczyt, nisko, gdzie PX = 692) | | 2026-11-11; 2026-11-18: 1133–1138 w różnych wysokościach (V1: 1138, 1137, 1137, 1137 na 0, 1000, 2000, 2550) |
+| AT | 1829 | szerokość od lewej do prawej ściany przy ścianie tylnej, wyliczona: PX + odległość pion–prawa ściana na tej samej wysokości (692 + 1137; inne: 1830, 1832, 1832) | | 2026-11-18 (ściana prawa nie jest równoległa do lewej: przy ścianie przedniej A = 1825) |
 | SG | 1134 | jak S, na wysokości, gdzie PX = 702 | | prawa ściana pochyla się razem z bokiem pionu (u góry ok. 1836 od lewej ściany); szafka pionowa mieści się w 1825 − 702 = 1123 |
 | G | 1490 | głębokość od tylnej do przedniej ściany, przy prawej ścianie (najmniejszy odczyt) | 1490 (930 + 560) | 2026-11-11 |
-| T | 919 | od czoła pionu (strona do drzwi) do ściany przedniej (najmniejszy odczyt) | 930 | 2026-11-11 |
-| J | 2586 | wysokość podłoga–sufit, najmniejsza w pomieszczeniu (przy drzwiach) | | 2026-11-11 |
+| T | 925 | od czoła pionu (strona do drzwi) do ściany przedniej, przy lewej ścianie (najmniejszy odczyt; 928, 928, 926, 925 na 400, 1000, 2000, 2550) | 930 | 2026-11-18; WCZEŚNIEJ 919 (2026-11-11) |
+| J | 2586 | wysokość podłoga–sufit, najmniejsza w pomieszczeniu (przy drzwiach) | | 2026-11-11; 2026-11-18 weryfikacja: 2587, 2589, 2589 (J bez zmian, 2586 to dalej najmniejszy odczyt) |
 | P1 | 2258 | przekątna podłogi: od lica gzymsu przy ścianie przedniej do narożnika tylnego prawego | | prostokąt (A − GZ2) × G daje 2258: kąty proste |
 | K | 0 | kafelki już położone; wszystkie pomiary od docelowej podłogi | | 2026-11-11 |
 
@@ -31,9 +32,9 @@ Użytkownik podaje NAJMNIEJSZY odczyt z kilku pomiarów (żeby meble nie wyszły
 | KOD | WARTOŚĆ | OPIS | RZUT | WCZEŚNIEJ / UWAGI |
 |---|---|---|---|---|
 | PX | 692 | wysięg pionu od lewej ściany, najmniejszy (przy podłodze) | | zgodne z A − S = 692 |
-| PXM | 702 | wysięg pionu od lewej ściany, największy | | lico pionu nie jest pionowe (większe wyżej) |
-| PZ | 562 | wysięg pionu od tylnej ściany, najmniejszy | 560 | G − T = 571 (pomiary w różnych miejscach) |
-| PZM | 569 | wysięg pionu od tylnej ściany, największy (miejscami) | | lico pionu nierówne; szafkę na wprost odsunie się przy montażu |
+| PXM | 700 | wysięg pionu od lewej ściany, największy (na samej górze) | | 2026-11-18; WCZEŚNIEJ 702; pion pochylony: u góry wchodzi w pokój (692, 692, 695, 695 niżej) |
+| PZ | 563 | wysięg pionu od tylnej ściany, najmniejszy | 560 | 2026-11-18 (563, 564, 570, 573); WCZEŚNIEJ 562 |
+| PZM | 573 | wysięg pionu od tylnej ściany, największy | | 2026-11-18; WCZEŚNIEJ 569; od niego liczony front szafki na wprost (573 + 3 = 576) |
 | W1 | 2415 | wysokość środka wylotu od podłogi | | najniższy punkt wylotu 2352 (środek 2417) |
 | W2 | 317 | odległość środka wylotu od lewej ściany | | najbliższy punkt wylotu 251 (środek 316) |
 | W3 | 130 | średnica zewnętrzna wylotu | | |
