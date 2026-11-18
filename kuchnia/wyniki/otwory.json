@@ -41,28 +41,6 @@
 "n_axis_is_u": false,
 "opis": "Otwór Ø8 x 35 pod pręt M8 (pogłębia użytkownik do 85)",
 "partner": "ściana: pręt M8"
-},
-{
-"along": 100,
-"d": 8,
-"depth": 35,
-"edge_coord": 0,
-"into": 1,
-"kind": "EDGE",
-"n_axis_is_u": true,
-"opis": "Otwór Ø8 x 35 pod pręt M8 (pogłębia użytkownik do 85)",
-"partner": "ściana: pręt M8"
-},
-{
-"along": 300,
-"d": 8,
-"depth": 35,
-"edge_coord": 0,
-"into": 1,
-"kind": "EDGE",
-"n_axis_is_u": true,
-"opis": "Otwór Ø8 x 35 pod pręt M8 (pogłębia użytkownik do 85)",
-"partner": "ściana: pręt M8"
 }
 ],
 "lo": {
@@ -382,7 +360,7 @@
 "partner": "SOW",
 "side": "A",
 "u": 1158.0,
-"v": 68.0
+"v": 215
 },
 {
 "axis_n": "x",
@@ -391,7 +369,7 @@
 "partner": "SOW",
 "side": "A",
 "u": 1158.0,
-"v": 250.0
+"v": 265
 },
 {
 "axis_n": "x",
@@ -628,16 +606,19 @@
 "partner": "SOP",
 "side": "B",
 "u": 565.0,
-"v": 258.0
+"v": 466.0
 },
 {
-"axis_n": "z",
+"axis_n": "-",
 "d": 5,
+"depth": 5,
 "kind": "FACE",
-"partner": "SOP",
-"side": "B",
-"u": 565.0,
-"v": 466.0
+"partner": "środek otworu Ø25 pod przewód zasilający okap",
+"pilot": true,
+"pin": false,
+"side": "A",
+"u": 485,
+"v": 454
 },
 {
 "axis_n": "-",
@@ -754,7 +735,7 @@
 },
 "holes": [
 {
-"along": 50.0,
+"along": 197,
 "d": 4,
 "depth": 35,
 "edge_coord": 0,
@@ -764,7 +745,7 @@
 "partner": "SOB-2"
 },
 {
-"along": 232.0,
+"along": 247,
 "d": 4,
 "depth": 35,
 "edge_coord": 0,
@@ -912,16 +893,6 @@
 },
 {
 "along": 466.0,
-"d": 4,
-"depth": 35,
-"edge_coord": 0,
-"into": 1,
-"kind": "EDGE",
-"n_axis_is_u": false,
-"partner": "SOT"
-},
-{
-"along": 258.0,
 "d": 4,
 "depth": 35,
 "edge_coord": 0,
@@ -1079,7 +1050,7 @@
 "partner": "WSW",
 "side": "B",
 "u": 1158.0,
-"v": 68.0
+"v": 215
 },
 {
 "axis_n": "x",
@@ -1088,7 +1059,7 @@
 "partner": "WSW",
 "side": "B",
 "u": 1158.0,
-"v": 250.0
+"v": 265
 },
 {
 "axis_n": "x",
@@ -1107,24 +1078,6 @@
 "side": "B",
 "u": 972.0,
 "v": 250.0
-},
-{
-"axis_n": "x",
-"d": 5,
-"kind": "FACE",
-"partner": "WSZ",
-"side": "B",
-"u": 1031.0,
-"v": 204.0
-},
-{
-"axis_n": "x",
-"d": 5,
-"kind": "FACE",
-"partner": "WSZ",
-"side": "B",
-"u": 1099.0,
-"v": 204.0
 },
 {
 "axis_n": "x",
@@ -1285,24 +1238,6 @@
 "side": "A",
 "u": 972.0,
 "v": 250.0
-},
-{
-"axis_n": "x",
-"d": 5,
-"kind": "FACE",
-"partner": "WSZ",
-"side": "A",
-"u": 1031.0,
-"v": 204.0
-},
-{
-"axis_n": "x",
-"d": 5,
-"kind": "FACE",
-"partner": "WSZ",
-"side": "A",
-"u": 1099.0,
-"v": 204.0
 },
 {
 "axis_n": "x",
@@ -1649,7 +1584,7 @@
 },
 "holes": [
 {
-"along": 50.0,
+"along": 197,
 "d": 4,
 "depth": 35,
 "edge_coord": 0,
@@ -1659,7 +1594,7 @@
 "partner": "WSB-1"
 },
 {
-"along": 232.0,
+"along": 247,
 "d": 4,
 "depth": 35,
 "edge_coord": 0,
@@ -1707,24 +1642,6 @@
 "kind": "EDGE",
 "n_axis_is_u": true,
 "partner": "WST"
-},
-{
-"axis_n": "y",
-"d": 5,
-"kind": "FACE",
-"partner": "WSZ",
-"side": "A",
-"u": 186.0,
-"v": 50.0
-},
-{
-"axis_n": "y",
-"d": 5,
-"kind": "FACE",
-"partner": "WSZ",
-"side": "A",
-"u": 186.0,
-"v": 188.0
 }
 ],
 "lo": {
@@ -1807,24 +1724,6 @@
 "kind": "EDGE",
 "n_axis_is_u": true,
 "partner": "WST"
-},
-{
-"axis_n": "y",
-"d": 5,
-"kind": "FACE",
-"partner": "WSZ",
-"side": "B",
-"u": 186.0,
-"v": 50.0
-},
-{
-"axis_n": "y",
-"d": 5,
-"kind": "FACE",
-"partner": "WSZ",
-"side": "B",
-"u": 186.0,
-"v": 188.0
 }
 ],
 "lo": {
@@ -1847,88 +1746,7 @@
 "y": 2660,
 "z": 213
 },
-"holes": [
-{
-"along": 50.0,
-"d": 4,
-"depth": 35,
-"edge_coord": 0,
-"into": 1,
-"kind": "EDGE",
-"n_axis_is_u": true,
-"partner": "WSB-1"
-},
-{
-"along": 118.0,
-"d": 4,
-"depth": 35,
-"edge_coord": 0,
-"into": 1,
-"kind": "EDGE",
-"n_axis_is_u": true,
-"partner": "WSB-1"
-},
-{
-"along": 50.0,
-"d": 4,
-"depth": 35,
-"edge_coord": 238,
-"into": -1,
-"kind": "EDGE",
-"n_axis_is_u": true,
-"partner": "WSB-2"
-},
-{
-"along": 118.0,
-"d": 4,
-"depth": 35,
-"edge_coord": 238,
-"into": -1,
-"kind": "EDGE",
-"n_axis_is_u": true,
-"partner": "WSB-2"
-},
-{
-"along": 50.0,
-"d": 4,
-"depth": 35,
-"edge_coord": 168,
-"into": -1,
-"kind": "EDGE",
-"n_axis_is_u": false,
-"partner": "WSW"
-},
-{
-"along": 188.0,
-"d": 4,
-"depth": 35,
-"edge_coord": 168,
-"into": -1,
-"kind": "EDGE",
-"n_axis_is_u": false,
-"partner": "WSW"
-},
-{
-"along": 50.0,
-"d": 4,
-"depth": 35,
-"edge_coord": 0,
-"into": 1,
-"kind": "EDGE",
-"n_axis_is_u": false,
-"partner": "WSS"
-},
-{
-"along": 188.0,
-"d": 4,
-"depth": 35,
-"edge_coord": 0,
-"into": 1,
-"kind": "EDGE",
-"n_axis_is_u": false,
-"partner": "WSS"
-}
-],
+"holes": [],
 "lo": {
 "x": 2950,
 "y": 2492,

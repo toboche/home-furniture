@@ -45,7 +45,7 @@ Pomiary z 2026-11-12 i 2026-11-13 (rozmowa z Claude, zdjęcia kuchni).
 | OK2 | 253 | głębokość korpusu (rysunek techniczny) | 250; zmiana 2026-11-16 |
 | OK3 | 265 | wysokość korpusu (rysunek techniczny) | 263; zmiana 2026-11-16 |
 | OK4 | 551 × 290 | kołnierz (ramka ze szkłem) na dole, widoczny od spodu: dno szafki; grubość w modelu ok. 4 (bez znaczenia dla zamówienia) | 550 × 290 (instrukcja); 551 z rysunku technicznego 2026-11-16 |
-| OK5 | 150 | wylot (średnica), wyśrodkowany na szerokości | 93 od tyłu korpusu do krawędzi wylotu |
+| OK5 | 150 | wylot (średnica), wyśrodkowany na szerokości; 94 od tyłu korpusu do krawędzi wylotu (rysunek techniczny) | 93 (instrukcja); 94 od 2026-11-18 |
 | OK6 | 516 | wymagana szerokość wewnętrzna szafki (A + 2) | |
 | OK8 | 19 / 18,5 | wysięg kołnierza poza korpus: z boków (551 − 513) / 2, z przodu i z tyłu (290 − 253) / 2 | kołnierz na środku (użytkownik, 2026-11-16) |
 | OK7 | 450 | minimalna odległość od płyty indukcyjnej | gaz 650 |

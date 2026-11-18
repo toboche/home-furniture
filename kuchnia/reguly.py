@@ -1,6 +1,6 @@
 """Reguły kuchni dla wspólnego pipeline'u (wspolne/pipeline/run.py kuchnia).
 Moduły: SO szafka okapowa (bez dna, okap DUO 55 między bokami), WS wąska szafka otwarta ze skrzynką na rurę,
-P1 i P3 półka z LED z płyty 18 mm (bez nawiertów, na wspornikach ukrytych Ø10, otwory wierci użytkownik)."""
+P1 i P3 półka z LED z płyty 18 mm na prętach M8 w betonie (otwory Ø8 x 35 w czołach przy ścianach, pogłębia użytkownik)."""
 from formatki import F
 
 # warstwy modelu, w których leżą formatki korpusu (fronty są brane z warstwy 'Fronty')
@@ -26,7 +26,8 @@ X_BOK_CZYSTY = 2398       # wewnętrzne lico SOB-1 (model.js: XSO + P)
 
 
 def pomijaj_polaczenie(face, edge):
-    return face == BOK_CZYSTY or edge == BOK_CZYSTY or 'SOD' in (face, edge)
+    """SOB-1: mimośrody; SOD: na podpórkach; WSZ: zaślepka skrzynki zdejmowana od przodu (dostęp do redukcji), audyt v1 KU-07"""
+    return face == BOK_CZYSTY or edge == BOK_CZYSTY or 'SOD' in (face, edge) or 'WSZ' in (face, edge)
 
 
 def rozstaw(face, edge, domyslny):
@@ -34,7 +35,18 @@ def rozstaw(face, edge, domyslny):
 
 
 def punkty(face, edge, zakres, pts):
+    """audyt v1: SOP-SOT bez konfirmatu w osi otworu Ø170 (KU-03); wieńce SOW/WSW do SOB-2/WSB-1 skręcane
+    przed otworem Ø160 pod rurę (z 30-190), żeby konfirmat nie stał nad otworem (KU-14)"""
+    if {face, edge} == {'SOT', 'SOP'}:
+        return [p for p in pts if abs(p - X_OKAP) > 95]
+    if (face, edge) in (('SOB-2', 'SOW'), ('WSB-1', 'WSW')):
+        return [215, 265]
     return pts
+
+
+def os_przodu(p):
+    """P1 leży przy ścianie lewej: przód (oklejona krawędź 804) od strony +x (audyt v1 KU-05)"""
+    return 'x' if p['code'] == 'P1' else 'z'
 
 
 # środki otworów wycinanych samodzielnie: Ø5 x 5 od strony wycinania (sklep), otwór wycina użytkownik
@@ -46,6 +58,8 @@ Z_RURA = 97          # oś rury okapu od ściany głównej (ZRU)
 Z_PION = 109.5       # oś pionu i poziomu Ø150 w SO (ZPI)
 Y_SOD = 1786         # dół półki wkładanej SOD (model.js: YSOD)
 Y_SOP = 2104         # dół półki SOP (model.js: YSOP)
+X_ZA = 2852          # przewód okapu: A - ZA1
+Y_ZA = 2193          # przewód okapu: YS - ZA2
 
 
 def dodatkowe_otwory(P, parts, loc):
@@ -67,6 +81,11 @@ def dodatkowe_otwory(P, parts, loc):
                                    v=loc(q, q['v'], {'y': Y_SOD - 5, 'z': z}[q['v']]), d=5, depth=10,
                                    partner='SOD', axis_n='-', pin=True))
     pilot('SOP', 'A', {'x': X_OKAP, 'z': Z_PION})
+    # przewód zasilający okap wychodzi ze ściany głównej za plecami SOT (ZA1, ZA2): środek otworu Ø25 (audyt v1 KU-10)
+    q = P['SOT']
+    q['holes'].append(dict(kind='FACE', side='A', u=loc(q, q['u'], {'x': X_ZA, 'y': Y_ZA}[q['u']]),
+                           v=loc(q, q['v'], {'x': X_ZA, 'y': Y_ZA}[q['v']]), d=PILOT_D, depth=PILOT_DEPTH,
+                           partner='środek otworu Ø25 pod przewód zasilający okap', axis_n='-', pin=False, pilot=True))
 
     # --- SOB-1: złącza mimośrodowe (np. Häfele Minifix 15) + kołki Ø8 x 30 ---
     # obudowa Ø15 x 13 w licu łączonej płyty, 24 od styku; trzpień: Ø5 x 11 w wewnętrznym licu SOB-1;
@@ -115,7 +134,6 @@ def dodatkowe_otwory(P, parts, loc):
     PRET = 'Otwór Ø8 x 35 pod pręt M8 (pogłębia użytkownik do 85)'
     czolo('P3', 'z', 0, 'x', [400 + v for v in (150, 570, 990, 1410, 1830)], 35, PRET)
     czolo('P1', 'x', 0, 'z', (150, 400, 650), 35, PRET)
-    czolo('P1', 'z', 0, 'x', (100, 300), 35, PRET)
 
     zlacze('SOT', 'A', 'z', 9, 'y', (1580, 2040, 2610), (1830, 2350))      # tył: obudowy od wnętrza (+z)
     zlacze('SOW', 'B', 'y', 2669, 'z', (159,), (60, 260))                   # wieniec: obudowy od spodu
@@ -129,8 +147,8 @@ def zawias_specjalny(code, fr, cx, cy, cyl):
     pass
 
 
-# tyły i zaślepka skrzynki: bez oklejonej krawędzi; półka LED: okleina opisana w FORMATKI
-BEZ_OKLEINY_PREFIKSY = ('SOT', 'WST', 'WSZ', 'P1', 'P3')
+# tyły i zaślepka skrzynki: bez oklejonej krawędzi
+BEZ_OKLEINY_PREFIKSY = ('SOT', 'WST', 'WSZ')
 
 # łby konfirmatów zasłonięte przez bryły z tych warstw nie potrzebują zaślepek
 ZASLEPKI_ZASLANIAJA = ['Ścianka', 'Fronty', 'Kuchnia istniejąca', 'Okap']
@@ -145,27 +163,28 @@ FORMATKI = [
     F('SOB', 'Szafka okapowa: boki (bez dna, okap między bokami)', okleina='1DL',
       nawierty='SOB-1: TRZPIENIE MIMOŚRODÓW + KOŁKI (bez otworów przelotowych); SOB-2: KONFIRMATY; OBA: 2 PODPÓRKI Ø5 x 10 POD SOD',
       uwagi='SOB-1 widoczny, czyste lico zewnętrzne; SOB-2: środek otworu Ø160 pod rurę Ø150; okap przykręcany 4 wkrętami 3,5 x 16 (81 nad dołem, 35 i 215 od przodu)'),
-    F('SOT', 'Szafka okapowa: tył', okleina='', nawierty='KONFIRMATY + MIMOŚRODY I KOŁKI (do SOB-1)'),
+    F('SOT', 'Szafka okapowa: tył', okleina='', nawierty='KONFIRMATY + MIMOŚRODY I KOŁKI (do SOB-1)',
+      uwagi='środek otworu Ø25 pod przewód zasilający okap (x 2852, y 2193) wycina użytkownik'),
     F('SOW', 'Szafka okapowa: wieniec górny', okleina='1DL', nawierty='KONFIRMATY + MIMOŚRÓD I KOŁKI (do SOB-1)'),
     F('SOD', 'Szafka okapowa: półka wkładana tuż nad okapem (na 4 podpórkach Ø5)', okleina='1DL', nawierty='BRAK',
-      uwagi='wkładana po montażu okapu; wycięcie od przodu na wylot Ø150 (szer. ok. 170, do ok. 112 od tyłu, oś x na środku) wycina użytkownik, krawędzie silikonem'),
+      uwagi='wkładana po montażu okapu; wycięcie od przodu na wylot Ø150: szer. 180 (oś x na środku), zakończone półkolem R90 o środku 179,5 od tylnej krawędzi (najgłębiej 89,5 od tylnej krawędzi); wycina użytkownik, krawędzie silikonem'),
     F('SOP', 'Szafka okapowa: półka nad okapem', okleina='1DL', nawierty='KONFIRMATY + MIMOŚRÓD I KOŁKI (do SOB-1)',
-      uwagi='środek otworu Ø170 pod pion Ø150 (oś 109,5 od ściany)'),
+      uwagi='środek otworu Ø170 pod pion Ø150 (oś 109,5 od ściany = 91,5 od tylnej krawędzi); otwór otwarty do tyłu (wycięcie U szer. 170 od tylnej krawędzi), bo za otworem zostaje tylko 6,5 płyty; wycina użytkownik'),
     F('WSB', 'Wąska szafka: boki', okleina='1DL', nawierty='KONFIRMATY',
       uwagi='środki otworów pod rurę: WSB-1 Ø160 (pod Ø150), WSB-2 Ø140 (pod Ø125)'),
     F('WST', 'Wąska szafka: tył', okleina='', nawierty='KONFIRMATY'),
     F('WSD', 'Wąska szafka: dno', okleina='1DL', nawierty='KONFIRMATY'),
     F('WSW', 'Wąska szafka: wieniec górny', okleina='1DL', nawierty='KONFIRMATY'),
     F('WSS', 'Wąska szafka: dno skrzynki na rurę (płytka półka przed zaślepką)', okleina='1DL', nawierty='KONFIRMATY'),
-    F('WSZ', 'Wąska szafka: zaślepka skrzynki na rurę', okleina='', nawierty='KONFIRMATY',
-      uwagi='widoczne lico przednie; krawędzie schowane'),
+    F('WSZ', 'Wąska szafka: zaślepka skrzynki na rurę (zdejmowana)', okleina='', nawierty='BRAK',
+      uwagi='widoczne lico przednie; krawędzie schowane; bez konfirmatów, mocowanie zdejmowane od przodu (dostęp do redukcji) do ustalenia'),
     F('WSP', 'Wąska szafka: półki stałe', okleina='1DL', nawierty='KONFIRMATY'),
     F('P1', 'Półka LED: ściana lewa (wnęka)', okleina='1DL',
-      nawierty='CZOŁA: 5 x Ø8 x 35 pod pręty M8 (3 od ściany lewej, 2 od ściany głównej; użytkownik pogłębia do 85)',
-      uwagi='okleina na długiej krawędzi od strony kuchni (804). rowki 18,2 × 6 pod profil LED w spodzie frezuje użytkownik (meble.pl nie robi wręgów zachodzących na siebie)'),
+      nawierty='CZOŁA: 3 x Ø8 x 35 pod pręty M8 od ściany lewej (użytkownik pogłębia do 85)',
+      uwagi='okleina na długiej krawędzi od strony kuchni (804); koniec przy słupku przykręcany przez bok słupka (wkręty do 4 x 40, nawierty ręczne). Rowki 18,2 × 6 pod profil LED w spodzie frezuje użytkownik (meble.pl nie robi wręgów zachodzących na siebie)'),
     F('P3', 'Półka LED: ściana główna', okleina='1DL',
       nawierty='CZOŁA: 5 x Ø8 x 35 pod pręty M8 w tylnej krawędzi (użytkownik pogłębia do 85)',
-      uwagi='okleina na przedniej krawędzi (1980). rowek 18,2 × 6 pod profil LED w spodzie frezuje użytkownik (meble.pl nie robi wręgów zachodzących na siebie)'),
+      uwagi='okleina na przedniej krawędzi (1980). Rowek 18,2 × 6 pod profil LED w spodzie frezuje użytkownik (meble.pl nie robi wręgów zachodzących na siebie)'),
     F('F1', 'Front szafki okapowej, otwierany na docisk', okleina='2DL+2SZ',
       nawierty='ZAWIASY 3 SZT (PRAWA), ' + ZAW, uwagi='3 zawiasy Blum CLIP top 110° bez sprężyny 70T3550.TL + prowadniki 173L6100; 2 x TIP-ON 956A1004 na adapterze 956A1201 (push-to-open)'),
 ]

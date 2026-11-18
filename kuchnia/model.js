@@ -96,7 +96,7 @@ add([
   {t:'cyl3',n:'Otwór wentylacji grawitacyjnej z kratką (KR, nie zasłaniać)',layer:'Instalacje',ax:'x',px:A-4,py:YS-KR3-KR/2,pz:KR2+KR/2,r:KR/2+20,len:8,c:0xf0f0f0}
 ]);
 
-/* ---- półka z LED na płytkach (płyta 36, z meble.pl, oklejona) ---- */
+/* ---- półka z LED na płytkach (płyta 18, z meble.pl, oklejona) ---- */
 add([
   {n:'P1: Półka LED, ściana lewa (804 × 400)',layer:'Półka LED',x:0,y:YP,z:0,w:GP1,h:PP,d:LP1,c:POL},
   {n:'P3: Półka LED, ściana główna (1980 × 200)',layer:'Półka LED',x:GP1,y:YP,z:0,w:XSO-GP1,h:PP,d:GP3,c:POL},
@@ -115,9 +115,7 @@ add([
 [150,400,650].forEach(function(zp){
   ITEMS.push({t:'cyl3',n:'Pręt M8 × 160 pod P1 (ściana lewa)',layer:'Mocowanie półki',ax:'x',px:(WT-WB)/2,py:YP+PP/2,pz:zp,r:PR,len:WT+WB,c:0x555555});
 });
-[100,300].forEach(function(xp){
-  ITEMS.push({t:'cyl3',n:'Pręt M8 × 160 pod P1 (ściana główna)',layer:'Mocowanie półki',ax:'z',px:xp,py:YP+PP/2,pz:(WT-WB)/2,r:PR,len:WT+WB,c:0x555555});
-});
+/* bez prętów od ściany głównej pod P1: prostopadłych prętów nie da się nasunąć naraz (audyt v1 KU-01, 2026-11-18) */
 
 /* ---- szafka okapowa SO: bez dna (okap między bokami), plecy między bokami, wieniec, półka nad okapem ---- */
 add([

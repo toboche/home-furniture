@@ -33,9 +33,11 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
   Montaż: pręty w otworach półki, półka jako szablon wsuwana w otwory z żywicą; końce prętów od strony półki owinięte
   taśmą / natłuszczone; półkę zdjąć po związaniu żywicy (pręty równoległe, bez regulacji).
   - P3 (1980 × 200): 5 prętów co 420 (150, 570, 990, 1410, 1830 od lewego końca P3).
-  - P1 (804 × 400): 3 pręty od ściany lewej (z 150, 400, 650) + 2 od ściany głównej (x 100, 300).
+  - P1 (804 × 400): 3 pręty od ściany lewej (z 150, 400, 650). Bez prętów od ściany głównej (2026-11-18, audyt v1
+    KU-01: prętów w dwóch prostopadłych kierunkach nie da się nasunąć naraz).
     Koniec P1 przy słupku: przykręcony kilkoma wkrętami przez bok słupka (od wnętrza słupka) w czoło P1 (2026-11-15);
-    nawierty pilotowe w czole P1, szczelinę 2 mm wypełnić podkładką.
+    wkręty do 4 × 40 (18 boku + 1 szczeliny + ok. 21 w P1; rowek LED przy słupku jest w spodzie, 30 od końca P1),
+    nawierty ręczne przez bok słupka w czoło P1, szczelinę 1 mm wypełnić podkładką.
   - Styk P3/P1 (2026-11-16, zamiast kołków: P3 nasuwa się na pręty w kierunku ściany, kołki w poprzek tego ruchu
     nie weszłyby): 2 płaskie łączniki stalowe od spodu w poprzek styku (z ok. 50 i 110, poza rowkiem LED z 152–170),
     wkręty 3,5 × 12 (nie przebijają płyty 18). Górne powierzchnie równo: przy osadzaniu prętów P3 w żywicy położyć P3
@@ -70,13 +72,13 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
   (2026-11-16, bo w skrzynce jest redukcja z końcem Ø150; wcześniej 2484–2502 i 172–190). Przed zaślepką płytka półka:
   głębokość ok. 87, wysokość w świetle 168.
 - Poniżej 2 półki stałe WSP w równych odstępach: 3 przegrody po 306,33 w świetle (2026-11-14; wcześniej 3 półki / 4 × 225,25).
-  Najwyżej płytka półka przed skrzynką (gł. ok. 110, wys. 158): akceptowane.
+  Najwyżej płytka półka przed skrzynką (gł. ok. 87, wys. 168 od 2026-11-16): akceptowane.
 
 ### Kanał okapu, 2026-11-14
 - Rury i kolana SZTYWNE, gładkie (PCV lub spiro), bez rury elastycznej: mniejsze opory i turbulencje, ciszej
   (producent: jak najgładszy przewód, zagięcia najwyżej 90°).
-- Średnica: rura w ścianie Ø125 wewnętrzna (130 zewnętrzna). Redukcja 150 → 125 pod sufitem (zmiana z 2026-11-14,
-  wcześniej na wylocie okapu; patrz „cichy kanał”).
+- Średnica: rura w ścianie Ø125 wewnętrzna (130 zewnętrzna). Redukcja 150 → 125: od 2026-11-16 w wąskiej szafce,
+  za kolanem 90° Ø150 (wcześniej pod sufitem w pionie, jeszcze wcześniej na wylocie okapu).
 - Trasa (aktualna od 2026-11-16): wylot Ø150 → przesunięcie do tyłu dwoma kolanami 45° Ø150 między SOD a SOP
   (z 197,5 na 109,5) → pion Ø150 przez SOP (otwór Ø170) → kolano 90° Ø150 pod sufitem → poziomo Ø150 (oś Y 2577,
   z 109,5) przez SOB-2 i WSB-1 (otwory Ø160) → redukcja mimośrodowa 150/125 w wąskiej szafce (płaską stroną do ściany
@@ -95,7 +97,8 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
 ### 2026-11-14: kanał okapu ma być możliwie cichy (potwierdzone)
 - Stal ocynkowana spiro z uszczelkami EPDM, kolana tłoczone (gładkie), nie segmentowe.
 - Duży przekrój jak najdłużej: pion w SO i przesunięcie kolanami 45° w Ø150, redukcja mimośrodowa 150 → 125 dopiero pod
-  sufitem (przed kolanem 90°; w modelu dół redukcji Y 2300, ZAŁOŻENIE), poziomy odcinek Ø125.
+  sufitem (przed kolanem 90°; w modelu dół redukcji Y 2300, ZAŁOŻENIE), poziomy odcinek Ø125. [Nieaktualne od 2026-11-16:
+  redukcja w wąskiej szafce, kolano 90° i poziom w Ø150.]
   Pion Ø150 na osi z 109,5 (redukcja mimośrodowa płaską stroną do ściany przesuwa oś na 97). Przy 500 m³/h prędkość w Ø150 ok. 7,9 m/s, w Ø125 ok. 11,3 m/s.
   Pion Ø150 mieści się w SO (z 34,5–184,5, plecy do z 18), otwór w SOP Ø170.
 - Mata akustyczna (np. kauczukowa samoprzylepna ok. 10 mm) na zewnątrz rur, przerwana w otworach; obejmy z gumową wkładką;
@@ -173,23 +176,50 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
 - TIP-ON: zaplanowane 2; użytkownik sprawdzi przy montażu, czy wystarczy jeden (dolny).
 
 
+### 2026-11-18: audyt v1 (`audyt/v1.md`), poprawki wdrożone bez zmiany założeń
+- KU-01: P1 tylko na 3 prętach od ściany lewej + wkręty przez bok słupka + łączniki do P3 (bez prętów od ściany głównej).
+- KU-03: w SOP bez konfirmatu SOP–SOT w osi otworu Ø170 (zostają 2: x 2448 i 2864). Otwór Ø170 zostawiałby z tyłu
+  tylko 6,5 płyty, więc jest otwarty do tyłu: wycięcie U szer. 170 od tylnej krawędzi (wycina użytkownik). Pion Ø150
+  trzymają obejmy z gumą do ściany głównej / SOT, nie półka. Przez to wycięcie przechodzi też przewód okapu.
+- KU-14: konfirmaty wieńców SOW i WSW do SOB-2 i WSB-1 na z 215 i 265 (przed otworem Ø160, z 29,5–189,5),
+  nie nad otworem. Uwaga do audytu: nad otworem zostaje 21 mm boku (do góry boku 2678), 3 mm to odstęp do spodu wieńca.
+- KU-05: okleina P1 i P3 w kalkulatorze (krawędź 1: P1 krawędź 804 od strony kuchni, P3 krawędź 1980); `os_przodu` P1 = x.
+- KU-06: wycięcie w SOD: szer. 180, półkole R90 wokół osi wylotu (z 197,5), najgłębiej 89,5 od tylnej krawędzi SOD
+  (wcześniej opis „do ok. 112 od tyłu” był za płytki).
+- KU-07: zaślepka WSZ bez konfirmatów, zdejmowana od przodu (dostęp do redukcji i złączy w skrzynce); sposób
+  mocowania do decyzji. W skrzynce WS bez maty akustycznej (nad redukcją brak miejsca, skrzynka jest zamknięta).
+- KU-10: środek otworu Ø25 w SOT pod przewód zasilający okap (x 2852, y 2193, nad SOP), wycina użytkownik.
+- KU-11: SO i WS przykręcone do ściany głównej przez plecy: po 4 wkręty 6 × 70 z kołkami Ø8 do betonu w SOT i WST
+  (2 ok. 40 pod wieńcem, 2 nisko: w SO nad SOD, ok. Y 1830, z dala od pionu x 2571–2741; w WS ok. Y 1560), wkręcane
+  przed montażem okapu; SO i WS skręcone ze sobą 4 wkrętami 4 × 30 przez SOB-2 w WSB-1. Bez widocznych łbów.
+- KU-04 (część): styk P3/SOB-1 i rowki LED zabezpieczone przed parą (silikon na styku, lakier w rowkach).
+- KU-13: porządki w README, komentarzach i nieaktualnych wpisach; OK5: 94 od tyłu korpusu (rysunek), było 93.
+- Nie wdrożone, do decyzji z użytkownikiem: KU-02 (dolny zawias F1 koliduje z korpusem okapu), KU-09 (TIP-ON),
+  KU-10 (przesunięcie 2 × 45° z łącznikami daje więcej niż 88), KU-04 (pręty M8 w 18 mm), KU-12 (FM1 142),
+  mocowanie WSZ. Nie wdrożone, bo nietrafne: KU-12 kolejność kolumn w `fronty_metod.csv` (słoje „na wysokość” są
+  podane jawnie, zamiana wymiarów niepotrzebna), KU-11 kratka (szafki wiszą nad płytkami, występ płytek ich nie dotyczy).
+- Do `wspolne/` (osobny PR, audyt sekcja C): kolizje otworów z pełną średnicą wycięć wokół pilotów, fronty w
+  `otwory.json` i kalkulatorze (puszki F1), okleina vs `BEZ_OKLEINY_PREFIKSY`.
+
 ## Do zmierzenia przy pomiarach weryfikacyjnych w mieszkaniu
 - O ile płytki wystają przed ścianę nad nimi (górna krawędź płytek przy szafce okapowej). Tył kołnierza okapu jest
   10 od ściany: przy występie ponad ok. 9 kołnierz oprze się na płytkach (wtedy SO głębsza o różnicę). (2026-11-16)
 
 ## Założenia do potwierdzenia
-- Położenie okapu w głąb: korpus dosunięty do przodu (z 50–300), szkło z 10–300. Oś wylotu ok. 218 od ściany głównej.
-  Sprawdzić przy montażu (otwory 35 i 215 od przodu boku).
+- Położenie okapu w głąb (2026-11-16): kołnierz z 10–300, korpus na środku kołnierza (z 28,5–281,5), oś wylotu 197,5
+  od ściany głównej (94 od tyłu korpusu do krawędzi wylotu). Sprawdzić, od czego liczone są otwory montażowe 35 i 215
+  (przód korpusu okapu czy przód boku szafki).
 - Luz 2 mm wąskiej szafki do ścianki.
 
 ### 2026-11-14: bok SOB-1 bez konfirmatów, półka SOP, zasilanie okapu
 - Lewy bok szafki okapowej SOB-1 jest widoczny nad półką P3: ma mieć czyste lico zewnętrzne. Zamiast konfirmatów
   złącza mimośrodowe (np. Häfele Minifix 15) i kołki Ø8 × 30:
-  - tył SOT: 3 mimośrody (Y 1580, 2095, 2610) + 2 kołki (Y 1830, 2350); wieniec SOW i półka SOP: po 1 mimośrodzie
+  - tył SOT: 3 mimośrody (Y 1580, 2040 od 2026-11-16, 2610) + 2 kołki (Y 1830, 2350); wieniec SOW i półka SOP: po 1 mimośrodzie
     (z 159) + 2 kołki (z 60, 260);
   - obudowa Ø15 × 13 w licu łączonej płyty, 24 od styku (SOT od wnętrza, SOW od spodu, SOP od góry), otwór Ø8 × 33
     w czole do obudowy; w SOB-1 od wnętrza: Ø5 × 11 pod trzpień, Ø8 × 12 pod kołek. Wszystko w kalkulatorze sklepu.
-  - Widoczne łby konfirmatów: 10 → 2 (tylko pod dnem skrzynki WSS, wewnątrz wąskiej szafki).
+  - Widoczne łby konfirmatów: 10 → 2 (tylko pod dnem skrzynki WSS, wewnątrz wąskiej szafki); od 2026-11-18: 0
+    (zaślepka WSZ bez konfirmatów).
   - Wymaga zmiany w `wspolne/` (pole `opis` i `do_obudowy` otworów): PR #11.
 - Półka SOP zostaje na Y 2150 (potwierdzone; 2026-11-16 zmiana na 2104, patrz niżej).
 - Okap bez gniazdka: przewód okapu łączony na stałe z przewodem ze ściany (ZA), złączką w puszce wewnątrz SO nad półką SOP.
@@ -218,3 +248,4 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
 - 2026-11-16: okucia F1 (CLIP top bez sprężyny + 2 × TIP-ON), wycięcie SOD silikonem, WT 80.
 - 2026-11-16: półka LED na prętach M8 (otwory Ø8 × 35 i kołki na styku P3/P1 w zamówieniu); TIP-ON 2 (test 1).
 - 2026-11-16: styk P3/P1 na łącznikach od spodu zamiast kołków; do zmierzenia: występ płytek.
+- 2026-11-18: audyt v1: poprawki bezsporne (P1 bez prętów od ściany głównej, SOP, SOD, WSZ, okleina P1/P3, przewód okapu, mocowanie do ściany).
