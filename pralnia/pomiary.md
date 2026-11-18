@@ -11,23 +11,24 @@ Układ: X od lewej ściany ku prawej, Y od podłogi w górę, Z od tylnej ścian
 |---|---|---|---|
 | A | 1739 | szerokość pokoju od ściany do ściany, najmniejsza, przyjęta w projekcie | najszerszy punkt 1744; prawa ściana: odchyłki 2-3 mm |
 | G | 1497 | głębokość pokoju | |
-| J | 2661 | wysokość w najniższym miejscu (sufit lekko krzywy) | 2665; w projekcie 2658 (3 mm luzu) |
+| J | 2660 | wysokość przyjęta w projekcie: najniższy punkt 2661 (jedno miejsce, lewy przedni róg przy lewej ścianie), przyjęte 1 mm mniej (pomiar kontrolny 2026-11-18) | 2661, 2665; korpusy i fronty do 2655, luz 5 mm (v65) |
 | – | 823 / 805 / 2016 | otwór wejściowy: od lewej ściany / szerokość / wysokość | drzwi otwierają się na zewnątrz |
 
 ## Pion, gzyms (obudowa przewodów od podłogi), wywiew
 | KOD | WARTOŚĆ | OPIS | WCZEŚNIEJ / UWAGI |
 |---|---|---|---|
-| U | 1372 | od lewej ściany do pionu | 1379 |
+| U | 1371–1373 | od lewej ściany do lewego boku pionu, na różnych wysokościach (pomiar 2026-11-18); w modelu 1371 | 1372, 1379; model wcześniej 1376 |
 | P | 371 | szerokość pionu | |
 | V | 362 | wysięg pionu od tylnej ściany | podane 0,362 m |
-| Q | 118 | gzyms po stronie maszyn | |
-| X | 489 | wysokość gzymsu na pionie | |
+| Q | 118 | gzyms po stronie maszyn | przy U = 1371 i krawędzi gzymsu 1258 (maszyny do 1216 + R 42) wychodzi 113 – do sprawdzenia, nie wpływa na szafki |
+| X | 467 | najwyższy punkt gzymsu na pionie (pod PP1/KP1), pomiar 2026-11-18 | 489 |
 | GZ1 | 73 | szerokość gzymsu na prawej ścianie | |
 | GZ2 | 73 | szerokość gzymsu na froncie pionu | |
 | GZ3 | 466 | wysokość gzymsu na prawej ścianie | |
 | GZ4 | 680 | długość gzymsu na prawej ścianie, od frontu pionu | |
 | D | 490 | od krawędzi gzymsu do prawej ściany | |
-| M, N | 121, 53 | otwór wentylacyjny | podane 12,1 i 5,3 bez jednostki; w modelu środek x 1616, y 2409 |
+| WN1, WN2 | 115, 243 | środek otworu wentylacyjnego: od prawej ściany, od sufitu (pomiar 2026-11-18); w modelu x 1624, y 2418 (od sufitu nad otworem 2661) | wcześniej M, N = 121, 53 (niejasne), model x 1616, y 2409 |
+| KR | 123 | kratka wentylacyjna (kupiona): króciec Ø123, wchodzi do rury Ø125 | |
 
 ## Maszyny (pralka Bosch WGG244EPL, suszarka Bosch WQG245DEPL, oryginalny zestaw łączący)
 | KOD | WARTOŚĆ | OPIS | WCZEŚNIEJ / UWAGI |
