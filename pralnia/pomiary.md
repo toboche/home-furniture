@@ -11,7 +11,7 @@ Układ: X od lewej ściany ku prawej, Y od podłogi w górę, Z od tylnej ścian
 |---|---|---|---|
 | A | 1739 | szerokość pokoju od ściany do ściany, najmniejsza, przyjęta w projekcie | najszerszy punkt 1744; prawa ściana: odchyłki 2-3 mm |
 | G | 1497 | głębokość pokoju | |
-| J | 2661 | wysokość w najniższym miejscu (sufit lekko krzywy) | 2665; granica projektowa 2658 (J − 3); korpusy i fronty do 2652, luz 9 mm |
+| J | 2660 | wysokość przyjęta w projekcie: najniższy punkt 2661 (jedno miejsce, lewy przedni róg przy lewej ścianie), przyjęte 1 mm mniej (pomiar kontrolny 2026-11-18) | 2661, 2665; korpusy i fronty do 2652, luz 8 mm |
 | – | 823 / 805 / 2016 | otwór wejściowy: od lewej ściany / szerokość / wysokość | drzwi otwierają się na zewnątrz |
 
 ## Pion, gzyms (obudowa przewodów od podłogi), wywiew
@@ -27,7 +27,7 @@ Układ: X od lewej ściany ku prawej, Y od podłogi w górę, Z od tylnej ścian
 | GZ3 | 466 | wysokość gzymsu na prawej ścianie | |
 | GZ4 | 680 | długość gzymsu na prawej ścianie, od frontu pionu | |
 | D | 490 | od krawędzi gzymsu do prawej ściany | |
-| WN1, WN2 | 115, 243 | środek otworu wentylacyjnego: od prawej ściany, od sufitu (pomiar 2026-11-18); w modelu x 1624, y 2418 (sufit nad otworem = J = 2661, potwierdzone) | wcześniej M, N = 121, 53 (niejasne), model x 1616, y 2409 |
+| WN1, WN2 | 115, 243 | środek otworu wentylacyjnego: od prawej ściany, od sufitu (pomiar 2026-11-18); w modelu x 1624, y 2418 (od sufitu nad otworem 2661) | wcześniej M, N = 121, 53 (niejasne), model x 1616, y 2409 |
 | KR | 123 | kratka wentylacyjna (kupiona): króciec Ø123, wchodzi do rury Ø125 | |
 
 ## Maszyny (pralka Bosch WGG244EPL, suszarka Bosch WQG245DEPL, oryginalny zestaw łączący)

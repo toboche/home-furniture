@@ -15,7 +15,7 @@
    ======================================================================== */
 var HF_MODEL=(function(){
 'use strict';
-var ROOM={W:1739,D:1497,H:2661};
+var ROOM={W:1739,D:1497,H:2660}; /* J = 2660 (2026-11-18: najniższy punkt 2661 w lewym przednim rogu, przyjęte 1 mm mniej) */
 var DOOR={x:823,w:805,h:2016};
 
 var ITEMS=[
@@ -27,7 +27,7 @@ var ITEMS=[
   {t:'cyl',n:'Drzwiczki suszarki',layer:'Maszyny',cx:917,cy:1300,z:646,r:165,len:12,c:0xaebdc6},
 
   /* Pion od U = 1371 (pomiar 2026-11-18: 1371–1373 na różnych wysokościach; przyjęte minimum; wcześniej w modelu 1376). Pion i gzyms: R = 42, Q = 118, GZ1 = 73, GZ2 = 73, X = 467 (najwyższy punkt, pomiar 2026-11-18; wcześniej 489), GZ3 = 466, GZ4 = 680 */
-  {n:'Pion',layer:'Pion i gzyms',x:1371,y:0,z:0,w:368,h:2661,d:362,c:0xd9d4ca},
+  {n:'Pion',layer:'Pion i gzyms',x:1371,y:0,z:0,w:368,h:2660,d:362,c:0xd9d4ca},
   {n:'Gzyms przy maszynach (118; do pionu 113)',layer:'Pion i gzyms',x:1258,y:0,z:0,w:113,h:467,d:435,c:0xc7c1b5},
   {n:'Gzyms na froncie pionu (73)',layer:'Pion i gzyms',x:1371,y:0,z:362,w:368,h:467,d:73,c:0xc7c1b5},
   {n:'Gzyms na prawej ścianie (73 × 680)',layer:'Pion i gzyms',x:1666,y:0,z:435,w:73,h:466,d:607,c:0xc7c1b5},

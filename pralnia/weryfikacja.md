@@ -14,7 +14,7 @@ Kontrola automatyczna: 424 otwory, 58 połączeń, 0 kolizji otworów; 154 konfi
 3. Montaż prawego dołu: skręcony na podłodze i wsunięty w całości (konfirmaty PP1 → PB2/PT2 od spodu). Prześwit nad gzymsem 22 mm.
 4. Odkurzacz bezprzewodowy w L1: mocowanie (bez UTRUSTA). Wysokość i podparcie L1P.
 
-## Pomiary kontrolne (czy zabudowa się zmieści) – lista z 2026-11-18
+## Pomiary kontrolne (czy zabudowa się zmieści) – lista z 2026-11-18, WYKONANE 2026-11-18: wszystkie OK
 Mierzyć w mm, w kilku miejscach; liczy się najgorszy wynik (najmniejsza szerokość, najniższy sufit, najbardziej wystający punkt).
 | KOD | CO I GDZIE | MODEL | DOBRY WYNIK |
 |---|---|---|---|
@@ -24,7 +24,7 @@ Mierzyć w mm, w kilku miejscach; liczy się najgorszy wynik (najmniejsza szerok
 | C | szerokość maszyn w najszerszym miejscu | 598 | ≤ 604 |
 | U | lewa ściana → lewy bok pionu | 1371 | ≥ 1369 (zmierzone 1371–1373: OK) |
 | GZ1 | lewa ściana → lewy bok gzymsu na prawej ścianie | 1666 | ≥ 1665 |
-| J | sufit: nad całą zabudową i ok. 0,5 m przed frontami | 2661 | ≥ 2655 |
+| J | sufit: nad całą zabudową i ok. 0,5 m przed frontami | 2660 | ≥ 2655 (zmierzone min. 2661, przyjęte 2660: OK) |
 | H | najwyższy punkt suszarki (z zestawem łączącym) | 1713 | ≤ 1738 |
 | X | najwyższy punkt gzymsu na pionie | 467 | ≤ 486 (zmierzone 467: OK) |
 | GZ3 | najwyższy punkt gzymsu na prawej ścianie | 466 | ≤ 486 |
@@ -42,7 +42,7 @@ Transport: największe płyty L1B1/L1B2 1743 × 655 – drzwi 805 × 2016 OK; sp
 
 ## Uwagi konstrukcyjne (stałe)
 - Moduły lewy, wnęka i kolumna stykają się (0 mm), bez dodatkowych luzów: składać na sucho przed dokręceniem.
-- Luzy: lewa ściana 5 mm, prawa 3 mm, tył 3–5, sufit 9 (korpusy do 2652). Maszyny: 3 mm z lewej, 5 z prawej, można je przesuwać (ok. 4 mm po bokach).
+- Luzy: lewa ściana 5 mm, prawa 3 mm, tył 3–5, sufit 8 (korpusy do 2652, J = 2660). Maszyny: 3 mm z lewej, 5 z prawej, można je przesuwać (ok. 4 mm po bokach).
 - Montaż L1 jako ostatni; gniazdo GN3/GN4 natynkowe (15 mm) koliduje z L1B2 przy wsuwaniu – zdjąć na czas montażu albo złożyć L1 na miejscu.
 - Model 3D nie był oglądany wizualnie przez Claude (brak biblioteki w środowisku): proszę obejrzeć warstwy „Kątowniki pod KT1" (nowe podpory), „Dodatki" (kuweta we wnęce), RDW2, kanał i kratkę.
 
