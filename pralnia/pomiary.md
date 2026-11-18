@@ -11,7 +11,7 @@ Układ: X od lewej ściany ku prawej, Y od podłogi w górę, Z od tylnej ścian
 |---|---|---|---|
 | A | 1739 | szerokość pokoju od ściany do ściany, najmniejsza, przyjęta w projekcie | najszerszy punkt 1744; prawa ściana: odchyłki 2-3 mm |
 | G | 1497 | głębokość pokoju | |
-| J | 2661 | wysokość w najniższym miejscu (sufit lekko krzywy) | 2665; w projekcie 2658 (3 mm luzu) |
+| J | 2661 | wysokość w najniższym miejscu (sufit lekko krzywy) | 2665; granica projektowa 2658 (J − 3); korpusy i fronty do 2652, luz 9 mm |
 | – | 823 / 805 / 2016 | otwór wejściowy: od lewej ściany / szerokość / wysokość | drzwi otwierają się na zewnątrz |
 
 ## Pion, gzyms (obudowa przewodów od podłogi), wywiew

@@ -1,38 +1,34 @@
-# Pralnia: lista do weryfikacji przed zamówieniem (stan 2026-11-08, model v52)
+# Pralnia: lista do weryfikacji przed zamówieniem (stan 2026-11-18, model v60)
 
-Źródła do sprawdzenia: model 3D (index.html albo wyniki/pralnia_3d.html), wyniki/formatki.csv (40 pozycji, 52 sztuki, 15,55 m2), wyniki/kalkulator_nawierty.csv, wyniki/arkusz_nawiertow.pdf, wyniki/podsumowanie.json, pomiary.md, ustalenia.md.
-Kontrola automatyczna (model): 55 elementów (ściany, tyły, półki, fronty, listwa LF5, maszyny), 0 kolizji brył; nawierty: 318 otworów, 50 połączeń, 0 kolizji.
+Źródła: model 3D (`index.html` albo `wyniki/pralnia_3d.html`), `wyniki/formatki.csv` (41 pozycji, 53 sztuki, 15,60 m²), `wyniki/kalkulator_nawierty.csv` (30 typów, 358 wierszy), `wyniki/arkusz_nawiertow.pdf` (30 stron), `wyniki/podsumowanie.json`, `pomiary.md`, `ustalenia.md`, `komponenty.md`, audyt `audyt/v1.md`.
+Kontrola automatyczna: 424 otwory, 57 połączeń, 0 kolizji otworów; 152 konfirmaty, 14 kołków, 12 podpórek, 17 puszek.
 
-## Do potwierdzenia (decyzje otwarte)
-Rozstrzygnięte 2026-11-08: PP1+KP1 zostają na konfirmatach; prześwit 415 mm = światło między półkami; uchwyty bez otworów we frontach (wykonuje użytkownik); F9 z 3 zawiasami wystarczy; kolizja F6/LF5/Ø150 sprawdzona, brak.
-Do sprawdzenia przy zakupie i montażu: F5 na zawiasie Blum 79B9590 INSERTA (do drzwi równoległych, prowadnik na tyle F6, bez listwy LF5; puszka 22,5 mm), dobór prowadnika (katalog Blum str. 144), nośność mocowania F6 (6 kątowników), pozostałe puszki 22,5 mm, INSERTA wybrana w meble.pl.
+## Zamówienie
+- Koszyk 21386928 (2 970,11 zł, 2026-11-08) jest NIEAKTUALNY i nie należy go używać.
+- Wycena wstępna 2026-11-15: rozkrój 21629244 (formatki v58 bez nawiertów, KP1 jako 200×132) = 2 204,10 zł; z wierceniem szacunkowo 2 850–2 950 zł. Bez RDW2. Nie w koszyku.
+- Przed zamówieniem sprawdzić w kalkulatorze: wymiary z połówką mm (KP2 130,5; PP2 477,5; F5 274,5; F6 234,5; F8 493,5; F9 1240,5 – przy wycenie 2026-11-15 przyjęte bez błędu), formatki 100 mm (L1W, RDW, RDW2 – przyjęte), KP1 184 < 200 (odrzucona), nawierty Ø3×12.
 
-## Zamówienie w meble.pl (koszyk 21386928, 2 970,11 zł) jest NIEAKTUALNE
-Różnice względem planu: F9, F10, F11 osobno (teraz jeden F9 512 x 1240,5); wymiary F1-F4, F6, F7 zmienione (F1, F2 607; F3, F4 603; F6 234,5; F7 512); półki PP2/KP2 na innych wysokościach i bez konfirmatów (otwory Ø5 x 10 pod podpórki, kołki Ø8 w czołach par); nawierty pilotowe w PT3 i L1B2; zawiasy 22,5 mm.
+## Decyzje otwarte (audyt v1, Sekcja B i część A)
+1. L1 / UTRUSTA (B1, P0): wymiary 356 × 1345 × 569 wg instrukcji IKEA, szyny przykręcane do dna (L1 nie ma dna), kolizja wysuwu z kuwetą w rogu i z wtyczkami GN1, GN3/GN4. Do decyzji: dno L1D, strona UTRUSTA (lewa/prawa), miejsce kuwety, głębokość i podparcie L1P.
+2. Gzyms i pion (B2, P1): pomiary X (najwyższy punkt gzymsu pod PP1/KP1), U na 3 wysokościach, Q/D. Rozbieżność: pomiary.md U = 1372, P = 371 a model pion od x 1376, szer. 363 (gzyms od 1258). Od tego zależą: podniesienie poziomu 489 o 3 mm i luz KT2/KP1/KP3 (5 mm albo 1 mm). Kolejność montażu prawego dołu (konfirmaty PP1 → PB2/PT2 od spodu): moduł skręcany na podłodze i wsuwany w całości albo inne złącza.
+3. F5 ↔ F6 (B3, P1): zostaje 79B9590 na F6 (wtedy wzmocnienie F6 listwą, krótsze wkręty, ogranicznik na F3) czy zawiasy F5 po lewej na KB3 (71B3590 + 173H7100)?
+4. Wentylacja i kalkulator (B4): kratka – króciec Ø125 czy Ø150 (otwór w F6); ponowny pomiar środka otworu w ścianie (y 2409; M = 121, N = 53 niejasne).
+5. KT1A/B/C (A2, P1): sposób mocowania (magnesy / zatrzaski / kątownik podpierający od dołu), luz na łby wkrętów kątowników (0,5 mm), luz KT1C pod RDW/RDW2 (0 mm) i KT1A/B pod podpórkami (1 mm).
+6. Ograniczniki 86° (A1): F9 przy 86° – przekładanie półek PP2+KP2 wymaga wysunięcia i pochylenia albo wypięcia F9 z prowadników. Do akceptacji.
+7. KP1 184×132: kalkulator nie przyjmuje formatki < 200 mm; zamówić 200 i skrócić samodzielnie, wyciąć z odpadu albo zmienić konstrukcję.
+8. Luz między modułami 0 mm przy odchyłce prawej ściany 2–3 mm (P2): czy zostawić zapas 2–3 mm na wnęce NW (po pomiarach A na kilku wysokościach).
 
-## Uwagi konstrukcyjne
+## Pomiary weryfikacyjne (przed decyzjami 1, 2, 4, 8)
+- Gzyms X na całej szerokości (z 362–435 i przy kolumnie), U (dół, środek, góra), Q, D, P, V; A i G w kilku punktach; J w kilku punktach.
+- GN1 (środek), GN3/GN4 i wysunięcie wtyczek; zawór ZW (wysięg z wtyczkami/kranem); GP1/GP2; środek otworu wentylacyjnego.
+- Pion ścian i poziom podłogi; listwy przypodłogowe; droga transportu (L1B1/L1B2 1743×655).
+
+## Uwagi konstrukcyjne (stałe)
 - Moduły lewy, wnęka i kolumna stykają się (0 mm): składać na sucho przed dokręceniem.
-- Luzy: lewa ściana pokoju 5 mm, prawa 3 mm, tył 3-5, sufit 9. Maszyny: 3 mm z lewej, 5 z prawej, można je przesuwać (ok. 4 mm po bokach).
-- L1 bez półki (boki trzyma tył do czasu osadzenia L2); KB1 ma jedno połączenie.
-- Model 3D nie był oglądany wizualnie przez Claude (brak biblioteki w środowisku): sprawdzić warstwy "Konfirmaty", "Otwory", "Kołki", "Uchwyty", "Listwa F5".
+- Luzy: lewa ściana 5 mm, prawa 3 mm, tył 3–5, sufit 9 (korpusy do 2652). Maszyny: 3 mm z lewej, 5 z prawej, można je przesuwać (ok. 4 mm po bokach).
+- Montaż L1 jako ostatni; gniazdo GN3/GN4 natynkowe (15 mm) koliduje z L1B2 przy wsuwaniu – zdjąć na czas montażu albo złożyć L1 na miejscu.
+- Model 3D nie był oglądany wizualnie przez Claude (brak biblioteki w środowisku): proszę obejrzeć warstwy „Konfirmaty", „Otwory", „Kołki", „Uchwyty", „Kątowniki pod KT1", „Kątowniki pod F6" i RDW2.
 
-## Dodane 2026-11-08 (v55)
-- KT1A/B/C: nowe wysokości 410/410/366 (patrz ustalenia). Koszyk meble.pl dodatkowo nieaktualny o te trzy pozycje.
-- Ramiona kątowników w modelu nachodzą na siebie 2 mm w rogu – to geometria jednego kątownika, nie kolizja.
-
-## Dodane 2026-11-08 (v56)
-- Nawierty pilotowe prowadników Ø3×12 w ściankach (30 szt.): sprawdzić w kalkulatorze meble.pl, czy dopuszcza Ø3 i głębokość 12; w razie braku użyć Ø4. Łącznie 348 otworów, 0 kolizji.
-- Zawiasy UTRUSTA nie kupujemy; wnętrze UTRUSTA w modelu to tylko wizualizacja wyposażenia L1.
-- Wszystkie 17 zawiasów BLUMOTION; F5↔F6: 2 × 79B9590 + 2 × 173H7130 (dystans 3).
-
-## Dodane 2026-11-08 (v57)
-- UTRUSTA 105.808.24 w zamówieniu – sprawdzić w instrukcji IKEA prowadnice/hak/otwory w bokach.
-- L1P (półka luzem 619×574, bez nawiertów) do dopisania w koszyku; KB1: 3 konfirmaty + 2 kołki.
-- KT1A: prześwit między półkami 415 vs wysokość 410 (po 2 mm luzu) – sprawdzić przy montażu.
-
-## Dodane 2026-11-11 (v58, lokalnie)
-- Do pomiaru: gzyms przy poziomie 489 (czy wchodzi w obrys PP1/KP1; od tego zależy podniesienie o 3 mm), potrzeba wieńca RDW2.
-- Magnesy w KT1A/B/C: potwierdzić siłę trzymania i gniazda Ø10×3 (robi użytkownik). Alternatywa: zatrzaski/rzep.
-- KT1C skrócona do 350: szczelina 18 mm pod wieńcem RDW za plecami (tył kolumny), do akceptacji.
-- Kalkulator meble.pl: Ø3×12 dla prowadników (jeśli niedostępne, Ø4).
-- Koszyk meble.pl wymaga przeróbki także o: półki PP/KP w nowych wymiarach, KT1A/B/C 407/407/350 ×127, L1P, wieńce 2 konfirmaty.
+## Do osobnego PR w `wspolne/` (audyt v1, Sekcja C)
+- `otwory.py`: kontrola kolizji otworów lico A – lico B (suma głębokości > grubości lub przelot) i krawędź–krawędź prostopadle, promień wycięć wokół pilotów Ø5×5.
+- `arkusz_pdf.py`: opis średnic/głębokości wg rzeczywistych otworów (nie stałe „Ø4, 35 mm"), piloty Ø3×12 i Ø5×5 nie jako „pod podpórki".

@@ -38,7 +38,7 @@ Wspólny podział poziomy: 1743. Wspólna płaszczyzna frontów: z=658 (fronty o
 Pasywna. Otwór w ścianie: środek x 1616, y 2409. Kanał okrągły Ø125 (z 362-640), kratka okrągła Ø150 w stałej części frontu. Front dzielony: część otwierana 274,5×453 i stała z kratką 236×453. Otwór wycina użytkownik otwornicą. Listwy mocujące front stały: prawa i dolna (18×18).
 
 ## Wyposażenie lewej szafki (L1)
-- IKEA UTRUSTA wnętrze szafy gospodarczej 140 cm (nr 105.808.24, 400 zł): 330 × 1335 × 530, wysuwane na prowadnicach (kupić osobno), zawiasów UTRUSTA NIE kupujemy (wszystkie zawiasy z Bluma), udźwig 25 kg. Ustawione przy lewej ścianie. Do sprawdzenia: instrukcja montażu (hak, prowadnice, otwory w bokach 18 mm).
+- IKEA UTRUSTA wnętrze szafy gospodarczej 140 cm (nr 105.808.24, 400 zł): 330 × 1335 × 530, wysuwane na prowadnicach (kupić osobno [wg audytu v1: prowadnice są w zestawie, patrz 2026-11-18]), zawiasów UTRUSTA NIE kupujemy (wszystkie zawiasy z Bluma), udźwig 25 kg. Ustawione przy lewej ścianie. Do sprawdzenia: instrukcja montażu (hak, prowadnice, otwory w bokach 18 mm).
 - Kosz na pranie i odkurzacz klasyczny: na haku zestawu. Odkurzacz bezprzewodowy (250×700×300): także na haku (do potwierdzenia).
 - Deska do prasowania 60×1400×400 i suszarka na pranie 50×1400×600 w wolnej części 244 mm.
 - Kuweta 600×400×400 na z=1094, odległość od frontu lewej szafki 436 mm.
@@ -103,7 +103,7 @@ Do ustalenia: średnica otworu w licu (Ø8 przelot lub Ø5 przelot i poszerzanie
 
 ## Kalkulator centrum.meble.pl i koszyk (2026-11-08)
 - Rozkrój nr 21386928 (Premium +standard), w koszyku, NIE opłacony i NIE zamówiony. Wartość 2 970,11 zł brutto (2 414,72 netto), dostępność 18.11.2026, podgląd zlecenia do 06.01.2027. Płyta 3,25 arkusza (2,75 + 0,5 szt.) = 1 391,20 zł, wiercenie 10 szt. 124,20 zł + 39 szt. 532,35 zł, okleina ABS 0,8 mm 25 mb 53,25 zł, laserowa 1 mm REHAU 30 mb 116,10 zł. Opcja odpadów (+5 zł) nie wybrana.
-- OGRANICZENIE KALKULATORA: szablon "Wręgowanie i nawierty" jest niedostępny przy okleinie bezspoinowej 1,0 mm. Decyzja użytkownika: fronty F1-F11 bezspoinowe 1,0 mm (2 zawiasy BLUM puszka 35 mm wkręty, 100 mm od końców, 22,5 mm od środka puszki; F1-F5 Front lewy, F7-F11 Front prawy; F6 bez szablonu, 4 krawędzie), pozostałe formatki z nawiertami okleina ABS 0,8 mm.
+- OGRANICZENIE KALKULATORA: szablon "Wręgowanie i nawierty" jest niedostępny przy okleinie bezspoinowej 1,0 mm. Decyzja użytkownika: fronty F1-F11 bezspoinowe 1,0 mm (2 zawiasy BLUM puszka 35 mm wkręty [NIEAKTUALNE od v54/v55: wszystkie zawiasy INSERTA – puszka Ø35 + 2 × Ø8×13,5 co 45 mm, bez wkrętów w froncie], 100 mm od końców, 22,5 mm od środka puszki; F1-F5 Front lewy, F7-F11 Front prawy; F6 bez szablonu, 4 krawędzie), pozostałe formatki z nawiertami okleina ABS 0,8 mm.
 - Zweryfikowano w kalkulatorze: odległość w czole liczona od lewego dolnego rogu widoku z przodu (zgodnie z założeniem).
 - Wpisano 42 formatki: 31 części korpusu (w tym KT1A/B/C bez nawiertów) + 11 frontów. Grupy o tych samych nawiertach (PP2-1+ = PP2-1, PP2-2, PP3-1..3; KP2; KP3; L2P; NWP) wpisane jako jedna formatka z ilością.
 - Po weryfikacji użytkownika: poprawki wymagają zmiany formatek w koszyku/zleceniu (edycja po numerze zlecenia).
@@ -217,3 +217,18 @@ Nie zastosowane (czekają na pomiary lub decyzję): patrz audyt_niezaaplikowane.
 - Wyniki w `wyniki/` (zamiast `etap6/`). Sprawdzone: formatki.csv, kalkulator_nawierty.csv i lista otworów identyczne bajt w bajt z v58, arkusz PDF identyczny graficznie (30 stron), scena 3D identyczna (1103 obiekty, także wariant F8, rozsunięcie, kolory, warstwy).
 - Nowe: `pomiary.md` (pomiary z historią odczytów), `wyniki/podsumowanie.json` (40 pozycji / 52 sztuki / 15,55 m², 146 konfirmatów, 14 kołków, 19 widocznych łbów), test regresji w GitHub Actions.
 - Usunięta stara kopia `etap6/komponenty.md` (stan v55); aktualne zestawienie: `komponenty.md`.
+
+## 2026-11-18 – audyt v1 (`audyt/v1.md`), Sekcja A: wdrożone (v60)
+Wdrożone, bo po sprawdzeniu bezsporne i bez zmiany założeń użytkowych ani wymiarów pomieszczenia:
+- RDW2 (A3): wieniec górny tylny 479×100, y 1725–1743, z 385–485, okleina 1DL, 2 konfirmaty na koniec do KB2 i PB2 + 2 konfirmaty z PT2. Tylna górna część KB2 nie była niczym spięta z prawą stroną (KP2 na podpórkach, KT1 zdejmowane). Nie koliduje z KT1C (wysuwanie pod RDW2 tak jak pod RDW), PT2, PP3-1. Nawierty: 424 otwory, 57 połączeń, 0 kolizji; konfirmatów 152 (+6); formatki 41 pozycji / 53 sztuki / 15,60 m².
+- Warstwa koncepcyjna „Zabudowa ZB" ukryta domyślnie (A5): ZB zostało zastąpione przez zdejmowane tyły KT1A/B/C.
+- komponenty.md uzupełnione (A1, A4): ograniczniki 70T3553 (86°) – 11 szt. na F1, F2, F7, F8, F9 (fronty przy ścianie/gzymsie uderzają przy ok. 90°); wkręty prowadników 609.1500 zamiast 609.1700; usunięta sprzeczność „bez nawiertu" przy 173H7100; wkręty kątowników F6 i KT1; łączniki między modułami; mocowanie do ścian; podkładki poziomujące; podpórki L1P (warunkowo).
+- Zapisy nieaktualne oznaczone: „puszka 35 mm wkręty" (2026-11-08) – wszystkie zawiasy są INSERTA; „prowadnice UTRUSTA kupić osobno".
+- Luz pod sufitem: korpusy i fronty kończą się na 2652, J = 2661, czyli 9 mm (2658 = J − 3 to tylko granica projektowa).
+- Sprostowanie do audyt_niezaaplikowane.md pkt 1: eurowkręt Blum 661.1300.HG (Ø6×13) istnieje w katalogu; decyzja o prowadnikach 173H7100 na wkręty do płyt bez zmian.
+- weryfikacja.md przepisana na stan v60 (bez LF5, starych liczb otworów i koszyka 21386928). Wycena wstępna 2026-11-15: rozkrój 21629244 (bez nawiertów, 2 204,10 zł; z wierceniem szacunkowo 2 850–2 950 zł), nie w koszyku.
+Nie wdrożone z Sekcji A (wymagają decyzji, opis w weryfikacja.md):
+- A2 (KT1A/B/C): propozycja audytu „oprzeć KT1 na półkach" nie pasuje do geometrii – KT1 stoją na z 165–183, a półki KP zaczynają się na z 183, więc płyty są ZA półkami, nie nad nimi, i wysuwa się je do przodu ponad półkami. Rzeczywiste problemy (do rozstrzygnięcia): łby wkrętów kątowników na KB2 a 0,5 mm luzu do płyty, ciężar na samych magnesach (ścinanie), 0 mm luzu KT1C pod RDW/RDW2, 1 mm pod podpórkami.
+- Skutek ograniczników dla F9 (przekładanie półek PP2+KP2 przy 86°) – do akceptacji.
+Sekcja C (zmiany w `wspolne/pipeline/`: kolizje otworów lico A–lico B i krawędź–krawędź w otwory.py, opisy średnic i pilotów w arkusz_pdf.py) – do osobnego PR na gałęzi `wspolne/...`, tutaj nie zmieniane.
+

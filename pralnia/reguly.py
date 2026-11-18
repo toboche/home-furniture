@@ -36,7 +36,7 @@ def rozstaw(face, edge, domyslny):
 
 def punkty(face, edge, zakres, pts):
     # wieniec 100 mm: 2 konfirmaty na koniec
-    if ({face, edge} & {'L1W', 'RDW'}) and 90 <= zakres[1] - zakres[0] <= 110:
+    if ({face, edge} & {'L1W', 'RDW', 'RDW2'}) and 90 <= zakres[1] - zakres[0] <= 110:
         return [zakres[0] + 25, zakres[1] - 25]
     return pts
 
@@ -176,6 +176,8 @@ FORMATKI = [
     F('L1P', 'L1: półka luzem na całą szerokość L1 (BEZ nawiertów, nie montowana w szafce; ewentualne nawierty robi użytkownik)',
       okleina='1SZ', nawierty='BEZ NAWIERTÓW', uwagi='dodatkowa płyta w zamówieniu; półka ma być na całej szerokości L1 (wewnętrzna szer. 574), głębokość jak L2P', dl=619, sz=574, szt=1),
     F('RDW', 'Prawa dolna: wieniec górny, przód',
+      okleina='1DL', nawierty='KONFIRMATY'),
+    F('RDW2', 'Prawa dolna: wieniec górny, tył (z 385-485, za RDW; spina KB2, PB2 i PT2)',
       okleina='1DL', nawierty='KONFIRMATY'),
     F('F1', 'Front L: góra',
       okleina='2DL+2SZ', nawierty='ZAWIASY 2 SZT, PUSZKA Ø35, ŚRODEK 22.5 MM OD KRAWĘDZI', uwagi='uchwyt GUBBARP 116 mm: otwory samodzielnie, bez nawiertów'),

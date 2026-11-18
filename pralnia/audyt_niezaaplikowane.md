@@ -1,4 +1,5 @@
 # Elementy audytu niezaaplikowane w v58 (do przekazania audytorowi)
+Aktualizacja 2026-11-18 (audyt v1, `audyt/v1.md`): pkt 1 – sprostowanie: eurowkręt 661.1300.HG (Ø6×13) istnieje w katalogu Blum (moja wcześniejsza uwaga była błędna), decyzja o 173H7100 + wkręty do płyt bez zmian (teraz 609.1500). Pkt 3 – RDW2 wdrożony w v60. Pozostałe punkty: weryfikacja.md.
 Stan: 2026-11-11. Zastosowane: podział półek wzdłuż Z, KT1A/B/C (zmodyfikowane), kątowniki F6, nawiert GN1 z=242, usunięcie podpórek poziomu 489, zaślepki/łby, wieńce 2 konfirmaty, uwaga o montażu L1.
 
 | # | Element audytu | Status | Motywacja |

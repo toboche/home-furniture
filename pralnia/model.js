@@ -170,6 +170,8 @@ var ITEMS=[
   /* Wieńce górne (usztywnienie dolnych szafek): pas 100 mm przy froncie, pod samym pasem (y 1725 do 1743), tył do z 640 (front od z 640). */
   {n:'L1W: L1: wieniec górny, przód (1725 do 1743)',layer:'Półki',x:23,y:1725,z:540,w:574,h:18,d:100,c:0xe6d7b8},
   {n:'RDW: Prawa dolna: wieniec górny, przód (1725 do 1743)',layer:'Półki',x:1239,y:1725,z:540,w:479,h:18,d:100,c:0xe6d7b8},
+  /* RDW2 (audyt v1, 2026-11-18): wieniec górny tylny, spina górę tylnej części KB2 z PB2 i PT2 (wcześniej KB2 z tyłu u góry nie był niczym usztywniony: KP2 na podpórkach, KT1 zdejmowane). */
+  {n:'RDW2: Prawa dolna: wieniec górny, tył (1725 do 1743)',layer:'Półki',x:1239,y:1725,z:385,w:479,h:18,d:100,c:0xe6d7b8},
   /* Wariant: F8 usunięte, ta sama kuweta 600 × 400 × 400 wchodzi węższym końcem (400) we wnękę 406 × 489 × 205 (z 435 do 640); wystaje 395. Kuweta z rogu jest wtedy ukryta. */
   {n:'Kuweta w F8 (600 × 400 × 400)',layer:'Kuweta (przykład)',x:1242,y:0,z:435,w:400,h:400,d:600,c:0xbfa98a},
 
@@ -233,7 +235,7 @@ return {
   views:{iso:[3.3,2.7,3.6],front:[0.87,1.35,4.9],top:[0.87,5.6,1.15],left:[-3.6,1.5,0.75]},
   /* bryły zamysłu (rysowane za płytami); domyślnie ukryte warstwy */
   conceptLayers:['Szafka lewa','Szafka prawa','Szafka nad maszynami','Zabudowa ZB'],
-  hiddenLayers:['Szafka lewa','Szafka prawa','Szafka nad maszynami'],
+  hiddenLayers:['Szafka lewa','Szafka prawa','Szafka nad maszynami','Zabudowa ZB'], /* ZB: dawny zamysł, zastąpiony przez KT1A/B/C */
   /* warstwy, które nie rozsuwają się suwakiem */
   fixedLayers:['Maszyny','Pion i gzyms','Osprzęt','Zabudowa ZB','Dodatki','Szafka lewa','Szafka prawa','Szafka nad maszynami'],
   boardLayers:['Półki','Ścianki boczne','Ścianki tylne','Płyta dolna i listwy','Fronty'],
