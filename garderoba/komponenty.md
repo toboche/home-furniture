@@ -6,7 +6,7 @@ i `wyniki/formatki_16mm.csv` (skrzynki szuflad, 6 pozycji / 10 sztuk / 1,52 m²;
 Kody katalogowe Blum według audytu v1 i katalogu; przed zakupem potwierdzić u sprzedawcy (kolor i dostępność).
 | Pozycja | Kod Blum | Ilość | Uwagi |
 |---|---|---|---|
-| Zawias CLIP top 110°, front wpuszczany, BEZ sprężyny, puszka na wkręty | 70T3750.TL | 4 | TIP-ON wymaga zawiasów bez sprężyny; F1 po lewej (GNB-1), F2 po prawej (GNB-2); puszka Ø35, 22,5 od krawędzi, 100 od końców frontu |
+| Zawias CLIP top 110°, front wpuszczany, BEZ sprężyny, puszka INSERTA | 70T3790.TL | 4 | TIP-ON wymaga zawiasów bez sprężyny; INSERTA (2026-11-18, było 70T3750.TL na wkręty), bo meble.pl wierci szablon Blum INSERTA, jak w pralni; F1 po lewej (GNB-1), F2 po prawej (GNB-2); puszka Ø35, 22,5 od krawędzi, 100 od końców frontu |
 | Prowadnik krzyżakowy CLIP 0 mm, na wkręty | 173L6100 (albo 173H7100 / 175H7100) | 4 | NIE prowadnik prosty: wkręty w pionie ±16 (32); linia wkrętów 57 od przedniej krawędzi boku (katalog Blum dla frontów wpuszczanych: 37 + front 18 + 1,5 = 56,5, zaokrąglone; front 0,5 głębiej, korekta regulacją zawiasu); nawierty pilotowe Ø3 × 12 w `kalkulator_nawierty.csv` |
 | Wkręty do płyty Ø3,5 × 15 | 609.1500 | 8 | do prowadników |
 | Ogranicznik kąta otwarcia 86° | 70T3553 | 2 | F2 (na oba zawiasy): przy 110° front oparłby się o prawą ścianę (dotyka przy ok. 92°). Ogranicznika 95° w katalogu nie ma |
@@ -15,7 +15,7 @@ Kody katalogowe Blum według audytu v1 i katalogu; przed zakupem potwierdzić u 
 
 UWAGA GNP (18): adaptery F1 i F2 wkręca się w tę samą płytę z dwóch stron; wkręty 15 z obu stron spotkałyby się w środku.
 Adaptery montujemy na różnych wysokościach (różnica co najmniej 30 w osi Y) albo wkrętami 3,5 × 13.
-Szczelina wokół wszystkich frontów chowanych (F1–F4): SZCZ = 2 (2026-11-18, było 3). Zawias 70T3750.TL z prowadnikiem 0 mm
+Szczelina wokół wszystkich frontów chowanych (F1–F4): SZCZ = 2 (2026-11-18, było 3). Zawias 70T3790.TL z prowadnikiem 0 mm
 daje ok. 1,5–2 nominalnie, więc prawie cała regulacja boczna ±2 zostaje do ustawienia frontów.
 
 ## Szuflady: Blum MOVENTO do TIP-ON BLUMOTION (kryte prowadnice, pełny wysuw, otwieranie naciśnięciem)

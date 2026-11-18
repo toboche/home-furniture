@@ -22,7 +22,7 @@ GLB2;L góra: bok przy ścianie przedniej;698;462;1;1SZ;KONFIRMATY;
 GLD;L góra: dno;873;698;1;1DL;KONFIRMATY;korpus górny przykręcony do dolnego wkrętami przez dno (patrz ustalenia.md)
 GLG;L góra: wieniec górny;873;698;1;1DL;KONFIRMATY;
 GLT;L góra: plecy;873;426;1;;KONFIRMATY;
-F1;Front górny N, połowa lewa (chowany, TIP-ON, zawiasy po lewej);530;422;1;2DL+2SZ;ZAWIASY 2 SZT, PUSZKA Ø35, ŚRODEK 22.5 MM OD KRAWĘDZI (zawias do frontu chowanego);
-F2;Front górny N, połowa prawa (chowany, TIP-ON, zawiasy po prawej);530;422;1;2DL+2SZ;ZAWIASY 2 SZT, PUSZKA Ø35, ŚRODEK 22.5 MM OD KRAWĘDZI (zawias do frontu chowanego);
+F1;Front górny N, połowa lewa (chowany, TIP-ON, zawiasy po lewej);530;422;1;2DL+2SZ;SZABLON FRONT LEWY: 2 ZAWIASY BLUM INSERTA (70T3790.TL), PUSZKA Ø35, ŚRODEK 22.5 MM OD KRAWĘDZI, 100 OD KOŃCÓW;
+F2;Front górny N, połowa prawa (chowany, TIP-ON, zawiasy po prawej);530;422;1;2DL+2SZ;SZABLON FRONT PRAWY: 2 ZAWIASY BLUM INSERTA (70T3790.TL), PUSZKA Ø35, ŚRODEK 22.5 MM OD KRAWĘDZI, 100 OD KOŃCÓW;
 F3;"Front szuflady SZ1 (N, połowa lewa; chowany, TIP-ON BLUMOTION)";530;204;1;2DL+2SZ;BRAK (mocowanie frontu MOVENTO na wkręty);
 F4;"Front szuflady SZ2 (L; chowany, TIP-ON BLUMOTION)";869;204;1;2DL+2SZ;BRAK (mocowanie frontu MOVENTO na wkręty);

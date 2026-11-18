@@ -25,15 +25,27 @@ i przeliczenie (`python3 wspolne/pipeline/run.py garderoba`), nigdy ręcznie w p
 ## 3. Okleina
 - Kolumna OKLEINA w `formatki.csv`: korpusy ABS 0,8, fronty F1–F4 dookoła (2DL+2SZ, w pralni laser 1 mm).
 - `kalkulator_nawierty.csv` ma tylko krawędź PRZEDNIĄ (kolumna OKLEJ KRAWEDZ NR). Ręcznie dopisać DOLNE krawędzie
-  stojące na kafelkach: NB (2 szt.), NP, LB1, LB2 (1SZ, dół) i NO (2 szt., 1DL, dół).
+  stojące na kafelkach, w numeracji kalkulatora (1 góra, 2 prawa, 3 dół, 4 lewa, przy SZEROKOŚĆ = DL, WYSOKOŚĆ = SZ):
+  | Formatka | Krawędź przednia (z CSV) | Dolna (dopisać) |
+  |---|---|---|
+  | NB-1, NB-2 | 1 | 4 |
+  | NP | 1 | 4 |
+  | LB1, LB2 | 1 | 2 |
+  | NO-1, NO-2 (nie ma ich w kalkulator_nawierty.csv) | brak | 3 |
 - Bez okleiny: plecy NT, LT, GNT, GLT i skrzynki szuflad (16 mm).
 
 ## 4. Nawierty
+- FORMATKI Z NAWIERTAMI WPISUJ WEDŁUG `kalkulator_nawierty.csv`, NIE według `formatki.csv`: jeden wiersz z LP = jedna
+  formatka w kalkulatorze, kolumna KODY = elementy o identycznych nawiertach (np. NS-1, NS-2, NS-3, NK razem; NS-4, NS-5 osobno,
+  bo mają konfirmaty przesunięte o 25; NW z GNG; LK z LS-1..3). Formatki bez nawiertów (NO-1, NO-2, F1–F4) dodać z `formatki.csv`.
+  Liczba pozycji w kalkulatorze będzie inna niż 27; zgadzać się mają sztuki (36) i m² (21,17).
 - Wszystkie formatki mają poniżej 2500 mm (najdłuższa 2120), więc kalkulator meble.pl przyjmie nawierty dla wszystkich;
   wszystkie współrzędne są w pełnych mm.
-- Fronty F1, F2: szablon zawiasów Blum (F1 LEWY, F2 PRAWY), 2 puszki Ø35, środek 22,5 od krawędzi, 100 od końców frontu.
+- Fronty F1, F2 (530 × 422, zawiasy na krawędzi 422): szablon zawiasów Blum INSERTA (F1 LEWY, F2 PRAWY), 2 puszki Ø35,
+  środek 22,5 od krawędzi, środki puszek 100 i 322 od dolnej krawędzi frontu. Zawiasy 70T3790.TL (INSERTA, bez sprężyny).
   F3, F4: bez nawiertów.
-- Nawierty pilotowe Ø3 × 12 pod prowadniki zawiasów: w GNB-1 i GNB-2 (są w CSV).
+- Nawierty pilotowe Ø3 × 12 pod prowadniki zawiasów: w GNB-1 i GNB-2 (są w CSV). Jeśli kalkulator nie przyjmie Ø3,
+  pominąć je (użytkownik wywierci sam); Ø4 za słabo trzyma wkręt 3,5.
 - Nawierty środków Ø5 × 5 pod otwory wiercone przez użytkownika otwornicą: GLB1 (przewód wentylacyjny Ø130, otwór ok. Ø135)
   i LB2 (gniazdko). Same otwory robi użytkownik.
 - Skrzynki szuflad, robi użytkownik wzornikiem Blum T65.1000.02 (nie ma ich w CSV): otwory pod zaczepy T51.7601 pod dnem
@@ -47,7 +59,7 @@ i przeliczenie (`python3 wspolne/pipeline/run.py garderoba`), nigdy ręcznie w p
 - Pozostałe formatki są prostokątami.
 
 ## 6. Okucia i drobne elementy
-Pełna lista z kodami: `komponenty.md`. W skrócie: 4 zawiasy 70T3750.TL + 4 prowadniki 173L6100 + 8 wkrętów 609.1500,
+Pełna lista z kodami: `komponenty.md`. W skrócie: 4 zawiasy 70T3790.TL (INSERTA) + 4 prowadniki 173L6100 + 8 wkrętów 609.1500,
 2 ograniczniki 86° 70T3553 (F2), 2 TIP-ON 956.1004 + 2 adaptery 956.1201, MOVENTO 760H5000S i 760H6000S z TIP-ON BLUMOTION
 T60L7340 (L1), zaczepy T51.7601, adaptery T60.1125W i wałki T60.000D; konfirmaty 7 × 50: 230 + zapas; zaślepki ok. 6;
 3 drążki Ø25 (534, 534, 873); 4 kątowniki i 4 zatrzaski magnetyczne do osłon NO; wkręty 4 × 30 (ok. 10) łączące korpusy

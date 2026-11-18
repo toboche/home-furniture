@@ -165,9 +165,9 @@ FORMATKI = [
     F('GLT', 'L góra: plecy', okleina='', nawierty=K),
     # fronty
     F('F1', 'Front górny N, połowa lewa (chowany, TIP-ON, zawiasy po lewej)', okleina='2DL+2SZ',
-      nawierty='ZAWIASY 2 SZT, PUSZKA Ø35, ŚRODEK 22.5 MM OD KRAWĘDZI (zawias do frontu chowanego)'),
+      nawierty='SZABLON FRONT LEWY: 2 ZAWIASY BLUM INSERTA (70T3790.TL), PUSZKA Ø35, ŚRODEK 22.5 MM OD KRAWĘDZI, 100 OD KOŃCÓW'),
     F('F2', 'Front górny N, połowa prawa (chowany, TIP-ON, zawiasy po prawej)', okleina='2DL+2SZ',
-      nawierty='ZAWIASY 2 SZT, PUSZKA Ø35, ŚRODEK 22.5 MM OD KRAWĘDZI (zawias do frontu chowanego)'),
+      nawierty='SZABLON FRONT PRAWY: 2 ZAWIASY BLUM INSERTA (70T3790.TL), PUSZKA Ø35, ŚRODEK 22.5 MM OD KRAWĘDZI, 100 OD KOŃCÓW'),
     F('F3', 'Front szuflady SZ1 (N, połowa lewa; chowany, TIP-ON BLUMOTION)', okleina='2DL+2SZ',
       nawierty='BRAK (mocowanie frontu MOVENTO na wkręty)'),
     F('F4', 'Front szuflady SZ2 (L; chowany, TIP-ON BLUMOTION)', okleina='2DL+2SZ',
