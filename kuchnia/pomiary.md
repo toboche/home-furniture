@@ -43,13 +43,14 @@ Pomiary z 2026-11-12 i 2026-11-13 (rozmowa z Claude, zdjęcia kuchni).
 ## Okap Ciarko Design DUO 55 (instrukcja Uno/Duo i rysunek techniczny DUO 55)
 | KOD | WARTOŚĆ | OPIS | WCZEŚNIEJ / UWAGI |
 |---|---|---|---|
-| OK1 | 513 | szerokość korpusu okapu (rysunek techniczny) | 514 (A w instrukcji); zmiana 2026-11-16 |
+| OK1 | 513 | szerokość korpusu okapu (rysunek, potwierdzone na okapie 2026-11-18) | 514 (A w instrukcji); zmiana 2026-11-16 |
 | OK2 | 253 | głębokość korpusu (rysunek techniczny) | 250; zmiana 2026-11-16 |
 | OK3 | 265 | wysokość korpusu (rysunek techniczny) | 263; zmiana 2026-11-16 |
 | OK4 | 551 × 290 × 1,5 | kołnierz (ramka ze szkłem) na dole, widoczny od spodu: dno szafki; grubość 1,5 zmierzona na okapie | 550 × 290 (instrukcja); 551 z rysunku 2026-11-16; grubość w modelu 4 do 2026-11-18 |
-| OK5 | 150 | wylot (średnica), wyśrodkowany na szerokości; 94 od tyłu korpusu do krawędzi wylotu (rysunek techniczny) | 93 (instrukcja); 94 od 2026-11-18 |
+| OK5 | 150 | wylot (średnica), wyśrodkowany na szerokości; 94 od tylnej krawędzi kołnierza do krawędzi wylotu | zmierzone 2026-11-18; wcześniej 94 od tyłu korpusu (rysunek), 93 (instrukcja) |
 | OK6 | 516 | wymagana szerokość wewnętrzna szafki (A + 2) | |
 | OK8 | 19 / 18,5 | wysięg kołnierza poza korpus: z boków (551 − 513) / 2, z przodu i z tyłu (290 − 253) / 2 | kołnierz na środku (użytkownik, 2026-11-16) |
 | OK9 | 26 | wysokość króćca wylotu ponad korpus (okap, 2026-11-18) | |
-| OK10 | 35 / 215 | otwory montażowe w boku korpusu: od przodu korpusu (bez kołnierza) | potwierdzone na okapie 2026-11-18 |
+| OK10 | 35 / 215, 81 | otwory montażowe w boku korpusu: od przodu korpusu (bez kołnierza); 81 nad dołem korpusu; 2 na bok | potwierdzone na okapie 2026-11-18 |
+| OK11 | 148,5 | średnica zewnętrzna króćca wylotu; rura nachodzi na króciec | zmierzone 2026-11-18 |
 | OK7 | 450 | minimalna odległość od płyty indukcyjnej | gaz 650 |

@@ -44,7 +44,7 @@ var YSK=YRU-75-10;     /* góra dna skrzynki na rurę (10 pod końcem Ø150 redu
 var OKW=513, OKG=253, OKH=265;  /* korpus okapu DUO 55 (rysunek techniczny) */
 var OKZ=GKS-(290-OKG)/2-OKG;    /* tył korpusu: kołnierz 290 wystaje po 18,5 z przodu i z tyłu: 32,5 */
 var OKK=1.5;           /* grubość kołnierza (zmierzone 2026-11-18) */
-var ZWY=OKZ+94+75;     /* oś wylotu Ø150 (94 od tyłu korpusu do krawędzi wylotu): 201,5 (2026-11-18; było 197,5, wcześniej 218) */
+var ZWY=GKS-290+94+75;  /* oś wylotu Ø150: 94 od tylnej krawędzi kołnierza do krawędzi wylotu (zmierzone 2026-11-18): 183 */
 var YOK=YP+OKH;        /* góra korpusu okapu: 1776 */
 var ZPI=ZRU+12.5;      /* oś pionu Ø150 (redukcja mimośrodowa: +12,5 od osi Ø125): 109,5 */
 var RU4=115;           /* rura w ściance wystaje ze ścianki (zmierzone 2026-11-18): koniec na X 3093, w wąskiej szafce */

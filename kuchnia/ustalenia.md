@@ -219,8 +219,14 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
   (od X 2973), bez odcinka Ø125. W WSB-2 zamiast otworu Ø140 wycięcie U od tylnej krawędzi (szer. 140, R70 wokół osi
   z 97), żeby szafkę dało się nasunąć na wystającą rurę; konfirmaty WSW–WSB-2 przed wycięciem, bez konfirmatu WST–WSB-2
   w strefie wycięcia. Alternatywa: skrócić rurę w ściance (wtedy otwór i krótki odcinek Ø125).
-- Otwarte (KU-10): przesunięcie 92 dwoma kolanami 45° wymaga ich złączenia bez prostego odcinka; z łącznikiem wychodzi
+- Otwarte (KU-10): przesunięcie (od 2026-11-18 wieczór: 73,5) dwoma kolanami 45° wymaga ich złączenia bez prostego odcinka; z łącznikiem wychodzi
   ok. 130–160. Do decyzji: 2 × 30° z krótkim odcinkiem (ok. 300 w pionie, SOP wtedy ok. Y 2150) albo dobór kształtek.
+
+- 2026-11-18 (wieczór): okap zmierzony: korpus 513 × 253 × 265 potwierdzony, kołnierz na środku (po 18,5 z przodu
+  i z tyłu); 94 mierzone od tylnej krawędzi kołnierza, więc oś wylotu z 183 (było 201,5), przesunięcie do pionu 73,5.
+  Króciec Ø148,5 zewn., 26 wysokości: rura Ø150 nachodzi na króciec (pierwszy element: krótki odcinek rury spiro).
+  Otwory montażowe: 2 na bok, 81 nad dołem korpusu, 35 i 215 od przodu korpusu: nawierty pilotowe Ø3 × 10 w SOB-1
+  i SOB-2 od wnętrza (Y 1592, z 250,5 i 70,5). Wycięcie U w WSB-2 i SO 304 zaakceptowane.
 
 ## Do zmierzenia przy pomiarach weryfikacyjnych w mieszkaniu
 - [ZMIERZONE 2026-11-18: 9–12, SO głębsza do 304] O ile płytki wystają przed ścianę nad nimi.

@@ -95,7 +95,7 @@ var YSK=YRU-75-10;     /* góra dna skrzynki na rurę (10 pod końcem Ø150 redu
 var OKW=513, OKG=253, OKH=265;  /* korpus okapu DUO 55 (rysunek techniczny) */
 var OKZ=GKS-(290-OKG)/2-OKG;    /* tył korpusu: kołnierz 290 wystaje po 18,5 z przodu i z tyłu: 32,5 */
 var OKK=1.5;           /* grubość kołnierza (zmierzone 2026-11-18) */
-var ZWY=OKZ+94+75;     /* oś wylotu Ø150 (94 od tyłu korpusu do krawędzi wylotu): 201,5 (2026-11-18; było 197,5, wcześniej 218) */
+var ZWY=GKS-290+94+75;  /* oś wylotu Ø150: 94 od tylnej krawędzi kołnierza do krawędzi wylotu (zmierzone 2026-11-18): 183 */
 var YOK=YP+OKH;        /* góra korpusu okapu: 1776 */
 var ZPI=ZRU+12.5;      /* oś pionu Ø150 (redukcja mimośrodowa: +12,5 od osi Ø125): 109,5 */
 var RU4=115;           /* rura w ściance wystaje ze ścianki (zmierzone 2026-11-18): koniec na X 3093, w wąskiej szafce */
@@ -243,6 +243,8 @@ HF_MODEL.items.push(
   {t:'cyl3',n:'Otwór Ø8 x 35 pod pręt M8 (pogłębia użytkownik do 85) w P3 (do ściana: pręt M8)',layer:'Otwory',ax:'z',px:2230,py:1520,pz:17.5,r:4,len:35,c:0x15181b},
   {t:'cyl3',n:'Otwór Ø5 x 10 pod podpórkę w SOB-1',layer:'Otwory',ax:'x',px:2393,py:1781,pz:50,r:2.5,len:10.6,c:0x15181b},
   {t:'cyl3',n:'Otwór Ø5 x 10 pod podpórkę w SOB-1',layer:'Otwory',ax:'x',px:2393,py:1781,pz:250,r:2.5,len:10.6,c:0x15181b},
+  {t:'cyl3',n:'Nawiert pilotowy Ø3 x 10 pod wkręt okapu w SOB-1',layer:'Otwory',ax:'x',px:2393,py:1592,pz:250.5,r:1.5,len:10.6,c:0x15181b},
+  {t:'cyl3',n:'Nawiert pilotowy Ø3 x 10 pod wkręt okapu w SOB-1',layer:'Otwory',ax:'x',px:2393,py:1592,pz:70.5,r:1.5,len:10.6,c:0x15181b},
   {t:'cyl3',n:'Otwór Ø5 x 11 pod trzpień mimośrodu (do SOT) w SOB-1',layer:'Otwory',ax:'x',px:2392.5,py:1580,pz:9,r:2.5,len:11.6,c:0x15181b},
   {t:'cyl3',n:'Otwór Ø5 x 11 pod trzpień mimośrodu (do SOT) w SOB-1',layer:'Otwory',ax:'x',px:2392.5,py:2040,pz:9,r:2.5,len:11.6,c:0x15181b},
   {t:'cyl3',n:'Otwór Ø5 x 11 pod trzpień mimośrodu (do SOT) w SOB-1',layer:'Otwory',ax:'x',px:2392.5,py:2610,pz:9,r:2.5,len:11.6,c:0x15181b},
@@ -281,6 +283,8 @@ HF_MODEL.items.push(
   {t:'cyl3',n:'Nawiert środka Ø5 x 5 pod otwór wycinany samodzielnie w SOB-2',layer:'Otwory',ax:'x',px:2929.5,py:2577,pz:109.5,r:2.5,len:5.6,c:0x15181b},
   {t:'cyl3',n:'Otwór Ø5 x 10 pod podpórkę w SOB-2',layer:'Otwory',ax:'x',px:2919,py:1781,pz:50,r:2.5,len:10.6,c:0x15181b},
   {t:'cyl3',n:'Otwór Ø5 x 10 pod podpórkę w SOB-2',layer:'Otwory',ax:'x',px:2919,py:1781,pz:250,r:2.5,len:10.6,c:0x15181b},
+  {t:'cyl3',n:'Nawiert pilotowy Ø3 x 10 pod wkręt okapu w SOB-2',layer:'Otwory',ax:'x',px:2919,py:1592,pz:250.5,r:1.5,len:10.6,c:0x15181b},
+  {t:'cyl3',n:'Nawiert pilotowy Ø3 x 10 pod wkręt okapu w SOB-2',layer:'Otwory',ax:'x',px:2919,py:1592,pz:70.5,r:1.5,len:10.6,c:0x15181b},
   {t:'cyl3',n:'Nawiert pilotowy Ø3 x 12 pod wkręt prowadnika (F1) w SOB-2',layer:'Otwory',ax:'x',px:2920,py:1834,pz:267,r:1.5,len:12.6,c:0x15181b},
   {t:'cyl3',n:'Nawiert pilotowy Ø3 x 12 pod wkręt prowadnika (F1) w SOB-2',layer:'Otwory',ax:'x',px:2920,py:1866,pz:267,r:1.5,len:12.6,c:0x15181b},
   {t:'cyl3',n:'Nawiert pilotowy Ø3 x 12 pod wkręt prowadnika (F1) w SOB-2',layer:'Otwory',ax:'x',px:2920,py:2194,pz:267,r:1.5,len:12.6,c:0x15181b},
