@@ -27,7 +27,7 @@ Układ: X od lewej ściany ku prawej, Y od podłogi w górę, Z od tylnej ścian
 | GZ3 | 466 | wysokość gzymsu na prawej ścianie | |
 | GZ4 | 680 | długość gzymsu na prawej ścianie, od frontu pionu | |
 | D | 490 | od krawędzi gzymsu do prawej ściany | |
-| WN1, WN2 | 115, 243 | środek otworu wentylacyjnego: od prawej ściany, od sufitu (pomiar 2026-11-18); w modelu x 1624, y 2418 (sufit przyjęty J = 2661) | wcześniej M, N = 121, 53 (niejasne), model x 1616, y 2409 |
+| WN1, WN2 | 115, 243 | środek otworu wentylacyjnego: od prawej ściany, od sufitu (pomiar 2026-11-18); w modelu x 1624, y 2418 (sufit nad otworem = J = 2661, potwierdzone) | wcześniej M, N = 121, 53 (niejasne), model x 1616, y 2409 |
 | KR | 123 | kratka wentylacyjna (kupiona): króciec Ø123, wchodzi do rury Ø125 | |
 
 ## Maszyny (pralka Bosch WGG244EPL, suszarka Bosch WQG245DEPL, oryginalny zestaw łączący)

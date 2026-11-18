@@ -244,3 +244,10 @@ Sekcja C (zmiany w `wspolne/pipeline/`: kolizje otworów lico A–lico B i kraw�
 - Luzy między modułami: bez dodatkowych (luzy tylko po bokach zabudowy).
 - Wyniki v61: formatki 40 pozycji / 52 sztuki / 15,38 m²; 420 otworów, 57 połączeń, 0 kolizji; 152 konfirmaty, 14 kołków, 12 podpórek, 15 puszek; 24 widoczne łby.
 
+## 2026-11-18 – mocowanie F6 i potwierdzenia (v62)
+- Potwierdzone: X = 467 to gzyms na pionie pod PP1/KP1; sufit nad otworem wentylacyjnym = J (2661), środek rury 243 od sufitu → y 2418; otwornicę Ø127 użytkownik kupi.
+- F6 (z prowadnikami 173H7130 zawiasów F5): dół – listwa oporowa LF6 200×60 (płyta 18, bez okleiny) leżąca płasko na tyle F6 (x 1505–1705, y 2206,5–2266,5, z 622–640), klej + 4 wkręty Ø3,5×30 do F6 (maks. 12 mm w F6), stoi na PP3-2 i jest z nią skręcona 2 konfirmatami od spodu (dostęp z komory F7). Zastępuje 2 dolne kątowniki 25×25 (x 1510 i 1680). Lewa góra (strona zawiasów F5): kątownik 40×40 (x 1505–1545, y 2594–2634) zamiast 25×25. Prawy dolny kątownik na boku przesunięty y 2260 → 2275 (miejsce na LF6). Strefa prowadników (x 1500–1545, y 2277–2321 i 2530–2575) wolna.
+- Wkręty w F6: prowadniki 173H7130 i kątowniki Ø3,5×12 (front 18 mm, nie przebić lica).
+- Ogranicznik na F3 pominięty (uchwyty wierci użytkownik; uchwyt F5 dalej od krawędzi).
+- PP3-2 ma teraz inne nawierty niż PP3-1/PP3-3 (osobny typ w kalkulatorze).
+- Wyniki v62: formatki 41 pozycji / 53 sztuki / 15,39 m²; 424 otwory, 58 połączeń, 0 kolizji; 154 konfirmaty, 26 widocznych łbów; kalkulator 32 typy / 366 wierszy.

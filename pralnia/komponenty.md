@@ -1,9 +1,9 @@
-# Zestawienie okuć i elementów (pralnia) – stan v61, 2026-11-18 (po audycie v1 i decyzjach użytkownika)
+# Zestawienie okuć i elementów (pralnia) – stan v62, 2026-11-18 (po audycie v1 i decyzjach użytkownika)
 Wersja robocza do niezależnej weryfikacji. Wymiary w mm. Kody wymiarów wielkimi literami.
 Liczby łączników, otworów i zaślepek: `wyniki/podsumowanie.json` (źródło), poniżej przepisane.
 
 ## Płyta
-- Egger W1200 ST9 „Biały porcelanowy" 18 mm, centrum.meble.pl; 40 pozycji / 52 sztuki / 15,38 m² (wyniki/formatki.csv, razem z L1P i RDW2, bez F8).
+- Egger W1200 ST9 „Biały porcelanowy" 18 mm, centrum.meble.pl; 41 pozycji / 53 sztuki / 15,39 m² (wyniki/formatki.csv, razem z L1P, RDW2 i LF6, bez F8).
 - Okleina: fronty 1,0 mm bezspoinowa (szablony zawiasów), reszta ABS 0,8 mm z nawiertami.
 - KP1: w modelu 184×132, ZAMÓWIĆ 200×132 (minimum kalkulatora) i skrócić samodzielnie o 16 mm od tyłu (krawędź 4, bez otworów); w kalkulatorze X otworów w krawędzi 3: 66 i 150.
 
@@ -16,7 +16,7 @@ Liczby łączników, otworów i zaślepek: `wyniki/podsumowanie.json` (źródło
 | Ogranicznik kąta otwarcia 86° do CLIP top 110° | 70T3553 | 9 | F1 ×2, F2 ×2 (lewa ściana), F7 ×2, F9 ×3 (prawa ściana): fronty po stronie zawiasów mają 4,5–6,5 mm do ściany. Zakładany bez narzędzi. F9 przy 86°: półki PP2+KP2 przekładane z pochyleniem (zaakceptowane) |
 | Zawias do drzwi równoległych 95° (F5↔F6) | 79B9590 | 2 | prowadnik na tylnej ściance F6, linia wkrętów 21,5 od lewej krawędzi F6 (zostaje, decyzja 2026-11-18) |
 | Prowadnik do 79B9590 | 173H7130 | 2 | dystans 3 mm, wys. 11,5 (ustawienie fabryczne 79B9590) |
-| Wkręty prowadnika 173H7130 w F6 | 4 szt. | 4 | długość do ustalenia przy dopracowaniu mocowania F6 (front 18 mm) |
+| Wkręty prowadnika 173H7130 w F6 | Ø3,5×12 | 4 | front 18 mm: maks. 12 mm, żeby nie przebić lica |
 | Zaślepki puszek (opcjonalnie) | 70.1503 / 70T3504 | – | |
 
 Wszystkie 15 zawiasów: CLIP top BLUMOTION (samodomykanie), wszystkie INSERTA (puszka Ø35 + 2 × Ø8, bez wkrętów w froncie).
@@ -25,13 +25,13 @@ F9 (512×1240,5, ok. 7,4–8,0 kg): 3 zawiasy (potwierdzone 2026-11-08).
 Weryfikacja nawiertów: wszystkie 13 prowadników mieści się w ściankach (y zawiasu ±28), brak konfliktu z innymi otworami; nawierty pilotowe Ø3×12 (nieprzelotowe, w wewnętrznym licu ścianki, 2 na zawias, rozstaw 32, 37 od przedniej krawędzi ścianki): 26 szt. w planach/kalkulatorze. Jeśli kalkulator nie przyjmie Ø3 – Ø4. Prowadnik F5 w F6 (2 otwory, X 1521,5; Y 2299 i 2552 ±16): front, bez nawiertu w kalkulatorze – wiercisz sam wg znaczników w modelu.
 
 ## Złącza w korpusach
-- Konfirmaty 7×50: 152 szt. (łby wpuszczone fazownikiem na równo z licem). Zaślepki tylko na widocznych łbach: 24 miejsca (kupić 25); pozostałe 128 łbów jest ukrytych (lista miejsc: wyniki/podsumowanie.json). Część „widocznych" jest w szczelinach: 4 × KB2 → RDW/RDW2 (30 mm nad suszarką), 4 × PP1 → PB2/PT2 (22 mm nad gzymsem).
+- Konfirmaty 7×50: 154 szt. (łby wpuszczone fazownikiem na równo z licem). Zaślepki tylko na widocznych łbach: 26 miejsc (kupić 27; w tym 2 pod PP3-2 od LF6); pozostałe 128 łbów jest ukrytych (lista miejsc: wyniki/podsumowanie.json). Część „widocznych" jest w szczelinach: 4 × KB2 → RDW/RDW2 (30 mm nad suszarką), 4 × PP1 → PB2/PT2 (22 mm nad gzymsem).
 - Kołki Ø8×40: 14 szt. + klej (12 w parach KP/PP: po 2 na poziom × 6 poziomów, 2 w styku KB1/KB2); otwory Ø8×20 w krawędzi.
 - Podpórki półek Ø5×10 wciskane: 12 (poziomy 922 i 1355: po 4 w KB2 – z 213, 355, 417, 590 – i po 2 w PB2 – z 417, 590); otwory 60 szt., siatka 32 mm. Część pod półką maks. 5 mm (bez wysokich kołnierzy). Poziom 489 bez podpórek (konfirmaty).
 - Nawierty środków Ø5×5 (PT3, L1B2): pod otwory do wykonania samodzielnie. PT3: środek 253 od lewej, 234 od górnej. L1B2 (GN1): z 242.
 
 ## Kątowniki i wkręty do nich
-- Kątowniki 25×25 pod F6: 6 (prawy górny y 2550, lewe x 1510). Wkręty: ok. 24 szt.; w ramieniu przy F6 Ø3,5×12 (nie dłuższe: front 18 mm), w ramieniu na boku/półce Ø3,5×15. Mocowanie F6 do dopracowania (listwa oporowa).
+- Mocowanie F6: listwa oporowa LF6 200×60 (płyta, w zamówieniu) na dole – klej + 4 wkręty Ø3,5×30 do F6, 2 konfirmaty od spodu z PP3-2; kątownik 40×40 lewa góra (1 szt.); kątowniki 25×25: 3 (prawy bok ×2 – y 2275 i 2550, prawa góra ×1). Wkręty do kątowników: w ramieniu przy F6 Ø3,5×12 (nie dłuższe), w ramieniu na boku/półce Ø3,5×15; ok. 16 szt.
 - Kątowniki 25×25 przy KT1A/B/C: 9 (na płytę: 1 podpora – ramię poziome pod płytą – i 2 z ramieniem za płytą), wszystkie przykręcane do KB2. Wkręty Ø3,5×15 z łbem stożkowym, ok. 18 szt., otwory w kątownikach pogłębione; luz łbów do płyty 3 mm.
 - Magnesy neodymowe Ø10×3: 6 szt. (po 2 na KT1A/B/C, do ramion za płytą), gniazda Ø10×3 wiercisz sam w tylnej ściance płyt. Ciężar płyty niesie podpora, magnesy tylko przytrzymują.
 - Zdejmowane tyły kolumny (wymiary do koszyka): KT1A 405×124, KT1B 405×124, KT1C 347×124.

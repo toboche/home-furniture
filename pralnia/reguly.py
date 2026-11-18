@@ -172,6 +172,8 @@ FORMATKI = [
       okleina='1DL', nawierty='KOŁKI Ø8 W CZOLE (do KP2); BEZ KONFIRMATÓW'),
     F('PP3', 'Półka przednia, pas: 1743, 2188,5, 2634 (x 1239-1718, z 385-640; kołki Ø8 do KP3)',
       okleina='1DL', nawierty='KONFIRMATY + KOŁKI Ø8 W CZOLE (do KP3)'),
+    F('LF6', 'Listwa oporowa za F6, dół (leży płasko na tyle F6, stoi na PP3-2)',
+      okleina='', nawierty='KONFIRMATY (od spodu z PP3-2)', uwagi='do tyłu F6: klej + 4 wkręty Ø3,5x30 od strony listwy (maks. 12 mm w F6)'),
     F('L1W', 'L1: wieniec górny, przód',
       okleina='1DL', nawierty='KONFIRMATY'),
     F('L1P', 'L1: półka luzem na całą szerokość L1 (BEZ nawiertów, nie montowana w szafce; ewentualne nawierty robi użytkownik)',

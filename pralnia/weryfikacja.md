@@ -1,19 +1,18 @@
-# Pralnia: lista do weryfikacji przed zamówieniem (stan 2026-11-18, model v61)
+# Pralnia: lista do weryfikacji przed zamówieniem (stan 2026-11-18, model v62)
 
-Źródła: model 3D (`index.html` albo `wyniki/pralnia_3d.html`), `wyniki/formatki.csv` (40 pozycji, 52 sztuki, 15,38 m²), `wyniki/kalkulator_nawierty.csv` (30 typów, 354 wiersze), `wyniki/arkusz_nawiertow.pdf` (30 stron), `wyniki/podsumowanie.json`, `pomiary.md`, `ustalenia.md`, `komponenty.md`, audyt `audyt/v1.md`.
-Kontrola automatyczna: 420 otworów, 57 połączeń, 0 kolizji otworów; 152 konfirmaty, 14 kołków, 12 podpórek, 15 puszek. Kolizje brył: tylko zamierzone (puszki w frontach, magnesy w gniazdach, gniazdko GN1 w wycięciu).
+Źródła: model 3D (`index.html` albo `wyniki/pralnia_3d.html`), `wyniki/formatki.csv` (41 pozycji, 53 sztuki, 15,39 m²), `wyniki/kalkulator_nawierty.csv` (32 typy, 366 wierszy), `wyniki/arkusz_nawiertow.pdf` (32 strony), `wyniki/podsumowanie.json`, `pomiary.md`, `ustalenia.md`, `komponenty.md`, audyt `audyt/v1.md`.
+Kontrola automatyczna: 424 otwory, 58 połączeń, 0 kolizji otworów; 154 konfirmaty, 14 kołków, 12 podpórek, 15 puszek. Kolizje brył: tylko zamierzone (puszki w frontach, magnesy w gniazdach, gniazdko GN1 w wycięciu).
 
 ## Zamówienie
 - Koszyk 21386928 (2 970,11 zł, 2026-11-08) jest NIEAKTUALNY i nie należy go używać.
-- Wycena wstępna 2026-11-15: rozkrój 21629244 (stan v58, bez nawiertów) = 2 204,10 zł; z wierceniem szacunkowo 2 850–2 950 zł. Od tego czasu: +RDW2, −F8, KT1 124 mm. Do przeliczenia.
+- Wycena wstępna 2026-11-15: rozkrój 21629244 (stan v58, bez nawiertów) = 2 204,10 zł; z wierceniem szacunkowo 2 850–2 950 zł. Od tego czasu: +RDW2, +LF6, −F8, KT1 124 mm. Do przeliczenia.
 - Kalkulator przyjął przy wycenie wymiary z połówką mm i formatki 100 mm. KP1 zamawiamy jako 200×132 (skracana samodzielnie). Do sprawdzenia przy wpisie: nawierty Ø3×12.
 
 ## Do dopracowania / potwierdzenia
-1. F6 (zostaje 79B9590 + 173H7130 na F6): listwa oporowa za F6 zamiast 2 małych kątowników przy x 1510, długość wkrętów w F6, ogranicznik na F3 (F3 otwarty ponad ok. 92° trafia w uchwyt F5).
-2. Pion: U na 3 wysokościach i P (pomiary.md: U + P = 1743 > A = 1739; model pion od x 1376). Przy U = 1372 luz KT2/KP1/KP3 do pionu spada z 5 do 1 mm.
-3. Wentylacja: wysokość sufitu nad otworem (przyjęto J = 2661 → y 2418); średnica otwornicy do F6 (przyjęto Ø127).
-4. Montaż prawego dołu: skręcony na podłodze i wsunięty w całości (konfirmaty PP1 → PB2/PT2 od spodu). Prześwit nad gzymsem 22 mm.
-5. Odkurzacz bezprzewodowy w L1: mocowanie (bez UTRUSTA). Wysokość i podparcie L1P.
+1. F6: zaprojektowane v62 (LF6 + kątownik 40×40, wkręty 12 mm). Przy montażu sprawdzić, czy prowadniki 173H7130 mieszczą się w strefie x 1500–1545 (wymiar przyjęty, nie z karty Blum).
+2. Pion: U (od lewej ściany pokoju do lewego boku pionu, powyżej gzymsu) na 3 wysokościach i P (szerokość pionu) albo odległość lewego boku pionu od prawej ściany (pomiary.md: U + P = 1743 > A = 1739; model pion od x 1376). Przy U = 1372 luz KT2/KP1/KP3 do pionu spada z 5 do 1 mm.
+3. Montaż prawego dołu: skręcony na podłodze i wsunięty w całości (konfirmaty PP1 → PB2/PT2 od spodu). Prześwit nad gzymsem 22 mm.
+4. Odkurzacz bezprzewodowy w L1: mocowanie (bez UTRUSTA). Wysokość i podparcie L1P.
 
 ## Pomiary weryfikacyjne
 - Pion U (dół, środek, góra), P, V; A i G w kilku punktach; J w kilku punktach (także nad otworem wentylacyjnym).

@@ -84,16 +84,14 @@ var ITEMS=[
   /* Kanał wentylacyjny: rura okrągła Ø 125 od otworu w ścianie (z = 362) do tylnej strony frontu stałego (z = 640), zamocowana do szafki, uszczelniona pianką przy ścianie i przy froncie. */
   {t:'cyl',n:'Kanał wentylacyjny (rura Ø 125, z 362 do 640)',layer:'Kanał wentylacyjny',cx:1624,cy:2418,z:362,r:62.5,len:278,c:0x9aa5ad},
   /* Listwy pod wkręty frontu stałego (18 × 18), po wewnętrznej stronie przodu komory. */
-  {n:'Kątownik 25×25 pod F6, bok prawy: ramię przy froncie',layer:'Kątowniki pod F6',x:1693,y:2260,z:638,w:25,h:25,d:2,c:0x9aa5ad},
-  {n:'Kątownik 25×25 pod F6, bok prawy: ramię przy boku',layer:'Kątowniki pod F6',x:1716,y:2260,z:615,w:2,h:25,d:25,c:0x9aa5ad},
+  {n:'Kątownik 25×25 pod F6, bok prawy: ramię przy froncie',layer:'Kątowniki pod F6',x:1693,y:2275,z:638,w:25,h:25,d:2,c:0x9aa5ad},
+  {n:'Kątownik 25×25 pod F6, bok prawy: ramię przy boku',layer:'Kątowniki pod F6',x:1716,y:2275,z:615,w:2,h:25,d:25,c:0x9aa5ad},
   {n:'Kątownik 25×25 pod F6, bok prawy: ramię przy froncie',layer:'Kątowniki pod F6',x:1693,y:2550,z:638,w:25,h:25,d:2,c:0x9aa5ad},
   {n:'Kątownik 25×25 pod F6, bok prawy: ramię przy boku',layer:'Kątowniki pod F6',x:1716,y:2550,z:615,w:2,h:25,d:25,c:0x9aa5ad},
-  {n:'Kątownik 25×25 pod F6, dół: ramię przy froncie',layer:'Kątowniki pod F6',x:1510,y:2206.5,z:638,w:25,h:25,d:2,c:0x9aa5ad},
-  {n:'Kątownik 25×25 pod F6, dół: ramię na półce',layer:'Kątowniki pod F6',x:1510,y:2206.5,z:615,w:25,h:2,d:25,c:0x9aa5ad},
-  {n:'Kątownik 25×25 pod F6, dół: ramię przy froncie',layer:'Kątowniki pod F6',x:1680,y:2206.5,z:638,w:25,h:25,d:2,c:0x9aa5ad},
-  {n:'Kątownik 25×25 pod F6, dół: ramię na półce',layer:'Kątowniki pod F6',x:1680,y:2206.5,z:615,w:25,h:2,d:25,c:0x9aa5ad},
-  {n:'Kątownik 25×25 pod F6, góra: ramię przy froncie',layer:'Kątowniki pod F6',x:1510,y:2609,z:638,w:25,h:25,d:2,c:0x9aa5ad},
-  {n:'Kątownik 25×25 pod F6, góra: ramię pod półką',layer:'Kątowniki pod F6',x:1510,y:2632,z:615,w:25,h:2,d:25,c:0x9aa5ad},
+  /* Mocowanie F6 (v62, 2026-11-18): dół – listwa oporowa LF6 (płyta 18, 200 × 60) przyklejona i przykręcona do tyłu F6, stoi na PP3-2 (konfirmaty od spodu);
+     lewa góra (strona zawiasów F5) – kątownik 40×40; prawa strona i prawa góra – kątowniki 25×25. Strefa prowadników 173H7130 (x 1500–1545, y 2277–2321 i 2530–2575) wolna. */
+  {n:'Kątownik 40×40 pod F6, góra lewa: ramię przy froncie',layer:'Kątowniki pod F6',x:1505,y:2594,z:638,w:40,h:40,d:2,c:0x9aa5ad},
+  {n:'Kątownik 40×40 pod F6, góra lewa: ramię pod półką',layer:'Kątowniki pod F6',x:1505,y:2632,z:600,w:40,h:2,d:40,c:0x9aa5ad},
   {n:'Kątownik 25×25 pod F6, góra: ramię przy froncie',layer:'Kątowniki pod F6',x:1680,y:2609,z:638,w:25,h:25,d:2,c:0x9aa5ad},
   {n:'Kątownik 25×25 pod F6, góra: ramię pod półką',layer:'Kątowniki pod F6',x:1680,y:2632,z:615,w:25,h:2,d:25,c:0x9aa5ad},
   /* Front prawego modułu dolnego: F9 (zawiasy po prawej). F8 usunięty 2026-11-18: wnęka 406 × 489 pod PP1 otwarta, stoi w niej kuweta. */
@@ -162,6 +160,7 @@ var ITEMS=[
   {n:'NWP-3: Pas, nad maszynami: góra (2634 do 2652)',layer:'Półki',x:633,y:2634,z:23,w:570,h:18,d:617,c:0xe6d7b8},
   /* Wieńce górne (usztywnienie dolnych szafek): pas 100 mm przy froncie, pod samym pasem (y 1725 do 1743), tył do z 640 (front od z 640). */
   {n:'L1W: L1: wieniec górny, przód (1725 do 1743)',layer:'Półki',x:23,y:1725,z:540,w:574,h:18,d:100,c:0xe6d7b8},
+  {n:'LF6: Listwa oporowa za F6, dół (na PP3-2, przyklejona i przykręcona do tyłu F6)',layer:'Półki',x:1505,y:2206.5,z:622,w:200,h:60,d:18,c:0xe6d7b8},
   {n:'RDW: Prawa dolna: wieniec górny, przód (1725 do 1743)',layer:'Półki',x:1239,y:1725,z:540,w:479,h:18,d:100,c:0xe6d7b8},
   /* RDW2 (audyt v1, 2026-11-18): wieniec górny tylny, spina górę tylnej części KB2 z PB2 i PT2 (wcześniej KB2 z tyłu u góry nie był niczym usztywniony: KP2 na podpórkach, KT1 zdejmowane). */
   {n:'RDW2: Prawa dolna: wieniec górny, tył (1725 do 1743)',layer:'Półki',x:1239,y:1725,z:385,w:479,h:18,d:100,c:0xe6d7b8},
@@ -245,7 +244,7 @@ return {
   noOffset:/^Kratka/, /* elementy bez przesunięcia w buforze głębi i bez koloru płyty */
   /* elementy, które przy rozsuwaniu jadą razem z innym (poza regułami ogólnymi: zawiasy, uchwyty, otwory, konfirmaty, kołki) */
   explodeParent:function(it,h){
-    if(/^Kątownik 25×25 pod F6/.test(it.n)||/^Kratka/.test(it.n)||/^LF5:/.test(it.n)){return h.front(/^F6:/)||null;}
+    if(/^Kątownik \d+×\d+ pod F6/.test(it.n)||/^Kratka/.test(it.n)||/^LF5:/.test(it.n)){return h.front(/^F6:/)||null;}
     var k=/^Kątownik (KT1[ABC])/.exec(it.n);if(k){return h.back(new RegExp('^'+k[1]+':'))||null;}
     return undefined;
   },

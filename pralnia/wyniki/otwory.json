@@ -548,6 +548,24 @@
 },
 "holes": [
 {
+"axis_n": "y",
+"d": 5,
+"kind": "FACE",
+"partner": "LF6",
+"side": "B",
+"u": 163.0,
+"v": 246.0
+},
+{
+"axis_n": "y",
+"d": 5,
+"kind": "FACE",
+"partner": "LF6",
+"side": "B",
+"u": 63.0,
+"v": 246.0
+},
+{
 "along": 50.0,
 "d": 4,
 "depth": 35,
@@ -1618,6 +1636,48 @@
 "t": "y",
 "u": "x",
 "v": "z"
+},
+{
+"DL": 200,
+"SZ": 60.0,
+"code": "LF6",
+"hi": {
+"x": 1705,
+"y": 2266.5,
+"z": 640
+},
+"holes": [
+{
+"along": 50.0,
+"d": 4,
+"depth": 35,
+"edge_coord": 0.0,
+"into": 1,
+"kind": "EDGE",
+"n_axis_is_u": false,
+"partner": "PP3-2"
+},
+{
+"along": 150.0,
+"d": 4,
+"depth": 35,
+"edge_coord": 0.0,
+"into": 1,
+"kind": "EDGE",
+"n_axis_is_u": false,
+"partner": "PP3-2"
+}
+],
+"lo": {
+"x": 1505,
+"y": 2206.5,
+"z": 622
+},
+"mod": "RB",
+"rh": true,
+"t": "z",
+"u": "x",
+"v": "y"
 },
 {
 "DL": 479,
