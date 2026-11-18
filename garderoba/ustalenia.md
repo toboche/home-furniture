@@ -43,7 +43,7 @@ Materiały źródłowe: `zrodla/` (rzut architektoniczny, zdjęcia ogólne).
 - Przedział na kurtki: moduł 2 na wprost (prawy) na dłuższe kurtki (od półki 614,5 do spodu wieńca 2102 = 1487,5); moduł 1 na wprost i szafka po lewej na krótsze 1000.
 - Bez dna: najniższe przedziały na buty stoją bezpośrednio na kafelkach (2026-11-15).
 - Wysokości półek wspólne dla wszystkich szafek (przyjęte 2026-11-15, według szafki po lewej): spody półek 335 (2 mm nad gzymsem),
-  596,5 i 858; przedziały na buty 335, 243,5, 243,5 (przyjęte mimo wcześniejszego minimum 270).
+  596,5 (od 2026-11-18: 596) i 858; przedziały na buty 335, 243,5, 243,5 (od 2026-11-18: 243 i 244) (przyjęte mimo wcześniejszego minimum 270).
 - Szafki z krótszymi kurtkami (moduł 1 na wprost, po lewej): 3 półki, szuflada 208 (front 202), płyta pod kurtkami 1084–1102.
 - Moduł 2 na wprost (dłuższe kurtki): BEZ szuflady i bez płyty pod kurtkami (2026-11-15); 2 półki (335, 596,5),
   druga jest dnem przedziału na kurtki (1487,5 do spodu wieńca, od osi drążka 1422,5).
@@ -59,9 +59,9 @@ Materiały źródłowe: `zrodla/` (rzut architektoniczny, zdjęcia ogólne).
   Otwieranie każdej szuflady przy zamkniętej drugiej sprawdzone (`sprawdz_szuflady.js`): brak kolizji. Okucia: `komponenty.md`.
   SZ1 i SZ2 otwarte JEDNOCZEŚNIE zderzają się w narożniku (już przy 25 mm wysuwu drugiej): nie otwierać obu naraz (2026-11-18).
 
-## Konstrukcja (decyzje 2026-11-15)
+## Konstrukcja (decyzje 2026-11-15; podział na korpusy dolne i górne: sekcja 2026-11-18 niżej)
 - Płyta 18, plecy 18 (solidne, bo na dole nie ma wieńca), złącza: konfirmaty. Montaż: najpierw szafka na wprost, potem po lewej.
-- Szafka na wprost (N): JEDEN korpus 1117 × 2583 × 578 z przegrodą NP na pół (od podłogi do wieńca górnego);
+- (do 2026-11-18) Szafka na wprost (N): JEDEN korpus 1117 × 2583 × 578 z przegrodą NP na pół (od podłogi do wieńca górnego);
   plecy NT na całą szerokość od 335 (nad osłonami przewodów) do wieńca górnego; wieniec 2120 i półki w obu połowach.
 - Szafka po lewej (L): boki LB1 (przy pionie) i LB2 (przy ścianie przedniej) z wycięciem dolnego narożnika przy ścianie
   wokół gzymsu: LB1 184 × 335 (gzyms z rurą), LB2 129 × 335; plecy LT nad gzymsem (od 335).
@@ -72,11 +72,11 @@ Materiały źródłowe: `zrodla/` (rzut architektoniczny, zdjęcia ogólne).
   F2 dotyka prawej ściany przy ok. 92° otwarcia: ogranicznik kąta.
 - Szuflady: skrzynki wg katalogu Blum (patrz `komponenty.md`), kontrola otwierania bez kolizji.
 - Konfirmaty z prawej strony przegrody NP przesunięte o 25, żeby otwory z obu stron NP się nie pokrywały.
-- MONTAŻ: złożonego korpusu nie da się postawić w pomieszczeniu (przekątna boku 2583 × 578 to 2647, sufit 2586),
+- (do 2026-11-18) MONTAŻ: złożonego korpusu nie da się postawić w pomieszczeniu (przekątna boku 2583 × 578 to 2647, sufit 2586),
   a boki NB-1, NB-2, LB1, LB2 mają z zewnątrz tylko 3–20 mm luzu do ścian i pionu (konfirmaty wkręca się od zewnątrz boków).
   Korpusy składamy na stojąco na wolnej podłodze przed docelowym miejscem i dosuwamy: N do ściany tylnej, L w stronę
   ściany lewej (wycięcia boków przechodzą nad gzymsem). Pojedynczą płytę stawia się, podnosząc ją przez krawędź 18 mm.
-- Gniazdko (E1, E2): LB2 stoi 12 mm od ściany przedniej, więc puszka gniazdka nie może wystawać więcej niż ok. 9 mm,
+- (wyjaśnione 2026-11-18, patrz niżej) Gniazdko (E1, E2): LB2 stoi 12 mm od ściany przedniej, więc puszka gniazdka nie może wystawać więcej niż ok. 9 mm,
   albo musi przejść przez otwór w LB2 (do sprawdzenia przy wyborze gniazdka).
 
 ## Wycena wstępna meble.pl (2026-11-15, szacunek, nie koszyk)
@@ -113,6 +113,27 @@ USTALENIA Z KALKULATORA:
 - Nawierty (i wybór szablonu) są niedostępne dla formatek dłuższych niż 2500 mm: NB-1, NB-2, NP, LB1, LB2 zamówione BEZ nawiertów
   (ok. 150 otworów do wywiercenia samodzielnie wg `wyniki/arkusz_nawiertow.pdf`) – do decyzji.
 - Płyty 16 mm do skrzynek szuflad nie ma w W1200 ani W1100 (tylko 18 i 36 mm) – skrzynki nie są w rozkroju, do decyzji.
+
+## Decyzje 2026-11-18 (rozmowa po audycie v1)
+- PODZIAŁ NA KORPUSY: każda szafka ma korpus dolny (0–2120: N, L) i górny (2120–2583, wys. 463: GN, GL). Dolny kończy się
+  wieńcem NW / LW na całą szerokość (góra 2120 = dotychczasowy wieniec części otwartej), górny ma własne dno GND / GLD,
+  boki, plecy i wieniec GNG / GLG; na 2120 leżą więc dwie płyty (2102–2138). Najdłuższa formatka 2120 (wcześniej 2583):
+  wszystkie formatki poniżej 2500, więc meble.pl wierci wszystkie otwory (koniec ręcznego wiercenia 146 otworów).
+- Montaż: korpus dolny składa się na podłodze i stawia (przekątna boku 2120 × 578 to 2197, sufit min. 2586), dosuwa do ściany;
+  górny składa się osobno, podnosi na dolny i wsuwa od przodu po wieńcu dolnego (pod sufitem 3 mm w projekcie,
+  pomiary V4: 2587–2589, czyli ok. 4–6 mm). Górny przykręcony do dolnego wkrętami przez dno i do ściany przez plecy.
+- Fronty F1, F2 w korpusie górnym między dnem GND a wieńcem GNG: 2140–2563, 527 × 423; zawiasy i nawierty pilotowe w GNB-1, GNB-2;
+  TIP-ON F1 i F2 na przegrodzie GNP.
+- Szczelina frontów chowanych SZCZ = 2 (było 3), żeby zostało więcej regulacji. Fronty: F1, F2 527 × 423, F3 527 × 204, F4 855 × 204.
+- Wszystkie wymiary formatek i położenia otworów w pełnych mm (meble.pl): szafka na wprost 1116 (było 1117, luz przy prawej
+  ścianie 4), połowy po 531; półki 335, 596, 858 (przedziały 243 i 244); linia prowadników zawiasów 57 (katalog 56,5).
+- Szuflady: L1 (T60L7340) w obu. Skrzynki bez podcięć (wariant Blum sprawdzony w katalogu MOVENTO); konfirmaty dna odsunięte
+  od zaczepów i TIP-ON (`komponenty.md`). Płyta 16 mm na skrzynki: inna biała płyta 16 mm (W1200 nie ma 16).
+- Dolne krawędzie stojące na kafelkach (NB, NP, LB1, LB2, NO) oklejone ABS; ślizgacze dopiero, jeśli będą potrzebne.
+  Kalkulator meble.pl w `kalkulator_nawierty.csv` ma tylko krawędź przednią: dolną dopisać ręcznie przy zamówieniu.
+- Pomiary weryfikacyjne (`weryfikacja.md`): sufit 2587, 2589, 2589; przewody wodne nie są zagięte w stronę pokoju;
+  GZ1 333; puszka gniazdka nie wystaje. LB2 przy pionie stoi ok. 3 mm od ściany przedniej (T = 919 zmierzone przy pionie);
+  12 mm wychodziło z G = 1490 mierzonego przy prawej ścianie (model rysuje ścianę przednią prosto).
 
 ## Audyt v1 (`audyt/v1.md`), wdrożone 2026-11-18
 - SZ2: prowadnice MOVENTO NL 650 → NL 600 (760H6000S, 40 kg). NL 650 jest tylko w serii 766H, której jednostka TIP-ON
