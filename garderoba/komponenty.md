@@ -45,7 +45,7 @@ Kontrola otwierania: `node garderoba/sprawdz_szuflady.js`. Każda szuflada sama:
 |---|---|---|
 | Konfirmaty 7 × 50 | 230 | N 85, L 57, GN 32, GL 22, skrzynki 34 (osłony NO bez konfirmatów); + zapas |
 | Wkręty łączące korpus górny z dolnym, np. 4 × 30 (przez dno GND / GLD w wieniec NW / LW) | ok. 10 | 6 w N, 4 w L, od środka korpusu górnego, z dala od konfirmatów |
-| Zaślepki konfirmatów | ok. 6 (skrypt: 74) | widoczne łby: przegroda NP (6). Skrypt liczy więcej, bo nie widzi, że łby na zewnętrznych licach LB1, LB2, GLB1, GLB2 zasłania pion i ściana, a łby pod dnami skrzynek (10) są niewidoczne; poprawka skryptu w osobnym PR `wspolne/` (audyt v1, sekcja C) |
+| Zaślepki konfirmatów | ok. 6 (skrypt: 45) | widoczne łby: przegroda NP (6). Skrypt liczy więcej, bo nie widzi, że łby na zewnętrznych licach LB1, LB2, GLB1, GLB2 zasłania pion i ściana, a łby pod dnami skrzynek (10) są niewidoczne; poprawka skryptu w osobnym PR `wspolne/` (audyt v1, sekcja C) |
 | Drążki Ø25 z uchwytami | 3 | N połowa lewa 534, N połowa prawa 534, L wzdłuż ściany 873; oś 2037 |
 | Wkręty i kołki do ściany (przez plecy NT, LT, GNT, GLT) | – | rodzaj zależy od ścian (do ustalenia) |
 | Kratka wentylacyjna prostokątna nasuwana na przewód Ø130 | 1 | na wewnętrznym licu GLB1; otwór w GLB1 wierci użytkownik |
