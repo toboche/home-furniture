@@ -234,6 +234,8 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
   Przejście z wylotu (z 138) do pionu przy plecach (z 109,5): użytkownik chce bez kolan 15°, przez lekkie pochylenie
   rury (28,5 na ok. 625, ok. 2,6°; luz złączy z uszczelką EPDM). Kolana 15° jako zapas. Środek otworu w SOP na z 124
   (przecięcie pochylonej rury z półką), otwór dalej otwarty do tyłu.
+- 2026-11-18: wymiary producenta (513 × 253) obejmują nity na wszystkich ścianach korpusu; 516 w świetle szafki
+  daje 1,5 luzu do nitów z każdej strony (wymóg producenta A + 2). Nawierty okapu liczone od lica przodu korpusu.
 
 ## Do zmierzenia przy pomiarach weryfikacyjnych w mieszkaniu
 - [ZMIERZONE 2026-11-18: 9–12, SO głębsza do 304] O ile płytki wystają przed ścianę nad nimi.
