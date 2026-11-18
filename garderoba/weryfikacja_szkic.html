@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Garderoba: co zmierzyć</title>
+<style>
+  :root{--ink:#1f2328;--mut:#5b636e;--line:#d8dce1;--wall:#3a3f45;--acc:#c2410c;--cab:#2f7d6d;--bg:#fafaf8}
+  *{box-sizing:border-box}
+  body{margin:0;font:15px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg)}
+  main{max-width:980px;margin:0 auto;padding:18px 14px 40px}
+  h1{font-size:22px;margin:4px 0 6px}
+  h2{font-size:17px;margin:28px 0 8px}
+  p{margin:6px 0}
+  .mut{color:var(--mut)}
+  .card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px;margin:10px 0}
+  svg{width:100%;height:auto;display:block}
+  table{width:100%;border-collapse:collapse;font-size:14px;background:#fff}
+  th,td{border-bottom:1px solid var(--line);padding:7px 6px;text-align:left;vertical-align:top}
+  th{font-size:12px;text-transform:uppercase;letter-spacing:.03em;color:var(--mut)}
+  td.n{font-weight:700;color:var(--acc);white-space:nowrap}
+  .leg{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13px;color:var(--mut)}
+  .leg span::before{content:"";display:inline-block;width:14px;height:10px;margin-right:6px;vertical-align:middle;border-radius:2px}
+  .l1::before{background:#d9d4ca;border:1px solid #888}
+  .l2::before{background:#c7c1b5;border:1px solid #888}
+  .l3::before{border:2px dashed var(--cab)}
+  .l4::before{background:var(--acc)}
+  code{font-size:13px}
+</style>
+</head>
+<body>
+<main>
+<h1>Garderoba: co zmierzyć i gdzie</h1>
+<p>Stań w drzwiach i patrz w głąb pokoju. <b>Ściana tylna</b> jest na wprost (przewody wodne), <b>ściana lewa</b> to ta z gzymsem,
+<b>ściana prawa</b> jest naprzeciw niej, a <b>ściana przednia</b> to ta z drzwiami, za Twoimi plecami. <b>Pion</b> wentylacyjny stoi w lewym tylnym rogu.</p>
+<p class="mut">Pomarańczowe numery 1–12 to pomiary z listy. Kody w nawiasach: <code>V…</code> to numer w <code>weryfikacja.md</code>,
+<code>PX</code>, <code>PZ</code>, <code>T</code>, <code>GZ2</code> to kody wymiarów w <code>pomiary.md</code>. Wymiary w mm.</p>
+<div class="leg"><span class="l1">pion</span><span class="l2">gzyms</span><span class="l3">szafki (obrys)</span><span class="l4">pomiar</span></div>
+
+<h2>Rzut z góry</h2>
+<div class="card">
+<svg viewBox="-330 -260 2420 2000" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#c2410c"/></marker>
+  </defs>
+  <!-- ściany: X 0–1825 (lewa→prawa), Z 0–1490 (tylna→przednia, w dół rysunku) -->
+  <rect x="0" y="0" width="1825" height="1490" fill="#fff" stroke="#3a3f45" stroke-width="22"/>
+  <rect x="967" y="1478" width="694" height="24" fill="#fff"/>
+  <path d="M967 1490 A694 694 0 0 0 1661 1490" fill="none" stroke="#9aa1a9" stroke-width="5" stroke-dasharray="14 10" transform="translate(0,0)"/>
+  <text x="1314" y="1600" font-size="52" text-anchor="middle" fill="#5b636e">DRZWI (otwierają się na korytarz)</text>
+  <!-- nazwy ścian -->
+  <text x="912" y="-90" font-size="64" font-weight="700" text-anchor="middle">ŚCIANA TYLNA (na wprost, przewody wodne)</text>
+  <text x="912" y="1720" font-size="64" font-weight="700" text-anchor="middle">ŚCIANA PRZEDNIA (z drzwiami)</text>
+  <text x="-110" y="745" font-size="64" font-weight="700" text-anchor="middle" transform="rotate(-90 -110 745)">ŚCIANA LEWA (gzyms)</text>
+  <text x="1935" y="745" font-size="64" font-weight="700" text-anchor="middle" transform="rotate(90 1935 745)">ŚCIANA PRAWA</text>
+  <!-- pion, gzyms, rura, wylot -->
+  <rect x="0" y="0" width="702" height="562" fill="#d9d4ca" stroke="#777" stroke-width="4"/>
+  <text x="300" y="250" font-size="60" font-weight="700" text-anchor="middle">PION</text>
+  <rect x="0" y="563" width="129" height="927" fill="#c7c1b5" stroke="#777" stroke-width="4"/>
+  <text x="64" y="960" font-size="48" text-anchor="middle" transform="rotate(-90 64 960)">GZYMS</text>
+  <rect x="129" y="563" width="55" height="80" fill="#b08d57"/>
+  <rect x="252" y="562" width="130" height="120" fill="#6b7b8c"/>
+  <text x="400" y="650" font-size="40" fill="#3a3f45">wylot</text>
+  <!-- przewody wodne -->
+  <circle cx="1312" cy="30" r="22" fill="#c0392b"/><circle cx="1212" cy="30" r="22" fill="#2e5fb3"/>
+  <text x="1262" y="110" font-size="42" text-anchor="middle" fill="#3a3f45">przewody R1, R2</text>
+  <!-- gniazdko -->
+  <rect x="170" y="1462" width="80" height="16" fill="#e58a2b"/>
+  <text x="300" y="1450" font-size="40" fill="#3a3f45">gniazdko</text>
+  <!-- szafki -->
+  <rect x="703" y="5" width="1122" height="571" fill="rgba(47,125,109,.07)" stroke="#2f7d6d" stroke-width="6" stroke-dasharray="24 14"/>
+  <text x="1263" y="330" font-size="46" text-anchor="middle" fill="#2f7d6d">szafka na wprost 703–1825</text>
+  <rect x="5" y="576" width="698" height="909" fill="rgba(47,125,109,.07)" stroke="#2f7d6d" stroke-width="6" stroke-dasharray="24 14"/>
+  <text x="430" y="1060" font-size="46" text-anchor="middle" fill="#2f7d6d">szafka po lewej</text>
+  <text x="430" y="1115" font-size="40" text-anchor="middle" fill="#2f7d6d">576–1485 od ściany tylnej</text>
+
+  <g stroke="#c2410c" stroke-width="9" fill="none" marker-start="url(#a)" marker-end="url(#a)">
+    <line x1="712" y1="430" x2="1815" y2="430"/>   <!-- 1 -->
+    <line x1="10" y1="700" x2="692" y2="700"/>     <!-- 2 -->
+    <line x1="760" y1="10" x2="760" y2="552"/>     <!-- 3 -->
+    <line x1="560" y1="572" x2="560" y2="1480"/>   <!-- 4 -->
+    <line x1="10" y1="1300" x2="122" y2="1300"/>   <!-- 7 -->
+  </g>
+  <g font-size="54" font-weight="700" fill="#fff">
+    <circle cx="1460" cy="430" r="44" fill="#c2410c"/><text x="1460" y="449" text-anchor="middle">1</text>
+    <circle cx="560" cy="700" r="44" fill="#c2410c"/><text x="560" y="719" text-anchor="middle">2</text>
+    <circle cx="760" cy="200" r="44" fill="#c2410c"/><text x="760" y="219" text-anchor="middle">3</text>
+    <circle cx="560" cy="880" r="44" fill="#c2410c"/><text x="560" y="899" text-anchor="middle">4</text>
+    <circle cx="200" cy="640" r="40" fill="#c2410c"/><text x="200" y="658" text-anchor="middle" font-size="48">6</text>
+    <circle cx="200" cy="1300" r="40" fill="#c2410c"/><text x="200" y="1318" text-anchor="middle" font-size="48">7</text>
+    <circle cx="1262" cy="190" r="40" fill="#c2410c"/><text x="1262" y="208" text-anchor="middle" font-size="48">10</text>
+    <circle cx="317" cy="760" r="40" fill="#c2410c"/><text x="317" y="778" text-anchor="middle" font-size="44">11</text>
+  </g>
+  <!-- 5: sufit w 4 narożnikach szafki po lewej -->
+  <g fill="#c2410c">
+    <circle cx="40" cy="618" r="20"/><circle cx="670" cy="618" r="20"/><circle cx="40" cy="1443" r="20"/><circle cx="670" cy="1443" r="20"/>
+  </g>
+  <g font-size="40" font-weight="700" fill="#c2410c"><text x="610" y="1420">5</text><text x="80" y="1420">5</text><text x="610" y="665">5</text></g>
+  <!-- 8, 9: wzdłuż ścian tylnej i lewej -->
+  <line x1="705" y1="-40" x2="1825" y2="-40" stroke="#c2410c" stroke-width="6" stroke-dasharray="18 12"/>
+  <line x1="-40" y1="562" x2="-40" y2="1490" stroke="#c2410c" stroke-width="6" stroke-dasharray="18 12"/>
+  <text x="1840" y="-25" font-size="42" font-weight="700" fill="#c2410c">8, 9</text>
+  <text x="-240" y="1530" font-size="42" font-weight="700" fill="#c2410c">8, 9</text>
+</svg>
+</div>
+
+<h2>Widok ściany tylnej (patrzysz od drzwi)</h2>
+<div class="card">
+<svg viewBox="-330 -160 2300 2900" font-family="Helvetica, Arial, sans-serif">
+  <defs><marker id="b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#c2410c"/></marker></defs>
+  <!-- y rysunku = 2586 − wysokość -->
+  <rect x="0" y="0" width="1825" height="2586" fill="#fff" stroke="#3a3f45" stroke-width="18"/>
+  <text x="912" y="-60" font-size="58" font-weight="700" text-anchor="middle">SUFIT</text>
+  <text x="912" y="2700" font-size="58" font-weight="700" text-anchor="middle">PODŁOGA</text>
+  <text x="-100" y="1293" font-size="58" font-weight="700" text-anchor="middle" transform="rotate(-90 -100 1293)">ŚCIANA LEWA</text>
+  <text x="1925" y="1293" font-size="58" font-weight="700" text-anchor="middle" transform="rotate(90 1925 1293)">ŚCIANA PRAWA</text>
+  <rect x="0" y="0" width="702" height="2586" fill="#d9d4ca" stroke="#777" stroke-width="4"/>
+  <text x="350" y="1300" font-size="60" font-weight="700" text-anchor="middle">PION</text>
+  <rect x="252" y="106" width="130" height="130" rx="65" fill="#6b7b8c"/>
+  <text x="317" y="300" font-size="40" text-anchor="middle">wylot</text>
+  <rect x="705" y="4" width="1116" height="2582" fill="rgba(47,125,109,.06)" stroke="#2f7d6d" stroke-width="6" stroke-dasharray="24 14"/>
+  <line x1="705" y1="466" x2="1821" y2="466" stroke="#2f7d6d" stroke-width="4" stroke-dasharray="10 10"/>
+  <text x="1263" y="440" font-size="40" text-anchor="middle" fill="#2f7d6d">podział korpusów 2120</text>
+  <line x1="705" y1="2251" x2="1821" y2="2251" stroke="#2f7d6d" stroke-width="4"/>
+  <text x="1263" y="2230" font-size="40" text-anchor="middle" fill="#2f7d6d">półka 335</text>
+  <rect x="1192" y="2406" width="40" height="180" fill="#2e5fb3"/><rect x="1292" y="2406" width="40" height="180" fill="#c0392b"/>
+  <g stroke="#c2410c" stroke-width="9" fill="none" marker-start="url(#b)" marker-end="url(#b)">
+    <line x1="712" y1="2560" x2="1815" y2="2560"/>
+    <line x1="712" y1="1586" x2="1815" y2="1586"/>
+    <line x1="712" y1="586" x2="1815" y2="586"/>
+    <line x1="712" y1="36" x2="1815" y2="36"/>
+    <line x1="1550" y1="2576" x2="1550" y2="2416"/>
+  </g>
+  <g font-size="40" fill="#c2410c" font-weight="700">
+    <text x="1600" y="2540">1 na 0</text><text x="1500" y="1570">1 na 1000</text><text x="1500" y="570">1 na 2000</text><text x="1500" y="100">1 na 2550</text>
+    <text x="1580" y="2470">10</text>
+  </g>
+  <text x="-20" y="-110" font-size="38" fill="#5b636e">2 i 3: wysięg pionu co 500 mm wysokości</text>
+</svg>
+</div>
+
+<h2>Widok ściany lewej (stoisz w pokoju, patrzysz w lewo)</h2>
+<div class="card">
+<svg viewBox="-330 -160 2150 2900" font-family="Helvetica, Arial, sans-serif">
+  <defs><marker id="c" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#c2410c"/></marker></defs>
+  <!-- poziomo: od ściany przedniej (lewo, Z 1490) do ściany tylnej (prawo, Z 0); x = 1490 − Z -->
+  <rect x="0" y="0" width="1490" height="2586" fill="#fff" stroke="#3a3f45" stroke-width="18"/>
+  <text x="745" y="-60" font-size="58" font-weight="700" text-anchor="middle">SUFIT</text>
+  <text x="745" y="2700" font-size="58" font-weight="700" text-anchor="middle">PODŁOGA</text>
+  <text x="-100" y="1293" font-size="52" font-weight="700" text-anchor="middle" transform="rotate(-90 -100 1293)">ŚCIANA PRZEDNIA (drzwi)</text>
+  <text x="1590" y="1293" font-size="52" font-weight="700" text-anchor="middle" transform="rotate(90 1590 1293)">ŚCIANA TYLNA</text>
+  <rect x="928" y="0" width="562" height="2586" fill="#d9d4ca" stroke="#777" stroke-width="4"/>
+  <text x="1209" y="1300" font-size="60" font-weight="700" text-anchor="middle">PION</text>
+  <rect x="808" y="106" width="120" height="130" fill="#6b7b8c"/>
+  <text x="700" y="90" font-size="40" text-anchor="end">wylot (z boku)</text>
+  <rect x="0" y="2253" width="927" height="333" fill="#c7c1b5" stroke="#777" stroke-width="4"/>
+  <text x="460" y="2440" font-size="48" text-anchor="middle">GZYMS (wys. 333)</text>
+  <rect x="847" y="2451" width="80" height="135" fill="#b08d57"/>
+  <text x="860" y="2420" font-size="36" text-anchor="end">rura</text>
+  <rect x="12" y="4" width="895" height="2582" fill="rgba(47,125,109,.06)" stroke="#2f7d6d" stroke-width="6" stroke-dasharray="24 14"/>
+  <line x1="12" y1="466" x2="907" y2="466" stroke="#2f7d6d" stroke-width="4" stroke-dasharray="10 10"/>
+  <text x="460" y="440" font-size="40" text-anchor="middle" fill="#2f7d6d">podział korpusów 2120</text>
+  <g stroke="#c2410c" stroke-width="9" fill="none" marker-start="url(#c)" marker-end="url(#c)">
+    <line x1="8" y1="2186" x2="920" y2="2186"/>
+    <line x1="8" y1="1586" x2="920" y2="1586"/>
+    <line x1="8" y1="586" x2="920" y2="586"/>
+    <line x1="8" y1="36" x2="920" y2="36"/>
+  </g>
+  <g font-size="40" fill="#c2410c" font-weight="700">
+    <text x="40" y="2170">4 na 400</text><text x="40" y="1570">4 na 1000</text><text x="40" y="570">4 na 2000</text><text x="40" y="100">4 na 2550</text>
+    <text x="760" y="300">11, 12</text><text x="760" y="2370">6</text><text x="300" y="2240">7</text>
+  </g>
+</svg>
+</div>
+
+<h2>Lista pomiarów</h2>
+<table>
+<thead><tr><th>#</th><th>Co i gdzie</th><th>Wymagane</th></tr></thead>
+<tbody>
+<tr><td class="n">1</td><td><b>Bok pionu → ściana prawa</b> (V1), przy ścianie tylnej, na wysokości 0, 1000, 2000 i 2550.</td><td>PX w tym miejscu + wynik ≥ 1826 (np. przy PX 700 min. 1126, przy PX 692 min. 1134). Szafka zajmuje od 703 do 1825 od ściany lewej.</td></tr>
+<tr><td class="n">2</td><td><b>Ściana lewa → bok pionu</b> (PX, V10): jak daleko pion wystaje od ściany lewej. Mierz nad gzymsem, co 500 mm wysokości.</td><td>najwięcej 702</td></tr>
+<tr><td class="n">3</td><td><b>Ściana tylna → przód pionu</b> (PZ, V3): jak daleko pion wystaje od ściany tylnej. Mierz wzdłuż prawego boku pionu, co 500 mm wysokości.</td><td>najlepiej do 565; więcej oznacza odsunięcie szafki od ściany o różnicę</td></tr>
+<tr><td class="n">4</td><td><b>Przód pionu → ściana przednia</b> (T, V11), blisko ściany lewej, na wysokości 400, 1000, 2000 i 2550.</td><td>min. 919</td></tr>
+<tr><td class="n">5</td><td><b>Podłoga → sufit</b> (V12) w 4 narożnikach szafki po lewej (kropki na rzucie: 5 i 705 od ściany lewej, 583 i 1478 od ściany tylnej).</td><td>min. 2586</td></tr>
+<tr><td class="n">6</td><td><b>Rura w gzymsie</b> (przy pionie): ile od przodu pionu i jak szeroka, ile wystaje poza lico gzymsu.</td><td>poza lico gzymsu najwięcej 55</td></tr>
+<tr><td class="n">7</td><td><b>Ściana lewa → lico gzymsu</b> (GZ2, V14), w kilku miejscach wzdłuż gzymsu.</td><td>najwięcej 129</td></tr>
+<tr><td class="n">8</td><td><b>Poziom podłogi</b> (V5, V19): poziomica wzdłuż ściany tylnej (od pionu do ściany prawej) i ściany lewej (od pionu do ściany przedniej).</td><td>różnica najlepiej do 2</td></tr>
+<tr><td class="n">9</td><td><b>Płaskość ścian tylnej i lewej</b> (V16): łata 2 m przyłożona do ściany za szafkami, największa szczelina.</td><td>najwięcej 5</td></tr>
+<tr><td class="n">10</td><td><b>Przewody wodne R1, R2</b> (V7): najwyższy punkt od podłogi.</td><td>najwięcej 330 (półka na 335)</td></tr>
+<tr><td class="n">11</td><td><b>Środek wylotu wentylacyjnego</b> (V18): od ściany lewej i od podłogi.</td><td>ok. 317 i 2415</td></tr>
+<tr><td class="n">12</td><td><b>Przewód wentylacyjny</b>: czy da się go skrócić o ok. 89 mm (żeby kończył się równo z wnętrzem boku szafki).</td><td>tak / nie</td></tr>
+</tbody>
+</table>
+<p class="mut">Szkic orientacyjny: proporcje według modelu, ale nie mierz z rysunku. Szafki: korpusy dolne 0–2120 i górne 2120–2582.</p>
+</main>
+</body>
+</html>
