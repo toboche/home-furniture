@@ -50,13 +50,14 @@ Materiały źródłowe: `zrodla/` (rzut architektoniczny, zdjęcia ogólne).
 - Części górne bez dodatkowych półek: wieniec na 2120 na całej głębokości szafek jest jednocześnie półką części górnej.
 - Szuflady (2026-11-15): Blum MOVENTO do TIP-ON BLUMOTION (otwieranie naciśnięciem, bez uchwytów), skrzynki z płyty 16
   (jak w przedpokoju), fronty CHOWANE między boki szafki, równo z krawędzią korpusu (583 / 705), szczelina 3.
-  SZ1 (na wprost, moduł 1): NL 500, front 516,5 × 202; SZ2 (po lewej): NL 650, front 853 × 202.
-  Moduły na wprost to osobne korpusy (każdy z dwoma bokami).
+  SZ1 (na wprost, moduł 1): NL 500, front 525,5 × 202; SZ2 (po lewej): NL 600 (do 2026-11-18: 650), front 853 × 202.
+  Szafka na wprost to jeden korpus z przegrodą NP (patrz Konstrukcja).
 - Osłona przewodów wodnych (2026-11-15): w obu modułach na wprost pionowa płyta od podłogi do pierwszej półki (335),
   55–73 od ściany tylnej (przewody wystają ok. 50, luz 5); najniższy przedział na buty płytszy o ok. 50, reszta bez zmian.
   Plecy modułów zaczynają się nad tym przedziałem.
 - Uchwyty odrzucone (2026-11-15): uchwyt SZ1 blokowałby otwieraną SZ2, a uchwyt SZ2 bliżej niż 1160 od ściany tylnej – SZ1.
   Otwieranie każdej szuflady przy zamkniętej drugiej sprawdzone (`sprawdz_szuflady.js`): brak kolizji. Okucia: `komponenty.md`.
+  SZ1 i SZ2 otwarte JEDNOCZEŚNIE zderzają się w narożniku (już przy 25 mm wysuwu drugiej): nie otwierać obu naraz (2026-11-18).
 
 ## Konstrukcja (decyzje 2026-11-15)
 - Płyta 18, plecy 18 (solidne, bo na dole nie ma wieńca), złącza: konfirmaty. Montaż: najpierw szafka na wprost, potem po lewej.
@@ -98,7 +99,7 @@ Bez okuć (Blum, drążki, konfirmaty, TIP-ON) i bez dostawy. Dokładna cena: ko
 
 ## Wstępne zamówienie meble.pl (2026-11-15): rozkrój 21629487
 Rozkrój nr 21629487 w centrum.meble.pl (PREMIUM +standard), podgląd do 13.01.2027; NIE dodany do koszyka (przeglądarka niezalogowana).
-Wpisane: 20 pozycji / 28 formatek z płyty 18 mm W1200 ST9 (okleina ABS 0,8 i laserowa 1 mm na frontach, F1/F2 szablon Front lewy/prawy
+Wpisane: 19 pozycji / 28 formatek z płyty 18 mm W1200 ST9 (okleina ABS 0,8 i laserowa 1 mm na frontach, F1/F2 szablon Front lewy/prawy
 z zawiasami BLUM, puszki 22,5 i 100 od końców), nawierty z `wyniki/kalkulator_nawierty.csv`.
 | Pozycja | Kwota brutto |
 |---|---|
@@ -112,6 +113,21 @@ USTALENIA Z KALKULATORA:
 - Nawierty (i wybór szablonu) są niedostępne dla formatek dłuższych niż 2500 mm: NB-1, NB-2, NP, LB1, LB2 zamówione BEZ nawiertów
   (ok. 150 otworów do wywiercenia samodzielnie wg `wyniki/arkusz_nawiertow.pdf`) – do decyzji.
 - Płyty 16 mm do skrzynek szuflad nie ma w W1200 ani W1100 (tylko 18 i 36 mm) – skrzynki nie są w rozkroju, do decyzji.
+
+## Audyt v1 (`audyt/v1.md`), wdrożone 2026-11-18
+- SZ2: prowadnice MOVENTO NL 650 → NL 600 (760H6000S, 40 kg). NL 650 jest tylko w serii 766H, której jednostka TIP-ON
+  BLUMOTION L5 wymaga min. 35 kg; skrzynka SZ2 krótsza: 590 (było 640). Głębokość za frontem przyjęta z zapasem NL + 7:
+  SZ1 542 ≥ 507, SZ2 664 ≥ 607.
+- Prowadniki zawiasów F1, F2: krzyżakowe 0 mm (173L6100), linia wkrętów 56,5 od przodu boku (było 55; katalog Blum:
+  front wpuszczany = cofnięcie o grubość frontu + 1,5). Nawierty pilotowe w NB-1, NB-2 przesunięte o 1,5.
+- Kody okuć Blum w `komponenty.md`; ogranicznik 86° (70T3553) zamiast nieistniejącego 95°; TIP-ON F1 i F2 na NP
+  na różnych wysokościach (≥ 30) albo wkręty 3,5 × 13.
+- Skrzynki szuflad: zostaje konstrukcja „tył i czoło na dnie, dno do końca boków” = wariant Blum bez podcięć (audyt proponował
+  pełny tył z podcięciami 125; do rozmowy). Dopisane otwory Ø6 × 10 pod haki prowadnic w tylnej krawędzi dna.
+- Poprawki dokumentacji: F3 525,5 × 202, rozkrój 21629487 miał 19 pozycji. Rozkrój trzeba zaktualizować (S2 krótsze, piloty NB).
+- Do osobnego PR w `wspolne/` (audyt, sekcja C, NIE w tej zmianie): `otwory.py` natywne fronty wpuszczane (prowadniki 37 + FD + 1,5),
+  `zaslepki.py` warunek brzegowy (≥ przy D − TOL) i zamknięte komory (np. zewnętrzne lica LB1, LB2), `arkusz_pdf.py` opisy
+  nawiertów pilotowych i otworów krawędziowych.
 
 ## Plan pracy
 1. Wymiary pomieszczenia z natury (zdjęcia w paczkach). Do czasu ustalenia wszystkich wymiarów NIE projektujemy szafek.

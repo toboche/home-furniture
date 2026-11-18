@@ -41,7 +41,7 @@ var YP=[GZ1+2];        /* spody półek na buty: 335 (2 mm nad gzymsem), dalej d
 var SZD=208;           /* przedział szuflady */
 var ZO=R4+5;           /* tylne lico osłony przewodów: 55 od ściany */
 var WYC1=GZ2+GR4+5, WYC2=GZ2+5, WYCH=YP[0];   /* wycięcia boków L wokół gzymsu (od ściany lewej): przy pionie (z rurą) do 189, przy ścianie przedniej do 134; wysokość 335 */
-var NL1=500, NL2=650;  /* prowadnice MOVENTO: SZ1, SZ2 */
+var NL1=500, NL2=600;  /* prowadnice MOVENTO 760H (40 kg, NL do 600): SZ1, SZ2 (audyt v1: NL 650 jest tylko w 766H) */
 var HSK=180;           /* wysokość boków skrzynek (≤ przedział − 23 = 185, katalog Blum) */
 (function(){var b2=(HW-P-HK1-P-SZD-(YP[0]+P)-2*P)/2;YP.push(YP[0]+P+b2);YP.push(YP[1]+P+b2);})();   /* 335, 596,5, 858 */
 var YK=HW-P-HK1-P;     /* spód płyty pod kurtkami: 1084 */
@@ -112,7 +112,11 @@ zawiasy(H2.x0+SZCZ,H2.x1-H2.x0-2*SZCZ,false);
 
 /* ---------- szuflady: Blum MOVENTO do TIP-ON BLUMOTION, skrzynki 16, fronty chowane ----------
    Katalog Blum (drewniane skrzynki, bok 16): szer. wewn. = LW − 42, długość = NL − 10, dno wpuszczone 13,
-   prześwit pod skrzynką 16, nad skrzynką min. 7 (wysokość skrzynki ≤ przedział − 23), głębokość wnętrza ≥ NL + 3.
+   prześwit pod skrzynką 16, nad skrzynką min. 7 (wysokość skrzynki ≤ przedział − 23); głębokość za frontem chowanym
+   przyjęta z zapasem ≥ NL + 7 (katalog: NL + X + 3, +3 z regulacją głębokości).
+   Tył skrzynki stoi na dnie, dno sięga do końca boków: wariant Blum „bez podcięć” (option – no notching), zgodny z TIP-ON
+   BLUMOTION (pod dnem wolne 13 na całej szerokości, katalog wymaga podcięć min. 125); otwory Ø6 × 10 pod haki prowadnic
+   w tylnej krawędzi dna, 7 nad spodem dna (20 nad dolną krawędzią boków), 11 od wewnętrznego lica boków.
    Pola sz/rola/ruch/skok: kontrola kolizji przy otwieraniu (garderoba/sprawdz_szuflady.js). */
 function szuflada(kod,fkod,opis,przodX,LW,NL,y0,b){
   /* b: {x0,x1,z0,z1} wnętrze przedziału; przód na x1 (przodX) albo z1 */

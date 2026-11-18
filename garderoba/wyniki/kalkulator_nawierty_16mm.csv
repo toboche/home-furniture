@@ -25,32 +25,32 @@
 ;;;;;;;CZOŁO;Krawędź 3;439.5;;4;35
 ;;;;;;;CZOŁO;Krawędź 2;50.0;;4;35
 ;;;;;;;CZOŁO;Krawędź 2;101.0;;4;35
-5;S2B-1;S2B-1;1;640;180;brak;PLASZCZYZNA;Tył;8.0;79.0;5;przelotowo
+5;S2B-1;S2B-1;1;590;180;brak;PLASZCZYZNA;Tył;8.0;79.0;5;przelotowo
 ;;;;;;;PLASZCZYZNA;Tył;8.0;130.0;5;przelotowo
 ;;;;;;;PLASZCZYZNA;Tył;50.0;21.0;5;przelotowo
-;;;;;;;PLASZCZYZNA;Tył;320.0;21.0;5;przelotowo
-;;;;;;;PLASZCZYZNA;Tył;590.0;21.0;5;przelotowo
-;;;;;;;PLASZCZYZNA;Tył;632.0;79.0;5;przelotowo
-;;;;;;;PLASZCZYZNA;Tył;632.0;130.0;5;przelotowo
-6;S2B-2;S2B-2;1;640;180;brak;PLASZCZYZNA;Przód;8.0;79.0;5;przelotowo
+;;;;;;;PLASZCZYZNA;Tył;295.0;21.0;5;przelotowo
+;;;;;;;PLASZCZYZNA;Tył;540.0;21.0;5;przelotowo
+;;;;;;;PLASZCZYZNA;Tył;582.0;79.0;5;przelotowo
+;;;;;;;PLASZCZYZNA;Tył;582.0;130.0;5;przelotowo
+6;S2B-2;S2B-2;1;590;180;brak;PLASZCZYZNA;Przód;8.0;79.0;5;przelotowo
 ;;;;;;;PLASZCZYZNA;Przód;8.0;130.0;5;przelotowo
 ;;;;;;;PLASZCZYZNA;Przód;50.0;21.0;5;przelotowo
-;;;;;;;PLASZCZYZNA;Przód;320.0;21.0;5;przelotowo
-;;;;;;;PLASZCZYZNA;Przód;590.0;21.0;5;przelotowo
-;;;;;;;PLASZCZYZNA;Przód;632.0;79.0;5;przelotowo
-;;;;;;;PLASZCZYZNA;Przód;632.0;130.0;5;przelotowo
-7;S2D;S2D;1;817;640;brak;PLASZCZYZNA;Tył;50.0;8.0;5;przelotowo
-;;;;;;;PLASZCZYZNA;Tył;50.0;632.0;5;przelotowo
+;;;;;;;PLASZCZYZNA;Przód;295.0;21.0;5;przelotowo
+;;;;;;;PLASZCZYZNA;Przód;540.0;21.0;5;przelotowo
+;;;;;;;PLASZCZYZNA;Przód;582.0;79.0;5;przelotowo
+;;;;;;;PLASZCZYZNA;Przód;582.0;130.0;5;przelotowo
+7;S2D;S2D;1;817;590;brak;PLASZCZYZNA;Tył;50.0;8.0;5;przelotowo
+;;;;;;;PLASZCZYZNA;Tył;50.0;582.0;5;przelotowo
 ;;;;;;;PLASZCZYZNA;Tył;408.5;8.0;5;przelotowo
-;;;;;;;PLASZCZYZNA;Tył;408.5;632.0;5;przelotowo
+;;;;;;;PLASZCZYZNA;Tył;408.5;582.0;5;przelotowo
 ;;;;;;;PLASZCZYZNA;Tył;767.0;8.0;5;przelotowo
-;;;;;;;PLASZCZYZNA;Tył;767.0;632.0;5;przelotowo
+;;;;;;;PLASZCZYZNA;Tył;767.0;582.0;5;przelotowo
 ;;;;;;;CZOŁO;Krawędź 4;50.0;;4;35
-;;;;;;;CZOŁO;Krawędź 4;320.0;;4;35
-;;;;;;;CZOŁO;Krawędź 4;590.0;;4;35
+;;;;;;;CZOŁO;Krawędź 4;295.0;;4;35
+;;;;;;;CZOŁO;Krawędź 4;540.0;;4;35
 ;;;;;;;CZOŁO;Krawędź 2;50.0;;4;35
-;;;;;;;CZOŁO;Krawędź 2;320.0;;4;35
-;;;;;;;CZOŁO;Krawędź 2;590.0;;4;35
+;;;;;;;CZOŁO;Krawędź 2;295.0;;4;35
+;;;;;;;CZOŁO;Krawędź 2;540.0;;4;35
 8;S2C;S2C-1, S2C-2;2;817;151;brak;CZOŁO;Krawędź 4;50.0;;4;35
 ;;;;;;;CZOŁO;Krawędź 3;50.0;;4;35
 ;;;;;;;CZOŁO;Krawędź 4;101.0;;4;35

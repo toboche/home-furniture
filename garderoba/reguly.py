@@ -49,7 +49,7 @@ def punkty(face, edge, zakres, pts):
 # zawiasy frontów chowanych: prowadniki nie leżą w linii 37 od przodu boku (jak przy frontach nakładanych),
 # więc nawierty pilotowe dodaje dodatkowe_otwory
 ZAWIASY_BEZ_PROWADNIKA_W_SCIANCE = {'F1', 'F2'}
-PROWADNIK_OD_PRZODU = 37 + 18   # linia wkrętów prowadnika dla frontu chowanego 18: 37 + grubość frontu (DO POTWIERDZENIA w katalogu Blum)
+PROWADNIK_OD_PRZODU = 37 + 18 + 1.5   # front chowany 18 (70T3750.TL, prowadnik krzyżakowy 0 mm): katalog Blum: cofnięcie o grubość frontu + 1,5 = 56,5
 
 
 def _pilot(P, loc, code, side, pos, d, depth, partner, plate=False):
@@ -90,7 +90,8 @@ BEZ_OKLEINY_PREFIKSY = ('NT', 'NO', 'LT', 'S1', 'S2')
 ZASLEPKI_ZASLANIAJA = ['Pion i gzyms', 'Fronty']
 
 K = 'KONFIRMATY'
-SKR = 'płyta 16; otwory pod zaczepy MOVENTO wg wzornika Blum; w tyle skrzynki otwory Ø6 × 10 pod haki prowadnic'
+SKR = 'płyta 16; otwory pod zaczepy MOVENTO T51.7601 wg wzornika Blum T65.1000.02'
+SKR_D = SKR + '; w TYLNEJ KRAWĘDZI DNA 2 otwory Ø6 × 10 pod haki prowadnic: 7 nad spodem dna, 11 od wewnętrznego lica boków'
 
 # Opisy formatek. Wymiary i ilości liczone z modelu (model.js).
 FORMATKI = [
@@ -127,9 +128,9 @@ FORMATKI = [
       nawierty='BRAK (mocowanie frontu MOVENTO na wkręty)'),
     # skrzynki szuflad (płyta 16)
     F('S1B', 'Szuflada SZ1: boki skrzynki (MOVENTO 500, wysokość 180)', okleina='', nawierty=K, uwagi=SKR),
-    F('S1D', 'Szuflada SZ1: dno skrzynki (13 nad dolną krawędzią boków)', okleina='', nawierty=K, uwagi=SKR),
+    F('S1D', 'Szuflada SZ1: dno skrzynki (13 nad dolną krawędzią boków, do końca boków)', okleina='', nawierty=K, uwagi=SKR_D),
     F('S1C', 'Szuflada SZ1: czoło i tył skrzynki (stoją na dnie)', okleina='', nawierty=K, uwagi=SKR),
-    F('S2B', 'Szuflada SZ2: boki skrzynki (MOVENTO 650, wysokość 180)', okleina='', nawierty=K, uwagi=SKR),
-    F('S2D', 'Szuflada SZ2: dno skrzynki (13 nad dolną krawędzią boków)', okleina='', nawierty=K, uwagi=SKR),
+    F('S2B', 'Szuflada SZ2: boki skrzynki (MOVENTO 600, wysokość 180)', okleina='', nawierty=K, uwagi=SKR),
+    F('S2D', 'Szuflada SZ2: dno skrzynki (13 nad dolną krawędzią boków, do końca boków)', okleina='', nawierty=K, uwagi=SKR_D),
     F('S2C', 'Szuflada SZ2: czoło i tył skrzynki (stoją na dnie)', okleina='', nawierty=K, uwagi=SKR),
 ]
