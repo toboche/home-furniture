@@ -10,29 +10,29 @@ Przydatne: miernik laserowy, poziomica (najlepiej 2 m), taśma malarska, listwa 
 ## 1. Szafka na wprost (N): 1117 × 2583 × 578, przód na 583 od ściany tylnej
 | # | CO MIERZYĆ | GDZIE | WYMAGANE | W PROJEKCIE | WYNIK |
 |---|---|---|---|---|---|
-| V1 | od boku pionu do prawej ściany | wysokość 0, 1000, 2000, 2550 | min. 1123 w każdym punkcie | 1117 + 2 × 3 luzu | |
-| V2 | czy bok pionu i prawa ściana są w pionie (poziomica) | całą wysokość | pionowa szafka wymaga 1123 między NAJDALSZYM punktem pionu a NAJBLIŻSZYM punktem prawej ściany | pion 692–702, ściana ok. 1825–1836 od lewej | |
-| V3 | wysięg pionu od ściany tylnej (PZ) | co 500 mm wysokości | najwięcej 565 (inaczej szafkę odsuwa się od ściany) | korpus 5–583, przód pionu 562–569 | |
+| V1 | od boku pionu do prawej ściany | wysokość 0, 1000, 2000, 2550 | min. 1123 w każdym punkcie | 1117 + 2 × 3 luzu | 2026-11-18: 1138, 1137, 1137, 1137 (wys. 0, 1000, 2000, 2550); z PX: prawa ściana 1829–1832 od lewej – OK (szafka do 1821, luz 8–11) |
+| V2 | czy bok pionu i prawa ściana są w pionie (poziomica) | całą wysokość | pionowa szafka wymaga 1123 między NAJDALSZYM punktem pionu a NAJBLIŻSZYM punktem prawej ściany | pion 692–702, ściana ok. 1825–1836 od lewej | 2026-11-18: z V1 i V10: pion i prawa ściana równoległe w granicach 3 mm – OK |
+| V3 | wysięg pionu od ściany tylnej (PZ) | co 500 mm wysokości | najwięcej 565 (inaczej szafkę odsuwa się od ściany) | korpus 5–583, przód pionu 562–569 | 2026-11-18: 563, 564, 570, 573 – OK: pion nie wchodzi w szafkę na wprost (X do 695), a LB1 stoi od 583 (luz ≥ 10); granica 580 |
 | V4 | wysokość podłoga–sufit | 4 narożniki obszaru szafki (X 705 i 1822, Z 5 i 583) | min. 2586 | szafka 2583 + 3 | 2026-11-18: 2587, 2589, 2589 (każdy pomiar powtórzony 4 razy z tym samym wynikiem) – OK; po zmianie luzu wymagane min. 2586 (2582 + 4) |
-| V5 | poziom podłogi wzdłuż ściany tylnej (różnica wysokości) | od pionu do prawej ściany | najlepiej do 2 mm (szafka stoi bez nóżek) | – | |
+| V5 | poziom podłogi wzdłuż ściany tylnej (różnica wysokości) | od pionu do prawej ściany | najlepiej do 2 mm (szafka stoi bez nóżek) | – | 2026-11-18: różnica do 2 – OK |
 | V6 | przewody wodne po zagięciu: wysięg od ściany tylnej | oba przewody | najwięcej 50 (osłona stoi 55 od ściany) | 50 | 2026-11-18: przewody nie są zagięte w stronę pokoju – OK |
-| V7 | przewody wodne: najwyższy punkt | oba | najwięcej 330 (pod półką na 335) | 180 | |
+| V7 | przewody wodne: najwyższy punkt | oba | najwięcej 330 (pod półką na 335) | 180 | 2026-11-18: ok. 150, zdecydowanie poniżej 300 – OK |
 | V8 | przewody wodne: odległość od prawej ściany | oba | – (sprawdzenie modelu) | 513 i 613 | |
 | V9 | prawa ściana: miejsce na otwarte drzwi F2 | – | F2 dotknie ściany przy ok. 92° otwarcia (ogranicznik) | – | |
 
 ## 2. Szafka po lewej (L): 700 × 2583 × 895, przód na 705 od ściany lewej
 | # | CO MIERZYĆ | GDZIE | WYMAGANE | W PROJEKCIE | WYNIK |
 |---|---|---|---|---|---|
-| V10 | wysięg pionu od ściany lewej (PX) | co 500 mm wysokości | najwięcej 702 | przód szafki 705 | |
-| V11 | od lica pionu do ściany przedniej (T) | przy ścianie lewej, wysokość 400, 1000, 2000, 2550 | min. 916 | szafka 583–1478 (pion najdalej 569) | |
-| V12 | wysokość podłoga–sufit | 4 narożniki obszaru szafki (X 5 i 705, Z 583 i 1478) | min. 2586 | szafka 2583 + 3 | |
+| V10 | wysięg pionu od ściany lewej (PX) | co 500 mm wysokości | najwięcej 702 | przód szafki 705 | 2026-11-18: 692, 692, 695, 695 – OK (luz do szafki 10–13) |
+| V11 | od lica pionu do ściany przedniej (T) | przy ścianie lewej, wysokość 400, 1000, 2000, 2550 | min. 916 | szafka 583–1478 (pion najdalej 569) | 2026-11-18: 928, 928, 926, 925 (wys. 400, 1000, 2000, 2550) – OK; z PZ: ściana przednia przy lewej ścianie 1488–1498 od tylnej, LB2 kończy się na 1478 (luz 10–20) |
+| V12 | wysokość podłoga–sufit | 4 narożniki obszaru szafki (X 5 i 705, Z 583 i 1478) | min. 2586 | szafka 2583 + 3 | 2026-11-18: 2286, 2287, 2289, 2287 – DO POTWIERDZENIA (literówka 2586–2589?); przy 2286 szafka 2582 się nie mieści |
 | V13 | gzyms: wysokość (GZ1) | na całej długości, kilka punktów | najwięcej 333 (półka od 335) | 333 | 2026-11-18: 333 – OK |
-| V14 | gzyms: wysięg od ściany lewej (GZ2) | na całej długości | najwięcej 129 (wycięcie w LB2 do 134) | 129 | |
-| V15 | rura w gzymsie: wysięg od ściany lewej i wysokość | – | najwięcej 189 i 335 (wycięcie w LB1) | 184 i 135 | |
-| V16 | płaskość ściany tylnej i lewej (szczelina pod łatą 2 m) | za szafkami | najwięcej 5 (szafki stoją 5 mm od ściany) | odsunięcie 5 | |
+| V14 | gzyms: wysięg od ściany lewej (GZ2) | na całej długości | najwięcej 129 (wycięcie w LB2 do 134) | 129 | 2026-11-18: 125, 126, 127 – OK |
+| V15 | rura w gzymsie: wysięg od ściany lewej i wysokość | – | najwięcej 189 i 335 (wycięcie w LB1) | 184 i 135 | 2026-11-18: rura wystaje 55 poza lico gzymsu, wysokość bezpieczna – OK; położenie wzdłuż gzymsu nie zmierzone (wycięcie LB1 zostaje 184 × 335) |
+| V16 | płaskość ściany tylnej i lewej (szczelina pod łatą 2 m) | za szafkami | najwięcej 5 (szafki stoją 5 mm od ściany) | odsunięcie 5 | 2026-11-18: przyjęte jako OK (bez pomiaru) |
 | V17 | gniazdko na ścianie przedniej: środek (E1, E2) i ile wystaje puszka | – | środek 210 / 195; wystaje najwyżej 9 (bok LB2 stoi 12 od ściany) | – | 2026-11-18: puszka nie wystaje; otwór w LB2 i tak będzie (dostęp do gniazdka) – OK |
-| V18 | przewód wentylacyjny: środek od ściany lewej i od podłogi | – | 317 / 2415 (otwór w LB1) | 317 / 2415 | |
-| V19 | poziom podłogi wzdłuż ściany lewej | od pionu do ściany przedniej | najlepiej do 2 mm | – | |
+| V18 | przewód wentylacyjny: środek od ściany lewej i od podłogi | – | 317 / 2415 (otwór w LB1) | 317 / 2415 | 2026-11-18: 317 i 2415 – OK; przewód da się skrócić o ok. 81 – OK |
+| V19 | poziom podłogi wzdłuż ściany lewej | od pionu do ściany przedniej | najlepiej do 2 mm | – | 2026-11-18: różnica do 2 – OK |
 
 ## 3. Wniesienie i montaż (najważniejsze ryzyko)
 | # | CO SPRAWDZIĆ | WYMAGANE | WYNIK |
