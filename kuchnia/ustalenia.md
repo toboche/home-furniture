@@ -284,6 +284,14 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
   (pogłębienie fazownikiem), a wkręty 4 × 30 łączące szafki wkręcać z dala od konfirmatów.
 - KU4-06: porządki (wkręty okapu w SOB-1, ostrzeżenie o cięciu Ø160 także przy WSB-1, nieaktualne wpisy).
 
+### 2026-11-19: sufit niżej (pomiar L3)
+- Góra płytek → sufit 1156–1158 (najniżej przy kratce), w modelu M = 1156 (było 1169). Szafki SO i WS 1154 (było 1167),
+  luz pod sufitem 2 w najniższym punkcie (do 4 w pozostałych). F1 1151 (było 1164).
+- Wymiary liczone od sufitu (rura w ściance RU3, kratka KR3, przewód okapu ZA2) przesuwają się razem z sufitem o 13 w dół:
+  oś rury poziomej Y 2564 (było 2577), otwór pod przewód w SOT Y 2180, górny zawias F1 Y 2563,5. Wszystko od dołu
+  (okap, SOD 1786, SOP 2104, zawiasy 1850 i 2210, półki LED) bez zmian. Półki w WS przeliczone (równe przegrody).
+- L1: zapas tylko 2 przy ściance (3206 z 3208). Gdyby ściana wyszła krótsza, zwężamy wąską szafkę (274).
+
 ## Do zmierzenia przy pomiarach weryfikacyjnych w mieszkaniu
 - 2026-11-19: lista ograniczona do sprawdzenia, czy meble fizycznie się mieszczą (decyzja użytkownika):
   L1 narożnik → ścianka nad płytkami ≥ 3207 (plan 3208); L2 to samo pod sufitem i 300 od ściany głównej ≥ 3207;
@@ -343,3 +351,4 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
 - 2026-11-19: przejście wylot → pion na 2 kolanach 15° Ø150.
 - 2026-11-19: audyt v4: prowadniki F1 37 od krawędzi SOB-2, kolana 15° obrócone w poziomie, WSZ na zatrzaskach push-to-open.
 - 2026-11-19: lista pomiarów weryfikacyjnych zredukowana do 5 pozycji (L1–L5: czy meble się mieszczą).
+- 2026-11-19: sufit M 1156 (pomiar), szafki 1154, F1 1151, oś rury 2564.

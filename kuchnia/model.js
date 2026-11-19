@@ -19,7 +19,7 @@ var I=624;             /* szafki górne nad wnęką: głębokość wzdłuż ści
 var J=805;             /* wnęka: narożnik → bok słupka */
 var K=629;             /* głębokość blatu */
 var L=657;             /* głębokość ścianki */
-var M=1169;            /* góra płytek → sufit */
+var M=1156;            /* góra płytek → sufit: najniższy punkt (przy kratce, zmierzone 2026-11-19: 1156–1158; było 1169) */
 var PLW=12;            /* płytki wystają przed ścianę 9–12 (zmierzone 2026-11-18): w modelu 12 */
 var ZA1=356, ZA2=487;  /* przewód okapu: od ścianki, od sufitu */
 var RU=130, RU2=32, RU3=38;      /* rura okapu w ściance: średnica zewnętrzna, od ściany głównej, od sufitu */
