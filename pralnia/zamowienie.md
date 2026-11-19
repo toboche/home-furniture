@@ -8,7 +8,7 @@ Wymiary są POTWIERDZONE pomiarami kontrolnymi w pomieszczeniu (2026-11-18, `wer
 ## 1. Pliki
 | Plik | Zawartość |
 |---|---|
-| `wyniki/formatki.csv` | płyta 18 mm: 43 pozycje / 55 sztuk / 16,61 m² (KOD, NAZWA, DL, SZ, SZT, OKLEINA, NAWIERTY, UWAGI) |
+| `wyniki/formatki.csv` | płyta 18 mm: 44 pozycje / 56 sztuk / 16,67 m² (KOD, NAZWA, DL, SZ, SZT, OKLEINA, NAWIERTY, UWAGI) |
 | `wyniki/kalkulator_nawierty.csv` | nawierty w formacie kalkulatora centrum.meble.pl: 32 typy formatek, 370 wierszy |
 | `wyniki/arkusz_nawiertow.pdf` | rysunki formatek z otworami (32 strony; dla innego dostawcy albo do sprawdzenia) |
 | `komponenty.md` | okucia z kodami Blum, złącza, kątowniki, magnesy, uchwyty |
@@ -42,7 +42,7 @@ Wymiary są POTWIERDZONE pomiarami kontrolnymi w pomieszczeniu (2026-11-18, `wer
 - PP3-2 ma inne nawierty niż PP3-1 i PP3-3 (konfirmaty do LF6): w kalkulatorze osobna formatka.
 - Strona „Tył (B)”: przed wpisaniem wszystkich otworów sprawdzić na podglądzie 2D jednej formatki (np. PB2), czy kalkulator nie odbija osi X dla otworów od tyłu. Jeśli odbija – zatrzymać się i ustalić to z użytkownikiem.
 - F9: sprawdzić na podglądzie, że szablon stawia 3 puszki na 100 / 620 / 1140,5 od dołu (prowadniki w PB2 są pod te pozycje); jeśli szablon ustawia je inaczej – wpisać pozycje ręcznie.
-- Bez nawiertów: KT1A/B/C (zdejmowane, na kątownikach i magnesach), L1P (półka luzem), F6 (front stały).
+- Bez nawiertów: KT1A/B/C (zdejmowane, na kątownikach i magnesach), L1P (półka luzem), L1WD (wieniec zapasowy, luzem), F6 (front stały).
 - Fronty (szablon „Wręgowanie i nawierty” niedostępny przy okleinie bezspoinowej, więc szablony zawiasów): zawiasy Blum INSERTA,
   puszka Ø35, środek 22,5 mm od krawędzi. Środki puszek od dolnej krawędzi frontu:
   | Front | Szablon | Puszki | Środki od dołu |

@@ -285,3 +285,10 @@ Audyt v2 był robiony na stanie sprzed v60 (main @ 7a137c6), więc większość 
 - Formatki: 43 pozycje / 55 sztuk / 16,61 m²; 428 otworów, 58 połączeń, 0 kolizji.
 Nie wdrożone (do decyzji, weryfikacja.md): piloty prowadników Ø3 × 12 → płytkie (audyt PR-18), dolne usztywnienie L1 pod F10, test osi X strony „Tył (B)” w kalkulatorze (przy zamówieniu).
 Sekcja C audytu v2 (otwory.py, kalkulator.py – układ „Tył”, zaokrąglenia; arkusz_pdf.py) – do osobnego PR w `wspolne/`.
+
+## 2026-11-19 – decyzje po audycie v2 (v67)
+- Piloty prowadników zostają Ø3 × 12 (decyzja użytkownika: samowkręty). Uwaga: przy Ø3 wkręt 3,5 ma ok. 0,25 mm gwintu na stronę na długości pilota; przy luzowaniu się prowadnika – wkręt Ø4 × 15.
+- Gzyms na prawej ścianie jest z płyty g-k: podkładka pod PP1 zostaje, ale prawą stronę dodatkowo przykręcić do prawej ściany (pustak): PB2 i PB3 po 2 punkty, kołki do pustaków, dystans 3 mm.
+- Wieniec dolny L1: zamawiamy zapasowy L1WD 573 × 100 (okleina 1DL, bez nawiertów), NIE montowany; w przyszłości na kątownikach przy podłodze, jeśli zawiśnie F10.
+- Kolejność montażu z v66 (prawy dół skręcony na podłodze i wsunięty w całości) potwierdzona.
+- Formatki: 44 pozycje / 56 sztuk / 16,67 m².

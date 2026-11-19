@@ -1,9 +1,9 @@
-# Zestawienie okuć i elementów (pralnia) – stan v66, 2026-11-19
+# Zestawienie okuć i elementów (pralnia) – stan v67, 2026-11-19
 Wersja do zamówienia. Wymiary w mm. Kody wymiarów wielkimi literami.
 Liczby łączników, otworów i zaślepek: `wyniki/podsumowanie.json` (źródło), poniżej przepisane.
 
 ## Płyta
-- Egger W1200 ST9 „Biały porcelanowy" 18 mm, centrum.meble.pl; 43 pozycje / 55 sztuk / 16,61 m² (wyniki/formatki.csv, razem z L1P, RDW2, LF6 i frontami zapasowymi F8, F10).
+- Egger W1200 ST9 „Biały porcelanowy" 18 mm, centrum.meble.pl; 44 pozycje / 56 sztuk / 16,67 m² (wyniki/formatki.csv, razem z L1P, RDW2, LF6, frontami zapasowymi F8, F10 i zapasowym wieńcem L1WD).
 - Okleina: fronty 1,0 mm bezspoinowa (szablony zawiasów), reszta ABS 0,8 mm z nawiertami.
 - KP1: w modelu 184×129, ZAMÓWIĆ 200×129 (minimum kalkulatora) i skrócić samodzielnie o 16 mm od tyłu (krawędź 4, bez otworów); w kalkulatorze X otworów w krawędzi 3: 66 i 150.
 
@@ -36,11 +36,12 @@ Strona zawiasów: F1, F2 po lewej; F3, F4, F5, F7, F8, F9, F10 po prawej.
 
 ## Montaż i mocowanie (rodzaje do potwierdzenia przy zakupie)
 - Łączenie sąsiednich modułów przez boki (L2B-2↔NWB-1, NWB-2↔KB3): złącza skręcane do płyt 36 mm (tuleja + śruba M4/M6) – min. 4 na styk, razem 8 (+zapas). Bez dodatkowych luzów między modułami.
-- Mocowanie do ścian: ok. 12 kpl.: NW (wisi nad maszynami) min. 4 wkręty 6×80 + kołki Ø8 w ścianę betonową (2 u góry, 2 pod NWP-2); L1, L2, prawy dół, prawy pas po 2. Beton: kołek Ø8 + wkręt 6×80; pustaki: kołki do pustaków. Prawą stronę mocować do prawej ściany przez PB2/PB3, nie do pionu (rury).
+- Mocowanie do ścian: ok. 12 kpl.: NW (wisi nad maszynami) min. 4 wkręty 6×80 + kołki Ø8 w ścianę betonową (2 u góry, 2 pod NWP-2); L1, L2, prawy dół, prawy pas po 2. Beton: kołek Ø8 + wkręt 6×80; pustaki: kołki do pustaków. Prawą stronę mocować do prawej ściany przez PB2/PB3 (po 2 punkty, kołki do pustaków), nie do pionu (rury). Gzyms na prawej ścianie jest z g-k – nie przenosi sam obciążenia.
 - Twarde podkładki dystansowe (plastik/sklejka) przy każdym wkręcie ściennym: 5 mm za NWT, 3 mm za L1T/L2T i przy PB2/PB3.
 - Podkładka pod PP1 na gzymsie prawej ściany: ok. 70 × 205 × 23 mm (drewno lub płyta 18 + 5), docinana na miejscu.
 - Podkładki poziomujące 1–3 mm pod L1 i prawy dół: 1 opakowanie.
 - Półka luzem L1P (619×572): 4 podpórki Ø5 (otwory w L1B1/L1B2 wierci użytkownik).
+- Wieniec zapasowy L1WD (573×100, luzem): w przyszłości 4 kątowniki 25×25 + wkręty Ø3,5×15 (nie kupować teraz).
 
 ## Uchwyty
 - GUBBARP 116 biały: 7 szt. (F1, F2, F3, F4, F5, F7, F9) + 2 na zapas (F8, F10); otwory wierci użytkownik.

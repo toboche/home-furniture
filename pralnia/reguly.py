@@ -178,6 +178,8 @@ FORMATKI = [
       okleina='1DL', nawierty='KONFIRMATY'),
     F('L1P', 'L1: półka luzem na całą szerokość L1 (BEZ nawiertów, nie montowana w szafce; ewentualne nawierty robi użytkownik)',
       okleina='1SZ', nawierty='BEZ NAWIERTÓW', uwagi='dodatkowa płyta w zamówieniu; szer. 572 = wnętrze L1 574 minus 1 mm luzu na stronę; głębokość jak L2P; 4 podpórki Ø5 (otwory w L1B1/L1B2 wierci użytkownik)', dl=619, sz=572, szt=1),
+    F('L1WD', 'L1: wieniec dolny ZAPASOWY (luzem, nie montowany; w przyszłości na kątownikach przy podłodze, przód L1)',
+      okleina='1DL', nawierty='BEZ NAWIERTÓW', uwagi='szer. 573 = wnętrze L1 574 minus 1 mm luzu; montaż kiedyś na 4 kątownikach do L1B1/L1B2, gdyby zawisł front F10', dl=573, sz=100, szt=1),
     F('RDW', 'Prawa dolna: wieniec górny, przód',
       okleina='1DL', nawierty='KONFIRMATY'),
     F('RDW2', 'Prawa dolna: wieniec górny, tył (z 385-485, za RDW; spina KB2, PB2 i PT2)',
