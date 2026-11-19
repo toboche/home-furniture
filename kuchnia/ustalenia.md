@@ -292,6 +292,11 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
   (okap, SOD 1786, SOP 2104, zawiasy 1850 i 2210, półki LED) bez zmian. Półki w WS przeliczone (równe przegrody).
 - L1: zapas tylko 2 przy ściance (3206 z 3208). Gdyby ściana wyszła krótsza, zwężamy wąską szafkę (274).
 
+### 2026-11-19: ściana główna 3206 (pomiar L1)
+- A = 3206 (było 3208). Luz 2 przy ściance zachowany: P3 skrócona do 1978 (było 1980), szafki przesunięte o 2 w lewo
+  i dalej na osi płyty (oś 2654 od narożnika, bo E i F mierzone od ścianki): SO X 2378–2930, WS X 2930–3204.
+  Przewód okapu w SOT X 2850; reszta bez zmian.
+
 ## Do zmierzenia przy pomiarach weryfikacyjnych w mieszkaniu
 - 2026-11-19: lista ograniczona do sprawdzenia, czy meble fizycznie się mieszczą (decyzja użytkownika):
   L1 narożnik → ścianka nad płytkami ≥ 3207 (plan 3208); L2 to samo pod sufitem i 300 od ściany głównej ≥ 3207;
@@ -352,3 +357,4 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
 - 2026-11-19: audyt v4: prowadniki F1 37 od krawędzi SOB-2, kolana 15° obrócone w poziomie, WSZ na zatrzaskach push-to-open.
 - 2026-11-19: lista pomiarów weryfikacyjnych zredukowana do 5 pozycji (L1–L5: czy meble się mieszczą).
 - 2026-11-19: sufit M 1156 (pomiar), szafki 1154, F1 1151, oś rury 2564.
+- 2026-11-19: ściana główna 3206 (pomiar), P3 1978, szafki o 2 w lewo.

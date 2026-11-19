@@ -11,7 +11,7 @@ Pomiary z 2026-11-12 i 2026-11-13 (rozmowa z Claude, zdjęcia kuchni).
 ## Pokój i istniejąca kuchnia
 | KOD | WARTOŚĆ | OPIS | WCZEŚNIEJ / UWAGI |
 |---|---|---|---|
-| A | 3208 | długość ściany głównej, narożnik ze ścianą lewą → ścianka | |
+| A | 3206 | długość ściany głównej, narożnik ze ścianą lewą → ścianka (zmierzone 2026-11-19) | 3208 (2026-11-12) |
 | B | 2665 | podłoga → sufit | orientacyjnie, sufit nierówny; do obliczeń C + D + M = 2680 |
 | C | 911 | wysokość górnej powierzchni blatu | |
 | D | 600 | pas płytek: blat → górna krawędź płytek | |

@@ -30,7 +30,7 @@ przed zamówieniem”, od 2026-11-19 tylko L1–L5: czy meble fizycznie się mie
 | Skrzynka WS | redukcja z 34,5–184,5 przed WSZ (z 195), dno 2479 pod rurą 2489, WSW 2647 (od 2026-11-19); WSZ 236 × 165 na dolnej listwie i 2 zatrzaskach push-to-open (audyt v4) | OK, bez maty w skrzynce |
 | Rura ze ścianki | wystaje 115 (do X 3093), redukcja wąskim końcem w nią; WSB-2 z wycięciem U R70 | OK, szafkę nasuwa się na rurę od przodu |
 | Kratka | WS 300 głębokości, kratka od 303 | OK (SO 304 nie sięga do ścianki) |
-| Zasilanie okapu | otwór Ø25 w SOT (X 2852, Y 2180) nad SOP; przewód w dół przez podcięcia 25 × 25 w tylnym prawym narożniku SOP i SOD | POPRAWIONE (SOD 2026-11-18, SOP 2026-11-19) |
+| Zasilanie okapu | otwór Ø25 w SOT (X 2850, Y 2180) nad SOP; przewód w dół przez podcięcia 25 × 25 w tylnym prawym narożniku SOP i SOD | POPRAWIONE (SOD 2026-11-18, SOP 2026-11-19) |
 | Mocowanie SO i WS | po 4 wkręty 6 × 70 przez plecy, SO z WS skręcone; na styku SOB-2 / WSB-1 łby konfirmatów naprzeciw siebie | OK: łby wpuszczone poniżej lica, wkręty łączące z dala od konfirmatów |
 | P1 | 3 pręty od ściany lewej + wkręty przez słupek + łączniki do P3; pręty poza rowkami LED | OK |
 | P3 | 5 prętów, rowek LED z 151,8–170, pręty z 0–80 | OK |
