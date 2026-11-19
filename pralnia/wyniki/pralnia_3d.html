@@ -107,7 +107,7 @@ var ITEMS=[
   {n:'Prawa: góra przed pionem (291 głęb.)',layer:'Szafka prawa',x:1376,y:489,z:367,w:360,h:2169,d:291,c:0x4fa36a,o:0.32},
   {n:'Wentylowany fragment przy otworze (zamysł)',layer:'Szafka prawa',x:1554,y:2348,z:367,w:140,h:140,d:291,c:0xe0a526,o:0.5},
 
-  /* Szafka nad maszynami (zamysł): dolna krawęd 1743 = 1713 + 30, góra J − 3 = 2658, korpus 606 mm w szczelinie 608 mm, własne boki.
+  /* Szafka nad maszynami (zamysł): dolna krawęd 1743 = 1713 + 30, góra J − 3 = 2658, korpus 606 mm, własne boki, styk 0 mm z L2B-2 i KB3 (zamysł historyczny).
      Front równo z resztą na z = 658, pełna głębokość, tył na z = 5. */
   {n:'Szafka nad maszynami (korpus 606 × 915 w szczelinie 608, pełna głęb. 653)',layer:'Szafka nad maszynami',x:615,y:1743,z:5,w:606,h:915,d:653,c:0x8a6bb8,o:0.32},
 
@@ -205,10 +205,10 @@ var ITEMS=[
      Pas (v65, luz pod sufitem 5 mm przy J = 2660): moduły kończą się na 2655; płyty 1743, 2190 i 2637 (przedziały po 429), fronty 454,5, szczelinę 3 mm między frontami obejmuje płyta środkowa. */
   {n:'PP1: Półka przednia (489 do 507)',layer:'Półki',x:1239,y:489,z:367,w:497,h:18,d:273,c:0xe6d7b8},
   {n:'KP1: Półka kolumny, tył (489 do 507)',layer:'Półki',x:1239,y:489,z:183,w:129,h:18,d:184,c:0xe6d7b8},
-  {n:'PP2-1: Półka przednia (922 do 940)',layer:'Półki',x:1239.75,y:922,z:385,w:477.5,h:18,d:255,c:0xe6d7b8},
-  {n:'KP2-1: Półka kolumny, tył (922 do 940)',layer:'Półki',x:1239.75,y:922,z:183,w:128,h:18,d:202,c:0xe6d7b8},
-  {n:'PP2-2: Półka przednia (1355 do 1373)',layer:'Półki',x:1239.75,y:1355,z:385,w:477.5,h:18,d:255,c:0xe6d7b8},
-  {n:'KP2-2: Półka kolumny, tył (1355 do 1373)',layer:'Półki',x:1239.75,y:1355,z:183,w:128,h:18,d:202,c:0xe6d7b8},
+  {n:'PP2-1: Półka przednia (922 do 940)',layer:'Półki',x:1240,y:922,z:385,w:477,h:18,d:255,c:0xe6d7b8},
+  {n:'KP2-1: Półka kolumny, tył (922 do 940)',layer:'Półki',x:1240,y:922,z:183,w:128,h:18,d:202,c:0xe6d7b8},
+  {n:'PP2-2: Półka przednia (1355 do 1373)',layer:'Półki',x:1240,y:1355,z:385,w:477,h:18,d:255,c:0xe6d7b8},
+  {n:'KP2-2: Półka kolumny, tył (1355 do 1373)',layer:'Półki',x:1240,y:1355,z:183,w:128,h:18,d:202,c:0xe6d7b8},
   {n:'PP3-1: Półka przednia (1743 do 1761)',layer:'Półki',x:1239,y:1743,z:385,w:479,h:18,d:255,c:0xe6d7b8},
   {n:'KP3-1: Półka kolumny, tył (1743 do 1761)',layer:'Półki',x:1239,y:1743,z:183,w:129,h:18,d:202,c:0xe6d7b8},
   {n:'PP3-2: Półka przednia (2190 do 2208)',layer:'Półki',x:1239,y:2190,z:385,w:479,h:18,d:255,c:0xe6d7b8},
@@ -224,6 +224,8 @@ var ITEMS=[
   /* Wieńce górne (usztywnienie dolnych szafek): pas 100 mm przy froncie, pod samym pasem (y 1725 do 1743), tył do z 640 (front od z 640). */
   {n:'L1W: L1: wieniec górny, przód (1725 do 1743)',layer:'Półki',x:23,y:1725,z:540,w:574,h:18,d:100,c:0xe6d7b8},
   {n:'LF6: Listwa oporowa za F6, dół (na PP3-2, przyklejona i przykręcona do tyłu F6)',layer:'Półki',x:1505,y:2208,z:622,w:200,h:60,d:18,c:0xe6d7b8},
+  /* Podkładka (v66, audyt v2 PR-11): PP1 wystaje 73 mm za PB1 nad gzymsem prawej ściany i stoi na nim PB2; szczelinę 23 mm między gzymsem (466) a PP1 (489) wypełnia podkładka docinana na miejscu, wsuwana od frontu po ustawieniu modułu. */
+  {n:'Podkładka pod PP1 na gzymsie prawej ściany (23 mm, docinana na miejscu)',layer:'Podkładki',x:1666,y:466,z:435,w:70,h:23,d:205,c:0xb08d57},
   {n:'RDW: Prawa dolna: wieniec górny, przód (1725 do 1743)',layer:'Półki',x:1239,y:1725,z:540,w:479,h:18,d:100,c:0xe6d7b8},
   /* RDW2 (audyt v1, 2026-11-18): wieniec górny tylny, spina górę tylnej części KB2 z PB2 i PT2 (wcześniej KB2 z tyłu u góry nie był niczym usztywniony: KP2 na podpórkach, KT1 zdejmowane). */
   {n:'RDW2: Prawa dolna: wieniec górny, tył (1725 do 1743)',layer:'Półki',x:1239,y:1725,z:385,w:479,h:18,d:100,c:0xe6d7b8},
@@ -235,7 +237,7 @@ var ITEMS=[
   {n:'L1B1: L1: bok prawy (przy maszynach)',layer:'Ścianki boczne',x:597,y:0,z:3,w:18,h:1743,d:637,c:0xcdbb95},
   {n:'L2B-1: L2: bok lewy (pas)',layer:'Ścianki boczne',x:5,y:1743,z:3,w:18,h:912,d:637,c:0xcdbb95},
   {n:'L2B-2: L2: bok prawy (pas)',layer:'Ścianki boczne',x:597,y:1743,z:3,w:18,h:912,d:637,c:0xcdbb95},
-  /* Moduł nad maszynami ma własne boki: korpus 606 mm (x 614 do 1220) w szczelinie 608 mm między bokami sąsiadów, wnętrze 570 mm. */
+  /* Moduł nad maszynami (NW) ma własne boki: korpus 606 mm (x 615 do 1221), styk 0 mm z L2B-2 i KB3 (skręcany z nimi), wnętrze 570 mm; wisi na ścianie i sąsiednich modułach. */
   {n:'NWB-1: Wnęka: bok lewy (pas)',layer:'Ścianki boczne',x:615,y:1743,z:5,w:18,h:912,d:635,c:0xcdbb95},
   {n:'NWB-2: Wnęka: bok prawy (pas)',layer:'Ścianki boczne',x:1203,y:1743,z:5,w:18,h:912,d:635,c:0xcdbb95},
   {n:'KB1: Kolumna: bok lewy, dół',layer:'Ścianki boczne',x:1221,y:0,z:440,w:18,h:489,d:200,c:0xcdbb95},
@@ -285,7 +287,7 @@ var ITEMS=[
   {n:'PT3: Prawa: tył, pas (1743-2655), otwór Ø127 pod kanał wiercony samodzielnie: środek 253 od lewej, 237 od góry krawędzi',layer:'Ścianki tylne',x:1371,y:1743,z:367,w:347,h:912,d:18,c:0x9c8b6e,o:0.9},
   /* Wzmocnienie lewej dolnej szafki: lewy bok 18 mm z wycięciem 100 × 100 pod gniazdko GN1 (z 192 do 292, y 868 do 968),
      płyta dolna 18 mm (listwy tylne zbędne, rolę ramy przejął tył 18 mm). Odkurzacz bezprzewodowy po złożeniu 700 mm, góra 1600. */
-  {n:'L1B2: L1: bok lewy (jedna formatka; wycięcie pod gniazdko GN1 100×100 robi użytkownik: y 868-968, z 192-292)',layer:'Ścianki boczne',x:5,y:0,z:3,w:18,h:1743,d:637,c:0xcdbb95},
+  {n:'L1B2: L1: bok lewy (jedna formatka; wycięcie pod gniazdko GN1 100×100 robi użytkownik: od dołu 868-968, od tylnej krawędzi formatki 189-289 (pokój z 192-292))',layer:'Ścianki boczne',x:5,y:0,z:3,w:18,h:1743,d:637,c:0xcdbb95},
   /* L1B1, L1B2 (v65): głębokość 637 (było 655), jak boki L2 – z przodu miejsce na front F10 (z 640–658). Moduły dolne stoją bezpośrednio na podłodze: bez stopek, bez płyty dolnej (y = 0). */
 ];
 

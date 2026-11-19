@@ -27,9 +27,9 @@ Wspólny podział poziomy: 1743. Wspólna płaszczyzna frontów: z=658 (fronty o
 - Fronty 18 mm, szczelina 3 mm. Zawiasy z cichym domykiem 110°, po 2 na front. Puszki Ø35, 22,5 mm od krawędzi, 100 mm od końców.
 
 ## Moduły
-- L1 (lewy dolny, 0-1743): korpus głębokości 655 (z 3-658), wnętrze 637 x 574. BEZ przegrody. Zawiasy z lewej.
+- L1 (lewy dolny, 0-1743): korpus głębokości 655 (z 3-658), wnętrze 637 x 574. BEZ przegrody. Zawiasy z lewej. [NIEAKTUALNE od v65: boki 637 (z 3-640), front F10 na zapas z zawiasami po PRAWEJ]
 - L2 (lewy pas, 1743-2652): korpus 637 + front 18, wnętrze 619. Półki stałe, dwa rzędy frontów (h 453).
-- Moduł nad maszynami: własne boki, 606 mm w wnęce 608 mm, wsuwany od frontu, montowany jako OSTATNI (wariant B, luz 2 mm), zawiasy z lewej.
+- Moduł nad maszynami: własne boki, 606 mm w wnęce 608 mm, wsuwany od frontu, montowany jako OSTATNI (wariant B, luz 2 mm), zawiasy z lewej. [NIEAKTUALNE od v51: styk 0 mm z L2B-2 i KB3, zawiasy F3/F4 po prawej; kolejność montażu: 2026-11-19]
 - Moduł prawy: kolumna nad szczeliną (x 1221-1371) + część przed cokołem (x 1371-1736), jedna konstrukcja 515 mm, bez przegrody środkowej, półki w kształcie L, zawiasy z prawej. Kolejność: zaczynamy od prawych dolnych szafek (możliwość odsunięcia pralki).
 - Prawy dół: 4 fronty (h 493,5 / 409 / 409 / 416,5), najniższy szerokości 439 przez gzyms. Prawy pas: 6 frontów łącznie, każdy zamyka jedną półkę.
 - Kolejność montażu: moduły dolne wsuwane/przechylane, pasy wsuwane poziomo od frontu (wysokość pokoju 2661 vs 2652+).
@@ -115,7 +115,7 @@ Koszyk 21386928 (2 970,11 zł) odpowiada jeszcze starej wersji (F9, F10, F11 oso
 - F3 i F4 (nad maszynami): zawiasy po PRAWEJ (x puszki 1179,5), otwieranie w prawo.
 - Uchwyty IKEA GUBBARP biały 116 mm (rozstaw 96, szer. 21, wys. 27) na F1-F5, F7-F9, warstwa "Uchwyty". Otwory wycina użytkownik, w nawiertach ich nie ma. Pozycje robocze: pionowo, 30 mm od wolnej krawędzi, rzędy górne 50 mm od dolnej krawędzi, rzędy dolne 50 mm od górnej, F9 środek na ok. 1050 mm od podłogi.
 - Półki prawe PP2-1/PP2-2 i kolumnowe KP2-1/KP2-2: światło 415 mm między półkami: PP1 górą 507, PP2-1 922-940, PP2-2 1355-1373, światło do pasa 1743 = 370. Pary KP+PP łączone w jedną półkę L (kołki Ø8 x 20 w czołach, 2 szt. na parę, klej) i przesuwane razem (dotyczy też KP1+PP1).
-- PP2-x i KP2-x na wciskanych podpórkach Ø5 (bez konfirmatów): w KB2 (lewy koniec KP) i PB2 (prawy koniec PP) po 2 kolumny otworów Ø5 x 10 mm nieprzelotowych, szereg 5 otworów co 32 mm wokół każdej półki (zakres +/- 64 mm). KB2 kolumny z = 233 i 590, PB2 z = 417 i 590 (od tyłu).
+- PP2-x i KP2-x na wciskanych podpórkach Ø5 (bez konfirmatów): w KB2 (lewy koniec KP) i PB2 (prawy koniec PP) po 2 kolumny [od v58: KB2 4 kolumny – z 213, 355, 417, 590; PB2 2 kolumny] otworów Ø5 x 10 mm nieprzelotowych, szereg 5 otworów co 32 mm wokół każdej półki (zakres +/- 64 mm). KB2 kolumny z = 233 i 590, PB2 z = 417 i 590 (od tyłu).
 - PP1+KP1 (poziom 489) zostają na konfirmatach: spoczywają na KB1/PB1, a na nich stoją KB2/PB2. Do potwierdzenia, czy też mają być na podpórkach.
 - Nawierty po zmianie: 316 otworów, 50 połączeń, 0 kolizji; kalkulator_nawierty.csv 29 typów / 262 wiersze; arkusz_nawiertow.pdf 29 stron; formatki.csv 39 pozycji.
 
@@ -176,7 +176,7 @@ Lista do weryfikacji: weryfikacja.md
 Z katalogu Blum 2022/2023 (str. 94-95, "Zawias do drzwi równoległych, wpuszczanych", CLIP top BLUMOTION INSERTA 79B9590, kąt otwarcia 95°): zawias montuje się do ramy równoległej do frontu, czyli prowadnik idzie na tylną ściankę sąsiedniego frontu F6; poprzeczna listwa nie jest potrzebna.
 - Szczelina między frontami F = 8 mm - TB (TB = odległość puszki od krawędzi frontu, 3-7 mm). U nas F = 3 mm, czyli TB = 5 mm: środek puszki 22,5 mm od krawędzi F5 (jak pozostałe zawiasy). Minimalna szczelina dla frontu 18 mm: 0,3 mm.
 - Puszka INSERTA: Ø35 x min. 13, plus 2 otwory Ø8 (rozstaw 45 mm, 9,5 mm od środka puszki), wciskane bez narzędzi. W meble.pl wybrać INSERTA (potwierdzone przez użytkownika).
-- Prowadnik na tyle F6: linia wkrętów 21,5 mm od lewej krawędzi F6 (X 1521,5), 2 wkręty co 32 mm wokół środka każdego zawiasu (Y 2299 i 2552), wkręty do płyty wiórowej Ø3,5 (15 lub 17 mm wg katalogu; w F6 18 mm uważać na przebicie licówki, maks. 12 mm w płytę). Bez nawiertów w planie. Prowadnik podwyższony o 3 mm daje wewnętrzne lica F5 i F6 w jednej płaszczyźnie (do potwierdzenia w katalogu prowadników, str. 144).
+- Prowadnik na tyle F6: linia wkrętów 21,5 mm od lewej krawędzi F6 (X 1521,5), 2 wkręty co 32 mm wokół środka każdego zawiasu (Y 2299 i 2552 [od v65: 2300,5 i 2555]), wkręty do płyty wiórowej Ø3,5 (15 lub 17 mm wg katalogu; w F6 18 mm uważać na przebicie licówki, maks. 12 mm w płytę). Bez nawiertów w planie. Prowadnik podwyższony o 3 mm daje wewnętrzne lica F5 i F6 w jednej płaszczyźnie (do potwierdzenia w katalogu prowadników, str. 144).
 - Regulacja: wysokość +/- 3, szerokość +/- 2,5, głębokość +/- 1 mm.
 - LF5 usunięta z modelu i z formatek (39 pozycji, 51 sztuk, 15,2 m2). Dodane 2 kątowniki 25x25 pod półką górną F6 (X 1540 i 1680, Y 2609-2634), żeby F6 utrzymała obciążenie od drzwi F5; razem 4+2 kątowniki.
 - DO SPRAWDZENIA: nośność mocowania F6 (cztery kątowniki dołem i na prawym boku plus dwa górne), dobór prowadnika (str. 144 katalogu).
@@ -208,7 +208,7 @@ Zastosowane:
 - GN1: nawiert środka L1B2 z 242 (było 245).
 - Wieńce L1W, RDW: 2 konfirmaty na koniec (25 i 75 od krawędzi) zamiast 1.
 - Łby konfirmatów w wizualizacji zlicowane z licem; zaślepki tylko na 19 widocznych łbach.
-- Montaż: L1/L2 jako ostatnie (5 mm luzu od lewej ściany). Gniazdo GN3/GN4 jest natynkowe (wysunięcie 15 mm, x 0–15, y 179–259, z 665–745) i koliduje z L1B2 (x 5–23) przy wsuwaniu od przodu: zdjąć gniazdo na czas montażu albo złożyć L1 na miejscu zaczynając od lewej ściany.
+- Montaż: L1/L2 jako ostatnie (5 mm luzu od lewej ściany). Gniazdo GN3/GN4 jest natynkowe (wysunięcie 15 mm, x 0–15, y 179–259, z 665–745) i koliduje z L1B2 (x 5–23) przy wsuwaniu od przodu: zdjąć gniazdo na czas montażu [wariant „złożyć L1 na miejscu od lewej ściany” WYKREŚLONY 2026-11-19: przy 5 mm od ściany nie da się wkręcić konfirmatów w L1B2].
 Nie zastosowane (czekają na pomiary lub decyzję): patrz audyt_niezaaplikowane.md.
 
 ## 2026-11-11 – przebudowa repozytorium pod kolejne pomieszczenia (v59, BEZ zmian wymiarów)
@@ -269,3 +269,19 @@ Sekcja C (zmiany w `wspolne/pipeline/`: kolizje otworów lico A–lico B i kraw�
 - F10: front lewej dolnej szafki L1 (607 × 1737, y 3–1740), na zapas: 4 puszki (środki 103, 615, 1128, 1640 od dołu), zawiasy po PRAWEJ (przy L1B1; po lewej przeszkadzałoby gniazdko GN3/GN4 wystające 15 mm przed szafkę), w L1B1 BEZ nawiertów pod prowadniki (decyzja użytkownika). Boki L1B1/L1B2 skrócone do głębokości 637 (było 655, do z 640), żeby front zmieścił się przed nimi – jak boki L2.
 - Wyniki v65: formatki 43 pozycje / 55 sztuk / 16,61 m²; 428 otworów, 58 połączeń, 0 kolizji; 154 konfirmaty, 21 puszek, 30 nawiertów pilotowych prowadników, 26 widocznych łbów.
 - Zamówienie: opis dla rozmowy o zamówieniu w `zamowienie.md`.
+
+## 2026-11-19 – audyt v2 (`audyt/v2.md`), Sekcja A: wdrożone (v66)
+Audyt v2 był robiony na stanie sprzed v60 (main @ 7a137c6), więc większość jego Sekcji A była już wdrożona w v60–v65 (ograniczniki 70T3553, RDW2, KT1 na podporach i BEZ NAWIERTÓW, LF6 pod F6, wkręty 12 mm, ZB ukryte, UTRUSTA usunięta, kuweta we wnęce, pion U = 1371, gzyms 467, kratka Ø127). Nowe i wdrożone teraz:
+- PP2 477 (x 1240–1717, było 477,5) i KP2 128 od x 1240: bez połówek mm, kołki KP2/PP2 na równych współrzędnych (30 / 100 i 377 / 447), luz do KB2 i PB2 po 1 mm.
+- L1P 619 × 572 (było 574 = wnętrze L1 bez luzu), 4 podpórki Ø5.
+- Podkładka 23 mm pod PP1 na gzymsie prawej ściany (x 1666–1736, z 435–640): PP1 wystaje 73 mm za PB1, a stoi na tym PB2 (z ciężarem F7, F9 i półek). Docinana na miejscu, wsuwana od frontu po ustawieniu modułu (gzyms wystaje przed szafki).
+- Moduł NW (ok. 38 kg pusty, wisi nad maszynami): do ściany betonowej min. 4 wkręty 6×80 z kołkami Ø8 (2 u góry, 2 pod NWP-2) z twardymi podkładkami dystansowymi 5 mm za NWT; z L2B-2 i KB3 skręcony po min. 4 łączniki na stronę.
+- Kolejność montażu: prawy dół (RD, skręcony na podłodze i wsunięty w całości – konfirmaty PP1 → PB2/PT2 od spodu) → prawy pas (RB) → NW → L1 (po zdjęciu obudowy GN3/GN4) → L2. NW nie jest montowany jako ostatni.
+- Mocowanie prawej strony: do prawej ściany przez PB2/PB3 (dystans 3 mm), NIE do pionu (rury w obudowie).
+- KP2-1, KP2-2 (z PP2): półki zostają na poziomach 922 i 1355; przełożenie o 32 mm w górę lub w dół zablokuje wyjmowanie KT1A/KT1B/KT1C.
+- GN1: wycięcie w L1B2 opisane we współrzędnych formatki – od tylnej krawędzi 189–289 (pokój z 192–292), środek 918 / 239.
+- Kątowniki pod magnesy KT1: stal ocynkowana (ferromagnetyczna), nie nierdzewna. Uchwyt do wysuwania KT1A/B/C: mała gałka/taśma na przedniej ściance płyty.
+- Prowadnik 173H7130 w F6 (x 1500–1545) a kratka (króciec Ø123 od x 1562,5): bez kolizji.
+- Formatki: 43 pozycje / 55 sztuk / 16,61 m²; 428 otworów, 58 połączeń, 0 kolizji.
+Nie wdrożone (do decyzji, weryfikacja.md): piloty prowadników Ø3 × 12 → płytkie (audyt PR-18), dolne usztywnienie L1 pod F10, test osi X strony „Tył (B)” w kalkulatorze (przy zamówieniu).
+Sekcja C audytu v2 (otwory.py, kalkulator.py – układ „Tył”, zaokrąglenia; arkusz_pdf.py) – do osobnego PR w `wspolne/`.

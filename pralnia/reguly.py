@@ -84,7 +84,7 @@ def dodatkowe_otwory(P, parts, loc):
         p=P[code]; pos={'y':y,other_axis:val}
         p['holes'].append(dict(kind='FACE',side=side,u=loc(p,p['u'],pos[p['u']]),v=loc(p,p['v'],pos[p['v']]),d=PILOT_D,depth=PILOT_DEPTH,partner='środek otworu wycinanego samodzielnie',axis_n='-',pin=False,pilot=True))
     pilot('PT3','A',2418,'x',1624)   # Ø127 pod kanał, od strony wnętrza (+z); środek otworu w ścianie wg pomiaru 2026-11-18
-    pilot('L1B2','A',918,'z',242)    # wycięcie 100 x 100 pod gniazdko GN1 (y 868-968, z 192-292 od tyłu), od wnętrza (+x)
+    pilot('L1B2','A',918,'z',242)    # wycięcie 100 x 100 pod gniazdko GN1 (y 868-968; pokój z 192-292 = od tylnej krawędzi formatki 189-289), od wnętrza (+x)
 
 
 # zawiasy, które nie mają prowadnika w ściance szafki
@@ -117,7 +117,7 @@ PDF_OPIS = ("Każda strona = jeden typ formatki. Wymiary w mm, liczone od lewej 
 FORMATKI = [
     F('L1B1', 'L1: bok prawy (przy maszynach)',
       okleina='1DL', nawierty='KONFIRMATY'),
-    F('L1B2', 'L1: bok lewy (całość; wycięcie pod GN1 100x100 robi użytkownik: od dołu 868-968, od tyłu 192-292)',
+    F('L1B2', 'L1: bok lewy (całość; wycięcie pod GN1 100x100 robi użytkownik: od dołu 868-968, od tylnej krawędzi formatki 189-289, środek 918 / 239)',
       okleina='1DL', nawierty='KONFIRMATY + NAWIERT ŚRODKA Ø5 x 5', uwagi='pod gniazdko GN1 wycina użytkownik'),
     F('L1T', 'L1: tył',
       okleina='', nawierty='KONFIRMATY'),
@@ -168,7 +168,7 @@ FORMATKI = [
       okleina='', nawierty='KONFIRMATY + KOŁKI Ø8 W CZOLE (do PP3)'),
     F('PP1', 'Półka przednia, poziom 489 (x 1239-1736, z 367-640; stoi na niej PT2/PB2)',
       okleina='1DL', nawierty='KONFIRMATY + KOŁKI Ø8 W CZOLE (do KP1)'),
-    F('PP2', 'Półka przednia, poziomy 922 i 1355 (x 1239,75-1717,25, z 385-640; na wciskanych podpórkach; kołki Ø8 do KP2)',
+    F('PP2', 'Półka przednia, poziomy 922 i 1355 (x 1240-1717, z 385-640; na wciskanych podpórkach; kołki Ø8 do KP2)',
       okleina='1DL', nawierty='KOŁKI Ø8 W CZOLE (do KP2); BEZ KONFIRMATÓW'),
     F('PP3', 'Półka przednia, pas: 1743, 2190, 2637 (x 1239-1718, z 385-640; kołki Ø8 do KP3)',
       okleina='1DL', nawierty='KONFIRMATY + KOŁKI Ø8 W CZOLE (do KP3)'),
@@ -177,7 +177,7 @@ FORMATKI = [
     F('L1W', 'L1: wieniec górny, przód',
       okleina='1DL', nawierty='KONFIRMATY'),
     F('L1P', 'L1: półka luzem na całą szerokość L1 (BEZ nawiertów, nie montowana w szafce; ewentualne nawierty robi użytkownik)',
-      okleina='1SZ', nawierty='BEZ NAWIERTÓW', uwagi='dodatkowa płyta w zamówieniu; półka ma być na całej szerokości L1 (wewnętrzna szer. 574), głębokość jak L2P', dl=619, sz=574, szt=1),
+      okleina='1SZ', nawierty='BEZ NAWIERTÓW', uwagi='dodatkowa płyta w zamówieniu; szer. 572 = wnętrze L1 574 minus 1 mm luzu na stronę; głębokość jak L2P; 4 podpórki Ø5 (otwory w L1B1/L1B2 wierci użytkownik)', dl=619, sz=572, szt=1),
     F('RDW', 'Prawa dolna: wieniec górny, przód',
       okleina='1DL', nawierty='KONFIRMATY'),
     F('RDW2', 'Prawa dolna: wieniec górny, tył (z 385-485, za RDW; spina KB2, PB2 i PT2)',

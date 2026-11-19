@@ -1,4 +1,4 @@
-# Pralnia: lista do weryfikacji przed zamówieniem (stan 2026-11-18, model v65)
+# Pralnia: lista do weryfikacji przed zamówieniem (stan 2026-11-19, model v66)
 
 Źródła: model 3D (`index.html` albo `wyniki/pralnia_3d.html`), `wyniki/formatki.csv` (43 pozycje, 55 sztuk, 16,61 m²), `wyniki/kalkulator_nawierty.csv` (32 typy, 370 wierszy), `wyniki/arkusz_nawiertow.pdf` (32 strony), `wyniki/podsumowanie.json`, `pomiary.md`, `ustalenia.md`, `komponenty.md`, audyt `audyt/v1.md`.
 Kontrola automatyczna: 428 otworów, 58 połączeń, 0 kolizji otworów; 154 konfirmaty, 14 kołków, 12 podpórek, 21 puszek. Kolizje brył: tylko zamierzone (puszki w frontach, magnesy w gniazdach, gniazdko GN1 w wycięciu).
@@ -12,7 +12,9 @@ Kontrola automatyczna: 428 otworów, 58 połączeń, 0 kolizji otworów; 154 kon
 1. F6: zaprojektowane v62 (LF6 + kątownik 40×40, wkręty 12 mm). Przy montażu sprawdzić, czy prowadniki 173H7130 mieszczą się w strefie x 1500–1545 (wymiar przyjęty, nie z karty Blum).
 2. Pion: zmierzone U = 1371–1373 (v63: tył kolumny zwężony, luz 3–5 mm). Opcjonalnie: Q (gzyms przy maszynach) – 118 nie zgadza się z U.
 3. Montaż prawego dołu: skręcony na podłodze i wsunięty w całości (konfirmaty PP1 → PB2/PT2 od spodu). Prześwit nad gzymsem 22 mm.
-4. Odkurzacz bezprzewodowy w L1: mocowanie (bez UTRUSTA). Wysokość i podparcie L1P.
+4. Odkurzacz bezprzewodowy w L1: mocowanie (bez UTRUSTA). Wysokość L1P (619 × 572, na 4 podpórkach).
+5. Audyt v2 – do decyzji: piloty prowadników Ø3 × 12 czy płytkie Ø3 × 3 (lepsze trzymanie wkrętu 3,5); dolne usztywnienie L1 (wieniec dolny), jeśli zawiśnie F10; nośność gzymsu prawej ściany pod podkładką PP1.
+6. Przy zamówieniu: oś X strony „Tył (B)” w kalkulatorze, pozycje 3 puszek F9 (zamowienie.md).
 
 ## Pomiary kontrolne (czy zabudowa się zmieści) – lista z 2026-11-18, WYKONANE 2026-11-18: wszystkie OK
 Mierzyć w mm, w kilku miejscach; liczy się najgorszy wynik (najmniejsza szerokość, najniższy sufit, najbardziej wystający punkt).
@@ -48,4 +50,5 @@ Transport: największe płyty L1B1/L1B2 1743 × 655 – drzwi 805 × 2016 OK; sp
 
 ## Do osobnego PR w `wspolne/` (audyt v1, Sekcja C)
 - `otwory.py`: kontrola kolizji otworów lico A – lico B (suma głębokości > grubości lub przelot) i krawędź–krawędź prostopadle, promień wycięć wokół pilotów Ø5×5.
+- `kalkulator.py`: udokumentować/sprawdzić układ współrzędnych strony „Tył” względem kalkulatora meble.pl; spójne zaokrąglanie połówkowych współrzędnych par kołków.
 - `arkusz_pdf.py`: opis średnic/głębokości wg rzeczywistych otworów (nie stałe „Ø4, 35 mm"), piloty Ø3×12 i Ø5×5 nie jako „pod podpórki".

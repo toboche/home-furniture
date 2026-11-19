@@ -1,4 +1,4 @@
-# Pralnia: przekazanie do zamówienia (stan 2026-11-18, model v65)
+# Pralnia: przekazanie do zamówienia (stan 2026-11-19, model v66)
 
 Dla rozmowy, w której składane jest zamówienie (pralnia razem z innym pomieszczeniem). Wymiary w mm, kody tylko DUŻYMI LITERAMI.
 Źródło prawdy: repozytorium na `main` (`CLAUDE.md`). Dokumenty w projekcie Claude mogą być starymi kopiami.
@@ -35,10 +35,12 @@ Wymiary są POTWIERDZONE pomiarami kontrolnymi w pomieszczeniu (2026-11-18, `wer
   - Ø5 × 10 pod podpórki półek (KB2, PB2).
   - Ø3 × 12 piloty pod prowadniki zawiasów (30 szt.). Jeśli kalkulator nie przyjmie Ø3, dać Ø4.
   - Ø5 × 5 nawierty środków (PT3, L1B2).
-- Wymiary z połówką mm (PP2 477,5; F5 274,5; F6 234,5; F8 493,5; F9 1240,5; fronty pasa 454,5): kalkulator przyjął takie wartości przy wycenie 2026-11-15.
+- Wymiary z połówką mm (F5 274,5; F6 234,5; F8 493,5; F9 1240,5; fronty pasa 454,5): kalkulator przyjął takie wartości przy wycenie 2026-11-15.
 - KP1: kalkulator nie przyjmuje formatek < 200 mm. Wpisać 200 × 129 (zamiast 184 × 129) i X otworów w krawędzi 3 powiększyć o 16
   (66 i 150); naddatek 16 mm po stronie krawędzi 4 (tył, bez otworów) użytkownik odcina sam.
 - PP3-2 ma inne nawierty niż PP3-1 i PP3-3 (konfirmaty do LF6): w kalkulatorze osobna formatka.
+- Strona „Tył (B)”: przed wpisaniem wszystkich otworów sprawdzić na podglądzie 2D jednej formatki (np. PB2), czy kalkulator nie odbija osi X dla otworów od tyłu. Jeśli odbija – zatrzymać się i ustalić to z użytkownikiem.
+- F9: sprawdzić na podglądzie, że szablon stawia 3 puszki na 100 / 620 / 1140,5 od dołu (prowadniki w PB2 są pod te pozycje); jeśli szablon ustawia je inaczej – wpisać pozycje ręcznie.
 - Bez nawiertów: KT1A/B/C (zdejmowane, na kątownikach i magnesach), L1P (półka luzem), F6 (front stały).
 - Fronty (szablon „Wręgowanie i nawierty” niedostępny przy okleinie bezspoinowej, więc szablony zawiasów): zawiasy Blum INSERTA,
   puszka Ø35, środek 22,5 mm od krawędzi. Środki puszek od dolnej krawędzi frontu:
@@ -52,7 +54,7 @@ Wymiary są POTWIERDZONE pomiarami kontrolnymi w pomieszczeniu (2026-11-18, `wer
   | F6 | brak (otwór Ø127 robi użytkownik) | – | – |
 
 ## 5. Obróbka poza standardem (robi użytkownik)
-- L1B2: wycięcie 100 × 100 pod gniazdko GN1 (od dołu 868–968, od tyłu 192–292), nawiert środka ze sklepu.
+- L1B2: wycięcie 100 × 100 pod gniazdko GN1 (od dołu 868–968, od tylnej krawędzi formatki 189–289, środek 918 / 239), nawiert środka ze sklepu.
 - F6: otwór Ø127 otwornicą, środek 124 od lewej i 217,5 od dolnej krawędzi (237 od górnej); nawiertu środka sklep nie zrobi.
 - PT3: otwór Ø127 pod rurę Ø125, środek 253 od lewej i 237 od górnej (nawiert środka ze sklepu; wiercić wg rzeczywistego położenia rury).
 - KP1: skrócenie z 200 do 184.
