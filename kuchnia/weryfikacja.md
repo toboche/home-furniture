@@ -1,4 +1,4 @@
-# Kuchnia: weryfikacja projektu przed zamówieniem (2026-11-18)
+# Kuchnia: weryfikacja projektu przed zamówieniem (2026-11-18, aktualizacja 2026-11-19 po audytach v3 i v4)
 
 Stan: `main` po PR #26 (audyt v1 i decyzje z 2026-11-18). Sprawdzone na przeliczonym modelu
 (`run.py kuchnia`, `--wszystkie --sprawdz`, `scena.py`) oraz skryptami: przecięcia brył modelu (prostopadłościany,
@@ -13,7 +13,7 @@ weryfikacyjne przed zamówieniem”: z 31 pozycji zmierzone 7, reszta otwarta, w
 | Kolizje otworów (pipeline) | 0 |
 | Wszystkie pomieszczenia zgodne z modelami (`--sprawdz`) | tak |
 | Test widoku (`scena.py`) | 0 błędów JS, wzorzec aktualny |
-| Konfirmaty / kołki / podpórki / widoczne łby | 50 / 8 / 4 / 0 |
+| Konfirmaty / kołki / podpórki / widoczne łby | 50 / 6 / 4 / 0 (stan 2026-11-19) |
 | Otwory w pobliżu wycięć (SOB-2, WSB-1 Ø160; WSB-2, SOP wycięcia U; SOT Ø25) | żaden otwór bliżej niż 15 mm od krawędzi wycięcia |
 | Przecięcia brył | tylko zamierzone (rura w otworach, pręty i profile LED w półkach, puszki zawiasów we froncie) |
 
@@ -22,16 +22,16 @@ weryfikacyjne przed zamówieniem”: z 31 pozycji zmierzone 7, reszta otwarta, w
 |---|---|---|
 | Okap w SO | korpus 513 (z nitami) w 516, kołnierz z 14–304 nad płytkami do 12 | OK: 1,5 z boków, 2 z tyłu nad płytkami |
 | Wkręty okapu | nawierty Ø3 × 5 Y 1592, z 250 i 70; w widocznym SOB-1 wkręty 3,5 × 13, w SOB-2 3,5 × 16 | OK |
-| Zawiasy F1 | Y 1850, 2210, 2576,5: prowadniki nad okapem (do 1776), SOD (1786–1804) i SOP (2104–2122) | OK |
+| Zawiasy F1 | Y 1850, 2210, 2576,5: prowadniki nad okapem (do 1776), SOD (1786–1804) i SOP (2104–2122); nawierty 37 od krawędzi SOB-2 (z 267, poprawione 2026-11-19) | OK |
 | TIP-ON | 956.1004 na SOB-1 ok. Y 1850, przy przodzie: nad okapem i SOD; F1 2 przed korpusem (2026-11-19) | OK |
-| Przejście wylot → pion | 28,5 do tyłu na 2 kolanach 15° Ø150 (2026-11-19), do ok. Y 1992 pod SOP 2104 | OK |
+| Przejście wylot → pion | 28,5 do tyłu na 2 kolanach 15° Ø150 spiętych mufą, para obrócona w poziomie (pion ok. 10–20 w prawo); do ok. Y 1992 pod SOP 2104 | OK; wycięcie w SOP dopasować na miejscu |
 | Pion, kolano, poziom Ø150 | tył pionu z 34,5 (plecy do 18, mata 10 mieści się); góra poziomu 2652 pod SOW 2660 | OK; nad poziomem mata do 5 mm |
 | Otwory Ø160 w SOB-2, WSB-1 | konfirmaty wieńców przed otworem (z 215, 265), nad otworem 21 mm boku | OK |
-| Skrzynka WS | redukcja z 34,5–184,5 przed WSZ (z 195), dno 2492 pod rurą 2502, WSW 2660; WSZ 236 × 165 na listwach i magnesach (audyt v3) | OK, bez maty w skrzynce |
+| Skrzynka WS | redukcja z 34,5–184,5 przed WSZ (z 195), dno 2492 pod rurą 2502, WSW 2660; WSZ 236 × 165 na dolnej listwie i 2 zatrzaskach push-to-open (audyt v4) | OK, bez maty w skrzynce |
 | Rura ze ścianki | wystaje 115 (do X 3093), redukcja wąskim końcem w nią; WSB-2 z wycięciem U R70 | OK, szafkę nasuwa się na rurę od przodu |
 | Kratka | WS 300 głębokości, kratka od 303 | OK (SO 304 nie sięga do ścianki) |
 | Zasilanie okapu | otwór Ø25 w SOT (X 2852, Y 2193) nad SOP; przewód w dół przez podcięcia 25 × 25 w tylnym prawym narożniku SOP i SOD | POPRAWIONE (SOD 2026-11-18, SOP 2026-11-19) |
-| Mocowanie SO i WS | po 4 wkręty 6 × 70 przez plecy, SO z WS skręcone | OK, wkręcać przed okapem |
+| Mocowanie SO i WS | po 4 wkręty 6 × 70 przez plecy, SO z WS skręcone; na styku SOB-2 / WSB-1 łby konfirmatów naprzeciw siebie | OK: łby wpuszczone poniżej lica, wkręty łączące z dala od konfirmatów |
 | P1 | 3 pręty od ściany lewej + wkręty przez słupek + łączniki do P3; pręty poza rowkami LED | OK |
 | P3 | 5 prętów, rowek LED z 151,8–170, pręty z 0–80 | OK |
 | Profil LED przy słupku | kołnierz profilu wchodził 1,5 w płytki na ścianie lewej (wystają do 12) | POPRAWIONE: profil zaczyna się 13 od ściany lewej, rowek dalej od ściany (wejście kabla) |

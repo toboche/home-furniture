@@ -169,7 +169,7 @@
 "depth": 5,
 "kind": "FACE",
 "opis": "Nawiert pilotowy Ø3 x 5 pod wkręt okapu",
-"partner": "wkręt okapu 3,5 x 16",
+"partner": "wkręt okapu 3,5 x 13",
 "pilot": true,
 "pin": false,
 "side": "A",
@@ -182,7 +182,7 @@
 "depth": 5,
 "kind": "FACE",
 "opis": "Nawiert pilotowy Ø3 x 5 pod wkręt okapu",
-"partner": "wkręt okapu 3,5 x 16",
+"partner": "wkręt okapu 3,5 x 13",
 "pilot": true,
 "pin": false,
 "side": "A",
@@ -485,8 +485,8 @@
 "pin": false,
 "plate": true,
 "side": "B",
-"u": 323.0,
-"v": 269
+"u": 323,
+"v": 267
 },
 {
 "axis_n": "-",
@@ -498,8 +498,8 @@
 "pin": false,
 "plate": true,
 "side": "B",
-"u": 355.0,
-"v": 269
+"u": 355,
+"v": 267
 },
 {
 "axis_n": "-",
@@ -511,8 +511,8 @@
 "pin": false,
 "plate": true,
 "side": "B",
-"u": 683.0,
-"v": 269
+"u": 683,
+"v": 267
 },
 {
 "axis_n": "-",
@@ -524,8 +524,8 @@
 "pin": false,
 "plate": true,
 "side": "B",
-"u": 715.0,
-"v": 269
+"u": 715,
+"v": 267
 },
 {
 "axis_n": "-",
@@ -538,7 +538,7 @@
 "plate": true,
 "side": "B",
 "u": 1049.5,
-"v": 269
+"v": 267
 },
 {
 "axis_n": "-",
@@ -551,7 +551,7 @@
 "plate": true,
 "side": "B",
 "u": 1081.5,
-"v": 269
+"v": 267
 }
 ],
 "lo": {

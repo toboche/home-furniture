@@ -59,7 +59,8 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
 
 ### Szafka okapowa SO, 2026-11-13 / 2026-11-14
 - Okap Ciarko Design DUO 55 do zabudowy: szafka bez dna, 516 w świetle (A + 2), na zewnątrz 552, osiowo nad płytą
-  (oś X 2656): X 2380–2932. Korpus 300 + front 18. Okap przykręcany 4 wkrętami 3,5 × 16 przez boki.
+  (oś X 2656): X 2380–2932. Korpus 300 + front 18 (od 2026-11-18: korpus 304, front 2 przed korpusem). Okap przykręcany
+  4 wkrętami przez boki (od 2026-11-19: w widocznym SOB-1 3,5 × 13, w SOB-2 3,5 × 16).
   Odległość od płyty ok. 600 (min. 450 dla indukcji): OK.
 - Od płytek do sufitu (1167). Plecy 18 między bokami, wieniec górny, półka nad okapem SOP z otworem Ø170 pod rurę.
   Od 2026-11-16 także wkładana półka SOD tuż nad okapem (patrz niżej).
@@ -80,7 +81,7 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
 - Średnica: rura w ścianie Ø125 wewnętrzna (130 zewnętrzna). Redukcja 150 → 125: od 2026-11-16 w wąskiej szafce,
   za kolanem 90° Ø150 (wcześniej pod sufitem w pionie, jeszcze wcześniej na wylocie okapu).
 - Trasa (aktualna od 2026-11-19): króciec wylotu Ø148,5 (z 138) z nasuniętym odcinkiem rury Ø150 → przejście do tyłu
-  o 28,5 między SOD a SOP (2 kolana 15° Ø150 z krótkim odcinkiem, decyzja 2026-11-19) → pion Ø150 (z 109,5) przez SOP (otwór Ø170) → kolano 90° Ø150 pod sufitem → poziomo Ø150 (oś Y 2577,
+  o 28,5 między SOD a SOP (2 kolana 15° Ø150 spięte mufą, para obrócona w poziomie; 2026-11-19) → pion Ø150 (z 109,5) przez SOP (otwór Ø170) → kolano 90° Ø150 pod sufitem → poziomo Ø150 (oś Y 2577,
   z 109,5) przez SOB-2 i WSB-1 (otwory Ø160) → redukcja mimośrodowa 150/125 w wąskiej szafce (płaską stroną do ściany
   głównej, oś na z 97) → Ø125 przez WSB-2 (otwór Ø140) do ścianki. Otwory wycina użytkownik, sklep wierci środek Ø5 × 5.
 
@@ -150,7 +151,7 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
 
 ### 2026-11-16: redukcja za kolanem, półka tuż nad okapem, kołnierz okapu
 - Sklep z okapami: redukcja jak najdalej od okapu. Redukcja 150/125 przeniesiona za kolano 90°: na końcu poziomego
-  odcinka, w wąskiej szafce, tuż przed bokiem WSB-2 (od X 2960, długość 120 ZAŁOŻENIE). Kolano 90° w Ø150.
+  odcinka, w wąskiej szafce (od 2026-11-18: od X 2973, wąskim końcem w rurze ze ścianki; długość 120 ZAŁOŻENIE). Kolano 90° w Ø150.
   Dalej się nie da: za WSB-2 jest już rura w ściance Ø125.
 - Skutki: otwory w SOB-2 i WSB-1 Ø160 (Ø150 + pierścień; góra otworu 3 pod wieńcem); skrzynka w WS większa
   (dno 10 niżej, zaślepka 23 do przodu). Nad poziomym Ø150 zostaje 8 mm do wieńca SOW: mata akustyczna tylko od spodu
@@ -158,7 +159,7 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
 - Rysunek techniczny DUO 55: korpus 513 × 253 × 265, kołnierz 551 × 290 wystaje po 19 z boków i po 18,5 z przodu i z tyłu
   (wg użytkownika: kołnierz na środku, nie dosunięty). Oś wylotu z 197,5 (było 218). Grubość kołnierza: w modelu ok. 4, nie wpływa na zamówienie
   (okap i tak zwisa o nią poniżej linii półki; wysokość SOD liczona od góry korpusu).
-- Półka SOD tuż nad okapem: 10 nad korpusem okapu (Y 1786–1804), 514 × 280, na 4 podpórkach Ø5 (luz 1 z boków),
+- Półka SOD tuż nad okapem: 10 nad korpusem okapu (Y 1786–1804), 514 × 280 (od 2026-11-18: 514 × 284), na 4 podpórkach Ø5 (luz 1 z boków),
   bez konfirmatów. Wkładana na końcu, po montażu okapu i rury: wycięcie od przodu na wylot (aktualnie: szer. 170, R85
   wokół z 138, najgłębiej 35 od tyłu; patrz 2026-11-18), wycina użytkownik, krawędzie silikonem.
 - Półka SOP przesunięta: dół Y 2104 (przegroda między SOD i SOP ok. 300; było 2150). Przejście do pionu mieści się
@@ -172,7 +173,7 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
   Płytka TIP-ON na froncie w komplecie. Z TIP-ON tylko zawiasy bez sprężyny (zalecenie Blum).
 - SOD: wycięcie na wylot wycina użytkownik, krawędzie wycięcia zabezpieczone silikonem.
 - Półka LED na prętach M8 w betonie (decyzja 2026-11-16), patrz „Mocowanie” wyżej.
-- TIP-ON: zaplanowane 2; użytkownik sprawdzi przy montażu, czy wystarczy jeden (dolny).
+- TIP-ON: od 2026-11-19 jeden 956.1004 (wcześniej plan 2); drugi tylko, jeśli jeden okaże się za słaby.
 
 
 ### 2026-11-18: audyt v1 (`audyt/v1.md`), poprawki wdrożone bez zmiany założeń
@@ -263,10 +264,25 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
   otworu 3 pod wieńcem, 21 do góry boku).
 - KU3-02: przejście wylot → pion: sztywna rura pochylona o 2,6° nie siądzie na króćcu 26 (luz Ø148,5 / Ø150 to
   0,75 na stronę, odchylenie na 26 to ok. 1,2). Decyzja użytkownika: 2 kolana 15° Ø150 (np. Alnor BPL-150-15) z krótkim
-  odcinkiem; model: króciec 26, przejście do Y ok. 1992, SOP zostaje na 2104; środek otworu w SOP wraca na z 109,5.
+  odcinkiem [od audytu v4: bez odcinka, kolana spięte mufą i obrócone]; model: króciec 26, przejście do Y ok. 1992,
+  SOP zostaje na 2104; środek otworu w SOP wraca na z 109,5.
 - KU3-04: F1 nie ma w CSV kalkulatora (pipeline nie generuje frontów, sekcja C): puszki wpisać ręcznie w widoku
   od strony zawiasów (337,5 / 697,5 / 1064 od dołu, 22,5 od prawej krawędzi patrząc od przodu). Położenie TIP-ON
   ustawia użytkownik na miejscu (bez pilotów).
+
+### 2026-11-19: audyt v4 (`audyt/v4.md`)
+- KU4-02: prowadniki zawiasów F1 w SOB-2 wychodziły 35 od przedniej krawędzi boku (pipeline liczy od lica frontu, a F1
+  stoi 2 przed korpusem). Nawierty prowadników F1 dodane w `reguly.py` na 37 od krawędzi (z 267); F1 wyłączony
+  z automatu. Poprawka w `wspolne/pipeline/otwory.py` do osobnego PR.
+- KU4-01: 2 kolana 15° (oba końce nyplowe) spięte mufą przesuwają oś o więcej niż 28,5 (ok. 30,5–36), a nypli nie
+  skracamy. Bez zmiany kształtek: parę kolan obrócić w poziomie (azymut ok. 20–30° w stronę SOB-2), tak żeby przesunięcie
+  w głąb wyszło dokładnie 28,5; pion przesuwa się w prawo o ok. 10–20. Wycięcie U w SOP (wycina użytkownik) dopasować
+  na miejscu, poszerzyć w prawo o ok. 20 (do konfirmatu X 2864 zostaje ponad 100). Bez krótkiego odcinka rury.
+- KU4-03: WSZ bez górnej listwy (kolidowała z zatrzaskami, a zaślepki nie było czym wyjąć): dolna listwa oporowa na WSS
+  + 2 zatrzaski dociskowe push-to-open pod WSW; naciśnięcie wysuwa WSZ na ok. 10–15 do chwycenia.
+- KU4-05: na styku SOB-2 / WSB-1 łby konfirmatów obu szafek leżą naprzeciw siebie: wszystkie łby wpuszczone poniżej lica
+  (pogłębienie fazownikiem), a wkręty 4 × 30 łączące szafki wkręcać z dala od konfirmatów.
+- KU4-06: porządki (wkręty okapu w SOB-1, ostrzeżenie o cięciu Ø160 także przy WSB-1, nieaktualne wpisy).
 
 ## Do zmierzenia przy pomiarach weryfikacyjnych w mieszkaniu
 - [ZMIERZONE 2026-11-18: 9–12, SO głębsza do 304] O ile płytki wystają przed ścianę nad nimi.
@@ -321,3 +337,4 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
 - 2026-11-19: decyzje po audycie v2: MAXIMERA 13, elektryka poza projektem, pręty M8 w 18 mm zostają.
 - 2026-11-19: audyt v3: WSZ na listwach i magnesach (bez kołków), podcięcie w SOP, wkręty okapu 3,5 × 13 w SOB-1.
 - 2026-11-19: przejście wylot → pion na 2 kolanach 15° Ø150.
+- 2026-11-19: audyt v4: prowadniki F1 37 od krawędzi SOB-2, kolana 15° obrócone w poziomie, WSZ na zatrzaskach push-to-open.

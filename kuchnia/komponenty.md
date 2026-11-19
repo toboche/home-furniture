@@ -8,8 +8,8 @@ Liczby łączników z `wyniki/podsumowanie.json` (przeliczenie 2026-11-19). Pozy
 | Konfirmat 7 × 50 | 50 | wszystkie łby ukryte (0 widocznych) |
 | Złącze mimośrodowe Häfele Minifix 15 (obudowa + trzpień B 24, gwint Euro Ø5) | 5 | SOB-1 (widoczny bok): 3 × SOT, 1 × SOW, 1 × SOP |
 | Kołek Ø8 × 30 | 6 | SOB-1: 2 × SOT, 2 × SOW, 2 × SOP |
-| Zatrzask magnetyczny meblowy, przykręcany | 2 | WSZ (na listwach oporowych) |
-| Listwa 10 × 10 (drewno / ALU), dł. 236 | 2 | oporowe za WSZ, na WSS i pod WSW, klejone |
+| Zatrzask dociskowy push-to-open (np. magnetyczny z popychaczem) | 2 | WSZ u góry, pod WSW |
+| Listwa 10 × 10 (drewno / ALU), dł. 236 | 1 | oporowa za WSZ, na WSS, klejona |
 | Podpórka półki Ø5 | 4 | pod wkładaną półkę SOD |
 
 ## Front F1 (Blum)
@@ -46,7 +46,8 @@ Liczby łączników z `wyniki/podsumowanie.json` (przeliczenie 2026-11-19). Pozy
 | POZYCJA | ILOŚĆ | UWAGI |
 |---|---|---|
 | Krótki odcinek rury spiro Ø150 na króciec | z rury 1 m | króciec Ø148,5 zewn., 26 wysokości: rura nachodzi na króciec, opaska/taśma |
-| Kolano 15° Ø150 tłoczone (np. Alnor BPL-150-15) | 2 | przejście do pionu o 28,5, z krótkim odcinkiem rury między kolanami |
+| Kolano 15° Ø150 tłoczone z uszczelką (np. Alnor BPL-150-15) | 2 | przejście do pionu o 28,5: spięte mufą, para obrócona w poziomie |
+| Mufa (łącznik kształtek) Ø150, np. Alnor MSF-150 | 1 | między kolanami 15° |
 | Rura spiro Ø150 | 1 m | pion ok. 380 + poziom ok. 170 + wsunięcia |
 | Kolano 90° Ø150 tłoczone | 1 | pod sufitem |
 | Redukcja mimośrodowa 150/125 | 1 | w wąskiej szafce, płaską stroną do ściany głównej, wąskim końcem w rurze ze ścianki (wystaje 115) |

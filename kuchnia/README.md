@@ -5,5 +5,5 @@ Brakujące fronty szuflad istniejącej kuchni (IKEA METOD): `zamowienie/` (lista
 
 Pliki: `pomiary.md`, `ustalenia.md`, `model.js`, `reguly.py`, `index.html` (widok 3D), `wyniki/` (generowane:
 `formatki.csv`, nawierty do kalkulatora, arkusz PDF, `kuchnia_3d.html`). Okucia i zakupy: `komponenty.md`. Weryfikacja przed zamówieniem: `weryfikacja.md`.
-Audyt: `audyt/v1.md` (stan wdrożenia w `ustalenia.md`, 2026-11-18). Wycena: `zamowienie/wycena.md`.
+Audyty: `audyt/v1.md`–`v4.md` (stan wdrożenia w `ustalenia.md`, 2026-11-18 i 2026-11-19). Wycena: `zamowienie/wycena.md`.
 Przeliczenie: `python3 wspolne/pipeline/run.py kuchnia` (z katalogu głównego).
