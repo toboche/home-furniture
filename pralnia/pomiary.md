@@ -9,7 +9,7 @@ Układ: X od lewej ściany ku prawej, Y od podłogi w górę, Z od tylnej ścian
 ## Pokój
 | KOD | WARTOŚĆ | OPIS | WCZEŚNIEJ / UWAGI |
 |---|---|---|---|
-| A | 1739 | szerokość pokoju od ściany do ściany, najmniejsza, przyjęta w projekcie | najszerszy punkt 1744; prawa ściana: odchyłki 2-3 mm |
+| A | 1741 | szerokość pokoju od ściany do ściany, najmniejsza z pomiarów na kilku wysokościach (2026-11-19), przyjęta w projekcie | 1739; najszerszy punkt 1744; prawa ściana: odchyłki 2-3 mm |
 | G | 1497 | głębokość pokoju | |
 | J | 2660 | wysokość przyjęta w projekcie: najniższy punkt 2661 (jedno miejsce, lewy przedni róg przy lewej ścianie), przyjęte 1 mm mniej (pomiar kontrolny 2026-11-18) | 2661, 2665; korpusy i fronty do 2655, luz 5 mm (v65) |
 | – | 823 / 805 / 2016 | otwór wejściowy: od lewej ściany / szerokość / wysokość | drzwi otwierają się na zewnątrz |
@@ -17,7 +17,7 @@ Układ: X od lewej ściany ku prawej, Y od podłogi w górę, Z od tylnej ścian
 ## Pion, gzyms (obudowa przewodów od podłogi), wywiew
 | KOD | WARTOŚĆ | OPIS | WCZEŚNIEJ / UWAGI |
 |---|---|---|---|
-| U | 1371–1373 | od lewej ściany do lewego boku pionu, na różnych wysokościach (pomiar 2026-11-18); w modelu 1371 | 1372, 1379; model wcześniej 1376 |
+| U | 1368 | od lewej ściany do lewego boku pionu, najmniejsza z pomiarów na kilku wysokościach (2026-11-19) | 1371–1373 (2026-11-18), 1372, 1379; model wcześniej 1376 |
 | P | 371 | szerokość pionu | |
 | V | 362 | wysięg pionu od tylnej ściany | podane 0,362 m |
 | Q | 118 | gzyms po stronie maszyn | przy U = 1371 i krawędzi gzymsu 1258 (maszyny do 1216 + R 42) wychodzi 113 – do sprawdzenia, nie wpływa na szafki |

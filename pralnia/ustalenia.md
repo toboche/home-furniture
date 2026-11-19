@@ -305,3 +305,13 @@ Sekcja C audytu v2 (otwory.py, kalkulator.py – układ „Tył”, zaokrągleni
 Sekcja B audytu v3 (bramki w kalkulatorze meble.pl) jest w `zamowienie.md`; Sekcja C – osobny PR w `wspolne/`.
 - Uzupełnienie 2026-11-19: otwór wentylacyjny w ścianie Ø125 (WN3 w pomiary.md). Niezgodności Q (118 vs 113 z U i R) oraz odległości prawej ściany od maszyn (523 w modelu vs 530 zmierzone) zostają bez zmian (decyzja użytkownika; nie wpływają na szafki).
 - Łączenie pasów z dolnymi szafkami (2026-11-19, decyzja użytkownika): wkręty od góry z wnętrza pasa – L2P-1 w krawędzie L1B1/L1B2, PP3-1 w RDW/RDW2; 4 × 40, po 4 na połączenie.
+
+## 2026-11-19 – szerokość pokoju 1741, pion 1368, luzy przy ścianach 3 mm (v69)
+- Nowe pomiary (najmniejsze z kilku wysokości): A = 1741 (było 1739), U = 1368 (było 1371–1373). Przy U = 1368 tył kolumny (do x 1368) stykałby się z pionem.
+- Decyzja użytkownika: luzy przy ścianach po 3 mm (było lewa 5, prawa 3), przy pionie 3 mm. Moduły razem na górze 1735 (było 1731), od x 3 do 1738.
+- Lewa szafka szersza o 2 mm w stronę ściany (L1, L2: 612, od x 3; prawy bok przy maszynach bez zmian): L1T, L2T, L2P, L1W 576 (było 574); fronty F1, F2, F10 609 (było 607); L1P 619 × 574, L1WD 575 × 100.
+- Tył kolumny węższy o 3 mm (do x 1365, 3 mm do pionu): KT1A/B/C 121 (było 124), KT2 126, KP1 126 (zamówienie 200 × 126), KP3 126, KP2 125.
+- Prawa część przed pionem szersza o 2 mm (PB2, PB3 od x 1720, 3 mm do prawej ściany): PP1 499, PP2 479, PP3 481, RDW, RDW2 481, PT2, PT3 349; fronty F6 236,5, F7 514, F9 514. Podpórki w PB2, kątowniki prawe pod F6 i zawiasy F7/F9 przesunięte o 2 mm.
+- Otwór wentylacyjny (115 od prawej ściany) w modelu x 1626 (było 1624): w F6 środek 126 od lewej krawędzi, w PT3 255 od lewej.
+- Bez zmian: szafka nad maszynami, maszyny (3 mm do L1B1, 5 mm do KB1), PB1 (do gzymsu prawej ściany teraz 5 mm), wnęka z kuweta, F5, F8.
+- Wyniki v69: formatki 44 pozycje / 56 sztuk / 16,69 m²; 428 otworów, 58 połączeń, 0 kolizji.
