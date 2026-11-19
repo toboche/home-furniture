@@ -250,8 +250,9 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
 - KU-13: Minifix 15: obudowa Ø15 × 14 (tolerancja 13,5 ± 0,5), kołek w widocznym SOB-1 Ø8 × 10 (w czole Ø8 × 22).
 - KU-08: kabel LED w modelu przy rowku przy słupku; 3 żyły CCT potwierdzone wcześniej (kabel przygotowany pod taśmę);
   profil zamknięty kloszem pod półką, nad blatem bez wody bezpośredniej: IP20 wystarcza, rowek i krawędzie zabezpieczone.
-- Nie wdrożone (decyzje użytkownika): głębokość nawiertów MAXIMERA 13 (audyt: 11–12), RCD typ A / rozłącznik 2P,
-  półka 36 mm zamiast prętów w 18 (pręty zostają, decyzja 2026-11-16). Nietrafne: zamiana kolumn w `fronty_metod.csv`.
+- Decyzje użytkownika 2026-11-19: nawierty MAXIMERA zostają Ø5 × 13 (audyt proponował 11–12); zabezpieczenie okapu
+  (RCD typ A zamiast AC, rozłącznik 2P) bez zmian w projekcie, użytkownik potwierdzi z elektrykiem poza projektem;
+  półka 18 mm na prętach M8 zostaje (audyt proponował 36 mm lub wsporniki). Nietrafne: zamiana kolumn w `fronty_metod.csv`.
 
 ## Do zmierzenia przy pomiarach weryfikacyjnych w mieszkaniu
 - [ZMIERZONE 2026-11-18: 9–12, SO głębsza do 304] O ile płytki wystają przed ścianę nad nimi.
@@ -304,3 +305,4 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
 - 2026-11-18: zawiasy F1 nad okapem (1850, 2210, 2576,5), 1 TIP-ON, WSZ na kołkach i magnesach, SO 304, redukcja w rurze ze ścianki, wycięcie U w WSB-2.
 - 2026-11-18: weryfikacja projektu; profil LED przy słupku od 13, podcięcie w SOD na przewód.
 - 2026-11-19: audyt v2: szczelina F1 2 pod TIP-ON, TIP-ON 956.1004, Minifix 14 / kołek 10 w SOB-1.
+- 2026-11-19: decyzje po audycie v2: MAXIMERA 13, elektryka poza projektem, pręty M8 w 18 mm zostają.
