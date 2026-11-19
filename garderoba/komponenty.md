@@ -43,10 +43,11 @@ Kontrola otwierania: `node garderoba/sprawdz_szuflady.js`. Każda szuflada sama:
 ## Złącza i pozostałe
 | Pozycja | Ilość | Uwagi |
 |---|---|---|
-| Konfirmaty 7 × 50 | 196 | korpusy: N 85, L 57, GN 32, GL 22 (osłony NO bez konfirmatów); + zapas |
+| Konfirmaty 7 × 50 | 139 | korpusy: N 85, GN 32, GL 22 (osłony NO i korpus dolny L bez konfirmatów); + zapas |
+| Łączniki narożne meblowe od środka (białe, z zaślepką) albo małe kątowniki, z wkrętami 3,5 × 15 | ok. 40 | korpus dolny L składany na miejscu: LW, LK, LS-1..3 do LB1 i LB2 (po 2 na koniec półki, 20), LT do LB1 i LB2 (po 4, 8), LT do LW, LK, LS-1..3 (po 2, 10); pod półkami, od strony wnętrza |
 | Konfirmaty 5 × 40 | 34 | skrzynki szuflad z płyty 16 (S1 16, S2 18): więcej ścianki w krawędzi 16 niż przy 7 × 50; otwory Ø5 w licu bez poszerzania, Ø4 w krawędzi; + zapas |
 | Wkręty łączące korpus górny z dolnym, np. 4 × 30 (przez dno GND / GLD w wieniec NW / LW) | ok. 10 | 6 w N, 4 w L, od środka korpusu górnego, z dala od konfirmatów |
-| Zaślepki konfirmatów | ok. 6 (skrypt: 45) | widoczne łby: przegroda NP (6). Skrypt liczy więcej, bo nie widzi, że łby na zewnętrznych licach LB1, LB2, GLB1, GLB2 zasłania pion i ściana, a łby pod dnami skrzynek (10) są niewidoczne; poprawka skryptu w osobnym PR `wspolne/` (audyt v1, sekcja C) |
+| Zaślepki konfirmatów | ok. 6 (skrypt: 24) | widoczne łby: przegroda NP (6). Skrypt liczy więcej, bo nie widzi, że łby na zewnętrznych licach LB1, LB2, GLB1, GLB2 zasłania pion i ściana, a łby pod dnami skrzynek (10) są niewidoczne; poprawka skryptu w osobnym PR `wspolne/` (audyt v1, sekcja C) |
 | Drążki Ø25 z uchwytami | 3 | N połowa lewa 534, N połowa prawa 534, L wzdłuż ściany 873; oś 2037 |
 | Wkręty i kołki do ściany (przez plecy NT, LT, GNT, GLT) | – | rodzaj zależy od ścian (do ustalenia) |
 | Kratka wentylacyjna prostokątna nasuwana na przewód Ø130 | 1 | na wewnętrznym licu GLB1; otwór w GLB1 wierci użytkownik |

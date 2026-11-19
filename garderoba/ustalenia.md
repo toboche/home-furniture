@@ -163,12 +163,16 @@ USTALENIA Z KALKULATORA:
   - TIP-ON F1, F2: zostaje wersja krótka 956.1004 z adapterem 956.1201 (Blum: adapter do drzwi standardowych, przy frontach
     wpuszczanych cofnięty o 22 + grubość frontu); audyt zaleca długą 956A1004, do frontów 530 × 422 niepotrzebną.
 - Wniesienie złożonego korpusu dolnego L odpada (2026-11-19): jego najmniejszy wymiar to 698, a drzwi mają 694 w świetle.
-- DO DECYZJI (audyt GD-01, MONTAŻ): przy złączach od zewnątrz boków jeden z korpusów dolnych nie da się złożyć w pomieszczeniu.
-  N składa się na środku pustego pokoju, przesuwa w prawo i dosuwa do ściany tylnej. Wtedy przed N zostaje 912–922 wolnego
-  miejsca, a L ma 909 długości i 698 głębokości (przekątna 1146): L nie da się złożyć przed miejscem ani obrócić, a na
-  miejscu boki LB1 (przy froncie N) i LB2 (3–13 od ściany przedniej) nie mają dostępu z zewnątrz. Odwrotna kolejność
-  blokuje N (bok NB-1 przy froncie L, NB-2 4 mm od ściany). Korpusy górne GN, GL i skrzynki da się złożyć poza garderobą
-  i wnieść (drzwi 694: GN 462 × 571, GL 462 × 698).
+- MONTAŻ (audyt GD-01, decyzja 2026-11-19, wariant a): przy złączach od zewnątrz boków jeden z korpusów dolnych nie da się
+  złożyć w pomieszczeniu (przed N zostaje 912–922 na L długości 909; przy ścianach 3–13 mm, a konfirmat wymaga min. ok. 40).
+  Dlatego korpus dolny L jest BEZ KONFIRMATÓW: boki LB1, LB2 i plecy LT łączone z półkami i wieńcem LW łącznikami narożnymi
+  od środka (ok. 40, `komponenty.md`). Kolejność montażu:
+  1. Korpus dolny N: złożyć na konfirmatach na środku pustego pokoju, przesunąć w prawo i dosunąć do ściany tylnej.
+  2. Korpus dolny L: na miejscu postawić LB1 (przy froncie N) i LB2 (przy ścianie przedniej), wsunąć od pokoju LT, LS-1..3,
+     LK, LW i przykręcić łącznikami od środka; przykręcić do ściany przez LT.
+  3. Korpusy górne GN, GL (i skrzynki szuflad) złożyć poza garderobą, wnieść (drzwi 694: GN 462 × 571, GL 462 × 698),
+     położyć na dolnych i wsunąć (GN od przodu, GL od strony pokoju wzdłuż X); przykręcić wkrętami przez dno.
+  4. Przewód wentylacyjny: tuleja przez otwór w GLB1 do kratki.
 - Złącza skrzynek 16 mm (audyt GD-04, decyzja 2026-11-19): konfirmaty 5 × 40 zamiast 7 × 50 (ścianka w krawędzi 5,5 zamiast 4,5).
 - SZ1 i SZ2 na tej samej wysokości ZOSTAJĄ (decyzja 2026-11-19; audyt GD-05 proponował przeniesienie SZ2 niżej): nie otwierać obu naraz.
 - Gniazdko: ZOSTAJE otwór w LB2 z dostępem do gniazdka (decyzja 2026-11-19; audyt GD-10 proponował mały przepust i gniazdko natynkowe).

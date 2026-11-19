@@ -40,8 +40,8 @@ Przydatne: miernik laserowy, poziomica (najlepiej 2 m), taśma malarska, listwa 
 | V20 | Wniesienie najdłuższych płyt: przejdź przez drzwi garderoby z łatą/sznurkiem 2583 mm i obróć ją w pionie w pomieszczeniu | boki 2583 × 578 / 700 muszą wejść; pomieszczenie ma 1490 głębokości i 1825 szerokości, poziomo płyta się nie obróci | 2026-11-18: płyta wejdzie; składanie w środku trudne → podział na korpusy dolne (do 2120) i górne (463), najdłuższa płyta 2120 |
 | V21 | szerokość korytarza przed drzwiami garderoby | do manewru z płytą 2583 | |
 | V22 | otwór drzwi w świetle (DW, DH) | 694 × 2014; płyty 1081 × 2230 (NT) i 859 × 2230 (LT) wnosi się na krawędzi | |
-| V23 | miejsce na złożenie korpusu N NA STOJĄCO przed docelowym miejscem i dosunięcie do ściany tylnej | wolna podłoga ok. 1117 × 600 przed ścianą tylną; złożonego korpusu nie da się podnieść z poziomu (przekątna 2647 > 2586) | |
-| V24 | to samo dla korpusu L: złożenie obok i dosunięcie do ściany lewej nad gzymsem | wolna podłoga ok. 700 × 895 | |
+| V23 | miejsce na złożenie korpusu N NA STOJĄCO przed docelowym miejscem i dosunięcie do ściany tylnej | wolna podłoga ok. 1117 × 600 przed ścianą tylną; złożonego korpusu nie da się podnieść z poziomu (przekątna 2647 > 2586) | 2026-11-19: nieaktualne, montaż wg `ustalenia.md` (N składany na środku pokoju, L na miejscu na łącznikach od środka) |
+| V24 | to samo dla korpusu L: złożenie obok i dosunięcie do ściany lewej nad gzymsem | wolna podłoga ok. 700 × 895 | 2026-11-19: nieaktualne, montaż wg `ustalenia.md` (N składany na środku pokoju, L na miejscu na łącznikach od środka) |
 
 ## 4. Makieta z taśmy (zalecane)
 - Na podłodze: obrys N (od boku pionu +3 do prawej ściany −3, głębokość 583 od ściany tylnej) i obrys L (705 od ściany lewej, od 583 do 1478).

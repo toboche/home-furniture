@@ -31,8 +31,13 @@ def pomijaj_czesc(p):
 
 
 def pomijaj_polaczenie(face, edge):
-    """osłony przewodów NO-1, NO-2 są zdejmowane (kątowniki u góry, magnesy na dole), więc bez konfirmatów"""
-    return face.startswith('NO') or edge.startswith('NO')
+    """bez konfirmatów:
+    - osłony przewodów NO-1, NO-2 są zdejmowane (kątowniki u góry, magnesy na dole);
+    - korpus dolny L składany na miejscu (boki LB1, LB2 i plecy LT bez dostępu z zewnątrz): łączniki narożne od środka
+      (decyzja 2026-11-19, audyt v2 GD-01); korpusy górne GL, GN i dolny N zostają na konfirmatach"""
+    if face.startswith('NO') or edge.startswith('NO'):
+        return True
+    return face[0] == 'L' and edge[0] == 'L'
 
 
 def rozstaw(face, edge, domyslny):

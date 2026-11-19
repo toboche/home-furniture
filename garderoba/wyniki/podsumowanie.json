@@ -5,22 +5,21 @@
   "m2": 21.17
  },
  "kalkulator": {
-  "typy_formatek": 21,
-  "wiersze": 317
+  "typy_formatek": 18,
+  "wiersze": 239
  },
  "laczniki": {
-  "konfirmaty": 230,
+  "konfirmaty": 173,
   "kolki": 0,
   "otwory_pod_kolki": 0,
   "otwory_nieprzelotowe": 10,
   "puszki_zawiasow": 4
  },
  "zaslepki": {
-  "widoczne": 45,
-  "ukryte": 185,
+  "widoczne": 24,
+  "ukryte": 149,
   "widoczne_wg_czesci": {
    "GLB1": 8,
-   "LB1": 21,
    "NP": 6,
    "S1D": 4,
    "S2D": 6
@@ -34,27 +33,6 @@
    "GLB1 → GLG (x 653, y 2573, z 570)",
    "GLB1 → GLT (x 14, y 2188, z 570)",
    "GLB1 → GLT (x 14, y 2514, z 570)",
-   "LB1 → LK (x 73, y 1093, z 570)",
-   "LB1 → LK (x 363, y 1093, z 570)",
-   "LB1 → LK (x 653, y 1093, z 570)",
-   "LB1 → LS-1 (x 73, y 344, z 570)",
-   "LB1 → LS-1 (x 363, y 344, z 570)",
-   "LB1 → LS-1 (x 653, y 344, z 570)",
-   "LB1 → LS-2 (x 73, y 605, z 570)",
-   "LB1 → LS-2 (x 363, y 605, z 570)",
-   "LB1 → LS-2 (x 653, y 605, z 570)",
-   "LB1 → LS-3 (x 73, y 867, z 570)",
-   "LB1 → LS-3 (x 363, y 867, z 570)",
-   "LB1 → LS-3 (x 653, y 867, z 570)",
-   "LB1 → LT (x 14, y 385, z 570)",
-   "LB1 → LT (x 14, y 718, z 570)",
-   "LB1 → LT (x 14, y 1052, z 570)",
-   "LB1 → LT (x 14, y 1385, z 570)",
-   "LB1 → LT (x 14, y 1719, z 570)",
-   "LB1 → LT (x 14, y 2052, z 570)",
-   "LB1 → LW (x 55, y 2111, z 570)",
-   "LB1 → LW (x 354, y 2111, z 570)",
-   "LB1 → LW (x 653, y 2111, z 570)",
    "NP → NK (x 1279, y 1093, z 73)",
    "NP → NK (x 1279, y 1093, z 300)",
    "NP → NK (x 1279, y 1093, z 526)",
@@ -73,10 +51,10 @@
    "S2D → S2C-2 (x 103, y 899, z 1311)"
   ]
  },
- "polaczenia": 77,
- "otwory_lacznie": 470,
+ "polaczenia": 60,
+ "otwory_lacznie": 356,
  "kolizje_otworow": 0,
- "strony_arkusza": 31,
+ "strony_arkusza": 28,
  "formatki_16mm": {
   "pozycje": 6,
   "sztuki": 10,
