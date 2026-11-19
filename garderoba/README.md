@@ -1,5 +1,5 @@
 # Garderoba (A/P02 07)
-Stan (2026-11-18): wymiary potwierdzone w pomieszczeniu, gotowe do zamówienia; przekazanie do zamówienia: `zamowienie.md`.
+Stan (2026-11-19): wymiary potwierdzone w pomieszczeniu, gotowe do zamówienia; przekazanie do zamówienia: `zamowienie.md`.
 
 - `ustalenia.md`: założenia, plan pracy, decyzje
 - `pomiary.md`: wymiary z natury (najmniejsze odczyty) z kodami; szkic kodów: `zrodla/szkic_pomiarow.svg`

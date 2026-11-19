@@ -1,4 +1,4 @@
-# Garderoba: okucia i elementy (stan 2026-11-18, po audycie v1)
+# Garderoba: okucia i elementy (stan 2026-11-19, po audycie v5)
 Wymiary w mm. Kody tylko dużymi literami. Płyty: `wyniki/formatki.csv` (18 mm, 27 pozycji / 36 sztuk / 21,19 m²; korpusy dolne N, L do 2120 i górne GN, GL 2120–2582)
 i `wyniki/formatki_16mm.csv` (skrzynki szuflad, 6 pozycji / 10 sztuk / 1,52 m²; inna biała płyta 16 mm, bo W1200 nie ma 16); nawierty: `wyniki/kalkulator_nawierty*.csv`.
 
@@ -59,5 +59,7 @@ Kontrola otwierania: `node garderoba/sprawdz_szuflady.js`. Każda szuflada sama:
 | Tuleja / odcinek przewodu Ø125, 60–80 | 1 | łączy przewód (docięty 3 przed GLB1) z kratką: przechodzi przez GLB1 (18) i szczelinę 3 i wchodzi w przewód; uszczelnić taśmą aluminiową albo pianką; sprawdzić średnicę wewnętrzną przewodu (W3 130) |
 | Kątowniki meblowe małe (np. 20 × 20) z wkrętami 3,5 × 15 | 4 | osłony NO-1, NO-2: po 2 u góry, pod półką NS-1 / NS-4, od strony pokoju |
 | Zatrzaski magnetyczne meblowe z blaszkami | 4 | osłony NO-1, NO-2: po 2 na dole, na bokach NB-1, NP, NB-2 za osłoną; blaszki na tylnym licu osłony |
-| Gniazdo wpuszczane (mechanizm do Ø58) z ramką i wkrętami puszkowymi M3 × 35–40 | 1 | w LB2, mocowane do puszki Ø60 w ścianie (wybiera użytkownik) |
+| Gniazdo wpuszczane z ramką (mostek z otworami narożnymi poza Ø68, np. Simon 54, Schneider Sedna) | 1 | w LB2; podłącza elektryk |
+| Pierścień dystansowy do puszki Ø60, tworzywo samogasnące (np. Simet PD60, segmentowy) | 1 | docięty do grubości LB2 + szczeliny (ok. 21); otwór w LB2 pod jego średnicę zewnętrzną (ok. Ø66–68) |
+| Wkręty osprzętowe do puszek z tworzywa ok. Ø3,2 × 40 (nie M3) | 2 | mocują mechanizm przez pierścień do puszki Ø60 w ścianie; narożniki mostka dodatkowo wkrętami Ø3 × 16 do LB2 |
 | Ślizgacze pod boki i przegrodę dolnych korpusów | wg potrzeby | dolne krawędzie NB, NP, LB1, LB2, NO oklejone ABS; ślizgacze tylko w razie potrzeby |

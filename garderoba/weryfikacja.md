@@ -3,16 +3,16 @@
 Cel: sprawdzić w pomieszczeniu, że szafki z projektu (stan po rozkroju 21629487) zmieszczą się i dadzą się wnieść i złożyć.
 Mierz NAJMNIEJSZĄ wartość (jak przy pomiarach), wpisz ją w kolumnę WYNIK. Wymiary w mm, od docelowej podłogi (kafelki).
 Patrząc od drzwi: ściana tylna = na wprost (przewody wodne), lewa = z gzymsem, przednia = z drzwiami.
-Szkic kodów: `zrodla/szkic_pomiarow.svg`; rysunek ścian z pomiarami 1–12 (stan 2026-11-18): `weryfikacja_szkic.html`. Kody tylko dużymi literami.
+Szkic kodów: `zrodla/szkic_pomiarow.svg`; rysunek ścian z pomiarami 1–12 (stan 2026-11-19): `weryfikacja_szkic.html`. Kody tylko dużymi literami.
 
 Przydatne: miernik laserowy, poziomica (najlepiej 2 m), taśma malarska, listwa lub łata ok. 2,6 m (albo sznurek tej długości).
 
 ## 1. Szafka na wprost (N): 1122 × 2582 × 571 (703–1825 od ściany lewej), przód na 576 od ściany tylnej (wymagania zaktualizowane 2026-11-19)
 | # | CO MIERZYĆ | GDZIE | WYMAGANE | W PROJEKCIE | WYNIK |
 |---|---|---|---|---|---|
-| V1 | od boku pionu do prawej ściany | wysokość 0, 1000, 2000, 2550 | PX w tym miejscu + wynik ≥ 1826 | szafka 703–1825 | 2026-11-18: 1138, 1137, 1137, 1137 (wys. 0, 1000, 2000, 2550); z PX: prawa ściana 1829–1832 od lewej – OK (szafka do 1821, luz 8–11) |
+| V1 | od boku pionu do prawej ściany | wysokość 0, 1000, 2000, 2550 | PX w tym miejscu + wynik ≥ 1826 | szafka 703–1825 | 2026-11-18: 1138, 1137, 1137, 1137 (wys. 0, 1000, 2000, 2550); z PX: prawa ściana 1829–1832 od lewej – OK (szafka do 1825 od 2026-11-18 wieczór, luz 4–8) |
 | V2 | czy bok pionu i prawa ściana są w pionie (poziomica) | całą wysokość | najdalszy punkt pionu ≤ 700, najbliższy punkt prawej ściany ≥ 1826 od lewej | szafka 703–1825 | 2026-11-18: z V1 i V10: pion i prawa ściana równoległe w granicach 3 mm – OK |
-| V3 | wysięg pionu od ściany tylnej (PZ) | co 500 mm wysokości | najwięcej 573 (front szafki na wprost i bok LB1 od 576) | korpus 5–576 | 2026-11-18: 563, 564, 570, 573 – OK: pion nie wchodzi w szafkę na wprost (X do 695), a LB1 stoi od 583 (luz ≥ 10); granica 580 |
+| V3 | wysięg pionu od ściany tylnej (PZ) | co 500 mm wysokości | najwięcej 573 (front szafki na wprost i bok LB1 od 576) | korpus 5–576 | 2026-11-18: 563, 564, 570, 573 – OK: pion nie wchodzi w szafkę na wprost (X do 695), a LB1 stoi od 576 (luz 3–13); granica 573 |
 | V4 | wysokość podłoga–sufit | 4 narożniki obszaru szafki (X 703 i 1825, Z 5 i 576) | min. 2586 | szafka 2582 + 4 | 2026-11-18: 2587, 2589, 2589 (każdy pomiar powtórzony 4 razy z tym samym wynikiem) – OK; po zmianie luzu wymagane min. 2586 (2582 + 4) |
 | V5 | poziom podłogi wzdłuż ściany tylnej (różnica wysokości) | od pionu do prawej ściany | najlepiej do 2 mm (szafka stoi bez nóżek) | – | 2026-11-18: różnica do 2 – OK |
 | V6 | przewody wodne po zagięciu: wysięg od ściany tylnej | oba przewody | najwięcej 50 (osłona stoi 55 od ściany) | 50 | 2026-11-18: przewody nie są zagięte w stronę pokoju – OK |
@@ -23,8 +23,8 @@ Przydatne: miernik laserowy, poziomica (najlepiej 2 m), taśma malarska, listwa 
 ## 2. Szafka po lewej (L): 698 × 2582 × 912 (576–1488 od ściany tylnej, od 2026-11-19; wcześniej do 1485), przód na 703 od ściany lewej (wymagania zaktualizowane 2026-11-19)
 | # | CO MIERZYĆ | GDZIE | WYMAGANE | W PROJEKCIE | WYNIK |
 |---|---|---|---|---|---|
-| V10 | wysięg pionu od ściany lewej (PX) | co 500 mm wysokości | najwięcej 700 | przód szafki 703 | 2026-11-18: 692, 692, 695, 695 – OK (luz do szafki 10–13) |
-| V11 | od lica pionu do ściany przedniej (T) | przy ścianie lewej, wysokość 400, 1000, 2000, 2550 | PZ w tym miejscu + T ≥ 1489 (pomiary na tych samych wysokościach) | szafka 576–1485 (pion najdalej 573) | 2026-11-18: 928, 928, 926, 925 (wys. 400, 1000, 2000, 2550) – OK; z PZ: ściana przednia przy lewej ścianie 1488–1498 od tylnej, LB2 kończy się na 1478 (luz 10–20) |
+| V10 | wysięg pionu od ściany lewej (PX) | co 500 mm wysokości | najwięcej 700 | przód szafki 703 | 2026-11-18: 692, 692, 695, 695, na samej górze 700 – OK (szafka od 703: luz 3–11) |
+| V11 | od lica pionu do ściany przedniej (T) | przy ścianie lewej, wysokość 400, 1000, 2000, 2550 | PZ w tym miejscu + T ≥ 1489 (pomiary na tych samych wysokościach) | szafka 576–1485 (pion najdalej 573) | 2026-11-18: 928, 928, 926, 925 (wys. 400, 1000, 2000, 2550) – OK; z PZ: ściana przednia przy lewej ścianie 1488–1498 od tylnej, LB2 kończy się na 1488 od 2026-11-19 (luz 3–10); przy podłodze potwierdzone przez użytkownika (liczby nie podane) |
 | V12 | wysokość podłoga–sufit | 4 narożniki obszaru szafki (X 5 i 703, Z 576 i 1488) | min. 2586 | szafka 2582 + 4 | 2026-11-18: 2586, 2587, 2589, 2587 – OK (wcześniej wpisane 2286–2289 to literówka, potwierdzone przez użytkownika) |
 | V13 | gzyms: wysokość (GZ1) | na całej długości, kilka punktów | najwięcej 333 (półka od 335) | 333 | 2026-11-18: 333 – OK |
 | V14 | gzyms: wysięg od ściany lewej (GZ2) | na całej długości | najwięcej 129 (wycięcie w LB2 do 134) | 129 | 2026-11-18: 125, 126, 127 – OK |

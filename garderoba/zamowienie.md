@@ -1,8 +1,8 @@
-# Garderoba: przekazanie do zamówienia (stan 2026-11-18)
+# Garderoba: przekazanie do zamówienia (stan 2026-11-19)
 
 Dla rozmowy, w której składane jest zamówienie (garderoba razem z innym pomieszczeniem). Wymiary w mm, kody tylko DUŻYMI LITERAMI.
 Źródło prawdy: repozytorium na `main` (`CLAUDE.md`). Dokumenty w projekcie Claude mogą być starymi kopiami.
-Wymiary szafek są POTWIERDZONE w pomieszczeniu (2026-11-18, `weryfikacja.md`). Zmiana wymiaru tylko przez `model.js`
+Wymiary szafek są POTWIERDZONE w pomieszczeniu (2026-11-18 i 2026-11-19, `weryfikacja.md`). Zmiana wymiaru tylko przez `model.js`
 i przeliczenie (`python3 wspolne/pipeline/run.py garderoba`), nigdy ręcznie w plikach z `wyniki/`.
 
 ## 1. Pliki
@@ -13,7 +13,7 @@ i przeliczenie (`python3 wspolne/pipeline/run.py garderoba`), nigdy ręcznie w p
 | `wyniki/kalkulator_nawierty.csv`, `wyniki/kalkulator_nawierty_16mm.csv` | nawierty w formacie kalkulatora centrum.meble.pl (14 typów formatek, 195 wierszy dla 18 mm) |
 | `wyniki/arkusz_nawiertow.pdf` | rysunki wszystkich formatek z otworami (dla innego dostawcy albo do sprawdzenia) |
 | `komponenty.md` | okucia z kodami Blum, złącza, drążki, kątowniki, magnesy |
-| `ustalenia.md` | decyzje (sekcje z 2026-11-18 są najnowsze) |
+| `ustalenia.md` | decyzje (sekcje z 2026-11-19 są najnowsze) |
 
 ## 2. Płyta
 - 18 mm: założony dekor jak w pralni, Egger W1200 ST9 Biały porcelanowy (`ustalenia.md`). Jeśli zamówienie idzie
@@ -60,14 +60,15 @@ i przeliczenie (`python3 wspolne/pipeline/run.py garderoba`), nigdy ręcznie w p
 - LB1: wycięcie dolnego narożnika po stronie ściany lewej (krawędź tylna, przeciwna do oklejonej przedniej):
   184 wzdłuż dolnej krawędzi × 335 w górę (wokół gzymsu i rury).
 - LB2: to samo wycięcie 129 × 335 (wokół gzymsu). Otwór na gniazdko (środek 210 od ściany lewej i 195 od podłogi, wg nawiertu
-  środka) wierci użytkownik: ok. Ø60 pod gniazdo wpuszczane, po przymiarce nad puszką w ścianie; w zamówieniu tylko nawiert
-  środka Ø5 × 5.
+  środka) wierci użytkownik: ok. Ø66–68 pod pierścień dystansowy gniazda wpuszczanego, po przymiarce nad puszką w ścianie
+  (`ustalenia.md`); w zamówieniu tylko nawiert środka Ø5 × 5.
 - Pozostałe formatki są prostokątami.
 
 ## 6. Okucia i drobne elementy
 Pełna lista z kodami: `komponenty.md`. W skrócie: 4 zawiasy 70T3790.TL (INSERTA) + 4 prowadniki 173L6100 + 8 wkrętów 609.1500,
 4 ograniczniki 86° 70T3553 (F1 i F2), 2 TIP-ON 956.1004 + 2 adaptery 956.1201, MOVENTO 760H5000S i 760H6000S z TIP-ON BLUMOTION
-T60L7340 (L1), zaczepy T51.7601, adaptery T60.000D (w komplecie) i 1 wałek T60.1125W (docięty na 267 i 609); konfirmaty 7 × 50: 117 + zapas (korpusy N, GN), ok. 55 łączników narożnych do korpusów L i GL i 220–260 wkrętów 3,5 × 15 do nich i 5 × 40: 34 + zapas (skrzynki); zaślepki ok. 6;
+T60L7340 (L1), zaczepy T51.7601, adaptery T60.000D (w komplecie) i 1 wałek T60.1125W (docięty na 267 i 609); konfirmaty 7 × 50: 117 + zapas (korpusy N, GN) i 5 × 40: 34 + zapas (skrzynki); ok. 55 łączników narożnych do korpusów
+L i GL i 220–260 wkrętów 3,5 × 15 do nich; zaślepki ok. 6;
 3 drążki Ø25 (534, 534, 876); 4 kątowniki i 4 zatrzaski magnetyczne do osłon NO; wkręty 4 × 30 (ok. 10) łączące korpusy
 górne z dolnymi; kratka wentylacyjna; mocowanie do ścian do ustalenia.
 
@@ -75,10 +76,12 @@ górne z dolnymi; kratka wentylacyjna; mocowanie do ścian do ustalenia.
 - Skrzynki szuflad: otwory Ø5 pod konfirmaty 5 × 40 trzeba po dostawie pogłębić stożkowo (łeb równo z płytą), inaczej
   łby pod dnem zmniejszą prześwit MOVENTO.
 - Płyta 16 mm innego producenta: sprawdzić u dostawcy minimalne wymiary formatki z nawiertami (S1C, S2C mają 151 szerokości).
-- Kalkulator: po wpisaniu nawiertów obejrzeć podgląd 2D strony „Tył (B)” (m.in. GNB-2, NB-1, NP, NT, GND, GLB1, GLD, LB2),
-  czy otwory nie są odbite względem `arkusz_nawiertow.pdf`.
+- Kalkulator: po wpisaniu nawiertów obejrzeć podgląd 2D strony „Tył (B)”, czy otwory nie są odbite względem
+  `arkusz_nawiertow.pdf`. Formatki z otworami na stronie „Tył”: 18 mm NB-1, NP, NT, GNB-1, GNB-2, GND, GNT, LB2;
+  16 mm S1B-1, S1D, S2B-1, S2D.
 - `wyniki/podsumowanie.json` podaje 16 zaślepek: skrypt liczy też łby pod dnami skrzynek (10), których nie widać. Kupić ok. 6
   (`komponenty.md`). Poprawka czeka na osobny PR w `wspolne/`.
+- Korpusy: każda szafka to korpus dolny (0–2120: N, L) i górny (2120–2582: GN, GL). Kody GN… i GL… to formatki korpusów
   górnych, nie pomyłka.
 - Szafka na wprost ma 1122 szerokości (połowy 534); wcześniejsze dokumenty mogą mieć 1116 albo 1117.
 - Po złożeniu zamówienia porównać liczbę pozycji, sztuk i m² z punktem 1 i wpisać numer rozkroju i cenę do `ustalenia.md`.
