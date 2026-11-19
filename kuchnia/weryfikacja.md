@@ -4,8 +4,8 @@ Stan: `main` po PR #26 (audyt v1 i decyzje z 2026-11-18). Sprawdzone na przelicz
 (`run.py kuchnia`, `--wszystkie --sprawdz`, `scena.py`) oraz skryptami: przecięcia brył modelu (prostopadłościany,
 rury jako obrys) i odległości otworów od wycięć wykonywanych przez użytkownika (otwory Ø160, wycięcia U).
 
-**Werdykt: projekt spójny, ZAMÓWIENIE DOPIERO PO pomiarach weryfikacyjnych w mieszkaniu** (arkusz „Kuchnia: pomiary
-weryfikacyjne przed zamówieniem”: z 31 pozycji zmierzone 7, reszta otwarta, w tym długości ścian, sufit i wnęka).
+**Werdykt: projekt spójny, ZAMÓWIENIE DOPIERO PO 5 pomiarach w mieszkaniu** (arkusz „Kuchnia: pomiary weryfikacyjne
+przed zamówieniem”, od 2026-11-19 tylko L1–L5: czy meble fizycznie się mieszczą; patrz `ustalenia.md`).
 
 ## 1. Wyniki automatyczne
 | SPRAWDZENIE | WYNIK |
@@ -42,7 +42,7 @@ weryfikacyjne przed zamówieniem”: z 31 pozycji zmierzone 7, reszta otwarta, w
 | Wycena | nieaktualna (SOD, otwory P1/P3, zmiany z audytu) | przeliczyć przy zamówieniu |
 
 ## 3. Przed zamówieniem
-1. Pomiary z arkusza (zwłaszcza V1–V8, V10–V16, V21, V23–V25, V30–V31). Każda różnica wraca do `pomiary.md` i modelu.
+1. Pomiary L1–L5 z arkusza. Każda różnica wraca do `pomiary.md` i modelu.
 2. Rozstaw prętów: zaznaczyć na ścianie i sprawdzić gniazdka i przewody (V23–V25); bez wykrywacza zbrojenia
    rozważyć wywiercenie otworów w ścianie przed zamówieniem i podanie rzeczywistych położeń.
 3. Wpis do kalkulatora meble.pl (formatki z CSV, okleina, nawierty z `wyniki/kalkulator_nawierty.csv`, puszki F1
