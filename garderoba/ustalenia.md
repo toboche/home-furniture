@@ -147,17 +147,28 @@ USTALENIA Z KALKULATORA:
   GZ1 333; puszka gniazdka nie wystaje. LB2 przy pionie stoi ok. 3 mm od ściany przedniej (T = 919 zmierzone przy pionie);
   12 mm wychodziło z G = 1490 mierzonego przy prawej ścianie (model rysuje ścianę przednią prosto).
 
+## Audyt v4 (`audyt/v4.md`, stan po PR #36), wdrożone 2026-11-19
+- Ograniczniki 86° (70T3553) także na F1 (razem 4): F1 przy ok. 93–96° uderzyłby w narożnik GLB1, który wystaje 18 przed F1.
+- Otwór Ø68 w LB2 odwołany; wymiar otworu na gniazdko do decyzji przy wyborze gniazda (sekcja „Decyzje” wyżej).
+- Prowadnice MOVENTO przy frontach wpuszczanych: pierwsza linia wkrętów 57,5 od przodu korpusu (37 + 18 + 2,5), bez zderzaka
+  298.7600; tuleja przewodu wentylacyjnego 60–80 z uszczelnieniem (30 było za krótkie); kolejność składania GL i wskazówki
+  do łączników (`komponenty.md`).
+- Jeden wałek T60.1125W (docięcie LW − 267: 267 i 609) zamiast dwóch; powierzchnia 18 mm 21,19 m²; porządki w opisach.
+- DO DECYZJI (audyt GD4-03): długość szafki po lewej 912 (do 1488) opiera się na pomiarach od 400 w górę; przy podłodze
+  (0–400) ściany przedniej nie mierzono, a z trendu wychodzi tam ok. 1–2 mm luzu. Albo pomiar przy podłodze (min. 1491),
+  albo powrót do 909 (do 1485).
+- Sekcja C (`wspolne/`) bez zmian.
+
 ## Decyzja 2026-11-19: szafka po lewej dłuższa o 3
 - Szafka po lewej 576–1488 (długość 912, było 909): ściana przednia przy lewej najbliżej 1491 (TP = PZ + T na tej samej wysokości,
   pomiary na 400, 1000, 2000, 2550), pion wystaje najwyżej do 573. Luz przy LB1 3 (góra) – 13 (dół), przy LB2 3 (dół) – 10 (góra):
   pion i ściana przednia pochylają się w tę samą stronę, więc pionowa szafka ma po 3 mm w dwóch różnych miejscach.
   Półki, wieńce i plecy L oraz GL 876, SZ2: LW 876, skrzynka 834, front F4 872.
 - Gniazdko (decyzja 2026-11-19): gniazdka nie ma jeszcze na ścianie; użytkownik zamontuje gniazdo NA PŁYCIE LB2, przewód
-  ze ściany przez otwór Ø68 (środek 210 / 195, nad puszką w ścianie). Gniazdko nie wymaga luzu między LB2 a ścianą
-  (ok. 3 mm). Jeśli gniazdo ma puszkę meblową wystającą za płytę, ta część musi wejść w puszkę w ścianie (otwór dokładnie
-  nad nią); inaczej gniazdo natynkowe na wewnętrznym licu LB2.
-
-## Audyt v3 (`audyt/v3.md`, stan po PR #33), wdrożone 2026-11-19
+  ze ściany (puszka Ø60 w ścianie, środek 210 / 195). Gniazdko nie wymaga luzu między LB2 a ścianą (ok. 3 mm). Otwór Ø68
+  ODWOŁANY (audyt v4 GD4-02: puszka meblowa Ø68 nie wejdzie w puszkę Ø60, a wkręty gniazda trafiłyby w pustkę). W zamówieniu
+  tylko nawiert środka; wymiar otworu DO DECYZJI przy wyborze gniazda: natynkowe na wewnętrznym licu LB2 + otwór Ø20–25 na
+  przewód (zalecane) albo wpuszczane ≤ Ø58 w otworze dopasowanym po przymiarce, mocowane wkrętami do puszki w ścianie.
 - Łączniki korpusu dolnego L: przy LK na górze LK, LS-1 ↔ LT na górze LS-1 (pod spodem kolizja z SZ2/F4, a pod LS-1 nie ma LT);
   dopisane 160–200 wkrętów 3,5 × 15.
 - `formatki.csv`: formatki korpusu dolnego L bez „KONFIRMATY” (BRAK, łączniki od środka; LB2 tylko nawiert środka).
@@ -169,7 +180,7 @@ USTALENIA Z KALKULATORA:
   zaktualizowane do obecnych wymiarów, V8, V9, V20–V22 rozstrzygnięte.
 - Drobne: pion w modelu rysowany do PZM (573), przewody R1/R2 od AT, `reguly.py` i `pomiary.md` zaktualizowane.
 - Decyzje 2026-11-19: korpus górny GL składany na miejscu na łącznikach od środka (bez konfirmatów), kolejność montażu wyżej;
-  otwór na gniazdko w LB2: Ø68 (standardowa otwornica do puszek), środek 210 / 195.
+  otwór na gniazdko w LB2: Ø68 (odwołane w audycie v4, patrz wyżej: wymiar wg wybranego gniazda).
 - Sekcja C (`wspolne/`) bez zmian: zaślepki, prowadniki frontów wpuszczanych, opisy w arkuszu PDF, kilka krawędzi okleiny.
 
 ## Audyt v2 (`audyt/v2.md`, robiony na stanie sprzed 2026-11-18), wdrożone 2026-11-19
@@ -199,9 +210,11 @@ USTALENIA Z KALKULATORA:
   3. Korpus dolny L: na miejscu postawić LB1 (przy froncie N) i LB2 (przy ścianie przedniej), wsunąć od pokoju LT, LS-1..3,
      LK, LW i przykręcić łącznikami od środka; przykręcić do ściany przez LT. Łączniki zwykle pod półkami, ale przy LK
      NA GÓRZE (pod LK pracuje szuflada SZ2 i front F4), a LS-1 ↔ LT NA GÓRZE LS-1 (pod LS-1 nie ma LT); `komponenty.md`.
-  4. Korpus górny GL: na miejscu z pojedynczych płyt na łącznikach od środka (ok. 16): GLB1 i GLB2 na bokach LB1, LB2,
-     GLD na LW (łączniki na górze GLD), GLT, GLG (łączniki pod GLG); GLD przykręcić do LW. Na czas montażu zdjąć albo osłonić
-     oczko w suficie (L1 1131, L2 1000).
+  4. Korpus górny GL: na miejscu z pojedynczych płyt na łącznikach od środka (ok. 16), w kolejności (audyt v4):
+     (a) GLD położyć na LW i przykręcić; (b) postawić GLB1, GLB2 na bokach LB1, LB2 i połączyć z GLD (łączniki na górze GLD);
+     (c) wsunąć GLT, skręcić i zakotwić do ściany przez twardą podkładkę dystansową 5 mm; (d) włożyć GLG (łączniki pod GLG,
+     przykręcone do GLG przed włożeniem). Na czas montażu zdjąć albo osłonić oczko w suficie (L1 1131, L2 1000).
+     Przy wszystkich plecach (NT, LT, GNT, GLT) kotwy do ściany przez podkładki 5 mm.
   5. Przewód wentylacyjny: tuleja przez otwór w GLB1 do kratki.
 - Złącza skrzynek 16 mm (audyt GD-04, decyzja 2026-11-19): konfirmaty 5 × 40 zamiast 7 × 50 (ścianka w krawędzi 5,5 zamiast 4,5).
 - SZ1 i SZ2 na tej samej wysokości ZOSTAJĄ (decyzja 2026-11-19; audyt GD-05 proponował przeniesienie SZ2 niżej): nie otwierać obu naraz.

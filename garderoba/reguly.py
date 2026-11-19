@@ -1,6 +1,6 @@
 """Reguły garderoby dla wspólnego pipeline'u (wspolne/pipeline/run.py garderoba).
 Moduły: N / L korpusy dolne (0–2120) szafki na wprost i po lewej (L przodem w stronę +x), GN / GL korpusy górne
-(2120–2583), S1/S2 skrzynki szuflad (płyta 16). Fronty chowane, TIP-ON, bez uchwytów.
+(2120–2582), S1/S2 skrzynki szuflad (płyta 16). Fronty chowane, TIP-ON, bez uchwytów.
 Wszystkie wymiary i położenia otworów w pełnych mm (kalkulator meble.pl)."""
 import math
 import os
@@ -98,7 +98,7 @@ def _pilot(P, loc, code, side, pos, d, depth, partner, plate=False):
 
 
 def dodatkowe_otwory(P, parts, loc):
-    """nawierty środków Ø5 × 5 pod otwory wiercone otwornicą przez użytkownika (przewód wentylacyjny w LB1,
+    """nawierty środków Ø5 × 5 pod otwory wiercone otwornicą przez użytkownika (przewód wentylacyjny w GLB1,
     gniazdko w LB2) i nawierty pilotowe Ø3 × 12 pod prowadniki zawiasów frontów chowanych F1, F2"""
     dane = M.wczytaj(os.path.dirname(os.path.abspath(__file__)))
     items = dane['items']
@@ -158,7 +158,7 @@ FORMATKI = [
             'albo wykonuje użytkownik; ' + DOL),
     F('LB2', 'L dół: bok przy ścianie przedniej', okleina='1DL + 1SZ (dół)', nawierty='NAWIERT ŚRODKA Ø5 × 5 (łączniki od środka)',
       uwagi='WYCIĘCIE NAROŻNIKA 129 × 335 (dolny narożnik przy ścianie lewej, wokół gzymsu): w kalkulatorze jako wycięcie '
-            'albo wykonuje użytkownik; otwór Ø68 (otwornica do puszek) wierci użytkownik wg nawiertu środka: gniazdo montowane na LB2, przewód z puszki w ścianie; ' + DOL),
+            'albo wykonuje użytkownik; otwór na gniazdko (wymiar wg wybranego gniazda) wierci użytkownik wg nawiertu środka: gniazdo montowane na LB2, przewód z puszki w ścianie; ' + DOL),
     F('LT', 'L dół: plecy (od 335 do wieńca LW, nad gzymsem)', okleina='', nawierty='BRAK (łączniki od środka)'),
     F('LW', 'L dół: wieniec na 2120 (sufit części otwartej)', okleina='1DL', nawierty='BRAK (łączniki od środka)'),
     F('LS', 'L dół: półki nad butami (335, 596, 858)', okleina='1DL', nawierty='BRAK (łączniki od środka)'),

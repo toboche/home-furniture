@@ -44,8 +44,8 @@ Przydatne: miernik laserowy, poziomica (najlepiej 2 m), taśma malarska, listwa 
 | V24 | to samo dla korpusu L: złożenie obok i dosunięcie do ściany lewej nad gzymsem | wolna podłoga ok. 700 × 895 | 2026-11-19: nieaktualne, montaż wg `ustalenia.md` (N składany na środku pokoju, L na miejscu na łącznikach od środka) |
 
 ## 4. Makieta z taśmy (zalecane)
-- Na podłodze: obrys N (od boku pionu +3 do prawej ściany −3, głębokość 583 od ściany tylnej) i obrys L (705 od ściany lewej, od 583 do 1478).
-- Na ścianach: linie 335 (dolna półka), 2120 (wieniec), 2037 (oś drążka), 2583 (góra szafek).
+- Na podłodze: obrys N (703–1825 od ściany lewej, głębokość 576 od ściany tylnej) i obrys L (703 od ściany lewej, od 576 do 1488).
+- Na ścianach: linie 335 (dolna półka), 2120 (wieniec), 2037 (oś drążka), 2582 (góra szafek).
 - Sprawdź z otwartymi drzwiami do garderoby, że wolna podłoga (ok. 1100 × 900) jest wygodna.
 
 Po pomiarach: wyniki wpisać tutaj, różnice nanieść w `pomiary.md`, przeliczyć model (`python3 wspolne/pipeline/run.py garderoba`) i rozkrój.

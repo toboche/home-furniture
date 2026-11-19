@@ -8,7 +8,7 @@ i przeliczenie (`python3 wspolne/pipeline/run.py garderoba`), nigdy ręcznie w p
 ## 1. Pliki
 | Plik | Zawartość |
 |---|---|
-| `wyniki/formatki.csv` | płyta 18 mm: 27 pozycji / 36 sztuk / 21,17 m² (kod, nazwa, DL, SZ, SZT, OKLEINA, NAWIERTY, UWAGI) |
+| `wyniki/formatki.csv` | płyta 18 mm: 27 pozycji / 36 sztuk / 21,19 m² (kod, nazwa, DL, SZ, SZT, OKLEINA, NAWIERTY, UWAGI) |
 | `wyniki/formatki_16mm.csv` | płyta 16 mm na skrzynki szuflad: 6 pozycji / 10 sztuk / 1,52 m², bez okleiny |
 | `wyniki/kalkulator_nawierty.csv`, `wyniki/kalkulator_nawierty_16mm.csv` | nawierty w formacie kalkulatora centrum.meble.pl (14 typów formatek, 195 wierszy dla 18 mm) |
 | `wyniki/arkusz_nawiertow.pdf` | rysunki wszystkich formatek z otworami (dla innego dostawcy albo do sprawdzenia) |
@@ -41,7 +41,7 @@ i przeliczenie (`python3 wspolne/pipeline/run.py garderoba`), nigdy ręcznie w p
   bo mają konfirmaty przesunięte o 25; NW z GNG). Formatki bez nawiertów dodać z `formatki.csv`: NO-1, NO-2, F1–F4 oraz cały
   korpus dolny L poza LB2 (LB1, LT, LW, LK, LS-1..3) i korpus górny GL poza GLB1 (GLB2, GLD, GLG, GLT): oba składane na miejscu
   na łącznikach od środka, bez konfirmatów. LB2 i GLB1 mają tylko nawierty środków (gniazdko, przewód wentylacyjny).
-  Liczba pozycji w kalkulatorze będzie inna niż 27; zgadzać się mają sztuki (36) i m² (21,17).
+  Liczba pozycji w kalkulatorze będzie inna niż 27; zgadzać się mają sztuki (36) i m² (21,19).
 - Wszystkie formatki mają poniżej 2500 mm (najdłuższa 2120), więc kalkulator meble.pl przyjmie nawierty dla wszystkich;
   wszystkie współrzędne są w pełnych mm.
 - Fronty F1, F2 (530 × 422, zawiasy na krawędzi 422): szablon zawiasów Blum INSERTA (F1 LEWY, F2 PRAWY), 2 puszki Ø35,
@@ -59,14 +59,14 @@ i przeliczenie (`python3 wspolne/pipeline/run.py garderoba`), nigdy ręcznie w p
 ## 5. Obróbka poza standardem (zgłosić dostawcy albo zrobić samemu)
 - LB1: wycięcie dolnego narożnika po stronie ściany lewej (krawędź tylna, przeciwna do oklejonej przedniej):
   184 wzdłuż dolnej krawędzi × 335 w górę (wokół gzymsu i rury).
-- LB2: to samo wycięcie 129 × 335 (wokół gzymsu) oraz otwór Ø68 na gniazdko (środek 210 od ściany lewej i 195 od podłogi,
-  wg nawiertu środka) – robi użytkownik otwornicą.
+- LB2: to samo wycięcie 129 × 335 (wokół gzymsu). Otwór na gniazdko (środek 210 od ściany lewej i 195 od podłogi, wg nawiertu
+  środka) wierci użytkownik po wyborze gniazda; w zamówieniu tylko nawiert środka Ø5 × 5.
 - Pozostałe formatki są prostokątami.
 
 ## 6. Okucia i drobne elementy
 Pełna lista z kodami: `komponenty.md`. W skrócie: 4 zawiasy 70T3790.TL (INSERTA) + 4 prowadniki 173L6100 + 8 wkrętów 609.1500,
-2 ograniczniki 86° 70T3553 (F2), 2 TIP-ON 956.1004 + 2 adaptery 956.1201, MOVENTO 760H5000S i 760H6000S z TIP-ON BLUMOTION
-T60L7340 (L1), zaczepy T51.7601, adaptery T60.000D (w komplecie) i wałki T60.1125W; konfirmaty 7 × 50: 117 + zapas (korpusy N, GN), ok. 55 łączników narożnych do korpusów L i GL i 220–260 wkrętów 3,5 × 15 do nich i 5 × 40: 34 + zapas (skrzynki); zaślepki ok. 6;
+4 ograniczniki 86° 70T3553 (F1 i F2), 2 TIP-ON 956.1004 + 2 adaptery 956.1201, MOVENTO 760H5000S i 760H6000S z TIP-ON BLUMOTION
+T60L7340 (L1), zaczepy T51.7601, adaptery T60.000D (w komplecie) i 1 wałek T60.1125W (docięty na 267 i 609); konfirmaty 7 × 50: 117 + zapas (korpusy N, GN), ok. 55 łączników narożnych do korpusów L i GL i 220–260 wkrętów 3,5 × 15 do nich i 5 × 40: 34 + zapas (skrzynki); zaślepki ok. 6;
 3 drążki Ø25 (534, 534, 876); 4 kątowniki i 4 zatrzaski magnetyczne do osłon NO; wkręty 4 × 30 (ok. 10) łączące korpusy
 górne z dolnymi; kratka wentylacyjna; mocowanie do ścian do ustalenia.
 
@@ -76,9 +76,8 @@ górne z dolnymi; kratka wentylacyjna; mocowanie do ścian do ustalenia.
 - Płyta 16 mm innego producenta: sprawdzić u dostawcy minimalne wymiary formatki z nawiertami (S1C, S2C mają 151 szerokości).
 - Kalkulator: po wpisaniu nawiertów obejrzeć podgląd 2D strony „Tył (B)” (m.in. GNB-2, NB-1, NP, NT, GND, GLB1, GLD, LB2),
   czy otwory nie są odbite względem `arkusz_nawiertow.pdf`.
-- `wyniki/podsumowanie.json` podaje 16 zaślepek: to błąd skryptu (nie widzi, że łby na LB1, LB2, GLB1, GLB2 zasłania ściana
-  i pion). Kupić ok. 6 (`komponenty.md`). Poprawka czeka na osobny PR w `wspolne/`.
-- Korpusy: każda szafka to korpus dolny (0–2120: N, L) i górny (2120–2582: GN, GL). Kody GN… i GL… to formatki korpusów
+- `wyniki/podsumowanie.json` podaje 16 zaślepek: skrypt liczy też łby pod dnami skrzynek (10), których nie widać. Kupić ok. 6
+  (`komponenty.md`). Poprawka czeka na osobny PR w `wspolne/`.
   górnych, nie pomyłka.
 - Szafka na wprost ma 1122 szerokości (połowy 534); wcześniejsze dokumenty mogą mieć 1116 albo 1117.
 - Po złożeniu zamówienia porównać liczbę pozycji, sztuk i m² z punktem 1 i wpisać numer rozkroju i cenę do `ustalenia.md`.
