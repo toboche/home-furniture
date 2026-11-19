@@ -5,14 +5,14 @@
   "m2": 4.46
  },
  "kalkulator": {
-  "typy_formatek": 14,
-  "wiersze": 146
+  "typy_formatek": 12,
+  "wiersze": 136
  },
  "laczniki": {
   "konfirmaty": 50,
-  "kolki": 8,
-  "otwory_pod_kolki": 8,
-  "otwory_nieprzelotowe": 37,
+  "kolki": 6,
+  "otwory_pod_kolki": 6,
+  "otwory_nieprzelotowe": 35,
   "puszki_zawiasow": 3
  },
  "zaslepki": {
@@ -22,7 +22,7 @@
   "widoczne_miejsca": []
  },
  "polaczenia": 22,
- "otwory_lacznie": 158,
+ "otwory_lacznie": 154,
  "kolizje_otworow": 0,
- "strony_arkusza": 14
+ "strony_arkusza": 12
 }

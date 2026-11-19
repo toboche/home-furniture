@@ -1,15 +1,15 @@
-# Kuchnia: komponenty i zakupy poza płytami (stan 2026-11-19, po audycie v2)
+# Kuchnia: komponenty i zakupy poza płytami (stan 2026-11-19, po audycie v3)
 
-Liczby łączników z `wyniki/podsumowanie.json` (przeliczenie 2026-11-18). Pozycje oznaczone DO DECYZJI czekają na
-punkty z audytu v1 (sekcja B), patrz `ustalenia.md` i rozmowa.
+Liczby łączników z `wyniki/podsumowanie.json` (przeliczenie 2026-11-19). Pozycje DO DECYZJI: patrz `ustalenia.md`.
 
 ## Łączniki korpusów (z modelu)
 | POZYCJA | ILOŚĆ | UWAGI |
 |---|---|---|
 | Konfirmat 7 × 50 | 50 | wszystkie łby ukryte (0 widocznych) |
 | Złącze mimośrodowe Häfele Minifix 15 (obudowa + trzpień B 24, gwint Euro Ø5) | 5 | SOB-1 (widoczny bok): 3 × SOT, 1 × SOW, 1 × SOP |
-| Kołek Ø8 × 30 | 8 | SOB-1: 2 × SOT, 2 × SOW, 2 × SOP; 2 × WSZ (wklejone w WSZ) |
-| Zatrzask magnetyczny meblowy, przykręcany | 2 | WSZ u góry (pod WSW) |
+| Kołek Ø8 × 30 | 6 | SOB-1: 2 × SOT, 2 × SOW, 2 × SOP |
+| Zatrzask magnetyczny meblowy, przykręcany | 2 | WSZ (na listwach oporowych) |
+| Listwa 10 × 10 (drewno / ALU), dł. 236 | 2 | oporowe za WSZ, na WSS i pod WSW, klejone |
 | Podpórka półki Ø5 | 4 | pod wkładaną półkę SOD |
 
 ## Front F1 (Blum)
@@ -17,10 +17,10 @@ punkty z audytu v1 (sekcja B), patrz `ustalenia.md` i rozmowa.
 |---|---|---|---|
 | Zawias CLIP top 110°, bez sprężyny, nakładany, puszka na wkręty | 70T3550.TL | 3 | Y 1850, 2210, 2576,5 (nad okapem) |
 | Prowadnik krzyżakowy 0 mm, na wkręty | 173L6100 | 3 | |
-| TIP-ON do drzwi, krótki, z magnesem | 956.1004 | 1 | do drzwi poniżej 1300; drugi dokupić, jeśli jeden za słaby |
+| TIP-ON do drzwi, krótki, z magnesem | 956.1004 | 1 | do drzwi poniżej 1300; SOB-1 ok. Y 1850 (dolna część frontu nad okapem); drugi dokupić, jeśli jeden za słaby |
 | Adapter prosty przykręcany do TIP-ON | 956.1201 | 1 | na wewnętrznym licu SOB-1 ok. Y 1850, wkręty 3,5 × 15 |
 | Wkręty do płyty 3,5 × 15 | ok. 20 | prowadniki, adaptery, zawiasy |
-| Wkręty okapu 3,5 × 16 | 4 | w komplecie z okapem; nawierty pilotowe Ø3 × 5 robi sklep |
+| Wkręty okapu | 2 × 3,5 × 16 + 2 × 3,5 × 13 | 16 z kompletu do SOB-2; 13 do widocznego SOB-1; nawierty Ø3 × 5 robi sklep |
 
 ## Mocowanie szafek i półki LED
 | POZYCJA | ILOŚĆ | UWAGI |
@@ -46,7 +46,7 @@ punkty z audytu v1 (sekcja B), patrz `ustalenia.md` i rozmowa.
 | POZYCJA | ILOŚĆ | UWAGI |
 |---|---|---|
 | Krótki odcinek rury spiro Ø150 na króciec | z rury 1 m | króciec Ø148,5 zewn., 26 wysokości: rura nachodzi na króciec, opaska/taśma |
-| Kolano 15° Ø150 tłoczone (ZAPAS, opcjonalnie) | 2 | tylko jeśli pochylona rura (28,5 na ok. 625) nie wejdzie bez naprężeń |
+| Kolano 15° Ø150 tłoczone (np. Alnor BPL-150-15) | 2 | przejście do pionu o 28,5, z krótkim odcinkiem rury między kolanami |
 | Rura spiro Ø150 | 1 m | pion ok. 380 + poziom ok. 170 + wsunięcia |
 | Kolano 90° Ø150 tłoczone | 1 | pod sufitem |
 | Redukcja mimośrodowa 150/125 | 1 | w wąskiej szafce, płaską stroną do ściany głównej, wąskim końcem w rurze ze ścianki (wystaje 115) |
@@ -61,6 +61,5 @@ punkty z audytu v1 (sekcja B), patrz `ustalenia.md` i rozmowa.
 |---|---|---|
 | Złączki Wago 221 | 3 | L, N, PE |
 | Puszka natynkowa | 1 | w SO nad SOP |
-| Przelotka gumowa Ø25 | 1 | otwór w SOT na przewód |
+| Przelotka gumowa Ø25 | 1 | otwór w SOT na przewód; przewód w dół przez podcięcia 25 × 25 w SOP i SOD |
 
-## Do decyzji

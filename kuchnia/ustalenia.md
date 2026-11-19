@@ -79,8 +79,8 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
   (producent: jak najgładszy przewód, zagięcia najwyżej 90°).
 - Średnica: rura w ścianie Ø125 wewnętrzna (130 zewnętrzna). Redukcja 150 → 125: od 2026-11-16 w wąskiej szafce,
   za kolanem 90° Ø150 (wcześniej pod sufitem w pionie, jeszcze wcześniej na wylocie okapu).
-- Trasa (aktualna od 2026-11-16): wylot Ø150 → przesunięcie do tyłu dwoma kolanami 45° Ø150 między SOD a SOP
-  (z 197,5 na 109,5) → pion Ø150 przez SOP (otwór Ø170) → kolano 90° Ø150 pod sufitem → poziomo Ø150 (oś Y 2577,
+- Trasa (aktualna od 2026-11-19): króciec wylotu Ø148,5 (z 138) z nasuniętym odcinkiem rury Ø150 → przejście do tyłu
+  o 28,5 między SOD a SOP (2 kolana 15° Ø150 z krótkim odcinkiem, decyzja 2026-11-19) → pion Ø150 (z 109,5) przez SOP (otwór Ø170) → kolano 90° Ø150 pod sufitem → poziomo Ø150 (oś Y 2577,
   z 109,5) przez SOB-2 i WSB-1 (otwory Ø160) → redukcja mimośrodowa 150/125 w wąskiej szafce (płaską stroną do ściany
   głównej, oś na z 97) → Ø125 przez WSB-2 (otwór Ø140) do ścianki. Otwory wycina użytkownik, sklep wierci środek Ø5 × 5.
 
@@ -159,17 +159,16 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
   (wg użytkownika: kołnierz na środku, nie dosunięty). Oś wylotu z 197,5 (było 218). Grubość kołnierza: w modelu ok. 4, nie wpływa na zamówienie
   (okap i tak zwisa o nią poniżej linii półki; wysokość SOD liczona od góry korpusu).
 - Półka SOD tuż nad okapem: 10 nad korpusem okapu (Y 1786–1804), 514 × 280, na 4 podpórkach Ø5 (luz 1 z boków),
-  bez konfirmatów. Wkładana na końcu, po montażu okapu i rury: wycięcie od przodu na wylot Ø150 (szer. ok. 170,
-  do ok. 112 od tyłu), wycina użytkownik. Krawędzie wycięcia bez okleiny (pytanie: CNC w meble.pl?).
-- Półka SOP przesunięta: dół Y 2104 (przegroda między SOD i SOP ok. 300; było 2150). Przesunięcie 2 × 45° mieści się
-  między nimi (do ok. Y 2048). Środkowy zawias F1 przeniesiony na Y 1950 (prowadnik nie trafia w SOD ani SOP);
-  mimośród SOT na Y 2040 (było 2095).
+  bez konfirmatów. Wkładana na końcu, po montażu okapu i rury: wycięcie od przodu na wylot (aktualnie: szer. 170, R85
+  wokół z 138, najgłębiej 35 od tyłu; patrz 2026-11-18), wycina użytkownik, krawędzie silikonem.
+- Półka SOP przesunięta: dół Y 2104 (przegroda między SOD i SOP ok. 300; było 2150). Przejście do pionu mieści się
+  między nimi (do ok. Y 1992). Zawiasy F1: patrz 2026-11-18 (1850, 2210, 2576,5). Mimośród SOT na Y 2040 (było 2095).
 
 ### 2026-11-16: okucia F1, wycięcie SOD, wsporniki
 - F1 (549 × 1164, ok. 7,5 kg, push-to-open, zawiasy po prawej): 3 zawiasy Blum CLIP top 110° BEZ sprężyny, nakładane,
-  puszka na wkręty (70T3550.TL) + 3 prowadniki krzyżakowe 0 mm na wkręty (173L6100); 2 × Blum TIP-ON do drzwi,
-  wersja przedłużona, sprężyna standardowa (956A1004) na adapterze prostym przykręcanym (956A1201) na wewnętrznym licu
-  SOB-1 przy przodzie (wkręty 3,5 × 15, nie przechodzą przez widoczny bok), nad okapem: ok. Y 1850 i ok. Y 2550.
+  puszka na wkręty (70T3550.TL) + 3 prowadniki krzyżakowe 0 mm na wkręty (173L6100); TIP-ON do drzwi: od 2026-11-19
+  1 × 956.1004 (krótki z magnesem) na adapterze 956.1201 na wewnętrznym licu SOB-1 przy przodzie (wkręty 3,5 × 15,
+  nie przechodzą przez widoczny bok), ok. Y 1850 (pierwotnie 2 × 956A1004 na 1850 i 2550).
   Płytka TIP-ON na froncie w komplecie. Z TIP-ON tylko zawiasy bez sprężyny (zalecenie Blum).
 - SOD: wycięcie na wylot wycina użytkownik, krawędzie wycięcia zabezpieczone silikonem.
 - Półka LED na prętach M8 w betonie (decyzja 2026-11-16), patrz „Mocowanie” wyżej.
@@ -254,13 +253,27 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
   (RCD typ A zamiast AC, rozłącznik 2P) bez zmian w projekcie, użytkownik potwierdzi z elektrykiem poza projektem;
   półka 18 mm na prętach M8 zostaje (audyt proponował 36 mm lub wsporniki). Nietrafne: zamiana kolumn w `fronty_metod.csv`.
 
+### 2026-11-19: audyt v3 (`audyt/v3.md`)
+- KU3-01: zaślepka WSZ na kołkach nie dała się włożyć (kołek wymaga uniesienia 12, w świetle 168 jest 0 luzu).
+  Kołki usunięte. WSZ 236 × 165 (luz 1 z boków, 3 u góry), wkładana poziomo od przodu na 2 listwy oporowe 10 × 10
+  (na WSS i pod WSW, z 185–195, przykleja użytkownik), trzymana 2 zatrzaskami magnetycznymi.
+- KU3-05: wkręty okapu w widocznym SOB-1 3,5 × 13 (w SOB-2 3,5 × 16 z kompletu); w SOP podcięcie 25 × 25 w tylnym
+  prawym narożniku na przewód okapu (jak w SOD).
+- KU3-03: otwory Ø160 w SOB-2/WSB-1 wycinać otwornicą z obu stron, przed montażem, płyta podparta (górna krawędź
+  otworu 3 pod wieńcem, 21 do góry boku).
+- KU3-02: przejście wylot → pion: sztywna rura pochylona o 2,6° nie siądzie na króćcu 26 (luz Ø148,5 / Ø150 to
+  0,75 na stronę, odchylenie na 26 to ok. 1,2). Decyzja użytkownika: 2 kolana 15° Ø150 (np. Alnor BPL-150-15) z krótkim
+  odcinkiem; model: króciec 26, przejście do Y ok. 1992, SOP zostaje na 2104; środek otworu w SOP wraca na z 109,5.
+- KU3-04: F1 nie ma w CSV kalkulatora (pipeline nie generuje frontów, sekcja C): puszki wpisać ręcznie w widoku
+  od strony zawiasów (337,5 / 697,5 / 1064 od dołu, 22,5 od prawej krawędzi patrząc od przodu). Położenie TIP-ON
+  ustawia użytkownik na miejscu (bez pilotów).
+
 ## Do zmierzenia przy pomiarach weryfikacyjnych w mieszkaniu
 - [ZMIERZONE 2026-11-18: 9–12, SO głębsza do 304] O ile płytki wystają przed ścianę nad nimi.
 
 ## Założenia do potwierdzenia
-- Położenie okapu w głąb (2026-11-16): kołnierz z 10–300, korpus na środku kołnierza (z 28,5–281,5), oś wylotu 197,5
-  od ściany głównej (94 od tyłu korpusu do krawędzi wylotu). Sprawdzić, od czego liczone są otwory montażowe 35 i 215
-  (przód korpusu okapu czy przód boku szafki).
+- [ZMIERZONE 2026-11-18] Położenie okapu w głąb: kołnierz z 14–304, korpus z 32–285, oś wylotu z 138, otwory
+  montażowe 35 i 215 od lica przodu korpusu (z 250 i 70).
 - Luz 2 mm wąskiej szafki do ścianki.
 
 ### 2026-11-14: bok SOB-1 bez konfirmatów, półka SOP, zasilanie okapu
@@ -306,3 +319,5 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
 - 2026-11-18: weryfikacja projektu; profil LED przy słupku od 13, podcięcie w SOD na przewód.
 - 2026-11-19: audyt v2: szczelina F1 2 pod TIP-ON, TIP-ON 956.1004, Minifix 14 / kołek 10 w SOB-1.
 - 2026-11-19: decyzje po audycie v2: MAXIMERA 13, elektryka poza projektem, pręty M8 w 18 mm zostają.
+- 2026-11-19: audyt v3: WSZ na listwach i magnesach (bez kołków), podcięcie w SOP, wkręty okapu 3,5 × 13 w SOB-1.
+- 2026-11-19: przejście wylot → pion na 2 kolanach 15° Ø150.
