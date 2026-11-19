@@ -247,7 +247,7 @@ Sekcja C (zmiany w `wspolne/pipeline/`: kolizje otworów lico A–lico B i kraw�
 ## 2026-11-18 – mocowanie F6 i potwierdzenia (v62)
 - Potwierdzone: X = 467 to gzyms na pionie pod PP1/KP1; sufit nad otworem wentylacyjnym = J (2661), środek rury 243 od sufitu → y 2418; otwornicę Ø127 użytkownik kupi.
 - F6 (z prowadnikami 173H7130 zawiasów F5): dół – listwa oporowa LF6 200×60 (płyta 18, bez okleiny) leżąca płasko na tyle F6 (x 1505–1705, y 2206,5–2266,5 [od v65: y 2208–2268], z 622–640), klej + 4 wkręty Ø3,5×30 do F6 (maks. 12 mm w F6), stoi na PP3-2 i jest z nią skręcona 2 konfirmatami od spodu (dostęp z komory F7). Zastępuje 2 dolne kątowniki 25×25 (x 1510 i 1680). Lewa góra (strona zawiasów F5): kątownik 40×40 (x 1505–1545, y 2594–2634) zamiast 25×25. Prawy dolny kątownik na boku przesunięty y 2260 → 2275 (miejsce na LF6). Strefa prowadników (x 1500–1545, y 2277–2321 i 2530–2575) wolna.
-- Wkręty w F6: prowadniki 173H7130 i kątowniki Ø3,5×12 (front 18 mm, nie przebić lica).
+- Wkręty w F6: prowadniki 173H7130 i kątowniki Ø3,5×12 (front 18 mm, nie przebić lica). [od v70: prowadniki 173H7130 na 609.1500 Ø3,5×15; Ø3,5×12 tylko kątowniki]
 - Ogranicznik na F3 pominięty (uchwyty wierci użytkownik; uchwyt F5 dalej od krawędzi).
 - PP3-2 ma teraz inne nawierty niż PP3-1/PP3-3 (osobny typ w kalkulatorze).
 - Wyniki v62: formatki 41 pozycji / 53 sztuki / 15,39 m²; 424 otwory, 58 połączeń, 0 kolizji; 154 konfirmaty, 26 widocznych łbów; kalkulator 32 typy / 366 wierszy.
@@ -303,7 +303,7 @@ Sekcja C audytu v2 (otwory.py, kalkulator.py – układ „Tył”, zaokrągleni
 - NW: dystanse 5 mm za NWT także przy dolnej krawędzi (y 1743, pod NWP-1); łączniki NWB-2 ↔ KB3 w z 100–450 [poprawione 2026-11-19: z 210–550] (poza strefą prowadników zawiasów F3/F4, z ok. 578–628).
 - Widok: LF6 rozsuwa się razem z F6; usunięta pusta warstwa „Dodatki” z listy stałych warstw. Bryły koncepcyjne (ukryte, „zamysł”) zostają bez zmian jako historia.
 Sekcja B audytu v3 (bramki w kalkulatorze meble.pl) jest w `zamowienie.md`; Sekcja C – osobny PR w `wspolne/`.
-- Uzupełnienie 2026-11-19: otwór wentylacyjny w ścianie Ø125 (WN3 w pomiary.md). Niezgodności Q (118 vs 113 z U i R) oraz odległości prawej ściany od maszyn (523 w modelu vs 530 zmierzone) zostają bez zmian (decyzja użytkownika; nie wpływają na szafki).
+- Uzupełnienie 2026-11-19: otwór wentylacyjny w ścianie Ø125 (WN3 w pomiary.md). Niezgodności Q (118 vs 113 z U i R) oraz odległości prawej ściany od maszyn (523 w modelu vs 530 zmierzone [od v69: 525 w modelu przy A = 1741]) zostają bez zmian (decyzja użytkownika; nie wpływają na szafki).
 - Łączenie pasów z dolnymi szafkami (2026-11-19, decyzja użytkownika): wkręty od góry z wnętrza pasa – L2P-1 w krawędzie L1B1/L1B2, PP3-1 w RDW/RDW2; 4 × 40, po 4 na połączenie. [POPRAWIONE v70: L2P-1 → L1W, wkręty 4 × 30]
 
 ## 2026-11-19 – szerokość pokoju 1741, pion 1368, luzy przy ścianach 3 mm (v69)

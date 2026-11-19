@@ -121,8 +121,8 @@ var ITEMS=[
      Kosz zakładam 320 × 320 × 550 (podano 320x3230), rurę odkurzacza jako 500 ponad korpusem (do 1000 od podłogi). */
   /* Żelazko: bez osobnej półki w lewej szafce, w razie potrzeby trafia do prawej. */
 
-  /* Fronty w pasie od 1743 do 2658: dwa rzędy po 456 z odstępem 3 mm, grubość 18, front do z = 658.
-     Odstęp 3 mm między modułami (po 1,5 mm z każdej strony granicy 613 i 1221). */
+  /* Fronty w pasie od 1743 do 2655: dwa rzędy po 454,5 z odstępem 3 mm, grubość 18, front do z = 658.
+     Odstęp 3 mm między modułami (po 1,5 mm z każdej strony granicy 615 i 1221). */
   {n:'F1: Front lewa, góra (609 × 454,5)',layer:'Fronty',x:4.5,y:2200.5,z:640,w:609,h:454.5,d:18,c:0x2f9e8f,o:0.55},
   {n:'F2: Front lewa, dół (609 × 454,5)',layer:'Fronty',x:4.5,y:1743,z:640,w:609,h:454.5,d:18,c:0x2f9e8f,o:0.55},
   {n:'F3: Front nad maszynami, góra (603 × 454,5)',layer:'Fronty',x:616.5,y:2200.5,z:640,w:603,h:454.5,d:18,c:0x2f9e8f,o:0.55},
@@ -134,7 +134,7 @@ var ITEMS=[
   {t:'cyl',n:'Kratka wywiewu w froncie stałym (króciec Ø123 do rury Ø125; rozeta przyjęta Ø150)',layer:'Fronty',cx:1626,cy:2418,z:640,r:75,len:19,c:0xe0a526},
   /* Kanał wentylacyjny: rura okrągła Ø 125 od otworu w ścianie (z = 362) do tylnej strony frontu stałego (z = 640), zamocowana do szafki, uszczelniona pianką przy ścianie i przy froncie. */
   {t:'cyl',n:'Kanał wentylacyjny (rura Ø 125, z 362 do 640)',layer:'Kanał wentylacyjny',cx:1626,cy:2418,z:362,r:62.5,len:278,c:0x9aa5ad},
-  /* Listwy pod wkręty frontu stałego (18 × 18), po wewnętrznej stronie przodu komory. */
+  /* Mocowanie frontu stałego F6: kątowniki i listwa LF6 (niżej), po wewnętrznej stronie przodu komory. */
   {n:'Kątownik 25×25 pod F6, bok prawy: ramię przy froncie',layer:'Kątowniki pod F6',x:1695,y:2275,z:638,w:25,h:25,d:2,c:0x9aa5ad},
   {n:'Kątownik 25×25 pod F6, bok prawy: ramię przy boku',layer:'Kątowniki pod F6',x:1718,y:2275,z:615,w:2,h:25,d:25,c:0x9aa5ad},
   {n:'Kątownik 25×25 pod F6, bok prawy: ramię przy froncie',layer:'Kątowniki pod F6',x:1695,y:2550,z:638,w:25,h:25,d:2,c:0x9aa5ad},
@@ -233,7 +233,7 @@ var ITEMS=[
   {n:'Kuweta we wnęce po F8 (600 × 400 × 400)',layer:'Kuweta we wnęce',x:1242,y:0,z:458,w:400,h:400,d:600,c:0xbfa98a},
 
   /* Ścianki boczne (płyta 18 mm). Boki stoją prosto na kafelkach. Lewa ściana pokoju jest lewym bokiem dolnej lewej szafki (odkurzacz bezprzewodowy, gniazdko GN1).
-     Moduł nad maszynami ma własne boki (po 1 mm luzu od boków sąsiadów). */
+     Moduł nad maszynami ma własne boki, styk 0 mm z bokami sąsiadów. */
   {n:'L1B1: L1: bok prawy (przy maszynach)',layer:'Ścianki boczne',x:597,y:0,z:3,w:18,h:1743,d:637,c:0xcdbb95},
   {n:'L2B-1: L2: bok lewy (pas)',layer:'Ścianki boczne',x:3,y:1743,z:3,w:18,h:912,d:637,c:0xcdbb95},
   {n:'L2B-2: L2: bok prawy (pas)',layer:'Ścianki boczne',x:597,y:1743,z:3,w:18,h:912,d:637,c:0xcdbb95},
@@ -247,7 +247,7 @@ var ITEMS=[
   {n:'PB2: Prawa: bok prawy, góra',layer:'Ścianki boczne',x:1720,y:507,z:367,w:18,h:1236,d:273,c:0xcdbb95},
   {n:'PB3: Prawa: bok prawy, pas',layer:'Ścianki boczne',x:1720,y:1743,z:367,w:18,h:912,d:273,c:0xcdbb95},
 
-  /* Ścianki tylne (płyta 18 mm, wpuszczone między boki, tył równo z tylną krawędzią boków). Osobna warstwa. Tył prawej szafki przy otworze wywiewu jest rozcięty (otwór 140 × 140 na 2339 do 2479). */
+  /* Ścianki tylne (płyta 18 mm, wpuszczone między boki, tył równo z tylną krawędzią boków). Osobna warstwa. W PT3 otwór Ø127 pod kanał (środek x 1626, y 2418). */
   {n:'L1T: L1: tył',layer:'Ścianki tylne',x:21,y:0,z:3,w:576,h:1743,d:18,c:0x9c8b6e,o:0.9},
   {n:'L2T: L2: tył (pas)',layer:'Ścianki tylne',x:21,y:1743,z:3,w:576,h:912,d:18,c:0x9c8b6e,o:0.9},
   {n:'NWT: Wnęka nad maszynami: tył',layer:'Ścianki tylne',x:633,y:1743,z:5,w:570,h:912,d:18,c:0x9c8b6e,o:0.9},

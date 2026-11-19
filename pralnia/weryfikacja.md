@@ -9,9 +9,9 @@ Kontrola automatyczna: 428 otworów, 58 połączeń, 0 kolizji otworów; 154 kon
 - Kalkulator przyjął przy wycenie wymiary z połówką mm i formatki 100 mm. KP1 zamawiamy jako 200×126 (skracana samodzielnie). Do sprawdzenia przy wpisie: nawierty Ø3×12.
 
 ## Do dopracowania / potwierdzenia
-1. F6: zaprojektowane v62 (LF6 + kątownik 40×40, wkręty 12 mm). Przy montażu sprawdzić, czy prowadniki 173H7130 mieszczą się w strefie x 1500–1545 (wymiar przyjęty, nie z karty Blum).
+1. F6: zaprojektowane v62 (LF6 + kątownik 40×40; wkręty 12 mm tylko do kątowników F6, prowadniki 173H7130 na 609.1500 15 mm). Przy montażu sprawdzić, czy prowadniki 173H7130 mieszczą się w strefie x 1500–1545 (wymiar przyjęty, nie z karty Blum).
 2. Pion: zmierzone U = 1368 (najmniejsza; v69: tył kolumny do x 1365, luz 3 mm). Opcjonalnie: Q (gzyms przy maszynach) – 118 nie zgadza się z U.
-3. Montaż prawego dołu: skręcony na podłodze i wsunięty w całości (konfirmaty PP1 → PB2/PT2 od spodu). Prześwit nad gzymsem 22 mm.
+3. Montaż prawego dołu: skręcony w całości poza pralnią (albo na stojąco, z konfirmatami PP1 → PB2/PT2 przed dołożeniem KB1/PB1/PT1) i wsunięty; ustalenia.md 2026-11-19 (v70). Prześwit nad gzymsem 22 mm.
 4. Odkurzacz bezprzewodowy w L1: mocowanie (bez UTRUSTA). Wysokość L1P (619 × 574, na 4 podpórkach).
 5. Audyt v2 – rozstrzygnięte 2026-11-19: piloty zostają Ø3 × 12; PB2/PB3 przykręcone do prawej ściany (gzyms g-k); wieniec dolny L1WD zamówiony luzem.
 6. Przy zamówieniu: oś X strony „Tył (B)” w kalkulatorze, pozycje 3 puszek F9 (zamowienie.md).

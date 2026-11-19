@@ -16,7 +16,7 @@ Liczby łączników, otworów i zaślepek: `wyniki/podsumowanie.json` (źródło
 | Ogranicznik kąta otwarcia 86° do CLIP top 110° | 70T3553 | 9 (+2 F8) | F1 ×2, F2 ×2 (lewa ściana), F7 ×2, F9 ×3 (prawa ściana); F8 ×2 przy montażu (gzyms na prawej ścianie). F10 nie potrzebuje (zawiasy od strony maszyn) |
 | Zawias do drzwi równoległych 95° (F5↔F6) | 79B9590 | 2 | prowadnik na tylnej ściance F6, linia wkrętów 21,5 od lewej krawędzi F6 |
 | Prowadnik do 79B9590 | 173H7130 | 2 | dystans 3 mm, wys. 11,5 (ustawienie fabryczne 79B9590) |
-| Wkręty prowadnika 173H7130 w F6 | 609.1500 (Ø3,5×15) | 4 | skrzydełko prowadnika ok. 2 mm, więc ok. 13 mm w F6 18, zostaje 5 mm do lica (audyt v5) |
+| Wkręty prowadnika 173H7130 w F6 | 609.1500 (Ø3,5×15) | 4 (wliczone w sumę 42 wyżej) | skrzydełko prowadnika ok. 2 mm, więc ok. 13 mm w F6 18, zostaje 5 mm do lica (audyt v5) |
 | Zaślepki puszek (opcjonalnie) | 70.1503 / 70T3504 | – | |
 
 Zawiasy: CLIP top BLUMOTION (samodomykanie), wszystkie INSERTA. F9 (514×1240,5, ok. 7,5 kg): 3 zawiasy. F10 (609×1737, ok. 12,6 kg): 4 zawiasy.
