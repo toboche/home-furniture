@@ -55,6 +55,7 @@ var XRD=A-RU4-LRD;     /* redukcja 150/125 w wąskiej szafce, wąskim końcem w 
 var ZSK=195;           /* tył zaślepki skrzynki (10 przed końcem Ø150 redukcji, oś z 109,5; 2026-11-16: było 172) */
 var YSOD=YOK+10;       /* półka wkładana tuż nad okapem (dół), 10 zapasu (2026-11-16): 1786 */
 var YSOP=YSOD+P+300;   /* półka stała nad okapem (dół): przegroda ok. 300 nad SOD (2026-11-16; było 2150): 2104 */
+var SZT=2;             /* szczelina front F1 – korpus pod TIP-ON (domyślnie 2,0, min. 1,5; audyt v2 KU-04) */
 var YZ1=1850;          /* dolny zawias F1: nad okapem i SOD (audyt v1 KU-02, wariant A, 2026-11-18) */
 var YZ2=2210;          /* środkowy zawias F1: nad SOP (było 1950) */
 var NPW=2;             /* półki w wąskiej szafce (równe przegrody; 2026-11-14: 3 → 2) */
@@ -97,7 +98,7 @@ add([
   {n:'Słupek z piekarnikiem (istniejący, szerokość umowna)',layer:'Kuchnia istniejąca',x:0,y:0,z:J,w:I,h:YS,d:600,c:IST,o:0.5},
   {n:'Płyta grzewcza (istniejąca)',layer:'Kuchnia istniejąca',x:A-E-F,y:C,z:30,w:F,h:6,d:520,c:0x1d1d1f},
   {n:'Przewód zasilający okap (ZA1, ZA2)',layer:'Instalacje',x:A-ZA1-10,y:YS-ZA2-10,z:0,w:20,h:20,d:30,c:0xd85a30},
-  {n:'Kabel LED 24 V (przesuwny)',layer:'Instalacje',x:0,y:YP+PP/2-5,z:J-60,w:30,h:10,d:10,c:0xd85a30},
+  {n:'Kabel LED 24 V, 3 żyły CCT (przesuwny, wprowadzany w rowek przy słupku)',layer:'Instalacje',x:0,y:YP,z:ZLS-5,w:30,h:10,d:10,c:0xd85a30},
   {t:'cyl3',n:'Rura okapu ze ścianki (RU, Ø125 wewn., wystaje 115)',layer:'Instalacje',ax:'x',px:A-RU4/2+20,py:YRU,pz:ZRU,r:RU/2,len:RU4+40,c:RURA},
   {t:'cyl3',n:'Otwór wentylacji grawitacyjnej z kratką (KR, nie zasłaniać)',layer:'Instalacje',ax:'x',px:A-4,py:YS-KR3-KR/2,pz:KR2+KR/2,r:KR/2+20,len:8,c:0xf0f0f0}
 ]);
@@ -131,9 +132,9 @@ add([
   {n:'SOW: SO: wieniec górny',layer:'Półki',x:XSO+P,y:YT-P,z:P,w:SOW-2*P,h:P,d:GKS-P,c:POL},
   {n:'SOD: SO: półka wkładana tuż nad okapem, na podpórkach, z wycięciem od przodu na wylot (wkładana po montażu okapu)',layer:'Półki',x:XSO+P+1,y:YSOD,z:P,w:SOW-2*P-2,h:P,d:GKS-P-2,c:POL},
   {n:'SOP: SO: półka nad okapem (otwór na rurę)',layer:'Półki',x:XSO+P,y:YSOP,z:P,w:SOW-2*P,h:P,d:GKS-P,c:POL},
-  {n:'F1: Front szafki okapowej (549 × 1164)',layer:'Fronty',x:XSO+1.5,y:YP+1.5,z:GKS,w:SOW-3,h:YT-YP-3,d:P,c:FR,o:0.55}
+  {n:'F1: Front szafki okapowej (549 × 1164), 2 przed korpusem (szczelina TIP-ON)',layer:'Fronty',x:XSO+1.5,y:YP+1.5,z:GKS+SZT,w:SOW-3,h:YT-YP-3,d:P,c:FR,o:0.55}
 ]);
-add(zawiasy('F1',XSO+1.5,YP+1.5,SOW-3,YT-YP-3,'prawa',3,GKS,[YZ1,YZ2,YT-1.5-100]));
+add(zawiasy('F1',XSO+1.5,YP+1.5,SOW-3,YT-YP-3,'prawa',3,GKS+SZT,[YZ1,YZ2,YT-1.5-100]));
 
 /* okap DUO 55: kołnierz 551 × 290 pod korpusem szafki (dno), korpus 513 × 253 × 265 na środku kołnierza (2026-11-16) */
 var YKL=YRU-150;       /* początek kolana 90° Ø150 (R ok. 1D): 2427 */

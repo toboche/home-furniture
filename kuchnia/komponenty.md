@@ -1,4 +1,4 @@
-# Kuchnia: komponenty i zakupy poza płytami (stan 2026-11-18, po decyzjach)
+# Kuchnia: komponenty i zakupy poza płytami (stan 2026-11-19, po audycie v2)
 
 Liczby łączników z `wyniki/podsumowanie.json` (przeliczenie 2026-11-18). Pozycje oznaczone DO DECYZJI czekają na
 punkty z audytu v1 (sekcja B), patrz `ustalenia.md` i rozmowa.
@@ -7,7 +7,7 @@ punkty z audytu v1 (sekcja B), patrz `ustalenia.md` i rozmowa.
 | POZYCJA | ILOŚĆ | UWAGI |
 |---|---|---|
 | Konfirmat 7 × 50 | 50 | wszystkie łby ukryte (0 widocznych) |
-| Złącze mimośrodowe Minifix 15 (obudowa + trzpień) | 5 | SOB-1 (widoczny bok): 3 × SOT, 1 × SOW, 1 × SOP |
+| Złącze mimośrodowe Häfele Minifix 15 (obudowa + trzpień B 24, gwint Euro Ø5) | 5 | SOB-1 (widoczny bok): 3 × SOT, 1 × SOW, 1 × SOP |
 | Kołek Ø8 × 30 | 8 | SOB-1: 2 × SOT, 2 × SOW, 2 × SOP; 2 × WSZ (wklejone w WSZ) |
 | Zatrzask magnetyczny meblowy, przykręcany | 2 | WSZ u góry (pod WSW) |
 | Podpórka półki Ø5 | 4 | pod wkładaną półkę SOD |
@@ -17,8 +17,8 @@ punkty z audytu v1 (sekcja B), patrz `ustalenia.md` i rozmowa.
 |---|---|---|---|
 | Zawias CLIP top 110°, bez sprężyny, nakładany, puszka na wkręty | 70T3550.TL | 3 | Y 1850, 2210, 2576,5 (nad okapem) |
 | Prowadnik krzyżakowy 0 mm, na wkręty | 173L6100 | 3 | |
-| TIP-ON do drzwi, przedłużony, sprężyna standard | 956A1004 | 1 | drugi dokupić, jeśli jeden za słaby |
-| Adapter prosty przykręcany do TIP-ON | 956A1201 | 1 | na wewnętrznym licu SOB-1 ok. Y 1850, wkręty 3,5 × 15 |
+| TIP-ON do drzwi, krótki, z magnesem | 956.1004 | 1 | do drzwi poniżej 1300; drugi dokupić, jeśli jeden za słaby |
+| Adapter prosty przykręcany do TIP-ON | 956.1201 | 1 | na wewnętrznym licu SOB-1 ok. Y 1850, wkręty 3,5 × 15 |
 | Wkręty do płyty 3,5 × 15 | ok. 20 | prowadniki, adaptery, zawiasy |
 | Wkręty okapu 3,5 × 16 | 4 | w komplecie z okapem; nawierty pilotowe Ø3 × 5 robi sklep |
 
