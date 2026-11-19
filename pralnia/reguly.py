@@ -47,7 +47,7 @@ def dodatkowe_otwory(P, parts, loc):
     DOWEL_D=8; DOWEL_DEPTH=20
     LEVELS={'KP2-1':922,'KP2-2':1355,'PP2-1':922,'PP2-2':1355}
     for lvl in (922,1355):
-        # KB2 (lico A = +x, od strony półki), kolumny przy z=233 i z=590
+        # KB2 (lico A = +x, od strony półki): 4 kolumny z 213, 355, 417, 590; PB2: 2 kolumny z 417, 590
         for pc,side,zs in (('KB2','A',(213,355,417,590)),('PB2','B',(417,590))):
             p=P[pc]
             for z in zs:
@@ -68,14 +68,14 @@ def dodatkowe_otwory(P, parts, loc):
             for x in (1270,1340):
                 p['holes'].append(dict(kind='EDGE',n_axis_is_u=eu,edge_coord=ec,along=loc(p,'x',x),depth=DOWEL_DEPTH,d=DOWEL_D,partner=(pp if code==kp else kp),into=into))
 
-    # kołki Ø8 x 20 w styku KB1/KB2 (współpłaszczyznowe boki kolumny, czoła na y=489), 2 szt. – dodatkowe połączenie KB1
+    # kołki Ø8 x 20 w styku KB1/KB2 (współpłaszczyznowe boki kolumny, czoła na y=489), 2 szt. – dodatkowe połączenie KB1; przedni na z 540 (v70, było 600: 2,5 mm do konfirmatu KB2 → PP1 na z 590)
     for code in ('KB1','KB2'):
         p=P[code]
         eu=(p['u']=='y'); assert 'y' in (p['u'],p['v'])
         ec=loc(p,'y',489)
         L=p['DL'] if eu else p['SZ']
         into=-1 if ec>=L-0.01 else 1
-        for z in (480,600):
+        for z in (480,540):
             p['holes'].append(dict(kind='EDGE',n_axis_is_u=eu,edge_coord=ec,along=loc(p,'z',z),depth=DOWEL_DEPTH,d=DOWEL_D,partner=('KB2' if code=='KB1' else 'KB1'),into=into))
 
     # --- nawierty pilotowe (środek) pod otwory wycinane samodzielnie: Ø5 nieprzelotowe, głębokość 5 mm, od strony wycinania ---
@@ -83,7 +83,7 @@ def dodatkowe_otwory(P, parts, loc):
     def pilot(code,side,y,other_axis,val):
         p=P[code]; pos={'y':y,other_axis:val}
         p['holes'].append(dict(kind='FACE',side=side,u=loc(p,p['u'],pos[p['u']]),v=loc(p,p['v'],pos[p['v']]),d=PILOT_D,depth=PILOT_DEPTH,partner='środek otworu wycinanego samodzielnie',axis_n='-',pin=False,pilot=True))
-    pilot('PT3','A',2418,'x',1626)   # Ø127 pod kanał, od strony wnętrza (+z); środek otworu w ścianie wg pomiaru 2026-11-18
+    pilot('PT3','A',2418,'x',1626)   # Ø127 pod kanał, od strony wnętrza (+z); środek otworu w ścianie: 115 od prawej ściany (A 1741), 243 od sufitu
     pilot('L1B2','A',918,'z',242)    # wycięcie 100 x 100 pod gniazdko GN1 (y 868-968; pokój z 192-292 = od tylnej krawędzi formatki 189-289), od wnętrza (+x)
 
 
@@ -110,7 +110,7 @@ PDF_OPIS = ("Każda strona = jeden typ formatki. Wymiary w mm, liczone od lewej 
     "Czerwone kółka: otwory Ø5 przelotowo w licu A (w kalkulatorze: Przód); po dostawie poszerzyć do Ø7. Niebieskie: lico B (w kalkulatorze: Tył).\n"
     "Zielone paski: otwory w czole Ø4 x 35 mm (cienkie) lub Ø8 x 20 mm pod kołki (grube), w połowie grubości płyty (kalkulator: Wiercenie w czole). Czerwone/niebieskie przerywane: otwory Ø5 NIEPRZELOTOWE, głębokość 10 mm, pod wciskane podpórki półek.\n"
     "Pomarańczowa gruba krawędź: oklejona (przód mebla). Kody części zgodne z numeracją w wizualizacji 3D.\n"
-    "W kalkulatorze: SZER = DL, WYS = SZ; X, Y od lewego dolnego rogu widoku z lica A; krawędzie 1 góra, 2 prawa, 3 dół, 4 lewa.\nZawiasy frontów (F1-F9): szablony Front lewy/prawy w kalkulatorze, w tym arkuszu ich nie ma. Tabela do wpisania: kalkulator_nawierty.csv.")
+    "W kalkulatorze: SZER = DL, WYS = SZ; X, Y od lewego dolnego rogu widoku z lica A; krawędzie 1 góra, 2 prawa, 3 dół, 4 lewa.\nZawiasy frontów (F1-F10): szablony Front lewy/prawy w kalkulatorze, w tym arkuszu ich nie ma. Tabela do wpisania: kalkulator_nawierty.csv.")
 
 # Opisy formatek. Wymiary i ilości są liczone z modelu (model.js); jawnie tylko pozycje spoza modelu.
 # OKLEINA: krawędzie oklejane (1DL = jedna długa, 2DL+2SZ = wszystkie). NAWIERTY: rodzaj nawiertów w zamówieniu.

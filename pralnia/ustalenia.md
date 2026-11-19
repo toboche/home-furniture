@@ -300,11 +300,11 @@ Sekcja C audytu v2 (otwory.py, kalkulator.py – układ „Tył”, zaokrągleni
 - Piloty prowadników: zapasowy wariant „Ø4" usunięty (wkręt 3,5 nie trzyma w Ø4); jeśli kalkulator nie przyjmie Ø3 × 12 – piloty usunąć z zamówienia i nawiercić ręcznie Ø2–2,5.
 - F10 (jeśli kiedyś zawiśnie): wolny lewy koniec frontu uderza w natynkowe gniazdo GN3/GN4 (x 0–15, z 665–745) już przy kilku stopniach otwarcia – przed montażem F10 przenieść gniazdo albo zamienić na podtynkowe.
 - Montaż prawego dołu w całości: maszyn nie trzeba odsuwać (moduł jedzie w osi z obok maszyn, 5 mm luzu do KB1/KB2), chyba że z prawego boku maszyn coś wystaje (węże, kable) – wtedy odsunąć.
-- NW: dystanse 5 mm za NWT także przy dolnej krawędzi (y 1743, pod NWP-1); łączniki NWB-2 ↔ KB3 w z 100–450 (poza strefą prowadników zawiasów F3/F4, z ok. 578–628).
+- NW: dystanse 5 mm za NWT także przy dolnej krawędzi (y 1743, pod NWP-1); łączniki NWB-2 ↔ KB3 w z 100–450 [poprawione 2026-11-19: z 210–550] (poza strefą prowadników zawiasów F3/F4, z ok. 578–628).
 - Widok: LF6 rozsuwa się razem z F6; usunięta pusta warstwa „Dodatki” z listy stałych warstw. Bryły koncepcyjne (ukryte, „zamysł”) zostają bez zmian jako historia.
 Sekcja B audytu v3 (bramki w kalkulatorze meble.pl) jest w `zamowienie.md`; Sekcja C – osobny PR w `wspolne/`.
 - Uzupełnienie 2026-11-19: otwór wentylacyjny w ścianie Ø125 (WN3 w pomiary.md). Niezgodności Q (118 vs 113 z U i R) oraz odległości prawej ściany od maszyn (523 w modelu vs 530 zmierzone) zostają bez zmian (decyzja użytkownika; nie wpływają na szafki).
-- Łączenie pasów z dolnymi szafkami (2026-11-19, decyzja użytkownika): wkręty od góry z wnętrza pasa – L2P-1 w krawędzie L1B1/L1B2, PP3-1 w RDW/RDW2; 4 × 40, po 4 na połączenie.
+- Łączenie pasów z dolnymi szafkami (2026-11-19, decyzja użytkownika): wkręty od góry z wnętrza pasa – L2P-1 w krawędzie L1B1/L1B2, PP3-1 w RDW/RDW2; 4 × 40, po 4 na połączenie. [POPRAWIONE v70: L2P-1 → L1W, wkręty 4 × 30]
 
 ## 2026-11-19 – szerokość pokoju 1741, pion 1368, luzy przy ścianach 3 mm (v69)
 - Nowe pomiary (najmniejsze z kilku wysokości): A = 1741 (było 1739), U = 1368 (było 1371–1373). Przy U = 1368 tył kolumny (do x 1368) stykałby się z pionem.
@@ -315,3 +315,12 @@ Sekcja B audytu v3 (bramki w kalkulatorze meble.pl) jest w `zamowienie.md`; Sekc
 - Otwór wentylacyjny (115 od prawej ściany) w modelu x 1626 (było 1624): w F6 środek 126 od lewej krawędzi, w PT3 255 od lewej.
 - Bez zmian: szafka nad maszynami, maszyny (3 mm do L1B1, 5 mm do KB1), PB1 (do gzymsu prawej ściany teraz 5 mm), wnęka z kuweta, F5, F8.
 - Wyniki v69: formatki 44 pozycje / 56 sztuk / 16,69 m²; 428 otworów, 58 połączeń, 0 kolizji.
+
+## 2026-11-19 – audyt v5 (`audyt/v5.md`), Sekcja A: wdrożone (v70)
+- Łączenie pasów z dolnymi szafkami (mój błąd w poprzednim wpisie): pod L2P-1 nie ma boków L1 (boki L2 stoją na bokach L1 krawędź na krawędź), jest tylko wieniec L1W; pakiety półka + wieniec mają 36 mm, więc 4 × 40 przebiłyby wieniec. Teraz: 4 × 30 z nawiertem przelotowym Ø4 w górnej płycie; L2P-1 → L1W: x 120, 240, 380, 500 (z 590); PP3-1 → RDW: x 1350, 1600 (z 590); PP3-1 → RDW2: x 1370, 1600 (z 435).
+- Prowadniki 173H7130 w F6: wkręty 609.1500 (Ø3,5×15) zamiast Ø3,5×12 (skrzydełko ok. 2 mm, ok. 13 mm w F6, 5 mm do lica). Razem 609.1500: 45–50 szt.
+- Kołek KB1 ↔ KB2 przedni przesunięty z z 600 na z 540: między nim a konfirmatem KB2 → PP1 (z 590, po rozwierceniu Ø7) zostawały 2,5 mm płyty. Zmienia nawierty w KB1 i KB2.
+- Łączniki M4/M6 NWB-2 ↔ KB3 w z 210–550 (z 100–165 to powietrze za KB3, z 165–183 KT2).
+- Prawy dół (RD, 517 × 1743 × 475) skręcać poza pralnią (np. w przedpokoju) albo w pozycji pionowej: w pralni nie ma miejsca, żeby położyć go na podłodze (1743 > szerokości pokoju). Wnieść pionowo przez drzwi 805 × 2016. Konfirmaty PP1 → PB2/PT2 wkręcić, zanim dojdą KB1/PB1/PT1 (część z nich jest za PT1).
+- zamowienie.md: łączniki M4/M6 (8), klej, 3 gałki/pętle KT1, daty; usunięte liczby sprzed v69 w komentarzach modelu i dokumentach.
+- Szczelina 6 mm między KP (do x 1365) a PT2/PT3 (od x 1371) na z 367–385 (narożnik za półką): bez znaczenia, zostaje.

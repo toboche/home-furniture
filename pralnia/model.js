@@ -173,7 +173,7 @@ var ITEMS=[
   /* Wieńce górne (usztywnienie dolnych szafek): pas 100 mm przy froncie, pod samym pasem (y 1725 do 1743), tył do z 640 (front od z 640). */
   {n:'L1W: L1: wieniec górny, przód (1725 do 1743)',layer:'Półki',x:21,y:1725,z:540,w:576,h:18,d:100,c:0xe6d7b8},
   {n:'LF6: Listwa oporowa za F6, dół (na PP3-2, przyklejona i przykręcona do tyłu F6)',layer:'Półki',x:1505,y:2208,z:622,w:200,h:60,d:18,c:0xe6d7b8},
-  /* Podkładka (v66, audyt v2 PR-11): PP1 wystaje 73 mm za PB1 nad gzymsem prawej ściany i stoi na nim PB2; szczelinę 23 mm między gzymsem (466) a PP1 (489) wypełnia podkładka docinana na miejscu, wsuwana od frontu po ustawieniu modułu. */
+  /* Podkładka (v66, audyt v2 PR-11): PP1 wystaje 75 mm za PB1 nad gzymsem prawej ściany i stoi na nim PB2; szczelinę 23 mm między gzymsem (466) a PP1 (489) wypełnia podkładka docinana na miejscu, wsuwana od frontu po ustawieniu modułu. */
   {n:'Podkładka pod PP1 na gzymsie prawej ściany (23 mm, docinana na miejscu)',layer:'Podkładki',x:1668,y:466,z:435,w:70,h:23,d:205,c:0xb08d57},
   {n:'RDW: Prawa dolna: wieniec górny, przód (1725 do 1743)',layer:'Półki',x:1239,y:1725,z:540,w:481,h:18,d:100,c:0xe6d7b8},
   /* RDW2 (audyt v1, 2026-11-18): wieniec górny tylny, spina górę tylnej części KB2 z PB2 i PT2 (wcześniej KB2 z tyłu u góry nie był niczym usztywniony: KP2 na podpórkach, KT1 zdejmowane). */
@@ -201,7 +201,7 @@ var ITEMS=[
   {n:'L2T: L2: tył (pas)',layer:'Ścianki tylne',x:21,y:1743,z:3,w:576,h:912,d:18,c:0x9c8b6e,o:0.9},
   {n:'NWT: Wnęka nad maszynami: tył',layer:'Ścianki tylne',x:633,y:1743,z:5,w:570,h:912,d:18,c:0x9c8b6e,o:0.9},
   {n:'PT1: Prawa dół: tył (kolumna i część przed pionem)',layer:'Ścianki tylne',x:1239,y:0,z:440,w:406,h:489,d:18,c:0x9c8b6e,o:0.9},
-  /* KT1A/B/C (v60, audyt v1 A2, decyzja 2026-11-18): szer. 124 (x 1244-1368, 3 mm luzu na łby wkrętów w ramieniu kątownika na KB2),
+  /* KT1A/B/C (v60, audyt v1 A2, decyzja 2026-11-18): szer. 121 (x 1244-1365, 3 mm luzu na łby wkrętów w ramieniu kątownika na KB2 i 3 mm do pionu),
      stoją na kątowniku-podporze (ramię poziome 2 mm pod płytą, z 165-190 (całe na KB2), nad półkami KP z 1 mm luzu), trzymane 2 magnesami do ramion za płytą.
      Wysuwane do przodu ponad półkami: 3 mm luzu od półki pod spodem, 2 mm do podpórek / wieńców nad płytą. */
   {n:'KT1A: Kolumna: tył, zawór, zdejmowany do przodu, stoi na podporze, trzymany magnesami (y 510-915)',layer:'Ścianki tylne',x:1244,y:510,z:165,w:121,h:405,d:18,c:0x9c8b6e,o:0.9},

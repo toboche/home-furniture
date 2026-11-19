@@ -1,11 +1,11 @@
-# Pralnia: lista do weryfikacji przed zamówieniem (stan 2026-11-19, model v69)
+# Pralnia: lista do weryfikacji przed zamówieniem (stan 2026-11-19, model v70)
 
-Źródła: model 3D (`index.html` albo `wyniki/pralnia_3d.html`), `wyniki/formatki.csv` (44 pozycje, 56 sztuk, 16,69 m²), `wyniki/kalkulator_nawierty.csv` (32 typy, 370 wierszy), `wyniki/arkusz_nawiertow.pdf` (32 strony), `wyniki/podsumowanie.json`, `pomiary.md`, `ustalenia.md`, `komponenty.md`, audyty `audyt/v1.md`, `v2.md`, `v3.md`.
+Źródła: model 3D (`index.html` albo `wyniki/pralnia_3d.html`), `wyniki/formatki.csv` (44 pozycje, 56 sztuk, 16,69 m²), `wyniki/kalkulator_nawierty.csv` (32 typy, 370 wierszy), `wyniki/arkusz_nawiertow.pdf` (32 strony), `wyniki/podsumowanie.json`, `pomiary.md`, `ustalenia.md`, `komponenty.md`, audyty `audyt/v1.md`–`v5.md`.
 Kontrola automatyczna: 428 otworów, 58 połączeń, 0 kolizji otworów; 154 konfirmaty, 14 kołków, 12 podpórek, 21 puszek. Kolizje brył: tylko zamierzone (puszki w frontach, magnesy w gniazdach, gniazdko GN1 w wycięciu).
 
 ## Zamówienie
 - Koszyk 21386928 (2 970,11 zł, 2026-11-08) jest NIEAKTUALNY i nie należy go używać.
-- Wycena wstępna 2026-11-15: rozkrój 21629244 (stan v58, bez nawiertów) = 2 204,10 zł; z wierceniem szacunkowo 2 850–2 950 zł. Od tego czasu: +RDW2, +LF6, +F10, pasy +3 mm, KT1 124 mm, L1B 637. Do złożenia od nowa (zamowienie.md).
+- Wycena wstępna 2026-11-15: rozkrój 21629244 (stan v58, bez nawiertów) = 2 204,10 zł; z wierceniem szacunkowo 2 850–2 950 zł. Od tego czasu: +RDW2, +LF6, +F10, pasy +3 mm, KT1 121 mm, L1B 637, szerokości v69. Do złożenia od nowa (zamowienie.md).
 - Kalkulator przyjął przy wycenie wymiary z połówką mm i formatki 100 mm. KP1 zamawiamy jako 200×126 (skracana samodzielnie). Do sprawdzenia przy wpisie: nawierty Ø3×12.
 
 ## Do dopracowania / potwierdzenia
@@ -16,7 +16,7 @@ Kontrola automatyczna: 428 otworów, 58 połączeń, 0 kolizji otworów; 154 kon
 5. Audyt v2 – rozstrzygnięte 2026-11-19: piloty zostają Ø3 × 12; PB2/PB3 przykręcone do prawej ściany (gzyms g-k); wieniec dolny L1WD zamówiony luzem.
 6. Przy zamówieniu: oś X strony „Tył (B)” w kalkulatorze, pozycje 3 puszek F9 (zamowienie.md).
 
-## Pomiary kontrolne (czy zabudowa się zmieści) – lista z 2026-11-18, WYKONANE 2026-11-18: wszystkie OK
+## Pomiary kontrolne (czy zabudowa się zmieści) – lista z 2026-11-18, WYKONANE 2026-11-18 i 2026-11-19: wszystkie OK
 Mierzyć w mm, w kilku miejscach; liczy się najgorszy wynik (najmniejsza szerokość, najniższy sufit, najbardziej wystający punkt).
 | KOD | CO I GDZIE | MODEL | DOBRY WYNIK |
 |---|---|---|---|

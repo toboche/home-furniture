@@ -2729,7 +2729,7 @@
 "partner": "KB2"
 },
 {
-"along": 160,
+"along": 100,
 "d": 8,
 "depth": 20,
 "edge_coord": 489,
@@ -3283,7 +3283,7 @@
 "partner": "KB1"
 },
 {
-"along": 435,
+"along": 375,
 "d": 8,
 "depth": 20,
 "edge_coord": 0,
