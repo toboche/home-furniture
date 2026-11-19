@@ -24,7 +24,7 @@ weryfikacyjne przed zamówieniem”: z 31 pozycji zmierzone 7, reszta otwarta, w
 | Wkręty okapu | nawierty Ø3 × 5 Y 1592, z 250 i 70; w widocznym SOB-1 wkręty 3,5 × 13, w SOB-2 3,5 × 16 | OK |
 | Zawiasy F1 | Y 1850, 2210, 2576,5: prowadniki nad okapem (do 1776), SOD (1786–1804) i SOP (2104–2122) | OK |
 | TIP-ON | 956.1004 na SOB-1 ok. Y 1850, przy przodzie: nad okapem i SOD; F1 2 przed korpusem (2026-11-19) | OK |
-| Przejście wylot → pion | 28,5 do tyłu; pochylona rura nie siądzie na króćcu 26 (audyt v3) → 2 kolana 15° do decyzji; otwór w SOP na z 124 | DO DECYZJI |
+| Przejście wylot → pion | 28,5 do tyłu na 2 kolanach 15° Ø150 (2026-11-19), do ok. Y 1992 pod SOP 2104 | OK |
 | Pion, kolano, poziom Ø150 | tył pionu z 34,5 (plecy do 18, mata 10 mieści się); góra poziomu 2652 pod SOW 2660 | OK; nad poziomem mata do 5 mm |
 | Otwory Ø160 w SOB-2, WSB-1 | konfirmaty wieńców przed otworem (z 215, 265), nad otworem 21 mm boku | OK |
 | Skrzynka WS | redukcja z 34,5–184,5 przed WSZ (z 195), dno 2492 pod rurą 2502, WSW 2660; WSZ 236 × 165 na listwach i magnesach (audyt v3) | OK, bez maty w skrzynce |

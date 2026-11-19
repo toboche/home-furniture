@@ -46,7 +46,7 @@ Liczby łączników z `wyniki/podsumowanie.json` (przeliczenie 2026-11-19). Pozy
 | POZYCJA | ILOŚĆ | UWAGI |
 |---|---|---|
 | Krótki odcinek rury spiro Ø150 na króciec | z rury 1 m | króciec Ø148,5 zewn., 26 wysokości: rura nachodzi na króciec, opaska/taśma |
-| Kolano 15° Ø150 tłoczone (np. Alnor BPL-150-15) | 2 | DO DECYZJI: przejście do pionu o 28,5 (pochylona rura nie siądzie na króćcu 26) |
+| Kolano 15° Ø150 tłoczone (np. Alnor BPL-150-15) | 2 | przejście do pionu o 28,5, z krótkim odcinkiem rury między kolanami |
 | Rura spiro Ø150 | 1 m | pion ok. 380 + poziom ok. 170 + wsunięcia |
 | Kolano 90° Ø150 tłoczone | 1 | pod sufitem |
 | Redukcja mimośrodowa 150/125 | 1 | w wąskiej szafce, płaską stroną do ściany głównej, wąskim końcem w rurze ze ścianki (wystaje 115) |
@@ -63,5 +63,3 @@ Liczby łączników z `wyniki/podsumowanie.json` (przeliczenie 2026-11-19). Pozy
 | Puszka natynkowa | 1 | w SO nad SOP |
 | Przelotka gumowa Ø25 | 1 | otwór w SOT na przewód; przewód w dół przez podcięcia 25 × 25 w SOP i SOD |
 
-## Do decyzji
-- Przejście wylot → pion: 2 kolana 15° czy pochylona rura (KU3-02).

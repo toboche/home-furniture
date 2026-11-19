@@ -80,7 +80,7 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
 - Średnica: rura w ścianie Ø125 wewnętrzna (130 zewnętrzna). Redukcja 150 → 125: od 2026-11-16 w wąskiej szafce,
   za kolanem 90° Ø150 (wcześniej pod sufitem w pionie, jeszcze wcześniej na wylocie okapu).
 - Trasa (aktualna od 2026-11-19): króciec wylotu Ø148,5 (z 138) z nasuniętym odcinkiem rury Ø150 → przejście do tyłu
-  o 28,5 między SOD a SOP (2 kolana 15° lub pochylenie, do decyzji) → pion Ø150 (z 109,5) przez SOP (otwór Ø170) → kolano 90° Ø150 pod sufitem → poziomo Ø150 (oś Y 2577,
+  o 28,5 między SOD a SOP (2 kolana 15° Ø150 z krótkim odcinkiem, decyzja 2026-11-19) → pion Ø150 (z 109,5) przez SOP (otwór Ø170) → kolano 90° Ø150 pod sufitem → poziomo Ø150 (oś Y 2577,
   z 109,5) przez SOB-2 i WSB-1 (otwory Ø160) → redukcja mimośrodowa 150/125 w wąskiej szafce (płaską stroną do ściany
   głównej, oś na z 97) → Ø125 przez WSB-2 (otwór Ø140) do ścianki. Otwory wycina użytkownik, sklep wierci środek Ø5 × 5.
 
@@ -262,7 +262,8 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
 - KU3-03: otwory Ø160 w SOB-2/WSB-1 wycinać otwornicą z obu stron, przed montażem, płyta podparta (górna krawędź
   otworu 3 pod wieńcem, 21 do góry boku).
 - KU3-02: przejście wylot → pion: sztywna rura pochylona o 2,6° nie siądzie na króćcu 26 (luz Ø148,5 / Ø150 to
-  0,75 na stronę, odchylenie na 26 to ok. 1,2) – do decyzji 2 kolana 15°; model: króciec 26, przejście do Y ok. 1992.
+  0,75 na stronę, odchylenie na 26 to ok. 1,2). Decyzja użytkownika: 2 kolana 15° Ø150 (np. Alnor BPL-150-15) z krótkim
+  odcinkiem; model: króciec 26, przejście do Y ok. 1992, SOP zostaje na 2104; środek otworu w SOP wraca na z 109,5.
 - KU3-04: F1 nie ma w CSV kalkulatora (pipeline nie generuje frontów, sekcja C): puszki wpisać ręcznie w widoku
   od strony zawiasów (337,5 / 697,5 / 1064 od dołu, 22,5 od prawej krawędzi patrząc od przodu). Położenie TIP-ON
   ustawia użytkownik na miejscu (bez pilotów).
@@ -319,3 +320,4 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
 - 2026-11-19: audyt v2: szczelina F1 2 pod TIP-ON, TIP-ON 956.1004, Minifix 14 / kołek 10 w SOB-1.
 - 2026-11-19: decyzje po audycie v2: MAXIMERA 13, elektryka poza projektem, pręty M8 w 18 mm zostają.
 - 2026-11-19: audyt v3: WSZ na listwach i magnesach (bez kołków), podcięcie w SOP, wkręty okapu 3,5 × 13 w SOB-1.
+- 2026-11-19: przejście wylot → pion na 2 kolanach 15° Ø150.

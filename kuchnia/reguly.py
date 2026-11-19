@@ -60,7 +60,7 @@ Z_RURA = 97          # oś rury okapu od ściany głównej (ZRU)
 Z_PION = 109.5       # oś pionu i poziomu Ø150 w SO (ZPI)
 Y_SOD = 1786         # dół półki wkładanej SOD (model.js: YSOD)
 Y_SOP = 2104         # dół półki SOP (model.js: YSOP)
-Z_SOP_OTW = 124      # środek otworu w SOP: pochylona rura (z 138 przy wylocie → 109,5 przy kolanie) na wysokości SOP
+Z_SOP_OTW = 109.5    # środek otworu w SOP: pion Ø150 za kolanami 15° (2026-11-19; przy pochylonej rurze było 124)
 Y_OKW = 1592         # otwory montażowe okapu: 81 nad dołem korpusu (YP)
 Z_OKW = (250, 70)    # 35 i 215 od lica przodu korpusu okapu (z 285)
 X_ZA = 2852          # przewód okapu: A - ZA1
@@ -182,7 +182,7 @@ FORMATKI = [
     F('SOD', 'Szafka okapowa: półka wkładana tuż nad okapem (na 4 podpórkach Ø5)', okleina='1DL', nawierty='BRAK',
       uwagi='wkładana po montażu okapu; wycięcie od przodu na wylot Ø150: szer. 170 (oś x na środku), zakończone półkolem R85 o środku 120 od tylnej krawędzi (najgłębiej 35 od tylnej krawędzi); wycina użytkownik, krawędzie silikonem; w tylnym prawym narożniku podcięcie ok. 25 × 25 na przewód okapu (w osi podcięcia w SOP)'),
     F('SOP', 'Szafka okapowa: półka nad okapem', okleina='1DL', nawierty='KONFIRMATY + MIMOŚRÓD I KOŁKI (do SOB-1)',
-      uwagi='środek otworu Ø170 pod rurę Ø150 (z 124 = 106 od tylnej krawędzi; rura lekko pochylona); otwór otwarty do tyłu (wycięcie U szer. 170 od tylnej krawędzi); w tylnym prawym narożniku podcięcie 25 × 25 na przewód okapu (x 2889–2914, z 18–43); wycina użytkownik'),
+      uwagi='środek otworu Ø170 pod pion Ø150 (z 109,5 = 91,5 od tylnej krawędzi); otwór otwarty do tyłu (wycięcie U szer. 170 od tylnej krawędzi); w tylnym prawym narożniku podcięcie 25 × 25 na przewód okapu (x 2889–2914, z 18–43); wycina użytkownik'),
     F('WSB', 'Wąska szafka: boki', okleina='1DL', nawierty='KONFIRMATY',
       uwagi='WSB-1: środek otworu Ø160 pod Ø150; WSB-2: rura ze ścianki wystaje 115, więc wycięcie U od tylnej krawędzi szer. 140 z półkolem R70 o środku w zaznaczonym punkcie (z 97), żeby szafkę dało się nasunąć na rurę; wycina użytkownik'),
     F('WST', 'Wąska szafka: tył', okleina='', nawierty='KONFIRMATY'),
