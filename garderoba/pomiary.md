@@ -16,6 +16,7 @@ Użytkownik podaje NAJMNIEJSZY odczyt z kilku pomiarów (żeby meble nie wyszły
 | SG | 1134 | jak S, na wysokości, gdzie PX = 702 | | prawa ściana pochyla się razem z bokiem pionu (u góry ok. 1836 od lewej ściany); szafka pionowa mieści się w 1825 − 702 = 1123 |
 | G | 1490 | głębokość od tylnej do przedniej ściany, przy prawej ścianie (najmniejszy odczyt) | 1490 (930 + 560) | 2026-11-11 |
 | T | 925 | od czoła pionu (strona do drzwi) do ściany przedniej, przy lewej ścianie (najmniejszy odczyt; 928, 928, 926, 925 na 400, 1000, 2000, 2550) | 930 | 2026-11-18; WCZEŚNIEJ 919 (2026-11-11) |
+| TP | 1491 | ściana przednia przy lewej ścianie, od ściany tylnej: najmniejsza suma PZ + T zmierzonych na tej samej wysokości (400: 563 + 928; 1000: 1492; 2000: 1496; 2550: 1498) | | 2026-11-19; pion i ściana przednia pochylone w tę samą stronę |
 | J | 2586 | wysokość podłoga–sufit, najmniejsza w pomieszczeniu (przy drzwiach) | | 2026-11-11; 2026-11-18 weryfikacja: 2587, 2589, 2589 (J bez zmian, 2586 to dalej najmniejszy odczyt) |
 | P1 | 2258 | przekątna podłogi: od lica gzymsu przy ścianie przedniej do narożnika tylnego prawego | | prostokąt (A − GZ2) × G daje 2258: kąty proste |
 | K | 0 | kafelki już położone; wszystkie pomiary od docelowej podłogi | | 2026-11-11 |

@@ -147,6 +147,14 @@ USTALENIA Z KALKULATORA:
   GZ1 333; puszka gniazdka nie wystaje. LB2 przy pionie stoi ok. 3 mm od ściany przedniej (T = 919 zmierzone przy pionie);
   12 mm wychodziło z G = 1490 mierzonego przy prawej ścianie (model rysuje ścianę przednią prosto).
 
+## Decyzja 2026-11-19: szafka po lewej dłuższa o 3
+- Szafka po lewej 576–1488 (długość 912, było 909): ściana przednia przy lewej najbliżej 1491 (TP = PZ + T na tej samej wysokości,
+  pomiary na 400, 1000, 2000, 2550), pion wystaje najwyżej do 573. Luz przy LB1 3 (góra) – 13 (dół), przy LB2 3 (dół) – 10 (góra):
+  pion i ściana przednia pochylają się w tę samą stronę, więc pionowa szafka ma po 3 mm w dwóch różnych miejscach.
+  Półki, wieńce i plecy L oraz GL 876, SZ2: LW 876, skrzynka 834, front F4 872.
+- UWAGA gniazdko (E2 195, nisko, gdzie ściana jest najbliżej): LB2 stoi ok. 3 mm od ściany. Ramka gniazdka wystająca więcej niż
+  ok. 3 mm oprze się o LB2 obok otworu Ø68; do sprawdzenia przy wyborze osprzętu (patrz rozmowa 2026-11-19).
+
 ## Audyt v3 (`audyt/v3.md`, stan po PR #33), wdrożone 2026-11-19
 - Łączniki korpusu dolnego L: przy LK na górze LK, LS-1 ↔ LT na górze LS-1 (pod spodem kolizja z SZ2/F4, a pod LS-1 nie ma LT);
   dopisane 160–200 wkrętów 3,5 × 15.

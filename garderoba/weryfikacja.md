@@ -20,12 +20,12 @@ Przydatne: miernik laserowy, poziomica (najlepiej 2 m), taśma malarska, listwa 
 | V8 | przewody wodne: odległość od prawej ściany | oba | – (sprawdzenie modelu) | 513 i 613 | 2026-11-19: niewymagane (osłony NO zdejmowane na całą szerokość połówek) |
 | V9 | prawa ściana: miejsce na otwarte drzwi F2 | – | F2 dotknie ściany przy ok. 92° otwarcia (ogranicznik) | – | 2026-11-19: niewymagane, ogranicznik 86° (70T3553) w zamówieniu |
 
-## 2. Szafka po lewej (L): 698 × 2582 × 909 (576–1485 od ściany tylnej), przód na 703 od ściany lewej (wymagania zaktualizowane 2026-11-19)
+## 2. Szafka po lewej (L): 698 × 2582 × 912 (576–1488 od ściany tylnej, od 2026-11-19; wcześniej do 1485), przód na 703 od ściany lewej (wymagania zaktualizowane 2026-11-19)
 | # | CO MIERZYĆ | GDZIE | WYMAGANE | W PROJEKCIE | WYNIK |
 |---|---|---|---|---|---|
 | V10 | wysięg pionu od ściany lewej (PX) | co 500 mm wysokości | najwięcej 700 | przód szafki 703 | 2026-11-18: 692, 692, 695, 695 – OK (luz do szafki 10–13) |
-| V11 | od lica pionu do ściany przedniej (T) | przy ścianie lewej, wysokość 400, 1000, 2000, 2550 | PZ w tym miejscu + T ≥ 1486 | szafka 576–1485 (pion najdalej 573) | 2026-11-18: 928, 928, 926, 925 (wys. 400, 1000, 2000, 2550) – OK; z PZ: ściana przednia przy lewej ścianie 1488–1498 od tylnej, LB2 kończy się na 1478 (luz 10–20) |
-| V12 | wysokość podłoga–sufit | 4 narożniki obszaru szafki (X 5 i 703, Z 576 i 1485) | min. 2586 | szafka 2582 + 4 | 2026-11-18: 2586, 2587, 2589, 2587 – OK (wcześniej wpisane 2286–2289 to literówka, potwierdzone przez użytkownika) |
+| V11 | od lica pionu do ściany przedniej (T) | przy ścianie lewej, wysokość 400, 1000, 2000, 2550 | PZ w tym miejscu + T ≥ 1489 (pomiary na tych samych wysokościach) | szafka 576–1485 (pion najdalej 573) | 2026-11-18: 928, 928, 926, 925 (wys. 400, 1000, 2000, 2550) – OK; z PZ: ściana przednia przy lewej ścianie 1488–1498 od tylnej, LB2 kończy się na 1478 (luz 10–20) |
+| V12 | wysokość podłoga–sufit | 4 narożniki obszaru szafki (X 5 i 703, Z 576 i 1488) | min. 2586 | szafka 2582 + 4 | 2026-11-18: 2586, 2587, 2589, 2587 – OK (wcześniej wpisane 2286–2289 to literówka, potwierdzone przez użytkownika) |
 | V13 | gzyms: wysokość (GZ1) | na całej długości, kilka punktów | najwięcej 333 (półka od 335) | 333 | 2026-11-18: 333 – OK |
 | V14 | gzyms: wysięg od ściany lewej (GZ2) | na całej długości | najwięcej 129 (wycięcie w LB2 do 134) | 129 | 2026-11-18: 125, 126, 127 – OK |
 | V15 | rura w gzymsie: wysięg od ściany lewej i wysokość | – | najwięcej 189 i 335 (wycięcie w LB1) | 184 i 135 | 2026-11-18: rura wystaje 55 poza lico gzymsu, wysokość bezpieczna – OK; położenie wzdłuż gzymsu nie zmierzone (wycięcie LB1 zostaje 184 × 335) |
