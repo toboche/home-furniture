@@ -254,7 +254,7 @@ return {
   /* warstwy, które nie rozsuwają się suwakiem */
   fixedLayers:['Maszyny','Pion i gzyms','Osprzęt','Zabudowa ZB','Szafka lewa','Szafka prawa','Szafka nad maszynami'],
   boardLayers:['Półki','Ścianki boczne','Ścianki tylne','Płyta dolna i listwy','Fronty'],
-  boardColor:{hex:0xeeece5,label:'docelowy: Egger W1200 ST9 Biały porcelanowy'}, /* kolor z ekranu orientacyjny, nie z próbki */
+  boardColor:{hex:0xcdc5b9,label:'docelowy: Egger U702 ST9 Kaszmir'}, /* kolor z ekranu orientacyjny, nie z próbki */
   noOffset:/^Kratka/, /* elementy bez przesunięcia w buforze głębi i bez koloru płyty */
   /* elementy, które przy rozsuwaniu jadą razem z innym (poza regułami ogólnymi: zawiasy, uchwyty, otwory, konfirmaty, kołki) */
   explodeParent:function(it,h){

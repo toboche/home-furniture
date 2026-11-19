@@ -15,7 +15,9 @@ Wymiary są POTWIERDZONE pomiarami kontrolnymi w pomieszczeniu (2026-11-18 i 202
 | `ustalenia.md` | decyzje (sekcje z 2026-11-19 są najnowsze) |
 
 ## 2. Płyta
-- Wszystko z jednej płyty: Egger W1200 ST9 Biały porcelanowy 18 mm (centrum.meble.pl, format 2070 × 2800). Jeśli drugie
+- Wszystko z jednej płyty: Egger U702 ST9 Kaszmir 18 mm (centrum.meble.pl, format 2070 × 2800). Do 2026-11-19 był W1200 ST9 Biały porcelanowy;
+  starsze dokumenty i rozkroje mają W1200. Sprawdzić w kalkulatorze dostępność U702 18 mm i okleiny bezspoinowej 1,0 mm w U702
+  (fronty); jeśli bezspoinowej nie ma – zatrzymać się i ustalić to z użytkownikiem. Jeśli drugie
   pomieszczenie ma ten sam dekor, wspólny rozkrój zmniejszy liczbę arkuszy.
 - Przy wspólnym zamówieniu dodać prefiks do kodów (np. `PR-F1`, `PR-KB2`), bo kody powtarzają się między pomieszczeniami
   (`wspolne/zasady.md`).
@@ -69,7 +71,7 @@ Pełna lista z kodami: `komponenty.md`. W skrócie:
 - Prowadniki: 173H7100 – 13 plus 6 na zapas; 173H7130 – 2.
 - Wkręty do prowadników (173H7100 i 173H7130): 609.1500, 45–50 sztuk.
 - Ograniczniki 70T3553: 9 plus 2 do F8.
-- Złącza: konfirmaty 7 × 50 – 154 plus zapas, zaślepki ok. 27, kołki Ø8 × 40 – 14, podpórki Ø5 – 16 (12 pod PP2/KP2 + 4 pod L1P).
+- Złącza: konfirmaty 7 × 50 – 154 plus zapas, zaślepki ok. 27 (kolor kaszmir), kołki Ø8 × 40 – 14, podpórki Ø5 – 16 (12 pod PP2/KP2 + 4 pod L1P).
 - Kątowniki: 25 × 25 – 12, 40 × 40 – 1.
 - Magnesy Ø10 × 3: 6.
 - Uchwyty GUBBARP: 9 (w tym 2 na zapas).
