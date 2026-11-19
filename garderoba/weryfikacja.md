@@ -53,4 +53,4 @@ Po pomiarach: wyniki wpisać tutaj, różnice nanieść w `pomiary.md`, przelicz
 ## Potwierdzenie (2026-11-18, wieczór)
 Użytkownik sprawdził w pomieszczeniu skrajne wymiary szafek po zmianach (szafka na wprost 703–1825 × 5–576, szafka po lewej
 5–703 × 576–1485, wysokość 2582) i potwierdził, że wszystkie mieszczą się w jego pomiarach (liczby nie podane).
-
+- 2026-11-19: użytkownik potwierdził po kilku pomiarach (także przy podłodze), że szafka po lewej 576–1488 (912) się mieści.

@@ -59,4 +59,5 @@ Kontrola otwierania: `node garderoba/sprawdz_szuflady.js`. Każda szuflada sama:
 | Tuleja / odcinek przewodu Ø125, 60–80 | 1 | łączy przewód (docięty 3 przed GLB1) z kratką: przechodzi przez GLB1 (18) i szczelinę 3 i wchodzi w przewód; uszczelnić taśmą aluminiową albo pianką; sprawdzić średnicę wewnętrzną przewodu (W3 130) |
 | Kątowniki meblowe małe (np. 20 × 20) z wkrętami 3,5 × 15 | 4 | osłony NO-1, NO-2: po 2 u góry, pod półką NS-1 / NS-4, od strony pokoju |
 | Zatrzaski magnetyczne meblowe z blaszkami | 4 | osłony NO-1, NO-2: po 2 na dole, na bokach NB-1, NP, NB-2 za osłoną; blaszki na tylnym licu osłony |
+| Gniazdo wpuszczane (mechanizm do Ø58) z ramką i wkrętami puszkowymi M3 × 35–40 | 1 | w LB2, mocowane do puszki Ø60 w ścianie (wybiera użytkownik) |
 | Ślizgacze pod boki i przegrodę dolnych korpusów | wg potrzeby | dolne krawędzie NB, NP, LB1, LB2, NO oklejone ABS; ślizgacze tylko w razie potrzeby |

@@ -60,7 +60,8 @@ i przeliczenie (`python3 wspolne/pipeline/run.py garderoba`), nigdy ręcznie w p
 - LB1: wycięcie dolnego narożnika po stronie ściany lewej (krawędź tylna, przeciwna do oklejonej przedniej):
   184 wzdłuż dolnej krawędzi × 335 w górę (wokół gzymsu i rury).
 - LB2: to samo wycięcie 129 × 335 (wokół gzymsu). Otwór na gniazdko (środek 210 od ściany lewej i 195 od podłogi, wg nawiertu
-  środka) wierci użytkownik po wyborze gniazda; w zamówieniu tylko nawiert środka Ø5 × 5.
+  środka) wierci użytkownik: ok. Ø60 pod gniazdo wpuszczane, po przymiarce nad puszką w ścianie; w zamówieniu tylko nawiert
+  środka Ø5 × 5.
 - Pozostałe formatki są prostokątami.
 
 ## 6. Okucia i drobne elementy

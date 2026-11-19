@@ -154,9 +154,9 @@ USTALENIA Z KALKULATORA:
   298.7600; tuleja przewodu wentylacyjnego 60–80 z uszczelnieniem (30 było za krótkie); kolejność składania GL i wskazówki
   do łączników (`komponenty.md`).
 - Jeden wałek T60.1125W (docięcie LW − 267: 267 i 609) zamiast dwóch; powierzchnia 18 mm 21,19 m²; porządki w opisach.
-- DO DECYZJI (audyt GD4-03): długość szafki po lewej 912 (do 1488) opiera się na pomiarach od 400 w górę; przy podłodze
-  (0–400) ściany przedniej nie mierzono, a z trendu wychodzi tam ok. 1–2 mm luzu. Albo pomiar przy podłodze (min. 1491),
-  albo powrót do 909 (do 1485).
+- Długość szafki po lewej 912 (do 1488) ZOSTAJE (audyt GD4-03): użytkownik zmierzył ponownie kilka razy, także przy podłodze,
+  i potwierdził, że się mieści (2026-11-19).
+- Gniazdo: wpuszczane w LB2, przykręcone do puszki w ścianie (decyzja 2026-11-19, sekcja „Decyzje” wyżej).
 - Sekcja C (`wspolne/`) bez zmian.
 
 ## Decyzja 2026-11-19: szafka po lewej dłuższa o 3
@@ -167,8 +167,9 @@ USTALENIA Z KALKULATORA:
 - Gniazdko (decyzja 2026-11-19): gniazdka nie ma jeszcze na ścianie; użytkownik zamontuje gniazdo NA PŁYCIE LB2, przewód
   ze ściany (puszka Ø60 w ścianie, środek 210 / 195). Gniazdko nie wymaga luzu między LB2 a ścianą (ok. 3 mm). Otwór Ø68
   ODWOŁANY (audyt v4 GD4-02: puszka meblowa Ø68 nie wejdzie w puszkę Ø60, a wkręty gniazda trafiłyby w pustkę). W zamówieniu
-  tylko nawiert środka; wymiar otworu DO DECYZJI przy wyborze gniazda: natynkowe na wewnętrznym licu LB2 + otwór Ø20–25 na
-  przewód (zalecane) albo wpuszczane ≤ Ø58 w otworze dopasowanym po przymiarce, mocowane wkrętami do puszki w ścianie.
+  tylko nawiert środka. DECYZJA 2026-11-19: gniazdo WPUSZCZANE w LB2 (mechanizm do Ø58), mocowane wkrętami puszkowymi
+  M3 × 35–40 do puszki Ø60 w ścianie (przez LB2 18 i szczelinę ok. 3). Otwór ok. Ø60, dopasowany do mechanizmu, dokładnie
+  nad puszką w ścianie: wytrasować po przymiarce LB2 na sucho, wiercić dopiero potem; ramka gniazda na wewnętrznym licu LB2.
 - Łączniki korpusu dolnego L: przy LK na górze LK, LS-1 ↔ LT na górze LS-1 (pod spodem kolizja z SZ2/F4, a pod LS-1 nie ma LT);
   dopisane 160–200 wkrętów 3,5 × 15.
 - `formatki.csv`: formatki korpusu dolnego L bez „KONFIRMATY” (BRAK, łączniki od środka; LB2 tylko nawiert środka).
