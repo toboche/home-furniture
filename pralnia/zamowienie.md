@@ -1,4 +1,4 @@
-# Pralnia: przekazanie do zamówienia (stan 2026-11-19, model v66)
+# Pralnia: przekazanie do zamówienia (stan 2026-11-19, model v68)
 
 Dla rozmowy, w której składane jest zamówienie (pralnia razem z innym pomieszczeniem). Wymiary w mm, kody tylko DUŻYMI LITERAMI.
 Źródło prawdy: repozytorium na `main` (`CLAUDE.md`). Dokumenty w projekcie Claude mogą być starymi kopiami.
@@ -33,7 +33,7 @@ Wymiary są POTWIERDZONE pomiarami kontrolnymi w pomieszczeniu (2026-11-18, `wer
   - Lico: Ø5 przelotowo pod konfirmaty (użytkownik poszerza do Ø7 po dostawie).
   - Czoło: Ø4 × 35 pod konfirmaty, Ø8 × 20 pod kołki.
   - Ø5 × 10 pod podpórki półek (KB2, PB2).
-  - Ø3 × 12 piloty pod prowadniki zawiasów (30 szt.). Jeśli kalkulator nie przyjmie Ø3, dać Ø4.
+  - Ø3 × 12 piloty pod prowadniki zawiasów (30 szt.). Jeśli kalkulator nie przyjmie Ø3 × 12: NIE zamieniać na Ø4 (wkręt 3,5 by nie trzymał) – usunąć te piloty z zamówienia (użytkownik nawierci Ø2–2,5 ręcznie).
   - Ø5 × 5 nawierty środków (PT3, L1B2).
 - Wymiary z połówką mm (F5 274,5; F6 234,5; F8 493,5; F9 1240,5; fronty pasa 454,5): kalkulator przyjął takie wartości przy wycenie 2026-11-15.
 - KP1: kalkulator nie przyjmuje formatek < 200 mm. Wpisać 200 × 129 (zamiast 184 × 129) i X otworów w krawędzi 3 powiększyć o 16
@@ -41,6 +41,8 @@ Wymiary są POTWIERDZONE pomiarami kontrolnymi w pomieszczeniu (2026-11-18, `wer
 - Minimalna formatka: przy wycenie 2026-11-15 kalkulator podał 199,8 × 59,8 mm (dla oklejanej); audyt v2 podaje 240 × 100. LF6 (200 × 60, bez okleiny) nie był testowany – jeśli kalkulator go odrzuci, zamówić 240 × 100 bez nawiertów, a konfirmaty i docięcie zrobić samemu (pozycje otworów: arkusz_nawiertow.pdf).
 - PP3-2 ma inne nawierty niż PP3-1 i PP3-3 (konfirmaty do LF6): w kalkulatorze osobna formatka.
 - Strona „Tył (B)”: przed wpisaniem wszystkich otworów sprawdzić na podglądzie 2D jednej formatki (np. PB2), czy kalkulator nie odbija osi X dla otworów od tyłu. Jeśli odbija – zatrzymać się i ustalić to z użytkownikiem.
+- F10: 4 puszki na 100 / 612 / 1125 / 1637 od dołu (szablon Front prawy) – sprawdzić na podglądzie.
+- Ułamkowe współrzędne otworów (ok. 80 wierszy z .1–.9 mm w kalkulator_nawierty.csv): sprawdzić, że kalkulator je przyjmuje; jeśli zaokrągla, różnica < 0,5 mm jest bez znaczenia.
 - F9: sprawdzić na podglądzie, że szablon stawia 3 puszki na 100 / 620 / 1140,5 od dołu (prowadniki w PB2 są pod te pozycje); jeśli szablon ustawia je inaczej – wpisać pozycje ręcznie.
 - Bez nawiertów: KT1A/B/C (zdejmowane, na kątownikach i magnesach), L1P (półka luzem), L1WD (wieniec zapasowy, luzem), F6 (front stały).
 - Fronty (szablon „Wręgowanie i nawierty” niedostępny przy okleinie bezspoinowej, więc szablony zawiasów): zawiasy Blum INSERTA,
@@ -67,11 +69,12 @@ Pełna lista z kodami: `komponenty.md`. W skrócie:
 - Prowadniki: 173H7100 – 13 plus 6 na zapas; 173H7130 – 2.
 - Wkręty do prowadników: 609.1500, ok. 40 sztuk.
 - Ograniczniki 70T3553: 9 plus 2 do F8.
-- Złącza: konfirmaty 7 × 50 – 154 plus zapas, zaślepki ok. 27, kołki Ø8 × 40 – 14, podpórki Ø5 – 12.
+- Złącza: konfirmaty 7 × 50 – 154 plus zapas, zaślepki ok. 27, kołki Ø8 × 40 – 14, podpórki Ø5 – 16 (12 pod PP2/KP2 + 4 pod L1P).
 - Kątowniki: 25 × 25 – 12, 40 × 40 – 1.
 - Magnesy Ø10 × 3: 6.
 - Uchwyty GUBBARP: 9 (w tym 2 na zapas).
-- Pozostałe: wkręty 3,5 × 12/15/30, kanał Ø125, mocowanie do ścian, podkładki.
+- Mocowanie do ścian: 8 × kołek Ø8 + wkręt 6×80 do betonu (NW ×4, L1 ×2, L2 ×2), 4 × kołek do pustaków (PB2 ×2, PB3 ×2), twarde dystanse 3/5 mm.
+- Pozostałe: wkręty 3,5 × 12/15/30, kanał Ø125, podkładki poziomujące, podkładka 23 mm pod PP1.
 
 ## 7. Pułapki
 - F8 i F10 to fronty NA ZAPAS (kuweta stoi we wnęce F8, L1 może zostać otwarta), ale są w zamówieniu z puszkami. Dla F8 są też

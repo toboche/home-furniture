@@ -173,7 +173,7 @@ FORMATKI = [
     F('PP3', 'Półka przednia, pas: 1743, 2190, 2637 (x 1239-1718, z 385-640; kołki Ø8 do KP3)',
       okleina='1DL', nawierty='KONFIRMATY + KOŁKI Ø8 W CZOLE (do KP3)'),
     F('LF6', 'Listwa oporowa za F6, dół (leży płasko na tyle F6, stoi na PP3-2)',
-      okleina='', nawierty='KONFIRMATY (od spodu z PP3-2)', uwagi='do tyłu F6: klej + 4 wkręty Ø3,5x30 od strony listwy (maks. 12 mm w F6)'),
+      okleina='', nawierty='KONFIRMATY (od spodu z PP3-2)', uwagi='do tyłu F6: klej + 4 wkręty Ø3,5x30 od strony listwy (maks. 12 mm w F6) w X 20, 85, 115, 180 od lewej krawędzi listwy, 42 od dolnej (z dala od 2 konfirmatów na X 50 i 150)'),
     F('L1W', 'L1: wieniec górny, przód',
       okleina='1DL', nawierty='KONFIRMATY'),
     F('L1P', 'L1: półka luzem na całą szerokość L1 (BEZ nawiertów, nie montowana w szafce; ewentualne nawierty robi użytkownik)',
@@ -201,7 +201,7 @@ FORMATKI = [
     F('F8', 'Front P dół: przy gzymsie, ZAPASOWY (teraz kuweta we wnęce)',
       okleina='2DL+2SZ', nawierty='ZAWIASY 2 SZT, PUSZKA Ø35, ŚRODEK 22.5 MM OD KRAWĘDZI', uwagi='zawiasy po PRAWEJ; nawierty prowadników w PB1 są w zamówieniu; uchwyt GUBBARP: otwory samodzielnie'),
     F('F10', 'Front L dół: szafka L1, NA ZAPAS',
-      okleina='2DL+2SZ', nawierty='ZAWIASY 4 SZT, PUSZKA Ø35, ŚRODEK 22.5 MM OD KRAWĘDZI', uwagi='zawiasy po PRAWEJ (szablon Front prawy), 100 od końców + 2 pośrednie (środki 103, 615, 1128, 1640 od dołu); w szafce L1 BEZ nawiertów pod prowadniki; uchwyt: otwory samodzielnie'),
+      okleina='2DL+2SZ', nawierty='ZAWIASY 4 SZT, PUSZKA Ø35, ŚRODEK 22.5 MM OD KRAWĘDZI', uwagi='zawiasy po PRAWEJ (szablon Front prawy), 100 od końców + 2 pośrednie (środki 100, 612, 1125, 1637 od dolnej krawędzi frontu); w szafce L1 BEZ nawiertów pod prowadniki; uchwyt: otwory samodzielnie'),
     F('F9', 'Front P dół: jeden wysoki',
       okleina='2DL+2SZ', nawierty='ZAWIASY 3 SZT, PUSZKA Ø35, ŚRODEK 22.5 MM OD KRAWĘDZI', uwagi='uchwyt GUBBARP 116 mm: otwory samodzielnie, bez nawiertów'),
 ]

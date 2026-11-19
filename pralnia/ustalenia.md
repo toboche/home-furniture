@@ -189,7 +189,7 @@ Z katalogu Blum 2022/2023 (str. 94-95, "Zawias do drzwi równoległych, wpuszcza
 ## 2026-11-08 – zawiasy i prowadniki (v55, weryfikacja katalogu Blum 2022/23)
 - Wszystkie 17 zawiasów to CLIP top BLUMOTION (samodomykanie zintegrowane): 15 × 71B3590 + 2 × 79B9590 (95°, z opcją dezaktywacji). Zawiasy UTRUSTA odpadają.
 - F5↔F6: prowadnik 173H7130 (dystans 3, wysokość 11,5; stal, mimośród ±2, wkręty Ø3,5/4). Katalog: ustawienie fabryczne 79B9590 = prowadnik o dystansie 3 mm; „podwyższony o 3 mm" = ten sam dystans 3. Linia wkrętów 21,5 od krawędzi, szczelina F = 8 − TB = 3 przy TB 5.
-- Otwory pod wkręty prowadników: DECYZJA – robimy nawierty pilotowe Ø3×12 (nieprzelotowe) w wewnętrznym licu ścianek, 30 szt. (15 zawiasów × 2, rozstaw 32, 37 od przedniej krawędzi ścianki, z=603). Są w planach i w kalkulatorze (348 otworów łącznie). Do sprawdzenia przy zamówieniu: czy kalkulator meble.pl przyjmuje Ø3 / głębokość 12 (jeśli nie – Ø4). F5/F6: 2 otwory w tyle F6 wiercisz sam.
+- Otwory pod wkręty prowadników: DECYZJA – robimy nawierty pilotowe Ø3×12 (nieprzelotowe) w wewnętrznym licu ścianek, 30 szt. (15 zawiasów × 2, rozstaw 32, 37 od przedniej krawędzi ścianki, z=603). Są w planach i w kalkulatorze (348 otworów łącznie). Do sprawdzenia przy zamówieniu: czy kalkulator meble.pl przyjmuje Ø3 / głębokość 12 (jeśli nie – Ø4 [ZMIENIONE 2026-11-19: NIE Ø4, wkręt 3,5 by w nim nie trzymał; jeśli Ø3 odpadnie – piloty usunąć z zamówienia i nawiercić ręcznie Ø2–2,5]). F5/F6: 2 otwory w tyle F6 wiercisz sam.
 - Prowadnik jest przykręcany do powierzchni ścianki, nie wchodzi w otwór.
 
 ## 2026-11-08 – UTRUSTA, KB1, półka L1 (v57)
@@ -246,7 +246,7 @@ Sekcja C (zmiany w `wspolne/pipeline/`: kolizje otworów lico A–lico B i kraw�
 
 ## 2026-11-18 – mocowanie F6 i potwierdzenia (v62)
 - Potwierdzone: X = 467 to gzyms na pionie pod PP1/KP1; sufit nad otworem wentylacyjnym = J (2661), środek rury 243 od sufitu → y 2418; otwornicę Ø127 użytkownik kupi.
-- F6 (z prowadnikami 173H7130 zawiasów F5): dół – listwa oporowa LF6 200×60 (płyta 18, bez okleiny) leżąca płasko na tyle F6 (x 1505–1705, y 2206,5–2266,5, z 622–640), klej + 4 wkręty Ø3,5×30 do F6 (maks. 12 mm w F6), stoi na PP3-2 i jest z nią skręcona 2 konfirmatami od spodu (dostęp z komory F7). Zastępuje 2 dolne kątowniki 25×25 (x 1510 i 1680). Lewa góra (strona zawiasów F5): kątownik 40×40 (x 1505–1545, y 2594–2634) zamiast 25×25. Prawy dolny kątownik na boku przesunięty y 2260 → 2275 (miejsce na LF6). Strefa prowadników (x 1500–1545, y 2277–2321 i 2530–2575) wolna.
+- F6 (z prowadnikami 173H7130 zawiasów F5): dół – listwa oporowa LF6 200×60 (płyta 18, bez okleiny) leżąca płasko na tyle F6 (x 1505–1705, y 2206,5–2266,5 [od v65: y 2208–2268], z 622–640), klej + 4 wkręty Ø3,5×30 do F6 (maks. 12 mm w F6), stoi na PP3-2 i jest z nią skręcona 2 konfirmatami od spodu (dostęp z komory F7). Zastępuje 2 dolne kątowniki 25×25 (x 1510 i 1680). Lewa góra (strona zawiasów F5): kątownik 40×40 (x 1505–1545, y 2594–2634) zamiast 25×25. Prawy dolny kątownik na boku przesunięty y 2260 → 2275 (miejsce na LF6). Strefa prowadników (x 1500–1545, y 2277–2321 i 2530–2575) wolna.
 - Wkręty w F6: prowadniki 173H7130 i kątowniki Ø3,5×12 (front 18 mm, nie przebić lica).
 - Ogranicznik na F3 pominięty (uchwyty wierci użytkownik; uchwyt F5 dalej od krawędzi).
 - PP3-2 ma teraz inne nawierty niż PP3-1/PP3-3 (osobny typ w kalkulatorze).
@@ -266,7 +266,7 @@ Sekcja C (zmiany w `wspolne/pipeline/`: kolizje otworów lico A–lico B i kraw�
 ## 2026-11-18 – luz pod sufitem 5 mm, fronty F8 i F10 na zapas (v65)
 - Luz pod sufitem 5 mm (było 8): pasy (L2, NW, prawy pas) wyższe o 3 mm – boki i tyły 912 (było 909), półka środkowa 2190 (było 2188,5), górna 2637–2655 (było 2634–2652). Fronty pasa 454,5 (było 453): dolne 1743–2197,5, górne 2200,5–2655, szczelina 3. Zawiasy, uchwyty, LF6 i kątowniki F6 przesunięte razem z frontami. Środek otworu wentylacyjnego bez zmian (y 2418): w F6 217,5 od dolnej / 237 od górnej krawędzi, w PT3 253 od lewej / 237 od górnej.
 - F8 wraca do zamówienia jako front ZAPASOWY (439 × 493,5, 2 puszki, zawiasy po prawej, nawierty prowadników w PB1 jak dawniej). Kuweta zostaje we wnęce; w widoku przełącznik „Kuweta we wnęce zamiast frontu F8". Przy montażu F8: 2 ograniczniki 70T3553 (gzyms na prawej ścianie), 2 zawiasy 71B3590, 2 prowadniki 173H7100.
-- F10: front lewej dolnej szafki L1 (607 × 1737, y 3–1740), na zapas: 4 puszki (środki 103, 615, 1128, 1640 od dołu), zawiasy po PRAWEJ (przy L1B1; po lewej przeszkadzałoby gniazdko GN3/GN4 wystające 15 mm przed szafkę), w L1B1 BEZ nawiertów pod prowadniki (decyzja użytkownika). Boki L1B1/L1B2 skrócone do głębokości 637 (było 655, do z 640), żeby front zmieścił się przed nimi – jak boki L2.
+- F10: front lewej dolnej szafki L1 (607 × 1737, y 3–1740), na zapas: 4 puszki (środki 100, 612, 1125, 1637 od dolnej krawędzi F10 [poprawione 2026-11-19; wcześniej błędnie 103, 615, 1128, 1640 = wysokości od podłogi]), zawiasy po PRAWEJ (przy L1B1; po lewej przeszkadzałoby gniazdko GN3/GN4 wystające 15 mm przed szafkę), w L1B1 BEZ nawiertów pod prowadniki (decyzja użytkownika). Boki L1B1/L1B2 skrócone do głębokości 637 (było 655, do z 640), żeby front zmieścił się przed nimi – jak boki L2.
 - Wyniki v65: formatki 43 pozycje / 55 sztuk / 16,61 m²; 428 otworów, 58 połączeń, 0 kolizji; 154 konfirmaty, 21 puszek, 30 nawiertów pilotowych prowadników, 26 widocznych łbów.
 - Zamówienie: opis dla rozmowy o zamówieniu w `zamowienie.md`.
 
@@ -292,3 +292,14 @@ Sekcja C audytu v2 (otwory.py, kalkulator.py – układ „Tył”, zaokrągleni
 - Wieniec dolny L1: zamawiamy zapasowy L1WD 573 × 100 (okleina 1DL, bez nawiertów), NIE montowany; w przyszłości na kątownikach przy podłodze, jeśli zawiśnie F10.
 - Kolejność montażu z v66 (prawy dół skręcony na podłodze i wsunięty w całości) potwierdzona.
 - Formatki: 44 pozycje / 56 sztuk / 16,67 m².
+
+## 2026-11-19 – audyt v3 (`audyt/v3.md`), Sekcja A: wdrożone (v68)
+- F10: środki puszek 100, 612, 1125, 1637 od dolnej krawędzi frontu (w opisie formatki było 103, 615, 1128, 1640 – wysokości od podłogi). Masa F10 ok. 12,6 kg.
+- Podpory KT1A/B/C (kątowniki pod płytami): z 165–190 zamiast 158–183 – całe ramię na KB2 (wcześniej 7 mm wystawało za tylną krawędź boku, wkręt 5,5 mm od krawędzi). Ramię poziome jest teraz 1 mm nad tylnym rogiem KP1/KP2 na 7 mm głębokości: półkę PP2+KP2 przy wyjmowaniu najpierw wysunąć do przodu, potem pochylić.
+- LF6 → F6: 4 wkręty Ø3,5×30 na X 20, 85, 115, 180 od lewej krawędzi listwy i 42 od dolnej (konfirmaty od spodu są na X 50 i 150, do wysokości 35 w listwie).
+- Piloty prowadników: zapasowy wariant „Ø4" usunięty (wkręt 3,5 nie trzyma w Ø4); jeśli kalkulator nie przyjmie Ø3 × 12 – piloty usunąć z zamówienia i nawiercić ręcznie Ø2–2,5.
+- F10 (jeśli kiedyś zawiśnie): wolny lewy koniec frontu uderza w natynkowe gniazdo GN3/GN4 (x 0–15, z 665–745) już przy kilku stopniach otwarcia – przed montażem F10 przenieść gniazdo albo zamienić na podtynkowe.
+- Montaż prawego dołu w całości: maszyn nie trzeba odsuwać (moduł jedzie w osi z obok maszyn, 5 mm luzu do KB1/KB2), chyba że z prawego boku maszyn coś wystaje (węże, kable) – wtedy odsunąć.
+- NW: dystanse 5 mm za NWT także przy dolnej krawędzi (y 1743, pod NWP-1); łączniki NWB-2 ↔ KB3 w z 100–450 (poza strefą prowadników zawiasów F3/F4, z ok. 578–628).
+- Widok: LF6 rozsuwa się razem z F6; usunięta pusta warstwa „Dodatki” z listy stałych warstw. Bryły koncepcyjne (ukryte, „zamysł”) zostają bez zmian jako historia.
+Sekcja B audytu v3 (bramki w kalkulatorze meble.pl) jest w `zamowienie.md`; Sekcja C – osobny PR w `wspolne/`.
