@@ -12,9 +12,10 @@ Kody katalogowe Blum według audytu v1 i katalogu; przed zakupem potwierdzić u 
 | Ogranicznik kąta otwarcia 86° | 70T3553 | 2 | F2 (na oba zawiasy): przy 110° front oparłby się o prawą ścianę (dotyka przy ok. 92°). Ogranicznika 95° w katalogu nie ma |
 | TIP-ON do drzwi, wersja krótka z magnesem (z płytkami do frontu: klejoną i wkręcaną) | 956.1004 | 2 | po stronie przeciwnej do zawiasów, czyli na przegrodzie GNP, przy górze frontu |
 | Adapter prosty do TIP-ON, wersja krótka | 956.1201 | 2 | przy frontach wpuszczanych cofnięty o 22 + grubość frontu = 40 od przedniej krawędzi GNP |
+| Wkręty do adapterów TIP-ON Ø3,5 × 15 | 4 | po 2 na adapter |
 
 UWAGA GNP (18): adaptery F1 i F2 wkręca się w tę samą płytę z dwóch stron; wkręty 15 z obu stron spotkałyby się w środku.
-Adaptery montujemy na różnych wysokościach (różnica co najmniej 30 w osi Y) albo wkrętami 3,5 × 13.
+Adaptery montujemy obowiązkowo na różnych wysokościach (różnica co najmniej 30 w osi Y). Krótsze wkręty nie pomogą: 2 × 13 = 26 > 18.
 Szczelina wokół wszystkich frontów chowanych (F1–F4): SZCZ = 2 (2026-11-18, było 3). Zawias 70T3790.TL z prowadnikiem 0 mm
 daje ok. 1,5–2 nominalnie, więc prawie cała regulacja boczna ±2 zostaje do ustawienia frontów.
 
@@ -44,10 +45,11 @@ Kontrola otwierania: `node garderoba/sprawdz_szuflady.js`. Każda szuflada sama:
 | Pozycja | Ilość | Uwagi |
 |---|---|---|
 | Konfirmaty 7 × 50 | 139 | korpusy: N 85, GN 32, GL 22 (osłony NO i korpus dolny L bez konfirmatów); + zapas |
-| Łączniki narożne meblowe od środka (białe, z zaślepką) albo małe kątowniki, z wkrętami 3,5 × 15 | ok. 40 | korpus dolny L składany na miejscu: LW, LK, LS-1..3 do LB1 i LB2 (po 2 na koniec półki, 20), LT do LB1 i LB2 (po 4, 8), LT do LW, LK, LS-1..3 (po 2, 10); pod półkami, od strony wnętrza |
-| Konfirmaty 5 × 40 | 34 | skrzynki szuflad z płyty 16 (S1 16, S2 18): więcej ścianki w krawędzi 16 niż przy 7 × 50; otwory Ø5 w licu bez poszerzania, Ø4 w krawędzi; + zapas |
+| Łączniki narożne meblowe od środka (białe, z zaślepką) albo małe kątowniki | ok. 40 | korpus dolny L składany na miejscu: LW, LK, LS-1..3 do LB1 i LB2 (po 2 na koniec półki, 20), LT do LB1 i LB2 (po 4, 8), LT do LW, LK, LS-1..3 (po 2, 10). Zwykle POD półkami, z wyjątkami: wszystkie 6 przy LK NA GÓRZE LK (pod LK pracuje szuflada SZ2 i front F4), 2 łączniki LS-1 ↔ LT NA GÓRZE LS-1 (LT zaczyna się na 335, pod LS-1 jej nie ma), łączniki pod LS-1 przy bokach poza wycięciami (X od 189) |
+| Wkręty do łączników Ø3,5 × 15 | 160–200 | ok. 4 na łącznik; długość dobrać tak, by wkręt wchodził 10–14 w płytę 18 |
+| Konfirmaty 5 × 40 | 34 | skrzynki szuflad z płyty 16 (S1 16, S2 18): więcej ścianki w krawędzi 16 niż przy 7 × 50; otwory Ø5 w licu bez poszerzania średnicy, ale OBOWIĄZKOWO pogłębione stożkowo (np. pogłębiacz Ø8–10) pod łeb, żeby łby licowały z płytą: pod dnami S1D, S2D i na zewnątrz boków S1B, S2B (prześwit MOVENTO); Ø4 w krawędzi; + zapas |
 | Wkręty łączące korpus górny z dolnym, np. 4 × 30 (przez dno GND / GLD w wieniec NW / LW) | ok. 10 | 6 w N, 4 w L, od środka korpusu górnego, z dala od konfirmatów |
-| Zaślepki konfirmatów | ok. 6 (skrypt: 24) | widoczne łby: przegroda NP (6). Skrypt liczy więcej, bo nie widzi, że łby na zewnętrznych licach LB1, LB2, GLB1, GLB2 zasłania pion i ściana, a łby pod dnami skrzynek (10) są niewidoczne; poprawka skryptu w osobnym PR `wspolne/` (audyt v1, sekcja C) |
+| Zaślepki konfirmatów | ok. 6 (skrypt: 16) | widoczne łby: przegroda NP (6). Skrypt liczy więcej, bo nie widzi, że łby na zewnętrznych licach LB1, LB2, GLB1, GLB2 zasłania pion i ściana, a łby pod dnami skrzynek (10) są niewidoczne; poprawka skryptu w osobnym PR `wspolne/` (audyt v1, sekcja C) |
 | Drążki Ø25 z uchwytami | 3 | N połowa lewa 534, N połowa prawa 534, L wzdłuż ściany 873; oś 2037 |
 | Wkręty i kołki do ściany (przez plecy NT, LT, GNT, GLT) | – | rodzaj zależy od ścian (do ustalenia) |
 | Kratka wentylacyjna prostokątna nasuwana na przewód Ø130 | 1 | na wewnętrznym licu GLB1; otwór w GLB1 wierci użytkownik |

@@ -16,23 +16,14 @@
   "puszki_zawiasow": 4
  },
  "zaslepki": {
-  "widoczne": 24,
-  "ukryte": 149,
+  "widoczne": 16,
+  "ukryte": 157,
   "widoczne_wg_czesci": {
-   "GLB1": 8,
    "NP": 6,
    "S1D": 4,
    "S2D": 6
   },
   "widoczne_miejsca": [
-   "GLB1 → GLD (x 55, y 2129, z 570)",
-   "GLB1 → GLD (x 354, y 2129, z 570)",
-   "GLB1 → GLD (x 653, y 2129, z 570)",
-   "GLB1 → GLG (x 55, y 2573, z 570)",
-   "GLB1 → GLG (x 354, y 2573, z 570)",
-   "GLB1 → GLG (x 653, y 2573, z 570)",
-   "GLB1 → GLT (x 14, y 2188, z 570)",
-   "GLB1 → GLT (x 14, y 2514, z 570)",
    "NP → NK (x 1279, y 1093, z 73)",
    "NP → NK (x 1279, y 1093, z 300)",
    "NP → NK (x 1279, y 1093, z 526)",

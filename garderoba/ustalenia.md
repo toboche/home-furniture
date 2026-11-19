@@ -76,7 +76,7 @@ Materiały źródłowe: `zrodla/` (rzut architektoniczny, zdjęcia ogólne).
   a boki NB-1, NB-2, LB1, LB2 mają z zewnątrz tylko 3–20 mm luzu do ścian i pionu (konfirmaty wkręca się od zewnątrz boków).
   Korpusy składamy na stojąco na wolnej podłodze przed docelowym miejscem i dosuwamy: N do ściany tylnej, L w stronę
   ściany lewej (wycięcia boków przechodzą nad gzymsem). Pojedynczą płytę stawia się, podnosząc ją przez krawędź 18 mm.
-- (wyjaśnione 2026-11-18, patrz niżej) Gniazdko (E1, E2): LB2 stoi 12 mm od ściany przedniej, więc puszka gniazdka nie może wystawać więcej niż ok. 9 mm,
+- (nieaktualne: LB2 stoi 3–13 mm od ściany, puszka nie wystaje, w LB2 otwór; patrz 2026-11-18 i 2026-11-19) Gniazdko (E1, E2): LB2 stoi 12 mm od ściany przedniej, więc puszka gniazdka nie może wystawać więcej niż ok. 9 mm,
   albo musi przejść przez otwór w LB2 (do sprawdzenia przy wyborze gniazdka).
 
 ## Wycena wstępna meble.pl (2026-11-15, szacunek, nie koszyk)
@@ -147,6 +147,20 @@ USTALENIA Z KALKULATORA:
   GZ1 333; puszka gniazdka nie wystaje. LB2 przy pionie stoi ok. 3 mm od ściany przedniej (T = 919 zmierzone przy pionie);
   12 mm wychodziło z G = 1490 mierzonego przy prawej ścianie (model rysuje ścianę przednią prosto).
 
+## Audyt v3 (`audyt/v3.md`, stan po PR #33), wdrożone 2026-11-19
+- Łączniki korpusu dolnego L: przy LK na górze LK, LS-1 ↔ LT na górze LS-1 (pod spodem kolizja z SZ2/F4, a pod LS-1 nie ma LT);
+  dopisane 160–200 wkrętów 3,5 × 15.
+- `formatki.csv`: formatki korpusu dolnego L bez „KONFIRMATY” (BRAK, łączniki od środka; LB2 tylko nawiert środka).
+- Skrzynki: otwory pod konfirmaty 5 × 40 pogłębiane stożkowo, łby równo z płytą (prześwit MOVENTO pod dnem).
+- TIP-ON na GNP: tylko różne wysokości (usunięta błędna alternatywa „wkręty 3,5 × 13”), 4 wkręty 3,5 × 15 do adapterów.
+- `zamowienie.md`: INSERTA jawnie (Ø35 + 2 × Ø8 co 45), pogłębienie w skrzynkach, minimalne wymiary formatek 16 mm u dostawcy,
+  kontrola podglądu strony „Tył (B)” w kalkulatorze.
+- `weryfikacja.md`: V12 poprawione na 2586–2589 (literówka 2286 potwierdzona przez użytkownika 2026-11-18), wymagania V1–V18
+  zaktualizowane do obecnych wymiarów, V8, V9, V20–V22 rozstrzygnięte.
+- Drobne: pion w modelu rysowany do PZM (573), przewody R1/R2 od AT, `reguly.py` i `pomiary.md` zaktualizowane.
+- DO DECYZJI: kolejność podnoszenia korpusów górnych (punkt 3 montażu wyżej) i wymiar otworu na gniazdko w LB2 (audyt GD3-06).
+- Sekcja C (`wspolne/`) bez zmian: zaślepki, prowadniki frontów wpuszczanych, opisy w arkuszu PDF, kilka krawędzi okleiny.
+
 ## Audyt v2 (`audyt/v2.md`, robiony na stanie sprzed 2026-11-18), wdrożone 2026-11-19
 - Większość punktów (NL 600, prowadniki 56,5/57, kody Blum, ogranicznik 86°, TIP-ON na różnych wysokościach, podział
   na korpusy, pełne mm, SZCZ 2, ABS na dolnych krawędziach, zdejmowane osłony NO, płyta 16 mm, pomiary V1–V24)
@@ -169,9 +183,14 @@ USTALENIA Z KALKULATORA:
   od środka (ok. 40, `komponenty.md`). Kolejność montażu:
   1. Korpus dolny N: złożyć na konfirmatach na środku pustego pokoju, przesunąć w prawo i dosunąć do ściany tylnej.
   2. Korpus dolny L: na miejscu postawić LB1 (przy froncie N) i LB2 (przy ścianie przedniej), wsunąć od pokoju LT, LS-1..3,
-     LK, LW i przykręcić łącznikami od środka; przykręcić do ściany przez LT.
+     LK, LW i przykręcić łącznikami od środka; przykręcić do ściany przez LT. Łączniki zwykle pod półkami, ale przy LK
+     NA GÓRZE (pod LK pracuje szuflada SZ2 i front F4), a LS-1 ↔ LT NA GÓRZE LS-1 (pod LS-1 nie ma LT); `komponenty.md`.
   3. Korpusy górne GN, GL (i skrzynki szuflad) złożyć poza garderobą, wnieść (drzwi 694: GN 462 × 571, GL 462 × 698),
      położyć na dolnych i wsunąć (GN od przodu, GL od strony pokoju wzdłuż X); przykręcić wkrętami przez dno.
+     KOLEJNOŚĆ PODNOSZENIA DO DECYZJI (audyt v3, GD3-06): poniżej 2120 przed szafkami jest wąsko. GN (1122) podnosi się między
+     frontem L a prawą ścianą (1126–1130, czyli 2–4 mm z każdej strony), jeśli L już stoi. GL (909) podnosi się między frontem N
+     a ścianą przednią (912–922). GN przed L dolnym = GN bez problemu, GL potem ciasno; GL przed GN (zalecenie audytu) = GL
+     da się przechylić nad wieńcem N, ale GN potem ciasno. Na czas podnoszenia zdjąć albo osłonić oczko w suficie (L1 1131, L2 1000).
   4. Przewód wentylacyjny: tuleja przez otwór w GLB1 do kratki.
 - Złącza skrzynek 16 mm (audyt GD-04, decyzja 2026-11-19): konfirmaty 5 × 40 zamiast 7 × 50 (ścianka w krawędzi 5,5 zamiast 4,5).
 - SZ1 i SZ2 na tej samej wysokości ZOSTAJĄ (decyzja 2026-11-19; audyt GD-05 proponował przeniesienie SZ2 niżej): nie otwierać obu naraz.
@@ -187,7 +206,7 @@ USTALENIA Z KALKULATORA:
 - Prowadniki zawiasów F1, F2: krzyżakowe 0 mm (173L6100), linia wkrętów 56,5 od przodu boku (było 55; katalog Blum:
   front wpuszczany = cofnięcie o grubość frontu + 1,5). Nawierty pilotowe w NB-1, NB-2 przesunięte o 1,5.
 - Kody okuć Blum w `komponenty.md`; ogranicznik 86° (70T3553) zamiast nieistniejącego 95°; TIP-ON F1 i F2 na NP
-  na różnych wysokościach (≥ 30) albo wkręty 3,5 × 13.
+  na różnych wysokościach (≥ 30) albo wkręty 3,5 × 13 (ta alternatywa błędna, 2 × 13 > 18: od 2026-11-19 tylko różne wysokości).
 - Skrzynki szuflad: zostaje konstrukcja „tył i czoło na dnie, dno do końca boków” = wariant Blum bez podcięć (audyt proponował
   pełny tył z podcięciami 125; do rozmowy). Dopisane otwory Ø6 × 10 pod haki prowadnic w tylnej krawędzi dna.
 - Poprawki dokumentacji: F3 525,5 × 202, rozkrój 21629487 miał 19 pozycji. Rozkrój trzeba zaktualizować (S2 krótsze, piloty NB).

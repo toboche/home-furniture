@@ -44,7 +44,8 @@ i przeliczenie (`python3 wspolne/pipeline/run.py garderoba`), nigdy ręcznie w p
 - Wszystkie formatki mają poniżej 2500 mm (najdłuższa 2120), więc kalkulator meble.pl przyjmie nawierty dla wszystkich;
   wszystkie współrzędne są w pełnych mm.
 - Fronty F1, F2 (530 × 422, zawiasy na krawędzi 422): szablon zawiasów Blum INSERTA (F1 LEWY, F2 PRAWY), 2 puszki Ø35,
-  środek 22,5 od krawędzi, środki puszek 100 i 322 od dolnej krawędzi frontu. Zawiasy 70T3790.TL (INSERTA, bez sprężyny).
+  środek 22,5 od krawędzi, środki puszek 100 i 322 od dolnej krawędzi frontu. Zawiasy 70T3790.TL (INSERTA, bez sprężyny):
+  w kalkulatorze wybrać wariant INSERTA (puszka Ø35 × 13 + 2 × Ø8 co 45), NIE wariant na wkręty.
   F3, F4: bez nawiertów.
 - Nawierty pilotowe Ø3 × 12 pod prowadniki zawiasów: w GNB-1 i GNB-2 (są w CSV). Jeśli kalkulator nie przyjmie Ø3,
   pominąć je (użytkownik wywierci sam); Ø4 za słabo trzyma wkręt 3,5.
@@ -63,12 +64,17 @@ i przeliczenie (`python3 wspolne/pipeline/run.py garderoba`), nigdy ręcznie w p
 ## 6. Okucia i drobne elementy
 Pełna lista z kodami: `komponenty.md`. W skrócie: 4 zawiasy 70T3790.TL (INSERTA) + 4 prowadniki 173L6100 + 8 wkrętów 609.1500,
 2 ograniczniki 86° 70T3553 (F2), 2 TIP-ON 956.1004 + 2 adaptery 956.1201, MOVENTO 760H5000S i 760H6000S z TIP-ON BLUMOTION
-T60L7340 (L1), zaczepy T51.7601, adaptery T60.000D (w komplecie) i wałki T60.1125W; konfirmaty 7 × 50: 139 + zapas (korpusy N, GN, GL), ok. 40 łączników narożnych do korpusu dolnego L i 5 × 40: 34 + zapas (skrzynki); zaślepki ok. 6;
+T60L7340 (L1), zaczepy T51.7601, adaptery T60.000D (w komplecie) i wałki T60.1125W; konfirmaty 7 × 50: 139 + zapas (korpusy N, GN, GL), ok. 40 łączników narożnych do korpusu dolnego L i 160–200 wkrętów 3,5 × 15 do nich i 5 × 40: 34 + zapas (skrzynki); zaślepki ok. 6;
 3 drążki Ø25 (534, 534, 873); 4 kątowniki i 4 zatrzaski magnetyczne do osłon NO; wkręty 4 × 30 (ok. 10) łączące korpusy
 górne z dolnymi; kratka wentylacyjna; mocowanie do ścian do ustalenia.
 
 ## 7. Pułapki
-- `wyniki/podsumowanie.json` podaje 24 zaślepki: to błąd skryptu (nie widzi, że łby na LB1, LB2, GLB1, GLB2 zasłania ściana
+- Skrzynki szuflad: otwory Ø5 pod konfirmaty 5 × 40 trzeba po dostawie pogłębić stożkowo (łeb równo z płytą), inaczej
+  łby pod dnem zmniejszą prześwit MOVENTO.
+- Płyta 16 mm innego producenta: sprawdzić u dostawcy minimalne wymiary formatki z nawiertami (S1C, S2C mają 151 szerokości).
+- Kalkulator: po wpisaniu nawiertów obejrzeć podgląd 2D strony „Tył (B)” (m.in. GNB-2, NB-1, NP, NT, GND, GLB1, GLD, LB2),
+  czy otwory nie są odbite względem `arkusz_nawiertow.pdf`.
+- `wyniki/podsumowanie.json` podaje 16 zaślepek: to błąd skryptu (nie widzi, że łby na LB1, LB2, GLB1, GLB2 zasłania ściana
   i pion). Kupić ok. 6 (`komponenty.md`). Poprawka czeka na osobny PR w `wspolne/`.
 - Korpusy: każda szafka to korpus dolny (0–2120: N, L) i górny (2120–2582: GN, GL). Kody GN… i GL… to formatki korpusów
   górnych, nie pomyłka.

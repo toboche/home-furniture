@@ -45,7 +45,7 @@ Użytkownik podaje NAJMNIEJSZY odczyt z kilku pomiarów (żeby meble nie wyszły
 |---|---|---|---|---|
 | GZ1 | 333 | wysokość gzymsu od podłogi | | |
 | GZ2 | 129 | wysięg gzymsu od lewej ściany | | |
-| GZ3 | 927 | długość gzymsu wzdłuż lewej ściany, od pionu do ściany przedniej | | dochodzi do ściany przedniej; T = 919 (najmniejszy odczyt) |
+| GZ3 | 927 | długość gzymsu wzdłuż lewej ściany, od pionu do ściany przedniej | | dochodzi do ściany przedniej; T = 925 (najmniejszy odczyt 2026-11-18; wcześniej 919) |
 
 ## Rura w gzymsie (przy pionie, nisko; `zrodla/pod_gzymsem.jpg`)
 Rura lekko wystaje z lica gzymsu. W razie potrzeby użytkownik wytnie w szafce wycięcie wyrzynarką.
