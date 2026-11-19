@@ -147,16 +147,27 @@ USTALENIA Z KALKULATORA:
   GZ1 333; puszka gniazdka nie wystaje. LB2 przy pionie stoi ok. 3 mm od ściany przedniej (T = 919 zmierzone przy pionie);
   12 mm wychodziło z G = 1490 mierzonego przy prawej ścianie (model rysuje ścianę przednią prosto).
 
+## Audyt v5 (`audyt/v5.md`, stan po PR #38), wdrożone 2026-11-19
+- Gniazdo wpuszczane w LB2 poprawione (GD5-01): pierścień dystansowy z tworzywa samogasnącego do puszki Ø60 (np. Simet PD60),
+  wkręty osprzętowe do tworzyw ok. Ø3,2 × 40 zamiast M3, otwór ok. Ø66–68 pod pierścień (Ø60 kolidowałby z wkrętami
+  w rozstawie 60), narożniki mostka do LB2; podłącza elektryk. Kody produktów do potwierdzenia przy zakupie.
+- `zamowienie.md`: przywrócona ucięta pozycja o kodach GN/GL, poprawiona lista formatek z otworami na stronie „Tył”
+  (18 mm: NB-1, NP, NT, GNB-1, GNB-2, GND, GNT, LB2; 16 mm: S1B-1, S1D, S2B-1, S2D), daty, porządek w liście okuć.
+- `weryfikacja.md`, `weryfikacja_szkic.html`: stare wartości zaktualizowane do obecnych wymiarów.
+- Pomiar przy podłodze dla szafki po lewej: potwierdzony przez użytkownika bez liczb (audyt GD5-02 prosi o wartości; do dopisania,
+  gdy będą). Płaskość ściany tylnej (V16) do sprawdzenia łatą przed montażem.
+- Sekcja C (`wspolne/`) bez zmian.
+
 ## Audyt v4 (`audyt/v4.md`, stan po PR #36), wdrożone 2026-11-19
 - Ograniczniki 86° (70T3553) także na F1 (razem 4): F1 przy ok. 93–96° uderzyłby w narożnik GLB1, który wystaje 18 przed F1.
-- Otwór Ø68 w LB2 odwołany; wymiar otworu na gniazdko do decyzji przy wyborze gniazda (sekcja „Decyzje” wyżej).
+- Otwór Ø68 w LB2 pod puszkę meblową odwołany (sekcja „Decyzja 2026-11-19: szafka po lewej dłuższa o 3” niżej).
 - Prowadnice MOVENTO przy frontach wpuszczanych: pierwsza linia wkrętów 57,5 od przodu korpusu (37 + 18 + 2,5), bez zderzaka
   298.7600; tuleja przewodu wentylacyjnego 60–80 z uszczelnieniem (30 było za krótkie); kolejność składania GL i wskazówki
   do łączników (`komponenty.md`).
 - Jeden wałek T60.1125W (docięcie LW − 267: 267 i 609) zamiast dwóch; powierzchnia 18 mm 21,19 m²; porządki w opisach.
 - Długość szafki po lewej 912 (do 1488) ZOSTAJE (audyt GD4-03): użytkownik zmierzył ponownie kilka razy, także przy podłodze,
   i potwierdził, że się mieści (2026-11-19).
-- Gniazdo: wpuszczane w LB2, przykręcone do puszki w ścianie (decyzja 2026-11-19, sekcja „Decyzje” wyżej).
+- Gniazdo: wpuszczane w LB2, przez pierścień dystansowy przykręcony do puszki w ścianie (sekcja „Decyzja 2026-11-19: szafka po lewej dłuższa o 3” niżej).
 - Sekcja C (`wspolne/`) bez zmian.
 
 ## Decyzja 2026-11-19: szafka po lewej dłuższa o 3
@@ -167,9 +178,12 @@ USTALENIA Z KALKULATORA:
 - Gniazdko (decyzja 2026-11-19): gniazdka nie ma jeszcze na ścianie; użytkownik zamontuje gniazdo NA PŁYCIE LB2, przewód
   ze ściany (puszka Ø60 w ścianie, środek 210 / 195). Gniazdko nie wymaga luzu między LB2 a ścianą (ok. 3 mm). Otwór Ø68
   ODWOŁANY (audyt v4 GD4-02: puszka meblowa Ø68 nie wejdzie w puszkę Ø60, a wkręty gniazda trafiłyby w pustkę). W zamówieniu
-  tylko nawiert środka. DECYZJA 2026-11-19: gniazdo WPUSZCZANE w LB2 (mechanizm do Ø58), mocowane wkrętami puszkowymi
-  M3 × 35–40 do puszki Ø60 w ścianie (przez LB2 18 i szczelinę ok. 3). Otwór ok. Ø60, dopasowany do mechanizmu, dokładnie
-  nad puszką w ścianie: wytrasować po przymiarce LB2 na sucho, wiercić dopiero potem; ramka gniazda na wewnętrznym licu LB2.
+  tylko nawiert środka. DECYZJA 2026-11-19, poprawiona po audycie v5 (GD5-01): gniazdo WPUSZCZANE w LB2 przez pierścień dystansowy do puszki Ø60 z tworzywa samogasnącego (np. Simet PD60, segmentowy, docięty
+  na miejscu do grubości LB2 + szczeliny, ok. 21) przykręcony do puszki Ø60 w ścianie wkrętami osprzętowymi do tworzyw ok.
+  Ø3,2 × 40 (NIE śruby M3; puszki z tworzywa nie mają gwintu metrycznego). Otwór w LB2 pod średnicę zewnętrzną pierścienia
+  (ok. Ø66–68), dokładnie nad puszką: wytrasować po przymiarce LB2 na sucho, wiercić dopiero potem. Otwór Ø60 byłby za mały:
+  wkręty mechanizmu w rozstawie 60 wypadają na Ø ok. 63. Mostek mechanizmu dodatkowo przykręcić w narożnikach do LB2.
+  Podłączenie wykonuje elektryk; ramka gniazda na wewnętrznym licu LB2.
 - Łączniki korpusu dolnego L: przy LK na górze LK, LS-1 ↔ LT na górze LS-1 (pod spodem kolizja z SZ2/F4, a pod LS-1 nie ma LT);
   dopisane 160–200 wkrętów 3,5 × 15.
 - `formatki.csv`: formatki korpusu dolnego L bez „KONFIRMATY” (BRAK, łączniki od środka; LB2 tylko nawiert środka).

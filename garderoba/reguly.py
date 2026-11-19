@@ -158,7 +158,7 @@ FORMATKI = [
             'albo wykonuje użytkownik; ' + DOL),
     F('LB2', 'L dół: bok przy ścianie przedniej', okleina='1DL + 1SZ (dół)', nawierty='NAWIERT ŚRODKA Ø5 × 5 (łączniki od środka)',
       uwagi='WYCIĘCIE NAROŻNIKA 129 × 335 (dolny narożnik przy ścianie lewej, wokół gzymsu): w kalkulatorze jako wycięcie '
-            'albo wykonuje użytkownik; otwór ok. Ø60 pod gniazdo wpuszczane wierci użytkownik po przymiarce, nad puszką w ścianie (wg nawiertu środka); ' + DOL),
+            'albo wykonuje użytkownik; otwór ok. Ø66–68 pod pierścień dystansowy gniazda wpuszczanego wierci użytkownik po przymiarce, nad puszką w ścianie (wg nawiertu środka); ' + DOL),
     F('LT', 'L dół: plecy (od 335 do wieńca LW, nad gzymsem)', okleina='', nawierty='BRAK (łączniki od środka)'),
     F('LW', 'L dół: wieniec na 2120 (sufit części otwartej)', okleina='1DL', nawierty='BRAK (łączniki od środka)'),
     F('LS', 'L dół: półki nad butami (335, 596, 858)', okleina='1DL', nawierty='BRAK (łączniki od środka)'),
