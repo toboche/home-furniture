@@ -63,7 +63,7 @@ i przeliczenie (`python3 wspolne/pipeline/run.py garderoba`), nigdy ręcznie w p
 ## 6. Okucia i drobne elementy
 Pełna lista z kodami: `komponenty.md`. W skrócie: 4 zawiasy 70T3790.TL (INSERTA) + 4 prowadniki 173L6100 + 8 wkrętów 609.1500,
 2 ograniczniki 86° 70T3553 (F2), 2 TIP-ON 956.1004 + 2 adaptery 956.1201, MOVENTO 760H5000S i 760H6000S z TIP-ON BLUMOTION
-T60L7340 (L1), zaczepy T51.7601, adaptery T60.000D (w komplecie) i wałki T60.1125W; konfirmaty 7 × 50: 230 + zapas; zaślepki ok. 6;
+T60L7340 (L1), zaczepy T51.7601, adaptery T60.000D (w komplecie) i wałki T60.1125W; konfirmaty 7 × 50: 196 + zapas (korpusy) i 5 × 40: 34 + zapas (skrzynki); zaślepki ok. 6;
 3 drążki Ø25 (534, 534, 873); 4 kątowniki i 4 zatrzaski magnetyczne do osłon NO; wkręty 4 × 30 (ok. 10) łączące korpusy
 górne z dolnymi; kratka wentylacyjna; mocowanie do ścian do ustalenia.
 

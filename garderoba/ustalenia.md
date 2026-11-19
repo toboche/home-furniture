@@ -162,13 +162,16 @@ USTALENIA Z KALKULATORA:
     podaje „11 od dołu”, co nie zgadza się z rysunkiem Blum).
   - TIP-ON F1, F2: zostaje wersja krótka 956.1004 z adapterem 956.1201 (Blum: adapter do drzwi standardowych, przy frontach
     wpuszczanych cofnięty o 22 + grubość frontu); audyt zaleca długą 956A1004, do frontów 530 × 422 niepotrzebną.
+- Wniesienie złożonego korpusu dolnego L odpada (2026-11-19): jego najmniejszy wymiar to 698, a drzwi mają 694 w świetle.
 - DO DECYZJI (audyt GD-01, MONTAŻ): przy złączach od zewnątrz boków jeden z korpusów dolnych nie da się złożyć w pomieszczeniu.
   N składa się na środku pustego pokoju, przesuwa w prawo i dosuwa do ściany tylnej. Wtedy przed N zostaje 912–922 wolnego
   miejsca, a L ma 909 długości i 698 głębokości (przekątna 1146): L nie da się złożyć przed miejscem ani obrócić, a na
   miejscu boki LB1 (przy froncie N) i LB2 (3–13 od ściany przedniej) nie mają dostępu z zewnątrz. Odwrotna kolejność
   blokuje N (bok NB-1 przy froncie L, NB-2 4 mm od ściany). Korpusy górne GN, GL i skrzynki da się złożyć poza garderobą
   i wnieść (drzwi 694: GN 462 × 571, GL 462 × 698).
-- DO DECYZJI: złącza skrzynek 16 mm (audyt GD-04): konfirmaty 7 × 50 zostawiają ok. 4,5 ścianki w krawędzi płyty 16.
+- Złącza skrzynek 16 mm (audyt GD-04, decyzja 2026-11-19): konfirmaty 5 × 40 zamiast 7 × 50 (ścianka w krawędzi 5,5 zamiast 4,5).
+- SZ1 i SZ2 na tej samej wysokości ZOSTAJĄ (decyzja 2026-11-19; audyt GD-05 proponował przeniesienie SZ2 niżej): nie otwierać obu naraz.
+- Gniazdko: ZOSTAJE otwór w LB2 z dostępem do gniazdka (decyzja 2026-11-19; audyt GD-10 proponował mały przepust i gniazdko natynkowe).
 - Do osobnego PR w `wspolne/` (audyt v2, sekcja C): `zaslepki.py` (warunek brzegowy i zamknięte komory), `otwory.py`
   (prowadniki frontów wpuszczanych 37 + FD + 1,5), `arkusz_pdf.py` (opisy Ø3 × 12 i Ø5 × 5); dodatkowo z 2026-11-18:
   kalkulator z więcej niż jedną oklejaną krawędzią.
