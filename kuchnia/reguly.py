@@ -41,8 +41,8 @@ def punkty(face, edge, zakres, pts):
         return [p for p in pts if abs(p - X_OKAP) > 95]
     if (face, edge) in (('SOB-2', 'SOW'), ('WSB-1', 'WSW'), ('WSB-2', 'WSW')):
         return [215, 265]
-    if (face, edge) == ('WSB-2', 'WST'):     # wycięcie w WSB-2 od tyłu na rurę ze ścianki (Y 2507-2647)
-        return [p for p in pts if not 2490 <= p <= 2665]
+    if (face, edge) == ('WSB-2', 'WST'):     # wycięcie w WSB-2 od tyłu na rurę ze ścianki (Y 2494-2634)
+        return [p for p in pts if not 2477 <= p <= 2652]
     return pts
 
 
@@ -55,7 +55,7 @@ def os_przodu(p):
 PILOT_D = 5
 PILOT_DEPTH = 5
 X_OKAP = 2656        # oś płyty i okapu (model.js: XH)
-Y_RURA = 2577        # oś rury okapu (YRU)
+Y_RURA = 2564        # oś rury okapu (YRU; od 2026-11-19 sufit M 1156, było 2577)
 Z_RURA = 97          # oś rury okapu od ściany głównej (ZRU)
 Z_PION = 109.5       # oś pionu i poziomu Ø150 w SO (ZPI)
 Y_SOD = 1786         # dół półki wkładanej SOD (model.js: YSOD)
@@ -64,7 +64,7 @@ Z_SOP_OTW = 109.5    # środek otworu w SOP: pion Ø150 za kolanami 15° (2026-1
 Y_OKW = 1592         # otwory montażowe okapu: 81 nad dołem korpusu (YP)
 Z_OKW = (250, 70)    # 35 i 215 od lica przodu korpusu okapu (z 285)
 X_ZA = 2852          # przewód okapu: A - ZA1
-Y_ZA = 2193          # przewód okapu: YS - ZA2
+Y_ZA = 2180          # przewód okapu: YS - ZA2 (było 2193)
 
 
 def dodatkowe_otwory(P, parts, loc):
@@ -157,14 +157,14 @@ def dodatkowe_otwory(P, parts, loc):
     czolo('P1', 'x', 0, 'z', (150, 400, 650), 35, PRET)
 
     zlacze('SOT', 'A', 'z', 9, 'y', (1580, 2040, 2610), (1830, 2350))      # tył: obudowy od wnętrza (+z)
-    zlacze('SOW', 'B', 'y', 2669, 'z', (159,), (60, 260))                   # wieniec: obudowy od spodu
+    zlacze('SOW', 'B', 'y', 2656, 'z', (159,), (60, 260))                   # wieniec: obudowy od spodu
     zlacze('SOP', 'A', 'y', Y_SOP + 9, 'z', (159,), (60, 260))                   # półka: obudowy od góry
 
 
 # F1 stoi 2 przed korpusem (szczelina TIP-ON), a wspólny pipeline liczy linię prowadników od lica frontu:
 # prowadniki F1 dodaje dodatkowe_otwory 37 od przedniej krawędzi SOB-2 (audyt v4 KU4-02; do poprawki w wspolne/)
 ZAWIASY_BEZ_PROWADNIKA_W_SCIANCE = {'F1'}
-Y_ZAWIASY_F1 = (1850, 2210, 2576.5)   # model.js: YZ1, YZ2, YT - 1,5 - 100
+Y_ZAWIASY_F1 = (1850, 2210, 2563.5)   # model.js: YZ1, YZ2, YT - 1,5 - 100
 Z_PROWADNIK = 304 - 37                # model.js: GKS - 37
 
 
@@ -189,7 +189,7 @@ FORMATKI = [
       nawierty='SOB-1: TRZPIENIE MIMOŚRODÓW + KOŁKI (bez otworów przelotowych); SOB-2: KONFIRMATY; OBA: 2 PODPÓRKI Ø5 x 10 POD SOD',
       uwagi='SOB-1 widoczny, czyste lico zewnętrzne; SOB-2: środek otworu Ø160 pod rurę Ø150 (otwornicą z obu stron, płyta podparta, przed montażem); okap przykręcany 4 wkrętami (SOB-1 widoczny: 3,5 x 13; SOB-2: 3,5 x 16 z kompletu): nawierty pilotowe Ø3 x 5 od wnętrza na Y 1592 (81 nad dołem), z 250 i 70 (35 i 215 od lica przodu korpusu okapu)'),
     F('SOT', 'Szafka okapowa: tył', okleina='', nawierty='KONFIRMATY + MIMOŚRODY I KOŁKI (do SOB-1)',
-      uwagi='środek otworu Ø25 pod przewód zasilający okap (x 2852, y 2193) wycina użytkownik'),
+      uwagi='środek otworu Ø25 pod przewód zasilający okap (x 2852, y 2180) wycina użytkownik'),
     F('SOW', 'Szafka okapowa: wieniec górny', okleina='1DL', nawierty='KONFIRMATY + MIMOŚRÓD I KOŁKI (do SOB-1)'),
     F('SOD', 'Szafka okapowa: półka wkładana tuż nad okapem (na 4 podpórkach Ø5)', okleina='1DL', nawierty='BRAK',
       uwagi='wkładana po montażu okapu; wycięcie od przodu na wylot Ø150: szer. 170 (oś x na środku), zakończone półkolem R85 o środku 120 od tylnej krawędzi (najgłębiej 35 od tylnej krawędzi); wycina użytkownik, krawędzie silikonem; w tylnym prawym narożniku podcięcie ok. 25 × 25 na przewód okapu (w osi podcięcia w SOP)'),

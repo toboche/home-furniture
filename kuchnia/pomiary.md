@@ -22,7 +22,7 @@ Pomiary z 2026-11-12 i 2026-11-13 (rozmowa z Claude, zdjęcia kuchni).
 | J | 805 | szerokość wnęki: narożnik → bok słupka, wzdłuż ściany lewej | 628 (pomyłka przy pierwszym pomiarze, poprawione 2026-11-13) |
 | K | 629 | głębokość blatu na ścianie głównej | |
 | L | 657 | głębokość ścianki: ściana główna → czoło ścianki | |
-| M | 1169 | góra płytek → sufit, stałe na całej szerokości szafek | |
+| M | 1156 | góra płytek → sufit: najniższy punkt, przy kratce wentylacyjnej (zmierzone 2026-11-19: 1156–1158) | 1169 (2026-11-13) |
 
 ## Instalacje
 | KOD | WARTOŚĆ | OPIS | WCZEŚNIEJ / UWAGI |
