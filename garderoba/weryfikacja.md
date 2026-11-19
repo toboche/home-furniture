@@ -31,7 +31,7 @@ Przydatne: miernik laserowy, poziomica (najlepiej 2 m), taśma malarska, listwa 
 | V15 | rura w gzymsie: wysięg od ściany lewej i wysokość | – | najwięcej 189 i 335 (wycięcie w LB1) | 184 i 135 | 2026-11-18: rura wystaje 55 poza lico gzymsu, wysokość bezpieczna – OK; położenie wzdłuż gzymsu nie zmierzone (wycięcie LB1 zostaje 184 × 335) |
 | V16 | płaskość ściany tylnej i lewej (szczelina pod łatą 2 m) | za szafkami | najwięcej 5 (szafki stoją 5 mm od ściany) | odsunięcie 5 | 2026-11-18: przyjęte jako OK (bez pomiaru) |
 | V17 | gniazdko na ścianie przedniej: środek (E1, E2) i ile wystaje puszka | – | środek 210 / 195; wystaje najwyżej 9 (bok LB2 stoi 12 od ściany) | – | 2026-11-18: puszka nie wystaje; otwór w LB2 i tak będzie (dostęp do gniazdka) – OK |
-| V18 | przewód wentylacyjny: środek od ściany lewej i od podłogi | – | 317 / 2415 (otwór w LB1) | 317 / 2415 | 2026-11-18: 317 i 2415 – OK; przewód da się skrócić o ok. 81 – OK |
+| V18 | przewód wentylacyjny: środek od ściany lewej i od podłogi | – | 317 / 2415 (otwór w LB1) | 317 / 2415 | 2026-11-18: 317 i 2415 – OK; przewód da się skrócić o ok. 81 – OK; od 2026-11-19 skracany mocniej: do ok. 10 od lica pionu (3 przed GLB1), tuleja do kratki |
 | V19 | poziom podłogi wzdłuż ściany lewej | od pionu do ściany przedniej | najlepiej do 2 mm | – | 2026-11-18: różnica do 2 – OK |
 
 ## 3. Wniesienie i montaż (najważniejsze ryzyko)

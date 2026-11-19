@@ -25,8 +25,8 @@ daje ok. 1,5–2 nominalnie, więc prawie cała regulacja boczna ±2 zostaje do 
 | MOVENTO BLUMOTION S, 40 kg, NL 600 | 760H6000S | 1 kpl. (L+P) | SZ2 (L, wysuw w stronę pokoju); LW 873; za frontem 662 (min. 607). NL 650 jest tylko w serii 766H z jednostką L5 (min. 35 kg), dlatego 600 |
 | TIP-ON BLUMOTION do MOVENTO, jednostka L1 (do 20 kg, NL 350–600) | T60L7340 | 2 kpl. | SZ1 i SZ2 (czapki, rękawiczki). Przy obciążeniu SZ2 ponad 20 kg: L3 T60L7540 (15–40 kg) |
 | Zaczepy frontu MOVENTO z regulacją boczną (L+P) | T51.7601 | 2 kpl. | pod dnem skrzynki z przodu; otwory wg wzornika T65.1000.02 |
-| Adaptery synchronizacji TIP-ON BLUMOTION | T60.1125W | 2 kpl. | SZ1, SZ2 |
-| Wałek synchronizacji (do docięcia) | T60.000D | 2 | długość wg instrukcji Blum dla LW 534 i 873 (audyt: LW − 267 = 267 i 606; do potwierdzenia) |
+| Adaptery synchronizacji TIP-ON BLUMOTION | T60.000D | 2 na szufladę | w komplecie T60L7340 (do 2026-11-19 kody adaptera i wałka były zamienione) |
+| Wałek synchronizacji (do docięcia, 1125) | T60.1125W | 2 | 1 na szufladę; długość docięcia wg instrukcji Blum dla LW 534 i 873 |
 
 Skrzynki według katalogu Blum (bok 16): szerokość wewnętrzna = LW − 42 (492 i 831), długość = NL − 10 (490 i 590),
 dno wpuszczone 13, prześwit pod skrzynką 16, wysokość boków 180 (najwyżej przedział 208 − 23 = 185).
@@ -49,6 +49,7 @@ Kontrola otwierania: `node garderoba/sprawdz_szuflady.js`. Każda szuflada sama:
 | Drążki Ø25 z uchwytami | 3 | N połowa lewa 534, N połowa prawa 534, L wzdłuż ściany 873; oś 2037 |
 | Wkręty i kołki do ściany (przez plecy NT, LT, GNT, GLT) | – | rodzaj zależy od ścian (do ustalenia) |
 | Kratka wentylacyjna prostokątna nasuwana na przewód Ø130 | 1 | na wewnętrznym licu GLB1; otwór w GLB1 wierci użytkownik |
+| Tuleja / krótki odcinek przewodu Ø125, ok. 30 | 1 | łączy przewód (docięty 3 przed GLB1) z kratką; wkładana po ustawieniu korpusu GL |
 | Kątowniki meblowe małe (np. 20 × 20) z wkrętami 3,5 × 15 | 4 | osłony NO-1, NO-2: po 2 u góry, pod półką NS-1 / NS-4, od strony pokoju |
 | Zatrzaski magnetyczne meblowe z blaszkami | 4 | osłony NO-1, NO-2: po 2 na dole, na bokach NB-1, NP, NB-2 za osłoną; blaszki na tylnym licu osłony |
 | Ślizgacze pod boki i przegrodę dolnych korpusów | wg potrzeby | dolne krawędzie NB, NP, LB1, LB2, NO oklejone ABS; ślizgacze tylko w razie potrzeby |

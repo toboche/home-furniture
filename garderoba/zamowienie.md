@@ -2,6 +2,8 @@
 
 Dla rozmowy, w której składane jest zamówienie (garderoba razem z innym pomieszczeniem). Wymiary w mm, kody tylko DUŻYMI LITERAMI.
 Źródło prawdy: repozytorium na `main` (`CLAUDE.md`). Dokumenty w projekcie Claude mogą być starymi kopiami.
+STOP (2026-11-19): przed zamówieniem trzeba rozstrzygnąć montaż korpusu dolnego L (`ustalenia.md`, sekcja „Audyt v2”):
+zmiana złączy w LB1 i LB2 zmieni nawierty. Jeśli ten akapit nadal tu jest, zapytaj użytkownika.
 Wymiary szafek są POTWIERDZONE w pomieszczeniu (2026-11-18, `weryfikacja.md`). Zmiana wymiaru tylko przez `model.js`
 i przeliczenie (`python3 wspolne/pipeline/run.py garderoba`), nigdy ręcznie w plikach z `wyniki/`.
 
@@ -47,7 +49,7 @@ i przeliczenie (`python3 wspolne/pipeline/run.py garderoba`), nigdy ręcznie w p
 - Nawierty pilotowe Ø3 × 12 pod prowadniki zawiasów: w GNB-1 i GNB-2 (są w CSV). Jeśli kalkulator nie przyjmie Ø3,
   pominąć je (użytkownik wywierci sam); Ø4 za słabo trzyma wkręt 3,5.
 - Nawierty środków Ø5 × 5 pod otwory wiercone przez użytkownika otwornicą: GLB1 (przewód wentylacyjny Ø130, otwór ok. Ø135)
-  i LB2 (gniazdko). Same otwory robi użytkownik.
+  i LB2 (gniazdko). Same otwory robi użytkownik. Przewód wentylacyjny skrócony do 3 przed GLB1, z kratką łączy go tuleja.
 - Skrzynki szuflad, robi użytkownik wzornikiem Blum T65.1000.02 (nie ma ich w CSV): otwory pod zaczepy T51.7601 pod dnem
   z przodu oraz 2 otwory Ø6 × 10 pod haki prowadnic w TYLNEJ KRAWĘDZI dna S1D i S2D (7 nad spodem dna, 11 od wewnętrznego
   lica boków). Kalkulator meble.pl wierci w krawędzi tylko w osi grubości (8 zamiast 7), dlatego lepiej wzornikiem.
@@ -61,7 +63,7 @@ i przeliczenie (`python3 wspolne/pipeline/run.py garderoba`), nigdy ręcznie w p
 ## 6. Okucia i drobne elementy
 Pełna lista z kodami: `komponenty.md`. W skrócie: 4 zawiasy 70T3790.TL (INSERTA) + 4 prowadniki 173L6100 + 8 wkrętów 609.1500,
 2 ograniczniki 86° 70T3553 (F2), 2 TIP-ON 956.1004 + 2 adaptery 956.1201, MOVENTO 760H5000S i 760H6000S z TIP-ON BLUMOTION
-T60L7340 (L1), zaczepy T51.7601, adaptery T60.1125W i wałki T60.000D; konfirmaty 7 × 50: 230 + zapas; zaślepki ok. 6;
+T60L7340 (L1), zaczepy T51.7601, adaptery T60.000D (w komplecie) i wałki T60.1125W; konfirmaty 7 × 50: 230 + zapas; zaślepki ok. 6;
 3 drążki Ø25 (534, 534, 873); 4 kątowniki i 4 zatrzaski magnetyczne do osłon NO; wkręty 4 × 30 (ok. 10) łączące korpusy
 górne z dolnymi; kratka wentylacyjna; mocowanie do ścian do ustalenia.
 
