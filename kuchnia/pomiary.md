@@ -33,6 +33,7 @@ Pomiary z 2026-11-12 i 2026-11-13 (rozmowa z Claude, zdjęcia kuchni).
 | RU1 | 125 | rura okapu w ściance (wychodzi poziomo ze ścianki): średnica wewnętrzna | zewnętrzna 130 (pierwszy odczyt 130 był po zewnętrznej stronie) |
 | RU2 | 32 | rura okapu: ściana główna → najbliższy punkt rury (po zewnętrznej) | oś 32 + 65 = 97 |
 | RU3 | 38 | rura okapu: sufit → najbliższy punkt rury (po zewnętrznej) | oś 38 + 65 = 103 pod sufitem |
+| RU5 | 988 | góra płytek → spód rury wystającej ze ścianki (potwierdza oś rury Y 2564 przy suficie M 1156) | zmierzone 2026-11-19 |
 | RU4 | 115 | rura okapu wystaje ze ścianki (koniec na X 3093, w wąskiej szafce) | zmierzone 2026-11-18 |
 | PL1 | 9–12 | płytki wystają przed ścianę nad nimi (ryflowane) | zmierzone 2026-11-18; w modelu wcześniej 8 |
 | KR1 | 125 | otwór wentylacji grawitacyjnej w ściance: średnica wewnętrzna | zewnętrzna 130; kratka, nie zasłaniać, otworu nie da się przesunąć |
