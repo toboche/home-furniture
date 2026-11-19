@@ -5,11 +5,11 @@
   "m2": 21.17
  },
  "kalkulator": {
-  "typy_formatek": 18,
-  "wiersze": 239
+  "typy_formatek": 14,
+  "wiersze": 195
  },
  "laczniki": {
-  "konfirmaty": 173,
+  "konfirmaty": 151,
   "kolki": 0,
   "otwory_pod_kolki": 0,
   "otwory_nieprzelotowe": 10,
@@ -17,7 +17,7 @@
  },
  "zaslepki": {
   "widoczne": 16,
-  "ukryte": 157,
+  "ukryte": 135,
   "widoczne_wg_czesci": {
    "NP": 6,
    "S1D": 4,
@@ -42,10 +42,10 @@
    "S2D → S2C-2 (x 103, y 899, z 1311)"
   ]
  },
- "polaczenia": 60,
- "otwory_lacznie": 356,
+ "polaczenia": 52,
+ "otwory_lacznie": 312,
  "kolizje_otworow": 0,
- "strony_arkusza": 28,
+ "strony_arkusza": 24,
  "formatki_16mm": {
   "pozycje": 6,
   "sztuki": 10,

@@ -158,7 +158,8 @@ USTALENIA Z KALKULATORA:
 - `weryfikacja.md`: V12 poprawione na 2586–2589 (literówka 2286 potwierdzona przez użytkownika 2026-11-18), wymagania V1–V18
   zaktualizowane do obecnych wymiarów, V8, V9, V20–V22 rozstrzygnięte.
 - Drobne: pion w modelu rysowany do PZM (573), przewody R1/R2 od AT, `reguly.py` i `pomiary.md` zaktualizowane.
-- DO DECYZJI: kolejność podnoszenia korpusów górnych (punkt 3 montażu wyżej) i wymiar otworu na gniazdko w LB2 (audyt GD3-06).
+- Decyzje 2026-11-19: korpus górny GL składany na miejscu na łącznikach od środka (bez konfirmatów), kolejność montażu wyżej;
+  otwór na gniazdko w LB2: Ø68 (standardowa otwornica do puszek), środek 210 / 195.
 - Sekcja C (`wspolne/`) bez zmian: zaślepki, prowadniki frontów wpuszczanych, opisy w arkuszu PDF, kilka krawędzi okleiny.
 
 ## Audyt v2 (`audyt/v2.md`, robiony na stanie sprzed 2026-11-18), wdrożone 2026-11-19
@@ -180,18 +181,18 @@ USTALENIA Z KALKULATORA:
 - MONTAŻ (audyt GD-01, decyzja 2026-11-19, wariant a): przy złączach od zewnątrz boków jeden z korpusów dolnych nie da się
   złożyć w pomieszczeniu (przed N zostaje 912–922 na L długości 909; przy ścianach 3–13 mm, a konfirmat wymaga min. ok. 40).
   Dlatego korpus dolny L jest BEZ KONFIRMATÓW: boki LB1, LB2 i plecy LT łączone z półkami i wieńcem LW łącznikami narożnymi
-  od środka (ok. 40, `komponenty.md`). Kolejność montażu:
+  od środka (ok. 38, `komponenty.md`). Korpus górny GL tak samo (decyzja 2026-11-19, audyt v3 GD3-06: złożonego GL nie da
+  się podnieść, bo między frontem N a ścianą przednią ma tylko 2–6 mm z każdej strony). Kolejność montażu:
   1. Korpus dolny N: złożyć na konfirmatach na środku pustego pokoju, przesunąć w prawo i dosunąć do ściany tylnej.
-  2. Korpus dolny L: na miejscu postawić LB1 (przy froncie N) i LB2 (przy ścianie przedniej), wsunąć od pokoju LT, LS-1..3,
+  2. Korpus górny GN (i skrzynki szuflad): złożyć poza garderobą, wnieść (drzwi 694, GN 462 × 571), podnieść na N, ZANIM
+     powstanie korpus dolny L (wtedy jest miejsce), dosunąć do ściany tylnej, przykręcić wkrętami przez dno GND.
+  3. Korpus dolny L: na miejscu postawić LB1 (przy froncie N) i LB2 (przy ścianie przedniej), wsunąć od pokoju LT, LS-1..3,
      LK, LW i przykręcić łącznikami od środka; przykręcić do ściany przez LT. Łączniki zwykle pod półkami, ale przy LK
      NA GÓRZE (pod LK pracuje szuflada SZ2 i front F4), a LS-1 ↔ LT NA GÓRZE LS-1 (pod LS-1 nie ma LT); `komponenty.md`.
-  3. Korpusy górne GN, GL (i skrzynki szuflad) złożyć poza garderobą, wnieść (drzwi 694: GN 462 × 571, GL 462 × 698),
-     położyć na dolnych i wsunąć (GN od przodu, GL od strony pokoju wzdłuż X); przykręcić wkrętami przez dno.
-     KOLEJNOŚĆ PODNOSZENIA DO DECYZJI (audyt v3, GD3-06): poniżej 2120 przed szafkami jest wąsko. GN (1122) podnosi się między
-     frontem L a prawą ścianą (1126–1130, czyli 2–4 mm z każdej strony), jeśli L już stoi. GL (909) podnosi się między frontem N
-     a ścianą przednią (912–922). GN przed L dolnym = GN bez problemu, GL potem ciasno; GL przed GN (zalecenie audytu) = GL
-     da się przechylić nad wieńcem N, ale GN potem ciasno. Na czas podnoszenia zdjąć albo osłonić oczko w suficie (L1 1131, L2 1000).
-  4. Przewód wentylacyjny: tuleja przez otwór w GLB1 do kratki.
+  4. Korpus górny GL: na miejscu z pojedynczych płyt na łącznikach od środka (ok. 16): GLB1 i GLB2 na bokach LB1, LB2,
+     GLD na LW (łączniki na górze GLD), GLT, GLG (łączniki pod GLG); GLD przykręcić do LW. Na czas montażu zdjąć albo osłonić
+     oczko w suficie (L1 1131, L2 1000).
+  5. Przewód wentylacyjny: tuleja przez otwór w GLB1 do kratki.
 - Złącza skrzynek 16 mm (audyt GD-04, decyzja 2026-11-19): konfirmaty 5 × 40 zamiast 7 × 50 (ścianka w krawędzi 5,5 zamiast 4,5).
 - SZ1 i SZ2 na tej samej wysokości ZOSTAJĄ (decyzja 2026-11-19; audyt GD-05 proponował przeniesienie SZ2 niżej): nie otwierać obu naraz.
 - Gniazdko: ZOSTAJE otwór w LB2 z dostępem do gniazdka (decyzja 2026-11-19; audyt GD-10 proponował mały przepust i gniazdko natynkowe).
