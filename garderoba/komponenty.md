@@ -1,6 +1,6 @@
 # Garderoba: okucia i elementy (stan 2026-11-19, po audycie v5)
 Wymiary w mm. Kody tylko dużymi literami. Płyty: `wyniki/formatki.csv` (18 mm, 27 pozycji / 36 sztuk / 21,19 m²; korpusy dolne N, L do 2120 i górne GN, GL 2120–2582)
-i `wyniki/formatki_16mm.csv` (skrzynki szuflad, 6 pozycji / 10 sztuk / 1,52 m²; inna biała płyta 16 mm, bo W1200 nie ma 16); nawierty: `wyniki/kalkulator_nawierty*.csv`.
+i `wyniki/formatki_16mm.csv` (skrzynki szuflad, 6 pozycji / 10 sztuk / 1,52 m²; płyta 16 mm: U702 ST9, jeśli jest w 16 mm, inaczej inna płyta 16 mm do wyboru przy zamówieniu); nawierty: `wyniki/kalkulator_nawierty*.csv`.
 
 ## Zawiasy i TIP-ON (fronty górne F1, F2: chowane, bez uchwytów)
 Kody katalogowe Blum według audytu v1 i katalogu; przed zakupem potwierdzić u sprzedawcy (kolor i dostępność).

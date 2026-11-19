@@ -19,6 +19,8 @@ Materiały źródłowe: `zrodla/` (rzut architektoniczny, zdjęcia ogólne).
 - Szafki na wprost i po lewej stronie od wejścia. Głębokość taka, żeby pionu w ogóle nie było widać.
 - Górny wieniec otwartej (dolnej) części szafek na wysokości 2120 mm.
 - Kolory i płyta jak w pralni (Egger W1200 ST9 Biały porcelanowy 18 mm, centrum.meble.pl).
+- ZMIANA 2026-11-19: płyta i okleina Egger U702 ST9 Kaszmir 18 mm (zamiast W1200 ST9). Skrzynki szuflad 16 mm: U702 w 16 mm,
+  jeśli dostępna, inaczej inna płyta 16 mm wybrana przy zamówieniu. Wymiary i nawierty bez zmian.
 - Dolne szafki stoją bezpośrednio na kafelkach, bez cokołu.
 
 ## Bryły szafek (decyzje 2026-11-11)

@@ -16,9 +16,11 @@ i przeliczenie (`python3 wspolne/pipeline/run.py garderoba`), nigdy ręcznie w p
 | `ustalenia.md` | decyzje (sekcje z 2026-11-19 są najnowsze) |
 
 ## 2. Płyta
-- 18 mm: założony dekor jak w pralni, Egger W1200 ST9 Biały porcelanowy (`ustalenia.md`). Jeśli zamówienie idzie
+- 18 mm: Egger U702 ST9 Kaszmir (decyzja 2026-11-19, wcześniej W1200 ST9 Biały porcelanowy). Okleina ABS 0,8 i laser 1 mm
+  na frontach w dekorze U702. Jeśli zamówienie idzie
   do innego dostawcy albo w innym dekorze, ustalić to w rozmowie o zamówieniu; wymiary formatek się nie zmieniają.
-- 16 mm (skrzynki S1, S2): W1200 nie ma 16 mm, użytkownik zgodził się na INNĄ BIAŁĄ PŁYTĘ 16 mm. Skrzynki muszą mieć
+- 16 mm (skrzynki S1, S2): U702 ST9 16 mm, jeśli kalkulator ją ma; jeśli nie, pokazać użytkownikowi dostępne płyty 16 mm
+  (skrzynki są wewnątrz szafek; wcześniej zgoda na inną białą). Skrzynki muszą mieć
   16 (Blum MOVENTO: bok najwyżej 16), nie zamieniać na 18.
 - Rozkrój 21629487 w meble.pl (2026-11-15) jest NIEAKTUALNY: zmieniły się prawie wszystkie wymiary. Złożyć nowy.
 
