@@ -11,18 +11,18 @@ GND;N góra: dno;1086;571;1;1DL;KONFIRMATY;korpus górny przykręcony do dolnego
 GNG;N góra: wieniec górny;1086;571;1;1DL;KONFIRMATY;
 GNP;N góra: przegroda środkowa (TIP-ON F1 i F2 z obu stron);553;426;1;1SZ;KONFIRMATY;
 GNT;N góra: plecy;1086;426;1;;KONFIRMATY;
-LB1;L dół: bok przy pionie;2120;698;1;1DL + 1SZ (dół);KONFIRMATY;"WYCIĘCIE NAROŻNIKA 184 × 335 (dolny narożnik przy ścianie lewej, wokół gzymsu i rury): w kalkulatorze jako wycięcie albo wykonuje użytkownik; DOLNA KRAWĘDŹ OKLEJONA ABS (stoi na kafelkach; w kalkulatorze dodać ręcznie), ślizgacze w razie potrzeby"
-LB2;L dół: bok przy ścianie przedniej;2120;698;1;1DL + 1SZ (dół);KONFIRMATY + NAWIERT ŚRODKA Ø5 × 5;"WYCIĘCIE NAROŻNIKA 129 × 335 (dolny narożnik przy ścianie lewej, wokół gzymsu): w kalkulatorze jako wycięcie albo wykonuje użytkownik; otwór na gniazdko wierci użytkownik otwornicą wg nawiertu środka; DOLNA KRAWĘDŹ OKLEJONA ABS (stoi na kafelkach; w kalkulatorze dodać ręcznie), ślizgacze w razie potrzeby"
-LT;L dół: plecy (od 335 do wieńca LW, nad gzymsem);1767;873;1;;KONFIRMATY;
-LW;L dół: wieniec na 2120 (sufit części otwartej);873;698;1;1DL;KONFIRMATY;
-LS;L dół: półki nad butami (335, 596, 858);873;680;3;1DL;KONFIRMATY;
-LK;L dół: płyta pod kurtkami (1084);873;680;1;1DL;KONFIRMATY;
-GLB1;L góra: bok przy pionie;698;462;1;1SZ;KONFIRMATY + NAWIERT ŚRODKA Ø5 × 5;otwór na przewód wentylacyjny Ø130 (np. Ø135) wierci użytkownik otwornicą wg nawiertu środka
-GLB2;L góra: bok przy ścianie przedniej;698;462;1;1SZ;KONFIRMATY;
-GLD;L góra: dno;873;698;1;1DL;KONFIRMATY;korpus górny przykręcony do dolnego wkrętami przez dno (patrz ustalenia.md)
-GLG;L góra: wieniec górny;873;698;1;1DL;KONFIRMATY;
-GLT;L góra: plecy;873;426;1;;KONFIRMATY;
+LB1;L dół: bok przy pionie;2120;698;1;1DL + 1SZ (dół);BRAK (łączniki od środka);"WYCIĘCIE NAROŻNIKA 184 × 335 (dolny narożnik przy ścianie lewej, wokół gzymsu i rury): w kalkulatorze jako wycięcie albo wykonuje użytkownik; DOLNA KRAWĘDŹ OKLEJONA ABS (stoi na kafelkach; w kalkulatorze dodać ręcznie), ślizgacze w razie potrzeby"
+LB2;L dół: bok przy ścianie przedniej;2120;698;1;1DL + 1SZ (dół);NAWIERT ŚRODKA Ø5 × 5 (łączniki od środka);"WYCIĘCIE NAROŻNIKA 129 × 335 (dolny narożnik przy ścianie lewej, wokół gzymsu): w kalkulatorze jako wycięcie albo wykonuje użytkownik; otwór Ø68 (otwornica do puszek) wierci użytkownik wg nawiertu środka: gniazdo montowane na LB2, przewód z puszki w ścianie; DOLNA KRAWĘDŹ OKLEJONA ABS (stoi na kafelkach; w kalkulatorze dodać ręcznie), ślizgacze w razie potrzeby"
+LT;L dół: plecy (od 335 do wieńca LW, nad gzymsem);1767;876;1;;BRAK (łączniki od środka);
+LW;L dół: wieniec na 2120 (sufit części otwartej);876;698;1;1DL;BRAK (łączniki od środka);
+LS;L dół: półki nad butami (335, 596, 858);876;680;3;1DL;BRAK (łączniki od środka);
+LK;L dół: płyta pod kurtkami (1084);876;680;1;1DL;BRAK (łączniki od środka);
+GLB1;L góra: bok przy pionie;698;462;1;1SZ;NAWIERT ŚRODKA Ø5 × 5 (łączniki od środka);otwór na przewód wentylacyjny Ø130 (np. Ø135) wierci użytkownik otwornicą wg nawiertu środka
+GLB2;L góra: bok przy ścianie przedniej;698;462;1;1SZ;BRAK (łączniki od środka);
+GLD;L góra: dno;876;698;1;1DL;BRAK (łączniki od środka);korpus górny przykręcony do dolnego wkrętami przez dno (patrz ustalenia.md)
+GLG;L góra: wieniec górny;876;698;1;1DL;BRAK (łączniki od środka);
+GLT;L góra: plecy;876;426;1;;BRAK (łączniki od środka);
 F1;Front górny N, połowa lewa (chowany, TIP-ON, zawiasy po lewej);530;422;1;2DL+2SZ;SZABLON FRONT LEWY: 2 ZAWIASY BLUM INSERTA (70T3790.TL), PUSZKA Ø35, ŚRODEK 22.5 MM OD KRAWĘDZI, 100 OD KOŃCÓW;
 F2;Front górny N, połowa prawa (chowany, TIP-ON, zawiasy po prawej);530;422;1;2DL+2SZ;SZABLON FRONT PRAWY: 2 ZAWIASY BLUM INSERTA (70T3790.TL), PUSZKA Ø35, ŚRODEK 22.5 MM OD KRAWĘDZI, 100 OD KOŃCÓW;
 F3;"Front szuflady SZ1 (N, połowa lewa; chowany, TIP-ON BLUMOTION)";530;204;1;2DL+2SZ;BRAK (mocowanie frontu MOVENTO na wkręty);
-F4;"Front szuflady SZ2 (L; chowany, TIP-ON BLUMOTION)";869;204;1;2DL+2SZ;BRAK (mocowanie frontu MOVENTO na wkręty);
+F4;"Front szuflady SZ2 (L; chowany, TIP-ON BLUMOTION)";872;204;1;2DL+2SZ;BRAK (mocowanie frontu MOVENTO na wkręty);

@@ -17,6 +17,7 @@ var J=2586;            /* wysokość, najmniejsza (przy drzwiach) */
 var PX=692, PXM=700;   /* wysięg pionu od lewej ściany: przy podłodze / największy (lico pionu nie jest pionowe) */
 var PZ=563, PZM=573;   /* wysięg pionu od tylnej ściany: najmniejszy / największy */
 var T=925;             /* od lica pionu do ściany przedniej (najmniejszy) */
+var TP=1491;           /* ściana przednia przy lewej ścianie, od tylnej: najmniejsze PZ + T na tej samej wysokości (563 + 928 na 400) */
 var DX=164, DW=694, DH=2014;   /* drzwi: od prawej ściany, szerokość i wysokość w świetle ościeżnicy */
 var W1=2415, W2=317, W3=130, W4=120;   /* wylot wentylacyjny: wysokość środka, od lewej ściany, średnica, wysięg od lica pionu */
 var GZ1=333, GZ2=129, GZ3=927;         /* gzyms: wysokość, wysięg od lewej ściany, długość od pionu */
@@ -37,7 +38,7 @@ var ZF=PZM+LUZ;        /* płaszczyzna przodu szafki na wprost = tył boku LB1: 
 var XL=PXM+LUZ;        /* płaszczyzna przodu szafki po lewej = lewy bok szafki na wprost: 703 */
 var XP=AT-LUZ-1;       /* prawy bok szafki na wprost: 1825 (luz 4 przy prawej ścianie; szerokość 1122, połowy po 534) */
 var XM=(XL+XP)/2;      /* oś przegrody: 1264 (połowy po 534) */
-var ZP=PZ+T-LUZ;       /* koniec szafki po lewej przy ścianie przedniej: 1485 */
+var ZP=TP-LUZ;         /* koniec szafki po lewej przy ścianie przedniej: 1488 (do 2026-11-19: PZ + T − 3 = 1485) */
 var HD=HW-P-65;        /* oś drążka: 65 pod spodem wieńca = 2037 */
 var HK1=1000;          /* przedział na krótsze kurtki (połowa lewa szafki na wprost, szafka po lewej) */
 var YP=[GZ1+2];        /* spody półek na buty: 335 (2 mm nad gzymsem), dalej dwa przedziały po równo */
@@ -52,16 +53,16 @@ var YK=HW-P-HK1-P;     /* spód płyty pod kurtkami: 1084 */
 var C={bok:0xcdbb95,tyl:0xb9a37a,pol:0xd8c7a3,front:0x2f9e8f,skr:0xb08a5b};
 var ITEMS=[
   /* ===== Pomieszczenie ===== */
-  {n:'Pion (wysięg '+PXM+' od lewej ściany, '+PZ+' od tylnej; przy podłodze '+PX+')',layer:'Pion i gzyms',x:0,y:0,z:0,w:PXM,h:J,d:PZ,c:0xd9d4ca},
+  {n:'Pion (wysięg '+PXM+' od lewej ściany, '+PZ+' od tylnej; przy podłodze '+PX+')',layer:'Pion i gzyms',x:0,y:0,z:0,w:PXM,h:J,d:PZM,c:0xd9d4ca},
   {n:'Gzyms ('+GZ2+' × '+GZ1+', długość '+GZ3+')',layer:'Pion i gzyms',x:0,y:0,z:G-GZ3,w:GZ2,h:GZ1,d:GZ3,c:0xc7c1b5},
   {n:'Rura wystająca z gzymsu (wysięg '+GR4+', do '+GR3+' od podłogi; szerokość 80 założona)',layer:'Osprzęt',x:GZ2,y:0,z:G-GZ3,w:GR4,h:GR3,d:80,c:0xb08d57},
   /* przewód docięty 3 przed bokiem GLB1 (wysięg 10 zamiast 120), żeby korpus górny GL dało się wsunąć wzdłuż X;
      połączenie z kratką krótką tuleją przez otwór w GLB1 po ustawieniu korpusu (audyt v2, GD-08) */
   {t:'cyl',n:'Przewód wentylacyjny Ø'+W3+' docięty do '+(ZF-LUZ)+' od ściany tylnej, 3 przed bokiem GLB1 (było '+W4+' od pionu)',layer:'Osprzęt',cx:W2,cy:W1,z:PZ,r:W3/2,len:ZF-LUZ-PZ,c:0x6b7b8c},
   {t:'cyl',n:'Tuleja Ø125 przez otwór w GLB1 do kratki (wkładana po ustawieniu korpusu GL)',layer:'Osprzęt',cx:W2,cy:W1,z:ZF-LUZ,r:62,len:LUZ+P,c:0x8a96a3},
-  {n:'Przewód wodny R1 ('+R1+' od prawej ściany, do ok. '+R3+', wysięg ok. '+R4+')',layer:'Osprzęt',x:A-R1-20,y:0,z:0,w:40,h:R3,d:R4,c:0xc0392b},
-  {n:'Przewód wodny R2 ('+R2+' od prawej ściany, do ok. '+R3+', wysięg ok. '+R4+')',layer:'Osprzęt',x:A-R2-20,y:0,z:0,w:40,h:R3,d:R4,c:0x2e5fb3},
-  {n:'Gniazdko (E1 '+E1+' od lewej ściany, E2 '+E2+' od podłogi)',layer:'Osprzęt',x:E1-40,y:E2-40,z:G-15,w:80,h:80,d:15,c:0xe58a2b},
+  {n:'Przewód wodny R1 ('+R1+' od prawej ściany, do ok. '+R3+', wysięg ok. '+R4+')',layer:'Osprzęt',x:AT-R1-20,y:0,z:0,w:40,h:R3,d:R4,c:0xc0392b},
+  {n:'Przewód wodny R2 ('+R2+' od prawej ściany, do ok. '+R3+', wysięg ok. '+R4+')',layer:'Osprzęt',x:AT-R2-20,y:0,z:0,w:40,h:R3,d:R4,c:0x2e5fb3},
+  {n:'Gniazdko (E1 '+E1+' od lewej ściany, E2 '+E2+' od podłogi)',layer:'Osprzęt',x:E1-40,y:E2-40,z:TP-2,w:80,h:80,d:2,c:0xe58a2b},   /* lico ściany przy lewej: TP; wysięg osprzętu do sprawdzenia */
   {t:'cyl3',n:'Lampa (oczko) '+L2+' od lewej ściany, '+L1+' od tylnej',layer:'Osprzęt',ax:'y',px:L2,py:J-3,pz:L1,r:40,len:6,c:0xe0a526},
 
   /* ===== Szafka na wprost, korpus dolny N (0–2120): przegroda NP na pół, plecy 18 na całą szerokość, bez dna ===== */

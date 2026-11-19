@@ -34,10 +34,12 @@ def pomijaj_polaczenie(face, edge):
     """bez konfirmatów:
     - osłony przewodów NO-1, NO-2 są zdejmowane (kątowniki u góry, magnesy na dole);
     - korpus dolny L składany na miejscu (boki LB1, LB2 i plecy LT bez dostępu z zewnątrz): łączniki narożne od środka
-      (decyzja 2026-11-19, audyt v2 GD-01); korpusy górne GL, GN i dolny N zostają na konfirmatach"""
+      (decyzja 2026-11-19, audyt v2 GD-01);
+    - korpus górny GL też składany na miejscu (podnoszenie złożonego GL między frontem N a ścianą przednią ma 2–6 mm luzu,
+      audyt v3 GD3-06, decyzja 2026-11-19); korpusy N i GN zostają na konfirmatach"""
     if face.startswith('NO') or edge.startswith('NO'):
         return True
-    return face[0] == 'L' and edge[0] == 'L'
+    return (face[0] == 'L' and edge[0] == 'L') or (face[:2] == 'GL' and edge[:2] == 'GL')
 
 
 def rozstaw(face, edge, domyslny):
@@ -85,7 +87,7 @@ def punkty(face, edge, zakres, pts):
 # zawiasy frontów chowanych: prowadniki nie leżą w linii 37 od przodu boku (jak przy frontach nakładanych),
 # więc nawierty pilotowe dodaje dodatkowe_otwory
 ZAWIASY_BEZ_PROWADNIKA_W_SCIANCE = {'F1', 'F2'}
-PROWADNIK_OD_PRZODU = 57   # front chowany 18 (70T3750.TL, prowadnik krzyżakowy 0 mm): katalog Blum 37 + 18 + 1,5 = 56,5, zaokrąglone
+PROWADNIK_OD_PRZODU = 57   # front chowany 18 (70T3790.TL, prowadnik krzyżakowy 0 mm): katalog Blum 37 + 18 + 1,5 = 56,5, zaokrąglone
                            # do pełnego mm w głąb (front 0,5 głębiej, korekta regulacją głębokości zawiasu)
 
 
@@ -127,7 +129,7 @@ BEZ_OKLEINY_PREFIKSY = ('NT', 'NO', 'LT', 'GNT', 'GLT', 'S1', 'S2')
 ZASLEPKI_ZASLANIAJA = ['Pion i gzyms', 'Fronty']
 
 K = 'KONFIRMATY'
-SKR = 'płyta 16; KONFIRMATY 5 × 40 (otwory Ø5 w licu bez poszerzania); otwory pod zaczepy MOVENTO T51.7601 wg wzornika Blum T65.1000.02'
+SKR = 'płyta 16; KONFIRMATY 5 × 40: otwory Ø5 w licu POGŁĘBIĆ STOŻKOWO pod łeb (łeb równo z płytą, pod dnem prześwit MOVENTO); otwory pod zaczepy MOVENTO T51.7601 wg wzornika Blum T65.1000.02'
 SKR_D = SKR + '; w TYLNEJ KRAWĘDZI DNA 2 otwory Ø6 × 10 pod haki prowadnic: 7 nad spodem dna, 11 od wewnętrznego lica boków; konfirmaty dna z dala od zaczepów (100 od przodu i boków) i od strefy TIP-ON z tyłu (135 od boków)'
 
 # Opisy formatek. Wymiary i ilości liczone z modelu (model.js).
@@ -151,23 +153,23 @@ FORMATKI = [
     F('GNP', 'N góra: przegroda środkowa (TIP-ON F1 i F2 z obu stron)', okleina='1SZ', nawierty=K),
     F('GNT', 'N góra: plecy', okleina='', nawierty=K),
     # szafka po lewej: korpus dolny L
-    F('LB1', 'L dół: bok przy pionie', okleina='1DL + 1SZ (dół)', nawierty=K,
+    F('LB1', 'L dół: bok przy pionie', okleina='1DL + 1SZ (dół)', nawierty='BRAK (łączniki od środka)',
       uwagi='WYCIĘCIE NAROŻNIKA 184 × 335 (dolny narożnik przy ścianie lewej, wokół gzymsu i rury): w kalkulatorze jako wycięcie '
             'albo wykonuje użytkownik; ' + DOL),
-    F('LB2', 'L dół: bok przy ścianie przedniej', okleina='1DL + 1SZ (dół)', nawierty=K + ' + NAWIERT ŚRODKA Ø5 × 5',
+    F('LB2', 'L dół: bok przy ścianie przedniej', okleina='1DL + 1SZ (dół)', nawierty='NAWIERT ŚRODKA Ø5 × 5 (łączniki od środka)',
       uwagi='WYCIĘCIE NAROŻNIKA 129 × 335 (dolny narożnik przy ścianie lewej, wokół gzymsu): w kalkulatorze jako wycięcie '
-            'albo wykonuje użytkownik; otwór na gniazdko wierci użytkownik otwornicą wg nawiertu środka; ' + DOL),
-    F('LT', 'L dół: plecy (od 335 do wieńca LW, nad gzymsem)', okleina='', nawierty=K),
-    F('LW', 'L dół: wieniec na 2120 (sufit części otwartej)', okleina='1DL', nawierty=K),
-    F('LS', 'L dół: półki nad butami (335, 596, 858)', okleina='1DL', nawierty=K),
-    F('LK', 'L dół: płyta pod kurtkami (1084)', okleina='1DL', nawierty=K),
+            'albo wykonuje użytkownik; otwór Ø68 (otwornica do puszek) wierci użytkownik wg nawiertu środka: gniazdo montowane na LB2, przewód z puszki w ścianie; ' + DOL),
+    F('LT', 'L dół: plecy (od 335 do wieńca LW, nad gzymsem)', okleina='', nawierty='BRAK (łączniki od środka)'),
+    F('LW', 'L dół: wieniec na 2120 (sufit części otwartej)', okleina='1DL', nawierty='BRAK (łączniki od środka)'),
+    F('LS', 'L dół: półki nad butami (335, 596, 858)', okleina='1DL', nawierty='BRAK (łączniki od środka)'),
+    F('LK', 'L dół: płyta pod kurtkami (1084)', okleina='1DL', nawierty='BRAK (łączniki od środka)'),
     # szafka po lewej: korpus górny GL (otwarta półka)
-    F('GLB1', 'L góra: bok przy pionie', okleina='1SZ', nawierty=K + ' + NAWIERT ŚRODKA Ø5 × 5',
+    F('GLB1', 'L góra: bok przy pionie', okleina='1SZ', nawierty='NAWIERT ŚRODKA Ø5 × 5 (łączniki od środka)',
       uwagi='otwór na przewód wentylacyjny Ø130 (np. Ø135) wierci użytkownik otwornicą wg nawiertu środka'),
-    F('GLB2', 'L góra: bok przy ścianie przedniej', okleina='1SZ', nawierty=K),
-    F('GLD', 'L góra: dno', okleina='1DL', nawierty=K, uwagi=SCIANA),
-    F('GLG', 'L góra: wieniec górny', okleina='1DL', nawierty=K),
-    F('GLT', 'L góra: plecy', okleina='', nawierty=K),
+    F('GLB2', 'L góra: bok przy ścianie przedniej', okleina='1SZ', nawierty='BRAK (łączniki od środka)'),
+    F('GLD', 'L góra: dno', okleina='1DL', nawierty='BRAK (łączniki od środka)', uwagi=SCIANA),
+    F('GLG', 'L góra: wieniec górny', okleina='1DL', nawierty='BRAK (łączniki od środka)'),
+    F('GLT', 'L góra: plecy', okleina='', nawierty='BRAK (łączniki od środka)'),
     # fronty
     F('F1', 'Front górny N, połowa lewa (chowany, TIP-ON, zawiasy po lewej)', okleina='2DL+2SZ',
       nawierty='SZABLON FRONT LEWY: 2 ZAWIASY BLUM INSERTA (70T3790.TL), PUSZKA Ø35, ŚRODEK 22.5 MM OD KRAWĘDZI, 100 OD KOŃCÓW'),
