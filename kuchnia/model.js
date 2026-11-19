@@ -10,7 +10,7 @@
 var HF_MODEL=(function(){
 'use strict';
 /* pomiary (pomiary.md) */
-var A=3208;            /* ściana główna: narożnik → ścianka */
+var A=3206;            /* ściana główna: narożnik → ścianka (zmierzone 2026-11-19, było 3208) */
 var C=911;             /* góra blatu */
 var D=600;             /* pas płytek */
 var E=257, F=590;      /* płyta grzewcza: ścianka → prawa krawędź, szerokość */

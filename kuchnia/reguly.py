@@ -22,7 +22,7 @@ def pomijaj_czesc(p):
 
 # lewy bok szafki okapowej SOB-1 jest widoczny (nad półką P3): bez konfirmatów, złącza mimośrodowe + kołki (2026-11-14)
 BOK_CZYSTY = 'SOB-1'
-X_BOK_CZYSTY = 2398       # wewnętrzne lico SOB-1 (model.js: XSO + P)
+X_BOK_CZYSTY = 2396       # wewnętrzne lico SOB-1 (model.js: XSO + P; od 2026-11-19 A 3206)
 
 
 def pomijaj_polaczenie(face, edge):
@@ -54,7 +54,7 @@ def os_przodu(p):
 # środki otworów wycinanych samodzielnie: Ø5 x 5 od strony wycinania (sklep), otwór wycina użytkownik
 PILOT_D = 5
 PILOT_DEPTH = 5
-X_OKAP = 2656        # oś płyty i okapu (model.js: XH)
+X_OKAP = 2654        # oś płyty i okapu (model.js: XH)
 Y_RURA = 2564        # oś rury okapu (YRU; od 2026-11-19 sufit M 1156, było 2577)
 Z_RURA = 97          # oś rury okapu od ściany głównej (ZRU)
 Z_PION = 109.5       # oś pionu i poziomu Ø150 w SO (ZPI)
@@ -63,7 +63,7 @@ Y_SOP = 2104         # dół półki SOP (model.js: YSOP)
 Z_SOP_OTW = 109.5    # środek otworu w SOP: pion Ø150 za kolanami 15° (2026-11-19; przy pochylonej rurze było 124)
 Y_OKW = 1592         # otwory montażowe okapu: 81 nad dołem korpusu (YP)
 Z_OKW = (250, 70)    # 35 i 215 od lica przodu korpusu okapu (z 285)
-X_ZA = 2852          # przewód okapu: A - ZA1
+X_ZA = 2850          # przewód okapu: A - ZA1
 Y_ZA = 2180          # przewód okapu: YS - ZA2 (było 2193)
 
 
@@ -189,12 +189,12 @@ FORMATKI = [
       nawierty='SOB-1: TRZPIENIE MIMOŚRODÓW + KOŁKI (bez otworów przelotowych); SOB-2: KONFIRMATY; OBA: 2 PODPÓRKI Ø5 x 10 POD SOD',
       uwagi='SOB-1 widoczny, czyste lico zewnętrzne; SOB-2: środek otworu Ø160 pod rurę Ø150 (otwornicą z obu stron, płyta podparta, przed montażem); okap przykręcany 4 wkrętami (SOB-1 widoczny: 3,5 x 13; SOB-2: 3,5 x 16 z kompletu): nawierty pilotowe Ø3 x 5 od wnętrza na Y 1592 (81 nad dołem), z 250 i 70 (35 i 215 od lica przodu korpusu okapu)'),
     F('SOT', 'Szafka okapowa: tył', okleina='', nawierty='KONFIRMATY + MIMOŚRODY I KOŁKI (do SOB-1)',
-      uwagi='środek otworu Ø25 pod przewód zasilający okap (x 2852, y 2180) wycina użytkownik'),
+      uwagi='środek otworu Ø25 pod przewód zasilający okap (x 2850, y 2180) wycina użytkownik'),
     F('SOW', 'Szafka okapowa: wieniec górny', okleina='1DL', nawierty='KONFIRMATY + MIMOŚRÓD I KOŁKI (do SOB-1)'),
     F('SOD', 'Szafka okapowa: półka wkładana tuż nad okapem (na 4 podpórkach Ø5)', okleina='1DL', nawierty='BRAK',
       uwagi='wkładana po montażu okapu; wycięcie od przodu na wylot Ø150: szer. 170 (oś x na środku), zakończone półkolem R85 o środku 120 od tylnej krawędzi (najgłębiej 35 od tylnej krawędzi); wycina użytkownik, krawędzie silikonem; w tylnym prawym narożniku podcięcie ok. 25 × 25 na przewód okapu (w osi podcięcia w SOP)'),
     F('SOP', 'Szafka okapowa: półka nad okapem', okleina='1DL', nawierty='KONFIRMATY + MIMOŚRÓD I KOŁKI (do SOB-1)',
-      uwagi='środek otworu Ø170 pod pion Ø150 (z 109,5 = 91,5 od tylnej krawędzi); otwór otwarty do tyłu (wycięcie U szer. 170 od tylnej krawędzi); w tylnym prawym narożniku podcięcie 25 × 25 na przewód okapu (x 2889–2914, z 18–43); wycina użytkownik'),
+      uwagi='środek otworu Ø170 pod pion Ø150 (z 109,5 = 91,5 od tylnej krawędzi); otwór otwarty do tyłu (wycięcie U szer. 170 od tylnej krawędzi); w tylnym prawym narożniku podcięcie 25 × 25 na przewód okapu (x 2887–2912, z 18–43); wycina użytkownik'),
     F('WSB', 'Wąska szafka: boki', okleina='1DL', nawierty='KONFIRMATY',
       uwagi='WSB-1: środek otworu Ø160 pod Ø150 (otwornicą z obu stron, płyta podparta, przed montażem); WSB-2: rura ze ścianki wystaje 115, więc wycięcie U od tylnej krawędzi szer. 140 z półkolem R70 o środku w zaznaczonym punkcie (z 97), żeby szafkę dało się nasunąć na rurę; wycina użytkownik'),
     F('WST', 'Wąska szafka: tył', okleina='', nawierty='KONFIRMATY'),
