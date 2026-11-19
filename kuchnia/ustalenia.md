@@ -285,6 +285,10 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
 - KU4-06: porządki (wkręty okapu w SOB-1, ostrzeżenie o cięciu Ø160 także przy WSB-1, nieaktualne wpisy).
 
 ## Do zmierzenia przy pomiarach weryfikacyjnych w mieszkaniu
+- 2026-11-19: lista ograniczona do sprawdzenia, czy meble fizycznie się mieszczą (decyzja użytkownika):
+  L1 narożnik → ścianka nad płytkami ≥ 3207 (plan 3208); L2 to samo pod sufitem i 300 od ściany głównej ≥ 3207;
+  L3 góra płytek → sufit w X 2380, 2932, 3206 ≥ 1168 (plan 1169); L4 ściana główna → bok słupka przy ścianie lewej
+  i 400 od niej ≥ 805; L5 ściana główna → ramka kratki ≥ 301 (plan 303). Arkusz „Kuchnia: pomiary weryfikacyjne”.
 - [ZMIERZONE 2026-11-18: 9–12, SO głębsza do 304] O ile płytki wystają przed ścianę nad nimi.
 
 ## Założenia do potwierdzenia
@@ -338,3 +342,4 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
 - 2026-11-19: audyt v3: WSZ na listwach i magnesach (bez kołków), podcięcie w SOP, wkręty okapu 3,5 × 13 w SOB-1.
 - 2026-11-19: przejście wylot → pion na 2 kolanach 15° Ø150.
 - 2026-11-19: audyt v4: prowadniki F1 37 od krawędzi SOB-2, kolana 15° obrócone w poziomie, WSZ na zatrzaskach push-to-open.
+- 2026-11-19: lista pomiarów weryfikacyjnych zredukowana do 5 pozycji (L1–L5: czy meble się mieszczą).
