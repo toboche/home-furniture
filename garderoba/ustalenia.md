@@ -152,8 +152,10 @@ USTALENIA Z KALKULATORA:
   pomiary na 400, 1000, 2000, 2550), pion wystaje najwyżej do 573. Luz przy LB1 3 (góra) – 13 (dół), przy LB2 3 (dół) – 10 (góra):
   pion i ściana przednia pochylają się w tę samą stronę, więc pionowa szafka ma po 3 mm w dwóch różnych miejscach.
   Półki, wieńce i plecy L oraz GL 876, SZ2: LW 876, skrzynka 834, front F4 872.
-- UWAGA gniazdko (E2 195, nisko, gdzie ściana jest najbliżej): LB2 stoi ok. 3 mm od ściany. Ramka gniazdka wystająca więcej niż
-  ok. 3 mm oprze się o LB2 obok otworu Ø68; do sprawdzenia przy wyborze osprzętu (patrz rozmowa 2026-11-19).
+- Gniazdko (decyzja 2026-11-19): gniazdka nie ma jeszcze na ścianie; użytkownik zamontuje gniazdo NA PŁYCIE LB2, przewód
+  ze ściany przez otwór Ø68 (środek 210 / 195, nad puszką w ścianie). Gniazdko nie wymaga luzu między LB2 a ścianą
+  (ok. 3 mm). Jeśli gniazdo ma puszkę meblową wystającą za płytę, ta część musi wejść w puszkę w ścianie (otwór dokładnie
+  nad nią); inaczej gniazdo natynkowe na wewnętrznym licu LB2.
 
 ## Audyt v3 (`audyt/v3.md`, stan po PR #33), wdrożone 2026-11-19
 - Łączniki korpusu dolnego L: przy LK na górze LK, LS-1 ↔ LT na górze LS-1 (pod spodem kolizja z SZ2/F4, a pod LS-1 nie ma LT);
