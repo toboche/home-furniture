@@ -106,6 +106,7 @@ var XRD=A-RU4-LRD;     /* redukcja 150/125 w wąskiej szafce, wąskim końcem w 
 var ZSK=195;           /* tył zaślepki skrzynki (10 przed końcem Ø150 redukcji, oś z 109,5; 2026-11-16: było 172) */
 var YSOD=YOK+10;       /* półka wkładana tuż nad okapem (dół), 10 zapasu (2026-11-16): 1786 */
 var YSOP=YSOD+P+300;   /* półka stała nad okapem (dół): przegroda ok. 300 nad SOD (2026-11-16; było 2150): 2104 */
+var SZT=2;             /* szczelina front F1 – korpus pod TIP-ON (domyślnie 2,0, min. 1,5; audyt v2 KU-04) */
 var YZ1=1850;          /* dolny zawias F1: nad okapem i SOD (audyt v1 KU-02, wariant A, 2026-11-18) */
 var YZ2=2210;          /* środkowy zawias F1: nad SOP (było 1950) */
 var NPW=2;             /* półki w wąskiej szafce (równe przegrody; 2026-11-14: 3 → 2) */
@@ -148,7 +149,7 @@ add([
   {n:'Słupek z piekarnikiem (istniejący, szerokość umowna)',layer:'Kuchnia istniejąca',x:0,y:0,z:J,w:I,h:YS,d:600,c:IST,o:0.5},
   {n:'Płyta grzewcza (istniejąca)',layer:'Kuchnia istniejąca',x:A-E-F,y:C,z:30,w:F,h:6,d:520,c:0x1d1d1f},
   {n:'Przewód zasilający okap (ZA1, ZA2)',layer:'Instalacje',x:A-ZA1-10,y:YS-ZA2-10,z:0,w:20,h:20,d:30,c:0xd85a30},
-  {n:'Kabel LED 24 V (przesuwny)',layer:'Instalacje',x:0,y:YP+PP/2-5,z:J-60,w:30,h:10,d:10,c:0xd85a30},
+  {n:'Kabel LED 24 V, 3 żyły CCT (przesuwny, wprowadzany w rowek przy słupku)',layer:'Instalacje',x:0,y:YP,z:ZLS-5,w:30,h:10,d:10,c:0xd85a30},
   {t:'cyl3',n:'Rura okapu ze ścianki (RU, Ø125 wewn., wystaje 115)',layer:'Instalacje',ax:'x',px:A-RU4/2+20,py:YRU,pz:ZRU,r:RU/2,len:RU4+40,c:RURA},
   {t:'cyl3',n:'Otwór wentylacji grawitacyjnej z kratką (KR, nie zasłaniać)',layer:'Instalacje',ax:'x',px:A-4,py:YS-KR3-KR/2,pz:KR2+KR/2,r:KR/2+20,len:8,c:0xf0f0f0}
 ]);
@@ -182,9 +183,9 @@ add([
   {n:'SOW: SO: wieniec górny',layer:'Półki',x:XSO+P,y:YT-P,z:P,w:SOW-2*P,h:P,d:GKS-P,c:POL},
   {n:'SOD: SO: półka wkładana tuż nad okapem, na podpórkach, z wycięciem od przodu na wylot (wkładana po montażu okapu)',layer:'Półki',x:XSO+P+1,y:YSOD,z:P,w:SOW-2*P-2,h:P,d:GKS-P-2,c:POL},
   {n:'SOP: SO: półka nad okapem (otwór na rurę)',layer:'Półki',x:XSO+P,y:YSOP,z:P,w:SOW-2*P,h:P,d:GKS-P,c:POL},
-  {n:'F1: Front szafki okapowej (549 × 1164)',layer:'Fronty',x:XSO+1.5,y:YP+1.5,z:GKS,w:SOW-3,h:YT-YP-3,d:P,c:FR,o:0.55}
+  {n:'F1: Front szafki okapowej (549 × 1164), 2 przed korpusem (szczelina TIP-ON)',layer:'Fronty',x:XSO+1.5,y:YP+1.5,z:GKS+SZT,w:SOW-3,h:YT-YP-3,d:P,c:FR,o:0.55}
 ]);
-add(zawiasy('F1',XSO+1.5,YP+1.5,SOW-3,YT-YP-3,'prawa',3,GKS,[YZ1,YZ2,YT-1.5-100]));
+add(zawiasy('F1',XSO+1.5,YP+1.5,SOW-3,YT-YP-3,'prawa',3,GKS+SZT,[YZ1,YZ2,YT-1.5-100]));
 
 /* okap DUO 55: kołnierz 551 × 290 pod korpusem szafki (dno), korpus 513 × 253 × 265 na środku kołnierza (2026-11-16) */
 var YKL=YRU-150;       /* początek kolana 90° Ø150 (R ok. 1D): 2427 */
@@ -250,14 +251,14 @@ HF_MODEL.items.push(
   {t:'cyl3',n:'Otwór Ø5 x 11 pod trzpień mimośrodu (do SOT) w SOB-1',layer:'Otwory',ax:'x',px:2392.5,py:1580,pz:9,r:2.5,len:11.6,c:0x15181b},
   {t:'cyl3',n:'Otwór Ø5 x 11 pod trzpień mimośrodu (do SOT) w SOB-1',layer:'Otwory',ax:'x',px:2392.5,py:2040,pz:9,r:2.5,len:11.6,c:0x15181b},
   {t:'cyl3',n:'Otwór Ø5 x 11 pod trzpień mimośrodu (do SOT) w SOB-1',layer:'Otwory',ax:'x',px:2392.5,py:2610,pz:9,r:2.5,len:11.6,c:0x15181b},
-  {t:'cyl3',n:'Otwór Ø8 x 12 pod kołek (do SOT) w SOB-1',layer:'Otwory',ax:'x',px:2392,py:1830,pz:9,r:4,len:12.6,c:0x15181b},
-  {t:'cyl3',n:'Otwór Ø8 x 12 pod kołek (do SOT) w SOB-1',layer:'Otwory',ax:'x',px:2392,py:2350,pz:9,r:4,len:12.6,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø8 x 10 pod kołek (do SOT) w SOB-1',layer:'Otwory',ax:'x',px:2393,py:1830,pz:9,r:4,len:10.6,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø8 x 10 pod kołek (do SOT) w SOB-1',layer:'Otwory',ax:'x',px:2393,py:2350,pz:9,r:4,len:10.6,c:0x15181b},
   {t:'cyl3',n:'Otwór Ø5 x 11 pod trzpień mimośrodu (do SOW) w SOB-1',layer:'Otwory',ax:'x',px:2392.5,py:2669,pz:159,r:2.5,len:11.6,c:0x15181b},
-  {t:'cyl3',n:'Otwór Ø8 x 12 pod kołek (do SOW) w SOB-1',layer:'Otwory',ax:'x',px:2392,py:2669,pz:60,r:4,len:12.6,c:0x15181b},
-  {t:'cyl3',n:'Otwór Ø8 x 12 pod kołek (do SOW) w SOB-1',layer:'Otwory',ax:'x',px:2392,py:2669,pz:260,r:4,len:12.6,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø8 x 10 pod kołek (do SOW) w SOB-1',layer:'Otwory',ax:'x',px:2393,py:2669,pz:60,r:4,len:10.6,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø8 x 10 pod kołek (do SOW) w SOB-1',layer:'Otwory',ax:'x',px:2393,py:2669,pz:260,r:4,len:10.6,c:0x15181b},
   {t:'cyl3',n:'Otwór Ø5 x 11 pod trzpień mimośrodu (do SOP) w SOB-1',layer:'Otwory',ax:'x',px:2392.5,py:2113,pz:159,r:2.5,len:11.6,c:0x15181b},
-  {t:'cyl3',n:'Otwór Ø8 x 12 pod kołek (do SOP) w SOB-1',layer:'Otwory',ax:'x',px:2392,py:2113,pz:60,r:4,len:12.6,c:0x15181b},
-  {t:'cyl3',n:'Otwór Ø8 x 12 pod kołek (do SOP) w SOB-1',layer:'Otwory',ax:'x',px:2392,py:2113,pz:260,r:4,len:12.6,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø8 x 10 pod kołek (do SOP) w SOB-1',layer:'Otwory',ax:'x',px:2393,py:2113,pz:60,r:4,len:10.6,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø8 x 10 pod kołek (do SOP) w SOB-1',layer:'Otwory',ax:'x',px:2393,py:2113,pz:260,r:4,len:10.6,c:0x15181b},
   {t:'cyl3',n:'Otwór Ø5 przelotowy w SOB-2 (pod konfirmat do SOT)',layer:'Otwory',ax:'x',px:2923,py:1561,pz:9,r:2.5,len:18.6,c:0x15181b},
   {t:'cyl3',n:'Konfirmat 7 x 50: SOB-2 → SOT',layer:'Konfirmaty',ax:'x',px:2907,py:1561,pz:9,r:3.5,len:50,c:0xc7a008},
   {t:'cyl3',n:'Łeb konfirmatu: SOB-2 → SOT',layer:'Konfirmaty',ax:'x',px:2931,py:1561,pz:9,r:5,len:2,c:0xd8b310},
@@ -287,12 +288,12 @@ HF_MODEL.items.push(
   {t:'cyl3',n:'Otwór Ø5 x 10 pod podpórkę w SOB-2',layer:'Otwory',ax:'x',px:2919,py:1781,pz:250,r:2.5,len:10.6,c:0x15181b},
   {t:'cyl3',n:'Nawiert pilotowy Ø3 x 5 pod wkręt okapu w SOB-2',layer:'Otwory',ax:'x',px:2916.5,py:1592,pz:250,r:1.5,len:5.6,c:0x15181b},
   {t:'cyl3',n:'Nawiert pilotowy Ø3 x 5 pod wkręt okapu w SOB-2',layer:'Otwory',ax:'x',px:2916.5,py:1592,pz:70,r:1.5,len:5.6,c:0x15181b},
-  {t:'cyl3',n:'Nawiert pilotowy Ø3 x 12 pod wkręt prowadnika (F1) w SOB-2',layer:'Otwory',ax:'x',px:2920,py:1834,pz:267,r:1.5,len:12.6,c:0x15181b},
-  {t:'cyl3',n:'Nawiert pilotowy Ø3 x 12 pod wkręt prowadnika (F1) w SOB-2',layer:'Otwory',ax:'x',px:2920,py:1866,pz:267,r:1.5,len:12.6,c:0x15181b},
-  {t:'cyl3',n:'Nawiert pilotowy Ø3 x 12 pod wkręt prowadnika (F1) w SOB-2',layer:'Otwory',ax:'x',px:2920,py:2194,pz:267,r:1.5,len:12.6,c:0x15181b},
-  {t:'cyl3',n:'Nawiert pilotowy Ø3 x 12 pod wkręt prowadnika (F1) w SOB-2',layer:'Otwory',ax:'x',px:2920,py:2226,pz:267,r:1.5,len:12.6,c:0x15181b},
-  {t:'cyl3',n:'Nawiert pilotowy Ø3 x 12 pod wkręt prowadnika (F1) w SOB-2',layer:'Otwory',ax:'x',px:2920,py:2560.5,pz:267,r:1.5,len:12.6,c:0x15181b},
-  {t:'cyl3',n:'Nawiert pilotowy Ø3 x 12 pod wkręt prowadnika (F1) w SOB-2',layer:'Otwory',ax:'x',px:2920,py:2592.5,pz:267,r:1.5,len:12.6,c:0x15181b},
+  {t:'cyl3',n:'Nawiert pilotowy Ø3 x 12 pod wkręt prowadnika (F1) w SOB-2',layer:'Otwory',ax:'x',px:2920,py:1834,pz:269,r:1.5,len:12.6,c:0x15181b},
+  {t:'cyl3',n:'Nawiert pilotowy Ø3 x 12 pod wkręt prowadnika (F1) w SOB-2',layer:'Otwory',ax:'x',px:2920,py:1866,pz:269,r:1.5,len:12.6,c:0x15181b},
+  {t:'cyl3',n:'Nawiert pilotowy Ø3 x 12 pod wkręt prowadnika (F1) w SOB-2',layer:'Otwory',ax:'x',px:2920,py:2194,pz:269,r:1.5,len:12.6,c:0x15181b},
+  {t:'cyl3',n:'Nawiert pilotowy Ø3 x 12 pod wkręt prowadnika (F1) w SOB-2',layer:'Otwory',ax:'x',px:2920,py:2226,pz:269,r:1.5,len:12.6,c:0x15181b},
+  {t:'cyl3',n:'Nawiert pilotowy Ø3 x 12 pod wkręt prowadnika (F1) w SOB-2',layer:'Otwory',ax:'x',px:2920,py:2560.5,pz:269,r:1.5,len:12.6,c:0x15181b},
+  {t:'cyl3',n:'Nawiert pilotowy Ø3 x 12 pod wkręt prowadnika (F1) w SOB-2',layer:'Otwory',ax:'x',px:2920,py:2592.5,pz:269,r:1.5,len:12.6,c:0x15181b},
   {t:'cyl3',n:'Otwór Ø4 x 35 w SOT (czoło, konfirmat z SOB-2)',layer:'Otwory',ax:'x',px:2896.5,py:1561,pz:9,r:2,len:35,c:0x15181b},
   {t:'cyl3',n:'Otwór Ø4 x 35 w SOT (czoło, konfirmat z SOB-2)',layer:'Otwory',ax:'x',px:2896.5,py:1916.67,pz:9,r:2,len:35,c:0x15181b},
   {t:'cyl3',n:'Otwór Ø4 x 35 w SOT (czoło, konfirmat z SOB-2)',layer:'Otwory',ax:'x',px:2896.5,py:2272.33,pz:9,r:2,len:35,c:0x15181b},
@@ -313,37 +314,37 @@ HF_MODEL.items.push(
   {t:'cyl3',n:'Konfirmat 7 x 50: SOT → SOP',layer:'Konfirmaty',ax:'z',px:2864,py:2113,pz:25,r:3.5,len:50,c:0xc7a008},
   {t:'cyl3',n:'Łeb konfirmatu: SOT → SOP',layer:'Konfirmaty',ax:'z',px:2864,py:2113,pz:1,r:5,len:2,c:0xd8b310},
   {t:'cyl3',n:'Nawiert środka Ø5 x 5 pod otwór wycinany samodzielnie w SOT',layer:'Otwory',ax:'z',px:2852,py:2193,pz:15.5,r:2.5,len:5.6,c:0x15181b},
-  {t:'cyl3',n:'Otwór Ø15 x 13 pod obudowę mimośrodu w SOT',layer:'Otwory',ax:'z',px:2422,py:1580,pz:11.5,r:7.5,len:13.6,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø15 x 14 pod obudowę mimośrodu w SOT',layer:'Otwory',ax:'z',px:2422,py:1580,pz:11,r:7.5,len:14.6,c:0x15181b},
   {t:'cyl3',n:'Otwór Ø8 x 33 pod trzpień mimośrodu w SOT (do SOB-1)',layer:'Otwory',ax:'x',px:2414.5,py:1580,pz:9,r:4,len:33,c:0x15181b},
-  {t:'cyl3',n:'Otwór Ø15 x 13 pod obudowę mimośrodu w SOT',layer:'Otwory',ax:'z',px:2422,py:2040,pz:11.5,r:7.5,len:13.6,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø15 x 14 pod obudowę mimośrodu w SOT',layer:'Otwory',ax:'z',px:2422,py:2040,pz:11,r:7.5,len:14.6,c:0x15181b},
   {t:'cyl3',n:'Otwór Ø8 x 33 pod trzpień mimośrodu w SOT (do SOB-1)',layer:'Otwory',ax:'x',px:2414.5,py:2040,pz:9,r:4,len:33,c:0x15181b},
-  {t:'cyl3',n:'Otwór Ø15 x 13 pod obudowę mimośrodu w SOT',layer:'Otwory',ax:'z',px:2422,py:2610,pz:11.5,r:7.5,len:13.6,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø15 x 14 pod obudowę mimośrodu w SOT',layer:'Otwory',ax:'z',px:2422,py:2610,pz:11,r:7.5,len:14.6,c:0x15181b},
   {t:'cyl3',n:'Otwór Ø8 x 33 pod trzpień mimośrodu w SOT (do SOB-1)',layer:'Otwory',ax:'x',px:2414.5,py:2610,pz:9,r:4,len:33,c:0x15181b},
-  {t:'cyl3',n:'Otwór Ø8 x 20 pod kołek w SOT (do SOB-1)',layer:'Otwory',ax:'x',px:2408,py:1830,pz:9,r:4,len:20,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø8 x 20 pod kołek w SOT (do SOB-1)',layer:'Otwory',ax:'x',px:2409,py:1830,pz:9,r:4,len:22,c:0x15181b},
   {t:'cyl3',n:'Kołek drewniany Ø8 x 40: SOB-1 + SOT',layer:'Kołki',ax:'x',px:2398,py:1830,pz:9,r:4,len:40,c:0xb08a5b},
-  {t:'cyl3',n:'Otwór Ø8 x 20 pod kołek w SOT (do SOB-1)',layer:'Otwory',ax:'x',px:2408,py:2350,pz:9,r:4,len:20,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø8 x 20 pod kołek w SOT (do SOB-1)',layer:'Otwory',ax:'x',px:2409,py:2350,pz:9,r:4,len:22,c:0x15181b},
   {t:'cyl3',n:'Kołek drewniany Ø8 x 40: SOB-1 + SOT',layer:'Kołki',ax:'x',px:2398,py:2350,pz:9,r:4,len:40,c:0xb08a5b},
   {t:'cyl3',n:'Otwór Ø4 x 35 w SOW (czoło, konfirmat z SOB-2)',layer:'Otwory',ax:'x',px:2896.5,py:2669,pz:215,r:2,len:35,c:0x15181b},
   {t:'cyl3',n:'Otwór Ø4 x 35 w SOW (czoło, konfirmat z SOB-2)',layer:'Otwory',ax:'x',px:2896.5,py:2669,pz:265,r:2,len:35,c:0x15181b},
   {t:'cyl3',n:'Otwór Ø4 x 35 w SOW (czoło, konfirmat z SOT)',layer:'Otwory',ax:'z',px:2448,py:2669,pz:35.5,r:2,len:35,c:0x15181b},
   {t:'cyl3',n:'Otwór Ø4 x 35 w SOW (czoło, konfirmat z SOT)',layer:'Otwory',ax:'z',px:2656,py:2669,pz:35.5,r:2,len:35,c:0x15181b},
   {t:'cyl3',n:'Otwór Ø4 x 35 w SOW (czoło, konfirmat z SOT)',layer:'Otwory',ax:'z',px:2864,py:2669,pz:35.5,r:2,len:35,c:0x15181b},
-  {t:'cyl3',n:'Otwór Ø15 x 13 pod obudowę mimośrodu w SOW',layer:'Otwory',ax:'y',px:2422,py:2666.5,pz:159,r:7.5,len:13.6,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø15 x 14 pod obudowę mimośrodu w SOW',layer:'Otwory',ax:'y',px:2422,py:2667,pz:159,r:7.5,len:14.6,c:0x15181b},
   {t:'cyl3',n:'Otwór Ø8 x 33 pod trzpień mimośrodu w SOW (do SOB-1)',layer:'Otwory',ax:'x',px:2414.5,py:2669,pz:159,r:4,len:33,c:0x15181b},
-  {t:'cyl3',n:'Otwór Ø8 x 20 pod kołek w SOW (do SOB-1)',layer:'Otwory',ax:'x',px:2408,py:2669,pz:60,r:4,len:20,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø8 x 20 pod kołek w SOW (do SOB-1)',layer:'Otwory',ax:'x',px:2409,py:2669,pz:60,r:4,len:22,c:0x15181b},
   {t:'cyl3',n:'Kołek drewniany Ø8 x 40: SOB-1 + SOW',layer:'Kołki',ax:'x',px:2398,py:2669,pz:60,r:4,len:40,c:0xb08a5b},
-  {t:'cyl3',n:'Otwór Ø8 x 20 pod kołek w SOW (do SOB-1)',layer:'Otwory',ax:'x',px:2408,py:2669,pz:260,r:4,len:20,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø8 x 20 pod kołek w SOW (do SOB-1)',layer:'Otwory',ax:'x',px:2409,py:2669,pz:260,r:4,len:22,c:0x15181b},
   {t:'cyl3',n:'Kołek drewniany Ø8 x 40: SOB-1 + SOW',layer:'Kołki',ax:'x',px:2398,py:2669,pz:260,r:4,len:40,c:0xb08a5b},
   {t:'cyl3',n:'Otwór Ø4 x 35 w SOP (czoło, konfirmat z SOB-2)',layer:'Otwory',ax:'x',px:2896.5,py:2113,pz:68,r:2,len:35,c:0x15181b},
   {t:'cyl3',n:'Otwór Ø4 x 35 w SOP (czoło, konfirmat z SOB-2)',layer:'Otwory',ax:'x',px:2896.5,py:2113,pz:254,r:2,len:35,c:0x15181b},
   {t:'cyl3',n:'Otwór Ø4 x 35 w SOP (czoło, konfirmat z SOT)',layer:'Otwory',ax:'z',px:2448,py:2113,pz:35.5,r:2,len:35,c:0x15181b},
   {t:'cyl3',n:'Otwór Ø4 x 35 w SOP (czoło, konfirmat z SOT)',layer:'Otwory',ax:'z',px:2864,py:2113,pz:35.5,r:2,len:35,c:0x15181b},
   {t:'cyl3',n:'Nawiert środka Ø5 x 5 pod otwór wycinany samodzielnie w SOP',layer:'Otwory',ax:'y',px:2656,py:2119.5,pz:124,r:2.5,len:5.6,c:0x15181b},
-  {t:'cyl3',n:'Otwór Ø15 x 13 pod obudowę mimośrodu w SOP',layer:'Otwory',ax:'y',px:2422,py:2115.5,pz:159,r:7.5,len:13.6,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø15 x 14 pod obudowę mimośrodu w SOP',layer:'Otwory',ax:'y',px:2422,py:2115,pz:159,r:7.5,len:14.6,c:0x15181b},
   {t:'cyl3',n:'Otwór Ø8 x 33 pod trzpień mimośrodu w SOP (do SOB-1)',layer:'Otwory',ax:'x',px:2414.5,py:2113,pz:159,r:4,len:33,c:0x15181b},
-  {t:'cyl3',n:'Otwór Ø8 x 20 pod kołek w SOP (do SOB-1)',layer:'Otwory',ax:'x',px:2408,py:2113,pz:60,r:4,len:20,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø8 x 20 pod kołek w SOP (do SOB-1)',layer:'Otwory',ax:'x',px:2409,py:2113,pz:60,r:4,len:22,c:0x15181b},
   {t:'cyl3',n:'Kołek drewniany Ø8 x 40: SOB-1 + SOP',layer:'Kołki',ax:'x',px:2398,py:2113,pz:60,r:4,len:40,c:0xb08a5b},
-  {t:'cyl3',n:'Otwór Ø8 x 20 pod kołek w SOP (do SOB-1)',layer:'Otwory',ax:'x',px:2408,py:2113,pz:260,r:4,len:20,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø8 x 20 pod kołek w SOP (do SOB-1)',layer:'Otwory',ax:'x',px:2409,py:2113,pz:260,r:4,len:22,c:0x15181b},
   {t:'cyl3',n:'Kołek drewniany Ø8 x 40: SOB-1 + SOP',layer:'Kołki',ax:'x',px:2398,py:2113,pz:260,r:4,len:40,c:0xb08a5b},
   {t:'cyl3',n:'Otwór Ø5 przelotowy w WSB-1 (pod konfirmat do WST)',layer:'Otwory',ax:'x',px:2941,py:1561,pz:9,r:2.5,len:18.6,c:0x15181b},
   {t:'cyl3',n:'Konfirmat 7 x 50: WSB-1 → WST',layer:'Konfirmaty',ax:'x',px:2957,py:1561,pz:9,r:3.5,len:50,c:0xc7a008},
@@ -501,9 +502,9 @@ HF_MODEL.items.push(
   {t:'cyl3',n:'Otwór Ø4 x 35 w WSP-2 (czoło, konfirmat z WSB-2)',layer:'Otwory',ax:'x',px:3170.5,py:2162,pz:250,r:2,len:35,c:0x15181b},
   {t:'cyl3',n:'Otwór Ø4 x 35 w WSP-2 (czoło, konfirmat z WST)',layer:'Otwory',ax:'z',px:3000,py:2162,pz:35.5,r:2,len:35,c:0x15181b},
   {t:'cyl3',n:'Otwór Ø4 x 35 w WSP-2 (czoło, konfirmat z WST)',layer:'Otwory',ax:'z',px:3138,py:2162,pz:35.5,r:2,len:35,c:0x15181b},
-  {t:'cyl3',n:'Otwór zawiasu Ø35 x 13 w F1',layer:'Otwory',ax:'z',px:2908,py:1850,pz:310.2,r:17.5,len:13.6,c:0x15181b},
-  {t:'cyl3',n:'Otwór zawiasu Ø35 x 13 w F1',layer:'Otwory',ax:'z',px:2908,py:2210,pz:310.2,r:17.5,len:13.6,c:0x15181b},
-  {t:'cyl3',n:'Otwór zawiasu Ø35 x 13 w F1',layer:'Otwory',ax:'z',px:2908,py:2576.5,pz:310.2,r:17.5,len:13.6,c:0x15181b}
+  {t:'cyl3',n:'Otwór zawiasu Ø35 x 13 w F1',layer:'Otwory',ax:'z',px:2908,py:1850,pz:312.2,r:17.5,len:13.6,c:0x15181b},
+  {t:'cyl3',n:'Otwór zawiasu Ø35 x 13 w F1',layer:'Otwory',ax:'z',px:2908,py:2210,pz:312.2,r:17.5,len:13.6,c:0x15181b},
+  {t:'cyl3',n:'Otwór zawiasu Ø35 x 13 w F1',layer:'Otwory',ax:'z',px:2908,py:2576.5,pz:312.2,r:17.5,len:13.6,c:0x15181b}
 );
 </script>
 <script>

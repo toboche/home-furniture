@@ -228,9 +228,9 @@
 {
 "axis_n": "-",
 "d": 8,
-"depth": 12,
+"depth": 10,
 "kind": "FACE",
-"opis": "Otwór Ø8 x 12 pod kołek (do SOT)",
+"opis": "Otwór Ø8 x 10 pod kołek (do SOT)",
 "partner": "SOT",
 "pin": true,
 "side": "A",
@@ -240,9 +240,9 @@
 {
 "axis_n": "-",
 "d": 8,
-"depth": 12,
+"depth": 10,
 "kind": "FACE",
-"opis": "Otwór Ø8 x 12 pod kołek (do SOT)",
+"opis": "Otwór Ø8 x 10 pod kołek (do SOT)",
 "partner": "SOT",
 "pin": true,
 "side": "A",
@@ -264,9 +264,9 @@
 {
 "axis_n": "-",
 "d": 8,
-"depth": 12,
+"depth": 10,
 "kind": "FACE",
-"opis": "Otwór Ø8 x 12 pod kołek (do SOW)",
+"opis": "Otwór Ø8 x 10 pod kołek (do SOW)",
 "partner": "SOW",
 "pin": true,
 "side": "A",
@@ -276,9 +276,9 @@
 {
 "axis_n": "-",
 "d": 8,
-"depth": 12,
+"depth": 10,
 "kind": "FACE",
-"opis": "Otwór Ø8 x 12 pod kołek (do SOW)",
+"opis": "Otwór Ø8 x 10 pod kołek (do SOW)",
 "partner": "SOW",
 "pin": true,
 "side": "A",
@@ -300,9 +300,9 @@
 {
 "axis_n": "-",
 "d": 8,
-"depth": 12,
+"depth": 10,
 "kind": "FACE",
-"opis": "Otwór Ø8 x 12 pod kołek (do SOP)",
+"opis": "Otwór Ø8 x 10 pod kołek (do SOP)",
 "partner": "SOP",
 "pin": true,
 "side": "A",
@@ -312,9 +312,9 @@
 {
 "axis_n": "-",
 "d": 8,
-"depth": 12,
+"depth": 10,
 "kind": "FACE",
-"opis": "Otwór Ø8 x 12 pod kołek (do SOP)",
+"opis": "Otwór Ø8 x 10 pod kołek (do SOP)",
 "partner": "SOP",
 "pin": true,
 "side": "A",
@@ -486,7 +486,7 @@
 "plate": true,
 "side": "B",
 "u": 323.0,
-"v": 267
+"v": 269
 },
 {
 "axis_n": "-",
@@ -499,7 +499,7 @@
 "plate": true,
 "side": "B",
 "u": 355.0,
-"v": 267
+"v": 269
 },
 {
 "axis_n": "-",
@@ -512,7 +512,7 @@
 "plate": true,
 "side": "B",
 "u": 683.0,
-"v": 267
+"v": 269
 },
 {
 "axis_n": "-",
@@ -525,7 +525,7 @@
 "plate": true,
 "side": "B",
 "u": 715.0,
-"v": 267
+"v": 269
 },
 {
 "axis_n": "-",
@@ -538,7 +538,7 @@
 "plate": true,
 "side": "B",
 "u": 1049.5,
-"v": 267
+"v": 269
 },
 {
 "axis_n": "-",
@@ -551,7 +551,7 @@
 "plate": true,
 "side": "B",
 "u": 1081.5,
-"v": 267
+"v": 269
 }
 ],
 "lo": {
@@ -675,9 +675,9 @@
 {
 "axis_n": "-",
 "d": 15,
-"depth": 13,
+"depth": 14,
 "kind": "FACE",
-"opis": "Otwór Ø15 x 13 pod obudowę mimośrodu",
+"opis": "Otwór Ø15 x 14 pod obudowę mimośrodu",
 "partner": "SOB-1",
 "pin": true,
 "side": "A",
@@ -699,9 +699,9 @@
 {
 "axis_n": "-",
 "d": 15,
-"depth": 13,
+"depth": 14,
 "kind": "FACE",
-"opis": "Otwór Ø15 x 13 pod obudowę mimośrodu",
+"opis": "Otwór Ø15 x 14 pod obudowę mimośrodu",
 "partner": "SOB-1",
 "pin": true,
 "side": "A",
@@ -723,9 +723,9 @@
 {
 "axis_n": "-",
 "d": 15,
-"depth": 13,
+"depth": 14,
 "kind": "FACE",
-"opis": "Otwór Ø15 x 13 pod obudowę mimośrodu",
+"opis": "Otwór Ø15 x 14 pod obudowę mimośrodu",
 "partner": "SOB-1",
 "pin": true,
 "side": "A",
@@ -747,7 +747,7 @@
 {
 "along": 848,
 "d": 8,
-"depth": 20,
+"depth": 22,
 "edge_coord": 0,
 "into": 1,
 "kind": "EDGE",
@@ -757,7 +757,7 @@
 {
 "along": 328,
 "d": 8,
-"depth": 20,
+"depth": 22,
 "edge_coord": 0,
 "into": 1,
 "kind": "EDGE",
@@ -839,9 +839,9 @@
 {
 "axis_n": "-",
 "d": 15,
-"depth": 13,
+"depth": 14,
 "kind": "FACE",
-"opis": "Otwór Ø15 x 13 pod obudowę mimośrodu",
+"opis": "Otwór Ø15 x 14 pod obudowę mimośrodu",
 "partner": "SOB-1",
 "pin": true,
 "side": "B",
@@ -863,7 +863,7 @@
 {
 "along": 42,
 "d": 8,
-"depth": 20,
+"depth": 22,
 "edge_coord": 516,
 "into": -1,
 "kind": "EDGE",
@@ -873,7 +873,7 @@
 {
 "along": 242,
 "d": 8,
-"depth": 20,
+"depth": 22,
 "edge_coord": 516,
 "into": -1,
 "kind": "EDGE",
@@ -978,9 +978,9 @@
 {
 "axis_n": "-",
 "d": 15,
-"depth": 13,
+"depth": 14,
 "kind": "FACE",
-"opis": "Otwór Ø15 x 13 pod obudowę mimośrodu",
+"opis": "Otwór Ø15 x 14 pod obudowę mimośrodu",
 "partner": "SOB-1",
 "pin": true,
 "side": "A",
@@ -1002,7 +1002,7 @@
 {
 "along": 42,
 "d": 8,
-"depth": 20,
+"depth": 22,
 "edge_coord": 516,
 "into": -1,
 "kind": "EDGE",
@@ -1012,7 +1012,7 @@
 {
 "along": 242,
 "d": 8,
-"depth": 20,
+"depth": 22,
 "edge_coord": 516,
 "into": -1,
 "kind": "EDGE",

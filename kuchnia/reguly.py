@@ -112,8 +112,8 @@ def dodatkowe_otwory(P, parts, loc):
                            partner='środek otworu Ø25 pod przewód zasilający okap', axis_n='-', pin=False, pilot=True))
 
     # --- SOB-1: złącza mimośrodowe (np. Häfele Minifix 15) + kołki Ø8 x 30 ---
-    # obudowa Ø15 x 13 w licu łączonej płyty, 24 od styku; trzpień: Ø5 x 11 w wewnętrznym licu SOB-1;
-    # otwór Ø8 x 33 w czole łączonej płyty do obudowy; kołki: Ø8 x 12 w SOB-1, Ø8 x 20 w czole
+    # obudowa Ø15 x 14 (Häfele: 13,5 ± 0,5) w licu łączonej płyty, 24 od styku; trzpień B 24, gwint Euro Ø5 x 11 w wewnętrznym licu SOB-1;
+    # otwór Ø8 x 33 w czole łączonej płyty do obudowy; kołki 8 x 30: Ø8 x 10 w widocznym SOB-1, Ø8 x 22 w czole
     MF_ODL = 24
     bok = P[BOK_CZYSTY]
 
@@ -136,12 +136,12 @@ def dodatkowe_otwory(P, parts, loc):
     def zlacze(code, side, mid_ax, mid, along_ax, mf, kolki):
         q = P[code]
         for a in mf:
-            face(q, side, {'x': X_BOK_CZYSTY + MF_ODL, along_ax: a}, 15, 13, BOK_CZYSTY, 'Otwór Ø15 x 13 pod obudowę mimośrodu')
+            face(q, side, {'x': X_BOK_CZYSTY + MF_ODL, along_ax: a}, 15, 14, BOK_CZYSTY, 'Otwór Ø15 x 14 pod obudowę mimośrodu')
             edge(q, along_ax, a, 8, MF_ODL + 9, BOK_CZYSTY, 'Otwór Ø8 x 33 pod trzpień mimośrodu', True)
             face(bok, 'A', {mid_ax: mid, along_ax: a}, 5, 11, code, 'Otwór Ø5 x 11 pod trzpień mimośrodu (do %s)' % code)
         for a in kolki:
-            edge(q, along_ax, a, 8, 20, BOK_CZYSTY)
-            face(bok, 'A', {mid_ax: mid, along_ax: a}, 8, 12, code, 'Otwór Ø8 x 12 pod kołek (do %s)' % code)
+            edge(q, along_ax, a, 8, 22, BOK_CZYSTY)
+            face(bok, 'A', {mid_ax: mid, along_ax: a}, 8, 10, code, 'Otwór Ø8 x 10 pod kołek (do %s)' % code)
 
     # --- półka LED: otwory Ø8 x 35 w czołach przy ścianach pod pręty M8 (pogłębia użytkownik do 85) ---
     def czolo(code, n_ax, n_val, al_ax, vals, depth, opis=None):
@@ -210,5 +210,5 @@ FORMATKI = [
       nawierty='CZOŁA: 5 x Ø8 x 35 pod pręty M8 w tylnej krawędzi (użytkownik pogłębia do 85)',
       uwagi='okleina na przedniej krawędzi (1980). Rowek 18,2 × 6 pod profil LED w spodzie frezuje użytkownik (meble.pl nie robi wręgów zachodzących na siebie)'),
     F('F1', 'Front szafki okapowej, otwierany na docisk', okleina='2DL+2SZ',
-      nawierty='ZAWIASY 3 SZT (PRAWA), ' + ZAW, uwagi='3 zawiasy Blum CLIP top 110° bez sprężyny 70T3550.TL + prowadniki 173L6100, puszki 337,5, 697,5 i 1064 od dołu frontu (wszystkie nad okapem i SOD); 1 x TIP-ON 956A1004 na adapterze 956A1201 na SOB-1 ok. Y 1850 (drugi w razie potrzeby); szczelina pod TIP-ON ok. 2'),
+      nawierty='ZAWIASY 3 SZT (PRAWA), ' + ZAW, uwagi='3 zawiasy Blum CLIP top 110° bez sprężyny 70T3550.TL + prowadniki 173L6100, puszki 337,5, 697,5 i 1064 od dołu frontu (wszystkie nad okapem i SOD); 1 x TIP-ON 956.1004 (krótki, z magnesem) na adapterze 956.1201 na SOB-1 ok. Y 1850 (drugi w razie potrzeby); szczelina pod TIP-ON ok. 2'),
 ]

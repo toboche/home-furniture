@@ -26,7 +26,7 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
   P1 804 × 400 na ścianie lewej (narożnik → słupek, J − 1; 2026-11-15, było J − 2), P3 1980 × 200 na ścianie głównej (od przedniej krawędzi P1
   do szafki okapowej). Pod szafkami górnymi na ścianie głównej głębokość 200 (element P2 usunięty).
 - Nad półką pod szafkami górnymi zostaje 154 − 18 = 136.
-- LED świeci w dół na blat: profil aluminiowy z mlecznym kloszem, wpuszczany w spód ok. 50 od przednich krawędzi.
+- LED świeci w dół na blat: profil aluminiowy z mlecznym kloszem, wpuszczany w spód, oś 39,1 od przednich krawędzi (2026-11-15; wcześniej ok. 50).
 - Mocowanie (2026-11-16, obciążenie lekkie; wcześniej wsporniki ukryte Ø10): pręty gwintowane M8, ocynk, klasa 8.8,
   dł. ok. 160: 80 w betonie na kotwie chemicznej (otwór w ścianie wg karty kotwy, np. Ø10), 80 w półce.
   Otwory Ø8 w czołach półki: meble.pl wierci Ø8 × 35 (dokładne położenie), użytkownik pogłębia długim wiertłem Ø8 do 85.
@@ -145,8 +145,8 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
 - P3: rowek wzdłuż przodu, przelotowe na całej długości (końce schowane przy P1 i przy SOB-1).
 - P1: rowek wzdłuż przodu (krawędź 804), od 152 od ściany głównej, przelotowe przy słupku (koniec schowany przy słupku);
   rowek wzdłuż krawędzi 400 przy słupku, przelotowe od ściany lewej (tam wchodzi kabel), do rowka przedniego.
-- Narożnik P1/P3: ok. 30 mm rowka w P1 (od rowka przedniego P1 do krawędzi przy P3) biegnie w poprzek krawędzi,
-  kalkulator go nie zrobi: użytkownik dłutem/frezarką przed montażem.
+- Narożnik P1/P3: rowek P3 wchodzi w P1 na 48,2 (X 351,8–400), z czego ok. 30 (X 370–400) poza rowkiem przednim P1;
+  biegnie w poprzek krawędzi, kalkulator go nie zrobi: użytkownik dłutem/frezarką przed montażem (2026-11-19 doprecyzowane).
 
 ### 2026-11-16: redukcja za kolanem, półka tuż nad okapem, kołnierz okapu
 - Sklep z okapami: redukcja jak najdalej od okapu. Redukcja 150/125 przeniesiona za kolano 90°: na końcu poziomego
@@ -204,7 +204,7 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
 ### 2026-11-18: decyzje po audycie v1 i pomiary z okapu
 - KU-02, wariant A: wszystkie zawiasy F1 nad okapem i SOD: Y 1850, 2210, 2576,5 (puszki 337,5, 697,5 i 1064 od dołu
   frontu). Dolne ok. 337 frontu przed okapem bez zawiasu (akceptowane).
-- KU-09: jeden TIP-ON (956A1004 + adapter 956A1201) na SOB-1 ok. Y 1850; drugi dokupiony, jeśli jeden okaże się za słaby.
+- KU-09: jeden TIP-ON (956A1004 + adapter 956A1201; od 2026-11-19 krótki 956.1004 + 956.1201) na SOB-1 ok. Y 1850; drugi dokupiony, jeśli jeden okaże się za słaby.
   Szczelina front–korpus pod TIP-ON ok. 2 (regulacja zawiasu).
 - KU-04: pręty M8 zostają; OPCJONALNIE 2 kątowniki 40 × 40 pod tylną krawędzią P1 przy ścianie głównej (przez fugę),
   dokupione, jeśli P1 będzie się uginać. Na półce nic ciężkiego.
@@ -243,6 +243,16 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
 - SOD: podcięcie ok. 25 × 25 w tylnym prawym narożniku na przewód okapu (z puszki nad SOP do okapu).
 - Zamówienie dopiero po pomiarach z arkusza weryfikacyjnego (zmierzone 7 z 31 pozycji).
 
+### 2026-11-19: audyt v2 (`audyt/v2.md`, stan sprzed poprawek z 2026-11-18)
+- Większość punktów v2 była już wdrożona po v1 (KU-01, 02, 05, 06, 07, 09, 10, 11, 14, 15, 17 w większości).
+- KU-04: F1 2 przed korpusem (szczelina pod TIP-ON 2,0; min. 1,5), w modelu z 306. TIP-ON wersja krótka z magnesem
+  956.1004 + adapter 956.1201 (do drzwi poniżej 1300; było 956A1004 + 956A1201).
+- KU-13: Minifix 15: obudowa Ø15 × 14 (tolerancja 13,5 ± 0,5), kołek w widocznym SOB-1 Ø8 × 10 (w czole Ø8 × 22).
+- KU-08: kabel LED w modelu przy rowku przy słupku; 3 żyły CCT potwierdzone wcześniej (kabel przygotowany pod taśmę);
+  profil zamknięty kloszem pod półką, nad blatem bez wody bezpośredniej: IP20 wystarcza, rowek i krawędzie zabezpieczone.
+- Nie wdrożone (decyzje użytkownika): głębokość nawiertów MAXIMERA 13 (audyt: 11–12), RCD typ A / rozłącznik 2P,
+  półka 36 mm zamiast prętów w 18 (pręty zostają, decyzja 2026-11-16). Nietrafne: zamiana kolumn w `fronty_metod.csv`.
+
 ## Do zmierzenia przy pomiarach weryfikacyjnych w mieszkaniu
 - [ZMIERZONE 2026-11-18: 9–12, SO głębsza do 304] O ile płytki wystają przed ścianę nad nimi.
 
@@ -257,8 +267,9 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
   złącza mimośrodowe (np. Häfele Minifix 15) i kołki Ø8 × 30:
   - tył SOT: 3 mimośrody (Y 1580, 2040 od 2026-11-16, 2610) + 2 kołki (Y 1830, 2350); wieniec SOW i półka SOP: po 1 mimośrodzie
     (z 159) + 2 kołki (z 60, 260);
-  - obudowa Ø15 × 13 w licu łączonej płyty, 24 od styku (SOT od wnętrza, SOW od spodu, SOP od góry), otwór Ø8 × 33
-    w czole do obudowy; w SOB-1 od wnętrza: Ø5 × 11 pod trzpień, Ø8 × 12 pod kołek. Wszystko w kalkulatorze sklepu.
+  - obudowa Ø15 × 14 (od 2026-11-19; Häfele 13,5 ± 0,5, było 13) w licu łączonej płyty, 24 od styku (SOT od wnętrza, SOW od
+    spodu, SOP od góry), otwór Ø8 × 33 w czole do obudowy; w SOB-1 od wnętrza: Ø5 × 11 pod trzpień (B 24, gwint Euro),
+    Ø8 × 10 pod kołek (było 12; w czole 22). Wszystko w kalkulatorze sklepu.
   - Widoczne łby konfirmatów: 10 → 2 (tylko pod dnem skrzynki WSS, wewnątrz wąskiej szafki); od 2026-11-18: 0
     (zaślepka WSZ bez konfirmatów).
   - Wymaga zmiany w `wspolne/` (pole `opis` i `do_obudowy` otworów): PR #11.
@@ -292,3 +303,4 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
 - 2026-11-18: audyt v1: poprawki bezsporne (P1 bez prętów od ściany głównej, SOP, SOD, WSZ, okleina P1/P3, przewód okapu, mocowanie do ściany).
 - 2026-11-18: zawiasy F1 nad okapem (1850, 2210, 2576,5), 1 TIP-ON, WSZ na kołkach i magnesach, SO 304, redukcja w rurze ze ścianki, wycięcie U w WSB-2.
 - 2026-11-18: weryfikacja projektu; profil LED przy słupku od 13, podcięcie w SOD na przewód.
+- 2026-11-19: audyt v2: szczelina F1 2 pod TIP-ON, TIP-ON 956.1004, Minifix 14 / kołek 10 w SOB-1.

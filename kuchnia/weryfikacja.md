@@ -23,7 +23,7 @@ weryfikacyjne przed zamówieniem”: z 31 pozycji zmierzone 7, reszta otwarta, w
 | Okap w SO | korpus 513 (z nitami) w 516, kołnierz z 14–304 nad płytkami do 12 | OK: 1,5 z boków, 2 z tyłu nad płytkami |
 | Wkręty okapu | nawierty Ø3 × 5 Y 1592, z 250 i 70; wkręt 3,5 × 16 wchodzi ok. 13 w bok 18 | OK, widoczny SOB-1 nie przebity |
 | Zawiasy F1 | Y 1850, 2210, 2576,5: prowadniki nad okapem (do 1776), SOD (1786–1804) i SOP (2104–2122) | OK |
-| TIP-ON | SOB-1 ok. Y 1850, przy przodzie: nad okapem i SOD, z dala od podpórek SOD | OK |
+| TIP-ON | 956.1004 na SOB-1 ok. Y 1850, przy przodzie: nad okapem i SOD; F1 2 przed korpusem (2026-11-19) | OK |
 | Przejście wylot → pion | pochylenie ok. 2,6° (28,5 na ok. 625); otwór w SOP na z 124; wycięcie SOD R85 wokół z 138 | OK, kolana 15° jako zapas |
 | Pion, kolano, poziom Ø150 | tył pionu z 34,5 (plecy do 18, mata 10 mieści się); góra poziomu 2652 pod SOW 2660 | OK; nad poziomem mata do 5 mm |
 | Otwory Ø160 w SOB-2, WSB-1 | konfirmaty wieńców przed otworem (z 215, 265), nad otworem 21 mm boku | OK |
