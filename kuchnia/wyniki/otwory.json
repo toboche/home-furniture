@@ -1757,30 +1757,6 @@
 "kind": "EDGE",
 "n_axis_is_u": true,
 "partner": "WST"
-},
-{
-"axis_n": "-",
-"d": 8,
-"depth": 12,
-"kind": "FACE",
-"opis": "Otwór Ø8 x 12 pod kołek zaślepki WSZ",
-"partner": "WSZ",
-"pin": true,
-"side": "A",
-"u": 186,
-"v": 50
-},
-{
-"axis_n": "-",
-"d": 8,
-"depth": 12,
-"kind": "FACE",
-"opis": "Otwór Ø8 x 12 pod kołek zaślepki WSZ",
-"partner": "WSZ",
-"pin": true,
-"side": "A",
-"u": 186,
-"v": 188
 }
 ],
 "lo": {
@@ -1795,38 +1771,17 @@
 "v": "x"
 },
 {
-"DL": 238,
-"SZ": 168,
+"DL": 236,
+"SZ": 165,
 "code": "WSZ",
 "hi": {
-"x": 3188,
-"y": 2660,
+"x": 3187,
+"y": 2657,
 "z": 213
 },
-"holes": [
-{
-"along": 50,
-"d": 8,
-"depth": 16,
-"edge_coord": 0,
-"into": 1,
-"kind": "EDGE",
-"n_axis_is_u": false,
-"partner": "WSS"
-},
-{
-"along": 188,
-"d": 8,
-"depth": 16,
-"edge_coord": 0,
-"into": 1,
-"kind": "EDGE",
-"n_axis_is_u": false,
-"partner": "WSS"
-}
-],
+"holes": [],
 "lo": {
-"x": 2950,
+"x": 2951,
 "y": 2492,
 "z": 195
 },
