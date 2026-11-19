@@ -74,6 +74,7 @@ Pełna lista z kodami: `komponenty.md`. W skrócie:
 - Magnesy Ø10 × 3: 6.
 - Uchwyty GUBBARP: 9 (w tym 2 na zapas).
 - Mocowanie do ścian: 8 × kołek Ø8 + wkręt 6×80 do betonu (NW ×4, L1 ×2, L2 ×2), 4 × kołek do pustaków (PB2 ×2, PB3 ×2), twarde dystanse 3/5 mm.
+- Pasy do dolnych szafek: 8 wkrętów 4 × 40 (od góry, przez dolną półkę pasa).
 - Pozostałe: wkręty 3,5 × 12/15/30, kanał Ø125, podkładki poziomujące, podkładka 23 mm pod PP1.
 
 ## 7. Pułapki

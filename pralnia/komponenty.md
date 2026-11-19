@@ -36,6 +36,7 @@ Strona zawiasów: F1, F2 po lewej; F3, F4, F5, F7, F8, F9, F10 po prawej.
 
 ## Montaż i mocowanie (rodzaje do potwierdzenia przy zakupie)
 - Łączenie sąsiednich modułów przez boki (L2B-2↔NWB-1, NWB-2↔KB3): złącza skręcane do płyt 36 mm (tuleja + śruba M4/M6) – min. 4 na styk, razem 8 (+zapas); na styku NWB-2 ↔ KB3 w z 100–450 (poza prowadnikami zawiasów F3/F4). Bez dodatkowych luzów między modułami.
+- Łączenie pasów z dolnymi szafkami (decyzja 2026-11-19): wkręty od góry, z wnętrza pasa – L2 z L1: przez L2P-1 w krawędzie L1B1/L1B2; RB z RD: przez PP3-1 w RDW/RDW2. Wkręty 4×40, po 4 na połączenie = 8 szt. (+zapas).
 - Mocowanie do ścian: 12 kpl.: ściana betonowa (tylna) 8 × kołek Ø8 + wkręt 6×80 (NW ×4 – 2 u góry, 2 pod NWP-2; L1 ×2; L2 ×2); prawa ściana z pustaków 4 × kołek do pustaków + wkręt (PB2 ×2, PB3 ×2). Prawą stronę mocować do prawej ściany przez PB2/PB3 (po 2 punkty, kołki do pustaków), nie do pionu (rury). Gzyms na prawej ścianie jest z g-k – nie przenosi sam obciążenia.
 - Twarde podkładki dystansowe (plastik/sklejka) przy każdym wkręcie ściennym: 5 mm za NWT (także 2 przy dolnej krawędzi, y 1743), 3 mm za L1T/L2T i przy PB2/PB3.
 - Podkładka pod PP1 na gzymsie prawej ściany: ok. 70 × 205 × 23 mm (drewno lub płyta 18 + 5), docinana na miejscu.

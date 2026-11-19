@@ -304,3 +304,4 @@ Sekcja C audytu v2 (otwory.py, kalkulator.py – układ „Tył”, zaokrągleni
 - Widok: LF6 rozsuwa się razem z F6; usunięta pusta warstwa „Dodatki” z listy stałych warstw. Bryły koncepcyjne (ukryte, „zamysł”) zostają bez zmian jako historia.
 Sekcja B audytu v3 (bramki w kalkulatorze meble.pl) jest w `zamowienie.md`; Sekcja C – osobny PR w `wspolne/`.
 - Uzupełnienie 2026-11-19: otwór wentylacyjny w ścianie Ø125 (WN3 w pomiary.md). Niezgodności Q (118 vs 113 z U i R) oraz odległości prawej ściany od maszyn (523 w modelu vs 530 zmierzone) zostają bez zmian (decyzja użytkownika; nie wpływają na szafki).
+- Łączenie pasów z dolnymi szafkami (2026-11-19, decyzja użytkownika): wkręty od góry z wnętrza pasa – L2P-1 w krawędzie L1B1/L1B2, PP3-1 w RDW/RDW2; 4 × 40, po 4 na połączenie.
