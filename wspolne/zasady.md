@@ -9,7 +9,7 @@ w swoim `ustalenia.md` (tam jest źródło prawdy dla pomieszczenia).
 - Układ współrzędnych modelu: X od lewej ściany ku prawej, Y od podłogi w górę, Z od tylnej ściany ku wejściu.
 
 ## Materiał i sklep
-- Płyta Egger 18 mm cięta na wymiar w centrum.meble.pl (w pralni: W1200 ST9 Biały porcelanowy na wszystkie elementy).
+- Płyta Egger 18 mm cięta na wymiar w centrum.meble.pl (w pralni: U702 ST9 Kaszmir na wszystkie elementy, od 2026-11-19; wcześniej W1200 ST9 Biały porcelanowy).
   Inna grubość (np. 16 mm na boki skrzynek szuflad) tylko tam, gdzie wymaga tego okucie; osobna lista formatek.
 - Zamówienie: wszystkie elementy z nawiertami. Wymiary formatek podawane z okleiną.
 - Okleina: fronty bezspoinowa 1 mm, pozostałe widoczne krawędzie ABS.

@@ -7,7 +7,7 @@ Dokumentacja: `wspolne/STRUKTURA.md` (struktura, decyzje, reguły modelu, nowe p
 `wspolne/zasady.md` (założenia meblarskie), `CLAUDE.md` (zasady dla kolejnych rozmów z Claude).
 
 ## Pomieszczenia
-- `pralnia/`: szafki do pralni (płyta Egger W1200 ST9 18 mm, centrum.meble.pl), przed zamówieniem
+- `pralnia/`: szafki do pralni (płyta Egger U702 ST9 Kaszmir 18 mm, centrum.meble.pl), przed zamówieniem
 - `garderoba/`: szafy do garderoby, start (pomiary)
 - `przedpokoj/`: szafa z szezlongiem przy drzwiach wejściowych, konstrukcja wstępna
 - `kuchnia/`: półka z LED, szafka okapowa (Ciarko DUO 55) i wąska szafka; płyta Egger H3710 Orzech Carini, konstrukcja wstępna
