@@ -27,7 +27,7 @@ KP3;"Półka kolumny (tył), pas: 1743, 2190, 2637 (z 183 do 385; kołki Ø8 do 
 PP1;"Półka przednia, poziom 489 (x 1239-1736, z 367-640; stoi na niej PT2/PB2)";497;273;1;1DL;KONFIRMATY + KOŁKI Ø8 W CZOLE (do KP1);
 PP2;"Półka przednia, poziomy 922 i 1355 (x 1240-1717, z 385-640; na wciskanych podpórkach; kołki Ø8 do KP2)";477;255;2;1DL;"KOŁKI Ø8 W CZOLE (do KP2); BEZ KONFIRMATÓW";
 PP3;"Półka przednia, pas: 1743, 2190, 2637 (x 1239-1718, z 385-640; kołki Ø8 do KP3)";479;255;3;1DL;KONFIRMATY + KOŁKI Ø8 W CZOLE (do KP3);
-LF6;Listwa oporowa za F6, dół (leży płasko na tyle F6, stoi na PP3-2);200;60;1;;KONFIRMATY (od spodu z PP3-2);do tyłu F6: klej + 4 wkręty Ø3,5x30 od strony listwy (maks. 12 mm w F6)
+LF6;Listwa oporowa za F6, dół (leży płasko na tyle F6, stoi na PP3-2);200;60;1;;KONFIRMATY (od spodu z PP3-2);do tyłu F6: klej + 4 wkręty Ø3,5x30 od strony listwy (maks. 12 mm w F6) w X 20, 85, 115, 180 od lewej krawędzi listwy, 42 od dolnej (z dala od 2 konfirmatów na X 50 i 150)
 L1W;L1: wieniec górny, przód;574;100;1;1DL;KONFIRMATY;
 L1P;"L1: półka luzem na całą szerokość L1 (BEZ nawiertów, nie montowana w szafce; ewentualne nawierty robi użytkownik)";619;572;1;1SZ;BEZ NAWIERTÓW;"dodatkowa płyta w zamówieniu; szer. 572 = wnętrze L1 574 minus 1 mm luzu na stronę; głębokość jak L2P; 4 podpórki Ø5 (otwory w L1B1/L1B2 wierci użytkownik)"
 L1WD;"L1: wieniec dolny ZAPASOWY (luzem, nie montowany; w przyszłości na kątownikach przy podłodze, przód L1)";573;100;1;1DL;BEZ NAWIERTÓW;"szer. 573 = wnętrze L1 574 minus 1 mm luzu; montaż kiedyś na 4 kątownikach do L1B1/L1B2, gdyby zawisł front F10"
@@ -41,5 +41,5 @@ F5;Front P pas: góra, otwierany;454.5;274.5;1;2DL+2SZ;ZAWIASY 2 SZT, PUSZKA Ø3
 F6;Front P pas: góra, stały z kratką (króciec Ø123 do rury Ø125);454.5;234.5;1;2DL+2SZ;"BRAK; otwór Ø127 własnoręcznie otwornicą";"otwór Ø127 pod króciec kratki Ø123: ŚRODEK 124 MM OD LEWEJ KRAWĘDZI, 217,5 MM OD DOLNEJ (237 OD GÓRNEJ); nawiertu środka kalkulator nie zrobi (okleina bezspoinowa), zaznaczyć ręcznie"
 F7;Front P pas: dół;512;454.5;1;2DL+2SZ;ZAWIASY 2 SZT, PUSZKA Ø35, ŚRODEK 22.5 MM OD KRAWĘDZI;uchwyt GUBBARP 116 mm: otwory samodzielnie, bez nawiertów
 F8;Front P dół: przy gzymsie, ZAPASOWY (teraz kuweta we wnęce);493.5;439;1;2DL+2SZ;ZAWIASY 2 SZT, PUSZKA Ø35, ŚRODEK 22.5 MM OD KRAWĘDZI;"zawiasy po PRAWEJ; nawierty prowadników w PB1 są w zamówieniu; uchwyt GUBBARP: otwory samodzielnie"
-F10;Front L dół: szafka L1, NA ZAPAS;1737;607;1;2DL+2SZ;ZAWIASY 4 SZT, PUSZKA Ø35, ŚRODEK 22.5 MM OD KRAWĘDZI;"zawiasy po PRAWEJ (szablon Front prawy), 100 od końców + 2 pośrednie (środki 103, 615, 1128, 1640 od dołu); w szafce L1 BEZ nawiertów pod prowadniki; uchwyt: otwory samodzielnie"
+F10;Front L dół: szafka L1, NA ZAPAS;1737;607;1;2DL+2SZ;ZAWIASY 4 SZT, PUSZKA Ø35, ŚRODEK 22.5 MM OD KRAWĘDZI;"zawiasy po PRAWEJ (szablon Front prawy), 100 od końców + 2 pośrednie (środki 100, 612, 1125, 1637 od dolnej krawędzi frontu); w szafce L1 BEZ nawiertów pod prowadniki; uchwyt: otwory samodzielnie"
 F9;Front P dół: jeden wysoki;1240.5;512;1;2DL+2SZ;ZAWIASY 3 SZT, PUSZKA Ø35, ŚRODEK 22.5 MM OD KRAWĘDZI;uchwyt GUBBARP 116 mm: otwory samodzielnie, bez nawiertów

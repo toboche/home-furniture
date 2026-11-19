@@ -1,6 +1,6 @@
-# Pralnia: lista do weryfikacji przed zamówieniem (stan 2026-11-19, model v67)
+# Pralnia: lista do weryfikacji przed zamówieniem (stan 2026-11-19, model v68)
 
-Źródła: model 3D (`index.html` albo `wyniki/pralnia_3d.html`), `wyniki/formatki.csv` (44 pozycje, 56 sztuk, 16,67 m²), `wyniki/kalkulator_nawierty.csv` (32 typy, 370 wierszy), `wyniki/arkusz_nawiertow.pdf` (32 strony), `wyniki/podsumowanie.json`, `pomiary.md`, `ustalenia.md`, `komponenty.md`, audyt `audyt/v1.md`.
+Źródła: model 3D (`index.html` albo `wyniki/pralnia_3d.html`), `wyniki/formatki.csv` (44 pozycje, 56 sztuk, 16,67 m²), `wyniki/kalkulator_nawierty.csv` (32 typy, 370 wierszy), `wyniki/arkusz_nawiertow.pdf` (32 strony), `wyniki/podsumowanie.json`, `pomiary.md`, `ustalenia.md`, `komponenty.md`, audyty `audyt/v1.md`, `v2.md`, `v3.md`.
 Kontrola automatyczna: 428 otworów, 58 połączeń, 0 kolizji otworów; 154 konfirmaty, 14 kołków, 12 podpórek, 21 puszek. Kolizje brył: tylko zamierzone (puszki w frontach, magnesy w gniazdach, gniazdko GN1 w wycięciu).
 
 ## Zamówienie
@@ -45,8 +45,8 @@ Transport: największe płyty L1B1/L1B2 1743 × 637 – drzwi 805 × 2016 OK; sp
 ## Uwagi konstrukcyjne (stałe)
 - Moduły lewy, wnęka i kolumna stykają się (0 mm), bez dodatkowych luzów: składać na sucho przed dokręceniem.
 - Luzy: lewa ściana 5 mm, prawa 3 mm, tył 3–5, sufit 5 (korpusy do 2655, J = 2660). Maszyny: 3 mm z lewej, 5 z prawej, można je przesuwać (ok. 4 mm po bokach).
-- Montaż L1 jako ostatni; gniazdo GN3/GN4 natynkowe (15 mm) koliduje z L1B2 przy wsuwaniu – zdjąć na czas montażu albo złożyć L1 na miejscu.
-- Model 3D nie był oglądany wizualnie przez Claude (brak biblioteki w środowisku): proszę obejrzeć warstwy „Kątowniki pod KT1" (nowe podpory), „Dodatki" (kuweta we wnęce), RDW2, kanał i kratkę.
+- Montaż: prawy dół (w całości) → prawy pas → NW → L1 (po zdjęciu obudowy GN3/GN4 – koliduje z L1B2 przy wsuwaniu) → L2. Front zapasowy F10 można zamontować dopiero po przeniesieniu GN3/GN4 (uderza w nie przy otwieraniu).
+- Model 3D nie był oglądany wizualnie przez Claude (brak biblioteki w środowisku): proszę obejrzeć warstwy „Kątowniki pod KT1" (nowe podpory), przełącznik „Kuweta we wnęce zamiast frontu F8", RDW2, kanał i kratkę.
 
 ## Do osobnego PR w `wspolne/` (audyt v1, Sekcja C)
 - `otwory.py`: kontrola kolizji otworów lico A – lico B (suma głębokości > grubości lub przelot) i krawędź–krawędź prostopadle, promień wycięć wokół pilotów Ø5×5.
