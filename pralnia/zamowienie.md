@@ -38,6 +38,7 @@ Wymiary są POTWIERDZONE pomiarami kontrolnymi w pomieszczeniu (2026-11-18, `wer
 - Wymiary z połówką mm (F5 274,5; F6 234,5; F8 493,5; F9 1240,5; fronty pasa 454,5): kalkulator przyjął takie wartości przy wycenie 2026-11-15.
 - KP1: kalkulator nie przyjmuje formatek < 200 mm. Wpisać 200 × 129 (zamiast 184 × 129) i X otworów w krawędzi 3 powiększyć o 16
   (66 i 150); naddatek 16 mm po stronie krawędzi 4 (tył, bez otworów) użytkownik odcina sam.
+- Minimalna formatka: przy wycenie 2026-11-15 kalkulator podał 199,8 × 59,8 mm (dla oklejanej); audyt v2 podaje 240 × 100. LF6 (200 × 60, bez okleiny) nie był testowany – jeśli kalkulator go odrzuci, zamówić 240 × 100 bez nawiertów, a konfirmaty i docięcie zrobić samemu (pozycje otworów: arkusz_nawiertow.pdf).
 - PP3-2 ma inne nawierty niż PP3-1 i PP3-3 (konfirmaty do LF6): w kalkulatorze osobna formatka.
 - Strona „Tył (B)”: przed wpisaniem wszystkich otworów sprawdzić na podglądzie 2D jednej formatki (np. PB2), czy kalkulator nie odbija osi X dla otworów od tyłu. Jeśli odbija – zatrzymać się i ustalić to z użytkownikiem.
 - F9: sprawdzić na podglądzie, że szablon stawia 3 puszki na 100 / 620 / 1140,5 od dołu (prowadniki w PB2 są pod te pozycje); jeśli szablon ustawia je inaczej – wpisać pozycje ręcznie.
