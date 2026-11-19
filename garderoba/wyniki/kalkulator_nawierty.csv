@@ -174,95 +174,8 @@
 ;;;;;;;CZOŁO;Krawędź 1;1036;;4;35
 ;;;;;;;CZOŁO;Krawędź 2;50;;4;35
 ;;;;;;;CZOŁO;Krawędź 2;376;;4;35
-11;LB1;LB1;1;2120;698;1;PLASZCZYZNA;Tył;9.0;50;5;przelotowo
-;;;;;;;PLASZCZYZNA;Tył;9.0;349;5;przelotowo
-;;;;;;;PLASZCZYZNA;Tył;9.0;648;5;przelotowo
-;;;;;;;PLASZCZYZNA;Tył;68;9.0;5;przelotowo
-;;;;;;;PLASZCZYZNA;Tył;401;9.0;5;przelotowo
-;;;;;;;PLASZCZYZNA;Tył;735;9.0;5;przelotowo
-;;;;;;;PLASZCZYZNA;Tył;1027.0;68;5;przelotowo
-;;;;;;;PLASZCZYZNA;Tył;1027.0;358;5;przelotowo
-;;;;;;;PLASZCZYZNA;Tył;1027.0;648;5;przelotowo
-;;;;;;;PLASZCZYZNA;Tył;1068;9.0;5;przelotowo
-;;;;;;;PLASZCZYZNA;Tył;1253.0;68;5;przelotowo
-;;;;;;;PLASZCZYZNA;Tył;1253.0;358;5;przelotowo
-;;;;;;;PLASZCZYZNA;Tył;1253.0;648;5;przelotowo
-;;;;;;;PLASZCZYZNA;Tył;1402;9.0;5;przelotowo
-;;;;;;;PLASZCZYZNA;Tył;1515.0;68;5;przelotowo
-;;;;;;;PLASZCZYZNA;Tył;1515.0;358;5;przelotowo
-;;;;;;;PLASZCZYZNA;Tył;1515.0;648;5;przelotowo
-;;;;;;;PLASZCZYZNA;Tył;1735;9.0;5;przelotowo
-;;;;;;;PLASZCZYZNA;Tył;1776.0;68;5;przelotowo
-;;;;;;;PLASZCZYZNA;Tył;1776.0;358;5;przelotowo
-;;;;;;;PLASZCZYZNA;Tył;1776.0;648;5;przelotowo
-12;LB2;LB2;1;2120;698;1;PLASZCZYZNA;Przód;9.0;50;5;przelotowo
-;;;;;;;PLASZCZYZNA;Przód;9.0;349;5;przelotowo
-;;;;;;;PLASZCZYZNA;Przód;9.0;648;5;przelotowo
-;;;;;;;PLASZCZYZNA;Przód;68;9.0;5;przelotowo
-;;;;;;;PLASZCZYZNA;Przód;401;9.0;5;przelotowo
-;;;;;;;PLASZCZYZNA;Przód;735;9.0;5;przelotowo
-;;;;;;;PLASZCZYZNA;Przód;1027.0;68;5;przelotowo
-;;;;;;;PLASZCZYZNA;Przód;1027.0;358;5;przelotowo
-;;;;;;;PLASZCZYZNA;Przód;1027.0;648;5;przelotowo
-;;;;;;;PLASZCZYZNA;Przód;1068;9.0;5;przelotowo
-;;;;;;;PLASZCZYZNA;Przód;1253.0;68;5;przelotowo
-;;;;;;;PLASZCZYZNA;Przód;1253.0;358;5;przelotowo
-;;;;;;;PLASZCZYZNA;Przód;1253.0;648;5;przelotowo
-;;;;;;;PLASZCZYZNA;Przód;1402;9.0;5;przelotowo
-;;;;;;;PLASZCZYZNA;Przód;1515.0;68;5;przelotowo
-;;;;;;;PLASZCZYZNA;Przód;1515.0;358;5;przelotowo
-;;;;;;;PLASZCZYZNA;Przód;1515.0;648;5;przelotowo
-;;;;;;;PLASZCZYZNA;Przód;1735;9.0;5;przelotowo
-;;;;;;;PLASZCZYZNA;Przód;1776.0;68;5;przelotowo
-;;;;;;;PLASZCZYZNA;Przód;1776.0;358;5;przelotowo
-;;;;;;;PLASZCZYZNA;Przód;1776.0;648;5;przelotowo
-;;;;;;;PLASZCZYZNA;Tył;1925.0;205.0;5;5
-13;LT;LT;1;1767;873;brak;PLASZCZYZNA;Tył;9.0;50;5;przelotowo
-;;;;;;;PLASZCZYZNA;Tył;9.0;437;5;przelotowo
-;;;;;;;PLASZCZYZNA;Tył;9.0;823;5;przelotowo
-;;;;;;;PLASZCZYZNA;Tył;270.0;50;5;przelotowo
-;;;;;;;PLASZCZYZNA;Tył;270.0;437;5;przelotowo
-;;;;;;;PLASZCZYZNA;Tył;270.0;823;5;przelotowo
-;;;;;;;PLASZCZYZNA;Tył;532.0;50;5;przelotowo
-;;;;;;;PLASZCZYZNA;Tył;532.0;437;5;przelotowo
-;;;;;;;PLASZCZYZNA;Tył;532.0;823;5;przelotowo
-;;;;;;;PLASZCZYZNA;Tył;758.0;50;5;przelotowo
-;;;;;;;PLASZCZYZNA;Tył;758.0;437;5;przelotowo
-;;;;;;;PLASZCZYZNA;Tył;758.0;823;5;przelotowo
-;;;;;;;CZOŁO;Krawędź 3;50;;4;35
-;;;;;;;CZOŁO;Krawędź 3;383;;4;35
-;;;;;;;CZOŁO;Krawędź 3;717;;4;35
-;;;;;;;CZOŁO;Krawędź 3;1050;;4;35
-;;;;;;;CZOŁO;Krawędź 3;1384;;4;35
-;;;;;;;CZOŁO;Krawędź 3;1717;;4;35
-;;;;;;;CZOŁO;Krawędź 1;50;;4;35
-;;;;;;;CZOŁO;Krawędź 1;383;;4;35
-;;;;;;;CZOŁO;Krawędź 1;717;;4;35
-;;;;;;;CZOŁO;Krawędź 1;1050;;4;35
-;;;;;;;CZOŁO;Krawędź 1;1384;;4;35
-;;;;;;;CZOŁO;Krawędź 1;1717;;4;35
-;;;;;;;CZOŁO;Krawędź 2;50;;4;35
-;;;;;;;CZOŁO;Krawędź 2;437;;4;35
-;;;;;;;CZOŁO;Krawędź 2;823;;4;35
-14;LW;LW, GLG;2;873;698;1;PLASZCZYZNA;Przód;50;9.0;5;przelotowo
-;;;;;;;PLASZCZYZNA;Przód;437;9.0;5;przelotowo
-;;;;;;;PLASZCZYZNA;Przód;823;9.0;5;przelotowo
-;;;;;;;CZOŁO;Krawędź 4;50;;4;35
-;;;;;;;CZOŁO;Krawędź 4;349;;4;35
-;;;;;;;CZOŁO;Krawędź 4;648;;4;35
-;;;;;;;CZOŁO;Krawędź 2;50;;4;35
-;;;;;;;CZOŁO;Krawędź 2;349;;4;35
-;;;;;;;CZOŁO;Krawędź 2;648;;4;35
-15;LK;LK, LS-1, LS-2, LS-3;4;873;680;1;CZOŁO;Krawędź 4;50;;4;35
-;;;;;;;CZOŁO;Krawędź 3;50;;4;35
-;;;;;;;CZOŁO;Krawędź 4;340;;4;35
-;;;;;;;CZOŁO;Krawędź 3;437;;4;35
-;;;;;;;CZOŁO;Krawędź 4;630;;4;35
-;;;;;;;CZOŁO;Krawędź 3;823;;4;35
-;;;;;;;CZOŁO;Krawędź 2;50;;4;35
-;;;;;;;CZOŁO;Krawędź 2;340;;4;35
-;;;;;;;CZOŁO;Krawędź 2;630;;4;35
-16;GLB1;GLB1;1;698;462;2;PLASZCZYZNA;Przód;312;295;5;5
+11;LB2;LB2;1;2120;698;1;PLASZCZYZNA;Tył;1925.0;205.0;5;5
+12;GLB1;GLB1;1;698;462;2;PLASZCZYZNA;Przód;312;295;5;5
 ;;;;;;;PLASZCZYZNA;Tył;9.0;68;5;przelotowo
 ;;;;;;;PLASZCZYZNA;Tył;9.0;394;5;przelotowo
 ;;;;;;;PLASZCZYZNA;Tył;50;9.0;5;przelotowo
@@ -271,7 +184,7 @@
 ;;;;;;;PLASZCZYZNA;Tył;349;453.0;5;przelotowo
 ;;;;;;;PLASZCZYZNA;Tył;648;9.0;5;przelotowo
 ;;;;;;;PLASZCZYZNA;Tył;648;453.0;5;przelotowo
-17;GLB2;GLB2;1;698;462;2;PLASZCZYZNA;Przód;9.0;68;5;przelotowo
+13;GLB2;GLB2;1;698;462;2;PLASZCZYZNA;Przód;9.0;68;5;przelotowo
 ;;;;;;;PLASZCZYZNA;Przód;9.0;394;5;przelotowo
 ;;;;;;;PLASZCZYZNA;Przód;50;9.0;5;przelotowo
 ;;;;;;;PLASZCZYZNA;Przód;50;453.0;5;przelotowo
@@ -279,7 +192,7 @@
 ;;;;;;;PLASZCZYZNA;Przód;349;453.0;5;przelotowo
 ;;;;;;;PLASZCZYZNA;Przód;648;9.0;5;przelotowo
 ;;;;;;;PLASZCZYZNA;Przód;648;453.0;5;przelotowo
-18;GLD;GLD;1;873;698;1;PLASZCZYZNA;Tył;50;9.0;5;przelotowo
+14;GLD;GLD;1;873;698;1;PLASZCZYZNA;Tył;50;9.0;5;przelotowo
 ;;;;;;;PLASZCZYZNA;Tył;437;9.0;5;przelotowo
 ;;;;;;;PLASZCZYZNA;Tył;823;9.0;5;przelotowo
 ;;;;;;;CZOŁO;Krawędź 4;50;;4;35
@@ -288,7 +201,16 @@
 ;;;;;;;CZOŁO;Krawędź 2;50;;4;35
 ;;;;;;;CZOŁO;Krawędź 2;349;;4;35
 ;;;;;;;CZOŁO;Krawędź 2;648;;4;35
-19;GLT;GLT;1;873;426;brak;CZOŁO;Krawędź 4;50;;4;35
+15;GLG;GLG;1;873;698;1;PLASZCZYZNA;Przód;50;9.0;5;przelotowo
+;;;;;;;PLASZCZYZNA;Przód;437;9.0;5;przelotowo
+;;;;;;;PLASZCZYZNA;Przód;823;9.0;5;przelotowo
+;;;;;;;CZOŁO;Krawędź 4;50;;4;35
+;;;;;;;CZOŁO;Krawędź 4;349;;4;35
+;;;;;;;CZOŁO;Krawędź 4;648;;4;35
+;;;;;;;CZOŁO;Krawędź 2;50;;4;35
+;;;;;;;CZOŁO;Krawędź 2;349;;4;35
+;;;;;;;CZOŁO;Krawędź 2;648;;4;35
+16;GLT;GLT;1;873;426;brak;CZOŁO;Krawędź 4;50;;4;35
 ;;;;;;;CZOŁO;Krawędź 3;50;;4;35
 ;;;;;;;CZOŁO;Krawędź 4;376;;4;35
 ;;;;;;;CZOŁO;Krawędź 3;436;;4;35
@@ -298,7 +220,7 @@
 ;;;;;;;CZOŁO;Krawędź 1;823;;4;35
 ;;;;;;;CZOŁO;Krawędź 2;50;;4;35
 ;;;;;;;CZOŁO;Krawędź 2;376;;4;35
-20;NS-1;NS-1, NS-2, NS-3, NK;4;553;534;2;CZOŁO;Krawędź 3;50;;4;35
+17;NS-1;NS-1, NS-2, NS-3, NK;4;553;534;2;CZOŁO;Krawędź 3;50;;4;35
 ;;;;;;;CZOŁO;Krawędź 4;50;;4;35
 ;;;;;;;CZOŁO;Krawędź 4;267;;4;35
 ;;;;;;;CZOŁO;Krawędź 3;277;;4;35
@@ -307,7 +229,7 @@
 ;;;;;;;CZOŁO;Krawędź 1;50;;4;35
 ;;;;;;;CZOŁO;Krawędź 1;277;;4;35
 ;;;;;;;CZOŁO;Krawędź 1;503;;4;35
-21;NS;NS-4, NS-5;2;553;534;2;CZOŁO;Krawędź 4;50;;4;35
+18;NS;NS-4, NS-5;2;553;534;2;CZOŁO;Krawędź 4;50;;4;35
 ;;;;;;;CZOŁO;Krawędź 3;75;;4;35
 ;;;;;;;CZOŁO;Krawędź 4;267;;4;35
 ;;;;;;;CZOŁO;Krawędź 3;302;;4;35

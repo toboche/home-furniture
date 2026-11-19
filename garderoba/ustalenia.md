@@ -140,12 +140,45 @@ USTALENIA Z KALKULATORA:
   Szafka na wprost 703–1825 (szerokość 1122, połowy 534; było 705–1821): luz 3 do pionu na samej górze, 4 do prawej ściany.
   Narożnik: front szafki na wprost = tył boku LB1 = 576 (3 przed pionem 573; było 583 = PZ + 3 + 18, te 18 nie były potrzebne,
   bo LB1 stoi przed frontem szafki na wprost); szafka na wprost głęboka 571 (było 578). Szafka po lewej 576–1485
-  (długość 909, było 583–1478), głębokość 698 (było 700). Fronty: F1, F2, F3 530, F4 869. Przewód wentylacyjny docięty o ok. 89.
+  (długość 909, było 583–1478), głębokość 698 (było 700). Fronty: F1, F2, F3 530, F4 869. Przewód wentylacyjny docięty o ok. 89 (od 2026-11-19: do 3 przed GLB1, tuleja do kratki).
 - Zawiasy F1, F2: 70T3790.TL (INSERTA, bez sprężyny) zamiast 70T3750.TL (na wkręty), bo meble.pl wierci szablon Blum INSERTA (2026-11-18).
 - Skrajne wymiary szafek (703–1825 × 5–576 i 5–703 × 576–1485, wys. 2582) potwierdzone w pomieszczeniu przez użytkownika (2026-11-18).
 - Pomiary weryfikacyjne (`weryfikacja.md`): sufit 2587, 2589, 2589 (każdy powtórzony 4 razy); przewody wodne nie są zagięte w stronę pokoju;
   GZ1 333; puszka gniazdka nie wystaje. LB2 przy pionie stoi ok. 3 mm od ściany przedniej (T = 919 zmierzone przy pionie);
   12 mm wychodziło z G = 1490 mierzonego przy prawej ścianie (model rysuje ścianę przednią prosto).
+
+## Audyt v2 (`audyt/v2.md`, robiony na stanie sprzed 2026-11-18), wdrożone 2026-11-19
+- Większość punktów (NL 600, prowadniki 56,5/57, kody Blum, ogranicznik 86°, TIP-ON na różnych wysokościach, podział
+  na korpusy, pełne mm, SZCZ 2, ABS na dolnych krawędziach, zdejmowane osłony NO, płyta 16 mm, pomiary V1–V24)
+  było już wdrożone 2026-11-18.
+- Wałek i adaptery synchronizacji TIP-ON BLUMOTION: kody były zamienione. Wałek (do docięcia) to T60.1125W, adaptery
+  T60.000D (2 na szufladę, w komplecie T60L7340).
+- Przewód wentylacyjny docięty do 573 od ściany tylnej, 3 przed bokiem GLB1 (wcześniej do wewnętrznego lica GLB1), bo
+  wystający przewód blokowałby wsunięcie korpusu górnego GL wzdłuż X. Z kratką łączy go krótka tuleja Ø125 wkładana przez
+  otwór w GLB1 po ustawieniu korpusu.
+- NIE wdrożone, z uzasadnieniem:
+  - Skrzynki: zostaje wariant Blum bez podcięć (sprawdzony w katalogu MOVENTO, „Option – no notching”); audyt przyjmuje tylko
+    wariant z podcięciami 125 × 13. Otwory pod haki: 7 nad podcięciem / spodem dna i 11 od wewnętrznego lica boku (audyt
+    podaje „11 od dołu”, co nie zgadza się z rysunkiem Blum).
+  - TIP-ON F1, F2: zostaje wersja krótka 956.1004 z adapterem 956.1201 (Blum: adapter do drzwi standardowych, przy frontach
+    wpuszczanych cofnięty o 22 + grubość frontu); audyt zaleca długą 956A1004, do frontów 530 × 422 niepotrzebną.
+- Wniesienie złożonego korpusu dolnego L odpada (2026-11-19): jego najmniejszy wymiar to 698, a drzwi mają 694 w świetle.
+- MONTAŻ (audyt GD-01, decyzja 2026-11-19, wariant a): przy złączach od zewnątrz boków jeden z korpusów dolnych nie da się
+  złożyć w pomieszczeniu (przed N zostaje 912–922 na L długości 909; przy ścianach 3–13 mm, a konfirmat wymaga min. ok. 40).
+  Dlatego korpus dolny L jest BEZ KONFIRMATÓW: boki LB1, LB2 i plecy LT łączone z półkami i wieńcem LW łącznikami narożnymi
+  od środka (ok. 40, `komponenty.md`). Kolejność montażu:
+  1. Korpus dolny N: złożyć na konfirmatach na środku pustego pokoju, przesunąć w prawo i dosunąć do ściany tylnej.
+  2. Korpus dolny L: na miejscu postawić LB1 (przy froncie N) i LB2 (przy ścianie przedniej), wsunąć od pokoju LT, LS-1..3,
+     LK, LW i przykręcić łącznikami od środka; przykręcić do ściany przez LT.
+  3. Korpusy górne GN, GL (i skrzynki szuflad) złożyć poza garderobą, wnieść (drzwi 694: GN 462 × 571, GL 462 × 698),
+     położyć na dolnych i wsunąć (GN od przodu, GL od strony pokoju wzdłuż X); przykręcić wkrętami przez dno.
+  4. Przewód wentylacyjny: tuleja przez otwór w GLB1 do kratki.
+- Złącza skrzynek 16 mm (audyt GD-04, decyzja 2026-11-19): konfirmaty 5 × 40 zamiast 7 × 50 (ścianka w krawędzi 5,5 zamiast 4,5).
+- SZ1 i SZ2 na tej samej wysokości ZOSTAJĄ (decyzja 2026-11-19; audyt GD-05 proponował przeniesienie SZ2 niżej): nie otwierać obu naraz.
+- Gniazdko: ZOSTAJE otwór w LB2 z dostępem do gniazdka (decyzja 2026-11-19; audyt GD-10 proponował mały przepust i gniazdko natynkowe).
+- Do osobnego PR w `wspolne/` (audyt v2, sekcja C): `zaslepki.py` (warunek brzegowy i zamknięte komory), `otwory.py`
+  (prowadniki frontów wpuszczanych 37 + FD + 1,5), `arkusz_pdf.py` (opisy Ø3 × 12 i Ø5 × 5); dodatkowo z 2026-11-18:
+  kalkulator z więcej niż jedną oklejaną krawędzią.
 
 ## Audyt v1 (`audyt/v1.md`), wdrożone 2026-11-18
 - SZ2: prowadnice MOVENTO NL 650 → NL 600 (760H6000S, 40 kg). NL 650 jest tylko w serii 766H, której jednostka TIP-ON

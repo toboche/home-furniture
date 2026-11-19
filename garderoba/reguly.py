@@ -31,8 +31,13 @@ def pomijaj_czesc(p):
 
 
 def pomijaj_polaczenie(face, edge):
-    """osłony przewodów NO-1, NO-2 są zdejmowane (kątowniki u góry, magnesy na dole), więc bez konfirmatów"""
-    return face.startswith('NO') or edge.startswith('NO')
+    """bez konfirmatów:
+    - osłony przewodów NO-1, NO-2 są zdejmowane (kątowniki u góry, magnesy na dole);
+    - korpus dolny L składany na miejscu (boki LB1, LB2 i plecy LT bez dostępu z zewnątrz): łączniki narożne od środka
+      (decyzja 2026-11-19, audyt v2 GD-01); korpusy górne GL, GN i dolny N zostają na konfirmatach"""
+    if face.startswith('NO') or edge.startswith('NO'):
+        return True
+    return face[0] == 'L' and edge[0] == 'L'
 
 
 def rozstaw(face, edge, domyslny):
@@ -122,7 +127,7 @@ BEZ_OKLEINY_PREFIKSY = ('NT', 'NO', 'LT', 'GNT', 'GLT', 'S1', 'S2')
 ZASLEPKI_ZASLANIAJA = ['Pion i gzyms', 'Fronty']
 
 K = 'KONFIRMATY'
-SKR = 'płyta 16; otwory pod zaczepy MOVENTO T51.7601 wg wzornika Blum T65.1000.02'
+SKR = 'płyta 16; KONFIRMATY 5 × 40 (otwory Ø5 w licu bez poszerzania); otwory pod zaczepy MOVENTO T51.7601 wg wzornika Blum T65.1000.02'
 SKR_D = SKR + '; w TYLNEJ KRAWĘDZI DNA 2 otwory Ø6 × 10 pod haki prowadnic: 7 nad spodem dna, 11 od wewnętrznego lica boków; konfirmaty dna z dala od zaczepów (100 od przodu i boków) i od strefy TIP-ON z tyłu (135 od boków)'
 
 # Opisy formatek. Wymiary i ilości liczone z modelu (model.js).

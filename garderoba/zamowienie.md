@@ -10,7 +10,7 @@ i przeliczenie (`python3 wspolne/pipeline/run.py garderoba`), nigdy ręcznie w p
 |---|---|
 | `wyniki/formatki.csv` | płyta 18 mm: 27 pozycji / 36 sztuk / 21,17 m² (kod, nazwa, DL, SZ, SZT, OKLEINA, NAWIERTY, UWAGI) |
 | `wyniki/formatki_16mm.csv` | płyta 16 mm na skrzynki szuflad: 6 pozycji / 10 sztuk / 1,52 m², bez okleiny |
-| `wyniki/kalkulator_nawierty.csv`, `wyniki/kalkulator_nawierty_16mm.csv` | nawierty w formacie kalkulatora centrum.meble.pl (21 typów formatek, 317 wierszy dla 18 mm) |
+| `wyniki/kalkulator_nawierty.csv`, `wyniki/kalkulator_nawierty_16mm.csv` | nawierty w formacie kalkulatora centrum.meble.pl (18 typów formatek, 239 wierszy dla 18 mm) |
 | `wyniki/arkusz_nawiertow.pdf` | rysunki wszystkich formatek z otworami (dla innego dostawcy albo do sprawdzenia) |
 | `komponenty.md` | okucia z kodami Blum, złącza, drążki, kątowniki, magnesy |
 | `ustalenia.md` | decyzje (sekcje z 2026-11-18 są najnowsze) |
@@ -30,14 +30,16 @@ i przeliczenie (`python3 wspolne/pipeline/run.py garderoba`), nigdy ręcznie w p
   |---|---|---|
   | NB-1, NB-2 | 1 | 4 |
   | NP | 1 | 4 |
-  | LB1, LB2 | 1 | 2 |
+  | LB2 | 1 | 2 |
+  | LB1 (nie ma jej w kalkulator_nawierty.csv, bez otworów) | jedna długa krawędź | jedna krótka krawędź |
   | NO-1, NO-2 (nie ma ich w kalkulator_nawierty.csv) | brak | 3 |
 - Bez okleiny: plecy NT, LT, GNT, GLT i skrzynki szuflad (16 mm).
 
 ## 4. Nawierty
 - FORMATKI Z NAWIERTAMI WPISUJ WEDŁUG `kalkulator_nawierty.csv`, NIE według `formatki.csv`: jeden wiersz z LP = jedna
   formatka w kalkulatorze, kolumna KODY = elementy o identycznych nawiertach (np. NS-1, NS-2, NS-3, NK razem; NS-4, NS-5 osobno,
-  bo mają konfirmaty przesunięte o 25; NW z GNG; LK z LS-1..3). Formatki bez nawiertów (NO-1, NO-2, F1–F4) dodać z `formatki.csv`.
+  bo mają konfirmaty przesunięte o 25; NW z GNG). Formatki bez nawiertów dodać z `formatki.csv`: NO-1, NO-2, F1–F4 oraz cały
+  korpus dolny L poza LB2 (LB1, LT, LW, LK, LS-1..3: składany na miejscu na łącznikach od środka, bez konfirmatów).
   Liczba pozycji w kalkulatorze będzie inna niż 27; zgadzać się mają sztuki (36) i m² (21,17).
 - Wszystkie formatki mają poniżej 2500 mm (najdłuższa 2120), więc kalkulator meble.pl przyjmie nawierty dla wszystkich;
   wszystkie współrzędne są w pełnych mm.
@@ -47,7 +49,7 @@ i przeliczenie (`python3 wspolne/pipeline/run.py garderoba`), nigdy ręcznie w p
 - Nawierty pilotowe Ø3 × 12 pod prowadniki zawiasów: w GNB-1 i GNB-2 (są w CSV). Jeśli kalkulator nie przyjmie Ø3,
   pominąć je (użytkownik wywierci sam); Ø4 za słabo trzyma wkręt 3,5.
 - Nawierty środków Ø5 × 5 pod otwory wiercone przez użytkownika otwornicą: GLB1 (przewód wentylacyjny Ø130, otwór ok. Ø135)
-  i LB2 (gniazdko). Same otwory robi użytkownik.
+  i LB2 (gniazdko). Same otwory robi użytkownik. Przewód wentylacyjny skrócony do 3 przed GLB1, z kratką łączy go tuleja.
 - Skrzynki szuflad, robi użytkownik wzornikiem Blum T65.1000.02 (nie ma ich w CSV): otwory pod zaczepy T51.7601 pod dnem
   z przodu oraz 2 otwory Ø6 × 10 pod haki prowadnic w TYLNEJ KRAWĘDZI dna S1D i S2D (7 nad spodem dna, 11 od wewnętrznego
   lica boków). Kalkulator meble.pl wierci w krawędzi tylko w osi grubości (8 zamiast 7), dlatego lepiej wzornikiem.
@@ -61,12 +63,12 @@ i przeliczenie (`python3 wspolne/pipeline/run.py garderoba`), nigdy ręcznie w p
 ## 6. Okucia i drobne elementy
 Pełna lista z kodami: `komponenty.md`. W skrócie: 4 zawiasy 70T3790.TL (INSERTA) + 4 prowadniki 173L6100 + 8 wkrętów 609.1500,
 2 ograniczniki 86° 70T3553 (F2), 2 TIP-ON 956.1004 + 2 adaptery 956.1201, MOVENTO 760H5000S i 760H6000S z TIP-ON BLUMOTION
-T60L7340 (L1), zaczepy T51.7601, adaptery T60.1125W i wałki T60.000D; konfirmaty 7 × 50: 230 + zapas; zaślepki ok. 6;
+T60L7340 (L1), zaczepy T51.7601, adaptery T60.000D (w komplecie) i wałki T60.1125W; konfirmaty 7 × 50: 139 + zapas (korpusy N, GN, GL), ok. 40 łączników narożnych do korpusu dolnego L i 5 × 40: 34 + zapas (skrzynki); zaślepki ok. 6;
 3 drążki Ø25 (534, 534, 873); 4 kątowniki i 4 zatrzaski magnetyczne do osłon NO; wkręty 4 × 30 (ok. 10) łączące korpusy
 górne z dolnymi; kratka wentylacyjna; mocowanie do ścian do ustalenia.
 
 ## 7. Pułapki
-- `wyniki/podsumowanie.json` podaje 45 zaślepek: to błąd skryptu (nie widzi, że łby na LB1, LB2, GLB1, GLB2 zasłania ściana
+- `wyniki/podsumowanie.json` podaje 24 zaślepki: to błąd skryptu (nie widzi, że łby na LB1, LB2, GLB1, GLB2 zasłania ściana
   i pion). Kupić ok. 6 (`komponenty.md`). Poprawka czeka na osobny PR w `wspolne/`.
 - Korpusy: każda szafka to korpus dolny (0–2120: N, L) i górny (2120–2582: GN, GL). Kody GN… i GL… to formatki korpusów
   górnych, nie pomyłka.

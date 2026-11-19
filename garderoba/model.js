@@ -55,7 +55,10 @@ var ITEMS=[
   {n:'Pion (wysięg '+PXM+' od lewej ściany, '+PZ+' od tylnej; przy podłodze '+PX+')',layer:'Pion i gzyms',x:0,y:0,z:0,w:PXM,h:J,d:PZ,c:0xd9d4ca},
   {n:'Gzyms ('+GZ2+' × '+GZ1+', długość '+GZ3+')',layer:'Pion i gzyms',x:0,y:0,z:G-GZ3,w:GZ2,h:GZ1,d:GZ3,c:0xc7c1b5},
   {n:'Rura wystająca z gzymsu (wysięg '+GR4+', do '+GR3+' od podłogi; szerokość 80 założona)',layer:'Osprzęt',x:GZ2,y:0,z:G-GZ3,w:GR4,h:GR3,d:80,c:0xb08d57},
-  {t:'cyl',n:'Przewód wentylacyjny Ø'+W3+' docięty do wewnętrznego lica boku LB1 (było '+W4+')',layer:'Osprzęt',cx:W2,cy:W1,z:PZ,r:W3/2,len:ZF+P-PZ,c:0x6b7b8c},
+  /* przewód docięty 3 przed bokiem GLB1 (wysięg 10 zamiast 120), żeby korpus górny GL dało się wsunąć wzdłuż X;
+     połączenie z kratką krótką tuleją przez otwór w GLB1 po ustawieniu korpusu (audyt v2, GD-08) */
+  {t:'cyl',n:'Przewód wentylacyjny Ø'+W3+' docięty do '+(ZF-LUZ)+' od ściany tylnej, 3 przed bokiem GLB1 (było '+W4+' od pionu)',layer:'Osprzęt',cx:W2,cy:W1,z:PZ,r:W3/2,len:ZF-LUZ-PZ,c:0x6b7b8c},
+  {t:'cyl',n:'Tuleja Ø125 przez otwór w GLB1 do kratki (wkładana po ustawieniu korpusu GL)',layer:'Osprzęt',cx:W2,cy:W1,z:ZF-LUZ,r:62,len:LUZ+P,c:0x8a96a3},
   {n:'Przewód wodny R1 ('+R1+' od prawej ściany, do ok. '+R3+', wysięg ok. '+R4+')',layer:'Osprzęt',x:A-R1-20,y:0,z:0,w:40,h:R3,d:R4,c:0xc0392b},
   {n:'Przewód wodny R2 ('+R2+' od prawej ściany, do ok. '+R3+', wysięg ok. '+R4+')',layer:'Osprzęt',x:A-R2-20,y:0,z:0,w:40,h:R3,d:R4,c:0x2e5fb3},
   {n:'Gniazdko (E1 '+E1+' od lewej ściany, E2 '+E2+' od podłogi)',layer:'Osprzęt',x:E1-40,y:E2-40,z:G-15,w:80,h:80,d:15,c:0xe58a2b},
