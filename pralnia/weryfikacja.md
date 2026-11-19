@@ -1,22 +1,22 @@
-# Pralnia: lista do weryfikacji przed zamówieniem (stan 2026-11-19, model v69)
+# Pralnia: lista do weryfikacji przed zamówieniem (stan 2026-11-19, model v70)
 
-Źródła: model 3D (`index.html` albo `wyniki/pralnia_3d.html`), `wyniki/formatki.csv` (44 pozycje, 56 sztuk, 16,69 m²), `wyniki/kalkulator_nawierty.csv` (32 typy, 370 wierszy), `wyniki/arkusz_nawiertow.pdf` (32 strony), `wyniki/podsumowanie.json`, `pomiary.md`, `ustalenia.md`, `komponenty.md`, audyty `audyt/v1.md`, `v2.md`, `v3.md`.
+Źródła: model 3D (`index.html` albo `wyniki/pralnia_3d.html`), `wyniki/formatki.csv` (44 pozycje, 56 sztuk, 16,69 m²), `wyniki/kalkulator_nawierty.csv` (32 typy, 370 wierszy), `wyniki/arkusz_nawiertow.pdf` (32 strony), `wyniki/podsumowanie.json`, `pomiary.md`, `ustalenia.md`, `komponenty.md`, audyty `audyt/v1.md`–`v5.md`.
 Kontrola automatyczna: 428 otworów, 58 połączeń, 0 kolizji otworów; 154 konfirmaty, 14 kołków, 12 podpórek, 21 puszek. Kolizje brył: tylko zamierzone (puszki w frontach, magnesy w gniazdach, gniazdko GN1 w wycięciu).
 
 ## Zamówienie
 - Koszyk 21386928 (2 970,11 zł, 2026-11-08) jest NIEAKTUALNY i nie należy go używać.
-- Wycena wstępna 2026-11-15: rozkrój 21629244 (stan v58, bez nawiertów) = 2 204,10 zł; z wierceniem szacunkowo 2 850–2 950 zł. Od tego czasu: +RDW2, +LF6, +F10, pasy +3 mm, KT1 124 mm, L1B 637. Do złożenia od nowa (zamowienie.md).
+- Wycena wstępna 2026-11-15: rozkrój 21629244 (stan v58, bez nawiertów) = 2 204,10 zł; z wierceniem szacunkowo 2 850–2 950 zł. Od tego czasu: +RDW2, +LF6, +F10, pasy +3 mm, KT1 121 mm, L1B 637, szerokości v69. Do złożenia od nowa (zamowienie.md).
 - Kalkulator przyjął przy wycenie wymiary z połówką mm i formatki 100 mm. KP1 zamawiamy jako 200×126 (skracana samodzielnie). Do sprawdzenia przy wpisie: nawierty Ø3×12.
 
 ## Do dopracowania / potwierdzenia
-1. F6: zaprojektowane v62 (LF6 + kątownik 40×40, wkręty 12 mm). Przy montażu sprawdzić, czy prowadniki 173H7130 mieszczą się w strefie x 1500–1545 (wymiar przyjęty, nie z karty Blum).
+1. F6: zaprojektowane v62 (LF6 + kątownik 40×40; wkręty 12 mm tylko do kątowników F6, prowadniki 173H7130 na 609.1500 15 mm). Przy montażu sprawdzić, czy prowadniki 173H7130 mieszczą się w strefie x 1500–1545 (wymiar przyjęty, nie z karty Blum).
 2. Pion: zmierzone U = 1368 (najmniejsza; v69: tył kolumny do x 1365, luz 3 mm). Opcjonalnie: Q (gzyms przy maszynach) – 118 nie zgadza się z U.
-3. Montaż prawego dołu: skręcony na podłodze i wsunięty w całości (konfirmaty PP1 → PB2/PT2 od spodu). Prześwit nad gzymsem 22 mm.
+3. Montaż prawego dołu: skręcony w całości poza pralnią (albo na stojąco, z konfirmatami PP1 → PB2/PT2 przed dołożeniem KB1/PB1/PT1) i wsunięty; ustalenia.md 2026-11-19 (v70). Prześwit nad gzymsem 22 mm.
 4. Odkurzacz bezprzewodowy w L1: mocowanie (bez UTRUSTA). Wysokość L1P (619 × 574, na 4 podpórkach).
 5. Audyt v2 – rozstrzygnięte 2026-11-19: piloty zostają Ø3 × 12; PB2/PB3 przykręcone do prawej ściany (gzyms g-k); wieniec dolny L1WD zamówiony luzem.
 6. Przy zamówieniu: oś X strony „Tył (B)” w kalkulatorze, pozycje 3 puszek F9 (zamowienie.md).
 
-## Pomiary kontrolne (czy zabudowa się zmieści) – lista z 2026-11-18, WYKONANE 2026-11-18: wszystkie OK
+## Pomiary kontrolne (czy zabudowa się zmieści) – lista z 2026-11-18, WYKONANE 2026-11-18 i 2026-11-19: wszystkie OK
 Mierzyć w mm, w kilku miejscach; liczy się najgorszy wynik (najmniejsza szerokość, najniższy sufit, najbardziej wystający punkt).
 | KOD | CO I GDZIE | MODEL | DOBRY WYNIK |
 |---|---|---|---|

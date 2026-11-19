@@ -121,8 +121,8 @@ var ITEMS=[
      Kosz zakładam 320 × 320 × 550 (podano 320x3230), rurę odkurzacza jako 500 ponad korpusem (do 1000 od podłogi). */
   /* Żelazko: bez osobnej półki w lewej szafce, w razie potrzeby trafia do prawej. */
 
-  /* Fronty w pasie od 1743 do 2658: dwa rzędy po 456 z odstępem 3 mm, grubość 18, front do z = 658.
-     Odstęp 3 mm między modułami (po 1,5 mm z każdej strony granicy 613 i 1221). */
+  /* Fronty w pasie od 1743 do 2655: dwa rzędy po 454,5 z odstępem 3 mm, grubość 18, front do z = 658.
+     Odstęp 3 mm między modułami (po 1,5 mm z każdej strony granicy 615 i 1221). */
   {n:'F1: Front lewa, góra (609 × 454,5)',layer:'Fronty',x:4.5,y:2200.5,z:640,w:609,h:454.5,d:18,c:0x2f9e8f,o:0.55},
   {n:'F2: Front lewa, dół (609 × 454,5)',layer:'Fronty',x:4.5,y:1743,z:640,w:609,h:454.5,d:18,c:0x2f9e8f,o:0.55},
   {n:'F3: Front nad maszynami, góra (603 × 454,5)',layer:'Fronty',x:616.5,y:2200.5,z:640,w:603,h:454.5,d:18,c:0x2f9e8f,o:0.55},
@@ -134,7 +134,7 @@ var ITEMS=[
   {t:'cyl',n:'Kratka wywiewu w froncie stałym (króciec Ø123 do rury Ø125; rozeta przyjęta Ø150)',layer:'Fronty',cx:1626,cy:2418,z:640,r:75,len:19,c:0xe0a526},
   /* Kanał wentylacyjny: rura okrągła Ø 125 od otworu w ścianie (z = 362) do tylnej strony frontu stałego (z = 640), zamocowana do szafki, uszczelniona pianką przy ścianie i przy froncie. */
   {t:'cyl',n:'Kanał wentylacyjny (rura Ø 125, z 362 do 640)',layer:'Kanał wentylacyjny',cx:1626,cy:2418,z:362,r:62.5,len:278,c:0x9aa5ad},
-  /* Listwy pod wkręty frontu stałego (18 × 18), po wewnętrznej stronie przodu komory. */
+  /* Mocowanie frontu stałego F6: kątowniki i listwa LF6 (niżej), po wewnętrznej stronie przodu komory. */
   {n:'Kątownik 25×25 pod F6, bok prawy: ramię przy froncie',layer:'Kątowniki pod F6',x:1695,y:2275,z:638,w:25,h:25,d:2,c:0x9aa5ad},
   {n:'Kątownik 25×25 pod F6, bok prawy: ramię przy boku',layer:'Kątowniki pod F6',x:1718,y:2275,z:615,w:2,h:25,d:25,c:0x9aa5ad},
   {n:'Kątownik 25×25 pod F6, bok prawy: ramię przy froncie',layer:'Kątowniki pod F6',x:1695,y:2550,z:638,w:25,h:25,d:2,c:0x9aa5ad},
@@ -224,7 +224,7 @@ var ITEMS=[
   /* Wieńce górne (usztywnienie dolnych szafek): pas 100 mm przy froncie, pod samym pasem (y 1725 do 1743), tył do z 640 (front od z 640). */
   {n:'L1W: L1: wieniec górny, przód (1725 do 1743)',layer:'Półki',x:21,y:1725,z:540,w:576,h:18,d:100,c:0xe6d7b8},
   {n:'LF6: Listwa oporowa za F6, dół (na PP3-2, przyklejona i przykręcona do tyłu F6)',layer:'Półki',x:1505,y:2208,z:622,w:200,h:60,d:18,c:0xe6d7b8},
-  /* Podkładka (v66, audyt v2 PR-11): PP1 wystaje 73 mm za PB1 nad gzymsem prawej ściany i stoi na nim PB2; szczelinę 23 mm między gzymsem (466) a PP1 (489) wypełnia podkładka docinana na miejscu, wsuwana od frontu po ustawieniu modułu. */
+  /* Podkładka (v66, audyt v2 PR-11): PP1 wystaje 75 mm za PB1 nad gzymsem prawej ściany i stoi na nim PB2; szczelinę 23 mm między gzymsem (466) a PP1 (489) wypełnia podkładka docinana na miejscu, wsuwana od frontu po ustawieniu modułu. */
   {n:'Podkładka pod PP1 na gzymsie prawej ściany (23 mm, docinana na miejscu)',layer:'Podkładki',x:1668,y:466,z:435,w:70,h:23,d:205,c:0xb08d57},
   {n:'RDW: Prawa dolna: wieniec górny, przód (1725 do 1743)',layer:'Półki',x:1239,y:1725,z:540,w:481,h:18,d:100,c:0xe6d7b8},
   /* RDW2 (audyt v1, 2026-11-18): wieniec górny tylny, spina górę tylnej części KB2 z PB2 i PT2 (wcześniej KB2 z tyłu u góry nie był niczym usztywniony: KP2 na podpórkach, KT1 zdejmowane). */
@@ -233,7 +233,7 @@ var ITEMS=[
   {n:'Kuweta we wnęce po F8 (600 × 400 × 400)',layer:'Kuweta we wnęce',x:1242,y:0,z:458,w:400,h:400,d:600,c:0xbfa98a},
 
   /* Ścianki boczne (płyta 18 mm). Boki stoją prosto na kafelkach. Lewa ściana pokoju jest lewym bokiem dolnej lewej szafki (odkurzacz bezprzewodowy, gniazdko GN1).
-     Moduł nad maszynami ma własne boki (po 1 mm luzu od boków sąsiadów). */
+     Moduł nad maszynami ma własne boki, styk 0 mm z bokami sąsiadów. */
   {n:'L1B1: L1: bok prawy (przy maszynach)',layer:'Ścianki boczne',x:597,y:0,z:3,w:18,h:1743,d:637,c:0xcdbb95},
   {n:'L2B-1: L2: bok lewy (pas)',layer:'Ścianki boczne',x:3,y:1743,z:3,w:18,h:912,d:637,c:0xcdbb95},
   {n:'L2B-2: L2: bok prawy (pas)',layer:'Ścianki boczne',x:597,y:1743,z:3,w:18,h:912,d:637,c:0xcdbb95},
@@ -247,12 +247,12 @@ var ITEMS=[
   {n:'PB2: Prawa: bok prawy, góra',layer:'Ścianki boczne',x:1720,y:507,z:367,w:18,h:1236,d:273,c:0xcdbb95},
   {n:'PB3: Prawa: bok prawy, pas',layer:'Ścianki boczne',x:1720,y:1743,z:367,w:18,h:912,d:273,c:0xcdbb95},
 
-  /* Ścianki tylne (płyta 18 mm, wpuszczone między boki, tył równo z tylną krawędzią boków). Osobna warstwa. Tył prawej szafki przy otworze wywiewu jest rozcięty (otwór 140 × 140 na 2339 do 2479). */
+  /* Ścianki tylne (płyta 18 mm, wpuszczone między boki, tył równo z tylną krawędzią boków). Osobna warstwa. W PT3 otwór Ø127 pod kanał (środek x 1626, y 2418). */
   {n:'L1T: L1: tył',layer:'Ścianki tylne',x:21,y:0,z:3,w:576,h:1743,d:18,c:0x9c8b6e,o:0.9},
   {n:'L2T: L2: tył (pas)',layer:'Ścianki tylne',x:21,y:1743,z:3,w:576,h:912,d:18,c:0x9c8b6e,o:0.9},
   {n:'NWT: Wnęka nad maszynami: tył',layer:'Ścianki tylne',x:633,y:1743,z:5,w:570,h:912,d:18,c:0x9c8b6e,o:0.9},
   {n:'PT1: Prawa dół: tył (kolumna i część przed pionem)',layer:'Ścianki tylne',x:1239,y:0,z:440,w:406,h:489,d:18,c:0x9c8b6e,o:0.9},
-  /* KT1A/B/C (v60, audyt v1 A2, decyzja 2026-11-18): szer. 124 (x 1244-1368, 3 mm luzu na łby wkrętów w ramieniu kątownika na KB2),
+  /* KT1A/B/C (v60, audyt v1 A2, decyzja 2026-11-18): szer. 121 (x 1244-1365, 3 mm luzu na łby wkrętów w ramieniu kątownika na KB2 i 3 mm do pionu),
      stoją na kątowniku-podporze (ramię poziome 2 mm pod płytą, z 165-190 (całe na KB2), nad półkami KP z 1 mm luzu), trzymane 2 magnesami do ramion za płytą.
      Wysuwane do przodu ponad półkami: 3 mm luzu od półki pod spodem, 2 mm do podpórek / wieńców nad płytą. */
   {n:'KT1A: Kolumna: tył, zawór, zdejmowany do przodu, stoi na podporze, trzymany magnesami (y 510-915)',layer:'Ścianki tylne',x:1244,y:510,z:165,w:121,h:405,d:18,c:0x9c8b6e,o:0.9},
@@ -708,8 +708,8 @@ HF_MODEL.items.push(
   {t:'cyl3',n:'Łeb konfirmatu: KB1 → PT1',layer:'Konfirmaty',ax:'x',px:1222,py:439,pz:449,r:5,len:2,c:0xd8b310},
   {t:'cyl3',n:'Otwór Ø8 x 20 pod kołek w KB1 (do KB2)',layer:'Otwory',ax:'y',px:1230,py:479,pz:480,r:4,len:20,c:0x15181b},
   {t:'cyl3',n:'Kołek drewniany Ø8 x 40: KB1 + KB2',layer:'Kołki',ax:'y',px:1230,py:489,pz:480,r:4,len:40,c:0xb08a5b},
-  {t:'cyl3',n:'Otwór Ø8 x 20 pod kołek w KB1 (do KB2)',layer:'Otwory',ax:'y',px:1230,py:479,pz:600,r:4,len:20,c:0x15181b},
-  {t:'cyl3',n:'Kołek drewniany Ø8 x 40: KB1 + KB2',layer:'Kołki',ax:'y',px:1230,py:489,pz:600,r:4,len:40,c:0xb08a5b},
+  {t:'cyl3',n:'Otwór Ø8 x 20 pod kołek w KB1 (do KB2)',layer:'Otwory',ax:'y',px:1230,py:479,pz:540,r:4,len:20,c:0x15181b},
+  {t:'cyl3',n:'Kołek drewniany Ø8 x 40: KB1 + KB2',layer:'Kołki',ax:'y',px:1230,py:489,pz:540,r:4,len:40,c:0xb08a5b},
   {t:'cyl3',n:'Otwór Ø5 przelotowy w KB2 (pod konfirmat do PP1)',layer:'Otwory',ax:'x',px:1230,py:498,pz:417,r:2.5,len:18.6,c:0x15181b},
   {t:'cyl3',n:'Konfirmat 7 x 50: KB2 → PP1',layer:'Konfirmaty',ax:'x',px:1246,py:498,pz:417,r:3.5,len:50,c:0xc7a008},
   {t:'cyl3',n:'Łeb konfirmatu: KB2 → PP1',layer:'Konfirmaty',ax:'x',px:1222,py:498,pz:417,r:5,len:2,c:0xd8b310},
@@ -775,7 +775,7 @@ HF_MODEL.items.push(
   {t:'cyl3',n:'Otwór Ø5 x 10 pod podpórkę w KB2',layer:'Otwory',ax:'x',px:1234,py:1384,pz:590,r:2.5,len:10.6,c:0x15181b},
   {t:'cyl3',n:'Otwór Ø5 x 10 pod podpórkę w KB2',layer:'Otwory',ax:'x',px:1234,py:1416,pz:590,r:2.5,len:10.6,c:0x15181b},
   {t:'cyl3',n:'Otwór Ø8 x 20 pod kołek w KB2 (do KB1)',layer:'Otwory',ax:'y',px:1230,py:499,pz:480,r:4,len:20,c:0x15181b},
-  {t:'cyl3',n:'Otwór Ø8 x 20 pod kołek w KB2 (do KB1)',layer:'Otwory',ax:'y',px:1230,py:499,pz:600,r:4,len:20,c:0x15181b},
+  {t:'cyl3',n:'Otwór Ø8 x 20 pod kołek w KB2 (do KB1)',layer:'Otwory',ax:'y',px:1230,py:499,pz:540,r:4,len:20,c:0x15181b},
   {t:'cyl3',n:'Otwór Ø5 przelotowy w KB3 (pod konfirmat do PP3-1)',layer:'Otwory',ax:'x',px:1230,py:1752,pz:435,r:2.5,len:18.6,c:0x15181b},
   {t:'cyl3',n:'Konfirmat 7 x 50: KB3 → PP3-1',layer:'Konfirmaty',ax:'x',px:1246,py:1752,pz:435,r:3.5,len:50,c:0xc7a008},
   {t:'cyl3',n:'Łeb konfirmatu: KB3 → PP3-1',layer:'Konfirmaty',ax:'x',px:1222,py:1752,pz:435,r:5,len:2,c:0xd8b310},

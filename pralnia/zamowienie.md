@@ -1,8 +1,8 @@
-# Pralnia: przekazanie do zamówienia (stan 2026-11-19, model v69)
+# Pralnia: przekazanie do zamówienia (stan 2026-11-19, model v70)
 
 Dla rozmowy, w której składane jest zamówienie (pralnia razem z innym pomieszczeniem). Wymiary w mm, kody tylko DUŻYMI LITERAMI.
 Źródło prawdy: repozytorium na `main` (`CLAUDE.md`). Dokumenty w projekcie Claude mogą być starymi kopiami.
-Wymiary są POTWIERDZONE pomiarami kontrolnymi w pomieszczeniu (2026-11-18, `weryfikacja.md`). Zmiana wymiaru tylko przez
+Wymiary są POTWIERDZONE pomiarami kontrolnymi w pomieszczeniu (2026-11-18 i 2026-11-19, `weryfikacja.md`, `pomiary.md`). Zmiana wymiaru tylko przez
 `model.js` / `reguly.py` i przeliczenie (`python3 wspolne/pipeline/run.py pralnia`), nigdy ręcznie w plikach z `wyniki/`.
 
 ## 1. Pliki
@@ -12,7 +12,7 @@ Wymiary są POTWIERDZONE pomiarami kontrolnymi w pomieszczeniu (2026-11-18, `wer
 | `wyniki/kalkulator_nawierty.csv` | nawierty w formacie kalkulatora centrum.meble.pl: 32 typy formatek, 370 wierszy |
 | `wyniki/arkusz_nawiertow.pdf` | rysunki formatek z otworami (32 strony; dla innego dostawcy albo do sprawdzenia) |
 | `komponenty.md` | okucia z kodami Blum, złącza, kątowniki, magnesy, uchwyty |
-| `ustalenia.md` | decyzje (sekcje z 2026-11-18 są najnowsze) |
+| `ustalenia.md` | decyzje (sekcje z 2026-11-19 są najnowsze) |
 
 ## 2. Płyta
 - Wszystko z jednej płyty: Egger W1200 ST9 Biały porcelanowy 18 mm (centrum.meble.pl, format 2070 × 2800). Jeśli drugie
@@ -67,14 +67,16 @@ Wymiary są POTWIERDZONE pomiarami kontrolnymi w pomieszczeniu (2026-11-18, `wer
 Pełna lista z kodami: `komponenty.md`. W skrócie:
 - Zawiasy Blum: 71B3590 – 13 sztuk plus 6 na zapas (F8, F10); 79B9590 – 2 (F5 na F6).
 - Prowadniki: 173H7100 – 13 plus 6 na zapas; 173H7130 – 2.
-- Wkręty do prowadników: 609.1500, ok. 40 sztuk.
+- Wkręty do prowadników (173H7100 i 173H7130): 609.1500, 45–50 sztuk.
 - Ograniczniki 70T3553: 9 plus 2 do F8.
 - Złącza: konfirmaty 7 × 50 – 154 plus zapas, zaślepki ok. 27, kołki Ø8 × 40 – 14, podpórki Ø5 – 16 (12 pod PP2/KP2 + 4 pod L1P).
 - Kątowniki: 25 × 25 – 12, 40 × 40 – 1.
 - Magnesy Ø10 × 3: 6.
 - Uchwyty GUBBARP: 9 (w tym 2 na zapas).
 - Mocowanie do ścian: 8 × kołek Ø8 + wkręt 6×80 do betonu (NW ×4, L1 ×2, L2 ×2), 4 × kołek do pustaków (PB2 ×2, PB3 ×2), twarde dystanse 3/5 mm.
-- Pasy do dolnych szafek: 8 wkrętów 4 × 40 (od góry, przez dolną półkę pasa).
+- Pasy do dolnych szafek: 8 wkrętów 4 × 30 (od góry, przez dolną półkę pasa w wieńce L1W, RDW, RDW2; NIE 4 × 40).
+- Łączniki między modułami (boki 2 × 18): 8 złączy skręcanych M4/M6 do płyt 36 mm.
+- Klej do drewna (PVAc) do kołków Ø8 i LF6; 3 gałki lub pętle do wyjmowania KT1A/B/C.
 - Pozostałe: wkręty 3,5 × 12/15/30, kanał Ø125, podkładki poziomujące, podkładka 23 mm pod PP1.
 
 ## 7. Pułapki

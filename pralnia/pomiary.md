@@ -20,14 +20,14 @@ Układ: X od lewej ściany ku prawej, Y od podłogi w górę, Z od tylnej ścian
 | U | 1368 | od lewej ściany do lewego boku pionu, najmniejsza z pomiarów na kilku wysokościach (2026-11-19) | 1371–1373 (2026-11-18), 1372, 1379; model wcześniej 1376 |
 | P | 371 | szerokość pionu | |
 | V | 362 | wysięg pionu od tylnej ściany | podane 0,362 m |
-| Q | 118 | gzyms po stronie maszyn | przy U = 1371 i krawędzi gzymsu 1258 (maszyny do 1216 + R 42) wychodzi 113 – do sprawdzenia, nie wpływa na szafki |
+| Q | 118 | gzyms po stronie maszyn | przy U = 1368 i krawędzi gzymsu 1258 (maszyny do 1216 + R 42) wychodzi 110 – zostawione (decyzja 2026-11-19), nie wpływa na szafki |
 | X | 467 | najwyższy punkt gzymsu na pionie (pod PP1/KP1), pomiar 2026-11-18 | 489 |
 | GZ1 | 73 | szerokość gzymsu na prawej ścianie | |
 | GZ2 | 73 | szerokość gzymsu na froncie pionu | |
 | GZ3 | 466 | wysokość gzymsu na prawej ścianie | |
 | GZ4 | 680 | długość gzymsu na prawej ścianie, od frontu pionu | |
 | D | 490 | od krawędzi gzymsu do prawej ściany | |
-| WN1, WN2 | 115, 243 | środek otworu wentylacyjnego: od prawej ściany, od sufitu (pomiar 2026-11-18); w modelu x 1624, y 2418 (od sufitu nad otworem 2661) | wcześniej M, N = 121, 53 (niejasne), model x 1616, y 2409 |
+| WN1, WN2 | 115, 243 | środek otworu wentylacyjnego: od prawej ściany, od sufitu (pomiar 2026-11-18); w modelu x 1626, y 2418 (od prawej ściany przy A = 1741; od sufitu nad otworem 2661) | wcześniej M, N = 121, 53 (niejasne), model x 1616, y 2409 |
 | WN3 | 125 | średnica otworu wentylacyjnego w ścianie (pomiar 2026-11-19) | |
 | KR | 123 | kratka wentylacyjna (kupiona): króciec Ø123, wchodzi do rury Ø125 | |
 
