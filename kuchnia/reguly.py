@@ -92,8 +92,16 @@ def dodatkowe_otwory(P, parts, loc):
         for z in Z_OKW:
             pos = {'y': Y_OKW, 'z': z}
             q['holes'].append(dict(kind='FACE', side=side, u=loc(q, q['u'], pos[q['u']]), v=loc(q, q['v'], pos[q['v']]),
-                                   d=3, depth=5, partner='wkręt okapu 3,5 x 16', axis_n='-', pin=False, pilot=True,
+                                   d=3, depth=5, partner=('wkręt okapu 3,5 x 13' if code == 'SOB-1' else 'wkręt okapu 3,5 x 16'), axis_n='-', pin=False, pilot=True,
                                    opis='Nawiert pilotowy Ø3 x 5 pod wkręt okapu'))
+    # prowadniki zawiasów F1 w SOB-2: nawierty pilotowe Ø3 x 12, 37 od przedniej krawędzi boku, po 2 co 32
+    q = P['SOB-2']
+    for cy in Y_ZAWIASY_F1:
+        for dy in (-16, 16):
+            pos = {'y': cy + dy, 'z': Z_PROWADNIK}
+            q['holes'].append(dict(kind='FACE', side='B', u=loc(q, q['u'], pos[q['u']]), v=loc(q, q['v'], pos[q['v']]),
+                                   d=3, depth=12, partner='wkręt prowadnika zawiasu F1', axis_n='-', pin=False,
+                                   pilot=True, plate=True))
     # przewód zasilający okap wychodzi ze ściany głównej za plecami SOT (ZA1, ZA2): środek otworu Ø25 (audyt v1 KU-10)
     q = P['SOT']
     q['holes'].append(dict(kind='FACE', side='A', u=loc(q, q['u'], {'x': X_ZA, 'y': Y_ZA}[q['u']]),
@@ -153,7 +161,11 @@ def dodatkowe_otwory(P, parts, loc):
     zlacze('SOP', 'A', 'y', Y_SOP + 9, 'z', (159,), (60, 260))                   # półka: obudowy od góry
 
 
-ZAWIASY_BEZ_PROWADNIKA_W_SCIANCE = set()
+# F1 stoi 2 przed korpusem (szczelina TIP-ON), a wspólny pipeline liczy linię prowadników od lica frontu:
+# prowadniki F1 dodaje dodatkowe_otwory 37 od przedniej krawędzi SOB-2 (audyt v4 KU4-02; do poprawki w wspolne/)
+ZAWIASY_BEZ_PROWADNIKA_W_SCIANCE = {'F1'}
+Y_ZAWIASY_F1 = (1850, 2210, 2576.5)   # model.js: YZ1, YZ2, YT - 1,5 - 100
+Z_PROWADNIK = 304 - 37                # model.js: GKS - 37
 
 
 def zawias_specjalny(code, fr, cx, cy, cyl):
@@ -184,13 +196,13 @@ FORMATKI = [
     F('SOP', 'Szafka okapowa: półka nad okapem', okleina='1DL', nawierty='KONFIRMATY + MIMOŚRÓD I KOŁKI (do SOB-1)',
       uwagi='środek otworu Ø170 pod pion Ø150 (z 109,5 = 91,5 od tylnej krawędzi); otwór otwarty do tyłu (wycięcie U szer. 170 od tylnej krawędzi); w tylnym prawym narożniku podcięcie 25 × 25 na przewód okapu (x 2889–2914, z 18–43); wycina użytkownik'),
     F('WSB', 'Wąska szafka: boki', okleina='1DL', nawierty='KONFIRMATY',
-      uwagi='WSB-1: środek otworu Ø160 pod Ø150; WSB-2: rura ze ścianki wystaje 115, więc wycięcie U od tylnej krawędzi szer. 140 z półkolem R70 o środku w zaznaczonym punkcie (z 97), żeby szafkę dało się nasunąć na rurę; wycina użytkownik'),
+      uwagi='WSB-1: środek otworu Ø160 pod Ø150 (otwornicą z obu stron, płyta podparta, przed montażem); WSB-2: rura ze ścianki wystaje 115, więc wycięcie U od tylnej krawędzi szer. 140 z półkolem R70 o środku w zaznaczonym punkcie (z 97), żeby szafkę dało się nasunąć na rurę; wycina użytkownik'),
     F('WST', 'Wąska szafka: tył', okleina='', nawierty='KONFIRMATY'),
     F('WSD', 'Wąska szafka: dno', okleina='1DL', nawierty='KONFIRMATY'),
     F('WSW', 'Wąska szafka: wieniec górny', okleina='1DL', nawierty='KONFIRMATY'),
     F('WSS', 'Wąska szafka: dno skrzynki na rurę (płytka półka przed zaślepką)', okleina='1DL', nawierty='KONFIRMATY'),
     F('WSZ', 'Wąska szafka: zaślepka skrzynki na rurę (zdejmowana)', okleina='', nawierty='BRAK',
-      uwagi='widoczne lico przednie; krawędzie schowane; bez konfirmatów, zdejmowana: wkładana poziomo od przodu na listwy oporowe 10 x 10 (na WSS i pod WSW, przykleja użytkownik), 2 zatrzaski magnetyczne; wymiar z luzem 1 z boków i 3 u góry'),
+      uwagi='widoczne lico przednie; krawędzie schowane; bez konfirmatów, zdejmowana: wkładana poziomo od przodu na listwę oporową 10 x 10 na WSS (przykleja użytkownik), u góry 2 zatrzaski dociskowe push-to-open pod WSW (naciśnięcie wysuwa WSZ); wymiar z luzem 1 z boków i 3 u góry'),
     F('WSP', 'Wąska szafka: półki stałe', okleina='1DL', nawierty='KONFIRMATY'),
     F('P1', 'Półka LED: ściana lewa (wnęka)', okleina='1DL',
       nawierty='CZOŁA: 3 x Ø8 x 35 pod pręty M8 od ściany lewej (użytkownik pogłębia do 85)',
