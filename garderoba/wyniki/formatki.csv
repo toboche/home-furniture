@@ -12,7 +12,7 @@ GNG;N góra: wieniec górny;1086;571;1;1DL;KONFIRMATY;
 GNP;N góra: przegroda środkowa (TIP-ON F1 i F2 z obu stron);553;426;1;1SZ;KONFIRMATY;
 GNT;N góra: plecy;1086;426;1;;KONFIRMATY;
 LB1;L dół: bok przy pionie;2120;698;1;1DL + 1SZ (dół);BRAK (łączniki od środka);"WYCIĘCIE NAROŻNIKA 184 × 335 (dolny narożnik przy ścianie lewej, wokół gzymsu i rury): w kalkulatorze jako wycięcie albo wykonuje użytkownik; DOLNA KRAWĘDŹ OKLEJONA ABS (stoi na kafelkach; w kalkulatorze dodać ręcznie), ślizgacze w razie potrzeby"
-LB2;L dół: bok przy ścianie przedniej;2120;698;1;1DL + 1SZ (dół);NAWIERT ŚRODKA Ø5 × 5 (łączniki od środka);"WYCIĘCIE NAROŻNIKA 129 × 335 (dolny narożnik przy ścianie lewej, wokół gzymsu): w kalkulatorze jako wycięcie albo wykonuje użytkownik; otwór Ø68 (otwornica do puszek) wierci użytkownik wg nawiertu środka: gniazdo montowane na LB2, przewód z puszki w ścianie; DOLNA KRAWĘDŹ OKLEJONA ABS (stoi na kafelkach; w kalkulatorze dodać ręcznie), ślizgacze w razie potrzeby"
+LB2;L dół: bok przy ścianie przedniej;2120;698;1;1DL + 1SZ (dół);NAWIERT ŚRODKA Ø5 × 5 (łączniki od środka);"WYCIĘCIE NAROŻNIKA 129 × 335 (dolny narożnik przy ścianie lewej, wokół gzymsu): w kalkulatorze jako wycięcie albo wykonuje użytkownik; otwór ok. Ø60 pod gniazdo wpuszczane wierci użytkownik po przymiarce, nad puszką w ścianie (wg nawiertu środka); DOLNA KRAWĘDŹ OKLEJONA ABS (stoi na kafelkach; w kalkulatorze dodać ręcznie), ślizgacze w razie potrzeby"
 LT;L dół: plecy (od 335 do wieńca LW, nad gzymsem);1767;876;1;;BRAK (łączniki od środka);
 LW;L dół: wieniec na 2120 (sufit części otwartej);876;698;1;1DL;BRAK (łączniki od środka);
 LS;L dół: półki nad butami (335, 596, 858);876;680;3;1DL;BRAK (łączniki od środka);
