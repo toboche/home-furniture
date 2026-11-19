@@ -1,9 +1,9 @@
-# Zestawienie okuć i elementów (pralnia) – stan v65, 2026-11-18
+# Zestawienie okuć i elementów (pralnia) – stan v67, 2026-11-19
 Wersja do zamówienia. Wymiary w mm. Kody wymiarów wielkimi literami.
 Liczby łączników, otworów i zaślepek: `wyniki/podsumowanie.json` (źródło), poniżej przepisane.
 
 ## Płyta
-- Egger W1200 ST9 „Biały porcelanowy" 18 mm, centrum.meble.pl; 43 pozycje / 55 sztuk / 16,61 m² (wyniki/formatki.csv, razem z L1P, RDW2, LF6 i frontami zapasowymi F8, F10).
+- Egger W1200 ST9 „Biały porcelanowy" 18 mm, centrum.meble.pl; 44 pozycje / 56 sztuk / 16,67 m² (wyniki/formatki.csv, razem z L1P, RDW2, LF6, frontami zapasowymi F8, F10 i zapasowym wieńcem L1WD).
 - Okleina: fronty 1,0 mm bezspoinowa (szablony zawiasów), reszta ABS 0,8 mm z nawiertami.
 - KP1: w modelu 184×129, ZAMÓWIĆ 200×129 (minimum kalkulatora) i skrócić samodzielnie o 16 mm od tyłu (krawędź 4, bez otworów); w kalkulatorze X otworów w krawędzi 3: 66 i 150.
 
@@ -30,15 +30,18 @@ Strona zawiasów: F1, F2 po lewej; F3, F4, F5, F7, F8, F9, F10 po prawej.
 
 ## Kątowniki i wkręty do nich
 - Mocowanie F6: listwa oporowa LF6 200×60 (płyta, w zamówieniu) na dole – klej + 4 wkręty Ø3,5×30 do F6, 2 konfirmaty od spodu z PP3-2; kątownik 40×40 lewa góra (1 szt.); kątowniki 25×25: 3 (prawy bok ×2, prawa góra ×1). Wkręty: w ramieniu przy F6 Ø3,5×12 (nie dłuższe), w ramieniu na boku/półce Ø3,5×15; ok. 16 szt.
-- Kątowniki 25×25 przy KT1A/B/C: 9 (na płytę: 1 podpora pod płytą i 2 z ramieniem za płytą), przykręcane do KB2. Wkręty Ø3,5×15 z łbem stożkowym, ok. 18 szt., otwory w kątownikach pogłębione.
+- Kątowniki 25×25 przy KT1A/B/C: 9 (na płytę: 1 podpora pod płytą i 2 z ramieniem za płytą), przykręcane do KB2; stal ocynkowana (magnes musi trzymać, nie nierdzewna). Wkręty Ø3,5×15 z łbem stożkowym, ok. 18 szt., otwory w kątownikach pogłębione.
 - Magnesy neodymowe Ø10×3: 6 szt. (po 2 na KT1A/B/C), gniazda Ø10×3 wiercisz sam. Ciężar płyty niesie podpora.
-- Zdejmowane tyły kolumny: KT1A 405×124, KT1B 405×124, KT1C 347×124.
+- Zdejmowane tyły kolumny: KT1A 405×124, KT1B 405×124, KT1C 347×124. Do wysuwania: mała gałka lub pętla z taśmy na przedniej ściance każdej płyty (3 szt.).
 
 ## Montaż i mocowanie (rodzaje do potwierdzenia przy zakupie)
-- Łączenie sąsiednich modułów przez boki (L2B-2↔NWB-1, NWB-2↔KB3): złącza skręcane do płyt 36 mm albo wkręty 4×30 – ok. 8 szt. Bez dodatkowych luzów między modułami.
-- Mocowanie do ścian: ok. 10 kpl. (po 2 na moduł); beton: kołek Ø8 + wkręt 6×80; pustaki: kołki do pustaków.
+- Łączenie sąsiednich modułów przez boki (L2B-2↔NWB-1, NWB-2↔KB3): złącza skręcane do płyt 36 mm (tuleja + śruba M4/M6) – min. 4 na styk, razem 8 (+zapas). Bez dodatkowych luzów między modułami.
+- Mocowanie do ścian: ok. 12 kpl.: NW (wisi nad maszynami) min. 4 wkręty 6×80 + kołki Ø8 w ścianę betonową (2 u góry, 2 pod NWP-2); L1, L2, prawy dół, prawy pas po 2. Beton: kołek Ø8 + wkręt 6×80; pustaki: kołki do pustaków. Prawą stronę mocować do prawej ściany przez PB2/PB3 (po 2 punkty, kołki do pustaków), nie do pionu (rury). Gzyms na prawej ścianie jest z g-k – nie przenosi sam obciążenia.
+- Twarde podkładki dystansowe (plastik/sklejka) przy każdym wkręcie ściennym: 5 mm za NWT, 3 mm za L1T/L2T i przy PB2/PB3.
+- Podkładka pod PP1 na gzymsie prawej ściany: ok. 70 × 205 × 23 mm (drewno lub płyta 18 + 5), docinana na miejscu.
 - Podkładki poziomujące 1–3 mm pod L1 i prawy dół: 1 opakowanie.
-- Półka luzem L1P (619×574): opcjonalnie 4 podpórki Ø5 (otwory wierci użytkownik).
+- Półka luzem L1P (619×572): 4 podpórki Ø5 (otwory w L1B1/L1B2 wierci użytkownik).
+- Wieniec zapasowy L1WD (573×100, luzem): w przyszłości 4 kątowniki 25×25 + wkręty Ø3,5×15 (nie kupować teraz).
 
 ## Uchwyty
 - GUBBARP 116 biały: 7 szt. (F1, F2, F3, F4, F5, F7, F9) + 2 na zapas (F8, F10); otwory wierci użytkownik.
@@ -46,7 +49,7 @@ Strona zawiasów: F1, F2 po lewej; F3, F4, F5, F7, F8, F9, F10 po prawej.
 ## Wyposażenie
 - UTRUSTA: usunięta z planów.
 - Kuweta 600×400×400 we wnęce F8 (front F8 na zapas).
-- Półka luzem L1P: 619 × 574 mm, okleina ABS 0,8 na jednej krawędzi 574, BEZ nawiertów.
+- Półka luzem L1P: 619 × 572 mm (1 mm luzu na stronę), okleina ABS 0,8 na jednej krawędzi 572, BEZ nawiertów.
 
 ## Wentylacja
 - Kanał Ø125 (z 362–640), środek x 1624, y 2418. Kratka kupiona: króciec Ø123 do rury Ø125.
