@@ -298,6 +298,11 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
   i dalej na osi płyty (oś 2654 od narożnika, bo E i F mierzone od ścianki): SO X 2378–2930, WS X 2930–3204.
   Przewód okapu w SOT X 2850; reszta bez zmian.
 
+### 2026-11-19: pomiary weryfikacyjne zamknięte (L1–L5)
+- L1 3206 (P3 1978), L2 ok (pod sufitem i 300 od ściany głównej), L3 1156–1158 (szafki 1154), L4 805 potwierdzone
+  (P1 804), L5 ramka kratki od 306 (wąska szafka 300, luz 6). Rura ze ścianki 988 od płytek (zgodne z modelem).
+- Meble mieszczą się fizycznie; do zamówienia zostaje wpis do kalkulatora meble.pl, wycena i mail o usłojeniu frontów.
+
 ## Do zmierzenia przy pomiarach weryfikacyjnych w mieszkaniu
 - 2026-11-19: lista ograniczona do sprawdzenia, czy meble fizycznie się mieszczą (decyzja użytkownika):
   L1 narożnik → ścianka nad płytkami ≥ 3207 (plan 3208); L2 to samo pod sufitem i 300 od ściany głównej ≥ 3207;
@@ -360,3 +365,4 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
 - 2026-11-19: sufit M 1156 (pomiar), szafki 1154, F1 1151, oś rury 2564.
 - 2026-11-19: ściana główna 3206 (pomiar), P3 1978, szafki o 2 w lewo.
 - 2026-11-19: pomiar rury ze ścianki od płytek 988, zgodny z modelem.
+- 2026-11-19: pomiary L1–L5 zamknięte (L2 ok, L4 805, L5 306).

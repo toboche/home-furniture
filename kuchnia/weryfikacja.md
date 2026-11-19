@@ -4,7 +4,7 @@ Stan: `main` po PR #26 (audyt v1 i decyzje z 2026-11-18). Sprawdzone na przelicz
 (`run.py kuchnia`, `--wszystkie --sprawdz`, `scena.py`) oraz skryptami: przecięcia brył modelu (prostopadłościany,
 rury jako obrys) i odległości otworów od wycięć wykonywanych przez użytkownika (otwory Ø160, wycięcia U).
 
-**Werdykt: projekt spójny, ZAMÓWIENIE DOPIERO PO 5 pomiarach w mieszkaniu** (arkusz „Kuchnia: pomiary weryfikacyjne
+**Werdykt (2026-11-19): projekt spójny, pomiary L1–L5 zamknięte, meble się mieszczą. Zostaje wpis do kalkulatora i wycena.** Wcześniej: zamówienie dopiero po 5 pomiarach w mieszkaniu (arkusz „Kuchnia: pomiary weryfikacyjne
 przed zamówieniem”, od 2026-11-19 tylko L1–L5: czy meble fizycznie się mieszczą; patrz `ustalenia.md`).
 
 ## 1. Wyniki automatyczne
@@ -29,7 +29,7 @@ przed zamówieniem”, od 2026-11-19 tylko L1–L5: czy meble fizycznie się mie
 | Otwory Ø160 w SOB-2, WSB-1 | konfirmaty wieńców przed otworem (z 215, 265), nad otworem 21 mm boku | OK |
 | Skrzynka WS | redukcja z 34,5–184,5 przed WSZ (z 195), dno 2479 pod rurą 2489, WSW 2647 (od 2026-11-19); WSZ 236 × 165 na dolnej listwie i 2 zatrzaskach push-to-open (audyt v4) | OK, bez maty w skrzynce |
 | Rura ze ścianki | wystaje 115 (do X 3093), redukcja wąskim końcem w nią; WSB-2 z wycięciem U R70 | OK, szafkę nasuwa się na rurę od przodu |
-| Kratka | WS 300 głębokości, kratka od 303 | OK (SO 304 nie sięga do ścianki) |
+| Kratka | WS 300 głębokości, ramka kratki od 306 (zmierzone) | OK, luz 6 (SO 304 nie sięga do ścianki) |
 | Zasilanie okapu | otwór Ø25 w SOT (X 2850, Y 2180) nad SOP; przewód w dół przez podcięcia 25 × 25 w tylnym prawym narożniku SOP i SOD | POPRAWIONE (SOD 2026-11-18, SOP 2026-11-19) |
 | Mocowanie SO i WS | po 4 wkręty 6 × 70 przez plecy, SO z WS skręcone; na styku SOB-2 / WSB-1 łby konfirmatów naprzeciw siebie | OK: łby wpuszczone poniżej lica, wkręty łączące z dala od konfirmatów |
 | P1 | 3 pręty od ściany lewej + wkręty przez słupek + łączniki do P3; pręty poza rowkami LED | OK |

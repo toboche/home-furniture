@@ -19,7 +19,7 @@ Pomiary z 2026-11-12 i 2026-11-13 (rozmowa z Claude, zdjęcia kuchni).
 | F | 590 | szerokość płyty grzewczej | |
 | H | 754 | blat → dno szafek górnych nad wnęką | szczelina nad płytkami H − D = 154 |
 | I | 624 | narożnik → przednia krawędź boku szafek górnych nad wnęką, wzdłuż ściany głównej | |
-| J | 805 | szerokość wnęki: narożnik → bok słupka, wzdłuż ściany lewej | 628 (pomyłka przy pierwszym pomiarze, poprawione 2026-11-13) |
+| J | 805 | szerokość wnęki: narożnik → bok słupka, wzdłuż ściany lewej (potwierdzone 2026-11-19 przy ścianie i 400 od niej) | 628 (pomyłka przy pierwszym pomiarze, poprawione 2026-11-13) |
 | K | 629 | głębokość blatu na ścianie głównej | |
 | L | 657 | głębokość ścianki: ściana główna → czoło ścianki | |
 | M | 1156 | góra płytek → sufit: najniższy punkt, przy kratce wentylacyjnej (zmierzone 2026-11-19: 1156–1158) | 1169 (2026-11-13) |
@@ -39,6 +39,7 @@ Pomiary z 2026-11-12 i 2026-11-13 (rozmowa z Claude, zdjęcia kuchni).
 | KR1 | 125 | otwór wentylacji grawitacyjnej w ściance: średnica wewnętrzna | zewnętrzna 130; kratka, nie zasłaniać, otworu nie da się przesunąć |
 | KR2 | 323 | otwór: ściana główna → najbliższy punkt (po zewnętrznej) | |
 | KR3 | 175 | otwór: sufit → najbliższy punkt (po zewnętrznej) | |
+| KR5 | 306 | ściana główna → najbliższa krawędź ramki kratki (wąska szafka 300: luz 6) | zmierzone 2026-11-19; wcześniej założone 303 |
 | KR4 | 15 | wysięg ramki kratki poza otwór (w stronę ściany głównej) | do projektu 20 (zapas): wolne od ściany głównej do 303 |
 
 ## Okap Ciarko Design DUO 55 (instrukcja Uno/Duo i rysunek techniczny DUO 55)
