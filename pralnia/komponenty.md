@@ -3,7 +3,7 @@ Wersja do zamówienia. Wymiary w mm. Kody wymiarów wielkimi literami.
 Liczby łączników, otworów i zaślepek: `wyniki/podsumowanie.json` (źródło), poniżej przepisane.
 
 ## Płyta
-- Egger W1200 ST9 „Biały porcelanowy" 18 mm, centrum.meble.pl; 44 pozycje / 56 sztuk / 16,69 m² (wyniki/formatki.csv, razem z L1P, RDW2, LF6, frontami zapasowymi F8, F10 i zapasowym wieńcem L1WD).
+- Egger U702 ST9 „Kaszmir" 18 mm (od 2026-11-19, wcześniej W1200), centrum.meble.pl; 44 pozycje / 56 sztuk / 16,69 m² (wyniki/formatki.csv, razem z L1P, RDW2, LF6, frontami zapasowymi F8, F10 i zapasowym wieńcem L1WD).
 - Okleina: fronty 1,0 mm bezspoinowa (szablony zawiasów), reszta ABS 0,8 mm z nawiertami.
 - KP1: w modelu 184×126, ZAMÓWIĆ 200×126 (minimum kalkulatora) i skrócić samodzielnie o 16 mm od tyłu (krawędź 4, bez otworów); w kalkulatorze X otworów w krawędzi 3: 66 i 150.
 
@@ -23,7 +23,7 @@ Zawiasy: CLIP top BLUMOTION (samodomykanie), wszystkie INSERTA. F9 (514×1240,5,
 Strona zawiasów: F1, F2 po lewej; F3, F4, F5, F7, F8, F9, F10 po prawej.
 
 ## Złącza w korpusach
-- Konfirmaty 7×50: 154 szt. (łby wpuszczone fazownikiem na równo z licem). Zaślepki: 26 widocznych miejsc (kupić 27); część w szczelinach: 4 × KB2 → RDW/RDW2 (30 mm nad suszarką), 4 × PP1 → PB2/PT2 (22 mm nad gzymsem).
+- Konfirmaty 7×50: 154 szt. (łby wpuszczone fazownikiem na równo z licem). Zaślepki (kolor kaszmir / szarobeżowy): 26 widocznych miejsc (kupić 27); część w szczelinach: 4 × KB2 → RDW/RDW2 (30 mm nad suszarką), 4 × PP1 → PB2/PT2 (22 mm nad gzymsem).
 - Kołki Ø8×40: 14 szt. + klej (12 w parach KP/PP, 2 w styku KB1/KB2); otwory Ø8×20 w krawędzi.
 - Podpórki półek Ø5×10 wciskane: 12 (poziomy 922 i 1355: po 4 w KB2 – z 213, 355, 417, 590 – i po 2 w PB2 – z 417, 590); otwory 60 szt., siatka 32 mm. Część pod półką maks. 5 mm.
 - Nawierty środków Ø5×5 (PT3, L1B2): pod otwory do wykonania samodzielnie. PT3: środek 255 od lewej, 237 od górnej. L1B2 (GN1): środek 918 od dołu, 239 od tylnej krawędzi formatki (pokój z 242).

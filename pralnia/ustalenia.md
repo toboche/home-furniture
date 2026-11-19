@@ -19,7 +19,7 @@ Wspólny podział poziomy: 1743. Wspólna płaszczyzna frontów: z=658 (fronty o
 
 ## Materiał i konstrukcja
 - Płyta Egger 18 mm cięta na wymiar w centrum.meble.pl (arkusz 2070×2800; ok. 107 zł za ćwiartkę; cięcie ok. 5,04 zł/mb; Premium 0,3 mm / 10 dni, Standard 0,5 mm / 6 dni).
-- Kolor (WYBRANY 2026-11-08): Egger W1200 ST9 Biały porcelanowy, wszystkie elementy. Kolor w modelu (#EEECE5) orientacyjny. Cena do przeliczenia w kalkulatorze dla tego dekoru.
+- Kolor (WYBRANY 2026-11-08, ZMIENIONY 2026-11-19): Egger U702 ST9 Kaszmir, wszystkie elementy (wcześniej W1200 ST9 Biały porcelanowy). Kolor w modelu (#CDC5B9) orientacyjny. Cena do przeliczenia w kalkulatorze dla tego dekoru.
 - Okleina ABS 1 mm bezspoinowa na widocznych krawędziach frontów. Wymiary dla sklepu podawane z okleiną.
 - Połączenia: konfirmaty 7×50 z zaślepkami. Półki stałe. Plecy 18 mm między bokami, równo z tylną krawędzią.
 - Brak nóżek i płyt dolnych: moduły stoją na podłodze (plastikowe podkładki do poziomowania).
@@ -324,3 +324,9 @@ Sekcja B audytu v3 (bramki w kalkulatorze meble.pl) jest w `zamowienie.md`; Sekc
 - Prawy dół (RD, 517 × 1743 × 475) skręcać poza pralnią (np. w przedpokoju) albo w pozycji pionowej: w pralni nie ma miejsca, żeby położyć go na podłodze (1743 > szerokości pokoju). Wnieść pionowo przez drzwi 805 × 2016. Konfirmaty PP1 → PB2/PT2 wkręcić, zanim dojdą KB1/PB1/PT1 (część z nich jest za PT1).
 - zamowienie.md: łączniki M4/M6 (8), klej, 3 gałki/pętle KT1, daty; usunięte liczby sprzed v69 w komentarzach modelu i dokumentach.
 - Szczelina 6 mm między KP (do x 1365) a PT2/PT3 (od x 1371) na z 367–385 (narożnik za półką): bez znaczenia, zostaje.
+
+## 2026-11-19 – zmiana płyty na Egger U702 ST9 Kaszmir
+- Decyzja użytkownika: wszystkie elementy z Egger U702 ST9 Kaszmir 18 mm (było W1200 ST9 Biały porcelanowy). Wymiary, okleina i nawierty bez zmian.
+- Okleina (ABS 0,8 i bezspoinowa 1,0 na frontach) w dekorze U702. Dostępność płyty 18 mm i okleiny bezspoinowej 1,0 w U702 sprawdzić w kalkulatorze centrum.meble.pl przy zamówieniu; jeśli bezspoinowej nie ma, zatrzymać się i ustalić to z użytkownikiem.
+- Zaślepki konfirmatów w kolorze kaszmir / szarobeżowym (nie białe). Uchwyty GUBBARP bez zmian (białe), chyba że użytkownik zdecyduje inaczej.
+- Kolor w widoku 3D zmieniony na #CDC5B9 (orientacyjny, z ekranu).
