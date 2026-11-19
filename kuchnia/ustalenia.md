@@ -291,6 +291,7 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
   oś rury poziomej Y 2564 (było 2577), otwór pod przewód w SOT Y 2180, górny zawias F1 Y 2563,5. Wszystko od dołu
   (okap, SOD 1786, SOP 2104, zawiasy 1850 i 2210, półki LED) bez zmian. Półki w WS przeliczone (równe przegrody).
 - L1: zapas tylko 2 przy ściance (3206 z 3208). Gdyby ściana wyszła krótsza, zwężamy wąską szafkę (274).
+- Kontrola: góra płytek → spód rury ze ścianki zmierzone 988 = model (oś Y 2564); otwory na rurę w bokach bez zmian.
 
 ### 2026-11-19: ściana główna 3206 (pomiar L1)
 - A = 3206 (było 3208). Luz 2 przy ściance zachowany: P3 skrócona do 1978 (było 1980), szafki przesunięte o 2 w lewo
@@ -358,3 +359,4 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
 - 2026-11-19: lista pomiarów weryfikacyjnych zredukowana do 5 pozycji (L1–L5: czy meble się mieszczą).
 - 2026-11-19: sufit M 1156 (pomiar), szafki 1154, F1 1151, oś rury 2564.
 - 2026-11-19: ściana główna 3206 (pomiar), P3 1978, szafki o 2 w lewo.
+- 2026-11-19: pomiar rury ze ścianki od płytek 988, zgodny z modelem.
