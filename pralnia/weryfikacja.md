@@ -1,18 +1,18 @@
-# Pralnia: lista do weryfikacji przed zamówieniem (stan 2026-11-19, model v68)
+# Pralnia: lista do weryfikacji przed zamówieniem (stan 2026-11-19, model v69)
 
-Źródła: model 3D (`index.html` albo `wyniki/pralnia_3d.html`), `wyniki/formatki.csv` (44 pozycje, 56 sztuk, 16,67 m²), `wyniki/kalkulator_nawierty.csv` (32 typy, 370 wierszy), `wyniki/arkusz_nawiertow.pdf` (32 strony), `wyniki/podsumowanie.json`, `pomiary.md`, `ustalenia.md`, `komponenty.md`, audyty `audyt/v1.md`, `v2.md`, `v3.md`.
+Źródła: model 3D (`index.html` albo `wyniki/pralnia_3d.html`), `wyniki/formatki.csv` (44 pozycje, 56 sztuk, 16,69 m²), `wyniki/kalkulator_nawierty.csv` (32 typy, 370 wierszy), `wyniki/arkusz_nawiertow.pdf` (32 strony), `wyniki/podsumowanie.json`, `pomiary.md`, `ustalenia.md`, `komponenty.md`, audyty `audyt/v1.md`, `v2.md`, `v3.md`.
 Kontrola automatyczna: 428 otworów, 58 połączeń, 0 kolizji otworów; 154 konfirmaty, 14 kołków, 12 podpórek, 21 puszek. Kolizje brył: tylko zamierzone (puszki w frontach, magnesy w gniazdach, gniazdko GN1 w wycięciu).
 
 ## Zamówienie
 - Koszyk 21386928 (2 970,11 zł, 2026-11-08) jest NIEAKTUALNY i nie należy go używać.
 - Wycena wstępna 2026-11-15: rozkrój 21629244 (stan v58, bez nawiertów) = 2 204,10 zł; z wierceniem szacunkowo 2 850–2 950 zł. Od tego czasu: +RDW2, +LF6, +F10, pasy +3 mm, KT1 124 mm, L1B 637. Do złożenia od nowa (zamowienie.md).
-- Kalkulator przyjął przy wycenie wymiary z połówką mm i formatki 100 mm. KP1 zamawiamy jako 200×129 (skracana samodzielnie). Do sprawdzenia przy wpisie: nawierty Ø3×12.
+- Kalkulator przyjął przy wycenie wymiary z połówką mm i formatki 100 mm. KP1 zamawiamy jako 200×126 (skracana samodzielnie). Do sprawdzenia przy wpisie: nawierty Ø3×12.
 
 ## Do dopracowania / potwierdzenia
 1. F6: zaprojektowane v62 (LF6 + kątownik 40×40, wkręty 12 mm). Przy montażu sprawdzić, czy prowadniki 173H7130 mieszczą się w strefie x 1500–1545 (wymiar przyjęty, nie z karty Blum).
-2. Pion: zmierzone U = 1371–1373 (v63: tył kolumny zwężony, luz 3–5 mm). Opcjonalnie: Q (gzyms przy maszynach) – 118 nie zgadza się z U.
+2. Pion: zmierzone U = 1368 (najmniejsza; v69: tył kolumny do x 1365, luz 3 mm). Opcjonalnie: Q (gzyms przy maszynach) – 118 nie zgadza się z U.
 3. Montaż prawego dołu: skręcony na podłodze i wsunięty w całości (konfirmaty PP1 → PB2/PT2 od spodu). Prześwit nad gzymsem 22 mm.
-4. Odkurzacz bezprzewodowy w L1: mocowanie (bez UTRUSTA). Wysokość L1P (619 × 572, na 4 podpórkach).
+4. Odkurzacz bezprzewodowy w L1: mocowanie (bez UTRUSTA). Wysokość L1P (619 × 574, na 4 podpórkach).
 5. Audyt v2 – rozstrzygnięte 2026-11-19: piloty zostają Ø3 × 12; PB2/PB3 przykręcone do prawej ściany (gzyms g-k); wieniec dolny L1WD zamówiony luzem.
 6. Przy zamówieniu: oś X strony „Tył (B)” w kalkulatorze, pozycje 3 puszek F9 (zamowienie.md).
 
@@ -20,12 +20,12 @@ Kontrola automatyczna: 428 otworów, 58 połączeń, 0 kolizji otworów; 154 kon
 Mierzyć w mm, w kilku miejscach; liczy się najgorszy wynik (najmniejsza szerokość, najniższy sufit, najbardziej wystający punkt).
 | KOD | CO I GDZIE | MODEL | DOBRY WYNIK |
 |---|---|---|---|
-| A | lewa ↔ prawa ściana: wys. ok. 0,1 / 1,0 / 1,7 / 2,6 m, przy tylnej ścianie i ok. 0,65 m od niej | 1739 | ≥ 1735 (1733–1734: na styk; < 1733: do zmiany) |
-| B | lewa ściana → lewy bok maszyn (najbardziej wystający punkt) | 618 | ≥ 616 |
-| BP | prawa ściana → prawy bok maszyn (najbardziej wystający punkt) | 523 | ≥ 519 |
+| A | lewa ↔ prawa ściana: wys. ok. 0,1 / 1,0 / 1,7 / 2,6 m, przy tylnej ścianie i ok. 0,65 m od niej | 1741 | ≥ 1741 (moduły 1735 + 3 + 3; zmierzone min. 1741: OK) |
+| B | lewa ściana → lewy bok maszyn (najbardziej wystający punkt) | 618 | ≥ 616 (L1 od x 3 do 615) |
+| BP | prawa ściana → prawy bok maszyn (najbardziej wystający punkt) | 525 | ≥ 521 (prawy dół 517 + 3 do ściany + 1 do maszyn) |
 | C | szerokość maszyn w najszerszym miejscu | 598 | ≤ 604 |
-| U | lewa ściana → lewy bok pionu | 1371 | ≥ 1369 (zmierzone 1371–1373: OK) |
-| GZ1 | lewa ściana → lewy bok gzymsu na prawej ścianie | 1666 | ≥ 1665 |
+| U | lewa ściana → lewy bok pionu | 1368 | ≥ 1366 (tył kolumny do 1365; zmierzone min. 1368: OK) |
+| GZ1 | lewa ściana → lewy bok gzymsu na prawej ścianie | 1668 | ≥ 1664 (PB1 do 1663) |
 | J | sufit: nad całą zabudową i ok. 0,5 m przed frontami | 2660 | ≥ 2658 (szafki do 2655; zmierzone min. 2661, przyjęte 2660: OK) |
 | H | najwyższy punkt suszarki (z zestawem łączącym) | 1713 | ≤ 1738 |
 | X | najwyższy punkt gzymsu na pionie | 467 | ≤ 486 (zmierzone 467: OK) |
@@ -44,7 +44,7 @@ Transport: największe płyty L1B1/L1B2 1743 × 637 – drzwi 805 × 2016 OK; sp
 
 ## Uwagi konstrukcyjne (stałe)
 - Moduły lewy, wnęka i kolumna stykają się (0 mm), bez dodatkowych luzów: składać na sucho przed dokręceniem.
-- Luzy: lewa ściana 5 mm, prawa 3 mm, tył 3–5, sufit 5 (korpusy do 2655, J = 2660). Maszyny: 3 mm z lewej, 5 z prawej, można je przesuwać (ok. 4 mm po bokach).
+- Luzy: lewa ściana 3 mm, prawa 3 mm, pion 3 mm, tył 3–5, sufit 5 (korpusy do 2655, J = 2660). Maszyny: 3 mm z lewej, 5 z prawej, można je przesuwać (ok. 4 mm po bokach).
 - Montaż: prawy dół (w całości) → prawy pas → NW → L1 (po zdjęciu obudowy GN3/GN4 – koliduje z L1B2 przy wsuwaniu) → L2. Front zapasowy F10 można zamontować dopiero po przeniesieniu GN3/GN4 (uderza w nie przy otwieraniu).
 - Model 3D nie był oglądany wizualnie przez Claude (brak biblioteki w środowisku): proszę obejrzeć warstwy „Kątowniki pod KT1" (nowe podpory), przełącznik „Kuweta we wnęce zamiast frontu F8", RDW2, kanał i kratkę.
 
