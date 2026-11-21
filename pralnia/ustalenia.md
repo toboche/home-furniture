@@ -330,3 +330,10 @@ Sekcja B audytu v3 (bramki w kalkulatorze meble.pl) jest w `zamowienie.md`; Sekc
 - Okleina (ABS 0,8 i bezspoinowa 1,0 na frontach) w dekorze U702. Dostępność płyty 18 mm i okleiny bezspoinowej 1,0 w U702 sprawdzić w kalkulatorze centrum.meble.pl przy zamówieniu; jeśli bezspoinowej nie ma, zatrzymać się i ustalić to z użytkownikiem.
 - Zaślepki konfirmatów w kolorze kaszmir / szarobeżowym (nie białe). Uchwyty GUBBARP bez zmian (białe), chyba że użytkownik zdecyduje inaczej.
 - Kolor w widoku 3D zmieniony na #CDC5B9 (orientacyjny, z ekranu).
+
+## 2026-11-21 – robocze zamówienie wspólne z garderobą w centrum.meble.pl (rozkrój 21811821)
+- Złożono robocze zamówienie wspólne (koszyk, BEZ finalizacji i płatności) dla pralni (`PR-`) i garderoby (`GD-`): **rozkrój nr `21811821`** (`https://centrum.meble.pl/rozkroj,r21811821`, ważny do `19.01.2027 r.`), wariant **`PREMIUM (+standard)`**.
+- Całość zamówienia (pralnia + garderoba): **`5 924,63 PLN` brutto** (`4 816,74 PLN` netto), `7,75` arkusza `Egger U702 ST9 Kaszmir 18 mm` + `0,5` arkusza `W960 SM Biały Klasyczny 16 mm`, `65 mb` ABS `0,8 mm`, `45 mb` laser `REHAU PRO 1,0 mm`, `11 szt.` wierceń frontów + `63 szt.` wierceń korpusów; planowany termin wysyłki `10.12.2026` (`14 dni roboczych`).
+- Pralnia w `21811821`: `47` pozycji w kalkulatorze / `56` sztuk / `16,69 m²` (`34` szt. korpusów wierconych CNC + `9` frontów z szablonami Blum INSERTA + `13` szt. bez nawiertów, w tym `F6`).
+- **Odstępstwo (Wariant B, decyzja użytkownika):** kalkulator blokuje nawierty poniżej `240 × 100 mm` (nie `200 mm`), więc `PR-KP1` (`184×126`), `PR-KP2` (`202×125` ×2), `PR-KP3` (`202×126` ×3) i `PR-LF6` (`200×60`) zamówiono w dokładnych wymiarach z modelu **bez nawiertów CNC** (zamiast powiększania `KP1` do `200×126` i skracania). Do wywiercenia ręcznie po dostawie: **25 otworów krawędziowych** (12× Ø8 pod kołki `KP↔PP` + 13× Ø4×35 transferowanych przez otwory CNC Ø5 przed rozwierceniem do Ø7).
+- Pełny manifest, ocena wpływu i checklista 25 otworów: `wspolne/zamowienia/2026-11-21_pralnia_garderoba_21811821.md`; instrukcja kalkulatora: `wspolne/centrum_meble.md`.
