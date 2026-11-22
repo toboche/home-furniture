@@ -28,7 +28,7 @@ Dokumentacja: `wspolne/STRUKTURA.md` (struktura, decyzje, reguły modelu, nowe p
 ## Wspólne
 - `wspolne/zasady.md`: założenia domyślne dla wszystkich pomieszczeń (płyta, okleina, szczeliny, złącza, sklep). Pomieszczenie może je nadpisać w swoim `ustalenia.md`.
 - `wspolne/centrum_meble.md`: praktyczna instrukcja składania zamówień w kalkulatorze `centrum.meble.pl` (limity wymiarów, okleiny, CSV, nawierty, szablony frontów, checkpointy).
-- `wspolne/zamowienia/`: rejestry złożonych zamówień z pełnym manifestem pozycji i wykazem odstępstw do weryfikacji przez poszczególne pomieszczenia.
+- `wspolne/zamowienia/`: centralny rejestr wszystkich zamówień (`wspolne/zamowienia/README.md`) + szczegółowe pliki z manifestem pozycji, kosztami, historią audytu i wykazem odstępstw per zamówienie.
 - `wspolne/viewer/`: silnik widoku 3D (Three.js r128 z CDN): panel, warstwy, rozsunięcie, warianty, numeracja.
 - `wspolne/pipeline/`: przeliczenie modelu na formatki i nawierty.
 - `wspolne/testy/`: test widoku 3D bez WebGL (atrapa Three.js) i wzorce scen.

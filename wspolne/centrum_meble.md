@@ -1,6 +1,6 @@
 # Jak składać zamówienia w `centrum.meble.pl` (praktyczna instrukcja)
 
-Przewodnik opracowany na podstawie pełnego, zweryfikowanego złożenia wspólnego rozkroju dla pralni i garderoby (`21811821`, 85 pozycji / 102 sztuki / 2 grubości płyt, 2026-11-19..21). Zastępuje rozproszone założenia ze starszych wpisów — wszystkie limity, opcje i zachowania kalkulatora poniżej zostały sprawdzone bezpośrednio w interfejsie strony.
+Przewodnik opracowany na podstawie pełnego, zweryfikowanego złożenia wspólnego rozkroju dla pralni i garderoby (`21825702`, wcześniej draft `21811821`, 85 pozycji / 102 sztuki / 2 grubości płyt, 2026-11-19..22). Zastępuje rozproszone założenia ze starszych wpisów — wszystkie limity, opcje i zachowania kalkulatora poniżej zostały sprawdzone bezpośrednio w interfejsie strony.
 
 ---
 
@@ -140,7 +140,7 @@ Przed kliknięciem **`Do koszyka`** sprawdź w `Podsumowanie kosztów zlecenia`:
 
 ---
 
-## 9. Jak przebiegało składanie zamówienia `21811821` (workflow krok po kroku)
+## 9. Jak przebiegało składanie zamówienia `21825702` (workflow krok po kroku)
 
 Poniższy schemat zadziałał skutecznie dla wspólnego zamówienia **85 pozycji / 102 sztuk / 715 otworów CNC + 25 puszek zawiasów** na dwóch grubościach płyt i może służyć jako punkt wyjścia dla kolejnych pomieszczeń (kuchnia, przedpokój itp.):
 
@@ -217,4 +217,7 @@ Doświadczenia z zamówienia `21811821` pokazały kilka wąskich gardeł, które
    - Płyty o różnej grubości lub różnym dekorze (`18 mm U702` vs `16 mm W960`) **nie dzielą ze sobą arkuszy**. W jednym zleceniu jest wygodniej w koszyku, ale każdy dodatkowy wiersz powiększa POST `validFormatka`. Przy 3+ pomieszczeniach warto rozważyć osobny rozkrój dla mniejszej płyty (np. 16 mm) w tym samym koszyku — lżejszy formularz bez utraty optymalizacji arkuszy 18 mm (przed decyzją sprawdzić jedynie, czy sklep nie dubluje opłat transportowych).
 6. **Sprawdzenie aktualności kolorów okuć w `komponenty.md` po zmianie dekoru płyty:**
    - Zmiana płyty (np. `W1200 → U702 Kaszmir`) powinna mieć checklistę obejmującą również zaślepki konfirmatów, łączniki narożne i uchwyty we wszystkich `komponenty.md`.
+7. **Obowiązkowy audyt wartości współrzędnych (nie tylko liczby kółek/kresek SVG):**
+   - Liczba `<circle>` i `<line>` w SVG wyłapuje brakujące lub niezatwierdzone otwory, ale **nie wykrywa literówki w konkretnej współrzędnej** (przykład z pierwszego zlecenia `21811821`: na `GD-S2D` wpisano `357` zamiast `417`, a liczba kółek SVG = 6 się zgadzała — błąd wyłapał dopiero pełny audyt transkryptów wszystkich 3 181 skryptów i został poprawiony chirurgicznie w `21825702`).
+   - Przy kolejnych zamówieniach po ukończeniu każdego wiersza (przed zwinięciem) warto **odczytywać z DOM i zapisywać do pliku JSON pełną listę linii podsumowań** (`#wp_{b}_{f}_*`, tabela nawiertów, stan checkboxów krawędzi i wartości puszek zawiasów), a na koniec automatycznie porównywać ten plik 1:1 z `order_spec.json` przed dodaniem rozkroju do koszyka.
 

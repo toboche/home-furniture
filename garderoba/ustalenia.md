@@ -290,11 +290,12 @@ USTALENIA Z KALKULATORA:
 ## Do ustalenia
 - Założone w modelu (niemierzone): szerokość rury w gzymsie wzdłuż gzymsu 80, szerokość przewodów wodnych 40.
 
-## 2026-11-21 – robocze zamówienie wspólne z pralnią w centrum.meble.pl (rozkrój 21811821)
-- Złożono robocze zamówienie wspólne (koszyk, BEZ finalizacji i płatności) dla pralni (`PR-`) i garderoby (`GD-`): **rozkrój nr `21811821`** (`https://centrum.meble.pl/rozkroj,r21811821`, ważny do `19.01.2027 r.`), wariant **`PREMIUM (+standard)`**.
+## 2026-11-22 – robocze zamówienie wspólne z pralnią w centrum.meble.pl (rozkrój 21825702, zastępuje 21811821)
+- Złożono robocze zamówienie wspólne (koszyk, BEZ finalizacji i płatności) dla pralni (`PR-`) i garderoby (`GD-`): **rozkrój nr `21825702`** (`https://centrum.meble.pl/rozkroj,r21825702`, ważny do `20.01.2027 r.`), wariant **`PREMIUM (+standard)`**.
 - Całość zamówienia (pralnia + garderoba): **`5 924,63 PLN` brutto** (`4 816,74 PLN` netto), `7,75` arkusza `Egger U702 ST9 Kaszmir 18 mm` + `0,5` arkusza `Egger W960 SM Biały Klasyczny 16 mm`, `65 mb` ABS `0,8 mm`, `45 mb` laser `REHAU PRO 1,0 mm`, `11 szt.` wierceń frontów + `63 szt.` wierceń korpusów; planowany termin wysyłki `10.12.2026` (`14 dni roboczych`).
-- Garderoba w `21811821`:
+- Garderoba w `21825702` (po pełnym audycie transkryptów — **100% zgodności `38/38` pozycji**):
   - `18 mm U702 ST9 Kaszmir`: `28` pozycji w kalkulatorze / `36` sztuk / `21,19 m²` (`19` szt. korpusów z pełnymi nawiertami CNC + `2` fronty `GD-F1/F2` z Blum INSERTA + `15` szt. bez nawiertów, w tym `GD-F3/F4`; dolne krawędzie ABS `NB-1/2`, `NP`, `LB1`, `LB2`, `NO` dodane ręcznie; `GD-LB1/LB2` jako prostokąty do wycięcia narożników przez użytkownika).
   - `16 mm W960 SM Biały Klasyczny` (skrzynki szuflad `GD-S1*`, `GD-S2*`): `10` pozycji / `10` sztuk / `1,52 m²` (`0,5` arkusza, `137,91 PLN` brutto), bez okleiny, wszystkie `68/68` otworów CNC (w tym `S1C/S2C` o szerokości `151 mm` przyjęte bez błędów). Płyta `U702 ST9` nie występuje w 16 mm; decyzja użytkownika: skrzynki w białej 16 mm.
+- **Poprawka po audycie (`21811821 → 21825702`, 2026-11-22):** audyt wszystkich skryptów wykrył 1 błąd w rewizji `21811821` — na dnie szuflady `GD-S2D` (Płyta 2, Formatka 8) otwór płaszczyznowy #3 (`Tył, Ø5 przelot`, środkowy konfirmat do `GD-S2C-2`) był wpisany jako `x = 357, y = 8` zamiast `x = 417, y = 8`. Wykonano chirurgiczną poprawkę wyłącznie tego pola (`357 → 417`), przeliczono rozkrój na **`21825702`** i usunięto stary `21811821` z koszyka.
 - Uwaga przy zakupie okuć: dobrać łączniki narożne i zaślepki w kolorze kaszmir / szarobeżowym (w `komponenty.md` nadal widnieją „białe”).
-- Pełny manifest do weryfikacji: `wspolne/zamowienia/2026-11-21_pralnia_garderoba_21811821.md`; instrukcja kalkulatora: `wspolne/centrum_meble.md`.
+- Pełny manifest i historia audytu: `wspolne/zamowienia/2026-11-22_centrum-meble_pralnia-garderoba_21825702.md` (rejestr wszystkich zamówień: `wspolne/zamowienia/README.md`, instrukcja kalkulatora: `wspolne/centrum_meble.md`).

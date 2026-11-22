@@ -1,6 +1,7 @@
-# Zamówienie robocze w `centrum.meble.pl`: Pralnia + Garderoba (rozkrój `21811821`, 2026-11-21)
+# Zamówienie robocze w `centrum.meble.pl`: Pralnia + Garderoba (rozkrój `21825702`, 2026-11-22)
 
 Dokument zbiorczy do niezależnej weryfikacji zamówienia przez agentów prowadzących pomieszczenia `pralnia/` i `garderoba/`.
+Rejestr wszystkich zamówień: `wspolne/zamowienia/README.md`.
 Praktyczna instrukcja obsługi kalkulatora `centrum.meble.pl`: `wspolne/centrum_meble.md`.
 
 ---
@@ -9,19 +10,20 @@ Praktyczna instrukcja obsługi kalkulatora `centrum.meble.pl`: `wspolne/centrum_
 
 | Pole | Wartość |
 |---|---|
-| **Numer rozkroju** | **`21811821`** |
-| **Link do podglądu / edycji** | `https://centrum.meble.pl/rozkroj,r21811821` |
-| **Ważność podglądu rozkroju** | do **`19.01.2027 r.`** |
+| **Numer rozkroju (aktualny)** | **`21825702`** *(zastępuje rewizję `21811821` usuniętą z koszyka po audycie 100%)* |
+| **Link do podglądu / edycji** | `https://centrum.meble.pl/rozkroj,r21825702` |
+| **Ważność podglądu rozkroju** | do **`20.01.2027 r.`** |
 | **Status** | **Robocze zamówienie w koszyku (`/koszyk/`) na koncie użytkownika — NIE opłacone, NIE sfinalizowane** |
+| **Status audytu** | **ZWERYFIKOWANE 100% (`85/85` formatek, `620/620` unikalnych definicji otworów / `715/715` otworów z SZT)** |
 | **Wariant cięcia** | **`PREMIUM (+standard)`** (dokładność 0,3 mm) |
-| **Do zapłaty (koszyk)** | **`5 924,63 PLN` brutto** (**`4 816,74 PLN` netto**), transport: `0 PLN` (odbiór / przed wyborem dostawy) |
+| **Do zapłaty (koszyk)** | **`5 924,63 PLN` brutto** (**`4 816,74 PLN` netto**), transport: `0 PLN` (odbiór osobisty / przed wyborem dostawy) |
 | **Czas realizacji / planowana wysyłka** | `14 dni roboczych` / planowany termin wysyłki: **`10.12.2026`** |
 | **Opcja odpadów (`+5 PLN`)** | Niewybrana (`+5 PLN` nie doliczone) |
 | **Podstawa z repozytorium** | Gałąź `main`, commit `d3ca20d` (stan 2026-11-19: `pralnia` v70 + `garderoba` po audycie v5 i PR #47–#49) |
 
 ---
 
-## 2. Pełne rozbicie kosztów i materiałów z koszyka (`21811821`)
+## 2. Pełne rozbicie kosztów i materiałów z koszyka (`21825702`)
 
 | Pozycja w koszyku / podsumowaniu | Ilość | Wartość brutto | Wartość netto |
 |---|---:|---:|---:|
@@ -48,7 +50,7 @@ Praktyczna instrukcja obsługi kalkulatora `centrum.meble.pl`: `wspolne/centrum_
 | **Garderoba 18 mm (`GD-`)** | 27 | 28 *(zgrupowane wg `kalkulator_nawierty.csv`)* | `36 / 36` | `21,19 / 21,19` (`21,1941`) | korpusy `19 / 19` (`244` otw.); fronty `2 / 2` (`4` puszki) | **100% ZGODNE** |
 | **RAZEM Płyta 1 (`18 mm U702 ST9`)** | **71** | **75** | **`92 / 92`** | **`37,88 / 37,88`** (`37,8793`) | korpusy **`53`**, fronty **`11`** | **100% ZGODNE** |
 | **Płyta 2 (`16 mm W960 SM` — Garderoba)** | **6** | **10** | **`10 / 10`** | **`1,52 / 1,52`** (`1,5224`) | korpusy **`10 / 10`** (`68` otw.) | **100% ZGODNE** |
-| **ŁĄCZNIE ZLECENIE `21811821`** | **77** | **85** | **`102 / 102`** | **`39,40 / 39,40`** | **`63 szt.` korpusów + `11 szt.` frontów = `74 szt.`** | **100% ZGODNE z koszykiem!** |
+| **ŁĄCZNIE ZLECENIE `21825702`** | **77** | **85** | **`102 / 102`** | **`39,40 / 39,40`** | **`63 szt.` korpusów + `11 szt.` frontów = `74 szt.`** | **100% ZGODNE z koszykiem!** |
 
 ---
 
@@ -117,11 +119,26 @@ Praktyczna instrukcja obsługi kalkulatora `centrum.meble.pl`: `wspolne/centrum_
 3. **Ukryty wybór `1,0 mm klejenie bezspoinowe`** przy zaznaczonym „różnymi obrzeżami” → odznaczano `rozne_obrzeza` i wybierano `1,0 mm` na wszystkich 14 frontach.
 4. **Blokady Cloudflare (HTTP 429 / 403 `cf-mitigated: challenge`)** przy wyszukiwarce `/wyszukiwarka/` oraz szybkich seriach AJAX → zaniechano korzystania z wyszukiwarki, wprowadzono sekwencyjne żądania z przerwami i 2 razy użytkownik ręcznie przeszedł weryfikację Cloudflare.
 5. **Wydajność 85-wierszowego formularza (~205 KB POST na pole) i degradacja długich sesji przeglądarki (>1000 kroków)** → skompresowano otwory w wierszach `15–75` przez `wielowiert` (`0,0 mm` dokładności, 480 otworów → ~190 wpisów) oraz zapisywano kolejne trwałe punkty kontrolne `Przelicz koszty` co kilka wierszy w świeżych sesjach:
-   `21758906` → `21761020` → `21765736` → `21787712` → `21791256` → `21803057` → `21810807` → **`21811821`** (finalny w koszyku).
+   `21758906` → `21761020` → `21765736` → `21787712` → `21791256` → `21803057` → `21810807` → `21811821` → **`21825702`** (finalny w koszyku po audycie 100%).
 
 ---
 
-## 7. Kompletny manifest 85 pozycji w rozkroju `21811821` (do audytu pomieszczeń)
+## 6a. Historia rewizji i pełny audyt transkryptów (2026-11-22)
+
+Po zapisaniu rewizji `21811821` przeprowadzono **pełny audyt kryminalistyczny (forensic audit)** wszystkich **3 181 skryptów przeglądarkowych** z 5 sesji (odtworzenie stanu każdego pola przez `JavaScriptCore` + weryfikacja odczytów DOM i zrzutów ekranu) względem kanonicznej specyfikacji wygenerowanej z `formatki.csv` / `kalkulator_nawierty*.csv`:
+
+1. **Wynik audytu `21811821`:**
+   - **84 / 85 formatek (100% Pralni `47/47` + `37/38` Garderoby):** pełna zgodność co do `0,01 mm` wszystkich wymiarów, oklein (`0,8 mm` / `1,0 mm` laser), szablonów frontów (`11` Blum INSERTA) i `619 / 620` unikalnych otworów CNC.
+   - **Wykryto 1 błąd na Płycie 2 (`W960 SM 16 mm`), Formatce 8 — `GD-S2D` (`834 × 590`, dno szuflady S2):** w otworze płaszczyznowym #3 (`Tył`, Ø5 przelotowo — środkowy konfirmat `GD-S2D → GD-S2C-2`) wpisano `x = 357 mm, y = 8 mm` (pomyłkowo z bliźniaczego `GD-S1D`) zamiast wymaganego **`x = 417 mm, y = 8 mm`**. Liczba kółek SVG (6) nie wyłapała błędu, dopiero pełna rekonstrukcja współrzędnych i zrzut ekranu z audytu.
+2. **Chirurgiczna poprawka (`21811821` → `21825702`, 2026-11-22):**
+   - Na `https://centrum.meble.pl/rozkroj,r21811821` zmieniono **wyłącznie** pole `#wiercenia_w_plaszczyznie_2_8_3_wsp_x` z `357` na **`417`** (żadna inna formatka, krawędź, zawias ani otwór nie były dotykane).
+   - Zweryfikowano na podglądzie DOM i SVG wszystkie 6 otworów płaszczyznowych `GD-S2D` (`100/582`, `135/8`, **`417/8`**, `417/582`, `699/8`, `734/582` — wszystkie `Tył, Ø5, przelot`), wszystkie 4 otwory krawędziowe (`K4: 50, 490`; `K2: 50, 490`, `Ø4×35`) oraz brak okleiny.
+   - Przeliczono rozkrój → nowy numer **`21825702`** (`https://centrum.meble.pl/rozkroj,r21825702`, ważny do `20.01.2027 r.`), wszystkie pozycje i kwota **`5 924,63 PLN` brutto** identyczne.
+   - Dodano `21825702` (`PREMIUM (+standard)`) do `/koszyk/` i usunięto zastąpiony `21811821` — w koszyku znajduje się wyłącznie **`Rozkrój 21825702`** (stan **85/85 formatek, 620/620 otworów = 100% zgodności**).
+
+---
+
+## 7. Kompletny manifest 85 pozycji w rozkroju `21825702` (do audytu pomieszczeń)
 
 *Konwencja krawędzi: `1` = góra, `2` = prawa, `3` = dół, `4` = lewa. Na frontach `x1, x3` mierzone od góry, `x2, x4` od dołu. Wszystkie otwory płaszczyznowe i krawędziowe z tabeli poniżej zostały wprowadzone wg `*/wyniki/kalkulator_nawierty*.csv` i zweryfikowane co do liczby kropek/kresek na podglądzie SVG każdego wiersza.*
 
