@@ -22,6 +22,9 @@ GLB2;L góra: bok przy ścianie przedniej;698;462;1;1SZ;BRAK (łączniki od śro
 GLD;L góra: dno;876;698;1;1DL;BRAK (łączniki od środka);korpus górny przykręcony do dolnego wkrętami przez dno (patrz ustalenia.md)
 GLG;L góra: wieniec górny;876;698;1;1DL;BRAK (łączniki od środka);
 GLT;L góra: plecy;876;426;1;;BRAK (łączniki od środka);
+BL1;BLENDA PIONOWA DOLNA (dodatek): pas do szczelin przy prawej ścianie (N) i przy ścianie z drzwiami (L), wys. korpusów dolnych;2120;60;3;;BRAK;"docina użytkownik na szerokość szczeliny; 3 szt. z zapasem"
+BL2;BLENDA PIONOWA GÓRNA (dodatek): pas do szczelin przy korpusach górnych (466 + docięcie);480;60;3;;BRAK;"docina użytkownik na długość i szerokość szczeliny; 3 szt. z zapasem"
+BL3;BLENDA POD SUFIT (dodatek): pas do szczeliny nad szafką na wprost (1122) i po lewej (912);1150;60;3;;BRAK;"docina użytkownik na długość i szerokość szczeliny; 3 szt. z zapasem"
 F1;Front górny N, połowa lewa (chowany, TIP-ON, zawiasy po lewej);530;422;1;2DL+2SZ;SZABLON FRONT LEWY: 2 ZAWIASY BLUM INSERTA (70T3790.TL), PUSZKA Ø35, ŚRODEK 22.5 MM OD KRAWĘDZI, 100 OD KOŃCÓW;
 F2;Front górny N, połowa prawa (chowany, TIP-ON, zawiasy po prawej);530;422;1;2DL+2SZ;SZABLON FRONT PRAWY: 2 ZAWIASY BLUM INSERTA (70T3790.TL), PUSZKA Ø35, ŚRODEK 22.5 MM OD KRAWĘDZI, 100 OD KOŃCÓW;
 F3;"Front szuflady SZ1 (N, połowa lewa; chowany, TIP-ON BLUMOTION)";530;204;1;2DL+2SZ;BRAK (mocowanie frontu MOVENTO na wkręty);

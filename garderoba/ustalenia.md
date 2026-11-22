@@ -149,6 +149,15 @@ USTALENIA Z KALKULATORA:
   GZ1 333; puszka gniazdka nie wystaje. LB2 przy pionie stoi ok. 3 mm od ściany przedniej (T = 919 zmierzone przy pionie);
   12 mm wychodziło z G = 1490 mierzonego przy prawej ścianie (model rysuje ścianę przednią prosto).
 
+## Blendy (decyzja 2026-11-22)
+- Widoczne szczeliny między szafkami a ścianami zakrywają blendy wklejane W SZCZELINĘ, równo z frontami (nie nakładane):
+  szafka na wprost przy prawej ścianie (4–8, dół i góra), szafka po lewej przy ścianie z drzwiami (3–10, dół i góra),
+  pod sufitem nad obiema szafkami (4–7). Użytkownik tnie pasy na szerokość szczeliny (na klin, bo ściany są pochylone)
+  piłą z prowadnicą i wkleja klejem montażowym do boku albo wieńca. Przy F2 blenda równo z frontem albo 1–2 mm głębiej;
+  po montażu sprawdzić otwieranie F2 do ogranicznika.
+- Zamówienie: BL1 2120 × 60, BL2 480 × 60, BL3 1150 × 60, po 3 szt. (z zapasem), płyta U702 ST9 18 mm, bez okleiny
+  i nawiertów (`reguly.py`, `formatki.csv`; poza modelem 3D).
+
 ## Audyt v5 (`audyt/v5.md`, stan po PR #38), wdrożone 2026-11-19
 - Gniazdo wpuszczane w LB2 poprawione (GD5-01): pierścień dystansowy z tworzywa samogasnącego do puszki Ø60 (np. Simet PD60),
   wkręty osprzętowe do tworzyw ok. Ø3,2 × 40 zamiast M3, otwór ok. Ø66–68 pod pierścień (Ø60 kolidowałby z wkrętami

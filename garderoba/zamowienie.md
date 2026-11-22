@@ -8,7 +8,7 @@ i przeliczenie (`python3 wspolne/pipeline/run.py garderoba`), nigdy ręcznie w p
 ## 1. Pliki
 | Plik | Zawartość |
 |---|---|
-| `wyniki/formatki.csv` | płyta 18 mm: 27 pozycji / 36 sztuk / 21,19 m² (kod, nazwa, DL, SZ, SZT, OKLEINA, NAWIERTY, UWAGI) |
+| `wyniki/formatki.csv` | płyta 18 mm: 30 pozycji / 45 sztuk / 21,87 m² (w tym blendy BL1–BL3) (kod, nazwa, DL, SZ, SZT, OKLEINA, NAWIERTY, UWAGI) |
 | `wyniki/formatki_16mm.csv` | płyta 16 mm na skrzynki szuflad: 6 pozycji / 10 sztuk / 1,52 m², bez okleiny |
 | `wyniki/kalkulator_nawierty.csv`, `wyniki/kalkulator_nawierty_16mm.csv` | nawierty w formacie kalkulatora centrum.meble.pl (14 typów formatek, 195 wierszy dla 18 mm) |
 | `wyniki/arkusz_nawiertow.pdf` | rysunki wszystkich formatek z otworami (dla innego dostawcy albo do sprawdzenia) |
@@ -41,9 +41,9 @@ i przeliczenie (`python3 wspolne/pipeline/run.py garderoba`), nigdy ręcznie w p
 - FORMATKI Z NAWIERTAMI WPISUJ WEDŁUG `kalkulator_nawierty.csv`, NIE według `formatki.csv`: jeden wiersz z LP = jedna
   formatka w kalkulatorze, kolumna KODY = elementy o identycznych nawiertach (np. NS-1, NS-2, NS-3, NK razem; NS-4, NS-5 osobno,
   bo mają konfirmaty przesunięte o 25; NW z GNG). Formatki bez nawiertów dodać z `formatki.csv`: NO-1, NO-2, F1–F4 oraz cały
-  korpus dolny L poza LB2 (LB1, LT, LW, LK, LS-1..3) i korpus górny GL poza GLB1 (GLB2, GLD, GLG, GLT): oba składane na miejscu
+  korpus dolny L poza LB2 (LB1, LT, LW, LK, LS-1..3), korpus górny GL poza GLB1 (GLB2, GLD, GLG, GLT) i blendy BL1–BL3: oba składane na miejscu
   na łącznikach od środka, bez konfirmatów. LB2 i GLB1 mają tylko nawierty środków (gniazdko, przewód wentylacyjny).
-  Liczba pozycji w kalkulatorze będzie inna niż 27; zgadzać się mają sztuki (36) i m² (21,19).
+  Liczba pozycji w kalkulatorze będzie inna niż 30; zgadzać się mają sztuki (45) i m² (21,87).
 - Wszystkie formatki mają poniżej 2500 mm (najdłuższa 2120), więc kalkulator meble.pl przyjmie nawierty dla wszystkich;
   wszystkie współrzędne są w pełnych mm.
 - Fronty F1, F2 (530 × 422, zawiasy na krawędzi 422): szablon zawiasów Blum INSERTA (F1 LEWY, F2 PRAWY), 2 puszki Ø35,
@@ -75,6 +75,9 @@ L i GL i 220–260 wkrętów 3,5 × 15 do nich; zaślepki ok. 6;
 górne z dolnymi; kratka wentylacyjna; mocowanie do ścian do ustalenia.
 
 ## 7. Pułapki
+- BLENDY BL1–BL3 (dodatek 2026-11-22, nie ma ich w modelu 3D ani w plikach nawiertów, są w `formatki.csv`): pasy 60 mm
+  z tej samej płyty 18 mm, BEZ okleiny, bez nawiertów, po 3 szt.: BL1 2120 × 60, BL2 480 × 60, BL3 1150 × 60. W kalkulatorze
+  nazwy GD-BL1, GD-BL2, GD-BL3. Jeśli kalkulator nie przyjmie szerokości 60, zapytać użytkownika.
 - Skrzynki szuflad: otwory Ø5 pod konfirmaty 5 × 40 trzeba po dostawie pogłębić stożkowo (łeb równo z płytą), inaczej
   łby pod dnem zmniejszą prześwit MOVENTO.
 - Płyta 16 mm innego producenta: sprawdzić u dostawcy minimalne wymiary formatki z nawiertami (S1C, S2C mają 151 szerokości).
