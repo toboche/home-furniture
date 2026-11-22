@@ -13,7 +13,7 @@ Praktyczna instrukcja obsługi kalkulatora `centrum.meble.pl`: `wspolne/centrum_
 | **Numer rozkroju (aktualny)** | **`21825702`** *(zastępuje rewizję `21811821` usuniętą z koszyka po audycie 100%)* |
 | **Link do podglądu / edycji** | `https://centrum.meble.pl/rozkroj,r21825702` |
 | **Ważność podglądu rozkroju** | do **`20.01.2027 r.`** |
-| **Status** | **Robocze zamówienie w koszyku (`/koszyk/`) na koncie użytkownika — NIE opłacone, NIE sfinalizowan. DO POPRAWKI przed płatnością: sekcja 8 (okleina dolnych krawędzi pralni, 2026-11-22)** |
+| **Status** | **Robocze zamówienie w koszyku (`/koszyk/`) na koncie użytkownika — NIE opłacone, NIE sfinalizowane** |
 | **Status audytu** | **ZWERYFIKOWANE 100% NA ŻYWO Z SERWERA (`85/85` formatek, `620/620` unikalnych otworów / `715/715` z SZT, maks. odchyłka `0,000000 mm` — live DOM + wydruk `Drukuj`)** |
 | **Wariant cięcia** | **`PREMIUM (+standard)`** (dokładność 0,3 mm) |
 | **Do zapłaty (koszyk)** | **`5 924,63 PLN` brutto** (**`4 816,74 PLN` netto**), transport: `0 PLN` (odbiór osobisty / przed wyborem dostawy) |
@@ -143,33 +143,6 @@ Po zapisaniu rewizji `21811821` przeprowadzono **pełny audyt kryminalistyczny (
      - **Krawędzie `1..4`, grubość, klejenie i dekor obrzeża:** `85 / 85` (`43× 0.80_W`, `14× 1.00_L`, `28× brak`, `rozne = false`, kolor `2452216`, struktura `5954`) — **0 różnic**.
      - **Szablony i zawiasy:** `52` `Wręgowanie`, `22` `brak` *(w tym 4 małe Wariantu B z `mozna_homag = "0"`)*, `3` `Front lewy` + `8` `Front prawy` (`11/11` `BLUM puszka 35mm (inserta)`, `y = 22.50`, `typ_uchwytu = 0`, `PR-F9 x3 = 620.5`, `PR-F10 x3 = 612, x4 = 612`) — **0 różnic**.
      - **Wszystkie otwory CNC (po rozwinięciu wielowiertów):** **`400 / 400`** płaszczyznowych (ze `198` wpisów DOM) + **`220 / 220`** krawędziowych (ze `151` wpisów DOM) = **`620 / 620` unikalnych otworów (`715 / 715` z SZT)**, **maksymalna różnica współrzędnych = `0,000000 mm`**, `52 / 52` podglądy SVG (`400` kółek, `220` czerwonych linii), w tym na żywo potwierdzony poprawiony otwór #3 w `GD-S2D` (`Tył, [x]417mm, [y]8mm, [⌀]5mm, [↧]przelotmm`).
-
----
-
-## 8. ZMIANA DO WPROWADZENIA PRZED PŁATNOŚCIĄ (2026-11-22): okleina dolnych krawędzi pralni
-
-**Status: NIEWPROWADZONA** (do zrobienia przez agenta zamawiającego; po wprowadzeniu zmienić na `WPROWADZONA`, wpisać nowy numer rozkroju i kwotę).
-
-Decyzja użytkownika (`pralnia/ustalenia.md`, 2026-11-22): dolne krawędzie 6 formatek pralni stojących na kafelkach mają być oklejone
-(ochrona przed wodą z pralki). Repozytorium: `pralnia/wyniki/formatki.csv` (kolumna OKLEINA `... + 1SZ (dół)`), `pralnia/zamowienie.md` pkt 3.
-
-| Wiersz manifestu | Kod | Wymiar | Okleina teraz | Okleina po zmianie |
-|---:|---|---:|---|---|
-| 14 | `PR-L1B1` | 1743 × 637 | 1 | **1 + 4** |
-| 32 | `PR-L1B2` | 1743 × 637 | 1 | **1 + 4** |
-| 19 | `PR-KB1` | 489 × 200 | 1 | **1 + 4** |
-| 22 | `PR-PB1` | 489 × 200 | 1 | **1 + 4** |
-| 25 | `PR-L1T` | 1743 × 576 | brak | **4** |
-| 28 | `PR-PT1` | 489 × 406 | brak | **2** |
-
-- Grubość: **ABS 0,8 mm U702** (to samo obrzeże co reszta korpusów). **NIE** `1,0 mm klejenie bezspoinowe`: wyłącza szablon
-  `Wręgowanie i nawierty`, a wszystkie 6 formatek ma CNC; przy `różnymi obrzeżami` 1,0 mm nie jest dostępne.
-- Wymiary, otwory, szablony i pozostałe krawędzie BEZ ZMIAN.
-- Kontrola: `PR-L1B1` / `PR-L1B2` – krawędź 4 po stronie X = 0 (otwory pod wieniec `L1W` są przy X 1734, czyli przy krawędzi 2 = góra);
-  `PR-PT1` – krawędź 2 (w krawędzi 4 są otwory Ø4 × 35 pod `PP1` = góra); `PR-KB1` – krawędź 4 (kołki Ø8 do `KB2` są w krawędzi 2 = góra);
-  `PR-PB1` – krawędź 4 (otwory Ø4 × 35 pod `PP1` w krawędzi 2 = góra); `PR-L1T` – bez otworów na krótkich krawędziach, krawędź 4.
-- Oczekiwany skutek w koszyku: obrzeże ABS 0,8 mm + ok. 2,7 mb (`2 × 0,637 + 2 × 0,2 + 0,576 + 0,406`), `Oklejanie płyty` + ok. 3 mb;
-  liczba formatek, sztuk, m² i wierceń bez zmian.
 
 ---
 
