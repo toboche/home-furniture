@@ -2,6 +2,7 @@
 
 Projekty mebli na wymiar do mieszkania, po jednym katalogu na pomieszczenie (`pralnia/`, `garderoba/`, `kuchnia/`).
 Struktura, reguły modelu i dodawanie pomieszczeń: `wspolne/STRUKTURA.md`. Założenia meblarskie: `wspolne/zasady.md`.
+Składanie zamówień w `centrum.meble.pl` (instrukcja, limity, DOM/AJAX, usprawnienia): `wspolne/centrum_meble.md`. Rejestry złożonych zamówień: `wspolne/zamowienia/`.
 
 ## Zasady pracy
 - Rozmowy po polsku. Kody wymiarów, formatek i frontów na rysunkach i w tabelach: TYLKO DUŻE LITERY, bez mieszania z małymi.

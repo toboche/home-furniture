@@ -137,3 +137,84 @@ Przed kliknięciem **`Do koszyka`** sprawdź w `Podsumowanie kosztów zlecenia`:
    - Drugi wiersz (`~13,65 zł/szt.` brutto) = **łączna liczba sztuk (uwzględniając `SZT`!) wszystkich formatek z `Wręgowaniem i nawiertami` ze wszystkich płyt**.
    - Porównaj obie liczby z sumą kontrolną z `kalkulator_nawierty*.csv` i `zamowienie.md` — to najpewniejszy szybki test, że żaden wiersz nie został pominięty!
 5. **Koszyk (`/koszyk/`):** po kliknięciu `Do koszyka` sprawdź, że w koszyku jest właściwy numer rozkroju, termin, kwota i opcja odpadów (`NIE chcę odpadów` / `+5 PLN`). Zatrzymaj się na `/koszyk/` — **bez przechodzenia do kasy i bez płatności** aż do niezależnej weryfikacji przez użytkowników/agentów pomieszczeń.
+
+---
+
+## 9. Jak przebiegało składanie zamówienia `21811821` (workflow krok po kroku)
+
+Poniższy schemat zadziałał skutecznie dla wspólnego zamówienia **85 pozycji / 102 sztuk / 715 otworów CNC + 25 puszek zawiasów** na dwóch grubościach płyt i może służyć jako punkt wyjścia dla kolejnych pomieszczeń (kuchnia, przedpokój itp.):
+
+1. **Przygotowanie danych poza przeglądarką (Python, deterministycznie — zero ręcznego przepisywania):**
+   - Pobranie najnowszego `main` i automatyczne porównanie `formatki*.csv`, `kalkulator_nawierty*.csv`, `podsumowanie.json` oraz wyjątków z `zamowienie.md` (ręczne dolne krawędzie okleiny, orientacja `Szer × Wys` frontów, prefiksy `PR-`/`GD-`).
+   - Równoległe uruchomienie niezależnego **audytora odstępstw** (tryb tylko do odczytu), który weryfikuje sumy kontrolne i na bieżąco ocenia wpływ każdego ograniczenia kalkulatora na cały projekt (geometria, okucia, montaż).
+   - Wygenerowanie 3 plików roboczych:
+     - `board1_18mm.csv` i `board2_16mm.csv` do masowego wczytania wierszy przez `WCZYTAJ PLIK` (`Słoje = 0`, krawędzie `-` do późniejszego ustawienia),
+     - `order_spec.json` — pełna specyfikacja wszystkich pozycji z asercjami sum sztuk, m² i otworów,
+     - `fast_plan.json` — kompresja otworów w serie **`wielowiert`** (po X, po Y i w czole) z **automatycznym testem round-trip**: po rozwinięciu serii zbiór otworów musi się zgadzać co do `0,0 mm` z `kalkulator_nawierty*.csv`!
+2. **Testy przedstartowe (pre-flight) na czystym kalkulatorze (zanim wczytasz 85 wierszy):**
+   - Logowanie na konto użytkownika i sprawdzenie, że koszyk nie zawiera nieoczekiwanych pozycji.
+   - Kontrola dostępności płyt i obu obrzeży (`0,8 mm` i `1,0 mm klejenie bezspoinowe`) bezpośrednio w kalkulatorze (bez otwierania `/wyszukiwarka/`).
+   - **Test 2D / SVG strony „Tył (B)”** na jednej asymetrycznej formatce (np. `PR-PB2`) + test współrzędnych dziesiętnych (`.5`, `.6`, `.7`).
+   - **Test wartości granicznych** na najmniejszych formatkach (wykrył próg `240 × 100 mm`, dzięki czemu użytkownik podjął decyzję o Wariancie B zanim wpisaliśmy resztę).
+   - **Test szablonów frontów** (`PR-F9` 3 puszki, `PR-F10` 4 puszki, `GD-F1` front szerszy niż wyższy).
+3. **Masowy import obu płyt:**
+   - Wczytanie `board1_18mm.csv` na Płycie 1 (`U702 ST9 18 mm`), kliknięcie `DODAJ PŁYTĘ`, wybór `W960 SM 16 mm`, wczytanie `board2_16mm.csv` na Płycie 2.
+4. **Uzupełnianie w krótkich partiach z trwałym checkpointem po każdej partii:**
+   - Najpierw mniejsza płyta (`16 mm`, 10 wierszy) oraz wszystkie formatki **bez `Wręgowania`** (zwykłe formatki + 14 frontów z okleiną `1,0 mm` i 11 szablonami Blum INSERTA) → `Przelicz koszty` (szybko potwierdza w podsumowaniu `45 mb` lasera i `11 szt.` wierceń frontów).
+   - Następnie formatki z `Wręgowaniem i nawiertami` w paczkach po **2–5 wierszy** (~15–30 wpisów `wielowiert` na paczkę): rozwiń wiersz → popraw okleinę → wybierz `Wręgowanie` → wpisz serie `wielowiert` → zweryfikuj liczbę `<circle>` i `<line>` w SVG → zwiń wiersz → po paczce kliknij **`Przelicz koszty`** i zapisz nowy numer `/rozkroj,rXXXXXXXX`.
+   - Po każdej paczce sprawdzaj, czy `Usługa wiercenia` w `Podsumowanie kosztów zlecenia` wzrosła dokładnie o sumę `SZT` właśnie ukończonych wierszy.
+   - Co ~700–1000 kroków otwieraj najnowszy zapisany URL `/rozkroj,rXXXXXXXX` w świeżej sesji przeglądarki.
+5. **Finalizacja robocza w koszyku:**
+   - Po ostatniej paczce finalne `Przelicz koszty`, pełny odczyt wszystkich linii `Podsumowanie kosztów zlecenia` (sprawdzenie `63 szt.` korpusów + `11 szt.` frontów, obu płyt, obu obrzeży, ceny brutto/netto), kliknięcie **`Do koszyka`** na wariancie `PREMIUM (+standard)`, weryfikacja `/koszyk/` i stop (bez kasy i płatności).
+
+---
+
+## 10. Mapa techniczna DOM, ID pól i mechaniki AJAX kalkulatora
+
+Przydatna dla kolejnych agentów i ewentualnych skryptów automatyzujących (`b` = numer płyty `1, 2…`, `f` = numer wiersza `1..N`, `r` = numer wpisu otworu `1, 2…`):
+
+### Selektory i funkcje JS w wierszu formatki
+| Element | Selektor / `name` | Wywoływana funkcja / uwagi |
+|---|---|---|
+| Kontener i nagłówek wiersza | `#formatka_{b}_{f}`, `#formatka_{b}_{f} .belka` | `pokazUkryjFormatke('{b}_{f}')` — zwinięty wiersz znika z DOM (`~330` znaków), stan trzymany w sesji PHP |
+| Wymiary, ilość, nazwa | `#szer_{b}_{f}`, `#wys_{b}_{f}`, `#ilosc_{b}_{f}`, `#nazwa_formatki_{b}_{f}` | `onblur`: `setSize('{b}_{f}', ..., 'checkMpr_szer'/'checkMpr_wys')`, `validIlosc('{b}_{f}')` |
+| Okleina — przełączniki | `#obrzeze_all_{b}_{f}`, `#rozne_obrzeza_{b}_{f}` | `checkAll('{b}_{f}')`, `validForm('{b}','{f}')`; dla `1,0 mm` `rozne_obrzeza` **musi być odznaczone** |
+| Okleina — krawędzie | `#obrzeze_top_{b}_{f}` (`1`), `#obrzeze_right_{b}_{f}` (`2`), `#obrzeze_bottom_{b}_{f}` (`3`), `#obrzeze_left_{b}_{f}` (`4`) | `onclick`: `setSize('{b}_{f}')` |
+| Okleina — grubość | `#obrzeze_gr_{b}_{f}_all-1` (`0,8 mm`), `-2` (`1,0 mm bezspoinowe`), `-3` (`2,0 mm`) | `onclick`: `validForm1('{b}_{f}')`; zawsze sprawdzać tekst etykiety przed wyborem |
+| Szablony nawiertów | przyciski z `onclick="setTypFrontu('{b}_{f}', ...)"` | m.in. `pusty` (bez nawiertów), `wregowanie`, `front_lewy`, `front_prawy` |
+| Fronty — zawiasy | `#typ_zawiasu_{b}_{f}`, `#puszka_y_sel_{b}_{f}`, `#puszka_x{1..4}_sel_{b}_{f}`, `#puszka_x{1..4}_{b}_{f}` | `changeSelectPuszka(val, '{b}_{f}', 'x1'..'x4'\|'y')`; `y = 22.50`; ręczna pozycja: `sel = 'recznie'` |
+| `Wręgowanie` — sekcje | `wiercenie_w_plaszczyznie[{b}][{f}]`, `wiercenie_w_czole[{b}][{f}]` | `onclick`: `validForm('{b}','{f}')` |
+| Płaszczyzna — pola wpisu `r` | `#wiercenia_w_plaszczyznie_{b}_{f}_{r}_{powierzchnia\|wsp_x\|wsp_y\|srednica\|glebokosc\|typ_nawiertu\|ilosc\|odleglosc\|kierunek}` | `powierzchnia`: `'A'` (Przód) / `'B'` (Tył); `glebokosc`: `'2'..'15'` lub `'przelot'`; `typ_nawiertu`: `'pojedynczy'` / `'wielowiert'` |
+| Czoło — pola wpisu `r` | `#wiercenia_w_czole_{b}_{f}_{r}_{krawedz\|odleglosc_x\|srednica\|glebokosc\|typ_nawiertu\|ilosc\|odleglosc}` | `krawedz`: `'top'` (1), `'right'` (2), `'bottom'` (3), `'left'` (4); `srednica`: `'4'` / `'8'` |
+| Dodaj / kopiuj / usuń otwór | `[onclick="dodajNawiert('{b}','{f}','wiercenia_w_plaszczyznie');"]` (lub `'wiercenia_w_czole'`), `[onclick="skopiujNawiert('{b}', '{f}','wiercenia_w_plaszczyznie', '{r}', 'Y');"]` | `dodajNawiert` wymaga wypełnionego bieżącego wiersza (inaczej modal `Wypełnij wymagane pola`); `'Y'` odbija `X → Szer−X`, `'X'` odbija `Y → Wys−Y` |
+| Podgląd 2D SVG | `#plyta_wiercenie_w_czole_{b}_{f}` | `<circle>` = `2` (legenda) + otwory płaszczyzny; `<line>` = `10` (osie/ramka) + otwory czoła; `stroke-width="4"` = okleina |
+| Akcje globalne | `#fileupload_{b}`, `dodajPlyte()`, `[onclick="przelicz();"]` | `przelicz()` zapisuje trwały rozkrój `/rozkroj,rXXXXXXXX` (wyświetla formularz + `Podsumowanie kosztów` + `Do koszyka`) |
+
+### Zachowanie AJAX i pułapki automatyzacji
+- Każde zdarzenie `onblur` / `onchange` / `onkeyup` na polach otworów wywołuje `POST /rozkroj/go/ajaxRequest,validFormatka,...`, który wysyła cały stan formularza (~150–205 KB przy 85 wierszach) i wyświetla nakładkę **`div.blockUI`**.
+- **Zawsze czekaj na ukrycie `div.blockUI`** przed kolejną akcją i dodawaj ~400–500 ms pauzy; nigdy nie uruchamiaj równoległych żądań.
+- Unikaj lokatorów skanujących tekst (`getByText`) — na dużej stronie powodują timeouty; używaj wyłącznie bezpośrednich ID i selektorów `[onclick=...]`.
+- **Stan w sesji PHP jest ulotny:** zwinięte wiersze znikają z DOM i siedzą tylko w sesji PHP do czasu kliknięcia `Przelicz koszty`. Przeładowanie `/rozkroj,rXXXXXXXX` przed kliknięciem `Przelicz koszty` cofa wszystkie niezapisane zmiany do ostatniego checkpointu.
+
+---
+
+## 11. Wnioski i konkretne ulepszenia na kolejne zamówienia (roadmap)
+
+Doświadczenia z zamówienia `21811821` pokazały kilka wąskich gardeł, które warto usunąć przed zamawianiem kolejnych pomieszczeń (`kuchnia/`, `przedpokoj/`):
+
+1. **Eksport gotowego `wielowiert` i paczki zamówieniowej w `wspolne/pipeline/`:**
+   - Rozszerzyć `kalkulator.py` (albo dodać skrypt `wspolne/pipeline/zamowienie_export.py`), który dla wskazanych pomieszczeń generuje od razu:
+     - pliki `board_<grubosc>mm.csv` w dokładnym formacie `centrum.meble.pl` (z prefiksami `PR-`/`GD-`/`KU-`/`PP-`, `Słoje = 0` dla dekorów uni i właściwą orientacją `Szer × Wys` dla frontów),
+     - skompresowany `kalkulator_wielowiert.json` (z wbudowanym testem round-trip `0,0 mm`) — w `21811821` skróciło to liczbę wpisywanych pozycji z `480` do `192` (~2,5× mniej akcji!).
+2. **Automatyczna kontrola progu `240 × 100 mm` w `wspolne/pipeline/run.py`:**
+   - Dodać w `run.py` ostrzeżenie dla każdej formatki z otworami, której `max(DL, SZ) < 240` lub `min(DL, SZ) < 100` (oraz `> 2500 mm`), żeby decyzję o wariancie (ręczne wiercenie vs powiększenie do 240 mm) podejmować już na etapie projektu, nie dopiero w kalkulatorze.
+3. **Obsługa wielu oklejanych krawędzi w `kalkulator.py`:**
+   - Zamiast ręcznych tabel wyjątków w `zamowienie.md` (jak dolne krawędzie garderoby na kafelkach), zapisywać pełną listę oklejanych krawędzi w `reguly.py` i eksportować ją wprost do `kalkulator_nawierty.csv` / JSON-a.
+4. **Szybsza automatyzacja przeglądarki (dostęp do JS / `evaluate`):**
+   - W `21811821` wbudowana przeglądarka (`webview_browser`) blokowała `page.evaluate`, a każdy krok miał 13–29 s narzutu na skanowanie drzewa dostępności (co wydłużyło wpisywanie 85 wierszy do wielu godzin i wymagało restartu sesji co ~1000 kroków).
+   - Przy kolejnych dużych zamówieniach warto skonfigurować **Chrome DevTools MCP / Puppeteer** (Node.js + `chrome-devtools-mcp` w `mcp_config.json`) z możliwością wypełniania pól jednego wiersza pojedynczym skryptem (z zachowaniem sekwencyjności i oczekiwania na `div.blockUI`), co powinno skrócić cały proces do **ok. 20–30 minut**.
+5. **Rozdzielenie płyt różnych grubości przy bardzo dużych zamówieniach (>80–100 pozycji):**
+   - Płyty o różnej grubości lub różnym dekorze (`18 mm U702` vs `16 mm W960`) **nie dzielą ze sobą arkuszy**. W jednym zleceniu jest wygodniej w koszyku, ale każdy dodatkowy wiersz powiększa POST `validFormatka`. Przy 3+ pomieszczeniach warto rozważyć osobny rozkrój dla mniejszej płyty (np. 16 mm) w tym samym koszyku — lżejszy formularz bez utraty optymalizacji arkuszy 18 mm (przed decyzją sprawdzić jedynie, czy sklep nie dubluje opłat transportowych).
+6. **Sprawdzenie aktualności kolorów okuć w `komponenty.md` po zmianie dekoru płyty:**
+   - Zmiana płyty (np. `W1200 → U702 Kaszmir`) powinna mieć checklistę obejmującą również zaślepki konfirmatów, łączniki narożne i uchwyty we wszystkich `komponenty.md`.
+
