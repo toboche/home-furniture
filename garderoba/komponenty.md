@@ -62,4 +62,5 @@ Kontrola otwierania: `node garderoba/sprawdz_szuflady.js`. Każda szuflada sama:
 | Gniazdo wpuszczane z ramką (mostek z otworami narożnymi poza Ø68, np. Simon 54, Schneider Sedna) | 1 | w LB2; podłącza elektryk |
 | Pierścień dystansowy do puszki Ø60, tworzywo samogasnące (np. Simet PD60, segmentowy) | 1 | docięty do grubości LB2 + szczeliny (ok. 21); otwór w LB2 pod jego średnicę zewnętrzną (ok. Ø66–68) |
 | Wkręty osprzętowe do puszek z tworzywa ok. Ø3,2 × 40 (nie M3) | 2 | mocują mechanizm przez pierścień do puszki Ø60 w ścianie; narożniki mostka dodatkowo wkrętami Ø3 × 16 do LB2 |
+| Akryl w kolorze płyty (U702) | 1–2 tuby | szczeliny przy prawej ścianie, przy ścianie z drzwiami i pod sufitem; jeśli nie wystarczy: obrzeże ABS 43 × 2 U702, ok. 10 mb, jako nakładka (`ustalenia.md`) |
 | Ślizgacze pod boki i przegrodę dolnych korpusów | wg potrzeby | dolne krawędzie NB, NP, LB1, LB2, NO oklejone ABS; ślizgacze tylko w razie potrzeby |

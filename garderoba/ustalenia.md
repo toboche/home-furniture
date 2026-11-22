@@ -149,6 +149,12 @@ USTALENIA Z KALKULATORA:
   GZ1 333; puszka gniazdka nie wystaje. LB2 przy pionie stoi ok. 3 mm od ściany przedniej (T = 919 zmierzone przy pionie);
   12 mm wychodziło z G = 1490 mierzonego przy prawej ścianie (model rysuje ścianę przednią prosto).
 
+## Szczeliny przy ścianach (decyzja 2026-11-22)
+- Blendy z płyty (BL1–BL3, pasy 60 mm) rozważone i WYCOFANE przed zamówieniem. Widoczne szczeliny (przy prawej ścianie 4–8,
+  przy ścianie z drzwiami 3–10, pod sufitem 4–7) najpierw akryl w kolorze płyty; jeśli nie wystarczy, obrzeże ABS 43 × 2
+  w dekorze U702 (ok. 10 mb) przyklejone jako nakładka na przednie krawędzie boków i wieńców (przy F2 sprawdzić otwieranie).
+  Nic z tego nie wchodzi do zamówienia płyt.
+
 ## Audyt v5 (`audyt/v5.md`, stan po PR #38), wdrożone 2026-11-19
 - Gniazdo wpuszczane w LB2 poprawione (GD5-01): pierścień dystansowy z tworzywa samogasnącego do puszki Ø60 (np. Simet PD60),
   wkręty osprzętowe do tworzyw ok. Ø3,2 × 40 zamiast M3, otwór ok. Ø66–68 pod pierścień (Ø60 kolidowałby z wkrętami
