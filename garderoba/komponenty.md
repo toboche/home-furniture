@@ -1,5 +1,5 @@
 # Garderoba: okucia i elementy (stan 2026-11-19, po audycie v5)
-Wymiary w mm. Kody tylko dużymi literami. Płyty: `wyniki/formatki.csv` (18 mm, 30 pozycji / 45 sztuk / 21,87 m², w tym blendy BL1–BL3; korpusy dolne N, L do 2120 i górne GN, GL 2120–2582)
+Wymiary w mm. Kody tylko dużymi literami. Płyty: `wyniki/formatki.csv` (18 mm, 27 pozycji / 36 sztuk / 21,19 m²; korpusy dolne N, L do 2120 i górne GN, GL 2120–2582)
 i `wyniki/formatki_16mm.csv` (skrzynki szuflad, 6 pozycji / 10 sztuk / 1,52 m²; płyta 16 mm: U702 ST9, jeśli jest w 16 mm, inaczej inna płyta 16 mm do wyboru przy zamówieniu); nawierty: `wyniki/kalkulator_nawierty*.csv`.
 
 ## Zawiasy i TIP-ON (fronty górne F1, F2: chowane, bez uchwytów)
@@ -62,5 +62,4 @@ Kontrola otwierania: `node garderoba/sprawdz_szuflady.js`. Każda szuflada sama:
 | Gniazdo wpuszczane z ramką (mostek z otworami narożnymi poza Ø68, np. Simon 54, Schneider Sedna) | 1 | w LB2; podłącza elektryk |
 | Pierścień dystansowy do puszki Ø60, tworzywo samogasnące (np. Simet PD60, segmentowy) | 1 | docięty do grubości LB2 + szczeliny (ok. 21); otwór w LB2 pod jego średnicę zewnętrzną (ok. Ø66–68) |
 | Wkręty osprzętowe do puszek z tworzywa ok. Ø3,2 × 40 (nie M3) | 2 | mocują mechanizm przez pierścień do puszki Ø60 w ścianie; narożniki mostka dodatkowo wkrętami Ø3 × 16 do LB2 |
-| Klej montażowy do blend BL1–BL3 | 1 tuba | blendy wklejane w szczeliny przy ścianach i pod sufitem |
 | Ślizgacze pod boki i przegrodę dolnych korpusów | wg potrzeby | dolne krawędzie NB, NP, LB1, LB2, NO oklejone ABS; ślizgacze tylko w razie potrzeby |
