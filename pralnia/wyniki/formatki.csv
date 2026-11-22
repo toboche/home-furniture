@@ -1,20 +1,20 @@
 ﻿KOD;NAZWA;DL;SZ;SZT;OKLEINA;NAWIERTY;UWAGI
-L1B1;L1: bok prawy (przy maszynach);1743;637;1;1DL;KONFIRMATY;
-L1B2;"L1: bok lewy (całość; wycięcie pod GN1 100x100 robi użytkownik: od dołu 868-968, od tylnej krawędzi formatki 189-289, środek 918 / 239)";1743;637;1;1DL;KONFIRMATY + NAWIERT ŚRODKA Ø5 x 5;pod gniazdko GN1 wycina użytkownik
-L1T;L1: tył;1743;576;1;;KONFIRMATY;
+L1B1;L1: bok prawy (przy maszynach);1743;637;1;1DL + 1SZ (dół);KONFIRMATY;"DOLNA KRAWĘDŹ OKLEJONA ABS 0,8 (stoi na kafelkach; w kalkulatorze dodać ręcznie krawędź 4)"
+L1B2;"L1: bok lewy (całość; wycięcie pod GN1 100x100 robi użytkownik: od dołu 868-968, od tylnej krawędzi formatki 189-289, środek 918 / 239)";1743;637;1;1DL + 1SZ (dół);KONFIRMATY + NAWIERT ŚRODKA Ø5 x 5;"pod gniazdko GN1 wycina użytkownik; DOLNA KRAWĘDŹ OKLEJONA ABS 0,8 (stoi na kafelkach; w kalkulatorze dodać ręcznie krawędź 4)"
+L1T;L1: tył;1743;576;1;1SZ (dół);KONFIRMATY;"DOLNA KRAWĘDŹ OKLEJONA ABS 0,8 (stoi na kafelkach; w kalkulatorze dodać ręcznie krawędź 4)"
 L2B;L2: boki pasa;912;637;2;1DL;KONFIRMATY;
 L2T;L2: tył pasa;912;576;1;;KONFIRMATY;
 L2P;L2: półki stałe (spód, środek, góra);619;576;3;1SZ;KONFIRMATY;
 NWB;Wnęka nad maszynami: boki;912;635;2;1DL;KONFIRMATY;
 NWT;Wnęka: tył;912;570;1;;KONFIRMATY;
 NWP;Wnęka: półki stałe (spód, środek, góra);617;570;3;1SZ;KONFIRMATY;
-KB1;Kolumna: bok lewy, dół;489;200;1;1DL;KONFIRMATY;
+KB1;Kolumna: bok lewy, dół;489;200;1;1DL + 1SZ (dół);KONFIRMATY;"DOLNA KRAWĘDŹ OKLEJONA ABS 0,8 (stoi na kafelkach; w kalkulatorze dodać ręcznie krawędź 4)"
 KB2;Kolumna: bok lewy, środek i góra (+ szeregi otworów Ø5 x 10 pod podpórki półek KP2);1254;475;1;1DL;KONFIRMATY;
 KB3;Kolumna: bok lewy, pas;912;475;1;1DL;KONFIRMATY;
-PB1;Prawa: bok prawy, dół (przy gzymsie);489;200;1;1DL;KONFIRMATY;
+PB1;Prawa: bok prawy, dół (przy gzymsie);489;200;1;1DL + 1SZ (dół);KONFIRMATY;"DOLNA KRAWĘDŹ OKLEJONA ABS 0,8 (stoi na kafelkach; w kalkulatorze dodać ręcznie krawędź 4)"
 PB2;Prawa: bok prawy, góra (+ szeregi otworów Ø5 x 10 pod podpórki półek PP2);1236;273;1;1DL;KONFIRMATY;
 PB3;Prawa: bok prawy, pas;912;273;1;1DL;KONFIRMATY;
-PT1;Prawa dół: tył;489;406;1;;KONFIRMATY;
+PT1;Prawa dół: tył;489;406;1;1SZ (dół);KONFIRMATY;"DOLNA KRAWĘDŹ OKLEJONA ABS 0,8 (stoi na kafelkach; w kalkulatorze dodać ręcznie krawędź 2)"
 KT1A;Kolumna: tył dolny (zawór ZW1/ZW2), zdejmowany bez narzędzi, y 510-915;405;121;1;;BEZ NAWIERTÓW;"stoi na kątowniku-podporze, 2 kątowniki 25x25 za płytą na KB2 + 2 magnesy Ø10x3 (gniazda wiercisz sam); szer. 121 (luz na łby wkrętów kątowników)"
 KT1B;Kolumna: tył środkowy (gniazdka GP1/GP2), zdejmowany, y 943-1348;405;121;1;;BEZ NAWIERTÓW;stoi na kątowniku-podporze, 2 kątowniki za płytą + 2 magnesy Ø10x3 (gniazda wiercisz sam)
 KT1C;Kolumna: tył górny, zdejmowany, y 1376-1723;347;121;1;;BEZ NAWIERTÓW;stoi na kątowniku-podporze, 2 kątowniki za płytą + 2 magnesy Ø10x3 (gniazda wiercisz sam)
