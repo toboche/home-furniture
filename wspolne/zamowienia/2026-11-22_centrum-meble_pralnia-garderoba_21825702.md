@@ -14,7 +14,7 @@ Praktyczna instrukcja obsługi kalkulatora `centrum.meble.pl`: `wspolne/centrum_
 | **Link do podglądu / edycji** | `https://centrum.meble.pl/rozkroj,r21825702` |
 | **Ważność podglądu rozkroju** | do **`20.01.2027 r.`** |
 | **Status** | **Robocze zamówienie w koszyku (`/koszyk/`) na koncie użytkownika — NIE opłacone, NIE sfinalizowane** |
-| **Status audytu** | **ZWERYFIKOWANE 100% (`85/85` formatek, `620/620` unikalnych definicji otworów / `715/715` otworów z SZT)** |
+| **Status audytu** | **ZWERYFIKOWANE 100% NA ŻYWO Z SERWERA (`85/85` formatek, `620/620` unikalnych otworów / `715/715` z SZT, maks. odchyłka `0,000000 mm` — live DOM + wydruk `Drukuj`)** |
 | **Wariant cięcia** | **`PREMIUM (+standard)`** (dokładność 0,3 mm) |
 | **Do zapłaty (koszyk)** | **`5 924,63 PLN` brutto** (**`4 816,74 PLN` netto**), transport: `0 PLN` (odbiór osobisty / przed wyborem dostawy) |
 | **Czas realizacji / planowana wysyłka** | `14 dni roboczych` / planowany termin wysyłki: **`10.12.2026`** |
@@ -134,7 +134,15 @@ Po zapisaniu rewizji `21811821` przeprowadzono **pełny audyt kryminalistyczny (
    - Na `https://centrum.meble.pl/rozkroj,r21811821` zmieniono **wyłącznie** pole `#wiercenia_w_plaszczyznie_2_8_3_wsp_x` z `357` na **`417`** (żadna inna formatka, krawędź, zawias ani otwór nie były dotykane).
    - Zweryfikowano na podglądzie DOM i SVG wszystkie 6 otworów płaszczyznowych `GD-S2D` (`100/582`, `135/8`, **`417/8`**, `417/582`, `699/8`, `734/582` — wszystkie `Tył, Ø5, przelot`), wszystkie 4 otwory krawędziowe (`K4: 50, 490`; `K2: 50, 490`, `Ø4×35`) oraz brak okleiny.
    - Przeliczono rozkrój → nowy numer **`21825702`** (`https://centrum.meble.pl/rozkroj,r21825702`, ważny do `20.01.2027 r.`), wszystkie pozycje i kwota **`5 924,63 PLN` brutto** identyczne.
-   - Dodano `21825702` (`PREMIUM (+standard)`) do `/koszyk/` i usunięto zastąpiony `21811821` — w koszyku znajduje się wyłącznie **`Rozkrój 21825702`** (stan **85/85 formatek, 620/620 otworów = 100% zgodności**).
+   - Dodano `21825702` (`PREMIUM (+standard)`) do `/koszyk/` i usunięto zastąpiony `21811821` — w koszyku znajduje się wyłącznie **`Rozkrój 21825702`**.
+3. **Niezależna weryfikacja widoku `Drukuj` z serwera (`2026-11-22`):**
+   - Pobrano i sparsowano pełny HTML widoku `https://centrum.meble.pl/rozkroj/go/ajaxRequest,drukuj/art21825702.html?typ_rozkroju=1`: **`85 / 85` formatek (0 różnic)** pod kątem nazw, wymiarów (w tym `.5`), ilości (`92 + 10 = 102 szt.`), liczby oklejanych krawędzi (`rozm_border0/1/2`), typu obrzeża (`43× 0,8 mm`, `14× 1,0 mm`, `28× brak`) oraz zgodności metrów oklejania (`51,06 mb` netto `0,8 mm` → fakturowane `52 mb`; `30,75 mb` netto `1,0 mm` → fakturowane `31 mb`).
+4. **Pełny niezależny live audyt DOM przez Chrome DevTools MCP (`2026-11-22`):**
+   - W trybie wyłącznie do odczytu odczytano na żywo z `https://centrum.meble.pl/rozkroj,r21825702` pełny DOM wszystkich **85 formatek** (0 żądań AJAX POST, 0 blokad Cloudflare) i porównano 1:1 ze specyfikacją:
+     - **Wymiary, nazwy, ilości i powierzchnie:** `85 / 85` (`37,879344 m²` U702 18 mm + `1,522392 m²` W960 16 mm) — **0 różnic**.
+     - **Krawędzie `1..4`, grubość, klejenie i dekor obrzeża:** `85 / 85` (`43× 0.80_W`, `14× 1.00_L`, `28× brak`, `rozne = false`, kolor `2452216`, struktura `5954`) — **0 różnic**.
+     - **Szablony i zawiasy:** `52` `Wręgowanie`, `22` `brak` *(w tym 4 małe Wariantu B z `mozna_homag = "0"`)*, `3` `Front lewy` + `8` `Front prawy` (`11/11` `BLUM puszka 35mm (inserta)`, `y = 22.50`, `typ_uchwytu = 0`, `PR-F9 x3 = 620.5`, `PR-F10 x3 = 612, x4 = 612`) — **0 różnic**.
+     - **Wszystkie otwory CNC (po rozwinięciu wielowiertów):** **`400 / 400`** płaszczyznowych (ze `198` wpisów DOM) + **`220 / 220`** krawędziowych (ze `151` wpisów DOM) = **`620 / 620` unikalnych otworów (`715 / 715` z SZT)**, **maksymalna różnica współrzędnych = `0,000000 mm`**, `52 / 52` podglądy SVG (`400` kółek, `220` czerwonych linii), w tym na żywo potwierdzony poprawiony otwór #3 w `GD-S2D` (`Tył, [x]417mm, [y]8mm, [⌀]5mm, [↧]przelotmm`).
 
 ---
 
