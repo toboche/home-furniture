@@ -28,7 +28,16 @@ Wymiary są POTWIERDZONE pomiarami kontrolnymi w pomieszczeniu (2026-11-18 i 202
 - Fronty F1–F10: okleina 1,0 mm bezspoinowa (laser) dookoła. Reszta: ABS 0,8 mm.
 - `kalkulator_nawierty.csv` podaje numer oklejanej krawędzi (kolumna OKLEJ KRAWEDZ NR; `brak` = bez okleiny).
 - Import CSV w meble.pl (2026-11-15) NIE przenosi okleiny: po wczytaniu formatek ustawić krawędzie ręcznie i sprawdzić.
-- Bez okleiny: plecy (L1T, L2T, NWT, PT1–PT3, KT1A/B/C, KT2), półki tylne kolumny KP1–KP3, listwa LF6.
+- Bez okleiny: plecy (L2T, NWT, PT2, PT3, KT1A/B/C, KT2), półki tylne kolumny KP1–KP3, listwa LF6.
+- DOLNE KRAWĘDZIE na kafelkach (od 2026-11-22): ABS 0,8 mm, dopisać RĘCZNIE (`kalkulator_nawierty.csv` ma tylko krawędź przednią).
+  Numeracja kalkulatora (1 góra, 2 prawa, 3 dół, 4 lewa; X od lewego dolnego rogu widoku z przodu):
+  | Formatka | Krawędź przednia (z CSV) | Dolna (dopisać) |
+  |---|---|---|
+  | L1B1, L1B2 (1743 × 637) | 1 | 4 (po stronie X = 0; otwory pod L1W są przy X 1734) |
+  | KB1, PB1 (489 × 200) | 1 | 4 |
+  | L1T (1743 × 576) | brak | 4 |
+  | PT1 (489 × 406) | brak | 2 (krawędź 4 to góra – są w niej otwory pod PP1) |
+  NIE 1,0 mm bezspoinowa: wyłącza szablon „Wręgowanie i nawierty”, a te formatki mają CNC; przy „różnymi obrzeżami” 1,0 mm nie jest dostępne.
 
 ## 4. Nawierty
 - Formatki korpusu: szablon „Wręgowanie i nawierty”, dane z `kalkulator_nawierty.csv`.

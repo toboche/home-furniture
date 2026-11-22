@@ -342,3 +342,8 @@ Sekcja B audytu v3 (bramki w kalkulatorze meble.pl) jest w `zamowienie.md`; Sekc
 - Szczeliny wg pomiarów (A 1741–1744, J 2660–2665): bok szafki – ściana 3–4,5 mm, krawędź frontu – ściana 4,5–6 mm, góra frontów – sufit 5–10 mm.
 - Blendy z płyty 18 mm NIE zamawiamy (propozycja użytkownika odrzucona po analizie): w płaszczyźnie frontów zostałoby 1,5–4 mm paska (po luzie 1,5–3 mm do frontów po stronie zawiasów F1, F2, F7, F9), płyta wiórowa w takim pasku się kruszy i nie ma go do czego przykleić; przed frontami blokowałaby otwieranie, pod sufitem montaż pasów (wsuwanie od frontu wymaga luzu).
 - Decyzja użytkownika: po montażu szczeliny wypełnić akrylem (kolor ściany). Jeśli efekt będzie zły – obrzeże ABS 2 mm w U702 wsunięte w szczelinę bok–ściana i przyklejone do boku (zakup osobno, poza rozkrojem). Zamówienie 21825702 bez zmian.
+
+## 2026-11-22 – okleina dolnych krawędzi na kafelkach
+- Decyzja użytkownika: okleić dolne krawędzie formatek stojących na podłodze (ochrona przed wodą z pralki): L1B1, L1B2, KB1, PB1 (krawędź 4), L1T (4), PT1 (2) w numeracji kalkulatora. Wcześniej bez okleiny.
+- Użytkownik chciał 1,0 mm; w kalkulatorze centrum.meble.pl okleina 1,0 mm bezspoinowa wyłącza szablon „Wręgowanie i nawierty” (te formatki mają CNC), a przy „różnymi obrzeżami” są tylko 0,8 i 2,0 mm. Przyjęte: ABS 0,8 mm (jak dolne krawędzie w garderobie, sprawdzone w tym samym rozkroju). Wymiary i nawierty bez zmian.
+- Zamówienie 21825702 (koszyk, nieopłacone) do poprawienia przez agenta zamawiającego: opis w `wspolne/zamowienia/2026-11-22_centrum-meble_pralnia-garderoba_21825702.md`, sekcja 8.
