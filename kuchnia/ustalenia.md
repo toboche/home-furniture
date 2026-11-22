@@ -267,7 +267,7 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
   odcinkiem [od audytu v4: bez odcinka, kolana spięte mufą i obrócone]; model: króciec 26, przejście do Y ok. 1992,
   SOP zostaje na 2104; środek otworu w SOP wraca na z 109,5.
 - KU3-04: F1 nie ma w CSV kalkulatora (pipeline nie generuje frontów, sekcja C): puszki wpisać ręcznie w widoku
-  od strony zawiasów (337,5 / 697,5 / 1064 od dołu, 22,5 od prawej krawędzi patrząc od przodu). Położenie TIP-ON
+  od strony zawiasów (337,5 / 697,5 / 1064 od dołu [od 2026-11-19 po obniżeniu szafek: 1051, czyli 100 od góry], 22,5 od prawej krawędzi patrząc od przodu). Położenie TIP-ON
   ustawia użytkownik na miejscu (bez pilotów).
 
 ### 2026-11-19: audyt v4 (`audyt/v4.md`)
@@ -366,3 +366,4 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
 - 2026-11-19: ściana główna 3206 (pomiar), P3 1978, szafki o 2 w lewo.
 - 2026-11-19: pomiar rury ze ścianki od płytek 988, zgodny z modelem.
 - 2026-11-19: pomiary L1–L5 zamknięte (L2 ok, L4 805, L5 306).
+- 2026-11-22: puszki F1 po obniżeniu szafek: 337,5 / 697,5 / 1051 od dołu (front 1151); prompt dla agenta zamówienia w `zamowienie/prompt_agenta_zamowienie.md`.
