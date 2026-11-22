@@ -8,8 +8,8 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
   nad blatem, wąskiej szafki obok szafki okapowej i kilku frontów w istniejącej kuchni (do zrobienia później).
 - Układ modelu: ściana tylna (z = 0) = ściana główna z płytkami, zlewem i płytą; ściana lewa (x = 0) = ściana wnęki przy
   słupku z piekarnikiem (wnęka J = 805 od narożnika do boku słupka, nad nią szafki górne głębokie na I = 624);
-  po prawej ścianka (pion) na x = A = 3208, głęboka na L = 657. Dalej pokój umowny.
-- Ściany: żelbet. Sufit nierówny: wysokości liczymy od górnej krawędzi płytek (M = 1169), nie od podłogi.
+  po prawej ścianka (pion) na x = A = 3206 (2026-11-19, było 3208), głęboka na L = 657. Dalej pokój umowny.
+- Ściany: żelbet. Sufit nierówny: wysokości liczymy od górnej krawędzi płytek (M = 1156, 2026-11-19; było 1169), nie od podłogi.
 - Instalacje: kabel LED 24 V we wnęce (przesuwny, włącznik w home automation), przewód zasilający okap na ścianie głównej,
   rura okapu Ø125 (wewn.) wychodząca poziomo ze ścianki, otwór wentylacji grawitacyjnej Ø125 w ściance (kratka,
   NIE zasłaniać, otworu nie da się przesunąć).
@@ -18,12 +18,12 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
 - Płyta: Egger H3710 ST12 Orzech Carini naturalny 18 mm (jak istniejąca kuchnia), meble.pl, wszystkie elementy
   (półka z LED: 36 → 18, 2026-11-15). Oklejanie przez sklep; użytkownik nie okleja sam.
 - Front F1 otwierany na docisk (push-to-open), zawiasy bez cichego domyku + popychacz (do doboru).
-- Luz pod sufitem 2 mm (szafki 1167 wysokości).
+- Luz pod sufitem 2 mm (szafki 1154 wysokości od 2026-11-19; było 1167). Nie zwiększać: przy 4–5 mm wieniec SOW/WSW zjeżdża na otwór Ø160 (audyt v6 KU6-09).
 
 ## Decyzje
 ### Półka z LED (P1, P3), 2026-11-13
 - Kształt L, leży na górnej krawędzi płytek (Y 1511), płyta 18 mm (2026-11-15; wcześniej 36). Dwa prostokąty:
-  P1 804 × 400 na ścianie lewej (narożnik → słupek, J − 1; 2026-11-15, było J − 2), P3 1980 × 200 na ścianie głównej (od przedniej krawędzi P1
+  P1 804 × 400 na ścianie lewej (narożnik → słupek, J − 1; 2026-11-15, było J − 2), P3 1978 × 200 (2026-11-19, było 1980) na ścianie głównej (od przedniej krawędzi P1
   do szafki okapowej). Pod szafkami górnymi na ścianie głównej głębokość 200 (element P2 usunięty).
 - Nad półką pod szafkami górnymi zostaje 154 − 18 = 136.
 - LED świeci w dół na blat: profil aluminiowy z mlecznym kloszem, wpuszczany w spód, oś 39,1 od przednich krawędzi (2026-11-15; wcześniej ok. 50).
@@ -163,7 +163,7 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
   bez konfirmatów. Wkładana na końcu, po montażu okapu i rury: wycięcie od przodu na wylot (aktualnie: szer. 170, R85
   wokół z 138, najgłębiej 35 od tyłu; patrz 2026-11-18), wycina użytkownik, krawędzie silikonem.
 - Półka SOP przesunięta: dół Y 2104 (przegroda między SOD i SOP ok. 300; było 2150). Przejście do pionu mieści się
-  między nimi (do ok. Y 1992). Zawiasy F1: patrz 2026-11-18 (1850, 2210, 2576,5). Mimośród SOT na Y 2040 (było 2095).
+  między nimi (do ok. Y 1992). Zawiasy F1: patrz 2026-11-18 (1850, 2210, 2576,5; od 2026-11-19: 2563,5). Mimośród SOT na Y 2040 (było 2095).
 
 ### 2026-11-16: okucia F1, wycięcie SOD, wsporniki
 - F1 (549 × 1164, ok. 7,5 kg, push-to-open, zawiasy po prawej): 3 zawiasy Blum CLIP top 110° BEZ sprężyny, nakładane,
@@ -303,6 +303,22 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
   (P1 804), L5 ramka kratki od 306 (wąska szafka 300, luz 6). Rura ze ścianki 988 od płytek (zgodne z modelem).
 - Meble mieszczą się fizycznie; do zamówienia zostaje wpis do kalkulatora meble.pl, wycena i mail o usłojeniu frontów.
 
+### 2026-11-22: audyty v5 i v6 (`audyt/v5.md`, `audyt/v6.md`)
+Wdrożone (bezsporne):
+- KU6-01: puszki F1 337,5 / 697,5 / 1051 od dołu wszędzie (`reguly.py`, `komponenty.md`, `weryfikacja.md`).
+- KU6-02: okleina poziomych elementów WS (WSD, WSW, WSS, WSP) 1SZ: krawędź 238 od przodu (kalkulator już miał krawędź 2, błędny był opis 1DL).
+- KU6-03: `zamowienie.md`: tabela 21 wierszy ze słojami (PROPOZYCJA do potwierdzenia), okleina ABS 0,8 H3710 także na F1 i METOD, szablon F1.
+- KU6-09: mimośród SOW liczony z położenia SOW (było wpisane 2656). Luz pod sufitem zostaje 2 (przy 4–5 wieniec zjeżdża na otwór Ø160).
+- KU6-10: podpórki SOD w SOB-1 i SOB-2 na z 75 (było 50, za blisko podcięcia 25 × 25 na przewód).
+- KU5-02: SOP: wycięcie U poszerzyć o 15–20 w prawo po przymiarce obróconych kolan 15°.
+- KU5-03 / KU6-08: zatrzaski WSZ krótkie (wys. do 14, dł. do 47, skok do 10; WSZ przewraca się przy wychyleniu góry ok. 17),
+  przymiarka nad rurą przed przyklejeniem, linka zabezpieczająca WSZ do spodu WSW.
+- KU6-06b: szczelina pod TIP-ON 2,5–3 (przy słabym nacisku dół F1 nie dobija do SOB-1).
+- KU6-12 / KU5-04: nieaktualne liczby po M 1156 i A 3206 w komentarzach `model.js`, `pomiary.md`, `weryfikacja.md`, `README.md`
+  i w sekcjach ogólnych tego pliku (wpisy datowane zostają historyczne).
+Do rozmowy z użytkownikiem: słoje, wkręty okapu i prowadników (piloty Ø3), skan prętów V23–V25, pomiar METOD V30,
+MAXIMERA Ø5 × 12 vs 13, rowek LED 17,2 vs 18,2, kątowniki pod P1, cofnięcie listwy WSZ, tłumik okapu (wpływa na SOD i SOP).
+
 ## Do zmierzenia przy pomiarach weryfikacyjnych w mieszkaniu
 - 2026-11-19: lista ograniczona do sprawdzenia, czy meble fizycznie się mieszczą (decyzja użytkownika):
   L1 narożnik → ścianka nad płytkami ≥ 3207 (plan 3208); L2 to samo pod sufitem i 300 od ściany głównej ≥ 3207;
@@ -367,3 +383,4 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
 - 2026-11-19: pomiar rury ze ścianki od płytek 988, zgodny z modelem.
 - 2026-11-19: pomiary L1–L5 zamknięte (L2 ok, L4 805, L5 306).
 - 2026-11-22: puszki F1 po obniżeniu szafek: 337,5 / 697,5 / 1051 od dołu (front 1151); prompt dla agenta zamówienia w `zamowienie/prompt_agenta_zamowienie.md`.
+- 2026-11-22: audyty v5 i v6: okleina WS 1SZ, podpórki SOD z 75, `zamowienie.md` (słoje do potwierdzenia), zatrzaski i linka WSZ, poszerzenie U w SOP, porządki liczb.
