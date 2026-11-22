@@ -1,4 +1,4 @@
-# Zamówienie robocze w `centrum.meble.pl`: Pralnia + Garderoba (rozkrój `21850722`, 2026-11-22)
+# Zamówienie złożone i opłacone w `centrum.meble.pl`: Pralnia + Garderoba (zamówienie `86253/26`, rozkrój `21850722`, 2026-11-22)
 
 Dokument zbiorczy do niezależnej weryfikacji zamówienia przez agentów prowadzących pomieszczenia `pralnia/` i `garderoba/`.
 Rejestr wszystkich zamówień: `wspolne/zamowienia/README.md`.
@@ -10,22 +10,23 @@ Praktyczna instrukcja obsługi kalkulatora `centrum.meble.pl`: `wspolne/centrum_
 
 | Pole | Wartość |
 |---|---|
+| **Numer zamówienia w sklepie** | **`86253/26`** *(złożone i opłacone `22.11.2026 21:50`)* |
 | **Numer rozkroju (aktualny)** | **`21850722`** *(zastępuje rewizję `21825702` po dodaniu okleiny dolnych krawędzi 6 formatek pralni — sekcja 8 — oraz wcześniejszą `21811821`; obie usunięte z koszyka)* |
 | **Link do podglądu / edycji** | `https://centrum.meble.pl/rozkroj,r21850722` |
 | **Ważność podglądu rozkroju** | do **`20.01.2027 r.`** |
-| **Status** | **Robocze zamówienie w koszyku (`/koszyk/`) na koncie użytkownika — NIE opłacone, NIE sfinalizowane** *(poprawka z sekcji 8 WPROWADZONA 2026-11-22)* |
+| **Status** | **`złożone` — OPŁACONE (`zapłacono`, `W trakcie realizacji`)** *(poprawka z sekcji 8 WPROWADZONA 2026-11-22)* |
 | **Status audytu** | **ZWERYFIKOWANE 100% NA ŻYWO Z SERWERA (`85/85` formatek, `620/620` unikalnych otworów / `715/715` z SZT, `6/6` dolnych krawędzi pralni, maks. odchyłka `0,000000 mm` — niezależny live DOM + wydruk `Drukuj` + SVG)** |
 | **Wariant cięcia** | **`PREMIUM (+standard)`** (dokładność 0,3 mm) |
-| **Do zapłaty (koszyk)** | **`5 922,99 PLN` brutto** (**`4 815,44 PLN` netto**), transport: `0 PLN` (odbiór osobisty / przed wyborem dostawy) |
-| **Czas realizacji / planowana wysyłka** | `15 dni roboczych` / planowany termin wysyłki: **`11.12.2026`** |
-| **Opcja odpadów (`+5 PLN`)** | Niewybrana (`+5 PLN` nie doliczone) |
+| **Kwota zapłacona (łącznie)** | **`6 077,99 PLN` brutto** (**`4 941,46 PLN` netto**) — rozkrój `5 922,99 PLN` + `Odbiór reszt` (odpady) `5,00 PLN` + `Odbiór osobisty Kraków` `150,00 PLN` |
+| **Odbiór / termin** | **`Odbiór osobisty Kraków`**, termin odbioru: **`17.12.2026`** |
+| **Opcja odpadów (`+5 PLN`)** | **WYBRANA (`Odbiór reszt`, `5,00 PLN` brutto / `4,07 PLN` netto)** — zamówienie **z odpadami** |
 | **Podstawa z repozytorium** | Gałąź `main`, commit `182ed34` (stan 2026-11-22: `pralnia` v70 + PR #58 okleina dolnych krawędzi + `garderoba` po audycie v5 i PR #47–#49) |
 
 ---
 
-## 2. Pełne rozbicie kosztów i materiałów z koszyka (`21850722`)
+## 2. Pełne rozbicie kosztów i materiałów zamówienia `86253/26` (rozkrój `21850722`)
 
-| Pozycja w koszyku / podsumowaniu | Ilość | Wartość brutto | Wartość netto |
+| Pozycja w zamówieniu / podsumowaniu | Ilość | Wartość brutto | Wartość netto |
 |---|---:|---:|---:|
 | `Płyta meblowa EGGER U702 ST9 Kaszmir 18 mm` (`6,5 + 1,25 szt.`) | **`7,75 szt.`** | `2 769,70 PLN` | `2 251,77 PLN` |
 | `Płyta meblowa SM W960 SM Biały Klasyczny 16 mm` | **`0,5 szt.`** | `137,91 PLN` | `112,12 PLN` |
@@ -38,7 +39,10 @@ Praktyczna instrukcja obsługi kalkulatora `centrum.meble.pl`: `wspolne/centrum_
 | `Oklejanie płyty` | `51 mb` | `319,77 PLN` | `260,10 PLN` |
 | `Usługa wiercenia` — fronty z zawiasami (`Blum INSERTA`) | **`11 szt.`** | `136,62 PLN` | `111,10 PLN` |
 | `Usługa wiercenia` — formatki korpusów (`Wręgowanie i nawierty`) | **`63 szt.`** | `859,95 PLN` | `699,30 PLN` |
-| **RAZEM (`Do zapłaty`)** | | **`5 922,99 PLN`** | **`4 815,44 PLN`** |
+| *Razem rozkrój `21850722`* | | *`5 922,99 PLN`* | *`4 815,44 PLN`* |
+| `Odbiór reszt` (odpady z rozkroju) | `1 szt.` | `5,00 PLN` | `4,07 PLN` |
+| `Odbiór osobisty Kraków` (transport do punktu odbioru) | `1 szt.` | `150,00 PLN` | `121,95 PLN` |
+| **RAZEM (`Zapłacono`, zam. `86253/26`)** | | **`6 077,99 PLN`** | **`4 941,46 PLN`** |
 
 ---
 
@@ -153,12 +157,16 @@ Po zapisaniu rewizji `21811821` przeprowadzono **pełny audyt kryminalistyczny (
      - **`85 / 85` formatek** (`75` Płyta 1 / `92 szt.` / `37,879344 m²` + `10` Płyta 2 / `10 szt.` / `1,522392 m²`), **`85 / 85` wierszy `Drukuj`** — **0 różnic**.
      - **Okleiny:** `45× 0.80_W` (`53,716 mb` netto = `51,060 + 2,656 mb` → `55 mb` usługi / `70 mb` taśmy), `14× 1.00_L` (`30,755 mb` netto → `31 mb` / `45 mb`), `26× brak`, `rozne = false`, `U702 ST9` — **0 różnic**.
      - **Szablony, zawiasy i otwory CNC:** `52` `Wręgowanie`, `11/11` Blum INSERTA (`typ_uchwytu = 0`), **`400/400` płaszczyznowych + `220/220` krawędziowych = `620/620` unikalnych (`715/715` z SZT)**, maks. odchyłka **`0,000000 mm`**, `52/52` SVG (`400` kółek, `220` czerwonych linii) oraz zweryfikowana geometria `6/6` dolnych krawędzi na podglądach SVG — **0 rozbieżności**.
+7. **Finalizacja i opłacenie zamówienia (`2026-11-22 21:50`):**
+   - Użytkownik złożył i opłacił zamówienie **`86253/26`** (rozkrój **`21850722`**, wariant `PREMIUM (+standard)`, status: `zapłacono` / `W trakcie realizacji`) **wraz z odpadami** (`Odbiór reszt`: `+5,00 PLN` brutto / `4,07 PLN` netto).
+   - Wybrano **`Odbiór osobisty Kraków`** (`+150,00 PLN` brutto / `121,95 PLN` netto), termin odbioru: **`17.12.2026`**.
+   - Łączna zapłacona kwota: **`6 077,99 PLN` brutto (`4 941,46 PLN` netto)**.
 
 ---
 
 ## 8. ZMIANA DO WPROWADZENIA PRZED PŁATNOŚCIĄ (2026-11-22): okleina dolnych krawędzi pralni
 
-**Status: WPROWADZONA (2026-11-22)** — nowy rozkrój w koszyku: **`21850722`** (`https://centrum.meble.pl/rozkroj,r21850722`, ważny do `20.01.2027 r.`), kwota brutto: **`5 922,99 PLN`** (`4 815,44 PLN` netto, `-1,64 PLN` względem `21825702`; stary `21825702` usunięty z koszyka dopiero po potwierdzeniu obecności `21850722`). Niezależny audyt live DOM + SVG + `Drukuj` potwierdził **100% zgodności (`85/85` formatek, `620/620` otworów, `6/6` krawędzi, 0 błędów)**.
+**Status: WPROWADZONA I OPŁACONA (2026-11-22)** — zamówienie **`86253/26`** (rozkrój **`21850722`**, `https://centrum.meble.pl/rozkroj,r21850722`, ważny do `20.01.2027 r.`): rozkrój `5 922,99 PLN` brutto (`4 815,44 PLN` netto, `-1,64 PLN` względem `21825702`) + `Odbiór reszt` (odpady) `5,00 PLN` + `Odbiór osobisty Kraków` `150,00 PLN` = **`6 077,99 PLN` brutto (`4 941,46 PLN` netto)**, odbiór **`17.12.2026`**. Stary `21825702` usunięty z koszyka dopiero po potwierdzeniu obecności `21850722`. Niezależny audyt live DOM + SVG + `Drukuj` potwierdził **100% zgodności (`85/85` formatek, `620/620` otworów, `6/6` krawędzi, 0 błędów)**.
 
 Decyzja użytkownika (`pralnia/ustalenia.md`, 2026-11-22): dolne krawędzie 6 formatek pralni stojących na kafelkach mają być oklejone
 (ochrona przed wodą z pralki). Repozytorium: `pralnia/wyniki/formatki.csv` (kolumna OKLEINA `... + 1SZ (dół)`), `pralnia/zamowienie.md` pkt 3.
