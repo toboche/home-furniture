@@ -170,14 +170,6 @@ FORMATKI = [
     F('GLD', 'L góra: dno', okleina='1DL', nawierty='BRAK (łączniki od środka)', uwagi=SCIANA),
     F('GLG', 'L góra: wieniec górny', okleina='1DL', nawierty='BRAK (łączniki od środka)'),
     F('GLT', 'L góra: plecy', okleina='', nawierty='BRAK (łączniki od środka)'),
-    # blendy (dodatek 2026-11-22, spoza modelu 3D): pasy do wypełnienia szczelin przy ścianach i pod sufitem;
-    # użytkownik tnie je na szerokość szczeliny (3–10) i wkleja równo z frontami
-    F('BL1', 'BLENDA PIONOWA DOLNA (dodatek): pas do szczelin przy prawej ścianie (N) i przy ścianie z drzwiami (L), wys. korpusów dolnych',
-      okleina='', nawierty='BRAK', uwagi='docina użytkownik na szerokość szczeliny; 3 szt. z zapasem', dl=2120, sz=60, szt=3),
-    F('BL2', 'BLENDA PIONOWA GÓRNA (dodatek): pas do szczelin przy korpusach górnych (466 + docięcie)',
-      okleina='', nawierty='BRAK', uwagi='docina użytkownik na długość i szerokość szczeliny; 3 szt. z zapasem', dl=480, sz=60, szt=3),
-    F('BL3', 'BLENDA POD SUFIT (dodatek): pas do szczeliny nad szafką na wprost (1122) i po lewej (912)',
-      okleina='', nawierty='BRAK', uwagi='docina użytkownik na długość i szerokość szczeliny; 3 szt. z zapasem', dl=1150, sz=60, szt=3),
     # fronty
     F('F1', 'Front górny N, połowa lewa (chowany, TIP-ON, zawiasy po lewej)', okleina='2DL+2SZ',
       nawierty='SZABLON FRONT LEWY: 2 ZAWIASY BLUM INSERTA (70T3790.TL), PUSZKA Ø35, ŚRODEK 22.5 MM OD KRAWĘDZI, 100 OD KOŃCÓW'),

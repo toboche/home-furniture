@@ -149,14 +149,11 @@ USTALENIA Z KALKULATORA:
   GZ1 333; puszka gniazdka nie wystaje. LB2 przy pionie stoi ok. 3 mm od ściany przedniej (T = 919 zmierzone przy pionie);
   12 mm wychodziło z G = 1490 mierzonego przy prawej ścianie (model rysuje ścianę przednią prosto).
 
-## Blendy (decyzja 2026-11-22)
-- Widoczne szczeliny między szafkami a ścianami zakrywają blendy wklejane W SZCZELINĘ, równo z frontami (nie nakładane):
-  szafka na wprost przy prawej ścianie (4–8, dół i góra), szafka po lewej przy ścianie z drzwiami (3–10, dół i góra),
-  pod sufitem nad obiema szafkami (4–7). Użytkownik tnie pasy na szerokość szczeliny (na klin, bo ściany są pochylone)
-  piłą z prowadnicą i wkleja klejem montażowym do boku albo wieńca. Przy F2 blenda równo z frontem albo 1–2 mm głębiej;
-  po montażu sprawdzić otwieranie F2 do ogranicznika.
-- Zamówienie: BL1 2120 × 60, BL2 480 × 60, BL3 1150 × 60, po 3 szt. (z zapasem), płyta U702 ST9 18 mm, bez okleiny
-  i nawiertów (`reguly.py`, `formatki.csv`; poza modelem 3D).
+## Szczeliny przy ścianach (decyzja 2026-11-22)
+- Blendy z płyty (BL1–BL3, pasy 60 mm) rozważone i WYCOFANE przed zamówieniem. Widoczne szczeliny (przy prawej ścianie 4–8,
+  przy ścianie z drzwiami 3–10, pod sufitem 4–7) najpierw akryl w kolorze płyty; jeśli nie wystarczy, obrzeże ABS 43 × 2
+  w dekorze U702 (ok. 10 mb) przyklejone jako nakładka na przednie krawędzie boków i wieńców (przy F2 sprawdzić otwieranie).
+  Nic z tego nie wchodzi do zamówienia płyt.
 
 ## Audyt v5 (`audyt/v5.md`, stan po PR #38), wdrożone 2026-11-19
 - Gniazdo wpuszczane w LB2 poprawione (GD5-01): pierścień dystansowy z tworzywa samogasnącego do puszki Ø60 (np. Simet PD60),
