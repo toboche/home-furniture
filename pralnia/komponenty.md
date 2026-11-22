@@ -4,7 +4,7 @@ Liczby łączników, otworów i zaślepek: `wyniki/podsumowanie.json` (źródło
 
 ## Płyta
 - Egger U702 ST9 „Kaszmir" 18 mm (od 2026-11-19, wcześniej W1200), centrum.meble.pl; 44 pozycje / 56 sztuk / 16,69 m² (wyniki/formatki.csv, razem z L1P, RDW2, LF6, frontami zapasowymi F8, F10 i zapasowym wieńcem L1WD).
-- Okleina: fronty 1,0 mm bezspoinowa (szablony zawiasów), reszta ABS 0,8 mm z nawiertami; od 2026-11-22 także dolne krawędzie formatek stojących na podłodze (L1B1, L1B2, KB1, PB1, L1T, PT1) – ABS 0,8 mm.
+- Okleina: fronty 1,0 mm bezspoinowa (szablony zawiasów), reszta ABS 0,8 mm z nawiertami.
 - KP1: w modelu 184×126, ZAMÓWIĆ 200×126 (minimum kalkulatora) i skrócić samodzielnie o 16 mm od tyłu (krawędź 4, bez otworów); w kalkulatorze X otworów w krawędzi 3: 66 i 150.
 
 ## Zawiasy i prowadniki (Blum)
