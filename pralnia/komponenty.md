@@ -47,6 +47,10 @@ Strona zawiasów: F1, F2 po lewej; F3, F4, F5, F7, F8, F9, F10 po prawej.
 - Półka luzem L1P (619×574): 4 podpórki Ø5 (otwory w L1B1/L1B2 wierci użytkownik).
 - Wieniec zapasowy L1WD (575×100, luzem): w przyszłości 4 kątowniki 25×25 + wkręty Ø3,5×15 (nie kupować teraz).
 
+## Wykończenie szczelin (po montażu, decyzja 2026-11-22)
+- Akryl w kolorze ściany: 1–2 tuby, szczeliny bok–ściana (3–4,5 mm) i fronty–sufit (5–10 mm).
+- Jeśli akryl nie wyjdzie: obrzeże ABS 2 mm w dekorze U702 (np. 2 × 43 mm, rolka ok. 5 m) wsunięte w szczelinę bok–ściana, klejone do boku. Blend z płyty nie ma.
+
 ## Uchwyty
 - GUBBARP 116 biały: 7 szt. (F1, F2, F3, F4, F5, F7, F9) + 2 na zapas (F8, F10); otwory wierci użytkownik.
 
