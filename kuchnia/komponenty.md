@@ -1,4 +1,4 @@
-# Kuchnia: komponenty i zakupy poza płytami (stan 2026-11-19, po audycie v3)
+# Kuchnia: komponenty i zakupy poza płytami (stan 2026-11-22, po audytach v5 i v6)
 
 Liczby łączników z `wyniki/podsumowanie.json` (przeliczenie 2026-11-19). Pozycje DO DECYZJI: patrz `ustalenia.md`.
 
@@ -8,16 +8,17 @@ Liczby łączników z `wyniki/podsumowanie.json` (przeliczenie 2026-11-19). Pozy
 | Konfirmat 7 × 50 | 50 | wszystkie łby ukryte (0 widocznych) |
 | Złącze mimośrodowe Häfele Minifix 15 (obudowa + trzpień B 24, gwint Euro Ø5) | 5 | SOB-1 (widoczny bok): 3 × SOT, 1 × SOW, 1 × SOP |
 | Kołek Ø8 × 30 | 6 | SOB-1: 2 × SOT, 2 × SOW, 2 × SOP |
-| Zatrzask dociskowy push-to-open (np. magnetyczny z popychaczem) | 2 | WSZ u góry, pod WSW |
+| Zatrzask dociskowy push-to-open, krótki: wys. do 14, dł. do 47, skok do 10 | 2 | WSZ u góry, pod WSW; nad rurą Ø150 mało miejsca (8 pod WSW), przymierzyć przed przyklejeniem; WSZ przewraca się do przodu przy wychyleniu góry ok. 17 |
+| Linka / łańcuszek zabezpieczający + 2 haczyki | 1 | WSZ do spodu WSW, żeby wysunięta zaślepka nie spadła na płytę grzewczą |
 | Listwa 10 × 10 (drewno / ALU), dł. 236 | 1 | oporowa za WSZ, na WSS, klejona |
 | Podpórka półki Ø5 | 4 | pod wkładaną półkę SOD |
 
 ## Front F1 (Blum)
 | POZYCJA | KOD | ILOŚĆ | UWAGI |
 |---|---|---|---|
-| Zawias CLIP top 110°, bez sprężyny, nakładany, puszka na wkręty | 70T3550.TL | 3 | Y 1850, 2210, 2576,5 (nad okapem) |
+| Zawias CLIP top 110°, bez sprężyny, nakładany, puszka na wkręty | 70T3550.TL | 3 | Y 1850, 2210, 2563,5 (nad okapem; puszki 337,5 / 697,5 / 1051 od dołu F1) |
 | Prowadnik krzyżakowy 0 mm, na wkręty | 173L6100 | 3 | |
-| TIP-ON do drzwi, krótki, z magnesem | 956.1004 | 1 | do drzwi poniżej 1300; SOB-1 ok. Y 1850 (dolna część frontu nad okapem); drugi dokupić, jeśli jeden za słaby |
+| TIP-ON do drzwi, krótki, z magnesem | 956.1004 | 1 | do drzwi poniżej 1300; SOB-1 ok. Y 1850 (dolna część frontu nad okapem); drugi dokupić, jeśli jeden za słaby; szczelina F1–korpus ustawić na 2,5–3 |
 | Adapter prosty przykręcany do TIP-ON | 956.1201 | 1 | na wewnętrznym licu SOB-1 ok. Y 1850, wkręty 3,5 × 15 |
 | Wkręty do płyty 3,5 × 15 | ok. 20 | prowadniki, adaptery, zawiasy |
 | Wkręty okapu | 2 × 3,5 × 16 + 2 × 3,5 × 13 | 16 z kompletu do SOB-2; 13 do widocznego SOB-1; nawierty Ø3 × 5 robi sklep |

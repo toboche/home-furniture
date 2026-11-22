@@ -28,20 +28,20 @@ var KR=130, KR2=323, KR3=175;    /* otwór wentylacji grawitacyjnej w ściance *
 /* założenia i decyzje (ustalenia.md) */
 var P=18, PP=18;       /* płyta korpusów, płyta półki z LED (2026-11-15: 36 → 18) */
 var YP=C+D;            /* góra płytek = dół półki i szafek: 1511 */
-var YS=YP+M;           /* sufit: 2680 */
+var YS=YP+M;           /* sufit: 2667 */
 var LUZS=2;            /* luz pod sufitem (2026-11-14) */
-var YT=YS-LUZS;        /* góra korpusów: 2678 */
+var YT=YS-LUZS;        /* góra korpusów: 2665 */
 var GK=300;            /* głębokość korpusu WS (kratka: wolne do 303) */
 var GKS=GK+4;          /* głębokość korpusu SO: 304, kołnierz okapu (z 14–304) mija płytki wystające 9–12 (2026-11-18) */
-var XH=A-E-F/2;        /* oś płyty grzewczej: 2656 */
+var XH=A-E-F/2;        /* oś płyty grzewczej: 2654 */
 var SOW=552;           /* szafka okapowa: 516 w świetle (okap A + 2) */
-var XSO=XH-SOW/2;      /* 2380 */
-var XWS=XSO+SOW;       /* 2932 */
+var XSO=XH-SOW/2;      /* 2378 */
+var XWS=XSO+SOW;       /* 2930 */
 var LUZP=2;            /* ZAŁOŻENIE: luz wąskiej szafki do ścianki */
-var XWE=A-LUZP;        /* prawy bok wąskiej szafki: 3206 (szerokość 274) */
+var XWE=A-LUZP;        /* prawy bok wąskiej szafki: 3204 (szerokość 274) */
 var ZRU=RU2+RU/2;      /* oś rury okapu od ściany głównej: 97 */
-var YRU=YS-RU3-RU/2;   /* oś rury okapu: 2577 */
-var YSK=YRU-75-10;     /* góra dna skrzynki na rurę (10 pod końcem Ø150 redukcji; 2026-11-16: było 2502): 2492 */
+var YRU=YS-RU3-RU/2;   /* oś rury okapu: 2564 (RU5 = 988 od płytek) */
+var YSK=YRU-75-10;     /* góra dna skrzynki na rurę (10 pod końcem Ø150 redukcji; 2026-11-16: było 2502): 2479 */
 var OKW=513, OKG=253, OKH=265;  /* korpus okapu DUO 55 (rysunek techniczny) */
 var OKF=19;            /* kołnierz wystaje przed lico przodu korpusu (zmierzone 2026-11-18; z nitami efektywnie 16,5–17) */
 var OKZ=GKS-OKF-OKG;   /* tył korpusu: 32 (przód 285) */
@@ -49,9 +49,9 @@ var OKK=1.5;           /* grubość kołnierza (zmierzone 2026-11-18) */
 var ZWY=GKS-290+49+75;  /* oś wylotu Ø150: 49 od tylnej krawędzi kołnierza do tylnej krawędzi wylotu (zmierzone 2026-11-18): 138 */
 var YOK=YP+OKH;        /* góra korpusu okapu: 1776 */
 var ZPI=ZRU+12.5;      /* oś pionu Ø150 (redukcja mimośrodowa: +12,5 od osi Ø125): 109,5 */
-var RU4=115;           /* rura w ściance wystaje ze ścianki (zmierzone 2026-11-18): koniec na X 3093, w wąskiej szafce */
+var RU4=115;           /* rura w ściance wystaje ze ścianki (zmierzone 2026-11-18): koniec na X 3091, w wąskiej szafce */
 var LRD=120;           /* ZAŁOŻENIE: długość redukcji */
-var XRD=A-RU4-LRD;     /* redukcja 150/125 w wąskiej szafce, wąskim końcem w rurze ze ściany: od 2973 */
+var XRD=A-RU4-LRD;     /* redukcja 150/125 w wąskiej szafce, wąskim końcem w rurze ze ściany: od 2971 */
 var ZSK=195;           /* tył zaślepki skrzynki (10 przed końcem Ø150 redukcji, oś z 109,5; 2026-11-16: było 172) */
 var YSOD=YOK+10;       /* półka wkładana tuż nad okapem (dół), 10 zapasu (2026-11-16): 1786 */
 var YSOP=YSOD+P+300;   /* półka stała nad okapem (dół): przegroda ok. 300 nad SOD (2026-11-16; było 2150): 2104 */
@@ -106,7 +106,7 @@ add([
 /* ---- półka z LED na płytkach (płyta 18, z meble.pl, oklejona) ---- */
 add([
   {n:'P1: Półka LED, ściana lewa (804 × 400)',layer:'Półka LED',x:0,y:YP,z:0,w:GP1,h:PP,d:LP1,c:POL},
-  {n:'P3: Półka LED, ściana główna (1980 × 200)',layer:'Półka LED',x:GP1,y:YP,z:0,w:XSO-GP1,h:PP,d:GP3,c:POL},
+  {n:'P3: Półka LED, ściana główna (1978 × 200)',layer:'Półka LED',x:GP1,y:YP,z:0,w:XSO-GP1,h:PP,d:GP3,c:POL},
   {n:'Profil LED wpuszczany pod P1, wzdłuż przodu (rowek 18,2 × 6)',layer:'LED',x:GP1-LRO-LRW,y:YP,z:GP3-LRO-LRW,w:LRW,h:LRG,d:LP1-LRO-(GP3-LRO-LRW),c:LED},
   {n:'Profil LED wpuszczany pod P1 przy słupku (od kabla w ścianie lewej; zaczyna się za płytkami)',layer:'LED',x:PLW+1,y:YP,z:LP1-LRO-LRW,w:GP1-LRO-PLW-1,h:LRG,d:LRW,c:LED},
   {n:'Profil LED wpuszczany pod P3 (rowek 18,2 × 6)',layer:'LED',x:GP1-LRO-LRW,y:YP,z:GP3-LRO-LRW,w:XSO-(GP1-LRO-LRW)-20,h:LRG,d:LRW,c:LED},
@@ -132,12 +132,12 @@ add([
   {n:'SOW: SO: wieniec górny',layer:'Półki',x:XSO+P,y:YT-P,z:P,w:SOW-2*P,h:P,d:GKS-P,c:POL},
   {n:'SOD: SO: półka wkładana tuż nad okapem, na podpórkach, z wycięciem od przodu na wylot (wkładana po montażu okapu)',layer:'Półki',x:XSO+P+1,y:YSOD,z:P,w:SOW-2*P-2,h:P,d:GKS-P-2,c:POL},
   {n:'SOP: SO: półka nad okapem (otwór na rurę)',layer:'Półki',x:XSO+P,y:YSOP,z:P,w:SOW-2*P,h:P,d:GKS-P,c:POL},
-  {n:'F1: Front szafki okapowej (549 × 1164), 2 przed korpusem (szczelina TIP-ON)',layer:'Fronty',x:XSO+1.5,y:YP+1.5,z:GKS+SZT,w:SOW-3,h:YT-YP-3,d:P,c:FR,o:0.55}
+  {n:'F1: Front szafki okapowej (549 × 1151), 2 przed korpusem (szczelina TIP-ON)',layer:'Fronty',x:XSO+1.5,y:YP+1.5,z:GKS+SZT,w:SOW-3,h:YT-YP-3,d:P,c:FR,o:0.55}
 ]);
 add(zawiasy('F1',XSO+1.5,YP+1.5,SOW-3,YT-YP-3,'prawa',3,GKS+SZT,[YZ1,YZ2,YT-1.5-100]));
 
 /* okap DUO 55: kołnierz 551 × 290 pod korpusem szafki (dno), korpus 513 × 253 × 265 na środku kołnierza (2026-11-16) */
-var YKL=YRU-150;       /* początek kolana 90° Ø150 (R ok. 1D): 2427 */
+var YKL=YRU-150;       /* początek kolana 90° Ø150 (R ok. 1D): 2414 */
 var YKR=YOK+26;        /* góra króćca wylotu (26 nad korpusem): 1802 */
 var YPR=YKR+40+150;    /* koniec przejścia do pionu (odcinek na króćcu ok. 40 + 2 kolana 15° z odcinkiem ok. 150): 1992 */
 add([

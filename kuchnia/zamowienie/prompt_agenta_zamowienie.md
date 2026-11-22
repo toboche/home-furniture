@@ -72,6 +72,7 @@ Pliki:
 - `kuchnia/zamowienie/fronty_metod.csv`: 6 frontów szuflad IKEA METOD (FM1–FM6) z otworami.
 - `kuchnia/ustalenia.md` (decyzje, szczególnie wpisy o F1, METOD i półkach P1/P3), `kuchnia/komponenty.md`,
   `kuchnia/wyniki/podsumowanie.json`, `kuchnia/wyniki/arkusz_nawiertow.pdf`.
+- `kuchnia/zamowienie.md`: słoje, okleina, krawędzie i szablon każdego wiersza, konfiguracja F1, sumy kontrolne.
 - `kuchnia/zamowienie/wycena.md`: stara wycena, NIEAKTUALNA (tylko orientacyjnie).
 
 Przygotuj deterministycznie w Pythonie (bez ręcznego przepisywania) w katalogu roboczym poza repozytorium:
@@ -92,46 +93,18 @@ Przygotuj deterministycznie w Pythonie (bez ręcznego przepisywania) w katalogu 
 - Osobny rozkrój zamiast dopisywania do `21825702`: inna płyta, więc wspólny rozkrój nie oszczędza arkuszy, a ryzykuje
   zmianę zweryfikowanego zamówienia.
 
-### Słoje (do potwierdzenia na starcie)
+### Słoje, okleina krawędzi i szablony
 
-Decyzje w repozytorium: F1 i fronty METOD mają słoje NA WYSOKOŚĆ (pionowo na ścianie). Dla korpusów i półek
-w repozytorium nie ma wpisu; propozycja: słoje wzdłuż DL (dłuższego wymiaru) każdej formatki, czyli pionowo na bokach,
-tyłach i F1, wzdłuż szerokości szafki na wieńcach, półkach i dnach, wzdłuż długości na P1 i P3. Zanim zaimportujesz CSV,
-zadaj użytkownikowi jedno pytanie: czy potwierdza tę propozycję. Odpowiedź zapisz w `kuchnia/ustalenia.md`.
-
-Kod w kolumnie `Słoje`: według wcześniejszych ustaleń `1` = słoje wzdłuż Wysokości, `2` = wzdłuż Szerokości.
-Sprawdź to na jednym wierszu testowym w kalkulatorze (podgląd/oznaczenie kierunku słojów), zanim wczytasz całość.
-
-## Lista 21 wierszy kalkulatora (Szer × Wys w mm, płyta 18 mm)
+Pełna tabela 21 wierszy (kody, SZER × WYS, SZT, słoje, krawędzie z okleiną, szablon) jest w `kuchnia/zamowienie.md`
+i jest częścią specyfikacji: przepisz ją do `order_spec.json`. Słoje: na elementach pionowych pionowo, na poziomych
+równolegle do przodu, na F1, WSZ i frontach METOD na wysokość. Uwaga: przy `SZER = DL` boki i tyły (1154 × …) mają
+słoje „na szerokość”, a poziome elementy WS (282 × 238) „na wysokość”. Jeśli tabela ma dopisek „PROPOZYCJA”, zapytaj
+użytkownika o potwierdzenie przed importem. Kod w kolumnie `Słoje` CSV sprawdź na jednym wierszu testowym
+(oznaczenie kierunku słojów w kalkulatorze), zanim wczytasz całość.
 
 Wiersze z otworami: wymiary, krawędzie i otwory dokładnie z `kalkulator_nawierty.csv` (`Szer = DL`, `Wys = SZ`,
-krawędzie wg kolumny `OKLEJ KRAWEDZ NR`: 1 = góra, 2 = prawa, 3 = dół, 4 = lewa).
-
-| WIERSZ | NAZWA | SZER × WYS | SZT | SŁOJE | OKLEINA (KRAWĘDZIE) | SZABLON |
-|---|---|---|---|---|---|---|
-| 1 | KU-P1 | 804 × 400 | 1 | wzdłuż SZER | 1 | Wręgowanie: 3 otwory w czole |
-| 2 | KU-P3 | 1978 × 200 | 1 | wzdłuż SZER | 1 | Wręgowanie: 5 otworów w czole |
-| 3 | KU-SOB-1 | 1154 × 304 | 1 | wzdłuż SZER | 1 | Wręgowanie |
-| 4 | KU-SOB-2 | 1154 × 304 | 1 | wzdłuż SZER | 1 | Wręgowanie |
-| 5 | KU-SOT | 1154 × 516 | 1 | wzdłuż SZER | brak | Wręgowanie |
-| 6 | KU-SOW | 516 × 286 | 1 | wzdłuż SZER | 1 | Wręgowanie |
-| 7 | KU-SOP | 516 × 286 | 1 | wzdłuż SZER | 1 | Wręgowanie |
-| 8 | KU-WSB-1 | 1154 × 300 | 1 | wzdłuż SZER | 1 | Wręgowanie |
-| 9 | KU-WSB-2 | 1154 × 300 | 1 | wzdłuż SZER | 1 | Wręgowanie |
-| 10 | KU-WST | 1154 × 238 | 1 | wzdłuż SZER | brak | Wręgowanie |
-| 11 | KU-WSD, WSS, WSP-1, WSP-2 | 282 × 238 | 4 | wzdłuż SZER | 2 | Wręgowanie |
-| 12 | KU-WSW | 282 × 238 | 1 | wzdłuż SZER | 2 | Wręgowanie |
-| 13 | KU-SOD | 514 × 284 | 1 | wzdłuż SZER | 1 | bez nawiertów |
-| 14 | KU-WSZ | 236 × 165 | 1 | wzdłuż SZER | brak | bez nawiertów |
-| 15 | KU-F1 | 549 × 1151 | 1 | wzdłuż WYS | 1, 2, 3, 4 | Front prawy (patrz niżej) |
-| 16 | KU-FM1 usłojenie 21a | 597 × 142 | 1 | wzdłuż WYS | 1, 2, 3, 4 | Wręgowanie: 4 otwory |
-| 17 | KU-FM2 usłojenie 21b | 597 × 397 | 1 | wzdłuż WYS | 1, 2, 3, 4 | Wręgowanie: 12 otworów |
-| 18 | KU-FM3 usłojenie 21c | 597 × 397 | 1 | wzdłuż WYS | 1, 2, 3, 4 | Wręgowanie: 12 otworów |
-| 19 | KU-FM4 usłojenie 22a | 597 × 197 | 1 | wzdłuż WYS | 1, 2, 3, 4 | Wręgowanie: 8 otworów |
-| 20 | KU-FM5 usłojenie 22b | 597 × 197 | 1 | wzdłuż WYS | 1, 2, 3, 4 | Wręgowanie: 8 otworów |
-| 21 | KU-FM6 usłojenie 22c | 597 × 397 | 1 | wzdłuż WYS | 1, 2, 3, 4 | Wręgowanie: 12 otworów |
-
-Tabela to skrót. Jeśli wymiar, SZT lub krawędź różni się od plików, wygrywają pliki i zgłaszasz rozbieżność.
+krawędzie wg kolumny `OKLEJ KRAWEDZ NR`: 1 = góra, 2 = prawa, 3 = dół, 4 = lewa). Jeśli wymiar, SZT lub krawędź
+w `zamowienie.md` różni się od plików generowanych, wygrywają pliki generowane i zgłaszasz rozbieżność.
 Kalkulator po imporcie CSV potrafi sam zaznaczyć krawędzie 3 i 4 w 0,8 mm: popraw okleinę w każdym wierszu
 (wiersze 5, 10 i 14 bez okleiny).
 
@@ -200,7 +173,7 @@ i otwór na przewód w SOT robi użytkownik sam (w CSV są tylko nawierty środk
 
 1. **Pre-flight.** Przeczytaj pliki z sekcji „Dane wejściowe”. Sprawdź logowanie (`/moje_konto/`) i zawartość koszyka:
    ma tam być `21825702` (5 924,63 PLN) i nic nieoczekiwanego. Zapisz stan koszyka. Zadaj użytkownikowi pytanie
-   o słoje (jedno pytanie, z propozycją).
+   o słoje, jeśli `kuchnia/zamowienie.md` ma je jeszcze jako PROPOZYCJĘ.
 2. **Test na czystym kalkulatorze** (`https://centrum.meble.pl/rozkroj,plyty-meblowe`): wybierz płytę H3710 ST12
    18 mm i obrzeże H3710 0,8 mm. Na jednym wierszu testowym sprawdź kod `Słoje`, a na F1 szablon `Front prawy`
    z wkrętami i ręcznymi `x2`/`x3` (podgląd SVG). Usuń wiersz testowy albo zacznij od nowa.

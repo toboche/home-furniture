@@ -12,7 +12,7 @@ Pomiary z 2026-11-12 i 2026-11-13 (rozmowa z Claude, zdjęcia kuchni).
 | KOD | WARTOŚĆ | OPIS | WCZEŚNIEJ / UWAGI |
 |---|---|---|---|
 | A | 3206 | długość ściany głównej, narożnik ze ścianą lewą → ścianka (zmierzone 2026-11-19) | 3208 (2026-11-12) |
-| B | 2665 | podłoga → sufit | orientacyjnie, sufit nierówny; do obliczeń C + D + M = 2680 |
+| B | 2665 | podłoga → sufit | orientacyjnie, sufit nierówny; do obliczeń C + D + M = 2667 |
 | C | 911 | wysokość górnej powierzchni blatu | |
 | D | 600 | pas płytek: blat → górna krawędź płytek | |
 | E | 257 | ścianka → prawa krawędź płyty grzewczej | |
@@ -29,12 +29,12 @@ Pomiary z 2026-11-12 i 2026-11-13 (rozmowa z Claude, zdjęcia kuchni).
 |---|---|---|---|
 | LED | – | kabel LED 24 V, lewy górny róg wnęki przy słupku | przesuwny, zaplanowany na wysokości półki; włącznik w home automation |
 | ZA1 | 356 | przewód zasilający okap (ściana główna): od ścianki | |
-| ZA2 | 487 | przewód zasilający okap: od sufitu | 682 nad płytkami |
+| ZA2 | 487 | przewód zasilający okap: od sufitu | 669 nad płytkami (przy M 1156) |
 | RU1 | 125 | rura okapu w ściance (wychodzi poziomo ze ścianki): średnica wewnętrzna | zewnętrzna 130 (pierwszy odczyt 130 był po zewnętrznej stronie) |
 | RU2 | 32 | rura okapu: ściana główna → najbliższy punkt rury (po zewnętrznej) | oś 32 + 65 = 97 |
 | RU3 | 38 | rura okapu: sufit → najbliższy punkt rury (po zewnętrznej) | oś 38 + 65 = 103 pod sufitem |
 | RU5 | 988 | góra płytek → spód rury wystającej ze ścianki (potwierdza oś rury Y 2564 przy suficie M 1156) | zmierzone 2026-11-19 |
-| RU4 | 115 | rura okapu wystaje ze ścianki (koniec na X 3093, w wąskiej szafce) | zmierzone 2026-11-18 |
+| RU4 | 115 | rura okapu wystaje ze ścianki (koniec na X 3091, w wąskiej szafce) | zmierzone 2026-11-18 |
 | PL1 | 9–12 | płytki wystają przed ścianę nad nimi (ryflowane) | zmierzone 2026-11-18; w modelu wcześniej 8 |
 | KR1 | 125 | otwór wentylacji grawitacyjnej w ściance: średnica wewnętrzna | zewnętrzna 130; kratka, nie zasłaniać, otworu nie da się przesunąć |
 | KR2 | 323 | otwór: ściana główna → najbliższy punkt (po zewnętrznej) | |
