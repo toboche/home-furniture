@@ -1,4 +1,4 @@
-# Zamówienie robocze w `centrum.meble.pl`: Pralnia + Garderoba (rozkrój `21825702`, 2026-11-22)
+# Zamówienie robocze w `centrum.meble.pl`: Pralnia + Garderoba (rozkrój `21850722`, 2026-11-22)
 
 Dokument zbiorczy do niezależnej weryfikacji zamówienia przez agentów prowadzących pomieszczenia `pralnia/` i `garderoba/`.
 Rejestr wszystkich zamówień: `wspolne/zamowienia/README.md`.
@@ -10,35 +10,35 @@ Praktyczna instrukcja obsługi kalkulatora `centrum.meble.pl`: `wspolne/centrum_
 
 | Pole | Wartość |
 |---|---|
-| **Numer rozkroju (aktualny)** | **`21825702`** *(zastępuje rewizję `21811821` usuniętą z koszyka po audycie 100%)* |
-| **Link do podglądu / edycji** | `https://centrum.meble.pl/rozkroj,r21825702` |
+| **Numer rozkroju (aktualny)** | **`21850722`** *(zastępuje rewizję `21825702` po dodaniu okleiny dolnych krawędzi 6 formatek pralni — sekcja 8 — oraz wcześniejszą `21811821`; obie usunięte z koszyka)* |
+| **Link do podglądu / edycji** | `https://centrum.meble.pl/rozkroj,r21850722` |
 | **Ważność podglądu rozkroju** | do **`20.01.2027 r.`** |
-| **Status** | **Robocze zamówienie w koszyku (`/koszyk/`) na koncie użytkownika — NIE opłacone, NIE sfinalizowan. DO POPRAWKI przed płatnością: sekcja 8 (okleina dolnych krawędzi pralni, 2026-11-22)** |
-| **Status audytu** | **ZWERYFIKOWANE 100% NA ŻYWO Z SERWERA (`85/85` formatek, `620/620` unikalnych otworów / `715/715` z SZT, maks. odchyłka `0,000000 mm` — live DOM + wydruk `Drukuj`)** |
+| **Status** | **Robocze zamówienie w koszyku (`/koszyk/`) na koncie użytkownika — NIE opłacone, NIE sfinalizowane** *(poprawka z sekcji 8 WPROWADZONA 2026-11-22)* |
+| **Status audytu** | **ZWERYFIKOWANE 100% NA ŻYWO Z SERWERA (`85/85` formatek, `620/620` unikalnych otworów / `715/715` z SZT, `6/6` dolnych krawędzi pralni, maks. odchyłka `0,000000 mm` — niezależny live DOM + wydruk `Drukuj` + SVG)** |
 | **Wariant cięcia** | **`PREMIUM (+standard)`** (dokładność 0,3 mm) |
-| **Do zapłaty (koszyk)** | **`5 924,63 PLN` brutto** (**`4 816,74 PLN` netto**), transport: `0 PLN` (odbiór osobisty / przed wyborem dostawy) |
-| **Czas realizacji / planowana wysyłka** | `14 dni roboczych` / planowany termin wysyłki: **`10.12.2026`** |
+| **Do zapłaty (koszyk)** | **`5 922,99 PLN` brutto** (**`4 815,44 PLN` netto**), transport: `0 PLN` (odbiór osobisty / przed wyborem dostawy) |
+| **Czas realizacji / planowana wysyłka** | `15 dni roboczych` / planowany termin wysyłki: **`11.12.2026`** |
 | **Opcja odpadów (`+5 PLN`)** | Niewybrana (`+5 PLN` nie doliczone) |
-| **Podstawa z repozytorium** | Gałąź `main`, commit `d3ca20d` (stan 2026-11-19: `pralnia` v70 + `garderoba` po audycie v5 i PR #47–#49) |
+| **Podstawa z repozytorium** | Gałąź `main`, commit `182ed34` (stan 2026-11-22: `pralnia` v70 + PR #58 okleina dolnych krawędzi + `garderoba` po audycie v5 i PR #47–#49) |
 
 ---
 
-## 2. Pełne rozbicie kosztów i materiałów z koszyka (`21825702`)
+## 2. Pełne rozbicie kosztów i materiałów z koszyka (`21850722`)
 
 | Pozycja w koszyku / podsumowaniu | Ilość | Wartość brutto | Wartość netto |
 |---|---:|---:|---:|
 | `Płyta meblowa EGGER U702 ST9 Kaszmir 18 mm` (`6,5 + 1,25 szt.`) | **`7,75 szt.`** | `2 769,70 PLN` | `2 251,77 PLN` |
 | `Płyta meblowa SM W960 SM Biały Klasyczny 16 mm` | **`0,5 szt.`** | `137,91 PLN` | `112,12 PLN` |
-| `Obrzeże ABS U702 ST9 Kaszmir 23 x 0.8 mm EGGER` (`55 + 10 mb`, na magazynie `pow. 50 mb`) | **`65 mb`** | `108,55 PLN` | `88,40 PLN` |
+| `Obrzeże ABS U702 ST9 Kaszmir 23 x 0.8 mm EGGER` (`60 + 10 mb`, na magazynie `pow. 50 mb`) | **`70 mb`** | `116,90 PLN` | `95,20 PLN` |
 | `Obrzeże meblowe do oklejania laserowego PRO U702 ST9 (79098) Kaszmir 23 x 1 mm REHAU` (`pow. 50 mb`) | **`45 mb`** | `246,15 PLN` | `200,25 PLN` |
-| `Cięcie płyty` (PREMIUM) | `192 mb` | `921,60 PLN` | `748,80 PLN` |
+| `Cięcie płyty` (PREMIUM) | `186 mb` | `892,80 PLN` | `725,40 PLN` |
 | `Cięcie płyty` (+standard) | `37 mb` | `163,91 PLN` | `133,20 PLN` |
 | `Oklejanie płyty` | `4 mb` | `27,56 PLN` | `22,40 PLN` |
 | `Oklejanie płyty +` (laserowe 1,0 mm) | `31 mb` | `251,72 PLN` | `204,60 PLN` |
-| `Oklejanie płyty` | `48 mb` | `300,96 PLN` | `244,80 PLN` |
+| `Oklejanie płyty` | `51 mb` | `319,77 PLN` | `260,10 PLN` |
 | `Usługa wiercenia` — fronty z zawiasami (`Blum INSERTA`) | **`11 szt.`** | `136,62 PLN` | `111,10 PLN` |
 | `Usługa wiercenia` — formatki korpusów (`Wręgowanie i nawierty`) | **`63 szt.`** | `859,95 PLN` | `699,30 PLN` |
-| **RAZEM (`Do zapłaty`)** | | **`5 924,63 PLN`** | **`4 816,74 PLN`** |
+| **RAZEM (`Do zapłaty`)** | | **`5 922,99 PLN`** | **`4 815,44 PLN`** |
 
 ---
 
@@ -50,7 +50,7 @@ Praktyczna instrukcja obsługi kalkulatora `centrum.meble.pl`: `wspolne/centrum_
 | **Garderoba 18 mm (`GD-`)** | 27 | 28 *(zgrupowane wg `kalkulator_nawierty.csv`)* | `36 / 36` | `21,19 / 21,19` (`21,1941`) | korpusy `19 / 19` (`244` otw.); fronty `2 / 2` (`4` puszki) | **100% ZGODNE** |
 | **RAZEM Płyta 1 (`18 mm U702 ST9`)** | **71** | **75** | **`92 / 92`** | **`37,88 / 37,88`** (`37,8793`) | korpusy **`53`**, fronty **`11`** | **100% ZGODNE** |
 | **Płyta 2 (`16 mm W960 SM` — Garderoba)** | **6** | **10** | **`10 / 10`** | **`1,52 / 1,52`** (`1,5224`) | korpusy **`10 / 10`** (`68` otw.) | **100% ZGODNE** |
-| **ŁĄCZNIE ZLECENIE `21825702`** | **77** | **85** | **`102 / 102`** | **`39,40 / 39,40`** | **`63 szt.` korpusów + `11 szt.` frontów = `74 szt.`** | **100% ZGODNE z koszykiem!** |
+| **ŁĄCZNIE ZLECENIE `21850722`** | **77** | **85** | **`102 / 102`** | **`39,40 / 39,40`** | **`63 szt.` korpusów + `11 szt.` frontów = `74 szt.`** | **100% ZGODNE z koszykiem!** |
 
 ---
 
@@ -119,7 +119,7 @@ Praktyczna instrukcja obsługi kalkulatora `centrum.meble.pl`: `wspolne/centrum_
 3. **Ukryty wybór `1,0 mm klejenie bezspoinowe`** przy zaznaczonym „różnymi obrzeżami” → odznaczano `rozne_obrzeza` i wybierano `1,0 mm` na wszystkich 14 frontach.
 4. **Blokady Cloudflare (HTTP 429 / 403 `cf-mitigated: challenge`)** przy wyszukiwarce `/wyszukiwarka/` oraz szybkich seriach AJAX → zaniechano korzystania z wyszukiwarki, wprowadzono sekwencyjne żądania z przerwami i 2 razy użytkownik ręcznie przeszedł weryfikację Cloudflare.
 5. **Wydajność 85-wierszowego formularza (~205 KB POST na pole) i degradacja długich sesji przeglądarki (>1000 kroków)** → skompresowano otwory w wierszach `15–75` przez `wielowiert` (`0,0 mm` dokładności, 480 otworów → ~190 wpisów) oraz zapisywano kolejne trwałe punkty kontrolne `Przelicz koszty` co kilka wierszy w świeżych sesjach:
-   `21758906` → `21761020` → `21765736` → `21787712` → `21791256` → `21803057` → `21810807` → `21811821` → **`21825702`** (finalny w koszyku po audycie 100%).
+   `21758906` → `21761020` → `21765736` → `21787712` → `21791256` → `21803057` → `21810807` → `21811821` → `21825702` → **`21850722`** (aktualny w koszyku po poprawce z sekcji 8 i niezależnym audycie 100%).
 
 ---
 
@@ -143,37 +143,43 @@ Po zapisaniu rewizji `21811821` przeprowadzono **pełny audyt kryminalistyczny (
      - **Krawędzie `1..4`, grubość, klejenie i dekor obrzeża:** `85 / 85` (`43× 0.80_W`, `14× 1.00_L`, `28× brak`, `rozne = false`, kolor `2452216`, struktura `5954`) — **0 różnic**.
      - **Szablony i zawiasy:** `52` `Wręgowanie`, `22` `brak` *(w tym 4 małe Wariantu B z `mozna_homag = "0"`)*, `3` `Front lewy` + `8` `Front prawy` (`11/11` `BLUM puszka 35mm (inserta)`, `y = 22.50`, `typ_uchwytu = 0`, `PR-F9 x3 = 620.5`, `PR-F10 x3 = 612, x4 = 612`) — **0 różnic**.
      - **Wszystkie otwory CNC (po rozwinięciu wielowiertów):** **`400 / 400`** płaszczyznowych (ze `198` wpisów DOM) + **`220 / 220`** krawędziowych (ze `151` wpisów DOM) = **`620 / 620` unikalnych otworów (`715 / 715` z SZT)**, **maksymalna różnica współrzędnych = `0,000000 mm`**, `52 / 52` podglądy SVG (`400` kółek, `220` czerwonych linii), w tym na żywo potwierdzony poprawiony otwór #3 w `GD-S2D` (`Tył, [x]417mm, [y]8mm, [⌀]5mm, [↧]przelotmm`).
+5. **Poprawka okleiny dolnych krawędzi 6 formatek pralni (`21825702` → `21850722`, 2026-11-22, sekcja 8):**
+   - Na `https://centrum.meble.pl/rozkroj,r21825702` dodano wyłącznie okleinę **`ABS 0,8 mm U702 ST9`** (`0.80_W`, `rozne = false`) na dolnych krawędziach 6 formatek pralni stojących na kafelkach: `PR-L1B1` (`#14`, `1 → 1+4`), `PR-KB1` (`#19`, `1 → 1+4`), `PR-PB1` (`#22`, `1 → 1+4`), `PR-L1T` (`#25`, `brak → 4`), `PR-PT1` (`#28`, `brak → 2`), `PR-L1B2` (`#32`, `1 → 1+4`). Żadne inne pole (wymiary, otwory, szablony, fronty, garderoba) nie było zmieniane.
+   - Przeliczono rozkrój → nowy numer **`21850722`** (`https://centrum.meble.pl/rozkroj,r21850722`, ważny do `20.01.2027 r.`), planowana wysyłka `11.12.2026` (`15 dni roboczych`).
+   - Zmiana w koszyku po rabacie konta: `Obrzeże ABS 0,8 mm` `65 → 70 mb` (`+8,35 PLN`), `Oklejanie płyty` `48 → 51 mb` (`+18,81 PLN`), `Cięcie płyty` PREMIUM `192 → 186 mb` (`-28,80 PLN`, lepsze ułożenie); płyty (`7,75` + `0,5` ark.) i wiercenia (`11` + `63 szt.`) bez zmian; kwota łączna **`5 922,99 PLN` brutto (`4 815,44 PLN` netto)** (`-1,64 PLN` vs `21825702`).
+   - Dodano `21850722` (`PREMIUM (+standard)`, opcja odpadów niewybrana) do `/koszyk/`, potwierdzono obecność obu pozycji i dopiero potem usunięto zastąpiony `21825702` — w `/koszyk/` znajduje się wyłącznie **`Rozkrój 21850722`** (NIE opłacony, NIE sfinalizowany).
+6. **Niezależny pełny live audyt `21850722` przez subagenta `chrome-mcp-auditor` (`2026-11-22`, tryb wyłącznie do odczytu):**
+   - Zbudowano specyfikację bezpośrednio z aktualnych plików na `main @ 182ed34` (`pralnia/wyniki/*`, `garderoba/wyniki/*`) i porównano z pełnym live DOM `r21850722` oraz wydrukiem `GET /rozkroj/go/ajaxRequest,drukuj/art21850722.html?typ_rozkroju=1`:
+     - **`85 / 85` formatek** (`75` Płyta 1 / `92 szt.` / `37,879344 m²` + `10` Płyta 2 / `10 szt.` / `1,522392 m²`), **`85 / 85` wierszy `Drukuj`** — **0 różnic**.
+     - **Okleiny:** `45× 0.80_W` (`53,716 mb` netto = `51,060 + 2,656 mb` → `55 mb` usługi / `70 mb` taśmy), `14× 1.00_L` (`30,755 mb` netto → `31 mb` / `45 mb`), `26× brak`, `rozne = false`, `U702 ST9` — **0 różnic**.
+     - **Szablony, zawiasy i otwory CNC:** `52` `Wręgowanie`, `11/11` Blum INSERTA (`typ_uchwytu = 0`), **`400/400` płaszczyznowych + `220/220` krawędziowych = `620/620` unikalnych (`715/715` z SZT)**, maks. odchyłka **`0,000000 mm`**, `52/52` SVG (`400` kółek, `220` czerwonych linii) oraz zweryfikowana geometria `6/6` dolnych krawędzi na podglądach SVG — **0 rozbieżności**.
 
 ---
 
 ## 8. ZMIANA DO WPROWADZENIA PRZED PŁATNOŚCIĄ (2026-11-22): okleina dolnych krawędzi pralni
 
-**Status: NIEWPROWADZONA** (do zrobienia przez agenta zamawiającego; po wprowadzeniu zmienić na `WPROWADZONA`, wpisać nowy numer rozkroju i kwotę).
+**Status: WPROWADZONA (2026-11-22)** — nowy rozkrój w koszyku: **`21850722`** (`https://centrum.meble.pl/rozkroj,r21850722`, ważny do `20.01.2027 r.`), kwota brutto: **`5 922,99 PLN`** (`4 815,44 PLN` netto, `-1,64 PLN` względem `21825702`; stary `21825702` usunięty z koszyka dopiero po potwierdzeniu obecności `21850722`). Niezależny audyt live DOM + SVG + `Drukuj` potwierdził **100% zgodności (`85/85` formatek, `620/620` otworów, `6/6` krawędzi, 0 błędów)**.
 
 Decyzja użytkownika (`pralnia/ustalenia.md`, 2026-11-22): dolne krawędzie 6 formatek pralni stojących na kafelkach mają być oklejone
 (ochrona przed wodą z pralki). Repozytorium: `pralnia/wyniki/formatki.csv` (kolumna OKLEINA `... + 1SZ (dół)`), `pralnia/zamowienie.md` pkt 3.
 
-| Wiersz manifestu | Kod | Wymiar | Okleina teraz | Okleina po zmianie |
-|---:|---|---:|---|---|
-| 14 | `PR-L1B1` | 1743 × 637 | 1 | **1 + 4** |
-| 32 | `PR-L1B2` | 1743 × 637 | 1 | **1 + 4** |
-| 19 | `PR-KB1` | 489 × 200 | 1 | **1 + 4** |
-| 22 | `PR-PB1` | 489 × 200 | 1 | **1 + 4** |
-| 25 | `PR-L1T` | 1743 × 576 | brak | **4** |
-| 28 | `PR-PT1` | 489 × 406 | brak | **2** |
+| Wiersz manifestu | Kod | Wymiar | Okleina przed | Okleina w `21850722` | Weryfikacja SVG (live `r21850722`) |
+|---:|---|---:|---|---|---|
+| 14 | `PR-L1B1` | 1743 × 637 | 1 | **1 + 4** (`0,8 mm` ABS) | **PASS** (`Wręgowanie`, 8 otw., kraw. 4 przy `X=0` naprzeciw `X=1734`) |
+| 32 | `PR-L1B2` | 1743 × 637 | 1 | **1 + 4** (`0,8 mm` ABS) | **PASS** (`Wręgowanie`, 9 otw. z `GN1`, kraw. 4 przy `X=0` naprzeciw `X=1734`) |
+| 19 | `PR-KB1` | 489 × 200 | 1 | **1 + 4** (`0,8 mm` ABS) | **PASS** (`Wręgowanie`, 3+2 otw., kraw. 4 naprzeciw `K2` z kołkami Ø8) |
+| 22 | `PR-PB1` | 489 × 200 | 1 | **1 + 4** (`0,8 mm` ABS) | **PASS** (`Wręgowanie`, 6+2 otw., kraw. 4 naprzeciw `K2` z Ø4×35) |
+| 25 | `PR-L1T` | 1743 × 576 | brak | **4** (`0,8 mm` ABS) | **PASS** (`Wręgowanie`, 12 otw. na K1/K3, wyłącznie kraw. 4) |
+| 28 | `PR-PT1` | 489 × 406 | brak | **2** (`0,8 mm` ABS) | **PASS** (`Wręgowanie`, 7 otw., kraw. 2 naprzeciw `K4` pod `PP1`) |
 
 - Grubość: **ABS 0,8 mm U702** (to samo obrzeże co reszta korpusów). **NIE** `1,0 mm klejenie bezspoinowe`: wyłącza szablon
   `Wręgowanie i nawierty`, a wszystkie 6 formatek ma CNC; przy `różnymi obrzeżami` 1,0 mm nie jest dostępne.
-- Wymiary, otwory, szablony i pozostałe krawędzie BEZ ZMIAN.
-- Kontrola: `PR-L1B1` / `PR-L1B2` – krawędź 4 po stronie X = 0 (otwory pod wieniec `L1W` są przy X 1734, czyli przy krawędzi 2 = góra);
-  `PR-PT1` – krawędź 2 (w krawędzi 4 są otwory Ø4 × 35 pod `PP1` = góra); `PR-KB1` – krawędź 4 (kołki Ø8 do `KB2` są w krawędzi 2 = góra);
-  `PR-PB1` – krawędź 4 (otwory Ø4 × 35 pod `PP1` w krawędzi 2 = góra); `PR-L1T` – bez otworów na krótkich krawędziach, krawędź 4.
-- Oczekiwany skutek w koszyku: obrzeże ABS 0,8 mm + ok. 2,7 mb (`2 × 0,637 + 2 × 0,2 + 0,576 + 0,406`), `Oklejanie płyty` + ok. 3 mb;
-  liczba formatek, sztuk, m² i wierceń bez zmian.
+- Wymiary, otwory, szablony i pozostałe krawędzie BEZ ZMIAN (potwierdzone `0,000000 mm` w niezależnym live audycie `r21850722`).
+- Skutek w koszyku (`21825702` → `21850722`): `Obrzeże ABS 0,8 mm` `65 → 70 mb` (`+5 mb` / `+8,35 PLN`, netto `+2,656 mb`), `Oklejanie płyty` `48 → 51 mb` (`+3 mb` / `+18,81 PLN`), `Cięcie płyty` PREMIUM `192 → 186 mb` (`-6 mb` / `-28,80 PLN`); liczba formatek (`85`), sztuk (`102`), `m²` (`39,40`), płyt (`7,75 + 0,5`) i wierceń (`11 + 63 szt.`) bez zmian.
 
 ---
 
-## 7. Kompletny manifest 85 pozycji w rozkroju `21825702` (do audytu pomieszczeń)
+## 7. Kompletny manifest 85 pozycji w rozkroju `21850722` (do audytu pomieszczeń)
 
 *Konwencja krawędzi: `1` = góra, `2` = prawa, `3` = dół, `4` = lewa. Na frontach `x1, x3` mierzone od góry, `x2, x4` od dołu. Wszystkie otwory płaszczyznowe i krawędziowe z tabeli poniżej zostały wprowadzone wg `*/wyniki/kalkulator_nawierty*.csv` i zweryfikowane co do liczby kropek/kresek na podglądzie SVG każdego wiersza.*
 
@@ -194,25 +200,25 @@ Decyzja użytkownika (`pralnia/ustalenia.md`, 2026-11-22): dolne krawędzie 6 fo
 | 11 | `PR-LF6` | 200 × 60 | 1 | brak | bez nawiertów | — *(Wariant B: 2 otw. ręcznie)* |
 | 12 | `PR-RDW` | 481 × 100 | 1 | 1 (0,8 mm ABS) | Wręgowanie | płaszczyzna: 0, czoło: 4 |
 | 13 | `PR-RDW2` | 481 × 100 | 1 | 1 (0,8 mm ABS) | Wręgowanie | płaszczyzna: 0, czoło: 6 |
-| 14 | `PR-L1B1` | 1743 × 637 | 1 | 1 (0,8 mm ABS) | Wręgowanie | płaszczyzna: 8, czoło: 0 |
+| 14 | `PR-L1B1` | 1743 × 637 | 1 | 1 + 4 (0,8 mm ABS) | Wręgowanie | płaszczyzna: 8, czoło: 0 |
 | 15 | `PR-L2B-1` | 912 × 637 | 1 | 1 (0,8 mm ABS) | Wręgowanie | płaszczyzna: 21, czoło: 0 |
 | 16 | `PR-L2B-2` | 912 × 637 | 1 | 1 (0,8 mm ABS) | Wręgowanie | płaszczyzna: 13, czoło: 0 |
 | 17 | `PR-NWB-1` | 912 × 635 | 1 | 1 (0,8 mm ABS) | Wręgowanie | płaszczyzna: 13, czoło: 0 |
 | 18 | `PR-NWB-2` | 912 × 635 | 1 | 1 (0,8 mm ABS) | Wręgowanie | płaszczyzna: 21, czoło: 0 |
-| 19 | `PR-KB1` | 489 × 200 | 1 | 1 (0,8 mm ABS) | Wręgowanie | płaszczyzna: 3, czoło: 2 |
+| 19 | `PR-KB1` | 489 × 200 | 1 | 1 + 4 (0,8 mm ABS) | Wręgowanie | płaszczyzna: 3, czoło: 2 |
 | 20 | `PR-KB2` | 1254 × 475 | 1 | 1 (0,8 mm ABS) | Wręgowanie | płaszczyzna: 48, czoło: 2 |
 | 21 | `PR-KB3` | 912 × 475 | 1 | 1 (0,8 mm ABS) | Wręgowanie | płaszczyzna: 16, czoło: 0 |
-| 22 | `PR-PB1` | 489 × 200 | 1 | 1 (0,8 mm ABS) | Wręgowanie | płaszczyzna: 6, czoło: 2 |
+| 22 | `PR-PB1` | 489 × 200 | 1 | 1 + 4 (0,8 mm ABS) | Wręgowanie | płaszczyzna: 6, czoło: 2 |
 | 23 | `PR-PB2` | 1236 × 273 | 1 | 1 (0,8 mm ABS) | Wręgowanie | płaszczyzna: 34, czoło: 2 |
 | 24 | `PR-PB3` | 912 × 273 | 1 | 1 (0,8 mm ABS) | Wręgowanie | płaszczyzna: 14, czoło: 0 |
-| 25 | `PR-L1T` | 1743 × 576 | 1 | brak | Wręgowanie | płaszczyzna: 0, czoło: 12 |
+| 25 | `PR-L1T` | 1743 × 576 | 1 | 4 (0,8 mm ABS) | Wręgowanie | płaszczyzna: 0, czoło: 12 |
 | 26 | `PR-L2T` | 912 × 576 | 1 | brak | Wręgowanie | płaszczyzna: 9, czoło: 8 |
 | 27 | `PR-NWT` | 912 × 570 | 1 | brak | Wręgowanie | płaszczyzna: 9, czoło: 8 |
-| 28 | `PR-PT1` | 489 × 406 | 1 | brak | Wręgowanie | płaszczyzna: 0, czoło: 7 |
+| 28 | `PR-PT1` | 489 × 406 | 1 | 2 (0,8 mm ABS) | Wręgowanie | płaszczyzna: 0, czoło: 7 |
 | 29 | `PR-KT2` | 912 × 126 | 1 | brak | Wręgowanie | płaszczyzna: 3, czoło: 4 |
 | 30 | `PR-PT2` | 1236 × 349 | 1 | brak | Wręgowanie | płaszczyzna: 2, czoło: 6 |
 | 31 | `PR-PT3` | 912 × 349 | 1 | brak | Wręgowanie | płaszczyzna: 7, czoło: 4 |
-| 32 | `PR-L1B2` | 1743 × 637 | 1 | 1 (0,8 mm ABS) | Wręgowanie | płaszczyzna: 9, czoło: 0 |
+| 32 | `PR-L1B2` | 1743 × 637 | 1 | 1 + 4 (0,8 mm ABS) | Wręgowanie | płaszczyzna: 9, czoło: 0 |
 | 33 | `PR-KT1A` | 405 × 121 | 1 | brak | bez nawiertów | — |
 | 34 | `PR-KT1B` | 405 × 121 | 1 | brak | bez nawiertów | — |
 | 35 | `PR-KT1C` | 347 × 121 | 1 | brak | bez nawiertów | — |
