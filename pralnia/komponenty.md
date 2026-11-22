@@ -4,7 +4,7 @@ Liczby łączników, otworów i zaślepek: `wyniki/podsumowanie.json` (źródło
 
 ## Płyta
 - Egger U702 ST9 „Kaszmir" 18 mm (od 2026-11-19, wcześniej W1200), centrum.meble.pl; 44 pozycje / 56 sztuk / 16,69 m² (wyniki/formatki.csv, razem z L1P, RDW2, LF6, frontami zapasowymi F8, F10 i zapasowym wieńcem L1WD).
-- Okleina: fronty 1,0 mm bezspoinowa (szablony zawiasów), reszta ABS 0,8 mm z nawiertami.
+- Okleina: fronty 1,0 mm bezspoinowa (szablony zawiasów), reszta ABS 0,8 mm z nawiertami; od 2026-11-22 także dolne krawędzie formatek stojących na podłodze (L1B1, L1B2, KB1, PB1, L1T, PT1) – ABS 0,8 mm.
 - KP1: w modelu 184×126, ZAMÓWIĆ 200×126 (minimum kalkulatora) i skrócić samodzielnie o 16 mm od tyłu (krawędź 4, bez otworów); w kalkulatorze X otworów w krawędzi 3: 66 i 150.
 
 ## Zawiasy i prowadniki (Blum)
@@ -46,6 +46,10 @@ Strona zawiasów: F1, F2 po lewej; F3, F4, F5, F7, F8, F9, F10 po prawej.
 - Podkładki poziomujące 1–3 mm pod L1 i prawy dół: 1 opakowanie.
 - Półka luzem L1P (619×574): 4 podpórki Ø5 (otwory w L1B1/L1B2 wierci użytkownik).
 - Wieniec zapasowy L1WD (575×100, luzem): w przyszłości 4 kątowniki 25×25 + wkręty Ø3,5×15 (nie kupować teraz).
+
+## Wykończenie szczelin (po montażu, decyzja 2026-11-22)
+- Akryl w kolorze ściany: 1–2 tuby, szczeliny bok–ściana (3–4,5 mm) i fronty–sufit (5–10 mm).
+- Jeśli akryl nie wyjdzie: obrzeże ABS 2 mm w dekorze U702 (np. 2 × 43 mm, rolka ok. 5 m) wsunięte w szczelinę bok–ściana, klejone do boku. Blend z płyty nie ma.
 
 ## Uchwyty
 - GUBBARP 116 biały: 7 szt. (F1, F2, F3, F4, F5, F7, F9) + 2 na zapas (F8, F10); otwory wierci użytkownik.
