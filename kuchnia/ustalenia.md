@@ -329,6 +329,10 @@ MAXIMERA Ø5 × 12 vs 13, rowek LED 17,2 vs 18,2, kątowniki pod P1, cofnięcie 
 - Kątowniki pod P1 odpadają: pod P1 są płytki.
 - Cofnięcie listwy za WSZ: do decyzji po wyborze zatrzasku.
 
+### 2026-11-23: słoje
+- Tabela słojów w `zamowienie.md` potwierdzona: elementy pionowe pionowo, poziome równolegle do przodu, F1, WSZ i fronty METOD
+  pionowo (w kalkulatorze boki i tyły „na szerokość”, poziome elementy WS, WSZ, F1 i METOD „na wysokość”).
+
 ### 2026-11-23: wyciszenie kanału okapu (zastępuje matę z 2026-11-14 i rozważania o tłumiku)
 - Bez tłumika w ciągu kanału (sztywnego, komorowego, elastycznego, wkładek): sztywny Ø150 nie mieści się przy osi pionu,
   elastyczne mają perforowane wnętrze i wełnę (tłuszcz), a przy silniku w okapie zysk w kuchni jest mały.
@@ -349,16 +353,13 @@ MAXIMERA Ø5 × 12 vs 13, rowek LED 17,2 vs 18,2, kątowniki pod P1, cofnięcie 
 - Model, formatki i otwory CNC bez zmian.
 
 ## Do zmierzenia przy pomiarach weryfikacyjnych w mieszkaniu
-- 2026-11-19: lista ograniczona do sprawdzenia, czy meble fizycznie się mieszczą (decyzja użytkownika):
-  L1 narożnik → ścianka nad płytkami ≥ 3207 (plan 3208); L2 to samo pod sufitem i 300 od ściany głównej ≥ 3207;
-  L3 góra płytek → sufit w X 2380, 2932, 3206 ≥ 1168 (plan 1169); L4 ściana główna → bok słupka przy ścianie lewej
-  i 400 od niej ≥ 805; L5 ściana główna → ramka kratki ≥ 301 (plan 303). Arkusz „Kuchnia: pomiary weryfikacyjne”.
-- [ZMIERZONE 2026-11-18: 9–12, SO głębsza do 304] O ile płytki wystają przed ścianę nad nimi.
+- Wszystko zmierzone (L1–L5 2026-11-19, występ płytek 2026-11-18). Zostaje na montaż: szczelina blacha okapu–bok przy nitach
+  (grubość dystansów EPDM) i próba, czy wkręty 3,5 trzymają prowadniki F1.
 
 ## Założenia do potwierdzenia
 - [ZMIERZONE 2026-11-18] Położenie okapu w głąb: kołnierz z 14–304, korpus z 32–285, oś wylotu z 138, otwory
   montażowe 35 i 215 od lica przodu korpusu (z 250 i 70).
-- Luz 2 mm wąskiej szafki do ścianki.
+- [POTWIERDZONE 2026-11-19, L1 3206] Luz 2 mm wąskiej szafki do ścianki.
 
 ### 2026-11-14: bok SOB-1 bez konfirmatów, półka SOP, zasilanie okapu
 - Lewy bok szafki okapowej SOB-1 jest widoczny nad półką P3: ma mieć czyste lico zewnętrzne. Zamiast konfirmatów
@@ -416,3 +417,4 @@ MAXIMERA Ø5 × 12 vs 13, rowek LED 17,2 vs 18,2, kątowniki pod P1, cofnięcie 
 - 2026-11-23: decyzje po audycie v6: MAXIMERA Ø5 × 12, rowek LED 17,2, wkręty okapu 3,5 × 16 z podkładkami, bez kątowników pod P1.
 - 2026-11-23: widok 3D: para kolan 15° nad okapem narysowana jako pochylony odcinek (wcześniej poziomy walec w poprzek).
 - 2026-11-23: wyciszenie kanału: bez tłumika, Alubutyl + pianka kauczukowa na rurach, Alubutyl na korpusie okapu, dystanse EPDM pod okap, króciec bez blachowkrętów.
+- 2026-11-23: słoje potwierdzone; zamówienie składa inny agent wg `zamowienie/prompt_agenta_zamowienie.md`, weryfikacja tutaj.
