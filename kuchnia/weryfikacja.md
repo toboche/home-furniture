@@ -21,7 +21,7 @@ przed zamówieniem”, od 2026-11-19 tylko L1–L5: czy meble fizycznie się mie
 | MIEJSCE | SPRAWDZONE | WYNIK |
 |---|---|---|
 | Okap w SO | korpus 513 (z nitami) w 516, kołnierz z 14–304 nad płytkami do 12 | OK: 1,5 z boków, 2 z tyłu nad płytkami |
-| Wkręty okapu | nawierty Ø3 × 5 Y 1592, z 250 i 70; w widocznym SOB-1 wkręty 3,5 × 13, w SOB-2 3,5 × 16 | OK |
+| Wkręty okapu | nawierty Ø3 × 5 Y 1592, z 250 i 70; wkręty 3,5 × 16 z podkładkami dystansowymi w obu bokach (od 2026-11-23) | OK |
 | Zawiasy F1 | Y 1850, 2210, 2563,5 (od 2026-11-19, sufit niżej): prowadniki nad okapem (do 1776), SOD (1786–1804) i SOP (2104–2122); nawierty 37 od krawędzi SOB-2 (z 267, poprawione 2026-11-19) | OK |
 | TIP-ON | 956.1004 na SOB-1 ok. Y 1850, przy przodzie: nad okapem i SOD; F1 2 przed korpusem (2026-11-19) | OK |
 | Przejście wylot → pion | 28,5 do tyłu na 2 kolanach 15° Ø150 spiętych mufą, para obrócona w poziomie (pion ok. 10–20 w prawo); do ok. Y 1992 pod SOP 2104 | OK; wycięcie w SOP dopasować na miejscu |

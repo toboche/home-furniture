@@ -153,7 +153,7 @@ i otwór na przewód w SOT robi użytkownik sam (w CSV są tylko nawierty środk
 
 ### Fronty METOD (wiersze 16–21)
 
-- Wymiary, nazwy i otwory z `kuchnia/zamowienie/fronty_metod.csv`: otwory Ø5 × 13 na stronie `Tył (B)`
+- Wymiary, nazwy i otwory z `kuchnia/zamowienie/fronty_metod.csv`: otwory Ø5 × 12 na stronie `Tył (B)`
   na X = 32 i 565 oraz Y z kolumny NAWIERTY. CSV podaje X od lewego dolnego rogu widoku od tyłu; otwory są symetryczne
   względem środka szerokości (32 + 565 = 597), więc w kalkulatorze wpisujesz te same liczby bez odbijania. Y liczony
   od dolnej krawędzi frontu.

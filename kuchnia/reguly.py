@@ -92,7 +92,7 @@ def dodatkowe_otwory(P, parts, loc):
         for z in Z_OKW:
             pos = {'y': Y_OKW, 'z': z}
             q['holes'].append(dict(kind='FACE', side=side, u=loc(q, q['u'], pos[q['u']]), v=loc(q, q['v'], pos[q['v']]),
-                                   d=3, depth=5, partner=('wkręt okapu 3,5 x 13' if code == 'SOB-1' else 'wkręt okapu 3,5 x 16'), axis_n='-', pin=False, pilot=True,
+                                   d=3, depth=5, partner='wkręt okapu 3,5 x 16 (z podkładką dystansową)', axis_n='-', pin=False, pilot=True,
                                    opis='Nawiert pilotowy Ø3 x 5 pod wkręt okapu'))
     # prowadniki zawiasów F1 w SOB-2: nawierty pilotowe Ø3 x 12, 37 od przedniej krawędzi boku, po 2 co 32
     q = P['SOB-2']
@@ -206,10 +206,10 @@ FORMATKI = [
     F('WSP', 'Wąska szafka: półki stałe', okleina='1SZ', nawierty='KONFIRMATY'),
     F('P1', 'Półka LED: ściana lewa (wnęka)', okleina='1DL',
       nawierty='CZOŁA: 3 x Ø8 x 35 pod pręty M8 od ściany lewej (użytkownik pogłębia do 85)',
-      uwagi='okleina na długiej krawędzi od strony kuchni (804); koniec przy słupku przykręcany przez bok słupka (wkręty do 4 x 40, nawierty ręczne). Rowki 18,2 × 6 pod profil LED w spodzie frezuje użytkownik (meble.pl nie robi wręgów zachodzących na siebie)'),
+      uwagi='okleina na długiej krawędzi od strony kuchni (804); koniec przy słupku przykręcany przez bok słupka (wkręty do 4 x 40, nawierty ręczne). Rowki 17,2 × 6 pod profil LED w spodzie frezuje użytkownik (meble.pl nie robi wręgów zachodzących na siebie)'),
     F('P3', 'Półka LED: ściana główna', okleina='1DL',
       nawierty='CZOŁA: 5 x Ø8 x 35 pod pręty M8 w tylnej krawędzi (użytkownik pogłębia do 85)',
-      uwagi='okleina na przedniej krawędzi (1978). Rowek 18,2 × 6 pod profil LED w spodzie frezuje użytkownik (meble.pl nie robi wręgów zachodzących na siebie)'),
+      uwagi='okleina na przedniej krawędzi (1978). Rowek 17,2 × 6 pod profil LED w spodzie frezuje użytkownik (meble.pl nie robi wręgów zachodzących na siebie)'),
     F('F1', 'Front szafki okapowej, otwierany na docisk', okleina='2DL+2SZ',
       nawierty='ZAWIASY 3 SZT (PRAWA), ' + ZAW, uwagi='3 zawiasy Blum CLIP top 110° bez sprężyny 70T3550.TL + prowadniki 173L6100, puszki 337,5, 697,5 i 1051 od dołu frontu (100 od góry) (wszystkie nad okapem i SOD); 1 x TIP-ON 956.1004 (krótki, z magnesem) na adapterze 956.1201 na SOB-1 ok. Y 1850 (drugi w razie potrzeby); szczelina pod TIP-ON ustawić na 2,5–3 (przy słabym nacisku dół F1 nie dobija do SOB-1)'),
 ]

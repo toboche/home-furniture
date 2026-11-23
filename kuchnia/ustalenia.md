@@ -48,7 +48,7 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
     Profil CAŁKOWICIE WPUSZCZANY w spód półki (decyzja 2026-11-15): MasterLED wpuszczany czarny 12 mm, klosz mleczny,
     odcinki 1 m (Allegro, oferta 18841961757). Przekrój: kołnierz 23,6, korpus 16,9, wys. 7 razem z kołnierzem
     (korpus ok. 5,5 w rowku, kołnierz ok. 1,5 zostaje pod spodem półki i zakrywa krawędzie rowka), wnętrze 12,4.
-    Rowek 18,2 × 6 (zostaje 12 mm płyty), oś profilu 39,1 od przodu półki. Frezuje użytkownik: kalkulator meble.pl
+    Rowek 17,2 × 6 (2026-11-23, było 18,2; zostaje 12 mm płyty), oś profilu 39,1 od przodu półki. Frezuje użytkownik: kalkulator meble.pl
     odrzuca wręgi zachodzące na siebie (sprawdzone 2026-11-15: „minimalna odległość między wręgowaniami to 5mm”). Odcinki: P3 ok. 2030 (od narożnika P1 do 20 przed SOB-1), P1 wzdłuż przodu ok. 620,
     przy słupku ok. 370 → razem ok. 3,0 m: kupić 4 szt. po 1 m (lepiej 5, zapas na cięcia 45° i pomyłkę).
     Narożniki: profile cięte pod 45°, taśma łączona łącznikami 3-pin lub lutowana. Styki odcinków na P3 nieuniknione (1 m).
@@ -113,7 +113,7 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
   - kolumna 1 (od góry): 142 (szuflada niska), 397 (wysoka), 397 (wysoka);
   - kolumna 2 (od góry): 197 (średnia), 197 (średnia), 397 (wysoka).
 - Dół szuflady przy dolnej krawędzi frontu (standard METOD). Nawierty pod mocowanie MAXIMERA na tyle frontu (wierci sklep,
-  szablon „Wręgowanie i nawierty”): Ø5 × 13 (w poprzednim zamówieniu 10), x = 32 i 565 od lewej krawędzi (widok od tyłu),
+  szablon „Wręgowanie i nawierty”): Ø5 × 12 (od 2026-11-23; wcześniej 13, w poprzednim zamówieniu 10), x = 32 i 565 od lewej krawędzi (widok od tyłu),
   y od dołu: niska 39, 58; średnia + 117, 136; wysoka + 185, 204 (pozycje z poprzedniego zamówienia, potwierdzone).
 - Otworów na gałki nie zamawiamy (wierci użytkownik).
 - Dopasowanie usłojenia w kolumnie: nie da się zamówić przez stronę. Fronty nazwane w kalkulatorze „usłojenie 21a–21c”
@@ -319,6 +319,16 @@ Wdrożone (bezsporne):
 Do rozmowy z użytkownikiem: słoje, wkręty okapu i prowadników (piloty Ø3), skan prętów V23–V25, pomiar METOD V30,
 MAXIMERA Ø5 × 12 vs 13, rowek LED 17,2 vs 18,2, kątowniki pod P1, cofnięcie listwy WSZ, tłumik okapu (wpływa na SOD i SOP).
 
+### 2026-11-23: decyzje po audycie v6
+- Prowadniki F1: wkręty 3,5 × 15 w nawiertach Ø3 × 12 ze sklepu; użytkownik sprawdzi, czy trzymają, w razie potrzeby Ø4 × 16.
+- Okap: wkręty 3,5 × 16 z kompletu w obu bokach z podkładkami dystansowymi (szczelina przy nitach); w SOB-1 do lica zostaje ok. 6, wystarczy.
+- Pręty M8: bez skanu zbrojenia (brak wykrywacza); przy trafieniu na pręt otwór w ścianie przesunąć, w półce nawiercić nowy.
+  Pogłębianie w półce z prowadnicą, w ścianie zaczynać bez udaru.
+- Fronty METOD: wysokość FM1 142 przy miejscu 146 celowa (szczeliny nad i pod). Nawierty MAXIMERA Ø5 × 12 (było 13).
+- Rowek LED 17,2 × 6 (było 18,2), oś 39,1 bez zmian: 30,5–47,7 od krawędzi półki; kołnierz profilu 23,6 przykrywa rowek. Frezarki brak: kupić / pożyczyć.
+- Kątowniki pod P1 odpadają: pod P1 są płytki.
+- Cofnięcie listwy za WSZ: do decyzji po wyborze zatrzasku.
+
 ## Do zmierzenia przy pomiarach weryfikacyjnych w mieszkaniu
 - 2026-11-19: lista ograniczona do sprawdzenia, czy meble fizycznie się mieszczą (decyzja użytkownika):
   L1 narożnik → ścianka nad płytkami ≥ 3207 (plan 3208); L2 to samo pod sufitem i 300 od ściany głównej ≥ 3207;
@@ -384,3 +394,4 @@ MAXIMERA Ø5 × 12 vs 13, rowek LED 17,2 vs 18,2, kątowniki pod P1, cofnięcie 
 - 2026-11-19: pomiary L1–L5 zamknięte (L2 ok, L4 805, L5 306).
 - 2026-11-22: puszki F1 po obniżeniu szafek: 337,5 / 697,5 / 1051 od dołu (front 1151); prompt dla agenta zamówienia w `zamowienie/prompt_agenta_zamowienie.md`.
 - 2026-11-22: audyty v5 i v6: okleina WS 1SZ, podpórki SOD z 75, `zamowienie.md` (słoje do potwierdzenia), zatrzaski i linka WSZ, poszerzenie U w SOP, porządki liczb.
+- 2026-11-23: decyzje po audycie v6: MAXIMERA Ø5 × 12, rowek LED 17,2, wkręty okapu 3,5 × 16 z podkładkami, bez kątowników pod P1.

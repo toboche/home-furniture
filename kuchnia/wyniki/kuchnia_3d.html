@@ -113,8 +113,8 @@ var NPW=2;             /* półki w wąskiej szafce (równe przegrody; 2026-11-1
 var LP1=J-1;           /* półka P1 wzdłuż ściany lewej: 804 (2026-11-15: luz 2 → 1) */
 var GP1=400, GP3=200;  /* głębokości półek */
 /* Profil LED MasterLED wpuszczany 12 mm (2026-11-15): kołnierz 23,6, korpus 16,9, wys. 7 (korpus ok. 5,5 + kołnierz ok. 1,5).
-   Rowek 18,2 × 6, 30–48,2 od krawędzi półki, frezuje użytkownik (meble.pl nie robi wręgów zachodzących na siebie). */
-var LRO=30, LRW=18.2, LRG=6, LKW=23.6, LKH=1.5;
+   Rowek 17,2 × 6, 30,5–47,7 od krawędzi półki (2026-11-23, było 18,2 × 6 od 30; oś bez zmian), frezuje użytkownik (meble.pl nie robi wręgów zachodzących na siebie). */
+var LRO=30.5, LRW=17.2, LRG=6, LKW=23.6, LKH=1.5;
 var LRA=LRO+LRW/2;     /* oś rowka od krawędzi półki: 39,1 */
 var ZLS=LP1-LRA;       /* oś profilu przy słupku (od ściany głównej) */
 var PR=4;              /* pręty gwintowane M8 kl. 8.8 na kotwie chemicznej w betonie (2026-11-16; wcześniej wsporniki ukryte Ø10) */
@@ -158,9 +158,9 @@ add([
 add([
   {n:'P1: Półka LED, ściana lewa (804 × 400)',layer:'Półka LED',x:0,y:YP,z:0,w:GP1,h:PP,d:LP1,c:POL},
   {n:'P3: Półka LED, ściana główna (1978 × 200)',layer:'Półka LED',x:GP1,y:YP,z:0,w:XSO-GP1,h:PP,d:GP3,c:POL},
-  {n:'Profil LED wpuszczany pod P1, wzdłuż przodu (rowek 18,2 × 6)',layer:'LED',x:GP1-LRO-LRW,y:YP,z:GP3-LRO-LRW,w:LRW,h:LRG,d:LP1-LRO-(GP3-LRO-LRW),c:LED},
+  {n:'Profil LED wpuszczany pod P1, wzdłuż przodu (rowek 17,2 × 6)',layer:'LED',x:GP1-LRO-LRW,y:YP,z:GP3-LRO-LRW,w:LRW,h:LRG,d:LP1-LRO-(GP3-LRO-LRW),c:LED},
   {n:'Profil LED wpuszczany pod P1 przy słupku (od kabla w ścianie lewej; zaczyna się za płytkami)',layer:'LED',x:PLW+1,y:YP,z:LP1-LRO-LRW,w:GP1-LRO-PLW-1,h:LRG,d:LRW,c:LED},
-  {n:'Profil LED wpuszczany pod P3 (rowek 18,2 × 6)',layer:'LED',x:GP1-LRO-LRW,y:YP,z:GP3-LRO-LRW,w:XSO-(GP1-LRO-LRW)-20,h:LRG,d:LRW,c:LED},
+  {n:'Profil LED wpuszczany pod P3 (rowek 17,2 × 6)',layer:'LED',x:GP1-LRO-LRW,y:YP,z:GP3-LRO-LRW,w:XSO-(GP1-LRO-LRW)-20,h:LRG,d:LRW,c:LED},
   {n:'Kołnierz profilu LED pod P1, wzdłuż przodu',layer:'LED',x:GP1-LRA-LKW/2,y:YP-LKH,z:GP3-LRA-LKW/2,w:LKW,h:LKH,d:ZLS-(GP3-LRA)+LKW,c:LED},
   {n:'Kołnierz profilu LED pod P1 przy słupku',layer:'LED',x:PLW+1,y:YP-LKH,z:ZLS-LKW/2,w:GP1-LRA-LKW/2-PLW-1,h:LKH,d:LKW,c:LED},
   {n:'Kołnierz profilu LED pod P3',layer:'LED',x:GP1-LRA-LKW/2,y:YP-LKH,z:GP3-LRA-LKW/2,w:XSO-(GP1-LRA-LKW/2)-20,h:LKH,d:LKW,c:LED}
