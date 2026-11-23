@@ -1273,6 +1273,7 @@ function build(it){
     g=new THREE.CylinderGeometry(it.r*MM,it.r*MM,it.len*MM,16);
     mesh=new THREE.Mesh(g,mat);
     if(it.ax==='x')mesh.rotation.z=Math.PI/2;else if(it.ax==='z')mesh.rotation.x=Math.PI/2;
+    else if(it.rx)mesh.rotation.x=it.rx;  /* opcjonalne pochylenie pionowego walca w płaszczyźnie y–z (radiany) */
     mesh.position.set(it.px*MM,it.py*MM,it.pz*MM);
   }else if(it.t==='cyl'){
     g=new THREE.CylinderGeometry(it.r*MM,it.r*MM,it.len*MM,48);
