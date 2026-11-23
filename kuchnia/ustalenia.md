@@ -102,7 +102,7 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
   redukcja w wąskiej szafce, kolano 90° i poziom w Ø150.]
   Pion Ø150 na osi z 109,5 (redukcja mimośrodowa płaską stroną do ściany przesuwa oś na 97). Przy 500 m³/h prędkość w Ø150 ok. 7,9 m/s, w Ø125 ok. 11,3 m/s.
   Pion Ø150 mieści się w SO (z 34,5–184,5, plecy do z 18), otwór w SOP Ø170.
-- Mata akustyczna (np. kauczukowa samoprzylepna ok. 10 mm) na zewnątrz rur, przerwana w otworach; obejmy z gumową wkładką;
+- Mata akustyczna (np. kauczukowa samoprzylepna ok. 10 mm) na zewnątrz rur, przerwana w otworach [od 2026-11-23: Alubutyl + pianka kauczukowa, patrz wpis „wyciszenie kanału okapu”]; obejmy z gumową wkładką;
   rura nie dotyka płyt (w otworach Ø140 pierścień z miękkiej gumy/pianki). W skrzynce WS z matą 10: z 24,5–169,5,
   Y 2504,5–2649,5 (mieści się).
 - BEZ tłumika z wełną w kanale (tłuszcz osadza się w wypełnieniu: higiena i ryzyko pożaru).
@@ -329,6 +329,25 @@ MAXIMERA Ø5 × 12 vs 13, rowek LED 17,2 vs 18,2, kątowniki pod P1, cofnięcie 
 - Kątowniki pod P1 odpadają: pod P1 są płytki.
 - Cofnięcie listwy za WSZ: do decyzji po wyborze zatrzasku.
 
+### 2026-11-23: wyciszenie kanału okapu (zastępuje matę z 2026-11-14 i rozważania o tłumiku)
+- Bez tłumika w ciągu kanału (sztywnego, komorowego, elastycznego, wkładek): sztywny Ø150 nie mieści się przy osi pionu,
+  elastyczne mają perforowane wnętrze i wełnę (tłuszcz), a przy silniku w okapie zysk w kuchni jest mały.
+  Trasa bez zmian: gładkie spiro Ø150 z uszczelkami EPDM, kolana tłoczone 2 × 15° + 90°, redukcja mimośrodowa 150/125
+  (np. Alnor RSLL-150-125, nypel–nypel) na końcu w WS. W razie powrotu do tłumika: prosty pion w SO, do ok. 430 długości, Ø do ok. 220, SOP zostaje na 2104.
+- Izolacja dwuwarstwowa na zewnątrz rur i kształtek w SO: (1) Alubutyl 2–2,5 mm na odtłuszczoną blachę, dociśnięty wałkiem
+  (gasi „dzwonienie” blachy), (2) pianka kauczukowa zamkniętokomórkowa 6–10 mm + taśma na stykach. Ciasne miejsca:
+  - otwory Ø160 w SOB-2 i WSB-1: izolacja przerwana na grubości płyty, pierścień z miękkiej gumy / EPDM ok. 5 na stronę;
+  - wycięcie U w SOP: Alubutyl ciągły, pianka przerwana lub bez docisku do płyty;
+  - góra poziomego Ø150 pod SOW (8 prześwitu): Alubutyl 2 + pianka do 3–4, zostaje ≥ 2 luzu (nie rozpierać wieńca);
+  - skrzynka WS (redukcja, odcinek Ø150 za WSB-1): tylko Alubutyl 2, bez pianki (WSS, WSW, zatrzaski WSZ).
+- Korpus okapu DUO 55: pasy Alubutylu 2 na płaskich ściankach (przód, tył, góra, boki między nitami), z dala od otworów
+  wentylacyjnych silnika i elektroniki, tabliczki znamionowej i punktów przykręcenia. Między górą korpusu (Y 1776) a SOD
+  zostaje po Alubutylu ok. 5–8: pod SOD nic nie kleić, półka ma się wsuwać na podpórki.
+- Wibroizolacja: dystanse EPDM 3,5–4 (ok. 65–70 ShA) między blachą okapu a SOB-1 / SOB-2 i cienkie podkładki EPDM pod łbami
+  wkrętów 3,5 × 16 wewnątrz okapu (zamiast twardych podkładek). Rura nasunięta na króciec uszczelniona taśmą / opaską z gumą,
+  bez blachowkrętów; pion trzymają obejmy z gumą do SOT.
+- Model, formatki i otwory CNC bez zmian.
+
 ## Do zmierzenia przy pomiarach weryfikacyjnych w mieszkaniu
 - 2026-11-19: lista ograniczona do sprawdzenia, czy meble fizycznie się mieszczą (decyzja użytkownika):
   L1 narożnik → ścianka nad płytkami ≥ 3207 (plan 3208); L2 to samo pod sufitem i 300 od ściany głównej ≥ 3207;
@@ -396,3 +415,4 @@ MAXIMERA Ø5 × 12 vs 13, rowek LED 17,2 vs 18,2, kątowniki pod P1, cofnięcie 
 - 2026-11-22: audyty v5 i v6: okleina WS 1SZ, podpórki SOD z 75, `zamowienie.md` (słoje do potwierdzenia), zatrzaski i linka WSZ, poszerzenie U w SOP, porządki liczb.
 - 2026-11-23: decyzje po audycie v6: MAXIMERA Ø5 × 12, rowek LED 17,2, wkręty okapu 3,5 × 16 z podkładkami, bez kątowników pod P1.
 - 2026-11-23: widok 3D: para kolan 15° nad okapem narysowana jako pochylony odcinek (wcześniej poziomy walec w poprzek).
+- 2026-11-23: wyciszenie kanału: bez tłumika, Alubutyl + pianka kauczukowa na rurach, Alubutyl na korpusie okapu, dystanse EPDM pod okap, króciec bez blachowkrętów.

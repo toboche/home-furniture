@@ -21,7 +21,7 @@ Liczby łączników z `wyniki/podsumowanie.json` (przeliczenie 2026-11-19). Pozy
 | TIP-ON do drzwi, krótki, z magnesem | 956.1004 | 1 | do drzwi poniżej 1300; SOB-1 ok. Y 1850 (dolna część frontu nad okapem); drugi dokupić, jeśli jeden za słaby; szczelina F1–korpus ustawić na 2,5–3 |
 | Adapter prosty przykręcany do TIP-ON | 956.1201 | 1 | na wewnętrznym licu SOB-1 ok. Y 1850, wkręty 3,5 × 15 |
 | Wkręty do płyty 3,5 × 15 | ok. 20 | prowadniki, adaptery, zawiasy |
-| Wkręty okapu | 4 × 3,5 × 16 + 4 podkładki dystansowe | 16 z kompletu w oba boki (w widocznym SOB-1 do lica zostaje ok. 6); podkładki na grubość szczeliny blacha–bok przy nitach (ok. 3,5–4, zmierzyć); nawierty Ø3 × 5 robi sklep |
+| Wkręty okapu | 4 × 3,5 × 16 + 4 dystanse EPDM 3,5–4 (ok. 65–70 ShA) + 4 cienkie podkładki EPDM pod łby | 16 z kompletu w oba boki; dystanse z twardej gumy między blachą okapu a bokiem (grubość szczeliny przy nitach, zmierzyć), podkładki EPDM pod łbami wewnątrz okapu zamiast metalowych; w płycie zostaje ok. 10 wkrętu, w SOB-1 do lica ok. 6; nawierty Ø3 × 5 robi sklep |
 
 ## Mocowanie szafek i półki LED
 | POZYCJA | ILOŚĆ | UWAGI |
@@ -46,16 +46,19 @@ Liczby łączników z `wyniki/podsumowanie.json` (przeliczenie 2026-11-19). Pozy
 ## Kanał okapu (spiro, ocynk, uszczelki EPDM)
 | POZYCJA | ILOŚĆ | UWAGI |
 |---|---|---|
-| Krótki odcinek rury spiro Ø150 na króciec | z rury 1 m | króciec Ø148,5 zewn., 26 wysokości: rura nachodzi na króciec, opaska/taśma |
+| Krótki odcinek rury spiro Ø150 na króciec | z rury 1 m | króciec Ø148,5 zewn., 26 wysokości: rura nachodzi na króciec; uszczelnić taśmą EPDM / aluminiową albo opaską z wkładką gumową, BEZ blachowkrętów (drgania silnika nie przechodzą na kanał) |
 | Kolano 15° Ø150 tłoczone z uszczelką (np. Alnor BPL-150-15) | 2 | przejście do pionu o 28,5: spięte mufą, para obrócona w poziomie |
 | Mufa (łącznik kształtek) Ø150, np. Alnor MSF-150 | 1 | między kolanami 15° |
 | Rura spiro Ø150 | 1 m | pion ok. 380 + poziom ok. 170 + wsunięcia |
 | Kolano 90° Ø150 tłoczone | 1 | pod sufitem |
-| Redukcja mimośrodowa 150/125 | 1 | w wąskiej szafce, płaską stroną do ściany głównej, wąskim końcem w rurze ze ścianki (wystaje 115) |
+| Redukcja mimośrodowa 150/125, nypel–nypel (np. Alnor RSLL-150-125) | 1 | w wąskiej szafce, płaską stroną do ściany głównej, wąskim końcem w rurze ze ścianki (wystaje 115) |
 | Łączniki kształtek (nyple) Ø150 / Ø125 | wg kształtek | |
-| Obejma z gumą Ø150 | 2 | pion do ściany głównej / SOT |
-| Mata akustyczna samoprzylepna | ok. 1 m² | pion i poziom w SO; nad poziomem Ø150 najwyżej 5 mm; w skrzynce WS bez maty |
-| Uszczelka gumowa / pierścienie w otworach | ok. 2 m | Ø160 × 2, Ø170 (SOP), wycięcie WSB-2 |
+| Obejma z gumą Ø150 | 2 | pion do ściany głównej / SOT (rura nie wisi na króćcu okapu) |
+| Mata butylowa z folią aluminiową (Alubutyl) 2 mm | ok. 1–1,5 m² | warstwa 1 na odtłuszczoną blachę rur, kolan i redukcji (dociskana wałkiem) oraz pasy na płaskich ściankach korpusu okapu (patrz `ustalenia.md` 2026-11-23) |
+| Pianka kauczukowa samoprzylepna zamkniętokomórkowa 6–10 mm | ok. 1 m² | warstwa 2 na butyl, pion i poziom w SO; nad poziomem Ø150 tylko 3–4 mm (≥ 2 luzu do SOW); w skrzynce WS bez pianki |
+| Taśma kauczukowa lub aluminiowa | 1 | styki pianki |
+| Odtłuszczacz (alkohol izopropylowy) + wałek dociskowy | 1 | przed klejeniem butylu |
+| Uszczelka gumowa / pierścienie z miękkiej gumy (EPDM) w otworach | ok. 2 m | Ø160 × 2 (ok. 5 na stronę, rura nie dotyka płyty, izolacja przerwana na grubości płyty), wycięcie U w SOP, wycięcie WSB-2 |
 | Taśma aluminiowa | 1 | złącza |
 
 ## Elektryka okapu
