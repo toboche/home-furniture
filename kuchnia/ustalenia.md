@@ -395,3 +395,4 @@ MAXIMERA Ø5 × 12 vs 13, rowek LED 17,2 vs 18,2, kątowniki pod P1, cofnięcie 
 - 2026-11-22: puszki F1 po obniżeniu szafek: 337,5 / 697,5 / 1051 od dołu (front 1151); prompt dla agenta zamówienia w `zamowienie/prompt_agenta_zamowienie.md`.
 - 2026-11-22: audyty v5 i v6: okleina WS 1SZ, podpórki SOD z 75, `zamowienie.md` (słoje do potwierdzenia), zatrzaski i linka WSZ, poszerzenie U w SOP, porządki liczb.
 - 2026-11-23: decyzje po audycie v6: MAXIMERA Ø5 × 12, rowek LED 17,2, wkręty okapu 3,5 × 16 z podkładkami, bez kątowników pod P1.
+- 2026-11-23: widok 3D: para kolan 15° nad okapem narysowana jako pochylony odcinek (wcześniej poziomy walec w poprzek).
