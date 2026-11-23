@@ -139,13 +139,14 @@ add(zawiasy('F1',XSO+1.5,YP+1.5,SOW-3,YT-YP-3,'prawa',3,GKS+SZT,[YZ1,YZ2,YT-1.5-
 /* okap DUO 55: kołnierz 551 × 290 pod korpusem szafki (dno), korpus 513 × 253 × 265 na środku kołnierza (2026-11-16) */
 var YKL=YRU-150;       /* początek kolana 90° Ø150 (R ok. 1D): 2414 */
 var YKR=YOK+26;        /* góra króćca wylotu (26 nad korpusem): 1802 */
+var KL15=22;           /* część kolana 15° w osi pionu (schemat widoku) */
 var YPR=YKR+40+150;    /* koniec przejścia do pionu (odcinek na króćcu ok. 40 + 2 kolana 15° z odcinkiem ok. 150): 1992 */
 add([
   {n:'Okap DUO 55: kołnierz ze szkłem 551 × 290 × 1,5 (dno szafki, widoczny od spodu)',layer:'Okap',x:XH-275.5,y:YP-OKK,z:GKS-290,w:551,h:OKK,d:290,c:0x26282b},
   {n:'Okap DUO 55: korpus 513 × 253 × 265',layer:'Okap',x:XH-OKW/2,y:YP,z:OKZ,w:OKW,h:OKH,d:OKG,c:0x6f7377},
-  {t:'cyl3',n:'Króciec wylotu okapu Ø148,5 × 26 + odcinek rury spiro Ø150 nasunięty na króciec',layer:'Rura okapu',ax:'y',px:XH,py:(YOK+YKR+40)/2,pz:ZWY,r:75,len:YKR+40-YOK,c:RURA},
-  {t:'cyl3',n:'Przejście do pionu o 28,5 w głąb: 2 kolana 15° Ø150 spięte mufą, para obrócona w poziomie (pion ok. 10–20 w prawo; schemat obrysu)',layer:'Rura okapu',ax:'z',px:XH,py:(YKR+40+YPR)/2,pz:(ZWY+ZPI)/2,r:75,len:ZWY-ZPI+150,c:RURA},
-  {t:'cyl3',n:'Rura spiro Ø150: pion przy ścianie przez SOP (z matą akustyczną)',layer:'Rura okapu',ax:'y',px:XH,py:(YPR+YKL)/2,pz:ZPI,r:75,len:YKL-YPR,c:RURA},
+  {t:'cyl3',n:'Króciec wylotu okapu Ø148,5 × 26 + odcinek rury spiro Ø150 nasunięty na króciec, dół kolana 15°',layer:'Rura okapu',ax:'y',px:XH,py:(YOK+YKR+40+KL15)/2,pz:ZWY,r:75,len:YKR+40+KL15-YOK,c:RURA},
+  {t:'cyl3',n:'Przejście do pionu o 28,5 w głąb: 2 kolana 15° Ø150 spięte mufą (odcinek pochylony ok. 15°); para obrócona w poziomie, pion ok. 10–20 w prawo (w modelu bez przesunięcia w prawo)',layer:'Rura okapu',ax:'y',rx:-Math.atan2(ZWY-ZPI,YPR-YKR-40-2*KL15),px:XH,py:(YKR+40+YPR)/2,pz:(ZWY+ZPI)/2,r:75,len:Math.sqrt(Math.pow(YPR-YKR-40-2*KL15,2)+Math.pow(ZWY-ZPI,2)),c:RURA},
+  {t:'cyl3',n:'Rura spiro Ø150: pion przy ścianie przez SOP (z matą akustyczną), od górnego kolana 15°',layer:'Rura okapu',ax:'y',px:XH,py:(YPR-KL15+YKL)/2,pz:ZPI,r:75,len:YKL-YPR+KL15,c:RURA},
   {t:'cyl3',n:'Kolano 90° Ø150 tłoczone pod sufitem (schemat)',layer:'Rura okapu',ax:'y',px:XH,py:(YKL+YRU)/2,pz:ZPI,r:75,len:YRU-YKL,c:RURA},
   {t:'cyl3',n:'Rura spiro Ø150: poziomo przez SOB-2 i WSB-1 (otwory Ø160)',layer:'Rura okapu',ax:'x',px:(XH+XRD)/2,py:YRU,pz:ZPI,r:75,len:XRD-XH,c:RURA},
   {t:'cyl3',n:'Redukcja mimośrodowa 150/125 (spiro, uszczelka), płaską stroną do ściany głównej, wąskim końcem w rurze ze ścianki',layer:'Rura okapu',ax:'x',px:XRD+LRD/2,py:YRU,pz:ZRU+6,r:69,len:LRD,c:RURA}
