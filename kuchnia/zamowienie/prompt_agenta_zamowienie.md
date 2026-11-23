@@ -8,7 +8,8 @@
 ## Rola i cel
 
 Jesteś agentem, który składa w `centrum.meble.pl` zamówienie robocze na formatki do kuchni (pomieszczenie `kuchnia/`
-w repozytorium `toboche/home-furniture`). Rozmawiasz po polsku. Kody formatek piszesz WYŁĄCZNIE DUŻYMI LITERAMI.
+w repozytorium `toboche/home-furniture`). Rozmawiasz po polsku. Twoją pracę zweryfikuje niezależnie inny agent: zapisuj numery checkpointów `/rozkroj,rXXXXXXXX` i
+zostaw w raporcie numer końcowego rozkroju oraz ścieżki `order_spec.json` i wyników audytu. Kody formatek piszesz WYŁĄCZNIE DUŻYMI LITERAMI.
 
 Efekt końcowy:
 1. nowy, osobny rozkrój `/rozkroj,rXXXXXXXX` z 21 wierszami (24 sztuki) kuchni, zgodny 1:1 z repozytorium
@@ -98,8 +99,7 @@ Przygotuj deterministycznie w Pythonie (bez ręcznego przepisywania) w katalogu 
 Pełna tabela 21 wierszy (kody, SZER × WYS, SZT, słoje, krawędzie z okleiną, szablon) jest w `kuchnia/zamowienie.md`
 i jest częścią specyfikacji: przepisz ją do `order_spec.json`. Słoje: na elementach pionowych pionowo, na poziomych
 równolegle do przodu, na F1, WSZ i frontach METOD na wysokość. Uwaga: przy `SZER = DL` boki i tyły (1154 × …) mają
-słoje „na szerokość”, a poziome elementy WS (282 × 238) „na wysokość”. Jeśli tabela ma dopisek „PROPOZYCJA”, zapytaj
-użytkownika o potwierdzenie przed importem. Kod w kolumnie `Słoje` CSV sprawdź na jednym wierszu testowym
+słoje „na szerokość”, a poziome elementy WS (282 × 238) „na wysokość”. Słoje są potwierdzone przez użytkownika (2026-11-23). Kod w kolumnie `Słoje` CSV sprawdź na jednym wierszu testowym
 (oznaczenie kierunku słojów w kalkulatorze), zanim wczytasz całość.
 
 Wiersze z otworami: wymiary, krawędzie i otwory dokładnie z `kalkulator_nawierty.csv` (`Szer = DL`, `Wys = SZ`,
@@ -173,7 +173,7 @@ i otwór na przewód w SOT robi użytkownik sam (w CSV są tylko nawierty środk
 
 1. **Pre-flight.** Przeczytaj pliki z sekcji „Dane wejściowe”. Sprawdź logowanie (`/moje_konto/`) i zawartość koszyka:
    ma tam być `21825702` (5 924,63 PLN) i nic nieoczekiwanego. Zapisz stan koszyka. Zadaj użytkownikowi pytanie
-   o słoje, jeśli `kuchnia/zamowienie.md` ma je jeszcze jako PROPOZYCJĘ.
+   o słoje tylko wtedy, gdy kalkulator nie pozwala ich ustawić jak w `kuchnia/zamowienie.md`.
 2. **Test na czystym kalkulatorze** (`https://centrum.meble.pl/rozkroj,plyty-meblowe`): wybierz płytę H3710 ST12
    18 mm i obrzeże H3710 0,8 mm. Na jednym wierszu testowym sprawdź kod `Słoje`, a na F1 szablon `Front prawy`
    z wkrętami i ręcznymi `x2`/`x3` (podgląd SVG). Usuń wiersz testowy albo zacznij od nowa.

@@ -2,14 +2,14 @@
 
 Źródło dla agenta zamówienia (`zamowienie/prompt_agenta_zamowienie.md`). Wymiary, ilości i otwory: `wyniki/kalkulator_nawierty.csv`,
 `wyniki/formatki.csv`, `zamowienie/fronty_metod.csv`. Ten plik dodaje to, czego pipeline nie eksportuje: słoje, okleinę frontów, szablon F1.
-Stan: 2026-11-22, po audycie v6 (KU6-02, KU6-03).
+Stan: 2026-11-23, po audycie v6 (KU6-02, KU6-03); słoje potwierdzone, MAXIMERA Ø5 × 12.
 
 ## Płyta i okleina
 - Płyta: `Płyta meblowa EGGER H3710 ST12 Orzech Carini naturalny 18 mm` (dekor usłojony, kolumna `Słoje` nigdy `0`).
 - Okleina wszędzie: `Obrzeże ABS H3710 ST12 Orzech Carini naturalny 23 x 0.8 mm EGGER`, także F1 i fronty METOD
   (jak istniejąca kuchnia; laserowa 1,0 mm wyłącza `Wręgowanie`, a fronty METOD mają otwory). Fronty: kolejność „kryjące długie”, jeśli kalkulator ją oferuje.
 
-## Słoje (PROPOZYCJA, do potwierdzenia przez użytkownika)
+## Słoje (potwierdzone przez użytkownika 2026-11-23)
 Zasada: na elementach pionowych słoje pionowo (jak F1 i istniejąca kuchnia), na poziomych równolegle do przedniej krawędzi.
 `SZER × WYS` w kalkulatorze = `SZER=DL × WYS=SZ` z `kalkulator_nawierty.csv` (F1 i fronty METOD: szerokość × wysokość frontu).
 Znaczenie wartości `Słoje` w kalkulatorze (na szerokość / na wysokość, kody CSV) sprawdzić na wierszu testowym.
