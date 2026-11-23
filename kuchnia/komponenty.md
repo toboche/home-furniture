@@ -17,11 +17,11 @@ Liczby łączników z `wyniki/podsumowanie.json` (przeliczenie 2026-11-19). Pozy
 | POZYCJA | KOD | ILOŚĆ | UWAGI |
 |---|---|---|---|
 | Zawias CLIP top 110°, bez sprężyny, nakładany, puszka na wkręty | 70T3550.TL | 3 | Y 1850, 2210, 2563,5 (nad okapem; puszki 337,5 / 697,5 / 1051 od dołu F1) |
-| Prowadnik krzyżakowy 0 mm, na wkręty | 173L6100 | 3 | |
+| Prowadnik krzyżakowy 0 mm, na wkręty | 173L6100 | 3 | w nawierty Ø3 × 12 ze sklepu wkręty 3,5 × 15; jeśli trzymają słabo (Ø3 to duży nawiert pod 3,5), wkręty Ø4 × 16 (sprawdzić, czy przechodzą przez otwór prowadnika) |
 | TIP-ON do drzwi, krótki, z magnesem | 956.1004 | 1 | do drzwi poniżej 1300; SOB-1 ok. Y 1850 (dolna część frontu nad okapem); drugi dokupić, jeśli jeden za słaby; szczelina F1–korpus ustawić na 2,5–3 |
 | Adapter prosty przykręcany do TIP-ON | 956.1201 | 1 | na wewnętrznym licu SOB-1 ok. Y 1850, wkręty 3,5 × 15 |
 | Wkręty do płyty 3,5 × 15 | ok. 20 | prowadniki, adaptery, zawiasy |
-| Wkręty okapu | 2 × 3,5 × 16 + 2 × 3,5 × 13 | 16 z kompletu do SOB-2; 13 do widocznego SOB-1; nawierty Ø3 × 5 robi sklep |
+| Wkręty okapu | 4 × 3,5 × 16 + 4 podkładki dystansowe | 16 z kompletu w oba boki (w widocznym SOB-1 do lica zostaje ok. 6); podkładki na grubość szczeliny blacha–bok przy nitach (ok. 3,5–4, zmierzyć); nawierty Ø3 × 5 robi sklep |
 
 ## Mocowanie szafek i półki LED
 | POZYCJA | ILOŚĆ | UWAGI |
@@ -29,12 +29,12 @@ Liczby łączników z `wyniki/podsumowanie.json` (przeliczenie 2026-11-19). Pozy
 | Wkręt 6 × 70 + kołek nylonowy Ø8 do betonu | 8 | po 4 przez plecy SOT i WST |
 | Wkręt 4 × 30 | 4 | skręcenie SO z WS (SOB-2 w WSB-1) |
 | Pręt gwintowany M8, ocynk, klasa 8.8 | 2 × 1 m | 8 odcinków po 160: P3 5, P1 3 |
-| Kotwa chemiczna (żywica do betonu) + pistolet | 1 kartusz | otwory w ścianie wg karty kotwy (np. Ø10 × 80) |
-| Wiertło Ø8 długie (≥ 100 roboczej) | 1 | pogłębienie otworów w półce z 35 do 85 |
+| Kotwa chemiczna (żywica do betonu) + pistolet | 1 kartusz | otwory w ścianie wg karty kotwy (np. Ø10 × 80); 4 mm nad płytkami: zaczynać bez udaru, krawędź płytek osłonić; przy trafieniu na pręt zbrojeniowy przesunąć otwór w ścianie i nawiercić nowy w półce |
+| Wiertło Ø8 długie (≥ 100 roboczej) + prowadnica / statyw wiertarski | 1 | pogłębienie otworów w półce z 35 do 85: zostaje 5 mm płyty z każdej strony, przy odchyłce ok. 3° wiertło wychodzi bokiem |
 | Łącznik płaski stalowy + wkręty 3,5 × 12 | 2 + 8 | styk P3/P1 od spodu |
 | Wkręt 4 × 40 | 3 | P1 przez bok słupka |
-| Kątownik 40 × 40 + kołki Ø6 (OPCJONALNIE) | 2 | pod tylną krawędzią P1, jeśli będzie się uginać |
 | Silikon bezbarwny / lakier | 1 | krawędzie wycięć SOD i SOP, styk P3/SOB-1, rowki LED |
+| Frezarka górnowrzecionowa z prowadnicą + frez prosty (np. 12 mm, rowek 17,2 w 2 przejściach) | 1 | rowki LED 17,2 × 6 w P1 i P3 (użytkownik nie ma frezarki: kupić / pożyczyć) |
 
 ## LED
 | POZYCJA | ILOŚĆ | UWAGI |

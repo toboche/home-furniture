@@ -12,7 +12,7 @@ TU = os.path.dirname(os.path.abspath(__file__))
 SZER = 597                     # 600 - 3
 X_OTW = (32, SZER - 32)        # od lewej krawędzi, widok od tyłu (jak w kalkulatorze)
 Y_PARY = {'niska': (39, 58), 'srednia': (39, 58, 117, 136), 'wysoka': (39, 58, 117, 136, 185, 204)}
-D_OTW, GL_OTW = 5, 13          # Ø5, głębokość 13 (2026-11-15; w poprzednim zamówieniu 10)
+D_OTW, GL_OTW = 5, 12          # Ø5, głębokość 12 (2026-11-23 po audycie v6; było 13, w poprzednim zamówieniu 10)
 
 # (kod, nazwa w kalkulatorze (max 20 znaków), kolumna, pozycja od góry, wysokość, szuflada)
 FRONTY = [
@@ -29,7 +29,7 @@ def lista():
     with open(os.path.join(TU, 'fronty_metod.csv'), 'w', newline='', encoding='utf-8-sig') as f:
         w = csv.writer(f, delimiter=';')
         w.writerow(['KOD', 'NAZWA W KALKULATORZE', 'SZER', 'WYS', 'SZT', 'SŁOJE', 'OKLEINA', 'SZUFLADA',
-                    'NAWIERTY (TYŁ, X;Y od lewego dolnego rogu widoku od tyłu, Ø5 x 13)'])
+                    'NAWIERTY (TYŁ, X;Y od lewego dolnego rogu widoku od tyłu, Ø5 x 12)'])
         for kod, nazwa, kol, poz, wys, szu in FRONTY:
             otw = ' | '.join('%d;%d' % (x, y) for x in X_OTW for y in Y_PARY[szu])
             w.writerow([kod, nazwa, SZER, wys, 1, 'na wysokość', '0,8 mm H3710, wszystkie krawędzie, kryjące długie',
@@ -58,7 +58,7 @@ def rysunek():
             y = yb - 3
         ax.add_patch(FancyArrowPatch((x0 + SZER + 40, 990), (x0 + SZER + 40, y + 10), arrowstyle='<->', mutation_scale=10))
         ax.text(x0 + SZER + 55, (990 + y) / 2, 'ciągłe\nusłojenie', fontsize=8, va='center')
-    ax.text(0, -40, 'Nawierty (tył frontu, wierci sklep): Ø5 x 13, x = 32 i 565 od lewej krawędzi (widok od tyłu),', fontsize=8.5)
+    ax.text(0, -40, 'Nawierty (tył frontu, wierci sklep): Ø5 x 12, x = 32 i 565 od lewej krawędzi (widok od tyłu),', fontsize=8.5)
     ax.text(0, -75, 'y od dolnej krawędzi: szuflada niska 39, 58; średnia 39, 58, 117, 136; wysoka 39, 58, 117, 136, 185, 204.', fontsize=8.5)
     ax.text(0, -110, 'Otworów na gałki nie wiercić. Szczeliny między frontami na rysunku: 3 mm (poglądowo).', fontsize=8.5)
     ax.text(0, -145, 'Nowa część mebli: tych kolumn nie ma na rysunku z poprzedniego zamówienia.', fontsize=8.5)
