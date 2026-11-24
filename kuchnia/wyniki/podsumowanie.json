@@ -1,28 +1,33 @@
 {
  "formatki": {
   "pozycje": 15,
-  "sztuki": 18,
-  "m2": 4.43
+  "sztuki": 17,
+  "m2": 4.13
  },
  "kalkulator": {
-  "typy_formatek": 12,
-  "wiersze": 136
+  "typy_formatek": 11,
+  "wiersze": 112
  },
  "laczniki": {
-  "konfirmaty": 50,
+  "konfirmaty": 28,
   "kolki": 6,
   "otwory_pod_kolki": 6,
-  "otwory_nieprzelotowe": 35,
+  "otwory_nieprzelotowe": 44,
   "puszki_zawiasow": 3
  },
  "zaslepki": {
-  "widoczne": 0,
-  "ukryte": 50,
-  "widoczne_wg_czesci": {},
-  "widoczne_miejsca": []
+  "widoczne": 2,
+  "ukryte": 26,
+  "widoczne_wg_czesci": {
+   "SOB-2": 2
+  },
+  "widoczne_miejsca": [
+   "SOB-2 → WSS (x 2906, y 2470, z 68)",
+   "SOB-2 → WSS (x 2906, y 2470, z 250)"
+  ]
  },
- "polaczenia": 22,
- "otwory_lacznie": 154,
+ "polaczenia": 12,
+ "otwory_lacznie": 118,
  "kolizje_otworow": 0,
- "strony_arkusza": 12
+ "strony_arkusza": 11
 }

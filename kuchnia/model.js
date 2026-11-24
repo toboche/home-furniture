@@ -54,7 +54,7 @@ var LRD=120;           /* ZAŁOŻENIE: długość redukcji */
 var XRD=A-RU4-LRD;     /* redukcja 150/125 w wąskiej szafce, wąskim końcem w rurze ze ściany: od 2971 */
 var ZSK=195;           /* tył zaślepki skrzynki (10 przed końcem Ø150 redukcji, oś z 109,5; 2026-11-16: było 172) */
 var YSOD=YOK+10;       /* półka wkładana tuż nad okapem (dół), 10 zapasu (2026-11-16): 1786 */
-var YSOP=YSOD+P+300;   /* półka stała nad okapem (dół): przegroda ok. 300 nad SOD (2026-11-16; było 2150): 2104 */
+var YSOP=YSOD+P+300;   /* półka nad okapem na podpórkach od 2026-11-24 (dół): przegroda ok. 300 nad SOD (2026-11-16; było 2150): 2104 */
 var SZT=2;             /* szczelina front F1 – korpus pod TIP-ON (domyślnie 2,0, min. 1,5; audyt v2 KU-04) */
 var YZ1=1850;          /* dolny zawias F1: nad okapem i SOD (audyt v1 KU-02, wariant A, 2026-11-18) */
 var YZ2=2210;          /* środkowy zawias F1: nad SOP (było 1950) */
@@ -131,7 +131,7 @@ add([
   {n:'SOT: SO: tył',layer:'Ścianki tylne',x:XSO+P,y:YP,z:0,w:SOW-2*P,h:YT-YP,d:P,c:TYL},
   {n:'SOW: SO: wieniec górny',layer:'Półki',x:XSO+P,y:YT-P,z:P,w:SOW-2*P,h:P,d:GKS-P,c:POL},
   {n:'SOD: SO: półka wkładana tuż nad okapem, na podpórkach, z wycięciem od przodu na wylot (wkładana po montażu okapu)',layer:'Półki',x:XSO+P+1,y:YSOD,z:P,w:SOW-2*P-2,h:P,d:GKS-P-2,c:POL},
-  {n:'SOP: SO: półka nad okapem (otwór na rurę)',layer:'Półki',x:XSO+P,y:YSOP,z:P,w:SOW-2*P,h:P,d:GKS-P,c:POL},
+  {n:'SOP: SO: półka nad okapem na 4 podpórkach, luz 1 z boków (2026-11-24; wycięcie U na rurę)',layer:'Półki',x:XSO+P+1,y:YSOP,z:P,w:SOW-2*P-2,h:P,d:GKS-P,c:POL},
   {n:'F1: Front szafki okapowej (549 × 1151), 2 przed korpusem (szczelina TIP-ON)',layer:'Fronty',x:XSO+1.5,y:YP+1.5,z:GKS+SZT,w:SOW-3,h:YT-YP-3,d:P,c:FR,o:0.55}
 ]);
 add(zawiasy('F1',XSO+1.5,YP+1.5,SOW-3,YT-YP-3,'prawa',3,GKS+SZT,[YZ1,YZ2,YT-1.5-100]));
@@ -148,25 +148,26 @@ add([
   {t:'cyl3',n:'Przejście do pionu o 28,5 w głąb: 2 kolana 15° Ø150 spięte mufą (odcinek pochylony ok. 15°); para obrócona w poziomie, pion ok. 10–20 w prawo (w modelu bez przesunięcia w prawo)',layer:'Rura okapu',ax:'y',rx:-Math.atan2(ZWY-ZPI,YPR-YKR-40-2*KL15),px:XH,py:(YKR+40+YPR)/2,pz:(ZWY+ZPI)/2,r:75,len:Math.sqrt(Math.pow(YPR-YKR-40-2*KL15,2)+Math.pow(ZWY-ZPI,2)),c:RURA},
   {t:'cyl3',n:'Rura spiro Ø150: pion przy ścianie przez SOP (z matą akustyczną), od górnego kolana 15°',layer:'Rura okapu',ax:'y',px:XH,py:(YPR-KL15+YKL)/2,pz:ZPI,r:75,len:YKL-YPR+KL15,c:RURA},
   {t:'cyl3',n:'Kolano 90° Ø150 tłoczone pod sufitem (schemat)',layer:'Rura okapu',ax:'y',px:XH,py:(YKL+YRU)/2,pz:ZPI,r:75,len:YRU-YKL,c:RURA},
-  {t:'cyl3',n:'Rura spiro Ø150: poziomo przez SOB-2 i WSB-1 (otwory Ø160)',layer:'Rura okapu',ax:'x',px:(XH+XRD)/2,py:YRU,pz:ZPI,r:75,len:XRD-XH,c:RURA},
+  {t:'cyl3',n:'Rura spiro Ø150: poziomo przez SOB-2 (otwór Ø160) do skrzynki WS',layer:'Rura okapu',ax:'x',px:(XH+XRD)/2,py:YRU,pz:ZPI,r:75,len:XRD-XH,c:RURA},
   {t:'cyl3',n:'Redukcja mimośrodowa 150/125 (spiro, uszczelka), płaską stroną do ściany głównej, wąskim końcem w rurze ze ścianki',layer:'Rura okapu',ax:'x',px:XRD+LRD/2,py:YRU,pz:ZRU+6,r:69,len:LRD,c:RURA}
 ]);
 
-/* ---- wąska szafka WS: bez frontu, dno, wieniec, 2 półki, skrzynka na rurę cofnięta (płytka półka przed nią) ---- */
+/* ---- wąska szafka WS: bez lewego boku (2026-11-24: WSB-1 usunięty, lewą ścianką jest SOB-2), dno, wieniec,
+   2 półki na podpórkach, skrzynka na rurę cofnięta (płytka półka przed nią) ---- */
 var ywn=YP+P, ysd=YSK-P, prz=(ysd-ywn-NPW*P)/(NPW+1);
+var WSW_=XWE-XWS-P;    /* światło wnęki WS: 256 (od SOB-2 do WSB-2) */
 add([
-  {n:'WSB-1: WS: bok lewy',layer:'Ścianki boczne',x:XWS,y:YP,z:0,w:P,h:YT-YP,d:GK,c:BOK},
   {n:'WSB-2: WS: bok prawy (przy ściance)',layer:'Ścianki boczne',x:XWE-P,y:YP,z:0,w:P,h:YT-YP,d:GK,c:BOK},
-  {n:'WST: WS: tył',layer:'Ścianki tylne',x:XWS+P,y:YP,z:0,w:XWE-XWS-2*P,h:YT-YP,d:P,c:TYL},
-  {n:'WSD: WS: dno',layer:'Półki',x:XWS+P,y:YP,z:P,w:XWE-XWS-2*P,h:P,d:GK-P,c:POL},
-  {n:'WSW: WS: wieniec górny',layer:'Półki',x:XWS+P,y:YT-P,z:P,w:XWE-XWS-2*P,h:P,d:GK-P,c:POL},
-  {n:'WSS: WS: dno skrzynki na rurę (płytka półka przed zaślepką)',layer:'Półki',x:XWS+P,y:ysd,z:P,w:XWE-XWS-2*P,h:P,d:GK-P,c:POL},
-  {n:'WSZ: WS: zaślepka skrzynki na rurę (zdejmowana, luz 1 z boków i 3 u góry)',layer:'Ścianki tylne',x:XWS+P+1,y:YSK,z:ZSK,w:XWE-XWS-2*P-2,h:YT-P-YSK-3,d:P,c:TYL},
-  {n:'Listwa oporowa 10 × 10 pod WSZ (na WSS)',layer:'Mocowanie półki',x:XWS+P+1,y:YSK,z:ZSK-10,w:XWE-XWS-2*P-2,h:10,d:10,c:0x555555},
-  {n:'Zatrzask dociskowy push-to-open pod WSW (2 szt., schemat)',layer:'Mocowanie półki',x:XWS+P+40,y:YT-P-12,z:ZSK-40,w:XWE-XWS-2*P-80,h:12,d:40,c:0x555555}
+  {n:'WST: WS: tył (od SOB-2 do WSB-2)',layer:'Ścianki tylne',x:XWS,y:YP,z:0,w:WSW_,h:YT-YP,d:P,c:TYL},
+  {n:'WSD: WS: dno',layer:'Półki',x:XWS,y:YP,z:P,w:WSW_,h:P,d:GK-P,c:POL},
+  {n:'WSW: WS: wieniec górny',layer:'Półki',x:XWS,y:YT-P,z:P,w:WSW_,h:P,d:GK-P,c:POL},
+  {n:'WSS: WS: dno skrzynki na rurę (płytka półka przed zaślepką)',layer:'Półki',x:XWS,y:ysd,z:P,w:WSW_,h:P,d:GK-P,c:POL},
+  {n:'WSZ: WS: zaślepka skrzynki na rurę (zdejmowana, luz 1 z boków i 3 u góry)',layer:'Ścianki tylne',x:XWS+1,y:YSK,z:ZSK,w:WSW_-2,h:YT-P-YSK-3,d:P,c:TYL},
+  {n:'Listwa oporowa 10 × 10 pod WSZ (na WSS)',layer:'Mocowanie półki',x:XWS+1,y:YSK,z:ZSK-10,w:WSW_-2,h:10,d:10,c:0x555555},
+  {n:'Zatrzask dociskowy push-to-open pod WSW (2 szt., schemat)',layer:'Mocowanie półki',x:XWS+40,y:YT-P-12,z:ZSK-40,w:WSW_-80,h:12,d:40,c:0x555555}
 ]);
 for(var k=1;k<=NPW;k++){
-  ITEMS.push({n:'WSP-'+k+': WS: półka',layer:'Półki',x:XWS+P,y:ywn+k*prz+(k-1)*P,z:P,w:XWE-XWS-2*P,h:P,d:GK-P,c:POL});
+  ITEMS.push({n:'WSP-'+k+': WS: półka na 4 podpórkach (luz 1 z boków)',layer:'Półki',x:XWS+1,y:ywn+k*prz+(k-1)*P,z:P,w:WSW_-2,h:P,d:GK-P,c:POL});
 }
 
 return {

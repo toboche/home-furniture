@@ -11,8 +11,10 @@ GRUBOSCI = (18,)
 
 
 def modul_of(it):
-    """moduł = dwa pierwsze znaki kodu (SO, WS, P1, P3); konfirmaty tylko w obrębie modułu"""
-    return it['n'][:2]
+    """moduł = dwa pierwsze znaki kodu (P1, P3); SO i WS to jeden moduł, bo od 2026-11-24 WS nie ma lewego boku
+    i jej dno oraz dno skrzynki są przykręcane do SOB-2; konfirmaty tylko w obrębie modułu"""
+    m = it['n'][:2]
+    return 'SW' if m in ('SO', 'WS') else m
 
 
 def pomijaj_czesc(p):
@@ -26,8 +28,16 @@ X_BOK_CZYSTY = 2396       # wewnętrzne lico SOB-1 (model.js: XSO + P; od 2026-1
 
 
 def pomijaj_polaczenie(face, edge):
-    """SOB-1: mimośrody; SOD: na podpórkach; WSZ: zaślepka skrzynki zdejmowana od przodu (dostęp do redukcji), audyt v1 KU-07"""
-    return face == BOK_CZYSTY or edge == BOK_CZYSTY or 'SOD' in (face, edge) or 'WSZ' in (face, edge)
+    """SOB-1: mimośrody; SOD, SOP, WSP: na podpórkach (2026-11-24); WSZ: zaślepka skrzynki zdejmowana od przodu
+    (dostęp do redukcji), audyt v1 KU-07. SOB-2 z WS: tylko WSD i WSS na konfirmatach (łby od środka SO);
+    WSW na kołkach (od środka SO zasłania SOW), WST bez łączenia z SOB-2 (po drugiej stronie konfirmaty SOT)."""
+    if face == BOK_CZYSTY or edge == BOK_CZYSTY:
+        return True
+    if any(c in (face, edge) for c in ('SOD', 'SOP', 'WSZ')) or face.startswith('WSP') or edge.startswith('WSP'):
+        return True
+    if 'SOB-2' in (face, edge) and ({face, edge} - {'SOB-2'}) & {'WSW', 'WST'}:
+        return True
+    return False
 
 
 def rozstaw(face, edge, domyslny):
@@ -35,11 +45,11 @@ def rozstaw(face, edge, domyslny):
 
 
 def punkty(face, edge, zakres, pts):
-    """audyt v1: SOP-SOT bez konfirmatu w osi otworu Ø170 (KU-03); wieńce SOW/WSW do SOB-2/WSB-1 skręcane
+    """audyt v1: SOP-SOT bez konfirmatu w osi otworu Ø170 (KU-03); wieniec SOW do SOB-2 (i WSW do WSB-2) skręcany
     przed otworem Ø160 pod rurę (z 30-190), żeby konfirmat nie stał nad otworem (KU-14)"""
     if {face, edge} == {'SOT', 'SOP'}:
         return [p for p in pts if abs(p - X_OKAP) > 95]
-    if (face, edge) in (('SOB-2', 'SOW'), ('WSB-1', 'WSW'), ('WSB-2', 'WSW')):
+    if (face, edge) in (('SOB-2', 'SOW'), ('WSB-2', 'WSW')):
         return [215, 265]
     if (face, edge) == ('WSB-2', 'WST'):     # wycięcie w WSB-2 od tyłu na rurę ze ścianki (Y 2494-2634)
         return [p for p in pts if not 2477 <= p <= 2652]
@@ -59,7 +69,9 @@ Y_RURA = 2564        # oś rury okapu (YRU; od 2026-11-19 sufit M 1156, było 25
 Z_RURA = 97          # oś rury okapu od ściany głównej (ZRU)
 Z_PION = 109.5       # oś pionu i poziomu Ø150 w SO (ZPI)
 Y_SOD = 1786         # dół półki wkładanej SOD (model.js: YSOD)
-Y_SOP = 2104         # dół półki SOP (model.js: YSOP)
+Y_SOP = 2104         # dół półki SOP (model.js: YSOP); od 2026-11-24 na podpórkach
+Z_WSP = (50, 250)    # podpórki półek WSP (WS głęboka na 300)
+Z_KOLKI_WSW = (60, 150)   # kołki WSW do SOB-2
 Z_SOP_OTW = 109.5    # środek otworu w SOP: pion Ø150 za kolanami 15° (2026-11-19; przy pochylonej rurze było 124)
 Y_OKW = 1592         # otwory montażowe okapu: 81 nad dołem korpusu (YP)
 Z_OKW = (250, 70)    # 35 i 215 od lica przodu korpusu okapu (z 285)
@@ -68,15 +80,15 @@ Y_ZA = 2180          # przewód okapu: YS - ZA2 (było 2193)
 
 
 def dodatkowe_otwory(P, parts, loc):
-    """otwory pod rurę (pierścień gumowy): Ø160 pod Ø150 w SOB-2 i WSB-1 (góra otworu 3 pod wieńcem), Ø170 w półce SOP, Ø140 pod Ø125 w WSB-2
+    """otwory pod rurę (pierścień gumowy): Ø160 pod Ø150 w SOB-2 (góra otworu 3 pod wieńcem; od 2026-11-24 bez WSB-1), Ø170 w półce SOP, Ø140 pod Ø125 w WSB-2
     (redukcja w wąskiej szafce, 2026-11-16): sklep wierci tylko środek, otwór wycina użytkownik otwornicą.
     Podpórki Ø5 × 10 pod wkładaną półkę SOD w SOB-1 i SOB-2."""
     def pilot(code, side, pos):
         p = P[code]
         p['holes'].append(dict(kind='FACE', side=side, u=loc(p, p['u'], pos[p['u']]), v=loc(p, p['v'], pos[p['v']]),
-                               d=PILOT_D, depth=PILOT_DEPTH, partner='środek otworu pod rurę okapu (Ø160 w SOB-2, WSB-1; Ø170 w SOP; Ø140 w WSB-2)',
+                               d=PILOT_D, depth=PILOT_DEPTH, partner='środek otworu pod rurę okapu (Ø160 w SOB-2; Ø170 w SOP; Ø140 w WSB-2)',
                                axis_n='-', pin=False, pilot=True))
-    for code, z in (('SOB-2', Z_PION), ('WSB-1', Z_PION), ('WSB-2', Z_RURA)):
+    for code, z in (('SOB-2', Z_PION), ('WSB-2', Z_RURA)):
         if code in P:
             pilot(code, 'A', {'y': Y_RURA, 'z': z})
     for code, side in (('SOB-1', 'A'), ('SOB-2', 'B')):      # lico od wnętrza SO
@@ -86,6 +98,32 @@ def dodatkowe_otwory(P, parts, loc):
                                    v=loc(q, q['v'], {'y': Y_SOD - 5, 'z': z}[q['v']]), d=5, depth=10,
                                    partner='SOD', axis_n='-', pin=True))
     pilot('SOP', 'A', {'x': X_OKAP, 'z': Z_SOP_OTW})
+    # podpórki Ø5 x 10 pod półki na podpórkach (2026-11-24): SOP w SOB-1 i SOB-2 od wnętrza SO,
+    # WSP-1 i WSP-2 w zewnętrznym licu SOB-2 (ścianka wnęki WS) i w wewnętrznym licu WSB-2
+    def podporki(code, side, y, zs, partner):
+        q = P[code]
+        for z in zs:
+            q['holes'].append(dict(kind='FACE', side=side, u=loc(q, q['u'], {'y': y, 'z': z}[q['u']]),
+                                   v=loc(q, q['v'], {'y': y, 'z': z}[q['v']]), d=5, depth=10,
+                                   partner=partner, axis_n='-', pin=True))
+    podporki('SOB-1', 'A', Y_SOP - 5, (75, 250), 'SOP')
+    podporki('SOB-2', 'B', Y_SOP - 5, (75, 250), 'SOP')
+    for k in (1, 2):
+        w = P['WSP-%d' % k]
+        podporki('SOB-2', 'A', w['lo']['y'] - 5, Z_WSP, 'WSP-%d' % k)
+        podporki('WSB-2', 'B', w['lo']['y'] - 5, Z_WSP, 'WSP-%d' % k)
+    # WSW do SOB-2: 2 kołki Ø8 x 30 (Ø8 x 10 w zewnętrznym licu SOB-2, Ø8 x 22 w lewym czole WSW), z dala od konfirmatów SOW (z 215, 265)
+    q, w = P['SOB-2'], P['WSW']
+    yk = w['lo']['y'] + 9
+    for z in Z_KOLKI_WSW:
+        q['holes'].append(dict(kind='FACE', side='A', u=loc(q, q['u'], {'y': yk, 'z': z}[q['u']]),
+                               v=loc(q, q['v'], {'y': yk, 'z': z}[q['v']]), d=8, depth=10,
+                               partner='WSW', axis_n='-', pin=True, opis='Otwór Ø8 x 10 pod kołek (do WSW)'))
+        eu = (w['u'] == 'x')
+        ec = loc(w, 'x', w['lo']['x'])
+        L = w['DL'] if eu else w['SZ']
+        w['holes'].append(dict(kind='EDGE', n_axis_is_u=eu, edge_coord=ec, along=loc(w, 'z', z), depth=22, d=8,
+                               partner='SOB-2: kołek', into=(-1 if ec >= L - 0.01 else 1)))
     # otwory montażowe okapu: nawierty pilotowe Ø3 x 5 od wnętrza SO, po 2 w każdym boku (2026-11-18)
     for code, side in (('SOB-1', 'A'), ('SOB-2', 'B')):
         q = P[code]
@@ -158,7 +196,6 @@ def dodatkowe_otwory(P, parts, loc):
 
     zlacze('SOT', 'A', 'z', 9, 'y', (1580, 2040, 2610), (1830, 2350))      # tył: obudowy od wnętrza (+z)
     zlacze('SOW', 'B', 'y', P['SOW']['lo']['y'] + 9, 'z', (159,), (60, 260))   # wieniec: obudowy od spodu (oś grubości SOW; audyt v6 KU6-09)
-    zlacze('SOP', 'A', 'y', Y_SOP + 9, 'z', (159,), (60, 260))                   # półka: obudowy od góry
 
 
 # F1 stoi 2 przed korpusem (szczelina TIP-ON), a wspólny pipeline liczy linię prowadników od lica frontu:
@@ -186,24 +223,24 @@ ZAW = 'PUSZKA Ø35, ŚRODEK 22,5 MM OD KRAWĘDZI'
 # Opisy formatek. Wymiary i ilości są liczone z modelu (model.js).
 FORMATKI = [
     F('SOB', 'Szafka okapowa: boki (bez dna, okap między bokami)', okleina='1DL',
-      nawierty='SOB-1: TRZPIENIE MIMOŚRODÓW + KOŁKI (bez otworów przelotowych); SOB-2: KONFIRMATY; OBA: 2 PODPÓRKI Ø5 x 10 POD SOD',
-      uwagi='SOB-1 widoczny, czyste lico zewnętrzne; SOB-2: środek otworu Ø160 pod rurę Ø150 (otwornicą z obu stron, płyta podparta, przed montażem); okap przykręcany 4 wkrętami (SOB-1 widoczny: 3,5 x 13; SOB-2: 3,5 x 16 z kompletu): nawierty pilotowe Ø3 x 5 od wnętrza na Y 1592 (81 nad dołem), z 250 i 70 (35 i 215 od lica przodu korpusu okapu)'),
+      nawierty='SOB-1: TRZPIENIE MIMOŚRODÓW + KOŁKI (bez otworów przelotowych); SOB-2: KONFIRMATY (SOT, SOW, WSD, WSS) + KOŁKI WSW + PODPÓRKI WSP OD STRONY WS; OBA: PODPÓRKI Ø5 x 10 POD SOD I SOP',
+      uwagi='SOB-1 widoczny, czyste lico zewnętrzne; SOB-2: zewnętrzne lico jest lewą ścianką wnęki WS (łby konfirmatów SOT i SOW zasłaniają krawędzie WST i WSW; konfirmaty WSD i WSS wkręcać od wnętrza SO przed montażem okapu i rur, łby równo z licem); SOB-2: środek otworu Ø160 pod rurę Ø150 (otwornicą z obu stron, płyta podparta, przed montażem); okap przykręcany 4 wkrętami 3,5 x 16 z dystansami EPDM: nawierty pilotowe Ø3 x 5 od wnętrza na Y 1592 (81 nad dołem), z 250 i 70 (35 i 215 od lica przodu korpusu okapu)'),
     F('SOT', 'Szafka okapowa: tył', okleina='', nawierty='KONFIRMATY + MIMOŚRODY I KOŁKI (do SOB-1)',
       uwagi='środek otworu Ø25 pod przewód zasilający okap (x 2850, y 2180) wycina użytkownik'),
     F('SOW', 'Szafka okapowa: wieniec górny', okleina='1DL', nawierty='KONFIRMATY + MIMOŚRÓD I KOŁKI (do SOB-1)'),
     F('SOD', 'Szafka okapowa: półka wkładana tuż nad okapem (na 4 podpórkach Ø5)', okleina='1DL', nawierty='BRAK',
       uwagi='wkładana po montażu okapu; wycięcie od przodu na wylot Ø150: szer. 170 (oś x na środku), zakończone półkolem R85 o środku 120 od tylnej krawędzi (najgłębiej 35 od tylnej krawędzi); wycina użytkownik, krawędzie silikonem; w tylnym prawym narożniku podcięcie ok. 25 × 25 na przewód okapu (w osi podcięcia w SOP)'),
-    F('SOP', 'Szafka okapowa: półka nad okapem', okleina='1DL', nawierty='KONFIRMATY + MIMOŚRÓD I KOŁKI (do SOB-1)',
+    F('SOP', 'Szafka okapowa: półka nad okapem (na 4 podpórkach Ø5)', okleina='1DL', nawierty='BRAK',
       uwagi='środek otworu Ø170 pod pion Ø150 (z 109,5 = 91,5 od tylnej krawędzi); otwór otwarty do tyłu (wycięcie U szer. 170 od tylnej krawędzi); w tylnym prawym narożniku podcięcie 25 × 25 na przewód okapu (x 2887–2912, z 18–43); wycina użytkownik. Para kolan 15° obrócona w poziomie przesuwa pion o ok. 11–17 w prawo (+X): wycięcie U poszerzyć o 15–20 w prawo po przymiarce kolan (rura z matą nie może dotykać płyty)'),
-    F('WSB', 'Wąska szafka: boki', okleina='1DL', nawierty='KONFIRMATY',
-      uwagi='WSB-1: środek otworu Ø160 pod Ø150 (otwornicą z obu stron, płyta podparta, przed montażem); WSB-2: rura ze ścianki wystaje 115, więc wycięcie U od tylnej krawędzi szer. 140 z półkolem R70 o środku w zaznaczonym punkcie (z 97), żeby szafkę dało się nasunąć na rurę; wycina użytkownik'),
+    F('WSB', 'Wąska szafka: bok prawy (lewego boku brak, lewą ścianką jest SOB-2)', okleina='1DL', nawierty='KONFIRMATY + 2 PODPÓRKI Ø5 x 10 NA PÓŁKĘ',
+      uwagi='WSB-2: rura ze ścianki wystaje 115, więc wycięcie U od tylnej krawędzi szer. 140 z półkolem R70 o środku w zaznaczonym punkcie (z 97), żeby szafkę dało się nasunąć na rurę; wycina użytkownik'),
     F('WST', 'Wąska szafka: tył', okleina='', nawierty='KONFIRMATY'),
     F('WSD', 'Wąska szafka: dno', okleina='1SZ', nawierty='KONFIRMATY'),
     F('WSW', 'Wąska szafka: wieniec górny', okleina='1SZ', nawierty='KONFIRMATY'),
     F('WSS', 'Wąska szafka: dno skrzynki na rurę (płytka półka przed zaślepką)', okleina='1SZ', nawierty='KONFIRMATY'),
     F('WSZ', 'Wąska szafka: zaślepka skrzynki na rurę (zdejmowana)', okleina='', nawierty='BRAK',
       uwagi='widoczne lico przednie; krawędzie schowane; bez konfirmatów, zdejmowana: wkładana poziomo od przodu na listwę oporową 10 x 10 na WSS (przykleja użytkownik), u góry 2 zatrzaski dociskowe push-to-open pod WSW (naciśnięcie wysuwa WSZ): krótkie, wys. do 14, dł. do 47, skok do 10 (WSZ przewraca się do przodu przy wychyleniu góry o ok. 17), przymierzyć nad rurą przed przyklejeniem; linka zabezpieczająca WSZ do spodu WSW (nad płytą grzewczą); wymiar z luzem 1 z boków i 3 u góry'),
-    F('WSP', 'Wąska szafka: półki stałe', okleina='1SZ', nawierty='KONFIRMATY'),
+    F('WSP', 'Wąska szafka: półki na 4 podpórkach Ø5 (luz 1 z boków)', okleina='1SZ', nawierty='BRAK'),
     F('P1', 'Półka LED: ściana lewa (wnęka)', okleina='1DL',
       nawierty='CZOŁA: 3 x Ø8 x 35 pod pręty M8 od ściany lewej (użytkownik pogłębia do 85)',
       uwagi='okleina na długiej krawędzi od strony kuchni (804); koniec przy słupku przykręcany przez bok słupka (wkręty do 4 x 40, nawierty ręczne). Rowki 17,2 × 6 pod profil LED w spodzie frezuje użytkownik (meble.pl nie robi wręgów zachodzących na siebie)'),

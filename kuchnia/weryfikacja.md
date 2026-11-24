@@ -14,7 +14,7 @@ przed zamówieniem”, od 2026-11-19 tylko L1–L5: czy meble fizycznie się mie
 | Wszystkie pomieszczenia zgodne z modelami (`--sprawdz`) | tak |
 | Test widoku (`scena.py`) | 0 błędów JS, wzorzec aktualny |
 | Konfirmaty / kołki / podpórki / widoczne łby | 50 / 6 / 4 / 0 (stan 2026-11-19) |
-| Otwory w pobliżu wycięć (SOB-2, WSB-1 Ø160; WSB-2, SOP wycięcia U; SOT Ø25) | żaden otwór bliżej niż 15 mm od krawędzi wycięcia |
+| Otwory w pobliżu wycięć (SOB-2 Ø160; WSB-2, SOP wycięcia U; SOT Ø25) | żaden otwór bliżej niż 15 mm od krawędzi wycięcia |
 | Przecięcia brył | tylko zamierzone (rura w otworach, pręty i profile LED w półkach, puszki zawiasów we froncie) |
 
 ## 2. Przegląd ręczny (w kolejności montażu)
@@ -26,12 +26,12 @@ przed zamówieniem”, od 2026-11-19 tylko L1–L5: czy meble fizycznie się mie
 | TIP-ON | 956.1004 na SOB-1 ok. Y 1850, przy przodzie: nad okapem i SOD; F1 2 przed korpusem (2026-11-19) | OK |
 | Przejście wylot → pion | 28,5 do tyłu na 2 kolanach 15° Ø150 spiętych mufą, para obrócona w poziomie (pion ok. 10–20 w prawo); do ok. Y 1992 pod SOP 2104 | OK; wycięcie w SOP dopasować na miejscu |
 | Pion, kolano, poziom Ø150 | tył pionu z 34,5 (plecy do 18, mata 10 mieści się); góra poziomu 2639 pod SOW 2647 (od 2026-11-19) | OK; nad poziomem mata do 5 mm |
-| Otwory Ø160 w SOB-2, WSB-1 | konfirmaty wieńców przed otworem (z 215, 265), nad otworem 21 mm boku | OK |
+| Otwór Ø160 w SOB-2 (od 2026-11-24 bez WSB-1; kołki WSW i konfirmaty WSS ≥ 16 od krawędzi otworu) | konfirmaty wieńców przed otworem (z 215, 265), nad otworem 21 mm boku | OK |
 | Skrzynka WS | redukcja z 34,5–184,5 przed WSZ (z 195), dno 2479 pod rurą 2489, WSW 2647 (od 2026-11-19); WSZ 236 × 165 na dolnej listwie i 2 zatrzaskach push-to-open (audyt v4) | OK, bez maty w skrzynce |
 | Rura ze ścianki | wystaje 115 (do X 3091), redukcja wąskim końcem w nią; WSB-2 z wycięciem U R70 | OK, szafkę nasuwa się na rurę od przodu |
 | Kratka | WS 300 głębokości, ramka kratki od 306 (zmierzone) | OK, luz 6 (SO 304 nie sięga do ścianki) |
 | Zasilanie okapu | otwór Ø25 w SOT (X 2850, Y 2180) nad SOP; przewód w dół przez podcięcia 25 × 25 w tylnym prawym narożniku SOP i SOD | POPRAWIONE (SOD 2026-11-18, SOP 2026-11-19) |
-| Mocowanie SO i WS | po 4 wkręty 6 × 70 przez plecy, SO z WS skręcone; na styku SOB-2 / WSB-1 łby konfirmatów naprzeciw siebie | OK: łby wpuszczone poniżej lica, wkręty łączące z dala od konfirmatów |
+| Mocowanie SO i WS | po 4 wkręty 6 × 70 przez plecy; od 2026-11-24 WS bez WSB-1, łączona z SOB-2 przez WSD, WSS (konfirmaty od wnętrza SO) i WSW (kołki) | OK: łby wpuszczone poniżej lica, wkręty łączące z dala od konfirmatów |
 | P1 | 3 pręty od ściany lewej + wkręty przez słupek + łączniki do P3; pręty poza rowkami LED | OK |
 | P3 | 5 prętów, rowek LED z 151,8–170, pręty z 0–80 | OK |
 | Profil LED przy słupku | kołnierz profilu wchodził 1,5 w płytki na ścianie lewej (wystają do 12) | POPRAWIONE: profil zaczyna się 13 od ściany lewej, rowek dalej od ściany (wejście kabla) |

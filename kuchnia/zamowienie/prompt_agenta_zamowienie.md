@@ -12,7 +12,7 @@ w repozytorium `toboche/home-furniture`). Rozmawiasz po polsku. Twoją pracę zw
 zostaw w raporcie numer końcowego rozkroju oraz ścieżki `order_spec.json` i wyników audytu. Kody formatek piszesz WYŁĄCZNIE DUŻYMI LITERAMI.
 
 Efekt końcowy:
-1. nowy, osobny rozkrój `/rozkroj,rXXXXXXXX` z 21 wierszami (24 sztuki) kuchni, zgodny 1:1 z repozytorium
+1. nowy, osobny rozkrój `/rozkroj,rXXXXXXXX` z 21 wierszami (23 sztuki) kuchni, zgodny 1:1 z repozytorium
    (wymiary, ilości, słoje, okleina, otwory co do 0,0 mm, puszki zawiasów),
 2. ten rozkrój dodany do koszyka na koncie użytkownika, obok istniejącego `21825702` (pralnia + garderoba),
 3. dokumentacja zamówienia w repozytorium wg `wspolne/zamowienia/README.md`,
@@ -64,11 +64,11 @@ python3 wspolne/pipeline/run.py --wszystkie --sprawdz
 Wynik musi być zgodny („wyniki zgodne z repozytorium”). Jeśli nie, zatrzymaj się.
 
 Pliki:
-- `kuchnia/wyniki/kalkulator_nawierty.csv`: 12 pozycji z otworami (każdy wiersz z numerem `LP` = jeden wiersz
-  w kalkulatorze; LP11 to 4 identyczne sztuki WSD, WSS, WSP-1, WSP-2). Kolumny: `SZER=DL`, `WYS=SZ`, `OKLEJ KRAWEDZ NR`,
+- `kuchnia/wyniki/kalkulator_nawierty.csv`: 11 pozycji z otworami (każdy wiersz z numerem `LP` = jeden wiersz
+  w kalkulatorze; LP10 to 2 identyczne sztuki WSD i WSS). Kolumny: `SZER=DL`, `WYS=SZ`, `OKLEJ KRAWEDZ NR`,
   `RODZAJ` (`PLASZCZYZNA`/`CZOŁO`), `POWIERZCHNIA/KRAWEDZ` (`Przód`/`Tył`/`Krawędź N`), `X lub ODLEGLOSC OD 0`, `Y`,
   `SREDNICA`, `GLEBOKOSC` (`przelotowo` = `przelot`). Plik ma BOM, czytaj jako `utf-8-sig`.
-- `kuchnia/wyniki/formatki.csv`: wszystkie 15 pozycji / 18 szt. / 4,43 m² (stąd SOD, WSZ i F1, które nie mają wierszy
+- `kuchnia/wyniki/formatki.csv`: wszystkie 15 pozycji / 17 szt. / 4,13 m² (stąd SOD, WSZ, WSP i F1, które nie mają wierszy
   w `kalkulator_nawierty.csv`, oraz kolumna UWAGI).
 - `kuchnia/zamowienie/fronty_metod.csv`: 6 frontów szuflad IKEA METOD (FM1–FM6) z otworami.
 - `kuchnia/ustalenia.md` (decyzje, szczególnie wpisy o F1, METOD i półkach P1/P3), `kuchnia/komponenty.md`,
@@ -106,34 +106,17 @@ Wiersze z otworami: wymiary, krawędzie i otwory dokładnie z `kalkulator_nawier
 krawędzie wg kolumny `OKLEJ KRAWEDZ NR`: 1 = góra, 2 = prawa, 3 = dół, 4 = lewa). Jeśli wymiar, SZT lub krawędź
 w `zamowienie.md` różni się od plików generowanych, wygrywają pliki generowane i zgłaszasz rozbieżność.
 Kalkulator po imporcie CSV potrafi sam zaznaczyć krawędzie 3 i 4 w 0,8 mm: popraw okleinę w każdym wierszu
-(wiersze 5, 10 i 14 bez okleiny).
+(wiersze 5, 9 i 13 bez okleiny).
 
-### Otwory w korpusach i półkach (wiersze 1–12)
+### Otwory w korpusach i półkach (wiersze 1–11)
 
 Wpisuj wprost z `kalkulator_nawierty.csv`, bez przeliczania: strona `Tył (B)` w kalkulatorze NIE jest odbita
 (rzut „na wylot” od przodu, początek w lewym dolnym rogu widoku z przodu), tak samo jak w naszym CSV.
 Wszystkie średnice i głębokości są w zakresie kalkulatora (płaszczyzna: Ø3, 5, 8, 15 do 15 mm lub przelot;
-czoło: Ø4 i Ø8 do 35 mm). Rozkład, który ma się zgadzać po wpisaniu (liczba wpisów w CSV):
-
-| RODZAJ | STRONA / KRAWĘDŹ | Ø × GŁĘB. | WPISÓW |
-|---|---|---|---|
-| płaszczyzna | Przód | 5 × przelot | 21 |
-| płaszczyzna | Tył | 5 × przelot | 29 |
-| płaszczyzna | Przód / Tył | 15 × 14 (Minifix) | 4 / 1 |
-| płaszczyzna | Przód | 8 × 10 (kołki) | 6 |
-| płaszczyzna | Przód / Tył | 5 × 10 (podpórki) | 2 / 2 |
-| płaszczyzna | Przód | 5 × 11 | 5 |
-| płaszczyzna | Przód | 5 × 5 (środki otworów pod rurę) | 5 |
-| płaszczyzna | Przód / Tył | 3 × 5 (piloty wkrętów okapu) | 2 / 2 |
-| płaszczyzna | Tył | 3 × 12 (piloty prowadników zawiasów) | 6 |
-| czoło | Krawędź 1 / 3 / 4 | 4 × 35 (konfirmaty) | 11 / 13 / 8 |
-| czoło | Krawędź 2 / 3 | 8 × 22 (kołki) | 4 / 2 |
-| czoło | Krawędź 2 / 3 | 8 × 33 (Minifix) | 2 / 3 |
-| czoło | Krawędź 3 | 8 × 35 (pręty M8 w P1 i P3) | 8 |
-
-Razem 136 wpisów, 154 otwory z uwzględnieniem SZT. Policz tę tabelę sam z CSV i porównaj (jeśli CSV się zmienił,
-wygrywa CSV). `wielowiert` i `skopiujNawiert` są dozwolone, ale przy tej wielkości zamówienia pojedyncze wpisy
-przez `evaluate_script` są prostsze; jeśli kompresujesz serie, zrób test round-trip do 0,0 mm.
+czoło: Ø4 i Ø8 do 35 mm). Stan 2026-11-24: 112 wpisów, 118 otworów z uwzględnieniem SZT. Policz z CSV rozkład wg rodzaju,
+strony / krawędzi, średnicy i głębokości i porównaj po wpisaniu (jeśli CSV się zmienił, wygrywa CSV). `wielowiert`
+i `skopiujNawiert` są dozwolone, ale przy tej wielkości zamówienia pojedyncze wpisy przez `evaluate_script` są prostsze;
+jeśli kompresujesz serie, zrób test round-trip do 0,0 mm.
 
 Bez wręgów i bez dodatkowych otworów: rowki pod profile LED w P1 i P3, otwory Ø160/Ø170, wycięcia U, wycięcie w SOD
 i otwór na przewód w SOT robi użytkownik sam (w CSV są tylko nawierty środków Ø5 × 5).
@@ -161,13 +144,13 @@ i otwór na przewód w SOT robi użytkownik sam (w CSV są tylko nawierty środk
 
 ## Sumy kontrolne (przed `Do koszyka`)
 
-- 21 wierszy, 24 sztuki, ok. 5,46 m² (4,43 z `podsumowanie.json` + 6 frontów METOD; policz dokładnie w `order_spec.json`).
+- 21 wierszy, 23 sztuki, ok. 5,16 m² (4,13 z `podsumowanie.json` + 6 frontów METOD; policz dokładnie w `order_spec.json`).
 - W `Podsumowanie kosztów zlecenia`:
   - `Usługa wiercenia` dla frontów z szablonem zawiasów: **1 szt.** (F1),
-  - `Usługa wiercenia` dla `Wręgowania i nawiertów`: **21 szt.** (15 sztuk z wierszy 1–12 + 6 frontów METOD),
+  - `Usługa wiercenia` dla `Wręgowania i nawiertów`: **18 szt.** (12 sztuk z wierszy 1–11 + 6 frontów METOD),
   - jedna płyta H3710 18 mm, jedno obrzeże ABS H3710 0,8 mm (sprawdź dostępność, np. `pow. 50 mb`; jeśli brak lub
     długi termin, zgłoś).
-- Otwory: 136 wpisów / 154 z SZT w wierszach 1–12, 56 otworów we frontach METOD, 3 puszki w F1.
+- Otwory: 112 wpisów / 118 z SZT w wierszach 1–11, 56 otworów we frontach METOD, 3 puszki w F1.
 
 ## Przebieg
 
@@ -178,9 +161,9 @@ i otwór na przewód w SOT robi użytkownik sam (w CSV są tylko nawierty środk
    18 mm i obrzeże H3710 0,8 mm. Na jednym wierszu testowym sprawdź kod `Słoje`, a na F1 szablon `Front prawy`
    z wkrętami i ręcznymi `x2`/`x3` (podgląd SVG). Usuń wiersz testowy albo zacznij od nowa.
 3. **Import** `import_ku_18mm.csv` przez `WCZYTAJ PLIK`. Sprawdź 21 wierszy, wymiary, SZT i słoje.
-4. **Partia A:** wiersze bez wręgowania (13, 14, 15): okleina, szablon, F1. `Przelicz koszty`, zapisz numer
+4. **Partia A:** wiersze bez wręgowania (12, 13, 14, 15): okleina, szablon, F1. `Przelicz koszty`, zapisz numer
    rozkroju, sprawdź `Usługa wiercenia` frontów = 1 szt.
-5. **Partie B:** wiersze 1–12 w paczkach po 3–4: rozwiń wiersz, popraw okleinę, `Wręgowanie`, wpisz otwory, sprawdź
+5. **Partie B:** wiersze 1–11 w paczkach po 3–4: rozwiń wiersz, popraw okleinę, `Wręgowanie`, wpisz otwory, sprawdź
    SVG (`<circle>` = 2 + otwory w płaszczyźnie, czerwone kreski = otwory w czole, gruba linia = okleina), zwiń.
    Po paczce `Przelicz koszty`, zapisz numer rozkroju, sprawdź przyrost `Usługa wiercenia` o SZT paczki.
 6. **Partia C:** fronty METOD 16–21 tak samo.
