@@ -1,7 +1,7 @@
 # Prompt dla agenta: zamówienie mebli do kuchni w centrum.meble.pl
 
 > Wklej całość poniżej linii jako pierwszą wiadomość do agenta (Claude Code lub inny agent z dostępem do repozytorium
-> `toboche/home-furniture` i do przeglądarki Chrome przez MCP). Stan danych: `main` po PR z 2026-11-22.
+> `toboche/home-furniture` i do przeglądarki Chrome przez MCP). Stan danych: `main` po audycie v7 (2026-11-24).
 
 ---
 
@@ -14,11 +14,12 @@ zostaw w raporcie numer końcowego rozkroju oraz ścieżki `order_spec.json` i w
 Efekt końcowy:
 1. nowy, osobny rozkrój `/rozkroj,rXXXXXXXX` z 21 wierszami (23 sztuki) kuchni, zgodny 1:1 z repozytorium
    (wymiary, ilości, słoje, okleina, otwory co do 0,0 mm, puszki zawiasów),
-2. ten rozkrój dodany do koszyka na koncie użytkownika, obok istniejącego `21825702` (pralnia + garderoba),
+2. ten rozkrój dodany do koszyka na koncie użytkownika (koszyk przed startem powinien być pusty),
 3. dokumentacja zamówienia w repozytorium wg `wspolne/zamowienia/README.md`,
 4. raport dla użytkownika: numer rozkroju, kwota brutto/netto, termin, odstępstwa, rzeczy do zrobienia ręcznie.
 
-Zamówienie pralni i garderoby (`21825702`) zostało właśnie złożone tą samą metodą. Jego przebieg, pułapki kalkulatora
+Zamówienie pralni i garderoby zostało złożone tą samą metodą (rozkrój `21850722`, wcześniej `21825702`; opłacone jako
+zamówienie `86253/26`, w realizacji). Jego przebieg, pułapki kalkulatora
 i mapa DOM są opisane w `wspolne/centrum_meble.md` (sekcje 3–11) i w
 `wspolne/zamowienia/2026-11-22_centrum-meble_pralnia-garderoba_21825702.md`. Przeczytaj oba pliki w całości, zanim
 otworzysz przeglądarkę. Kuchnia jest ok. 4 razy mniejsza (21 wierszy zamiast 85), więc całość powinna zająć
@@ -27,8 +28,8 @@ otworzysz przeglądarkę. Kuchnia jest ok. 4 razy mniejsza (21 wierszy zamiast 8
 ## Granice (bezwzględne)
 
 - NIE przechodź do kasy, nie wybieraj dostawy, nie płać. Kończysz na `/koszyk/`.
-- NIE zmieniaj, nie usuwaj i nie przeliczaj rozkroju `21825702` ani innych pozycji koszyka. Jeśli dodanie kuchni
-  w jakikolwiek sposób dotyka `21825702`, zatrzymaj się i zapytaj.
+- NIE zmieniaj i nie usuwaj innych pozycji koszyka ani innych rozkrojów (pralnia i garderoba są już opłacone).
+  Jeśli w koszyku przed startem cokolwiek jest, zatrzymaj się i zapytaj użytkownika, nie kasuj.
 - NIE wpisuj haseł. Jeśli konto jest wylogowane, poproś użytkownika, żeby zalogował się sam.
 - NIE klikaj weryfikacji Cloudflare („czy nie jesteś botem”) ani żadnej CAPTCHA. Poproś użytkownika, żeby ją
   przeszedł w tej samej przeglądarce, i poczekaj.
@@ -40,7 +41,7 @@ otworzysz przeglądarkę. Kuchnia jest ok. 4 razy mniejsza (21 wierszy zamiast 8
 ## Narzędzia przeglądarki
 
 Użyj **Chrome DevTools MCP** (`chrome-devtools-mcp@latest`, narzędzie `evaluate_script`) podłączonego do Chrome
-użytkownika, w którym jest jego sesja `centrum.meble.pl`. Przy `21825702` dopiero `evaluate_script` dał szybkie
+użytkownika, w którym jest jego sesja `centrum.meble.pl`. Przy zamówieniu pralni i garderoby dopiero `evaluate_script` dał szybkie
 i bezbłędne wpisywanie i audyt (minuty zamiast godzin klikania po drzewie dostępności). Jeśli Chrome DevTools MCP nie
 jest dostępny, użyj Claude in Chrome (`javascript_tool`), a w ostateczności zwykłego klikania.
 
@@ -77,7 +78,8 @@ Pliki:
 - `kuchnia/zamowienie/wycena.md`: stara wycena, NIEAKTUALNA (tylko orientacyjnie).
 
 Przygotuj deterministycznie w Pythonie (bez ręcznego przepisywania) w katalogu roboczym poza repozytorium:
-- `import_ku_18mm.csv` do `WCZYTAJ PLIK` (format z `wspolne/centrum_meble.md`, sekcja 3; nazwy z prefiksem `KU-`),
+- `import_ku_18mm.csv` do `WCZYTAJ PLIK` (format z `wspolne/centrum_meble.md`, sekcja 3; nazwy wierszy 1–15 z prefiksem `KU-`,
+  wiersze 16–21 dokładnie `usłojenie 21a` … `usłojenie 22c` bez prefiksu: pole nazwy w kalkulatorze ma limit 20 znaków),
 - `order_spec.json`: pełna specyfikacja 21 wierszy (wymiary, SZT, słoje, krawędzie, szablon, lista otworów,
   puszki) z asercjami sum z punktu „Sumy kontrolne”.
 
@@ -89,17 +91,16 @@ Przygotuj deterministycznie w Pythonie (bez ręcznego przepisywania) w katalogu 
   Przy frontach METOD użytkownik zamawiał wcześniej kolejność „kryjące długie”: jeśli kalkulator ma taką opcję,
   wybierz ją dla FM1–FM6 i F1; jeśli nie ma, zapisz to w raporcie.
 - Dekor jest usłojony: kolumna `Słoje` NIE może być `0`.
-- Wariant cięcia: `PREMIUM (+standard)`, jak w `21825702`. W raporcie podaj też cenę wariantu `Standard`, jeśli
+- Wariant cięcia: `PREMIUM (+standard)`, jak przy pralni i garderobie. W raporcie podaj też cenę wariantu `Standard`, jeśli
   podsumowanie ją pokazuje.
-- Osobny rozkrój zamiast dopisywania do `21825702`: inna płyta, więc wspólny rozkrój nie oszczędza arkuszy, a ryzykuje
-  zmianę zweryfikowanego zamówienia.
+- Osobny, nowy rozkrój (zamówienie pralni i garderoby jest zamknięte).
 
 ### Słoje, okleina krawędzi i szablony
 
 Pełna tabela 21 wierszy (kody, SZER × WYS, SZT, słoje, krawędzie z okleiną, szablon) jest w `kuchnia/zamowienie.md`
 i jest częścią specyfikacji: przepisz ją do `order_spec.json`. Słoje: na elementach pionowych pionowo, na poziomych
 równolegle do przodu, na F1, WSZ i frontach METOD na wysokość. Uwaga: przy `SZER = DL` boki i tyły (1154 × …) mają
-słoje „na szerokość”, a poziome elementy WS (282 × 238) „na wysokość”. Słoje są potwierdzone przez użytkownika (2026-11-23). Kod w kolumnie `Słoje` CSV sprawdź na jednym wierszu testowym
+słoje „na szerokość”, a poziome elementy WS (282 × 256 i półki 282 × 254) „na wysokość”. Słoje są potwierdzone przez użytkownika (2026-11-23). Kod w kolumnie `Słoje` CSV sprawdź na jednym wierszu testowym
 (oznaczenie kierunku słojów w kalkulatorze), zanim wczytasz całość.
 
 Wiersze z otworami: wymiary, krawędzie i otwory dokładnie z `kalkulator_nawierty.csv` (`Szer = DL`, `Wys = SZ`,
@@ -118,8 +119,8 @@ strony / krawędzi, średnicy i głębokości i porównaj po wpisaniu (jeśli CS
 i `skopiujNawiert` są dozwolone, ale przy tej wielkości zamówienia pojedyncze wpisy przez `evaluate_script` są prostsze;
 jeśli kompresujesz serie, zrób test round-trip do 0,0 mm.
 
-Bez wręgów i bez dodatkowych otworów: rowki pod profile LED w P1 i P3, otwory Ø160/Ø170, wycięcia U, wycięcie w SOD
-i otwór na przewód w SOT robi użytkownik sam (w CSV są tylko nawierty środków Ø5 × 5).
+Bez wręgów i bez dodatkowych otworów: rowki pod profile LED w P1 i P3, otwór Ø160 w SOB-2, wycięcia U w SOP i WSB-2,
+wycięcie 100 × 140 w WST, wycięcie i podcięcia 25 × 25 w SOD i SOP oraz otwór na przewód w SOT robi użytkownik sam (w CSV są tylko nawierty środków Ø5 × 5).
 
 ### Front F1 (wiersz 15)
 
@@ -133,6 +134,9 @@ i otwór na przewód w SOT robi użytkownik sam (w CSV są tylko nawierty środk
   `x1` (od góry) = `100`, `x2` (od dołu) = `337.5` (`ręcznie`), `x3` (od góry, `ręcznie`) = `453.5`
   (1151 − 697,5). Nie zostawiaj `symetrycznie` (stawia środkową puszkę w połowie frontu).
 - Okleina 0,8 mm na 4 krawędziach.
+- Gdyby kalkulator nie miał wariantu na wkręty albo nie przyjął pozycji puszek: `Wręgowanie i nawierty`, `Tył (B)`,
+  3 × Ø35 × 13 w X = 526,5, Y = 337,5 / 697,5 / 1051 (otwory pod wkręty puszki nawierca użytkownik). Wtedy w sumach
+  kontrolnych `Usługa wiercenia`: 0 szt. frontów z szablonem i 19 szt. `Wręgowanie`. Zapisz to jako odstępstwo.
 
 ### Fronty METOD (wiersze 16–21)
 
@@ -140,7 +144,8 @@ i otwór na przewód w SOT robi użytkownik sam (w CSV są tylko nawierty środk
   na X = 32 i 565 oraz Y z kolumny NAWIERTY. CSV podaje X od lewego dolnego rogu widoku od tyłu; otwory są symetryczne
   względem środka szerokości (32 + 565 = 597), więc w kalkulatorze wpisujesz te same liczby bez odbijania. Y liczony
   od dolnej krawędzi frontu.
-- Nazwy „usłojenie 21a … 22c” zostają w nazwie wiersza (po nich sklep dopasuje usłojenie, patrz punkt 9).
+- Nazwa wiersza dokładnie `usłojenie 21a` … `usłojenie 22c` (13 znaków, jak w `fronty_metod.csv` i na rysunku do maila),
+  bez prefiksu `KU-`: z prefiksem nazwa przekroczyłaby limit 20 znaków i kalkulator obciąłby literę a/b/c.
 
 ## Sumy kontrolne (przed `Do koszyka`)
 
@@ -155,11 +160,13 @@ i otwór na przewód w SOT robi użytkownik sam (w CSV są tylko nawierty środk
 ## Przebieg
 
 1. **Pre-flight.** Przeczytaj pliki z sekcji „Dane wejściowe”. Sprawdź logowanie (`/moje_konto/`) i zawartość koszyka:
-   ma tam być `21825702` (5 924,63 PLN) i nic nieoczekiwanego. Zapisz stan koszyka. Zadaj użytkownikowi pytanie
+   powinien być pusty (jeśli nie jest, zatrzymaj się i zapytaj). Zapisz stan koszyka. Zadaj użytkownikowi pytanie
    o słoje tylko wtedy, gdy kalkulator nie pozwala ich ustawić jak w `kuchnia/zamowienie.md`.
 2. **Test na czystym kalkulatorze** (`https://centrum.meble.pl/rozkroj,plyty-meblowe`): wybierz płytę H3710 ST12
    18 mm i obrzeże H3710 0,8 mm. Na jednym wierszu testowym sprawdź kod `Słoje`, a na F1 szablon `Front prawy`
-   z wkrętami i ręcznymi `x2`/`x3` (podgląd SVG). Usuń wiersz testowy albo zacznij od nowa.
+   z wkrętami i ręcznymi `x2`/`x3` (podgląd SVG). Na wierszu testowym ≥ 240 × 100 sprawdź też, że kalkulator przyjmuje
+   (Przelicz koszty bez błędu) operacje, których wcześniej nie używaliśmy: płaszczyzna Ø15 × 14, czoło Ø8 × 33 i czoło
+   Ø8 × 35, oraz że nazwa `usłojenie 21a` nie jest obcinana. Usuń wiersz testowy albo zacznij od nowa.
 3. **Import** `import_ku_18mm.csv` przez `WCZYTAJ PLIK`. Sprawdź 21 wierszy, wymiary, SZT i słoje.
 4. **Partia A:** wiersze bez wręgowania (12, 13, 14, 15): okleina, szablon, F1. `Przelicz koszty`, zapisz numer
    rozkroju, sprawdź `Usługa wiercenia` frontów = 1 szt.
@@ -174,7 +181,7 @@ i otwór na przewód w SOT robi użytkownik sam (w CSV są tylko nawierty środk
    `/rozkroj/go/ajaxRequest,drukuj/art<ID>.html?typ_rozkroju=1`. Różnice popraw i powtórz audyt.
 8. **Koszyk:** ostatni `Przelicz koszty`, przeczytaj wszystkie linie podsumowania, `Do koszyka` w wariancie
    `PREMIUM (+standard)`, otwórz `/koszyk/` i sprawdź: nowy numer rozkroju, kwota, termin, opcja odpadów
-   (domyślnie niewybrana) oraz że `21825702` jest nienaruszony (ta sama kwota). Stop.
+   (domyślnie niewybrana) oraz że w koszyku nie ma nic poza nowym rozkrojem kuchni. Stop.
 9. **Mail o usłojeniu (szkic, nie wysyłaj):** prośba, żeby fronty „usłojenie 21a, 21b, 21c” i „22a, 22b, 22c”
    wyciąć z jednego pasa płyty kolejno w pionie, tak by usłojenie przechodziło między frontami w kolumnie, z numerem
    rozkroju i załącznikiem `kuchnia/zamowienie/fronty_metod_rysunek.pdf`. Szkic pokaż użytkownikowi.
@@ -188,7 +195,7 @@ i otwór na przewód w SOT robi użytkownik sam (w CSV są tylko nawierty środk
 
 - rozbieżność między tym promptem a plikami repozytorium, albo `run.py --sprawdz` niezgodny,
 - kalkulator nie przyjmuje wartości (średnica, głębokość, pozycja puszki, wymiar) albo nie ma płyty/obrzeża H3710,
-- jakakolwiek zmiana w `21825702` lub nieoczekiwana pozycja w koszyku,
+- jakakolwiek nieoczekiwana pozycja w koszyku,
 - logowanie lub Cloudflare (użytkownik robi to sam),
 - audyt końcowy z różnicami, których nie umiesz usunąć.
 
@@ -196,5 +203,5 @@ i otwór na przewód w SOT robi użytkownik sam (w CSV są tylko nawierty środk
 
 Krótko: numer rozkroju i link, kwota brutto/netto (i `Standard`, jeśli widoczna), termin realizacji, wynik audytu
 (0 różnic), lista rzeczy do zrobienia ręcznie po dostawie (z `kuchnia/komponenty.md` i kolumny UWAGI: poszerzenie
-konfirmatów do Ø7, pogłębienie otworów prętów do 85, rowki LED, otwory Ø160/Ø170 i wycięcia U, wycięcie SOD, otwór
-na przewód w SOT), szkic maila o usłojeniu i informacja, że koszyk czeka na płatność przez użytkownika.
+konfirmatów do Ø7, pogłębienie otworów prętów do 85, rowki LED, otwór Ø160 i wycięcia U, wycięcie 100 × 140 w WST,
+wycięcie SOD, podcięcia 25 × 25, otwór na przewód w SOT), szkic maila o usłojeniu i informacja, że koszyk czeka na płatność przez użytkownika.

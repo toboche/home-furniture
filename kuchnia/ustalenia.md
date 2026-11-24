@@ -72,7 +72,7 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
 - Pod sufitem zamknięta skrzynka na rurę, cofnięta: dno skrzynki WSS na Y 2474–2492, zaślepka WSZ z = 195–213
   (2026-11-16, bo w skrzynce jest redukcja z końcem Ø150; wcześniej 2484–2502 i 172–190). Przed zaślepką płytka półka:
   głębokość ok. 87, wysokość w świetle 168.
-- Poniżej 2 półki stałe WSP w równych odstępach: 3 przegrody po 306,33 w świetle (2026-11-14; wcześniej 3 półki / 4 × 225,25).
+- Poniżej 2 półki WSP w równych odstępach: 3 przegrody po 306,33 w świetle (2026-11-14; wcześniej 3 półki / 4 × 225,25; od 2026-11-24 na podpórkach).
   Najwyżej płytka półka przed skrzynką (gł. ok. 87, wys. 168 od 2026-11-16): akceptowane.
 
 ### Kanał okapu, 2026-11-14
@@ -330,6 +330,21 @@ MAXIMERA Ø5 × 12 vs 13, rowek LED 17,2 vs 18,2, kątowniki pod P1, cofnięcie 
 - Kątowniki pod P1 odpadają: pod P1 są płytki.
 - Cofnięcie listwy za WSZ: do decyzji po wyborze zatrzasku.
 
+### 2026-11-24: audyt v7 (`audyt/v7.md`)
+Wdrożone:
+- KU7-01: prompt agenta: koszyk przed startem pusty (pralnia i garderoba opłacone: `21850722`, zam. 86253/26), wymiary WS 256/254, wycięcia.
+- KU7-02: nazwy frontów METOD w kalkulatorze dokładnie `usłojenie 21a` … `22c` (limit 20 znaków), prefiks `KU-` tylko wiersze 1–15;
+  zapasowy wariant F1 (`Wręgowanie`) i test operacji Ø15 × 14, Ø8 × 33, Ø8 × 35 w prompcie.
+- KU7-03: SOP 284 głębokości (2 od przodu, jak SOD; luźna półka nie dosięga F1), osie otworów podpórek 3 pod półką (było 5,
+  jak w pralni; nad okapem z Alubutylem było 0 luzu pod trzpieniem), opis SOP (nawiert środka), podcięcie x 2886–2911.
+  Podpórki płaskie z otworem pod wkręt: SOP i WSP przykręcone od spodu Ø3 × 12, SOD bez wkrętów.
+- KU7-04: bez pianki i opaski na króćcu i w przelocie SOD, pasek EPDM w otworze Ø160; wkręty okapu Ø4 × 18 (3,5 × 16 z EPDM
+  wchodziło za płytko; zmiana decyzji z 2026-11-23 wynikająca z dystansów EPDM), do sprawdzenia otwór w blasze okapu.
+- KU7-05: warunki montażu SO → WS (wyżej, wpis „WS bez lewego boku”).
+- KU7-06 (część): Ø160 × 1, klej PVAc do kołków, klej polimerowy do listwy, wkręty do zatrzasków, rezerwa Ø4 × 16 do prowadników.
+- KU7-07: porządki w `weryfikacja.md`, `reguly.py`, `wycena.md`, `komponenty.md`.
+Do rozmowy: cofnięcie listwy za WSZ o 2–2,5 (po wyborze zatrzasku), sekcja C (`wspolne/`) osobnym PR.
+
 ### 2026-11-24: WS bez lewego boku, półki na podpórkach
 - WSB-1 usunięty: lewą ścianką wnęki WS jest zewnętrzne lico SOB-2. Wnęka 256 w świetle (było 238); WST, WSD, WSW, WSS 256,
   WSZ 254, listwa 254, półki WSP 254 (luz 1 z boków).
@@ -346,6 +361,15 @@ MAXIMERA Ø5 × 12 vs 13, rowek LED 17,2 vs 18,2, kątowniki pod P1, cofnięcie 
   100 × 140 od prawej krawędzi (x 3086–3186, Y 2494–2634; bez niego WST zahacza o rurę, dotyczyło też wersji z WSB-1).
   Potem WST do ściany (4 × 6 × 70, górne na lewo od wycięcia) i konfirmaty SOB-2 → WSD, WSS od wnętrza SO. Na końcu okap i rury.
   WSW bez kołków do SOB-2: kołki w poprzek ruchu wsuwania by nie weszły.
+- Warunki montażu (audyt v7 KU7-05, 2026-11-24):
+  - przed wsuwaniem WS zdjąć ramkę kratki wentylacyjnej w ściance (wystaje ok. 8 do WSB-2), założyć po wsunięciu (luz 6);
+  - górne kołki do ściany w WST: WS wsunąć na przymiarkę, zaznaczyć 4 punkty przez WST, wysunąć, wywiercić i osadzić kołki,
+    wsunąć ponownie i wkręcić długim bitem (w skrzynce 168 wysokości wiertarka udarowa się nie zmieści);
+  - łby konfirmatów pogłębić ok. 0,5 poniżej lica: na zewnętrznym licu SOB-2 (pod WST i WSW), na zewnętrznym licu WSB-2
+    (2 do ścianki) i SOB-2 → WSD od wnętrza SO (obok boku okapu);
+  - listwę 10 × 10 i zatrzaski WSZ montować po rurze Ø150 i redukcji (wcześniej okno skrzynki jest za ciasne);
+  - przy wycinaniu 100 × 140 w WST podeprzeć płytę (nad wycięciem pasek 31 mm z konfirmatem do WSW);
+  - opcjonalnie mały kątownik WSW–SOB-2 wewnątrz skrzynki, jeśli lewy przód WSW będzie się uginał.
 - Skutki: 23 szt. zamiast 24 (w kalkulatorze 21 wierszy), otwory CNC 114 z SZT (było 154; z kołkami WSW 118), konfirmaty 28 (było 50), Minifix 4 (było 5).
 - Rozważone i na razie odrzucone (2026-11-24): WS bez pleców WST w widocznej części (widoczna ściana przy płycie grzewczej,
   łby konfirmatów SOT na SOB-2, mniej mocowań do ściany). WST zostaje w całości.
@@ -361,10 +385,13 @@ MAXIMERA Ø5 × 12 vs 13, rowek LED 17,2 vs 18,2, kątowniki pod P1, cofnięcie 
   (np. Alnor RSLL-150-125, nypel–nypel) na końcu w WS. W razie powrotu do tłumika: prosty pion w SO, do ok. 430 długości, Ø do ok. 220, SOP zostaje na 2104.
 - Izolacja dwuwarstwowa na zewnątrz rur i kształtek w SO: (1) Alubutyl 2–2,5 mm na odtłuszczoną blachę, dociśnięty wałkiem
   (gasi „dzwonienie” blachy), (2) pianka kauczukowa zamkniętokomórkowa 6–10 mm + taśma na stykach. Ciasne miejsca:
-  - otwory Ø160 w SOB-2 i WSB-1: izolacja przerwana na grubości płyty, pierścień z miękkiej gumy / EPDM ok. 5 na stronę;
-  - wycięcie U w SOP: Alubutyl ciągły, pianka przerwana lub bez docisku do płyty;
+  - otwór Ø160 w SOB-2 (od 2026-11-24 jedyny): izolacja przerwana na grubości płyty, płaski pasek EPDM wewnątrz otworu ok. 5 na stronę
+    (nie uszczelka U na licach: góra otworu 3 pod SOW);
+  - króciec i przelot przez SOD (Y 1776–1806, wycięcie R85): tylko Alubutyl, bez pianki; na króćcu tylko taśma EPDM / butylowa
+    + aluminiowa, bez opaski z zamkiem (nie przejdzie przez wycięcie w SOD; audyt v7 KU7-04);
+  - wycięcie U w SOP: Alubutyl ciągły, pianka przerwana na grubości SOP (luźna półka nie dotyka rury);
   - góra poziomego Ø150 pod SOW (8 prześwitu): Alubutyl 2 + pianka do 3–4, zostaje ≥ 2 luzu (nie rozpierać wieńca);
-  - skrzynka WS (redukcja, odcinek Ø150 za WSB-1): tylko Alubutyl 2, bez pianki (WSS, WSW, zatrzaski WSZ).
+  - skrzynka WS (redukcja, odcinek Ø150 za SOB-2): tylko Alubutyl 2, bez pianki (WSS, WSW, zatrzaski WSZ).
 - Korpus okapu DUO 55: pasy Alubutylu 2 na płaskich ściankach (przód, tył, góra, boki między nitami), z dala od otworów
   wentylacyjnych silnika i elektroniki, tabliczki znamionowej i punktów przykręcenia. Między górą korpusu (Y 1776) a SOD
   zostaje po Alubutylu ok. 5–8: pod SOD nic nie kleić, półka ma się wsuwać na podpórki.
@@ -442,3 +469,4 @@ MAXIMERA Ø5 × 12 vs 13, rowek LED 17,2 vs 18,2, kątowniki pod P1, cofnięcie 
 - 2026-11-24: WS bez WSB-1 (lewą ścianką SOB-2), SOP i WSP na podpórkach, wnęka WS 256.
 - 2026-11-24: kolejność montażu SO → WS sprawdzona: WS wsuwana od przodu jako skrzynia, WST z wycięciem za rurą, WSW bez kołków.
 - 2026-11-24: widok 3D: lekkie linie kierunku słojów na płytach (wg `zamowienie.md`).
+- 2026-11-24: audyt v7: prompt (koszyk, nazwy METOD, F1 zapasowo), SOP 284, podpórki 3 pod półką, wkręty okapu Ø4 × 18, montaż WS.

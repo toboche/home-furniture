@@ -1,8 +1,8 @@
 # Wstępna wycena meble.pl (2026-11-15)
 
 > NIEAKTUALNA od 2026-11-16: doszła półka SOD, otwory w czołach P1/P3, zmiany z audytu v1 (2026-11-18).
-> Przeliczyć przed zamówieniem. Puszki F1 NIE z szablonu „Front prawy” (stawia środkową puszkę w połowie frontu):
-> 3 otwory Ø35 × 13 w szablonie „Wręgowanie i nawierty” wg położenia zawiasów z modelu (po decyzji o zawiasach).
+> Przeliczyć przy zamówieniu (wycenę zrobi agent zamówienia). Puszki F1: szablon „Front prawy” z ręcznymi x2/x3,
+> zapasowo „Wręgowanie” (patrz `../zamowienie.md`); nie zostawiać pozycji „symetrycznie”.
 
 Kalkulator „Cięcie na wymiar”, płyta Egger H3710 ST12 Orzech Carini naturalny 18 mm, obrzeże ABS H3710 0,8 × 23.
 Formatki wczytane z CSV (20 pozycji, 23 szt.: szafka okapowa, wąska szafka, P1, P3, F1, fronty METOD FM1–FM6),
