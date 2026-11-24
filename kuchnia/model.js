@@ -170,6 +170,11 @@ for(var k=1;k<=NPW;k++){
   ITEMS.push({n:'WSP-'+k+': WS: półka na 4 podpórkach (luz 1 z boków)',layer:'Półki',x:XWS+1,y:ywn+k*prz+(k-1)*P,z:P,w:WSW_-2,h:P,d:GK-P,c:POL});
 }
 
+/* kierunek słojów w widoku (zamowienie.md, potwierdzone 2026-11-23): pionowe elementy pionowo, poziome równolegle do przodu */
+var SLOJE={'SOB-1':'y','SOB-2':'y','SOT':'y','WSB-2':'y','WST':'y','WSZ':'y','F1':'y',
+  'SOW':'x','SOP':'x','SOD':'x','WSD':'x','WSS':'x','WSW':'x','WSP-1':'x','WSP-2':'x','P3':'x','P1':'z'};
+ITEMS.forEach(function(it){var k=it.n.split(':')[0];if(SLOJE[k]&&!it.t)it.sloje=SLOJE[k];});
+
 return {
   title:'Kuchnia 3D: półka LED, szafka okapowa, wąska szafka',
   room:{W:A+700,D:2200,H:YS},
