@@ -521,30 +521,6 @@
 },
 {
 "axis_n": "-",
-"d": 8,
-"depth": 10,
-"kind": "FACE",
-"opis": "Otwór Ø8 x 10 pod kołek (do WSW)",
-"partner": "WSW",
-"pin": true,
-"side": "A",
-"u": 1145,
-"v": 60
-},
-{
-"axis_n": "-",
-"d": 8,
-"depth": 10,
-"kind": "FACE",
-"opis": "Otwór Ø8 x 10 pod kołek (do WSW)",
-"partner": "WSW",
-"pin": true,
-"side": "A",
-"u": 1145,
-"v": 150
-},
-{
-"axis_n": "-",
 "d": 3,
 "depth": 5,
 "kind": "FACE",
@@ -1419,26 +1395,6 @@
 "kind": "EDGE",
 "n_axis_is_u": true,
 "partner": "WST"
-},
-{
-"along": 42,
-"d": 8,
-"depth": 22,
-"edge_coord": 0,
-"into": 1,
-"kind": "EDGE",
-"n_axis_is_u": false,
-"partner": "SOB-2: kołek"
-},
-{
-"along": 132,
-"d": 8,
-"depth": 22,
-"edge_coord": 0,
-"into": 1,
-"kind": "EDGE",
-"n_axis_is_u": false,
-"partner": "SOB-2: kołek"
 }
 ],
 "lo": {
