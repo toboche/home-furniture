@@ -441,3 +441,4 @@ MAXIMERA Ø5 × 12 vs 13, rowek LED 17,2 vs 18,2, kątowniki pod P1, cofnięcie 
 - 2026-11-23: słoje potwierdzone; zamówienie składa inny agent wg `zamowienie/prompt_agenta_zamowienie.md`, weryfikacja tutaj.
 - 2026-11-24: WS bez WSB-1 (lewą ścianką SOB-2), SOP i WSP na podpórkach, wnęka WS 256.
 - 2026-11-24: kolejność montażu SO → WS sprawdzona: WS wsuwana od przodu jako skrzynia, WST z wycięciem za rurą, WSW bez kołków.
+- 2026-11-24: widok 3D: lekkie linie kierunku słojów na płytach (wg `zamowienie.md`).
