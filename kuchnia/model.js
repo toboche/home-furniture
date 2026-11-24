@@ -131,7 +131,7 @@ add([
   {n:'SOT: SO: tył',layer:'Ścianki tylne',x:XSO+P,y:YP,z:0,w:SOW-2*P,h:YT-YP,d:P,c:TYL},
   {n:'SOW: SO: wieniec górny',layer:'Półki',x:XSO+P,y:YT-P,z:P,w:SOW-2*P,h:P,d:GKS-P,c:POL},
   {n:'SOD: SO: półka wkładana tuż nad okapem, na podpórkach, z wycięciem od przodu na wylot (wkładana po montażu okapu)',layer:'Półki',x:XSO+P+1,y:YSOD,z:P,w:SOW-2*P-2,h:P,d:GKS-P-2,c:POL},
-  {n:'SOP: SO: półka nad okapem na 4 podpórkach, luz 1 z boków (2026-11-24; wycięcie U na rurę)',layer:'Półki',x:XSO+P+1,y:YSOP,z:P,w:SOW-2*P-2,h:P,d:GKS-P,c:POL},
+  {n:'SOP: SO: półka nad okapem na 4 podpórkach, luz 1 z boków, 2 cofnięta od przodu (2026-11-24; wycięcie U na rurę)',layer:'Półki',x:XSO+P+1,y:YSOP,z:P,w:SOW-2*P-2,h:P,d:GKS-P-2,c:POL},
   {n:'F1: Front szafki okapowej (549 × 1151), 2 przed korpusem (szczelina TIP-ON)',layer:'Fronty',x:XSO+1.5,y:YP+1.5,z:GKS+SZT,w:SOW-3,h:YT-YP-3,d:P,c:FR,o:0.55}
 ]);
 add(zawiasy('F1',XSO+1.5,YP+1.5,SOW-3,YT-YP-3,'prawa',3,GKS+SZT,[YZ1,YZ2,YT-1.5-100]));

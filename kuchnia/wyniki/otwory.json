@@ -149,7 +149,7 @@
 "partner": "SOD",
 "pin": true,
 "side": "A",
-"u": 270,
+"u": 272,
 "v": 75
 },
 {
@@ -160,7 +160,7 @@
 "partner": "SOD",
 "pin": true,
 "side": "A",
-"u": 270,
+"u": 272,
 "v": 250
 },
 {
@@ -171,7 +171,7 @@
 "partner": "SOP",
 "pin": true,
 "side": "A",
-"u": 588,
+"u": 590,
 "v": 75
 },
 {
@@ -182,7 +182,7 @@
 "partner": "SOP",
 "pin": true,
 "side": "A",
-"u": 588,
+"u": 590,
 "v": 250
 },
 {
@@ -191,7 +191,7 @@
 "depth": 5,
 "kind": "FACE",
 "opis": "Nawiert pilotowy Ø3 x 5 pod wkręt okapu",
-"partner": "wkręt okapu 3,5 x 16 (z podkładką dystansową)",
+"partner": "wkręt okapu Ø4 x 18 (z dystansem EPDM)",
 "pilot": true,
 "pin": false,
 "side": "A",
@@ -204,7 +204,7 @@
 "depth": 5,
 "kind": "FACE",
 "opis": "Nawiert pilotowy Ø3 x 5 pod wkręt okapu",
-"partner": "wkręt okapu 3,5 x 16 (z podkładką dystansową)",
+"partner": "wkręt okapu Ø4 x 18 (z dystansem EPDM)",
 "pilot": true,
 "pin": false,
 "side": "A",
@@ -439,7 +439,7 @@
 "partner": "SOD",
 "pin": true,
 "side": "B",
-"u": 270,
+"u": 272,
 "v": 75
 },
 {
@@ -450,7 +450,7 @@
 "partner": "SOD",
 "pin": true,
 "side": "B",
-"u": 270,
+"u": 272,
 "v": 250
 },
 {
@@ -461,7 +461,7 @@
 "partner": "SOP",
 "pin": true,
 "side": "B",
-"u": 588,
+"u": 590,
 "v": 75
 },
 {
@@ -472,7 +472,7 @@
 "partner": "SOP",
 "pin": true,
 "side": "B",
-"u": 588,
+"u": 590,
 "v": 250
 },
 {
@@ -483,7 +483,7 @@
 "partner": "WSP-1",
 "pin": true,
 "side": "A",
-"u": 311.666667,
+"u": 313.666667,
 "v": 50
 },
 {
@@ -494,7 +494,7 @@
 "partner": "WSP-1",
 "pin": true,
 "side": "A",
-"u": 311.666667,
+"u": 313.666667,
 "v": 250
 },
 {
@@ -505,7 +505,7 @@
 "partner": "WSP-2",
 "pin": true,
 "side": "A",
-"u": 628.333333,
+"u": 630.333333,
 "v": 50
 },
 {
@@ -516,7 +516,7 @@
 "partner": "WSP-2",
 "pin": true,
 "side": "A",
-"u": 628.333333,
+"u": 630.333333,
 "v": 250
 },
 {
@@ -525,7 +525,7 @@
 "depth": 5,
 "kind": "FACE",
 "opis": "Nawiert pilotowy Ø3 x 5 pod wkręt okapu",
-"partner": "wkręt okapu 3,5 x 16 (z podkładką dystansową)",
+"partner": "wkręt okapu Ø4 x 18 (z dystansem EPDM)",
 "pilot": true,
 "pin": false,
 "side": "B",
@@ -538,7 +538,7 @@
 "depth": 5,
 "kind": "FACE",
 "opis": "Nawiert pilotowy Ø3 x 5 pod wkręt okapu",
-"partner": "wkręt okapu 3,5 x 16 (z podkładką dystansową)",
+"partner": "wkręt okapu Ø4 x 18 (z dystansem EPDM)",
 "pilot": true,
 "pin": false,
 "side": "B",
@@ -967,12 +967,12 @@
 },
 {
 "DL": 514,
-"SZ": 286,
+"SZ": 284,
 "code": "SOP",
 "hi": {
 "x": 2911,
 "y": 2122,
-"z": 304
+"z": 302
 },
 "holes": [
 {
@@ -1110,7 +1110,7 @@
 "partner": "WSP-1",
 "pin": true,
 "side": "B",
-"u": 311.666667,
+"u": 313.666667,
 "v": 50
 },
 {
@@ -1121,7 +1121,7 @@
 "partner": "WSP-1",
 "pin": true,
 "side": "B",
-"u": 311.666667,
+"u": 313.666667,
 "v": 250
 },
 {
@@ -1132,7 +1132,7 @@
 "partner": "WSP-2",
 "pin": true,
 "side": "B",
-"u": 628.333333,
+"u": 630.333333,
 "v": 50
 },
 {
@@ -1143,7 +1143,7 @@
 "partner": "WSP-2",
 "pin": true,
 "side": "B",
-"u": 628.333333,
+"u": 630.333333,
 "v": 250
 }
 ],

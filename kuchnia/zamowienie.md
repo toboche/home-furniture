@@ -2,7 +2,7 @@
 
 Źródło dla agenta zamówienia (`zamowienie/prompt_agenta_zamowienie.md`). Wymiary, ilości i otwory: `wyniki/kalkulator_nawierty.csv`,
 `wyniki/formatki.csv`, `zamowienie/fronty_metod.csv`. Ten plik dodaje to, czego pipeline nie eksportuje: słoje, okleinę frontów, szablon F1.
-Stan: 2026-11-24: bez WSB-1, SOP i WSP na podpórkach; słoje potwierdzone 2026-11-23, MAXIMERA Ø5 × 12.
+Stan: 2026-11-24 po audycie v7: bez WSB-1, SOP (284) i WSP na podpórkach; słoje potwierdzone 2026-11-23, MAXIMERA Ø5 × 12.
 
 ## Płyta i okleina
 - Płyta: `Płyta meblowa EGGER H3710 ST12 Orzech Carini naturalny 18 mm` (dekor usłojony, kolumna `Słoje` nigdy `0`).
@@ -22,7 +22,7 @@ Znaczenie wartości `Słoje` w kalkulatorze (na szerokość / na wysokość, kod
 | 4 | KU-SOB-2 | 1 | 1154 × 304 | pionowo | NA SZEROKOŚĆ | 1 | Wręgowanie |
 | 5 | KU-SOT | 1 | 1154 × 516 | pionowo | NA SZEROKOŚĆ | brak | Wręgowanie |
 | 6 | KU-SOW | 1 | 516 × 286 | lewo–prawo | NA SZEROKOŚĆ | 1 | Wręgowanie |
-| 7 | KU-SOP | 1 | 514 × 286 | lewo–prawo | NA SZEROKOŚĆ | 1 | Wręgowanie (tylko środek otworu) |
+| 7 | KU-SOP | 1 | 514 × 284 | lewo–prawo | NA SZEROKOŚĆ | 1 | Wręgowanie (tylko środek otworu) |
 | 8 | KU-WSB-2 | 1 | 1154 × 300 | pionowo | NA SZEROKOŚĆ | 1 | Wręgowanie |
 | 9 | KU-WST | 1 | 1154 × 256 | pionowo | NA SZEROKOŚĆ | brak | Wręgowanie |
 | 10 | KU-WSD, WSS | 2 | 282 × 256 | lewo–prawo (wzdłuż 256) | NA WYSOKOŚĆ | 2 (256, przód) | Wręgowanie |
@@ -31,7 +31,7 @@ Znaczenie wartości `Słoje` w kalkulatorze (na szerokość / na wysokość, kod
 | 13 | KU-WSZ | 1 | 254 × 165 | pionowo (jak F1) | NA WYSOKOŚĆ | brak | bez nawiertów |
 | 14 | KU-WSP-1, WSP-2 | 2 | 282 × 254 | lewo–prawo (wzdłuż 254) | NA WYSOKOŚĆ | 2 (254, przód) | bez nawiertów |
 | 15 | KU-F1 | 1 | 549 × 1151 | pionowo | NA WYSOKOŚĆ | 1, 2, 3, 4 | Front prawy |
-| 16–21 | KU-FM1–FM6 („usłojenie 21a–21c, 22a–22c”) | 6 | 597 × 142 / 397 / 397 / 197 / 197 / 397 | pionowo, ciągłe w kolumnie | NA WYSOKOŚĆ | 1, 2, 3, 4 | Wręgowanie (Tył) |
+| 16–21 | FM1–FM6: nazwy w kalkulatorze dokładnie `usłojenie 21a` … `usłojenie 22c` (bez `KU-`, limit 20 znaków) | 6 | 597 × 142 / 397 / 397 / 197 / 197 / 397 | pionowo, ciągłe w kolumnie | NA WYSOKOŚĆ | 1, 2, 3, 4 | Wręgowanie (Tył) |
 
 Od 2026-11-24 bez WSB-1 (lewą ścianką WS jest SOB-2); SOP, WSP-1 i WSP-2 na podpórkach.
 
@@ -40,7 +40,7 @@ Od 2026-11-24 bez WSB-1 (lewą ścianką WS jest SOB-2); SOP, WSP-1 i WSP-2 na p
   `Odległość od krawędzi` = `22.50`, 3 puszki: `x1` (od góry) = `100`, `x2` (od dołu, ręcznie) = `337.5`, `x3` (od góry, ręcznie) = `453.5`
   (środki 337,5 / 697,5 / 1051 od dołu). Nie `symetrycznie`. Sprawdzić na podglądzie SVG, że puszki są przy prawej krawędzi.
 - Gdyby kalkulator nie miał wariantu na wkręty: `Wręgowanie i nawierty`, `Tył (B)`, 3 × Ø35 × 13 w X = 526,5, Y = 337,5 / 697,5 / 1051
-  (otwory pod wkręty puszki nawierca użytkownik).
+  (otwory pod wkręty puszki nawierca użytkownik). Wtedy `Usługa wiercenia`: 0 frontów z szablonem + 19 szt. `Wręgowanie`.
 
 ## Sumy kontrolne
 21 wierszy, 23 szt.; `Usługa wiercenia`: 1 szt. front z szablonem zawiasów + 18 szt. `Wręgowanie` (12 z wierszy 1–11 + 6 frontów METOD);
