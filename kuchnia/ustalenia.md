@@ -192,6 +192,7 @@ Założenia domyślne: `wspolne/zasady.md`; różnice zapisujemy tutaj. Pomiary:
 - KU-11: SO i WS przykręcone do ściany głównej przez plecy: po 4 wkręty 6 × 70 z kołkami Ø8 do betonu w SOT i WST
   (2 ok. 40 pod wieńcem, 2 nisko: w SO nad SOD, ok. Y 1830, z dala od pionu x 2571–2741; w WS ok. Y 1560), wkręcane
   przed montażem okapu; SO i WS skręcone ze sobą 4 wkrętami 4 × 30 przez SOB-2 w WSB-1. Bez widocznych łbów.
+  [Od 2026-11-24 bez WSB-1: WS łączona z SOB-2 elementami poziomymi, bez wkrętów 4 × 30.]
 - KU-04 (część): styk P3/SOB-1 i rowki LED zabezpieczone przed parą (silikon na styku, lakier w rowkach).
 - KU-13: porządki w README, komentarzach i nieaktualnych wpisach; OK5: 94 od tyłu korpusu (rysunek), było 93.
 - Nie wdrożone, do decyzji z użytkownikiem: KU-02 (dolny zawias F1 koliduje z korpusem okapu), KU-09 (TIP-ON),
@@ -329,6 +330,19 @@ MAXIMERA Ø5 × 12 vs 13, rowek LED 17,2 vs 18,2, kątowniki pod P1, cofnięcie 
 - Kątowniki pod P1 odpadają: pod P1 są płytki.
 - Cofnięcie listwy za WSZ: do decyzji po wyborze zatrzasku.
 
+### 2026-11-24: WS bez lewego boku, półki na podpórkach
+- WSB-1 usunięty: lewą ścianką wnęki WS jest zewnętrzne lico SOB-2. Wnęka 256 w świetle (było 238); WST, WSD, WSW, WSS 256,
+  WSZ 254, listwa 254, półki WSP 254 (luz 1 z boków).
+- SOP, WSP-1 i WSP-2 na 4 podpórkach Ø5 (jedna pozycja, wysokości jak dotąd: SOP Y 2104, WSP jak w modelu). SOD bez zmian.
+  SOP w SOB-1 i SOB-2 od wnętrza SO (z 75, 250), WSP w zewnętrznym licu SOB-2 i w WSB-2 (z 50, 250). Podpórki z zabezpieczeniem
+  przed wysunięciem półki (WS przy płycie grzewczej). Wycięcie U w SOP z zapasem kilku mm: luźna półka nie dotyka rury.
+- SOB-2 zostaje na konfirmatach (bez Minifix): łby od SOT zasłania krawędź WST, od SOW krawędź WSW, od SOP już ich nie ma.
+- Połączenia WS z SOB-2: WSD i WSS konfirmatami od wnętrza SO (łby wewnątrz SO, równo z licem; WSD wkręcać przed okapem, WSS
+  przed rurami), WSW na 2 kołkach Ø8 (od wnętrza SO zasłania SOW), WST bez łączenia z SOB-2 (po drugiej stronie konfirmaty SOT).
+  SO i WS jako jeden moduł w `reguly.py`. Odpada skręcenie SO z WS wkrętami 4 × 30.
+- Montaż: SO na ścianie (SOT 4 × 6 × 70), potem WS na miejscu: WST do ściany (4 × 6 × 70), WSD, WSS, WSW, WSB-2; okap i rury po WSD/WSS.
+- Skutki: 23 szt. zamiast 24 (w kalkulatorze 21 wierszy), otwory CNC 118 z SZT (było 154), konfirmaty 28 (było 50), Minifix 4 (było 5).
+
 ### 2026-11-23: słoje
 - Tabela słojów w `zamowienie.md` potwierdzona: elementy pionowe pionowo, poziome równolegle do przodu, F1, WSZ i fronty METOD
   pionowo (w kalkulatorze boki i tyły „na szerokość”, poziome elementy WS, WSZ, F1 i METOD „na wysokość”).
@@ -418,3 +432,4 @@ MAXIMERA Ø5 × 12 vs 13, rowek LED 17,2 vs 18,2, kątowniki pod P1, cofnięcie 
 - 2026-11-23: widok 3D: para kolan 15° nad okapem narysowana jako pochylony odcinek (wcześniej poziomy walec w poprzek).
 - 2026-11-23: wyciszenie kanału: bez tłumika, Alubutyl + pianka kauczukowa na rurach, Alubutyl na korpusie okapu, dystanse EPDM pod okap, króciec bez blachowkrętów.
 - 2026-11-23: słoje potwierdzone; zamówienie składa inny agent wg `zamowienie/prompt_agenta_zamowienie.md`, weryfikacja tutaj.
+- 2026-11-24: WS bez WSB-1 (lewą ścianką SOB-2), SOP i WSP na podpórkach, wnęka WS 256.

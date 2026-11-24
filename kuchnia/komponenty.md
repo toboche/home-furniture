@@ -1,17 +1,17 @@
 # Kuchnia: komponenty i zakupy poza płytami (stan 2026-11-22, po audytach v5 i v6)
 
-Liczby łączników z `wyniki/podsumowanie.json` (przeliczenie 2026-11-19). Pozycje DO DECYZJI: patrz `ustalenia.md`.
+Liczby łączników z `wyniki/podsumowanie.json` (przeliczenie 2026-11-24, WS bez WSB-1). Pozycje DO DECYZJI: patrz `ustalenia.md`.
 
 ## Łączniki korpusów (z modelu)
 | POZYCJA | ILOŚĆ | UWAGI |
 |---|---|---|
-| Konfirmat 7 × 50 | 50 | wszystkie łby ukryte (0 widocznych) |
-| Złącze mimośrodowe Häfele Minifix 15 (obudowa + trzpień B 24, gwint Euro Ø5) | 5 | SOB-1 (widoczny bok): 3 × SOT, 1 × SOW, 1 × SOP |
-| Kołek Ø8 × 30 | 6 | SOB-1: 2 × SOT, 2 × SOW, 2 × SOP |
+| Konfirmat 7 × 50 | 28 | łby ukryte; 2 (SOB-2 → WSS) wewnątrz SO za frontem F1, zaślepki niepotrzebne |
+| Złącze mimośrodowe Häfele Minifix 15 (obudowa + trzpień B 24, gwint Euro Ø5) | 4 | SOB-1 (widoczny bok): 3 × SOT, 1 × SOW |
+| Kołek Ø8 × 30 | 6 | SOB-1: 2 × SOT, 2 × SOW; SOB-2: 2 × WSW |
 | Zatrzask dociskowy push-to-open, krótki: wys. do 14, dł. do 47, skok do 10 | 2 | WSZ u góry, pod WSW; nad rurą Ø150 mało miejsca (8 pod WSW), przymierzyć przed przyklejeniem; WSZ przewraca się do przodu przy wychyleniu góry ok. 17 |
 | Linka / łańcuszek zabezpieczający + 2 haczyki | 1 | WSZ do spodu WSW, żeby wysunięta zaślepka nie spadła na płytę grzewczą |
-| Listwa 10 × 10 (drewno / ALU), dł. 236 | 1 | oporowa za WSZ, na WSS, klejona |
-| Podpórka półki Ø5 | 4 | pod wkładaną półkę SOD |
+| Listwa 10 × 10 (drewno / ALU), dł. 254 | 1 | oporowa za WSZ, na WSS, klejona |
+| Podpórka półki Ø5 z zabezpieczeniem przed wysunięciem półki | 16 | po 4: SOD, SOP, WSP-1, WSP-2 |
 
 ## Front F1 (Blum)
 | POZYCJA | KOD | ILOŚĆ | UWAGI |
@@ -26,8 +26,7 @@ Liczby łączników z `wyniki/podsumowanie.json` (przeliczenie 2026-11-19). Pozy
 ## Mocowanie szafek i półki LED
 | POZYCJA | ILOŚĆ | UWAGI |
 |---|---|---|
-| Wkręt 6 × 70 + kołek nylonowy Ø8 do betonu | 8 | po 4 przez plecy SOT i WST |
-| Wkręt 4 × 30 | 4 | skręcenie SO z WS (SOB-2 w WSB-1) |
+| Wkręt 6 × 70 + kołek nylonowy Ø8 do betonu | 8 | po 4 przez plecy SOT i WST do ściany głównej |
 | Pręt gwintowany M8, ocynk, klasa 8.8 | 2 × 1 m | 8 odcinków po 160: P3 5, P1 3 |
 | Kotwa chemiczna (żywica do betonu) + pistolet | 1 kartusz | otwory w ścianie wg karty kotwy (np. Ø10 × 80); 4 mm nad płytkami: zaczynać bez udaru, krawędź płytek osłonić; przy trafieniu na pręt zbrojeniowy przesunąć otwór w ścianie i nawiercić nowy w półce |
 | Wiertło Ø8 długie (≥ 100 roboczej) + prowadnica / statyw wiertarski | 1 | pogłębienie otworów w półce z 35 do 85: zostaje 5 mm płyty z każdej strony, przy odchyłce ok. 3° wiertło wychodzi bokiem |
