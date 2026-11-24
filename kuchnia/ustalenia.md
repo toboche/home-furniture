@@ -470,3 +470,4 @@ Do rozmowy: cofnięcie listwy za WSZ o 2–2,5 (po wyborze zatrzasku), sekcja C 
 - 2026-11-24: kolejność montażu SO → WS sprawdzona: WS wsuwana od przodu jako skrzynia, WST z wycięciem za rurą, WSW bez kołków.
 - 2026-11-24: widok 3D: lekkie linie kierunku słojów na płytach (wg `zamowienie.md`).
 - 2026-11-24: audyt v7: prompt (koszyk, nazwy METOD, F1 zapasowo), SOP 284, podpórki 3 pod półką, wkręty okapu Ø4 × 18, montaż WS.
+- 2026-11-24: montaż krok po kroku w widoku 3D (`montaz/`), kolejność wg wpisów o montażu SO → WS.
