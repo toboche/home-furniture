@@ -56,7 +56,7 @@ Pola `HF_MODEL` (pełny opis w nagłówku `wspolne/viewer/viewer.js`): `title`, 
 
 Bryły w `ITEMS`:
 - prostopadłościan `{n, layer, x, y, z, w, h, d, c, o}`: (x, y, z) to róg o najmniejszych współrzędnych, w/h/d wzdłuż X/Y/Z;
-- walec wzdłuż Z `{t:'cyl', n, layer, cx, cy, z, r, len, c}`; walec wzdłuż dowolnej osi `{t:'cyl3', n, layer, ax, px, py, pz, r, len, c}`; przy `ax:'y'` opcjonalnie `rx` (pochylenie w płaszczyźnie y–z, radiany, dodatnie przesuwa górny koniec w +z).
+- walec wzdłuż Z `{t:'cyl', n, layer, cx, cy, z, r, len, c}`; walec wzdłuż dowolnej osi `{t:'cyl3', n, layer, ax, px, py, pz, r, len, c}`; przy `ax:'y'` opcjonalnie `rx` (pochylenie w płaszczyźnie y–z, radiany, dodatnie przesuwa górny koniec w +z). Prostopadłościan może mieć `sloje:'x'|'y'|'z'` (oś świata wzdłuż słojów): widok rysuje lekkie linie na dwóch największych licach.
 
 Wymiary wpisuje się jako stałe z `pomiary.md` na początku pliku i z nich liczy położenia (`x:A-B`), żeby ponowny
 pomiar zmieniał jedną liczbę. (Pralnia ma liczby wpisane wprost, bo powstała wcześniej.)

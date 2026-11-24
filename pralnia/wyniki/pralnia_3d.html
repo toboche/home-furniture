@@ -1255,6 +1255,27 @@ function setWalls(mode){
   wallMat.needsUpdate=true;
 }
 
+/* kierunek słojów: lekkie linie na dwóch największych licach płyty (pole sloje: 'x' | 'y' | 'z', oś świata wzdłuż słojów) */
+function grainLines(it){
+  var D={x:it.w,y:it.h,z:it.d},ax=['x','y','z'];
+  var thin=ax.reduce(function(a,b){return D[b]<D[a]?b:a;}),g=it.sloje;
+  if(g===thin||!D[g])return null;
+  var c=ax.filter(function(a){return a!==thin&&a!==g;})[0];
+  var S=28,n=Math.max(2,Math.round(D[c]/S)),pos=[];
+  for(var sd=-1;sd<=1;sd+=2){
+    var t=sd*(D[thin]/2+0.3);
+    for(var i=1;i<n;i++){
+      var j=Math.sin(i*12.9898)*43758.5453;j=j-Math.floor(j)-0.5;
+      var cc=-D[c]/2+(i+j*0.6)*D[c]/n,p1={},p2={};
+      p1[thin]=p2[thin]=t;p1[c]=p2[c]=cc;p1[g]=-D[g]/2;p2[g]=D[g]/2;
+      pos.push(p1.x*MM,p1.y*MM,p1.z*MM,p2.x*MM,p2.y*MM,p2.z*MM);
+    }
+  }
+  var geo=new THREE.BufferGeometry();
+  geo.setAttribute('position',new THREE.Float32BufferAttribute(pos,3));
+  return new THREE.LineSegments(geo,new THREE.LineBasicMaterial({color:0x4a3826,transparent:true,opacity:.35}));
+}
+
 /* obiekty */
 var layers={},pick=[];
 var CONCEPT_LAYERS=set(M.conceptLayers);
@@ -1285,6 +1306,7 @@ function build(it){
     mesh=new THREE.Mesh(g,mat);
     mesh.position.set((it.x+it.w/2)*MM,(it.y+it.h/2)*MM,(it.z+it.d/2)*MM);
     mesh.add(new THREE.LineSegments(new THREE.EdgesGeometry(g),edgeMat()));
+    if(it.sloje){var gl=grainLines(it);if(gl)mesh.add(gl);}
   }
   mesh.userData.info=it;
   return mesh;
