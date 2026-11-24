@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kuchnia: montaż krok po kroku</title>
+<style>
+html,body{margin:0;height:100%;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:#1f1d1a;background:#f4f1ea}
+#app{display:flex;height:100%}
+#panel{width:360px;max-width:42vw;overflow:auto;padding:16px 18px;box-sizing:border-box;background:#fbfaf6;border-right:1px solid #ddd6c8}
+#view{flex:1;position:relative;min-width:0}
+canvas{display:block}
+h1{font-size:18px;font-weight:600;margin:0 0 4px}
+.sub{font-size:13px;color:#6b665c;margin-bottom:12px}
+ol{padding-left:22px;margin:8px 0 14px}
+ol li{font-size:14px;padding:3px 0;cursor:pointer;color:#6b665c}
+ol li.on{color:#1f1d1a;font-weight:600}
+ol li.done{color:#3d3a34}
+#nav{display:flex;gap:8px;margin:6px 0 12px}
+button{font:inherit;font-size:14px;padding:6px 12px;border:1px solid #c9c1b1;border-radius:8px;background:#fff;cursor:pointer}
+button:disabled{opacity:.4;cursor:default}
+#opis h2{font-size:16px;margin:0 0 6px}
+#opis ul{padding-left:18px;margin:0}
+#opis li{font-size:14px;line-height:1.5;margin-bottom:6px}
+.leg{font-size:12px;color:#6b665c;margin-top:14px;line-height:1.6}
+.sw{display:inline-block;width:11px;height:11px;border-radius:2px;vertical-align:-1px;margin-right:4px}
+@media (max-width:720px){#app{flex-direction:column}#panel{width:auto;max-width:none;height:46%;border-right:0;border-bottom:1px solid #ddd6c8}}
+</style></head><body>
+<div id="app"><aside id="panel">
+<h1>Kuchnia: montaż krok po kroku</h1>
+<div class="sub">SO, WS, półka LED. Przeciągnij widok, by obrócić; kółko lub dwa palce: przybliżenie.</div>
+<div id="nav"><button id="prev" type="button">Wstecz</button><button id="next" type="button">Dalej</button></div>
+<div id="opis"></div>
+<ol id="lista"></ol>
+<div class="leg"><span class="sw" style="background:#f2a623"></span>nowe w tym kroku &nbsp; <span class="sw" style="background:#8b6a4f"></span>zamontowane &nbsp; <span class="sw" style="background:#c9c3b8"></span>istniejące<br>
+Źródło: model.js i ustalenia.md w repozytorium (stan 2026-11-24 d69d8a0). Elementy WS w kroku 6 pokazane przed wsunięciem.</div>
+</aside><div id="view"></div></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+<script>
+/* ========================================================================
+   KUCHNIA: DANE MODELU 3D (wszystko w milimetrach)
+   Ściana tylna (z = 0) = ściana główna z płytkami, zlewem i płytą. Ściana lewa (x = 0) = ściana wnęki przy słupku
+   z piekarnikiem. Po prawej ścianka (pion) na x = A, głęboka na L; dalej pokój jest umowny.
+   Układ: X od ściany lewej ku ściance, Y od podłogi w górę, Z od ściany głównej w głąb kuchni.
+   Wymiary z pomiary.md. Opis formatu ITEMS: wspolne/STRUKTURA.md, punkt 4.
+   Projektujemy: półkę z LED na płytkach (P1, P3), szafkę okapową SO z okapem DUO 55 i frontem F1,
+   wąską otwartą szafkę WS z zamkniętą skrzynką na rurę okapu. Reszta kuchni istnieje (warstwa „Kuchnia istniejąca”).
+   ======================================================================== */
+var HF_MODEL=(function(){
+'use strict';
+/* pomiary (pomiary.md) */
+var A=3206;            /* ściana główna: narożnik → ścianka (zmierzone 2026-11-19, było 3208) */
+var C=911;             /* góra blatu */
+var D=600;             /* pas płytek */
+var E=257, F=590;      /* płyta grzewcza: ścianka → prawa krawędź, szerokość */
+var H=754;             /* blat → dno szafek górnych nad wnęką */
+var I=624;             /* szafki górne nad wnęką: głębokość wzdłuż ściany głównej */
+var J=805;             /* wnęka: narożnik → bok słupka */
+var K=629;             /* głębokość blatu */
+var L=657;             /* głębokość ścianki */
+var M=1156;            /* góra płytek → sufit: najniższy punkt (przy kratce, zmierzone 2026-11-19: 1156–1158; było 1169) */
+var PLW=12;            /* płytki wystają przed ścianę 9–12 (zmierzone 2026-11-18): w modelu 12 */
+var ZA1=356, ZA2=487;  /* przewód okapu: od ścianki, od sufitu */
+var RU=130, RU2=32, RU3=38;      /* rura okapu w ściance: średnica zewnętrzna, od ściany głównej, od sufitu */
+var KR=130, KR2=323, KR3=175;    /* otwór wentylacji grawitacyjnej w ściance */
+
+/* założenia i decyzje (ustalenia.md) */
+var P=18, PP=18;       /* płyta korpusów, płyta półki z LED (2026-11-15: 36 → 18) */
+var YP=C+D;            /* góra płytek = dół półki i szafek: 1511 */
+var YS=YP+M;           /* sufit: 2667 */
+var LUZS=2;            /* luz pod sufitem (2026-11-14) */
+var YT=YS-LUZS;        /* góra korpusów: 2665 */
+var GK=300;            /* głębokość korpusu WS (kratka: wolne do 303) */
+var GKS=GK+4;          /* głębokość korpusu SO: 304, kołnierz okapu (z 14–304) mija płytki wystające 9–12 (2026-11-18) */
+var XH=A-E-F/2;        /* oś płyty grzewczej: 2654 */
+var SOW=552;           /* szafka okapowa: 516 w świetle (okap A + 2) */
+var XSO=XH-SOW/2;      /* 2378 */
+var XWS=XSO+SOW;       /* 2930 */
+var LUZP=2;            /* ZAŁOŻENIE: luz wąskiej szafki do ścianki */
+var XWE=A-LUZP;        /* prawy bok wąskiej szafki: 3204 (szerokość 274) */
+var ZRU=RU2+RU/2;      /* oś rury okapu od ściany głównej: 97 */
+var YRU=YS-RU3-RU/2;   /* oś rury okapu: 2564 (RU5 = 988 od płytek) */
+var YSK=YRU-75-10;     /* góra dna skrzynki na rurę (10 pod końcem Ø150 redukcji; 2026-11-16: było 2502): 2479 */
+var OKW=513, OKG=253, OKH=265;  /* korpus okapu DUO 55 (rysunek techniczny) */
+var OKF=19;            /* kołnierz wystaje przed lico przodu korpusu (zmierzone 2026-11-18; z nitami efektywnie 16,5–17) */
+var OKZ=GKS-OKF-OKG;   /* tył korpusu: 32 (przód 285) */
+var OKK=1.5;           /* grubość kołnierza (zmierzone 2026-11-18) */
+var ZWY=GKS-290+49+75;  /* oś wylotu Ø150: 49 od tylnej krawędzi kołnierza do tylnej krawędzi wylotu (zmierzone 2026-11-18): 138 */
+var YOK=YP+OKH;        /* góra korpusu okapu: 1776 */
+var ZPI=ZRU+12.5;      /* oś pionu Ø150 (redukcja mimośrodowa: +12,5 od osi Ø125): 109,5 */
+var RU4=115;           /* rura w ściance wystaje ze ścianki (zmierzone 2026-11-18): koniec na X 3091, w wąskiej szafce */
+var LRD=120;           /* ZAŁOŻENIE: długość redukcji */
+var XRD=A-RU4-LRD;     /* redukcja 150/125 w wąskiej szafce, wąskim końcem w rurze ze ściany: od 2971 */
+var ZSK=195;           /* tył zaślepki skrzynki (10 przed końcem Ø150 redukcji, oś z 109,5; 2026-11-16: było 172) */
+var YSOD=YOK+10;       /* półka wkładana tuż nad okapem (dół), 10 zapasu (2026-11-16): 1786 */
+var YSOP=YSOD+P+300;   /* półka nad okapem na podpórkach od 2026-11-24 (dół): przegroda ok. 300 nad SOD (2026-11-16; było 2150): 2104 */
+var SZT=2;             /* szczelina front F1 – korpus pod TIP-ON (domyślnie 2,0, min. 1,5; audyt v2 KU-04) */
+var YZ1=1850;          /* dolny zawias F1: nad okapem i SOD (audyt v1 KU-02, wariant A, 2026-11-18) */
+var YZ2=2210;          /* środkowy zawias F1: nad SOP (było 1950) */
+var NPW=2;             /* półki w wąskiej szafce (równe przegrody; 2026-11-14: 3 → 2) */
+var LP1=J-1;           /* półka P1 wzdłuż ściany lewej: 804 (2026-11-15: luz 2 → 1) */
+var GP1=400, GP3=200;  /* głębokości półek */
+/* Profil LED MasterLED wpuszczany 12 mm (2026-11-15): kołnierz 23,6, korpus 16,9, wys. 7 (korpus ok. 5,5 + kołnierz ok. 1,5).
+   Rowek 17,2 × 6, 30,5–47,7 od krawędzi półki (2026-11-23, było 18,2 × 6 od 30; oś bez zmian), frezuje użytkownik (meble.pl nie robi wręgów zachodzących na siebie). */
+var LRO=30.5, LRW=17.2, LRG=6, LKW=23.6, LKH=1.5;
+var LRA=LRO+LRW/2;     /* oś rowka od krawędzi półki: 39,1 */
+var ZLS=LP1-LRA;       /* oś profilu przy słupku (od ściany głównej) */
+var PR=4;              /* pręty gwintowane M8 kl. 8.8 na kotwie chemicznej w betonie (2026-11-16; wcześniej wsporniki ukryte Ø10) */
+var WB=80;             /* część pręta w betonie */
+var WT=80;             /* część trzpienia w półce: 80 (decyzja użytkownika 2026-11-16) */
+
+var BOK=0xcdbb95, TYL=0x9c8b6e, POL=0xe6d7b8, FR=0x2f9e8f, IST=0x8a6f55, LED=0xffd66b, RURA=0xb8bcc2;
+
+/* zawiasy: środek puszki 22,5 od krawędzi frontu, skrajne 100 od końców, pozostałe równo */
+function zawiasy(nazwa,fx,fy,fw,fh,strona,n,zt,ys){
+  var out=[],x=(strona==='lewa')?fx+5:fx+fw-40;
+  for(var i=0;i<n;i++){
+    var cy=ys?ys[i]:fy+100+i*(fh-200)/(n-1);
+    out.push({n:'Zawias: '+nazwa+' ('+strona+')',layer:'Zawiasy',x:x,y:cy-17.5,z:zt+1,w:35,h:35,d:11,c:0x2b3034});
+  }
+  return out;
+}
+
+var ITEMS=[];
+function add(a){ITEMS.push.apply(ITEMS,a);}
+
+/* ---- otoczenie: ścianka, istniejąca kuchnia, instalacje ---- */
+add([
+  {n:'Ścianka (pion)',layer:'Ścianka',x:A,y:0,z:0,w:300,h:YS,d:L,c:0xd9d4cc},
+  {n:'Blat (istniejący)',layer:'Kuchnia istniejąca',x:0,y:C-38,z:0,w:A,h:38,d:K,c:0xe7e1d6},
+  {n:'Blat we wnęce (istniejący)',layer:'Kuchnia istniejąca',x:0,y:C-38,z:K,w:I,h:38,d:J-K,c:0xe7e1d6},
+  {n:'Szafki dolne (istniejące)',layer:'Kuchnia istniejąca',x:I,y:0,z:0,w:A-I,h:C-38,d:K-20,c:IST,o:0.5},
+  {n:'Szafki dolne we wnęce (istniejące)',layer:'Kuchnia istniejąca',x:0,y:0,z:0,w:I,h:C-38,d:J-20,c:IST,o:0.5},
+  {n:'Pas płytek (istniejący, wystaje 9–12)',layer:'Kuchnia istniejąca',x:I,y:C,z:0,w:A-I,h:D,d:PLW,c:0xf2f0ea},
+  {n:'Pas płytek we wnęce (istniejący, wystaje 9–12)',layer:'Kuchnia istniejąca',x:0,y:C,z:0,w:PLW,h:D,d:J,c:0xf2f0ea},
+  {n:'Szafki górne nad wnęką (istniejące)',layer:'Kuchnia istniejąca',x:0,y:C+H,z:0,w:I,h:YS-C-H,d:J,c:IST,o:0.5},
+  {n:'Słupek z piekarnikiem (istniejący, szerokość umowna)',layer:'Kuchnia istniejąca',x:0,y:0,z:J,w:I,h:YS,d:600,c:IST,o:0.5},
+  {n:'Płyta grzewcza (istniejąca)',layer:'Kuchnia istniejąca',x:A-E-F,y:C,z:30,w:F,h:6,d:520,c:0x1d1d1f},
+  {n:'Przewód zasilający okap (ZA1, ZA2)',layer:'Instalacje',x:A-ZA1-10,y:YS-ZA2-10,z:0,w:20,h:20,d:30,c:0xd85a30},
+  {n:'Kabel LED 24 V, 3 żyły CCT (przesuwny, wprowadzany w rowek przy słupku)',layer:'Instalacje',x:0,y:YP,z:ZLS-5,w:30,h:10,d:10,c:0xd85a30},
+  {t:'cyl3',n:'Rura okapu ze ścianki (RU, Ø125 wewn., wystaje 115)',layer:'Instalacje',ax:'x',px:A-RU4/2+20,py:YRU,pz:ZRU,r:RU/2,len:RU4+40,c:RURA},
+  {t:'cyl3',n:'Otwór wentylacji grawitacyjnej z kratką (KR, nie zasłaniać)',layer:'Instalacje',ax:'x',px:A-4,py:YS-KR3-KR/2,pz:KR2+KR/2,r:KR/2+20,len:8,c:0xf0f0f0}
+]);
+
+/* ---- półka z LED na płytkach (płyta 18, z meble.pl, oklejona) ---- */
+add([
+  {n:'P1: Półka LED, ściana lewa (804 × 400)',layer:'Półka LED',x:0,y:YP,z:0,w:GP1,h:PP,d:LP1,c:POL},
+  {n:'P3: Półka LED, ściana główna (1978 × 200)',layer:'Półka LED',x:GP1,y:YP,z:0,w:XSO-GP1,h:PP,d:GP3,c:POL},
+  {n:'Profil LED wpuszczany pod P1, wzdłuż przodu (rowek 17,2 × 6)',layer:'LED',x:GP1-LRO-LRW,y:YP,z:GP3-LRO-LRW,w:LRW,h:LRG,d:LP1-LRO-(GP3-LRO-LRW),c:LED},
+  {n:'Profil LED wpuszczany pod P1 przy słupku (od kabla w ścianie lewej; zaczyna się za płytkami)',layer:'LED',x:PLW+1,y:YP,z:LP1-LRO-LRW,w:GP1-LRO-PLW-1,h:LRG,d:LRW,c:LED},
+  {n:'Profil LED wpuszczany pod P3 (rowek 17,2 × 6)',layer:'LED',x:GP1-LRO-LRW,y:YP,z:GP3-LRO-LRW,w:XSO-(GP1-LRO-LRW)-20,h:LRG,d:LRW,c:LED},
+  {n:'Kołnierz profilu LED pod P1, wzdłuż przodu',layer:'LED',x:GP1-LRA-LKW/2,y:YP-LKH,z:GP3-LRA-LKW/2,w:LKW,h:LKH,d:ZLS-(GP3-LRA)+LKW,c:LED},
+  {n:'Kołnierz profilu LED pod P1 przy słupku',layer:'LED',x:PLW+1,y:YP-LKH,z:ZLS-LKW/2,w:GP1-LRA-LKW/2-PLW-1,h:LKH,d:LKW,c:LED},
+  {n:'Kołnierz profilu LED pod P3',layer:'LED',x:GP1-LRA-LKW/2,y:YP-LKH,z:GP3-LRA-LKW/2,w:XSO-(GP1-LRA-LKW/2)-20,h:LKH,d:LKW,c:LED}
+]);
+
+/* pręty M8 (2026-11-16): 80 w betonie (kotwa chemiczna) + 80 w półce; otwór w półce Ø8: 35 meble.pl, pogłębia użytkownik do 85 */
+[150,570,990,1410,1830].forEach(function(xp){
+  ITEMS.push({t:'cyl3',n:'Pręt M8 × 160 pod P3, x od lewego końca P3 '+xp,layer:'Mocowanie półki',ax:'z',px:GP1+xp,py:YP+PP/2,pz:(WT-WB)/2,r:PR,len:WT+WB,c:0x555555});
+});
+[150,400,650].forEach(function(zp){
+  ITEMS.push({t:'cyl3',n:'Pręt M8 × 160 pod P1 (ściana lewa)',layer:'Mocowanie półki',ax:'x',px:(WT-WB)/2,py:YP+PP/2,pz:zp,r:PR,len:WT+WB,c:0x555555});
+});
+/* bez prętów od ściany głównej pod P1: prostopadłych prętów nie da się nasunąć naraz (audyt v1 KU-01, 2026-11-18) */
+
+/* ---- szafka okapowa SO: bez dna (okap między bokami), plecy między bokami, wieniec, półka nad okapem ---- */
+add([
+  {n:'SOB-1: SO: bok lewy',layer:'Ścianki boczne',x:XSO,y:YP,z:0,w:P,h:YT-YP,d:GKS,c:BOK},
+  {n:'SOB-2: SO: bok prawy',layer:'Ścianki boczne',x:XWS-P,y:YP,z:0,w:P,h:YT-YP,d:GKS,c:BOK},
+  {n:'SOT: SO: tył',layer:'Ścianki tylne',x:XSO+P,y:YP,z:0,w:SOW-2*P,h:YT-YP,d:P,c:TYL},
+  {n:'SOW: SO: wieniec górny',layer:'Półki',x:XSO+P,y:YT-P,z:P,w:SOW-2*P,h:P,d:GKS-P,c:POL},
+  {n:'SOD: SO: półka wkładana tuż nad okapem, na podpórkach, z wycięciem od przodu na wylot (wkładana po montażu okapu)',layer:'Półki',x:XSO+P+1,y:YSOD,z:P,w:SOW-2*P-2,h:P,d:GKS-P-2,c:POL},
+  {n:'SOP: SO: półka nad okapem na 4 podpórkach, luz 1 z boków, 2 cofnięta od przodu (2026-11-24; wycięcie U na rurę)',layer:'Półki',x:XSO+P+1,y:YSOP,z:P,w:SOW-2*P-2,h:P,d:GKS-P-2,c:POL},
+  {n:'F1: Front szafki okapowej (549 × 1151), 2 przed korpusem (szczelina TIP-ON)',layer:'Fronty',x:XSO+1.5,y:YP+1.5,z:GKS+SZT,w:SOW-3,h:YT-YP-3,d:P,c:FR,o:0.55}
+]);
+add(zawiasy('F1',XSO+1.5,YP+1.5,SOW-3,YT-YP-3,'prawa',3,GKS+SZT,[YZ1,YZ2,YT-1.5-100]));
+
+/* okap DUO 55: kołnierz 551 × 290 pod korpusem szafki (dno), korpus 513 × 253 × 265 na środku kołnierza (2026-11-16) */
+var YKL=YRU-150;       /* początek kolana 90° Ø150 (R ok. 1D): 2414 */
+var YKR=YOK+26;        /* góra króćca wylotu (26 nad korpusem): 1802 */
+var KL15=22;           /* część kolana 15° w osi pionu (schemat widoku) */
+var YPR=YKR+40+150;    /* koniec przejścia do pionu (odcinek na króćcu ok. 40 + 2 kolana 15° z odcinkiem ok. 150): 1992 */
+add([
+  {n:'Okap DUO 55: kołnierz ze szkłem 551 × 290 × 1,5 (dno szafki, widoczny od spodu)',layer:'Okap',x:XH-275.5,y:YP-OKK,z:GKS-290,w:551,h:OKK,d:290,c:0x26282b},
+  {n:'Okap DUO 55: korpus 513 × 253 × 265',layer:'Okap',x:XH-OKW/2,y:YP,z:OKZ,w:OKW,h:OKH,d:OKG,c:0x6f7377},
+  {t:'cyl3',n:'Króciec wylotu okapu Ø148,5 × 26 + odcinek rury spiro Ø150 nasunięty na króciec, dół kolana 15°',layer:'Rura okapu',ax:'y',px:XH,py:(YOK+YKR+40+KL15)/2,pz:ZWY,r:75,len:YKR+40+KL15-YOK,c:RURA},
+  {t:'cyl3',n:'Przejście do pionu o 28,5 w głąb: 2 kolana 15° Ø150 spięte mufą (odcinek pochylony ok. 15°); para obrócona w poziomie, pion ok. 10–20 w prawo (w modelu bez przesunięcia w prawo)',layer:'Rura okapu',ax:'y',rx:-Math.atan2(ZWY-ZPI,YPR-YKR-40-2*KL15),px:XH,py:(YKR+40+YPR)/2,pz:(ZWY+ZPI)/2,r:75,len:Math.sqrt(Math.pow(YPR-YKR-40-2*KL15,2)+Math.pow(ZWY-ZPI,2)),c:RURA},
+  {t:'cyl3',n:'Rura spiro Ø150: pion przy ścianie przez SOP (z matą akustyczną), od górnego kolana 15°',layer:'Rura okapu',ax:'y',px:XH,py:(YPR-KL15+YKL)/2,pz:ZPI,r:75,len:YKL-YPR+KL15,c:RURA},
+  {t:'cyl3',n:'Kolano 90° Ø150 tłoczone pod sufitem (schemat)',layer:'Rura okapu',ax:'y',px:XH,py:(YKL+YRU)/2,pz:ZPI,r:75,len:YRU-YKL,c:RURA},
+  {t:'cyl3',n:'Rura spiro Ø150: poziomo przez SOB-2 (otwór Ø160) do skrzynki WS',layer:'Rura okapu',ax:'x',px:(XH+XRD)/2,py:YRU,pz:ZPI,r:75,len:XRD-XH,c:RURA},
+  {t:'cyl3',n:'Redukcja mimośrodowa 150/125 (spiro, uszczelka), płaską stroną do ściany głównej, wąskim końcem w rurze ze ścianki',layer:'Rura okapu',ax:'x',px:XRD+LRD/2,py:YRU,pz:ZRU+6,r:69,len:LRD,c:RURA}
+]);
+
+/* ---- wąska szafka WS: bez lewego boku (2026-11-24: WSB-1 usunięty, lewą ścianką jest SOB-2), dno, wieniec,
+   2 półki na podpórkach, skrzynka na rurę cofnięta (płytka półka przed nią) ---- */
+var ywn=YP+P, ysd=YSK-P, prz=(ysd-ywn-NPW*P)/(NPW+1);
+var WSW_=XWE-XWS-P;    /* światło wnęki WS: 256 (od SOB-2 do WSB-2) */
+add([
+  {n:'WSB-2: WS: bok prawy (przy ściance)',layer:'Ścianki boczne',x:XWE-P,y:YP,z:0,w:P,h:YT-YP,d:GK,c:BOK},
+  {n:'WST: WS: tył (od SOB-2 do WSB-2)',layer:'Ścianki tylne',x:XWS,y:YP,z:0,w:WSW_,h:YT-YP,d:P,c:TYL},
+  {n:'WSD: WS: dno',layer:'Półki',x:XWS,y:YP,z:P,w:WSW_,h:P,d:GK-P,c:POL},
+  {n:'WSW: WS: wieniec górny',layer:'Półki',x:XWS,y:YT-P,z:P,w:WSW_,h:P,d:GK-P,c:POL},
+  {n:'WSS: WS: dno skrzynki na rurę (płytka półka przed zaślepką)',layer:'Półki',x:XWS,y:ysd,z:P,w:WSW_,h:P,d:GK-P,c:POL},
+  {n:'WSZ: WS: zaślepka skrzynki na rurę (zdejmowana, luz 1 z boków i 3 u góry)',layer:'Ścianki tylne',x:XWS+1,y:YSK,z:ZSK,w:WSW_-2,h:YT-P-YSK-3,d:P,c:TYL},
+  {n:'Listwa oporowa 10 × 10 pod WSZ (na WSS)',layer:'Mocowanie półki',x:XWS+1,y:YSK,z:ZSK-10,w:WSW_-2,h:10,d:10,c:0x555555},
+  {n:'Zatrzask dociskowy push-to-open pod WSW (2 szt., schemat)',layer:'Mocowanie półki',x:XWS+40,y:YT-P-12,z:ZSK-40,w:WSW_-80,h:12,d:40,c:0x555555}
+]);
+for(var k=1;k<=NPW;k++){
+  ITEMS.push({n:'WSP-'+k+': WS: półka na 4 podpórkach (luz 1 z boków)',layer:'Półki',x:XWS+1,y:ywn+k*prz+(k-1)*P,z:P,w:WSW_-2,h:P,d:GK-P,c:POL});
+}
+
+/* kierunek słojów w widoku (zamowienie.md, potwierdzone 2026-11-23): pionowe elementy pionowo, poziome równolegle do przodu */
+var SLOJE={'SOB-1':'y','SOB-2':'y','SOT':'y','WSB-2':'y','WST':'y','WSZ':'y','F1':'y',
+  'SOW':'x','SOP':'x','SOD':'x','WSD':'x','WSS':'x','WSW':'x','WSP-1':'x','WSP-2':'x','P3':'x','P1':'z'};
+ITEMS.forEach(function(it){var k=it.n.split(':')[0];if(SLOJE[k]&&!it.t)it.sloje=SLOJE[k];});
+
+return {
+  title:'Kuchnia 3D: półka LED, szafka okapowa, wąska szafka',
+  room:{W:A+700,D:2200,H:YS},
+  wallThickness:100,
+  openings:[],
+  views:{iso:[4.8,2.9,4.2],front:[2.0,2.0,4.6],top:[2.0,6.5,1.4],left:[-2.6,2.0,1.2]},
+  conceptLayers:[],
+  hiddenLayers:[],
+  fixedLayers:['Ścianka','Kuchnia istniejąca','Instalacje'],
+  boardLayers:['Półki','Ścianki boczne','Ścianki tylne','Fronty','Półka LED'],
+  boardColor:{hex:0x8b6a4f,label:'docelowy: Egger H3710 ST12 Orzech Carini naturalny'},
+  variants:[],
+  items:ITEMS
+};
+})();
+
+</script>
+<script>
+(function(){
+var M=HF_MODEL, KROKI=[{"tytul": "Przygotowanie formatek", "kamera": {"cel": [2780, 2080, 150], "oko": [3900, 2500, 2300]}, "nowe": [], "opis": ["Przed montażem, na stole, płyta podparta: otwór Ø160 w SOB-2 (otwornicą z obu stron, środek nawiercony przez sklep), wycięcie U w WSB-2 (R70) i w SOP, wycięcie 100 × 140 w WST od prawej krawędzi, wycięcie i podcięcie 25 × 25 w SOD, podcięcie 25 × 25 w SOP, otwór Ø25 w SOT.", "Otwory konfirmatów Ø5 przelotowe poszerzyć do Ø7, łby pogłębić fazownikiem ok. 0,5 poniżej lica.", "P1 i P3: otwory Ø8 × 35 pod pręty pogłębić do 85 (statyw / prowadnica), wyfrezować rowki LED 17,2 × 6.", "Krawędzie wycięć przy okapie zabezpieczyć silikonem lub lakierem."]}, {"tytul": "Pręty M8 pod półkę", "kamera": {"cel": [1100, 1550, 200], "oko": [2200, 2500, 2200]}, "nowe": ["Pręt M8"], "opis": ["Otwory Ø10 × 80 w ścianie lewej (3) i głównej (5) wg karty kotwy; 4 mm nad płytkami: zaczynać bez udaru.", "Pręty w otworach półki, półka jako szablon: pręty wsunąć w otwory z żywicą, końce od strony półki owinięte taśmą.", "P3 dopasować na równo z P1 przed związaniem żywicy; po związaniu półki zdjąć."]}, {"tytul": "Półki P1 i P3 z LED", "kamera": {"cel": [1100, 1550, 200], "oko": [2200, 2500, 2200]}, "nowe": ["P1:", "P3:", "Profil LED", "Kołnierz profilu"], "opis": ["Na stole: profile MasterLED z taśmą wcisnąć w rowki od spodu (narożniki cięte pod 45°).", "P1 nasunąć na pręty ze ściany lewej i przykręcić przez bok słupka (wkręty do 4 × 40), kabel LED w rowek przy słupku.", "P3 nasunąć na pręty w kierunku ściany głównej, styk z P1 spiąć od spodu 2 łącznikami płaskimi (wkręty 3,5 × 12)."]}, {"tytul": "Złożenie szafki okapowej SO", "kamera": {"cel": [2780, 2080, 150], "oko": [3900, 2500, 2300]}, "nowe": ["SOB-1", "SOB-2", "SOT:", "SOW:"], "opis": ["Na podłodze: SOB-1 (widoczny bok) z SOT i SOW na mimośrodach Minifix i kołkach z klejem, SOB-2 na konfirmatach.", "SOD, SOP i front jeszcze nie: półki są na podpórkach, front na końcu."]}, {"tytul": "SO na ścianie", "kamera": {"cel": [2780, 2080, 150], "oko": [3900, 2500, 2300]}, "nowe": [], "podswietl": ["SOT:"], "opis": ["SO dosunąć do ściany głównej i P3, przykręcić przez SOT 4 wkrętami 6 × 70 z kołkami Ø8: 2 ok. 40 pod wieńcem, 2 nisko nad miejscem SOD (Y ok. 1830), z dala od pionu rury.", "Wkręty wkręcać przed okapem i rurami (górny prawy jest za poziomą rurą)."]}, {"tytul": "Złożenie skrzyni WS", "kamera": {"cel": [2780, 2080, 150], "oko": [3900, 2500, 2300]}, "nowe": ["WSB-2", "WST:", "WSD:", "WSS:", "WSW:"], "wysun": 450, "ukryj": ["Otwór wentylacji"], "opis": ["Na podłodze, bez lewego boku: WST, WSB-2, WSD, WSS, WSW na konfirmatach (w WSB-2 trzeba je wkręcić teraz, na miejscu do ścianki są tylko 2 mm). Przy cięciu WST podeprzeć płytę.", "Zdjąć ramkę kratki wentylacyjnej w ściance: wystaje ok. 8 i zahaczyłaby o WSB-2."]}, {"tytul": "Wsunięcie WS i przykręcenie", "kamera": {"cel": [2780, 2080, 150], "oko": [3900, 2500, 2300]}, "nowe": [], "podswietl": ["WSB-2", "WST:", "WSD:", "WSS:", "WSW:"], "ukryj": ["Otwór wentylacji"], "opis": ["WS wsunąć od przodu wzdłuż SOB-2: WSB-2 mija rurę ze ścianki wycięciem U, WST wycięciem 100 × 140.", "Przymiarka: zaznaczyć 4 punkty przez WST, wysunąć WS, wywiercić i osadzić kołki Ø8, wsunąć ponownie.", "WST przykręcić 4 wkrętami 6 × 70 (górne na lewo od wycięcia, długim bitem), od wnętrza SO konfirmaty SOB-2 → WSD i WSS.", "Założyć z powrotem ramkę kratki (luz 6)."]}, {"tytul": "Okap DUO 55", "kamera": {"cel": [2780, 2080, 150], "oko": [3900, 2500, 2300]}, "nowe": ["Okap DUO 55"], "opis": ["Na korpus okapu pasy Alubutylu 2 mm (z dala od otworów wentylacyjnych, tabliczki i punktów przykręcenia).", "Okap wsunąć od dołu między boki, przykręcić 4 wkrętami Ø4 × 18 z dystansami EPDM 3,5–4 i podkładkami EPDM pod łbami.", "Przewód zasilający przez otwór Ø25 w SOT do puszki nad SOP, złączki Wago (L, N, PE)."]}, {"tytul": "Kanał okapu", "kamera": {"cel": [2780, 2080, 150], "oko": [3900, 2500, 2300]}, "nowe": ["Króciec", "Przejście do pionu", "Rura spiro", "Kolano 90", "Redukcja"], "opis": ["Rura Ø150 na króciec (taśma EPDM / butylowa + aluminiowa, bez opaski i blachowkrętów), 2 kolana 15° na mufie, pion, kolano 90°, poziom przez Ø160 w SOB-2, redukcja RSLL-150-125 wąskim końcem w rurę ze ścianki.", "Alubutyl 2 mm na blachę, pianka kauczukowa 6–10 mm na pionie i poziomie w SO; przy SOD, SOP, w otworze Ø160 i w skrzynce WS tylko Alubutyl. Pion na 2 obejmach z gumą do SOT."]}, {"tytul": "Półki na podpórkach", "kamera": {"cel": [2780, 2080, 150], "oko": [3900, 2500, 2300]}, "nowe": ["SOD:", "SOP:", "WSP-"], "opis": ["Podpórki płaskie Ø5 w otwory (16 szt.).", "SOD wsunąć nad okapem bez wkrętów (wycięciem od przodu wokół rury), SOP wokół pionu, obie z luzem do rury.", "SOP, WSP-1 i WSP-2 przykręcić od spodu do podpórek wkrętami Ø3 × 12."]}, {"tytul": "Zaślepka skrzynki WSZ", "kamera": {"cel": [2780, 2080, 150], "oko": [3900, 2500, 2300]}, "nowe": ["Listwa oporowa", "Zatrzask", "WSZ:"], "opis": ["Po rurze i redukcji: listwa 10 × 10 na WSS (klej polimerowy), 2 krótkie zatrzaski push-to-open pod WSW (wkręty 3,5 × 15), linka zabezpieczająca WSZ do spodu WSW.", "WSZ wstawić na listwę i docisnąć do zatrzasków."]}, {"tytul": "Front F1", "kamera": {"cel": [2780, 2080, 150], "oko": [3900, 2500, 2300]}, "nowe": ["F1:", "Zawias"], "opis": ["Prowadniki 173L6100 w nawierty w SOB-2 (wkręty 3,5 × 15, w razie luzu Ø4 × 16), zawiasy CLIP top w puszki F1.", "TIP-ON z adapterem na SOB-1 ok. Y 1850. Front zapiąć na prowadniki, wyregulować: szczelina do korpusu 2,5–3."]}], ZAWSZE=["Ścianka", "Kuchnia istniejąca", "Instalacje"], MM=0.001;
+var view=document.getElementById('view');
+var scene=new THREE.Scene(); scene.background=new THREE.Color(0xf4f1ea);
+var cam=new THREE.PerspectiveCamera(40,1,0.05,60);
+var ren=new THREE.WebGLRenderer({antialias:true}); ren.setPixelRatio(Math.min(2,window.devicePixelRatio||1)); view.appendChild(ren.domElement);
+var ctl=new THREE.OrbitControls(cam,ren.domElement); ctl.enableDamping=true;
+scene.add(new THREE.HemisphereLight(0xffffff,0x8a8378,0.9)); var dl=new THREE.DirectionalLight(0xffffff,0.55); dl.position.set(2,5,4); scene.add(dl);
+var wm=new THREE.MeshStandardMaterial({color:0xe3ded3,roughness:1,side:THREE.DoubleSide});
+var W=M.room.W*MM,H=M.room.H*MM;
+var w1=new THREE.Mesh(new THREE.PlaneGeometry(W,H),wm); w1.position.set(W/2,H/2,-0.001); scene.add(w1);
+var w2=new THREE.Mesh(new THREE.PlaneGeometry(2.2,H),wm); w2.rotation.y=Math.PI/2; w2.position.set(-0.001,H/2,1.1); scene.add(w2);
+var fl=new THREE.Mesh(new THREE.PlaneGeometry(W,2.2),new THREE.MeshStandardMaterial({color:0xcfc8bb,roughness:1})); fl.rotation.x=-Math.PI/2; fl.position.set(W/2,0,1.1); scene.add(fl);
+var BOARD=0x8b6a4f, NEW=0xf2a623;
+function starts(n,list){for(var i=0;i<list.length;i++){if(n.indexOf(list[i])===0)return true;}return false;}
+function build(it){
+  var g,m=new THREE.MeshStandardMaterial({color:it.c,roughness:.85,transparent:true,opacity:1}),mesh;
+  if(it.t==='cyl3'){g=new THREE.CylinderGeometry(it.r*MM,it.r*MM,it.len*MM,20);mesh=new THREE.Mesh(g,m);
+    if(it.ax==='x')mesh.rotation.z=Math.PI/2;else if(it.ax==='z')mesh.rotation.x=Math.PI/2;else if(it.rx)mesh.rotation.x=it.rx;
+    mesh.position.set(it.px*MM,it.py*MM,it.pz*MM);}
+  else if(it.t==='cyl'){g=new THREE.CylinderGeometry(it.r*MM,it.r*MM,it.len*MM,24);mesh=new THREE.Mesh(g,m);mesh.rotation.x=Math.PI/2;
+    mesh.position.set(it.cx*MM,it.cy*MM,(it.z+it.len/2)*MM);}
+  else{g=new THREE.BoxGeometry(it.w*MM,it.h*MM,it.d*MM);mesh=new THREE.Mesh(g,m);
+    mesh.position.set((it.x+it.w/2)*MM,(it.y+it.h/2)*MM,(it.z+it.d/2)*MM);
+    mesh.add(new THREE.LineSegments(new THREE.EdgesGeometry(g),new THREE.LineBasicMaterial({color:0x3a342c,transparent:true,opacity:.45})));}
+  mesh.userData.base=mesh.position.clone(); mesh.userData.it=it; return mesh;
+}
+var meshes=M.items.map(function(it){var m=build(it);scene.add(m);return m;});
+var krokElem=meshes.map(function(m){var n=m.userData.it.n,L=m.userData.it.layer;
+  if(ZAWSZE.indexOf(L)>=0)return -1;
+  for(var k=0;k<KROKI.length;k++){if(starts(n,KROKI[k].nowe))return k;} return 99;});
+var cur=0, lista=document.getElementById('lista');
+KROKI.forEach(function(k,i){var li=document.createElement('li');li.textContent=k.tytul;li.onclick=function(){go(i);};lista.appendChild(li);});
+function go(i){
+  cur=Math.max(0,Math.min(KROKI.length-1,i)); var K=KROKI[cur];
+  meshes.forEach(function(m,j){var it=m.userData.it,ks=krokElem[j],mat=m.material;
+    m.position.copy(m.userData.base);
+    var vis=(ks===-1)||(ks<=cur); if(K.ukryj&&starts(it.n,K.ukryj))vis=false; m.visible=vis; if(!vis)return;
+    var nowy=(ks===cur)||(K.podswietl&&starts(it.n,K.podswietl));
+    if(ks===-1){mat.color.setHex(it.layer==='Kuchnia istniejąca'?0xc9c3b8:it.c);mat.opacity=it.layer==='Kuchnia istniejąca'?.55:1;}
+    else{var plyta=/^(SO|WS|P1|P3|F1)/.test(it.n)&&!it.t;mat.color.setHex(nowy?NEW:(plyta?BOARD:it.c));mat.opacity=1;}
+    if(K.wysun&&ks===cur)m.position.z+=K.wysun*MM;
+  });
+  var c=K.kamera; ctl.target.set(c.cel[0]*MM,c.cel[1]*MM,c.cel[2]*MM); cam.position.set(c.oko[0]*MM,c.oko[1]*MM,c.oko[2]*MM); ctl.update();
+  document.getElementById('opis').innerHTML='<h2>Krok '+(cur+1)+' z '+KROKI.length+': '+K.tytul+'</h2><ul>'+K.opis.map(function(t){return '<li>'+t+'</li>';}).join('')+'</ul>';
+  [].forEach.call(lista.children,function(li,j){li.className=(j===cur?'on':(j<cur?'done':''));});
+  document.getElementById('prev').disabled=cur===0; document.getElementById('next').disabled=cur===KROKI.length-1;
+}
+document.getElementById('prev').onclick=function(){go(cur-1);}; document.getElementById('next').onclick=function(){go(cur+1);};
+document.addEventListener('keydown',function(e){if(e.key==='ArrowRight')go(cur+1);if(e.key==='ArrowLeft')go(cur-1);});
+function size(){var w=view.clientWidth,h=view.clientHeight;ren.setSize(w,h);cam.aspect=w/Math.max(1,h);cam.updateProjectionMatrix();}
+window.addEventListener('resize',size); size(); go(0);
+(function loop(){requestAnimationFrame(loop);ctl.update();ren.render(scene,cam);})();
+})();
+</script></body></html>
