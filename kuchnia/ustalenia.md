@@ -471,3 +471,4 @@ Do rozmowy: cofnięcie listwy za WSZ o 2–2,5 (po wyborze zatrzasku), sekcja C 
 - 2026-11-24: widok 3D: lekkie linie kierunku słojów na płytach (wg `zamowienie.md`).
 - 2026-11-24: audyt v7: prompt (koszyk, nazwy METOD, F1 zapasowo), SOP 284, podpórki 3 pod półką, wkręty okapu Ø4 × 18, montaż WS.
 - 2026-11-24: montaż krok po kroku w widoku 3D (`montaz/`), kolejność wg wpisów o montażu SO → WS.
+- 2026-11-24: robocze zamówienie płyt w `centrum.meble.pl` w koszyku: rozkrój `21928081` (`1 502,24 PLN` brutto / `1 221,26 PLN` netto, wariant `PREMIUM`, 1,5 płyty H3710 ST12 18 mm + ABS 0,8 mm z opcją „kryjące długie”, słoje wg `zamowienie.md`, F1 `Front prawy` na wkręty, 0 odstępstw, audyt 100% live DOM + SVG + wydruk); szczegóły: `../wspolne/zamowienia/2026-11-24_centrum-meble_kuchnia_21928081.md`.
