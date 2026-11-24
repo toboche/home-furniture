@@ -44,4 +44,4 @@ Od 2026-11-24 bez WSB-1 (lewą ścianką WS jest SOB-2); SOP, WSP-1 i WSP-2 na p
 
 ## Sumy kontrolne
 21 wierszy, 23 szt.; `Usługa wiercenia`: 1 szt. front z szablonem zawiasów + 18 szt. `Wręgowanie` (12 z wierszy 1–11 + 6 frontów METOD);
-otwory: 112 wpisów / 118 z SZT w wierszach 1–11, 56 we frontach METOD, 3 puszki F1.
+otwory: 108 wpisów / 114 z SZT w wierszach 1–11, 56 we frontach METOD, 3 puszki F1.

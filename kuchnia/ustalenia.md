@@ -338,10 +338,15 @@ MAXIMERA Ø5 × 12 vs 13, rowek LED 17,2 vs 18,2, kątowniki pod P1, cofnięcie 
   przed wysunięciem półki (WS przy płycie grzewczej). Wycięcie U w SOP z zapasem kilku mm: luźna półka nie dotyka rury.
 - SOB-2 zostaje na konfirmatach (bez Minifix): łby od SOT zasłania krawędź WST, od SOW krawędź WSW, od SOP już ich nie ma.
 - Połączenia WS z SOB-2: WSD i WSS konfirmatami od wnętrza SO (łby wewnątrz SO, równo z licem; WSD wkręcać przed okapem, WSS
-  przed rurami), WSW na 2 kołkach Ø8 (od wnętrza SO zasłania SOW), WST bez łączenia z SOB-2 (po drugiej stronie konfirmaty SOT).
+  przed rurami), WSW i WST bez łączenia z SOB-2 (WSW: kołki nie wejdą przy wsuwaniu; WST: po drugiej stronie konfirmaty SOT).
   SO i WS jako jeden moduł w `reguly.py`. Odpada skręcenie SO z WS wkrętami 4 × 30.
-- Montaż: SO na ścianie (SOT 4 × 6 × 70), potem WS na miejscu: WST do ściany (4 × 6 × 70), WSD, WSS, WSW, WSB-2; okap i rury po WSD/WSS.
-- Skutki: 23 szt. zamiast 24 (w kalkulatorze 21 wierszy), otwory CNC 118 z SZT (było 154), konfirmaty 28 (było 50), Minifix 4 (było 5).
+- Montaż (doprecyzowane 2026-11-24): najpierw SO dosunięta do ściany i przykręcona przez SOT (4 × 6 × 70). Potem WS złożona
+  wcześniej jako skrzynia bez lewego boku (WST, WSB-2, WSD, WSS, WSW; konfirmatów w WSB-2 nie da się wkręcić na miejscu,
+  do ścianki są 2 mm) i wsunięta od przodu do ściany, przy SOB-2: WSB-2 mija rurę ze ścianki wycięciem U, WST wycięciem
+  100 × 140 od prawej krawędzi (x 3086–3186, Y 2494–2634; bez niego WST zahacza o rurę, dotyczyło też wersji z WSB-1).
+  Potem WST do ściany (4 × 6 × 70, górne na lewo od wycięcia) i konfirmaty SOB-2 → WSD, WSS od wnętrza SO. Na końcu okap i rury.
+  WSW bez kołków do SOB-2: kołki w poprzek ruchu wsuwania by nie weszły.
+- Skutki: 23 szt. zamiast 24 (w kalkulatorze 21 wierszy), otwory CNC 114 z SZT (było 154; z kołkami WSW 118), konfirmaty 28 (było 50), Minifix 4 (było 5).
 - Rozważone i na razie odrzucone (2026-11-24): WS bez pleców WST w widocznej części (widoczna ściana przy płycie grzewczej,
   łby konfirmatów SOT na SOB-2, mniej mocowań do ściany). WST zostaje w całości.
 
@@ -435,3 +440,4 @@ MAXIMERA Ø5 × 12 vs 13, rowek LED 17,2 vs 18,2, kątowniki pod P1, cofnięcie 
 - 2026-11-23: wyciszenie kanału: bez tłumika, Alubutyl + pianka kauczukowa na rurach, Alubutyl na korpusie okapu, dystanse EPDM pod okap, króciec bez blachowkrętów.
 - 2026-11-23: słoje potwierdzone; zamówienie składa inny agent wg `zamowienie/prompt_agenta_zamowienie.md`, weryfikacja tutaj.
 - 2026-11-24: WS bez WSB-1 (lewą ścianką SOB-2), SOP i WSP na podpórkach, wnęka WS 256.
+- 2026-11-24: kolejność montażu SO → WS sprawdzona: WS wsuwana od przodu jako skrzynia, WST z wycięciem za rurą, WSW bez kołków.

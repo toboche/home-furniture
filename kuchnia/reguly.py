@@ -71,7 +71,6 @@ Z_PION = 109.5       # oś pionu i poziomu Ø150 w SO (ZPI)
 Y_SOD = 1786         # dół półki wkładanej SOD (model.js: YSOD)
 Y_SOP = 2104         # dół półki SOP (model.js: YSOP); od 2026-11-24 na podpórkach
 Z_WSP = (50, 250)    # podpórki półek WSP (WS głęboka na 300)
-Z_KOLKI_WSW = (60, 150)   # kołki WSW do SOB-2
 Z_SOP_OTW = 109.5    # środek otworu w SOP: pion Ø150 za kolanami 15° (2026-11-19; przy pochylonej rurze było 124)
 Y_OKW = 1592         # otwory montażowe okapu: 81 nad dołem korpusu (YP)
 Z_OKW = (250, 70)    # 35 i 215 od lica przodu korpusu okapu (z 285)
@@ -112,18 +111,7 @@ def dodatkowe_otwory(P, parts, loc):
         w = P['WSP-%d' % k]
         podporki('SOB-2', 'A', w['lo']['y'] - 5, Z_WSP, 'WSP-%d' % k)
         podporki('WSB-2', 'B', w['lo']['y'] - 5, Z_WSP, 'WSP-%d' % k)
-    # WSW do SOB-2: 2 kołki Ø8 x 30 (Ø8 x 10 w zewnętrznym licu SOB-2, Ø8 x 22 w lewym czole WSW), z dala od konfirmatów SOW (z 215, 265)
-    q, w = P['SOB-2'], P['WSW']
-    yk = w['lo']['y'] + 9
-    for z in Z_KOLKI_WSW:
-        q['holes'].append(dict(kind='FACE', side='A', u=loc(q, q['u'], {'y': yk, 'z': z}[q['u']]),
-                               v=loc(q, q['v'], {'y': yk, 'z': z}[q['v']]), d=8, depth=10,
-                               partner='WSW', axis_n='-', pin=True, opis='Otwór Ø8 x 10 pod kołek (do WSW)'))
-        eu = (w['u'] == 'x')
-        ec = loc(w, 'x', w['lo']['x'])
-        L = w['DL'] if eu else w['SZ']
-        w['holes'].append(dict(kind='EDGE', n_axis_is_u=eu, edge_coord=ec, along=loc(w, 'z', z), depth=22, d=8,
-                               partner='SOB-2: kołek', into=(-1 if ec >= L - 0.01 else 1)))
+    # WSW bez łączenia z SOB-2: WS wsuwana od przodu w kierunku ściany, kołki w poprzek tego ruchu nie wejdą (2026-11-24)
     # otwory montażowe okapu: nawierty pilotowe Ø3 x 5 od wnętrza SO, po 2 w każdym boku (2026-11-18)
     for code, side in (('SOB-1', 'A'), ('SOB-2', 'B')):
         q = P[code]
@@ -223,7 +211,7 @@ ZAW = 'PUSZKA Ø35, ŚRODEK 22,5 MM OD KRAWĘDZI'
 # Opisy formatek. Wymiary i ilości są liczone z modelu (model.js).
 FORMATKI = [
     F('SOB', 'Szafka okapowa: boki (bez dna, okap między bokami)', okleina='1DL',
-      nawierty='SOB-1: TRZPIENIE MIMOŚRODÓW + KOŁKI (bez otworów przelotowych); SOB-2: KONFIRMATY (SOT, SOW, WSD, WSS) + KOŁKI WSW + PODPÓRKI WSP OD STRONY WS; OBA: PODPÓRKI Ø5 x 10 POD SOD I SOP',
+      nawierty='SOB-1: TRZPIENIE MIMOŚRODÓW + KOŁKI (bez otworów przelotowych); SOB-2: KONFIRMATY (SOT, SOW, WSD, WSS) + PODPÓRKI WSP OD STRONY WS; OBA: PODPÓRKI Ø5 x 10 POD SOD I SOP',
       uwagi='SOB-1 widoczny, czyste lico zewnętrzne; SOB-2: zewnętrzne lico jest lewą ścianką wnęki WS (łby konfirmatów SOT i SOW zasłaniają krawędzie WST i WSW; konfirmaty WSD i WSS wkręcać od wnętrza SO przed montażem okapu i rur, łby równo z licem); SOB-2: środek otworu Ø160 pod rurę Ø150 (otwornicą z obu stron, płyta podparta, przed montażem); okap przykręcany 4 wkrętami 3,5 x 16 z dystansami EPDM: nawierty pilotowe Ø3 x 5 od wnętrza na Y 1592 (81 nad dołem), z 250 i 70 (35 i 215 od lica przodu korpusu okapu)'),
     F('SOT', 'Szafka okapowa: tył', okleina='', nawierty='KONFIRMATY + MIMOŚRODY I KOŁKI (do SOB-1)',
       uwagi='środek otworu Ø25 pod przewód zasilający okap (x 2850, y 2180) wycina użytkownik'),
@@ -234,7 +222,8 @@ FORMATKI = [
       uwagi='środek otworu Ø170 pod pion Ø150 (z 109,5 = 91,5 od tylnej krawędzi); otwór otwarty do tyłu (wycięcie U szer. 170 od tylnej krawędzi); w tylnym prawym narożniku podcięcie 25 × 25 na przewód okapu (x 2887–2912, z 18–43); wycina użytkownik. Para kolan 15° obrócona w poziomie przesuwa pion o ok. 11–17 w prawo (+X): wycięcie U poszerzyć o 15–20 w prawo po przymiarce kolan (rura z matą nie może dotykać płyty)'),
     F('WSB', 'Wąska szafka: bok prawy (lewego boku brak, lewą ścianką jest SOB-2)', okleina='1DL', nawierty='KONFIRMATY + 2 PODPÓRKI Ø5 x 10 NA PÓŁKĘ',
       uwagi='WSB-2: rura ze ścianki wystaje 115, więc wycięcie U od tylnej krawędzi szer. 140 z półkolem R70 o środku w zaznaczonym punkcie (z 97), żeby szafkę dało się nasunąć na rurę; wycina użytkownik'),
-    F('WST', 'Wąska szafka: tył', okleina='', nawierty='KONFIRMATY'),
+    F('WST', 'Wąska szafka: tył', okleina='', nawierty='KONFIRMATY',
+      uwagi='wycięcie od prawej krawędzi (od strony WSB-2): 100 szer. × 140 wys., górna krawędź wycięcia 31 pod górną krawędzią WST (x 3086–3186, Y 2494–2634), żeby złożoną WS dało się wsunąć od przodu za rurą wystającą ze ścianki; wycina użytkownik. Górne wkręty do ściany na lewo od wycięcia'),
     F('WSD', 'Wąska szafka: dno', okleina='1SZ', nawierty='KONFIRMATY'),
     F('WSW', 'Wąska szafka: wieniec górny', okleina='1SZ', nawierty='KONFIRMATY'),
     F('WSS', 'Wąska szafka: dno skrzynki na rurę (płytka półka przed zaślepką)', okleina='1SZ', nawierty='KONFIRMATY'),

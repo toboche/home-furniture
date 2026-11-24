@@ -113,7 +113,7 @@ Kalkulator po imporcie CSV potrafi sam zaznaczyć krawędzie 3 i 4 w 0,8 mm: pop
 Wpisuj wprost z `kalkulator_nawierty.csv`, bez przeliczania: strona `Tył (B)` w kalkulatorze NIE jest odbita
 (rzut „na wylot” od przodu, początek w lewym dolnym rogu widoku z przodu), tak samo jak w naszym CSV.
 Wszystkie średnice i głębokości są w zakresie kalkulatora (płaszczyzna: Ø3, 5, 8, 15 do 15 mm lub przelot;
-czoło: Ø4 i Ø8 do 35 mm). Stan 2026-11-24: 112 wpisów, 118 otworów z uwzględnieniem SZT. Policz z CSV rozkład wg rodzaju,
+czoło: Ø4 i Ø8 do 35 mm). Stan 2026-11-24: 108 wpisów, 114 otworów z uwzględnieniem SZT. Policz z CSV rozkład wg rodzaju,
 strony / krawędzi, średnicy i głębokości i porównaj po wpisaniu (jeśli CSV się zmienił, wygrywa CSV). `wielowiert`
 i `skopiujNawiert` są dozwolone, ale przy tej wielkości zamówienia pojedyncze wpisy przez `evaluate_script` są prostsze;
 jeśli kompresujesz serie, zrób test round-trip do 0,0 mm.
@@ -150,7 +150,7 @@ i otwór na przewód w SOT robi użytkownik sam (w CSV są tylko nawierty środk
   - `Usługa wiercenia` dla `Wręgowania i nawiertów`: **18 szt.** (12 sztuk z wierszy 1–11 + 6 frontów METOD),
   - jedna płyta H3710 18 mm, jedno obrzeże ABS H3710 0,8 mm (sprawdź dostępność, np. `pow. 50 mb`; jeśli brak lub
     długi termin, zgłoś).
-- Otwory: 112 wpisów / 118 z SZT w wierszach 1–11, 56 otworów we frontach METOD, 3 puszki w F1.
+- Otwory: 108 wpisów / 114 z SZT w wierszach 1–11, 56 otworów we frontach METOD, 3 puszki w F1.
 
 ## Przebieg
 

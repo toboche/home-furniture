@@ -7,7 +7,7 @@ Liczby łączników z `wyniki/podsumowanie.json` (przeliczenie 2026-11-24, WS be
 |---|---|---|
 | Konfirmat 7 × 50 | 28 | łby ukryte; 2 (SOB-2 → WSS) wewnątrz SO za frontem F1, zaślepki niepotrzebne |
 | Złącze mimośrodowe Häfele Minifix 15 (obudowa + trzpień B 24, gwint Euro Ø5) | 4 | SOB-1 (widoczny bok): 3 × SOT, 1 × SOW |
-| Kołek Ø8 × 30 | 6 | SOB-1: 2 × SOT, 2 × SOW; SOB-2: 2 × WSW |
+| Kołek Ø8 × 30 | 4 | SOB-1: 2 × SOT, 2 × SOW |
 | Zatrzask dociskowy push-to-open, krótki: wys. do 14, dł. do 47, skok do 10 | 2 | WSZ u góry, pod WSW; nad rurą Ø150 mało miejsca (8 pod WSW), przymierzyć przed przyklejeniem; WSZ przewraca się do przodu przy wychyleniu góry ok. 17 |
 | Linka / łańcuszek zabezpieczający + 2 haczyki | 1 | WSZ do spodu WSW, żeby wysunięta zaślepka nie spadła na płytę grzewczą |
 | Listwa 10 × 10 (drewno / ALU), dł. 254 | 1 | oporowa za WSZ, na WSS, klejona |
