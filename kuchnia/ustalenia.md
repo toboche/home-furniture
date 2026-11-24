@@ -342,6 +342,8 @@ MAXIMERA Ø5 × 12 vs 13, rowek LED 17,2 vs 18,2, kątowniki pod P1, cofnięcie 
   SO i WS jako jeden moduł w `reguly.py`. Odpada skręcenie SO z WS wkrętami 4 × 30.
 - Montaż: SO na ścianie (SOT 4 × 6 × 70), potem WS na miejscu: WST do ściany (4 × 6 × 70), WSD, WSS, WSW, WSB-2; okap i rury po WSD/WSS.
 - Skutki: 23 szt. zamiast 24 (w kalkulatorze 21 wierszy), otwory CNC 118 z SZT (było 154), konfirmaty 28 (było 50), Minifix 4 (było 5).
+- Rozważone i na razie odrzucone (2026-11-24): WS bez pleców WST w widocznej części (widoczna ściana przy płycie grzewczej,
+  łby konfirmatów SOT na SOB-2, mniej mocowań do ściany). WST zostaje w całości.
 
 ### 2026-11-23: słoje
 - Tabela słojów w `zamowienie.md` potwierdzona: elementy pionowe pionowo, poziome równolegle do przodu, F1, WSZ i fronty METOD
