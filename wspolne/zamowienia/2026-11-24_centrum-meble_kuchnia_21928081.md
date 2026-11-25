@@ -13,7 +13,7 @@ Praktyczna instrukcja obsługi kalkulatora `centrum.meble.pl`: `wspolne/centrum_
 | **Numer rozkroju (aktualny w koszyku)** | **`21928081`** *(nazwa w koszyku: `Rozkrój 21928081 (import_ku_18mm)`)* |
 | **Link do podglądu / edycji** | `https://centrum.meble.pl/rozkroj,r21928081` |
 | **Ważność podglądu rozkroju** | do **`22.01.2027 r.`** |
-| **Status** | **`robocze w koszyku`** — **NIEOPŁACONE** (oczekuje w `/koszyk/` na weryfikację i płatność użytkownika) |
+| **Status** | **`robocze w koszyku`** — **NIEOPŁACONE** (oczekuje w `/koszyk/` na odpowiedź `centrum@meble.pl` z wyceną ciągłości usłojenia frontów `NrF 16–21` po mailu wysłanym `2026-11-25` oraz na płatność użytkownika) |
 | **Status audytu** | **ZWERYFIKOWANE 100% NA ŻYWO Z SERWERA (`21/21` formatek / `23/23` szt., `164/164` unikalnych otworów / `170/170` z SZT + `3/3` puszki `KU-F1` = `173/173` operacji CNC, `0` różnic, maks. odchyłka `0,000000 mm` — live DOM + `17/17` SVG + widok wydruku `Drukuj`)** |
 | **Wariant cięcia** | **`PREMIUM`** (dokładność 0,3 mm; zakładka `Standard` niedostępna z uwagi na 19 z 23 szt. z obróbką CNC, a wszystkie 23 szt. mieszczą się na tych samych `1,5` arkusza `PREMIUM`) |
 | **Kwota rozkroju w koszyku** | **`1 502,24 PLN` brutto** (**`1 221,26 PLN` netto**) |
@@ -132,6 +132,10 @@ Praktyczna instrukcja obsługi kalkulatora `centrum.meble.pl`: `wspolne/centrum_
 
 ---
 
-## 8. Mail do `centrum@meble.pl` po opłaceniu zamówienia (ciągłość usłojenia `21a–21c` i `22a–22c`)
+## 8. Mail do `centrum@meble.pl` ws. ciągłości usłojenia `21a–21c` i `22a–22c` — WYSŁANY (`2026-11-25`)
 
-Zaraz po opłaceniu zamówienia należy wysłać wiadomość na adres `centrum@meble.pl` z numerem zamówienia sklepowego oraz numerem rozkroju **`21928081`** i załącznikiem `kuchnia/zamowienie/fronty_metod_rysunek.pdf` (prośba o wycięcie frontów `usłojenie 21a, 21b, 21c` z jednego pasa płyty kolejno w pionie oraz `usłojenie 22a, 22b, 22c` z jednego pasa płyty kolejno w pionie, bez obracania góra/dół ze względu na nawierty na tyle).
+- **Status:** **WYSŁANY `2026-11-25`** przez użytkownika przed opłaceniem koszyka na adres `centrum@meble.pl` wraz z poglądowym rysunkiem obu kolumn z wymiarami i numerami pozycji `NrF 16–21` (oczekuje na wycenę i dopisanie usługi zachowania ciągłości usłojenia do rozkroju **`21928081`**).
+- **Zakres zgłoszenia w mailu:**
+  1. **KOLUMNA 1** — wyciąć kolejno w pionie z jednego pasa płyty (od góry do dołu): `NrF 16` (`usłojenie 21a`, `597 × 142 mm`) → `NrF 17` (`usłojenie 21b`, `597 × 397 mm`) → `NrF 18` (`usłojenie 21c`, `597 × 397 mm`).
+  2. **KOLUMNA 2** — wyciąć kolejno w pionie z jednego pasa płyty (od góry do dołu): `NrF 19` (`usłojenie 22a`, `597 × 197 mm`) → `NrF 20` (`usłojenie 22b`, `597 × 197 mm`) → `NrF 21` (`usłojenie 22c`, `597 × 397 mm`).
+  3. Kolumny 1 i 2 nie muszą mieć wspólnego usłojenia między sobą ani z frontem `KU-F1` (`549 × 1151 mm`, `NrF 15`); pozostałe formatki w rozkroju `21928081` nie wymagają ciągłości usłojenia; zastrzeżono zakaz obracania frontów `NrF 16–21` o `180°` ze względu na niesymetryczne nawierty pod szuflady od dolnej krawędzi na tylnej stronie.
